@@ -1,115 +1,35 @@
 // OnboardingComponents.swift
-// Reusable UI components for the onboarding experience
-// Updated to use Figma design tokens via Theme.swift
+// Reusable UI components for the mystical onboarding experience
+// Created for ManifestAI - Premium Gratitude Journal
 
 import SwiftUI
 
-// MARK: - Onboarding Background
-/// Standard background for all onboarding screens: solid #16062A + purple glow ellipse
-struct OnboardingBackground: View {
+// MARK: - Mystical Background
+struct MysticalBackground: View {
     var body: some View {
         ZStack {
-            Theme.Colors.background
-                .ignoresSafeArea()
-
-            // Decorative purple radial glow (matches Figma ellipse layer)
-            GeometryReader { geo in
-                Ellipse()
-                    .fill(
-                        RadialGradient(
-                            colors: [
-                                Theme.Colors.primary.opacity(0.25),
-                                Color.clear
-                            ],
-                            center: .center,
-                            startRadius: 0,
-                            endRadius: geo.size.width * 0.9
-                        )
-                    )
-                    .frame(width: geo.size.width * 1.5, height: geo.size.height * 0.8)
-                    .position(x: geo.size.width * 0.35, y: geo.size.height * 0.25)
-            }
+            // Deep gradient background - matching Figma design
+            LinearGradient(
+                colors: [
+                    Color(hex: "1A1F3A"), // Top - dark blue
+                    Color(hex: "1F2544"), // Mid-top
+                    Color(hex: "2D1F4E"), // Mid
+                    Color(hex: "3D2B5F"), // Mid-bottom
+                    Color(hex: "4A2F6B")  // Bottom - purple
+                ],
+                startPoint: .top,
+                endPoint: .bottom
+            )
             .ignoresSafeArea()
+            
+            // Star dust overlay
+            StarDustView()
+                .ignoresSafeArea()
         }
     }
 }
 
-// MARK: - Stepper
-/// 6-segment progress stepper from Figma (6px tall, pill-shaped segments)
-struct OnboardingStepper: View {
-    /// Number of completed steps (0-6). The current step is shown as active.
-    let currentStep: Int
-    let totalSteps: Int
-
-    init(currentStep: Int, totalSteps: Int = 6) {
-        self.currentStep = currentStep
-        self.totalSteps = totalSteps
-    }
-
-    var body: some View {
-        HStack(spacing: 2) {
-            ForEach(0..<totalSteps, id: \.self) { index in
-                RoundedRectangle(cornerRadius: Theme.Radius.stepper)
-                    .fill(index < currentStep
-                          ? Theme.Colors.primary
-                          : Theme.Colors.lightGrey.opacity(0.3))
-                    .frame(height: Theme.Sizes.stepperHeight)
-            }
-        }
-        .padding(.horizontal, Theme.Sizes.screenPadding)
-    }
-}
-
-// MARK: - Back + Continue Button Row
-/// Bottom navigation row: glass back arrow (56x56) + gradient "Continue" button
-struct OnboardingBottomBar: View {
-    let buttonTitle: String
-    let onContinue: () -> Void
-    let onBack: (() -> Void)?
-
-    init(_ buttonTitle: String = "Reveal My Path",
-         onContinue: @escaping () -> Void,
-         onBack: (() -> Void)? = nil) {
-        self.buttonTitle = buttonTitle
-        self.onContinue = onContinue
-        self.onBack = onBack
-    }
-
-    var body: some View {
-        HStack(spacing: Theme.Spacing.lg) {
-            // Back button (glass square)
-            if let onBack {
-                Button(action: onBack) {
-                    Image(systemName: "arrow.left")
-                        .font(.system(size: 16, weight: .medium))
-                        .foregroundStyle(Theme.Colors.text)
-                        .frame(
-                            width: Theme.Sizes.backButtonSize,
-                            height: Theme.Sizes.backButtonSize
-                        )
-                        .glassPanel(
-                            cornerRadius: Theme.Radius.backButton,
-                            borderColor: Theme.Colors.glassBorder
-                        )
-                }
-            }
-
-            // Continue button (gradient)
-            Button(action: onContinue) {
-                Text(buttonTitle)
-                    .font(Theme.Fonts.sansFallback(size: 16, weight: .medium))
-                    .foregroundStyle(Theme.Colors.card)
-                    .frame(maxWidth: .infinity)
-                    .frame(height: Theme.Sizes.buttonHeight)
-                    .background(Theme.Gradients.button)
-                    .clipShape(RoundedRectangle(cornerRadius: Theme.Radius.button))
-            }
-        }
-        .padding(.horizontal, Theme.Sizes.screenPadding)
-    }
-}
-
-// MARK: - Star Dust Particles (decorative)
+// MARK: - Star Dust Particles
 struct StarDustView: View {
     var body: some View {
         GeometryReader { geometry in
@@ -125,12 +45,5 @@ struct StarDustView: View {
                 }
             }
         }
-    }
-}
-
-// MARK: - Legacy alias (keep until MysticalBackground usages are removed)
-struct MysticalBackground: View {
-    var body: some View {
-        OnboardingBackground()
     }
 }

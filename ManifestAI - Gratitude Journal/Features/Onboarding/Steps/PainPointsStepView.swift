@@ -1,273 +1,232 @@
 // PainPointsStepView.swift
-// Onboarding step 3 — "[userName], What is holding you back right now?"
-// Figma node: 256:1133 — pixel-perfect from Figma inspect
+// Pain points selection screen - Step 2 of 5
 
 import SwiftUI
+import UIKit
 
 struct PainPointsStepView: View {
     @Binding var selected: [String]
     let userName: String
     let onContinue: () -> Void
     let onBack: () -> Void
-
-    private let allOptions: [String] = [
-        "Select All",
-        "Procrastination",
-        "Self-Doubt",
-        "Lack of Direction",
-        "Don't know where to Start",
-        "Emotional Fatigue",
-        "Impostor Syndrome"
+    
+    @State private var titleText = ""
+    @State private var showContent = false
+    @State private var titleInCenter = true
+    
+    private var fullTitle: String {
+        "\(userName.isEmpty ? "" : "\(userName), ")what is holding you back right now?"
+    }
+    
+    let points = [
+        "Procrastination", "Self-Doubt", "Anxiety", "Fear of Failure",
+        "Lack of Direction", "Don't know where to start",
+        "Emotional Fatigue", "Imposter Syndrome",
+        "Financial Stress", "Past Trauma"
     ]
-
-    /// Options excluding "Select All" — the real data values
-    private var realOptions: [String] {
-        Array(allOptions.dropFirst())
-    }
-
-    private var isAllSelected: Bool {
-        realOptions.allSatisfy { selected.contains($0) }
-    }
-
+    
     var body: some View {
-        GeometryReader { geo in
-            let s = geo.size.width / 393.0
-
-            ZStack {
-                // ── 1. Background: solid #16062A ──
-                Theme.Colors.background
-
-                // ── 2. Purple glow ellipse ──
-                Ellipse()
-                    .fill(
-                        RadialGradient(
-                            colors: [
-                                Color(red: 0x4F/255.0, green: 0x31/255.0, blue: 0xEC/255.0).opacity(0.35),
-                                Color.clear
-                            ],
-                            center: .center,
-                            startRadius: 0,
-                            endRadius: 289 * s
-                        )
-                    )
-                    .frame(width: 578.67 * s, height: 677.5 * s)
-                    .position(x: (0 + 578.67 / 2) * s, y: (12 + 677.5 / 2) * s)
-
-                // ── 3. Stepper ──
-                // Figma: (20, 76), w=353, h=6, step 3 of 6
-                HStack(spacing: 2 * s) {
-                    // Steps 1-3 — active
-                    ForEach(0..<3, id: \.self) { _ in
-                        RoundedRectangle(cornerRadius: Theme.Radius.stepper)
-                            .fill(Theme.Colors.primary)
-                            .frame(height: Theme.Sizes.stepperHeight * s)
+        ZStack {
+            // Layer 0: Background
+            LinearGradient(
+                colors: [
+                    Color(hex: "0a0e17"),
+                    Color(hex: "0f0c29"),
+                    Color(hex: "2d1b4e").opacity(0.3)
+                ],
+                startPoint: .topLeading,
+                endPoint: .bottomTrailing
+            )
+            .ignoresSafeArea()
+            
+            // Layer 1: Content (Header + ScrollView)
+            VStack(spacing: 0) {
+                // Header
+                ZStack(alignment: .center) {
+                    HStack {
+                        Button(action: onBack) {
+                            Image(systemName: "arrow.left")
+                                .font(Theme.Fonts.system(size: 20, weight: .medium))
+                                .foregroundStyle(.white.opacity(0.8))
+                                .frame(width: 44.responsive, height: 44.responsive)
+                                .background(Color.white.opacity(0.05))
+                                .clipShape(Circle())
+                        }
+                        Spacer()
                     }
-                    // Steps 4-6 — inactive
-                    ForEach(0..<3, id: \.self) { _ in
-                        RoundedRectangle(cornerRadius: Theme.Radius.stepper)
-                            .fill(Theme.Colors.lightGrey.opacity(0.3))
-                            .frame(height: Theme.Sizes.stepperHeight * s)
-                    }
+                    .padding(.horizontal, Theme.Spacing.xl)
+                    
+                    Text("STEP 2 OF 5")
+                        .font(Theme.Fonts.system(size: 12, weight: .semibold))
+                        .tracking(1.5)
+                        .foregroundStyle(.white.opacity(0.6))
                 }
-                .frame(width: 353 * s)
-                .position(
-                    x: (20 + 353.0 / 2) * s,
-                    y: (76 + 3) * s
-                )
-
-                // ── 4. Title ──
-                // Figma: (20, 122), w=353, serif semibold 26px, #EBEBEB
-                Text("\(userName), What is holding\nyou back right now?")
-                    .font(.system(size: 26 * s, weight: .semibold, design: .serif))
-                    .foregroundStyle(Theme.Colors.text)
-                    .lineSpacing(26 * 0.2 * s)
-                    .frame(width: 353 * s, alignment: .leading)
-                    .position(
-                        x: (20 + 353.0 / 2) * s,
-                        y: (122 + 20) * s
-                    )
-
-                // ── 5. Pill checkboxes ──
-                // Figma: starting at (20, ~194), each 353x52, 12px gap
-                ForEach(Array(allOptions.enumerated()), id: \.element) { index, option in
-                    let pillY = 194.0 + Double(index) * (52.0 + 12.0)
-                    let isOptionSelected = option == "Select All" ? isAllSelected : selected.contains(option)
-
-                    PillCheckbox(
-                        title: option,
-                        isSelected: isOptionSelected,
-                        s: s
-                    ) {
-                        toggleOption(option)
-                    }
-                    .position(
-                        x: (20 + 353.0 / 2) * s,
-                        y: (pillY + 26) * s
-                    )
-                }
-
-                // ── 6. Bottom bar ──
-                // Figma: (20, 736)
-                // Back button: 56x56, cornerRadius 12, border #63507A 2px
-                Button(action: onBack) {
-                    Image(systemName: "arrow.left")
-                        .font(.system(size: 14 * s, weight: .medium))
-                        .foregroundStyle(Theme.Colors.text)
-                        .frame(
-                            width: Theme.Sizes.backButtonSize * s,
-                            height: Theme.Sizes.backButtonSize * s
-                        )
-                        .background(
-                            RoundedRectangle(cornerRadius: Theme.Radius.backButton)
-                                .fill(.ultraThinMaterial)
-                                .overlay(
-                                    RoundedRectangle(cornerRadius: Theme.Radius.backButton)
-                                        .stroke(Theme.Colors.glassBorder, lineWidth: 2)
-                                )
-                        )
-                        .shadow(
-                            color: Theme.Colors.glassShadowBlue.opacity(0.3),
-                            radius: 15 * s, y: 10 * s
-                        )
-                }
-                .position(
-                    x: (20 + 28) * s,
-                    y: (736 + 28) * s
-                )
-
-                // Continue button: fills remaining width, height 56, cornerRadius 13
-                Button {
-                    onContinue()
-                } label: {
-                    Text("Reveal My Path")
-                        .font(.system(size: 16 * s, weight: .medium))
+                .frame(height: 44.responsive)
+                .padding(.top, Theme.Spacing.sm + Theme.Spacing.xs)
+                .padding(.bottom, Theme.Spacing.xl)
+                .opacity(showContent ? 1 : 0)
+                
+                // Centered title during typewriter
+                if titleInCenter {
+                    Spacer()
+                    
+                    Text(titleText)
+                        .font(Theme.Fonts.system(size: 28, weight: .bold))
                         .foregroundStyle(.white)
-                        .frame(maxWidth: .infinity)
-                        .frame(height: Theme.Sizes.buttonHeight * s)
-                        .background(
-                            LinearGradient(
-                                stops: [
-                                    .init(color: Theme.Colors.buttonGradientStart, location: 0.31858),
-                                    .init(color: Theme.Colors.buttonGradientEnd, location: 1.0)
-                                ],
-                                startPoint: .leading,
-                                endPoint: .trailing
-                            )
-                        )
-                        .clipShape(RoundedRectangle(cornerRadius: Theme.Radius.button))
+                        .multilineTextAlignment(.center)
+                        .padding(.horizontal, Theme.Spacing.xxxl)
+                    
+                    Spacer()
                 }
-                .frame(width: (355 - 56 - 16) * s)
-                .position(
-                    x: (20 + 56 + 16 + (355.0 - 56 - 16) / 2) * s,
-                    y: (736 + 28) * s
-                )
+                
+                ScrollView(showsIndicators: false) {
+                    VStack(alignment: .leading, spacing: Theme.Spacing.xxl) {
+                        VStack(alignment: .center, spacing: Theme.Spacing.md) {
+                            if !titleInCenter {
+                                Text(titleText)
+                                    .font(Theme.Fonts.system(size: 28, weight: .bold))
+                                    .foregroundStyle(.white)
+                                    .multilineTextAlignment(.center)
+                                    .shadow(color: .black.opacity(0.3), radius: 10)
+                            }
+                            
+                            if showContent {
+                                Text("Select all that resonate with your spirit to begin clearing your path.")
+                                    .font(Theme.Fonts.system(size: 16))
+                                    .foregroundStyle(.white.opacity(0.6))
+                                    .multilineTextAlignment(.center)
+                                    .transition(.opacity.combined(with: .move(edge: .top)))
+                            }
+                        }
+                        .frame(maxWidth: .infinity)
+                        .padding(.horizontal, Theme.Spacing.sm + Theme.Spacing.xs)
+                        
+                        if showContent {
+                            VStack(spacing: Theme.Spacing.sm + Theme.Spacing.xs) {
+                            ForEach(points, id: \.self) { point in
+                                Button {
+                                    if selected.contains(point) {
+                                        selected.removeAll { $0 == point }
+                                    } else {
+                                        selected.append(point)
+                                    }
+                                } label: {
+                                    HStack(spacing: Theme.Spacing.sm + Theme.Spacing.xs) {
+                                        Text(point)
+                                            .font(Theme.Fonts.system(size: 16, weight: selected.contains(point) ? .bold : .medium))
+                                            .foregroundStyle(selected.contains(point) ? Color(hex: "FFD700") : .white)
+                                            .lineLimit(1)
+                                            .minimumScaleFactor(0.9)
+                                        
+                                        Spacer(minLength: 0)
+                                        
+                                        if selected.contains(point) {
+                                            Image(systemName: "checkmark")
+                                                .font(Theme.Fonts.system(size: 14, weight: .bold))
+                                                .foregroundStyle(Color(hex: "FFD700"))
+                                        }
+                                    }
+                                    .padding(.horizontal, Theme.Spacing.lg)
+                                    .padding(.vertical, 14.responsive)
+                                    .frame(maxWidth: .infinity, alignment: .leading)
+                                    .background(selected.contains(point) ? Color(hex: "FFD700").opacity(0.1) : Color.white.opacity(0.06))
+                                    .clipShape(RoundedRectangle(cornerRadius: 14.responsive))
+                                    .overlay(
+                                        RoundedRectangle(cornerRadius: 14.responsive)
+                                            .stroke(selected.contains(point) ? Color(hex: "FFD700") : Color.white.opacity(0.15), lineWidth: 1)
+                                    )
+                                }
+                                .buttonStyle(.plain)
+                            }
+                            }
+                            .transition(.opacity.combined(with: .move(edge: .top)))
+                        }
+                        
+                        // רווח שקוף לגלילה סופית
+                        Color.clear.frame(height: 120.responsive)
+                    }
+                    .padding(.horizontal, Theme.Spacing.xxl)
+                    .padding(.bottom, Theme.Spacing.xxl)
+                }
+                .opacity(titleInCenter ? 0 : 1)
             }
-            .frame(width: geo.size.width, height: geo.size.height)
-            .clipped()
-        }
-        .ignoresSafeArea()
-    }
-
-    // MARK: - Toggle logic
-
-    private func toggleOption(_ option: String) {
-        if option == "Select All" {
-            if isAllSelected {
-                selected.removeAll()
-            } else {
-                selected = realOptions
-            }
-        } else {
-            if selected.contains(option) {
-                selected.removeAll { $0 == option }
-            } else {
-                selected.append(option)
-            }
-        }
-    }
-}
-
-// MARK: - Pill Checkbox
-
-private struct PillCheckbox: View {
-    let title: String
-    let isSelected: Bool
-    let s: CGFloat
-    let action: () -> Void
-
-    var body: some View {
-        Button(action: action) {
-            HStack(spacing: 0) {
-                // Text label: Poppins Regular 14px, #EBEBEB, left-padded 15px
-                Text(title)
-                    .font(.system(size: 14 * s, weight: .regular))
-                    .foregroundStyle(Theme.Colors.text)
-                    .padding(.leading, 15 * s)
-
-                Spacer()
-
-                // Checkbox circle: 24x24 at right, padded 15px from edge
-                ZStack {
-                    if isSelected {
-                        // Selected: filled circle with primary glow
-                        Circle()
-                            .fill(Theme.Colors.primary)
-                            .frame(width: 24 * s, height: 24 * s)
-                            .shadow(
-                                color: Color(red: 0x4F/255.0, green: 0x31/255.0, blue: 0xEC/255.0).opacity(0.6),
-                                radius: 6 * s, x: 0, y: 2 * s
-                            )
-
-                        // Check icon: 12x12, white
-                        Image(systemName: "checkmark")
-                            .font(.system(size: 12 * s, weight: .bold))
-                            .foregroundStyle(.white)
-                    } else {
-                        // Unselected: border circle, glassmorphic
-                        Circle()
-                            .fill(.ultraThinMaterial)
-                            .opacity(0.01)
-                            .frame(width: 24 * s, height: 24 * s)
-                            .overlay(
-                                Circle()
-                                    .stroke(Theme.Colors.subtleBorder, lineWidth: 1)
-                            )
+            
+            // Layer 2: Floating Bottom Buttons
+            VStack {
+                Spacer() // Push buttons down
+                
+                VStack(spacing: Theme.Spacing.sm + Theme.Spacing.xs) {
+                    Text(selected.isEmpty ? "Select at least one (or skip)" : "\(selected.count) selected")
+                        .font(Theme.Fonts.system(size: 14, weight: .medium))
+                        .foregroundStyle(.white.opacity(0.7))
+                    
+                    Button(action: onContinue) {
+                        Text(selected.isEmpty ? "Skip for Now" : "Reveal My Path")
+                            .font(Theme.Fonts.system(size: 18, weight: .bold))
+                            .foregroundStyle(.black)
+                            .frame(maxWidth: .infinity)
+                            .responsiveHeight(56)
+                            .background(Color(hex: "FFD700"))
+                            .clipShape(RoundedRectangle(cornerRadius: Theme.Spacing.lg))
+                            .shadow(color: Color(hex: "FFD700").opacity(0.3), radius: 20)
                     }
                 }
-                .frame(width: 24 * s, height: 24 * s)
-                .padding(.trailing, 15 * s)
-            }
-            .frame(width: 353 * s, height: Theme.Sizes.checkboxPillHeight * s)
-            .background(
-                RoundedRectangle(cornerRadius: Theme.Radius.checkboxPill)
-                    .fill(.ultraThinMaterial)
-                    .opacity(0.01)
-            )
-            .background(
-                RoundedRectangle(cornerRadius: Theme.Radius.checkboxPill)
-                    .fill(Color.white.opacity(0.01))
-            )
-            .clipShape(RoundedRectangle(cornerRadius: Theme.Radius.checkboxPill))
-            .overlay(
-                RoundedRectangle(cornerRadius: Theme.Radius.checkboxPill)
-                    .stroke(
-                        isSelected ? Theme.Colors.selectedBorder : Theme.Colors.glassBorder,
-                        lineWidth: 2
+                .padding(.horizontal, Theme.Spacing.xxl)
+                .padding(.top, Theme.Spacing.xxl)
+                .safeBottomPadding()
+                .background(
+                    LinearGradient(
+                        colors: [
+                            Color.clear,
+                            Color(hex: "0a0e17").opacity(0.9),
+                            Color(hex: "0a0e17")
+                        ],
+                        startPoint: .top,
+                        endPoint: .bottom
                     )
-            )
-            .shadow(color: Theme.Colors.glassShadowBlue.opacity(0.5), radius: 35, x: 0, y: 24)
-            .shadow(color: Theme.Colors.glassShadowMid.opacity(0.3), radius: 11, x: 0, y: 5)
-            .shadow(color: Theme.Colors.glassShadowDeep.opacity(0.8), radius: 25, x: 0, y: 1)
+                )
+            }
         }
-        .buttonStyle(.plain)
+        .onAppear {
+            runTypewriterAnimation()
+        }
+    }
+    
+    private func runTypewriterAnimation() {
+        guard titleText.isEmpty else { return }
+        
+        let haptic = UIImpactFeedbackGenerator(style: .light)
+        haptic.prepare()
+        
+        // Type title character by character
+        for (index, char) in fullTitle.enumerated() {
+            let delay = Double(index) * 0.05
+            DispatchQueue.main.asyncAfter(deadline: .now() + delay) {
+                titleText.append(char)
+                haptic.impactOccurred(intensity: 0.5)
+            }
+        }
+        
+        // After typing completes, wait a bit then slide up
+        let slideUpDelay = Double(fullTitle.count) * 0.05 + 0.5
+        DispatchQueue.main.asyncAfter(deadline: .now() + slideUpDelay) {
+            withAnimation(.spring(response: 0.6, dampingFraction: 0.8)) {
+                titleInCenter = false
+            }
+            
+            // Show content after slide up
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
+                withAnimation(.easeIn(duration: 0.5)) {
+                    showContent = true
+                }
+            }
+        }
     }
 }
-
-// MARK: - Preview
 
 #Preview {
     PainPointsStepView(
-        selected: .constant(["Procrastination"]),
+        selected: .constant([]),
         userName: "Yagel",
         onContinue: {},
         onBack: {}
