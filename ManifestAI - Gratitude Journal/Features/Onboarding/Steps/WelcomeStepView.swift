@@ -1,165 +1,147 @@
 // WelcomeStepView.swift
-// First onboarding screen — "Welcome to Gratitude Journal: Manifest"
-// Figma node: 258:1851 — pixel-perfect from Figma inspect
+// First onboarding screen with typewriter animation
 
 import SwiftUI
+import UIKit
 
 struct WelcomeStepView: View {
     let onContinue: () -> Void
     @State private var showContent = false
-
+    @State private var titleLine1 = ""
+    @State private var titleLine2 = ""
+    
+    private let fullLine1 = "Turn your dreams"
+    private let fullLine2 = "into reality"
+    
     var body: some View {
-        GeometryReader { geo in
-            let w = geo.size.width
-            let h = geo.size.height
-            let s = w / 393.0
-
-            ZStack {
-                // ── 1. Background: solid #16062A ──
-                Theme.Colors.background
-
-                // ── 2. Purple glow ellipse ──
-                // Figma: position (0, 12), size 578.67×677.5
-                // Radial gradient #4F31EC opacity 0.35
-                Ellipse()
-                    .fill(
-                        RadialGradient(
-                            colors: [
-                                Color(red: 0x4F/255, green: 0x31/255, blue: 0xEC/255).opacity(0.35),
-                                Color.clear
-                            ],
-                            center: .center,
-                            startRadius: 0,
-                            endRadius: 300 * s
-                        )
-                    )
-                    .frame(width: 578.67 * s, height: 677.5 * s)
-                    .position(
-                        x: (0 + 578.67 / 2) * s,
-                        y: (12 + 677.5 / 2) * s
-                    )
-
-                // ── 3. Stars texture ──
-                // Figma: position (-1, 0), size 393×396, opacity 0.6
-                Image("OnboardingStars")
-                    .resizable()
-                    .scaledToFill()
-                    .frame(width: 393 * s, height: 396 * s)
-                    .clipped()
-                    .position(
-                        x: (-1 + 393.0 / 2) * s,
-                        y: (0 + 396.0 / 2) * s
-                    )
-                    .opacity(0.6)
-
-                // ── 4. Owl illustration ──
-                // Figma: position (-1, 120), container 364×369
-                // scaledToFit at full screen width, center at x=47%, y=310pt
-                Image("OwlIllustration")
-                    .resizable()
-                    .scaledToFit()
-                    .frame(width: 393 * s)
-                    .position(x: w * 0.47, y: 310 * s)
-
-                // ── 5. Welcome badge glass ──
-                // Figma: position (81, 65), size 229×75, cornerRadius 14
-                // border #63507A 2px, ultraThinMaterial
-                RoundedRectangle(cornerRadius: Theme.Radius.welcomeBadge)
-                    .fill(.ultraThinMaterial)
-                    .frame(width: 229 * s, height: 75 * s)
-                    .overlay(
-                        RoundedRectangle(cornerRadius: Theme.Radius.welcomeBadge)
-                            .stroke(Theme.Colors.glassBorder, lineWidth: 2)
-                    )
-                    .shadow(
-                        color: Theme.Colors.glassShadowBlue.opacity(0.5),
-                        radius: 35 * s, y: 24 * s
-                    )
-                    .shadow(
-                        color: Theme.Colors.glassShadowMid.opacity(0.8),
-                        radius: 12 * s, y: 5 * s
-                    )
-                    .position(
-                        x: (81 + 229.0 / 2) * s,
-                        y: (65 + 75.0 / 2) * s
-                    )
-
-                // ── 6. Welcome badge text ──
-                // Figma: position (98, 78), size 195×50
-                // Bitter Bold 18px, color #FCD471, centered
-                Text("Welcome to Gratitude\nJournal: Manifest")
-                    .font(.system(size: 18 * s, weight: .bold, design: .serif))
-                    .foregroundStyle(Theme.Colors.secondary)
-                    .multilineTextAlignment(.center)
-                    .lineSpacing(3 * s)
-                    .frame(width: 195 * s)
-                    .position(
-                        x: (98 + 195.0 / 2) * s,
-                        y: (78 + 50.0 / 2) * s
-                    )
-
-                // ── 7. Title text ──
-                // Figma: position (34, 508), width 330
-                // "Turn your dreams " — serif light italic 37px
-                // "in to reality in 5 mins a day." — serif semibold 37px
-                // color #EBEBEB, lineHeight 1.2
-                (
-                    Text("Turn your dreams ")
-                        .font(.system(size: 37 * s, weight: .light, design: .serif))
-                        .italic()
-                    +
-                    Text("in to reality in 5 mins a day.")
-                        .font(.system(size: 37 * s, weight: .semibold, design: .serif))
-                )
-                .foregroundStyle(Theme.Colors.text)
-                .lineSpacing(37 * 0.2 * s)
-                .frame(width: 330 * s, alignment: .leading)
-                .position(
-                    x: (34 + 330.0 / 2) * s,
-                    y: (508 + 66) * s
-                )
-
-                // ── 8. CTA button ──
-                // Figma: position (31, 690), size 332×56, cornerRadius 13
-                // Gradient #3B2DF7 @31.858% → #7C38FF
-                // Text: "Start My Journey", sans medium 16px, white
-                // arrow.right icon 24×24
-                Button(action: onContinue) {
-                    HStack {
-                        Spacer()
-                        Text("Start My Journey")
-                            .font(.system(size: 16 * s, weight: .medium))
-                        Spacer()
-                        Image(systemName: "arrow.right")
-                            .font(.system(size: 16 * s, weight: .medium))
-                            .frame(width: 24 * s, height: 24 * s)
-                    }
-                    .foregroundStyle(.white)
-                    .padding(.horizontal, 16 * s)
-                    .frame(width: 332 * s, height: Theme.Sizes.buttonHeight * s)
-                    .background(
-                        LinearGradient(
-                            stops: [
-                                .init(color: Theme.Colors.buttonGradientStart, location: 0.31858),
-                                .init(color: Theme.Colors.buttonGradientEnd, location: 1.0)
-                            ],
-                            startPoint: .leading,
-                            endPoint: .trailing
-                        )
-                    )
-                    .clipShape(RoundedRectangle(cornerRadius: Theme.Radius.button))
+        ZStack {
+            // Beautiful background
+            LinearGradient(
+                colors: [
+                    Color(hex: "0a0e17"),
+                    Color(hex: "0f0c29"),
+                    Color(hex: "2d1b4e").opacity(0.3)
+                ],
+                startPoint: .topLeading,
+                endPoint: .bottomTrailing
+            )
+            .ignoresSafeArea()
+            
+            VStack(spacing: 0) {
+                // Centered logo
+                HStack(spacing: 8) {
+                    Image(systemName: "sparkles")
+                        .foregroundStyle(Color(hex: "FFD700"))
+                        .font(.system(size: 24))
+                    
+                    Text("Gratitude Journal: Manifest")
+                        .font(.system(size: 14, weight: .bold))
+                        .tracking(2)
+                        .foregroundStyle(.white)
                 }
-                .position(
-                    x: (31 + 332.0 / 2) * s,
-                    y: (690 + Theme.Sizes.buttonHeight / 2) * s
-                )
+                .frame(maxWidth: .infinity)
+                .padding(.top, 20)
+                .padding(.horizontal, 24)
+                
+                Spacer()
+                
+                // Lottie Animation
+                LottieView(name: "Technology Network", loopMode: .loop, tintColor: .white)
+                    .frame(width: 220, height: 220)
+                    .shadow(color: Color(hex: "FFD700").opacity(0.3), radius: 30)
+                
+                Spacer()
+                
+                VStack(spacing: 30) {
+                    VStack(spacing: 16) {
+                        Capsule()
+                            .fill(Color(hex: "FFD700").opacity(0.5))
+                            .frame(width: 48, height: 4)
+                        
+                        VStack(spacing: 8) {
+                            // Typewriter effect
+                            Text(titleLine1)
+                                .font(.system(size: 40, weight: .light))
+                                .foregroundStyle(.white)
+                                .frame(height: 50, alignment: .bottom)
+                            
+                            Text(titleLine2)
+                                .font(.system(size: 40, weight: .bold))
+                                .foregroundStyle(
+                                    LinearGradient(
+                                        colors: [Color(hex: "FFD700"), Color(hex: "FFF5B3")],
+                                        startPoint: .leading,
+                                        endPoint: .trailing
+                                    )
+                                )
+                                .frame(height: 50, alignment: .top)
+                        }
+                        
+                        Text("in 5 minutes a day")
+                            .font(.system(size: 18))
+                            .foregroundStyle(.white.opacity(0.7))
+                            .opacity(showContent ? 1 : 0)
+                    }
+                    .multilineTextAlignment(.center)
+                    
+                    Button(action: onContinue) {
+                        HStack(spacing: 8) {
+                            Text("Start My Journey")
+                                .font(.system(size: 16, weight: .bold))
+                            
+                            Image(systemName: "arrow.right")
+                                .font(.system(size: 16, weight: .bold))
+                        }
+                        .foregroundStyle(.black)
+                        .frame(maxWidth: .infinity)
+                        .frame(height: 56)
+                        .background(Color(hex: "FFD700"))
+                        .clipShape(RoundedRectangle(cornerRadius: 16))
+                        .shadow(color: Color(hex: "FFD700").opacity(0.3), radius: 20)
+                    }
+                    .padding(.horizontal, 32)
+                    .opacity(showContent ? 1 : 0)
+                }
+                .padding(.bottom, 40)
             }
-            .frame(width: w, height: h)
-            .clipped()
-            .opacity(showContent ? 1 : 0)
         }
-        .ignoresSafeArea()
         .onAppear {
+            runTypewriterAnimation()
+        }
+    }
+    
+    private func runTypewriterAnimation() {
+        guard titleLine1.isEmpty else { return }
+        
+        let haptic = UIImpactFeedbackGenerator(style: .light)
+        haptic.prepare()
+        
+        var currentIndex = 0
+        let totalChars = fullLine1.count + fullLine2.count
+        
+        // Type line 1
+        for (index, char) in fullLine1.enumerated() {
+            let delay = Double(index) * 0.05
+            DispatchQueue.main.asyncAfter(deadline: .now() + delay) {
+                titleLine1.append(char)
+                haptic.impactOccurred(intensity: 0.5)
+            }
+            currentIndex = index + 1
+        }
+        
+        // Small pause, then type line 2
+        let line2StartDelay = Double(fullLine1.count) * 0.05 + 0.2
+        for (index, char) in fullLine2.enumerated() {
+            let delay = line2StartDelay + Double(index) * 0.05
+            DispatchQueue.main.asyncAfter(deadline: .now() + delay) {
+                titleLine2.append(char)
+                haptic.impactOccurred(intensity: 0.5)
+            }
+        }
+        
+        // Show subtitle and button after typing
+        let finalDelay = line2StartDelay + Double(fullLine2.count) * 0.05 + 0.3
+        DispatchQueue.main.asyncAfter(deadline: .now() + finalDelay) {
             withAnimation(.easeIn(duration: 0.5)) {
                 showContent = true
             }
@@ -170,3 +152,5 @@ struct WelcomeStepView: View {
 #Preview {
     WelcomeStepView(onContinue: {})
 }
+
+

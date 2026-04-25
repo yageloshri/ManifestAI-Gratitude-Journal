@@ -1,172 +1,185 @@
 // NameStepView.swift
-// Onboarding step 1 — "What should we call you?"
-// Figma node: 255:1190 — pixel-perfect from Figma inspect
+// Name input screen with beautiful golden border
 
 import SwiftUI
+import UIKit
 
 struct NameStepView: View {
     @Binding var userName: String
     let onContinue: () -> Void
     let onBack: () -> Void
     @FocusState private var isFocused: Bool
-
+    
+    @State private var titleLine1 = ""
+    @State private var titleLine2 = ""
+    @State private var showSubtitle = false
+    @State private var showInput = false
+    
+    private let fullLine1 = "Let's align with"
+    private let fullLine2 = "your frequency"
+    
     var body: some View {
-        GeometryReader { geo in
-            let s = geo.size.width / 393.0
-
-            ZStack {
-                // ── 1. Background: solid #16062A ──
-                Theme.Colors.background
-
-                // ── 2. Purple glow ellipse ──
-                // Figma: position (0, 12), size 578.67x677.5
-                // Radial gradient #4F31EC opacity 0.35
-                Ellipse()
-                    .fill(
-                        RadialGradient(
-                            colors: [
-                                Color(red: 0x4F/255, green: 0x31/255, blue: 0xEC/255).opacity(0.35),
-                                Color.clear
-                            ],
-                            center: .center,
-                            startRadius: 0,
-                            endRadius: 289 * s
-                        )
-                    )
-                    .frame(width: 578.67 * s, height: 677.5 * s)
-                    .position(x: (0 + 578.67 / 2) * s, y: (12 + 677.5 / 2) * s)
-
-                // ── 3. Stepper ──
-                // Figma: (20, 76), w=353, h=6, step 1 of 6
-                HStack(spacing: 2 * s) {
-                    // Step 1 — active
-                    RoundedRectangle(cornerRadius: Theme.Radius.stepper)
-                        .fill(Theme.Colors.primary)
-                        .frame(height: Theme.Sizes.stepperHeight * s)
-                    // Steps 2-6 — inactive
-                    ForEach(0..<5, id: \.self) { _ in
-                        RoundedRectangle(cornerRadius: Theme.Radius.stepper)
-                            .fill(Theme.Colors.lightGrey.opacity(0.3))
-                            .frame(height: Theme.Sizes.stepperHeight * s)
+        ZStack {
+            // Beautiful gradient
+            LinearGradient(
+                colors: [
+                    Color(hex: "0a0e17"),
+                    Color(hex: "0f0c29"),
+                    Color(hex: "2d1b4e").opacity(0.3)
+                ],
+                startPoint: .topLeading,
+                endPoint: .bottomTrailing
+            )
+            .ignoresSafeArea()
+            
+            VStack(spacing: 0) {
+                HStack {
+                    Button(action: onBack) {
+                        Image(systemName: "arrow.left")
+                            .font(.system(size: 20))
+                            .foregroundStyle(.white)
+                            .frame(width: 44, height: 44)
+                    }
+                    Spacer()
+                }
+                .padding(.horizontal, 24)
+                .padding(.top, 10)
+                
+                Spacer()
+                
+                VStack(spacing: 40) {
+                    VStack(spacing: 12) {
+                        VStack(spacing: 4) {
+                            Text(titleLine1)
+                                .font(.system(size: 32, weight: .bold))
+                                .foregroundStyle(.white)
+                                .multilineTextAlignment(.center)
+                                .frame(height: 40, alignment: .bottom)
+                            
+                            Text(titleLine2)
+                                .font(.system(size: 32, weight: .bold))
+                                .foregroundStyle(.white)
+                                .multilineTextAlignment(.center)
+                                .frame(height: 40, alignment: .top)
+                        }
+                        
+                        Text("What is your name?")
+                            .font(.system(size: 18))
+                            .foregroundStyle(.white.opacity(0.6))
+                            .opacity(showSubtitle ? 1 : 0)
+                    }
+                    
+                    if showInput {
+                        VStack(spacing: 12) {
+                            TextField("", text: $userName)
+                                .focused($isFocused)
+                                .font(.system(size: 32, weight: .bold))
+                                .foregroundStyle(Color(hex: "FFD700"))
+                                .multilineTextAlignment(.center)
+                                .tint(Color(hex: "FFD700"))
+                                .overlay(
+                                    Text(userName.isEmpty ? "Your Name" : "")
+                                        .font(.system(size: 32, weight: .bold))
+                                        .foregroundStyle(.white.opacity(0.3))
+                                        .allowsHitTesting(false)
+                                )
+                            
+                            Rectangle()
+                                .fill(
+                                    LinearGradient(
+                                        colors: [
+                                            Color.clear,
+                                            Color(hex: "FFD700").opacity(userName.isEmpty ? 0.3 : 1.0),
+                                            Color.clear
+                                        ],
+                                        startPoint: .leading,
+                                        endPoint: .trailing
+                                    )
+                                )
+                                .frame(height: 2)
+                                .shadow(color: Color(hex: "FFD700").opacity(userName.isEmpty ? 0 : 0.5), radius: 8)
+                        }
+                        .padding(.horizontal, 40)
+                        .transition(.opacity.combined(with: .move(edge: .bottom)))
                     }
                 }
-                .frame(width: 353 * s)
-                .position(
-                    x: (20 + 353.0 / 2) * s,
-                    y: (76 + 3) * s
-                )
-
-                // ── 4. Title ──
-                // Figma: (20, 122), w=353, serif semibold 26px, #EBEBEB, lineHeight 1.2
-                Text("What should we call you?")
-                    .font(.system(size: 26 * s, weight: .semibold, design: .serif))
-                    .foregroundStyle(Theme.Colors.text)
-                    .lineSpacing(26 * 0.2 * s)
-                    .frame(width: 353 * s, alignment: .leading)
-                    .position(
-                        x: (20 + 353.0 / 2) * s,
-                        y: (122 + 16) * s
-                    )
-
-                // ── 5. Text Field ──
-                // Figma: (20, 177), 353x56, capsule, border #63507A 2px
-                // Placeholder: "Enter Name", regular 14px, #EBEBEB 40%
-                TextField("", text: $userName, prompt:
-                    Text("Enter Name")
-                        .foregroundColor(Theme.Colors.text.opacity(0.4))
-                )
-                .focused($isFocused)
-                .font(.system(size: 14 * s, weight: .regular))
-                .foregroundStyle(Theme.Colors.text)
-                .accentColor(Theme.Colors.text)
-                .padding(.horizontal, 16 * s)
-                .frame(width: 353 * s, height: Theme.Sizes.textFieldHeight * s)
-                .background(
-                    Capsule()
-                        .fill(Color.white.opacity(0.01))
-                        .background(.ultraThinMaterial.opacity(0.01))
-                        .clipShape(Capsule())
-                )
-                .overlay(
-                    Capsule()
-                        .stroke(Theme.Colors.glassBorder, lineWidth: 2)
-                )
-                .shadow(
-                    color: Theme.Colors.glassShadowBlue.opacity(0.3),
-                    radius: 20 * s, y: 10 * s
-                )
-                .position(
-                    x: (20 + 353.0 / 2) * s,
-                    y: (177 + 28) * s
-                )
-                .environment(\.colorScheme, .dark)
-
-                // ── 6. Bottom bar ──
-                // Figma: (20, 734), w=355, h=56
-
-                // Back button: 56x56, cornerRadius 12, border #63507A 2px
-                Button(action: onBack) {
-                    Image(systemName: "arrow.left")
-                        .font(.system(size: 14 * s, weight: .medium))
-                        .foregroundStyle(Theme.Colors.text)
-                        .frame(
-                            width: Theme.Sizes.backButtonSize * s,
-                            height: Theme.Sizes.backButtonSize * s
-                        )
-                        .background(
-                            RoundedRectangle(cornerRadius: Theme.Radius.backButton)
-                                .fill(.ultraThinMaterial)
-                                .overlay(
-                                    RoundedRectangle(cornerRadius: Theme.Radius.backButton)
-                                        .stroke(Theme.Colors.glassBorder, lineWidth: 2)
-                                )
-                        )
-                        .shadow(
-                            color: Theme.Colors.glassShadowBlue.opacity(0.3),
-                            radius: 15 * s, y: 10 * s
-                        )
-                }
-                .position(
-                    x: (20 + 28) * s,
-                    y: (734 + 28) * s
-                )
-
-                // Continue button: fills remaining width, height 56, cornerRadius 13
-                // Width = 355 - 56 (back) - 16 (gap) = 283
-                Button {
-                    isFocused = false
-                    UserDefaults.standard.set(userName, forKey: "user_name")
-                    onContinue()
-                } label: {
-                    Text("Reveal My Path")
-                        .font(.system(size: 16 * s, weight: .medium))
-                        .foregroundStyle(.white)
+                
+                Spacer()
+                
+                if userName.count >= 2 {
+                    Button {
+                        isFocused = false
+                        UserDefaults.standard.set(userName, forKey: "user_name")
+                        onContinue()
+                    } label: {
+                        HStack(spacing: 8) {
+                            Text("Begin Journey")
+                                .font(.system(size: 18, weight: .bold))
+                                .tracking(1)
+                            
+                            Image(systemName: "arrow.right")
+                                .font(.system(size: 18, weight: .bold))
+                        }
+                        .foregroundStyle(.black)
                         .frame(maxWidth: .infinity)
-                        .frame(height: Theme.Sizes.buttonHeight * s)
-                        .background(
-                            LinearGradient(
-                                stops: [
-                                    .init(color: Theme.Colors.buttonGradientStart, location: 0.31858),
-                                    .init(color: Theme.Colors.buttonGradientEnd, location: 1.0)
-                                ],
-                                startPoint: .leading,
-                                endPoint: .trailing
-                            )
-                        )
-                        .clipShape(RoundedRectangle(cornerRadius: Theme.Radius.button))
+                        .frame(height: 56)
+                        .background(Color(hex: "FFD700"))
+                        .clipShape(RoundedRectangle(cornerRadius: 16))
+                        .shadow(color: Color(hex: "FFD700").opacity(0.3), radius: 20)
+                    }
+                    .padding(.horizontal, 32)
+                    .padding(.bottom, 40)
+                    .transition(.opacity)
                 }
-                .frame(width: (355 - 56 - 16) * s)
-                .position(
-                    x: (20 + 56 + 16 + (355.0 - 56 - 16) / 2) * s,
-                    y: (734 + 28) * s
-                )
             }
-            .frame(width: geo.size.width, height: geo.size.height)
-            .clipped()
         }
-        .ignoresSafeArea()
         .onAppear {
-            DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+            runTypewriterAnimation()
+        }
+    }
+    
+    private func runTypewriterAnimation() {
+        guard titleLine1.isEmpty else { return }
+        
+        let haptic = UIImpactFeedbackGenerator(style: .light)
+        haptic.prepare()
+        
+        // Type line 1
+        for (index, char) in fullLine1.enumerated() {
+            let delay = Double(index) * 0.05
+            DispatchQueue.main.asyncAfter(deadline: .now() + delay) {
+                titleLine1.append(char)
+                haptic.impactOccurred(intensity: 0.5)
+            }
+        }
+        
+        // Small pause, then type line 2
+        let line2StartDelay = Double(fullLine1.count) * 0.05 + 0.2
+        for (index, char) in fullLine2.enumerated() {
+            let delay = line2StartDelay + Double(index) * 0.05
+            DispatchQueue.main.asyncAfter(deadline: .now() + delay) {
+                titleLine2.append(char)
+                haptic.impactOccurred(intensity: 0.5)
+            }
+        }
+        
+        // Show subtitle after typing
+        let subtitleDelay = line2StartDelay + Double(fullLine2.count) * 0.05 + 0.3
+        DispatchQueue.main.asyncAfter(deadline: .now() + subtitleDelay) {
+            withAnimation(.easeIn(duration: 0.5)) {
+                showSubtitle = true
+            }
+        }
+        
+        // Show input field after subtitle
+        let inputDelay = subtitleDelay + 0.3
+        DispatchQueue.main.asyncAfter(deadline: .now() + inputDelay) {
+            withAnimation(.easeIn(duration: 0.5)) {
+                showInput = true
+            }
+            
+            // Focus on input field
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
                 isFocused = true
             }
         }
@@ -180,3 +193,5 @@ struct NameStepView: View {
         onBack: {}
     )
 }
+
+
