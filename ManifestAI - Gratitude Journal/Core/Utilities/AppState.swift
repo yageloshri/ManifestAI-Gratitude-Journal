@@ -10,17 +10,17 @@ class AppState: ObservableObject {
     @Published var hasCompletedOnboarding: Bool {
         didSet {
             UserDefaults.standard.set(hasCompletedOnboarding, forKey: "hasCompletedOnboarding")
-            print("🔄 AppState: hasCompletedOnboarding changed to: \(hasCompletedOnboarding)")
+            dlog("🔄 AppState: hasCompletedOnboarding changed to: \(hasCompletedOnboarding)")
         }
     }
     
     private init() {
         self.hasCompletedOnboarding = UserDefaults.standard.bool(forKey: "hasCompletedOnboarding")
-        print("🚀 AppState initialized - hasCompletedOnboarding: \(hasCompletedOnboarding)")
+        dlog("🚀 AppState initialized - hasCompletedOnboarding: \(hasCompletedOnboarding)")
     }
     
     func completeOnboarding() {
-        print("✅ AppState: Completing onboarding...")
+        dlog("✅ AppState: Completing onboarding...")
         // Update state on main thread - critical for proper UI updates on iPad
         // Button actions are already on main thread, but we ensure it for safety
         if Thread.isMainThread {
@@ -34,7 +34,7 @@ class AppState: ObservableObject {
                 UserDefaults.standard.synchronize()
             }
         }
-        print("✅ AppState: Onboarding completed - hasCompletedOnboarding = \(hasCompletedOnboarding)")
+        dlog("✅ AppState: Onboarding completed - hasCompletedOnboarding = \(hasCompletedOnboarding)")
     }
 }
 

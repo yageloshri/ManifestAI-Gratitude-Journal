@@ -9,7 +9,7 @@ struct Secrets {
             #if DEBUG
             fatalError("UNSPLASH_ACCESS_KEY not set. Copy Config.xcconfig.example to Config.xcconfig and add your key.")
             #else
-            print("⚠️ UNSPLASH_ACCESS_KEY missing in release build - feature will be unavailable")
+            dlog("⚠️ UNSPLASH_ACCESS_KEY missing in release build - feature will be unavailable")
             return ""
             #endif
         }
@@ -21,7 +21,7 @@ struct Secrets {
             #if DEBUG
             fatalError("GEMINI_API_KEY not set. Copy Config.xcconfig.example to Config.xcconfig and add your key.")
             #else
-            print("⚠️ GEMINI_API_KEY missing in release build - feature will be unavailable")
+            dlog("⚠️ GEMINI_API_KEY missing in release build - feature will be unavailable")
             return ""
             #endif
         }
@@ -33,7 +33,7 @@ struct Secrets {
             #if DEBUG
             fatalError("SUPERWALL_API_KEY not set. Copy Config.xcconfig.example to Config.xcconfig and add your key.")
             #else
-            print("⚠️ SUPERWALL_API_KEY missing in release build - feature will be unavailable")
+            dlog("⚠️ SUPERWALL_API_KEY missing in release build - feature will be unavailable")
             return ""
             #endif
         }

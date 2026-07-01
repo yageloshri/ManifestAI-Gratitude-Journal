@@ -22,7 +22,7 @@ class JournalViewModel: ObservableObject {
             elevatedText = result
             showResult = true
         } catch {
-            print("Error elevating entry: \(error)")
+            dlog("Error elevating entry: \(error)")
             errorMessage = "The stars were clouded. Please try again."
         }
         

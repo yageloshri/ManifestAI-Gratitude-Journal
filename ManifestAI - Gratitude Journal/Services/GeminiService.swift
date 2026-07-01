@@ -59,14 +59,15 @@ class GeminiService {
         request.httpMethod = "POST"
         request.setValue("application/json", forHTTPHeaderField: "Content-Type")
         request.httpBody = try JSONEncoder().encode(requestBody)
+        request.timeoutInterval = 30
         
         let (data, response) = try await URLSession.shared.data(for: request)
         
         guard let httpResponse = response as? HTTPURLResponse, httpResponse.statusCode == 200 else {
             if let httpResponse = response as? HTTPURLResponse {
-                print("Gemini API Error: \(httpResponse.statusCode)")
+                dlog("Gemini API Error: \(httpResponse.statusCode)")
                 if let errorText = String(data: data, encoding: .utf8) {
-                    print("Gemini Error Details: \(errorText)")
+                    dlog("Gemini Error Details: \(errorText)")
                 }
             }
             throw URLError(.badServerResponse)

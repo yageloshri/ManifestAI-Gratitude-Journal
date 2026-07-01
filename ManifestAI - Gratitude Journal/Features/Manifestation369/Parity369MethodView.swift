@@ -33,15 +33,19 @@ struct Parity369MethodView: View {
                     .frame(width: 392 * sx, height: 382 * sy)
                     .opacity(0.2)
                     .parityPosition(x: 0, y: 145 * sy)
+                    .accessibilityHidden(true) // decorative texture
 
                 // Figma 340:3230: SKIP (327,70,34,24) Poppins-Medium 16 #B9B9B9
                 Text("SKIP")
                     .font(DesignTokens.Typography.bodyMedium)
                     .foregroundStyle(DesignTokens.Colors.textSecondary)
                     .frame(width: 34 * sx, alignment: .center)
-                    .contentShape(Rectangle())
+                    // a11y/hit-target only: outset the 34pt frame to a ≥44pt tap area
+                    .contentShape(Rectangle().inset(by: -10))
                     .onTapGesture { onSkip() }
                     .parityPosition(x: 327 * sx, y: 70 * sy + 1.33 * sy)
+                    .accessibilityLabel("Skip")
+                    .accessibilityAddTraits(.isButton)
                     .accessibilityIdentifier("method369.skip")
 
                 // Figma 340:3111: progress dots (159,107,75,9), active = 0
@@ -54,6 +58,7 @@ struct Parity369MethodView: View {
                 owlImage
                     .frame(width: 246 * sx, height: 219 * sy)
                     .parityPosition(x: 74 * sx, y: 185 * sy)
+                    .accessibilityHidden(true) // decorative illustration (raw asset name otherwise)
 
                 // Figma 332:3019: title (18,432,356,27) Bitter-Bold 18 centered
                 Text(title)

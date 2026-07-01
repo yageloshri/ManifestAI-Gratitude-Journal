@@ -46,7 +46,7 @@ struct DashboardView: View {
         }
         .tint(Theme.Colors.primary)
         .onAppear {
-            print("🎬 DashboardView appeared")
+            dlog("🎬 DashboardView appeared")
             
             // Customize TabBar appearance for dark theme
             let appearance = UITabBarAppearance()
@@ -65,11 +65,11 @@ struct DashboardView: View {
     private func checkAndShowPaywall() {
         // בודק אם הדגל קיים ומוגדר כ-True
         if UserDefaults.standard.bool(forKey: "should_show_paywall_after_onboarding") {
-            print("🔍 DashboardView: Paywall flag detected! Will show paywall after onboarding")
+            dlog("🔍 DashboardView: Paywall flag detected! Will show paywall after onboarding")
             
             // עיכוב קטנטן כדי לתת לאנימציית המעבר להסתיים (חווית משתמש טובה יותר)
             DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
-                print("📱 DashboardView: Triggering Superwall paywall NOW...")
+                dlog("📱 DashboardView: Triggering Superwall paywall NOW...")
                 
                 // 1. קריאה ל-Superwall עם register placement
                 Superwall.shared.register(placement: "campaign_trigger")
@@ -77,10 +77,10 @@ struct DashboardView: View {
                 // 2. איפוס הדגל כדי שזה לא יקרה בכל פעם שנכנסים לאפליקציה
                 UserDefaults.standard.set(false, forKey: "should_show_paywall_after_onboarding")
                 
-                print("✅ DashboardView: Paywall triggered - staying on Dashboard when dismissed")
+                dlog("✅ DashboardView: Paywall triggered - staying on Dashboard when dismissed")
             }
         } else {
-            print("ℹ️ DashboardView: No paywall flag - normal dashboard load")
+            dlog("ℹ️ DashboardView: No paywall flag - normal dashboard load")
         }
     }
 }

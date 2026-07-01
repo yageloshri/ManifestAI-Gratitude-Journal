@@ -101,6 +101,7 @@ struct ParityJournalListView: View {
             }
             .frame(width: 40 * sx, height: 40 * sy, alignment: .topLeading)
         }
+        .accessibilityLabel("Search")
         .accessibilityIdentifier("journalList.searchButton")
     }
 
@@ -164,6 +165,11 @@ struct ParityJournalListView: View {
             .contentShape(RoundedRectangle(cornerRadius: DesignTokens.Radii.card))
             .onTapGesture { onSelectEntry(entry) }
             .parityPosition(y: 29 * sy)
+            // a11y: tappable card → single button announcing title, date, body
+            .accessibilityElement(children: .ignore)
+            .accessibilityLabel("\(entry.title), \(entry.date)")
+            .accessibilityValue(entry.body)
+            .accessibilityAddTraits(.isButton)
             .accessibilityIdentifier("journalList.entry.\(index)")
         }
         .frame(width: 353 * sx,

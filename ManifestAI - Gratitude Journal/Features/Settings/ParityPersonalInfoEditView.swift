@@ -12,9 +12,63 @@ struct ParityPersonalInfoEditView: View {
     var year: String = "2000"
     var avatarInitial: String = "A"
     var onBack: () -> Void = {}
-    var onSave: () -> Void = {}
+    var onSave: (String, Date) -> Void = { _, _ in }
     /// Parity gallery: fixed mock data matching the Figma frame.
     var parityMode: Bool = false
+
+    // Editable state, seeded from the mock-friendly inputs in init so the
+    // first rendered frame already matches the Figma defaults pixel-for-pixel.
+    @State private var editedName: String
+    @State private var selectedDay: Int
+    @State private var selectedMonth: Int // 1-based
+    @State private var selectedYear: Int
+
+    /// Full month names, same source as the "MMMM" format used by callers.
+    private static let monthNames: [String] = DateFormatter().monthSymbols
+
+    private static let minYear = 1930
+    private static var maxYear: Int { Calendar.current.component(.year, from: Date()) }
+
+    init(name: String = "Ali Ahmad",
+         day: String = "23",
+         month: String = "September",
+         year: String = "2000",
+         avatarInitial: String = "A",
+         onBack: @escaping () -> Void = {},
+         onSave: @escaping (String, Date) -> Void = { _, _ in },
+         parityMode: Bool = false) {
+        self.name = name
+        self.day = day
+        self.month = month
+        self.year = year
+        self.avatarInitial = avatarInitial
+        self.onBack = onBack
+        self.onSave = onSave
+        self.parityMode = parityMode
+        _editedName = State(initialValue: name)
+        _selectedDay = State(initialValue: Int(day) ?? 23)
+        let monthIndex = Self.monthNames.firstIndex { $0.caseInsensitiveCompare(month) == .orderedSame }
+        _selectedMonth = State(initialValue: monthIndex.map { $0 + 1 } ?? 9)
+        _selectedYear = State(initialValue: Int(year) ?? 2000)
+    }
+
+    // MARK: - Validation
+
+    private var trimmedName: String {
+        editedName.trimmingCharacters(in: .whitespacesAndNewlines)
+    }
+
+    /// The selected day/month/year as a real date, or nil for e.g. Feb 30.
+    private var composedDate: Date? {
+        let calendar = Calendar.current
+        let components = DateComponents(year: selectedYear, month: selectedMonth, day: selectedDay)
+        guard components.isValidDate(in: calendar) else { return nil }
+        return calendar.date(from: components)
+    }
+
+    private var isSaveEnabled: Bool {
+        !trimmedName.isEmpty && composedDate != nil
+    }
 
     var body: some View {
         GeometryReader { geo in
@@ -107,6 +161,9 @@ struct ParityPersonalInfoEditView: View {
             .frame(width: 24, height: 24)
             .parityPosition(x: 48 * sx, y: 50 * sy)
             .accessibilityIdentifier("personalinfoedit.avatarEditBadge")
+            // Decorative only — no photo feature yet, so keep it out of the
+            // accessibility tree rather than exposing a dead control.
+            .accessibilityHidden(true)
         }
         .frame(width: 72, height: 74 * sy, alignment: .topLeading)
         .accessibilityIdentifier("personalinfoedit.avatar")
@@ -128,9 +185,14 @@ struct ParityPersonalInfoEditView: View {
                     .figmaGlassSurface(cornerRadius: 28, compact: true)
 
                 // Figma I330:1658;268:1519: 'Ali Ahmad' Poppins Regular 14 #EBEBEB (field-rel 16,16)
-                Text(name)
+                // Editable: same font/color/position as the static Text it replaced.
+                TextField("", text: $editedName)
                     .font(DesignTokens.Typography.smallText)
                     .foregroundStyle(DesignTokens.Colors.textPrimary)
+                    .tint(DesignTokens.Colors.primary)
+                    .textInputAutocapitalization(.words)
+                    .autocorrectionDisabled()
+                    .frame(width: 286 * sx, alignment: .leading)
                     .parityPosition(x: 16 * sx, y: 16 * sy)
 
                 // Figma I330:1658;268:1518: Arrow_Left_MD 14×12 #685EF5 2pt (field-rel 310,22)
@@ -157,15 +219,25 @@ struct ParityPersonalInfoEditView: View {
                 .foregroundStyle(DesignTokens.Colors.lightGrey)
                 .parityPosition(x: 20 * sx, y: 380 * sy)
             // Figma 330:1663: pill (20,409) 80×56; 330:1664: '23' at (51,427)
-            ZStack(alignment: .topLeading) {
-                Color.clear
-                    .figmaGlassSurface(cornerRadius: 28, compact: true)
-                Text(day)
-                    .font(DesignTokens.Typography.smallMedium)
-                    .foregroundStyle(DesignTokens.Colors.textPrimary)
-                    .parityPosition(x: 31 * sx, y: 18 * sy)
+            Menu {
+                Picker("Day", selection: $selectedDay) {
+                    ForEach(1...31, id: \.self) { d in
+                        Text(String(d)).tag(d)
+                    }
+                }
+            } label: {
+                ZStack(alignment: .topLeading) {
+                    Color.clear
+                        .figmaGlassSurface(cornerRadius: 28, compact: true)
+                    Text(String(selectedDay))
+                        .font(DesignTokens.Typography.smallMedium)
+                        .foregroundStyle(DesignTokens.Colors.textPrimary)
+                        .parityPosition(x: 31 * sx, y: 18 * sy)
+                }
+                .frame(width: 80 * sx, height: 56 * sy, alignment: .topLeading)
+                .contentShape(Rectangle())
             }
-            .frame(width: 80 * sx, height: 56 * sy, alignment: .topLeading)
+            .buttonStyle(.plain)
             .parityPosition(x: 20 * sx, y: 409 * sy)
             .accessibilityIdentifier("personalinfoedit.dayField")
 
@@ -176,20 +248,30 @@ struct ParityPersonalInfoEditView: View {
                 .parityPosition(x: 108 * sx, y: 380 * sy)
             // Figma 330:1668: pill (108,409) 150×56; 330:1670 'September' (124,427);
             // 330:1671 chevron-down at (226.2,435) 11.67×5.83 #685EF5 2pt
-            ZStack(alignment: .topLeading) {
-                Color.clear
-                    .figmaGlassSurface(cornerRadius: 28, compact: true)
-                Text(month)
-                    .font(DesignTokens.Typography.smallMedium)
-                    .foregroundStyle(DesignTokens.Colors.textPrimary)
-                    .parityPosition(x: 16 * sx, y: 18 * sy)
-                ChevronDownShape()
-                    .stroke(DesignTokens.Colors.primary,
-                            style: StrokeStyle(lineWidth: 2, lineCap: .round, lineJoin: .round))
-                    .frame(width: 11.67, height: 5.83)
-                    .parityPosition(x: 118.2 * sx, y: 26 * sy)
+            Menu {
+                Picker("Month", selection: $selectedMonth) {
+                    ForEach(1...12, id: \.self) { m in
+                        Text(Self.monthNames[m - 1]).tag(m)
+                    }
+                }
+            } label: {
+                ZStack(alignment: .topLeading) {
+                    Color.clear
+                        .figmaGlassSurface(cornerRadius: 28, compact: true)
+                    Text(Self.monthNames[selectedMonth - 1])
+                        .font(DesignTokens.Typography.smallMedium)
+                        .foregroundStyle(DesignTokens.Colors.textPrimary)
+                        .parityPosition(x: 16 * sx, y: 18 * sy)
+                    ChevronDownShape()
+                        .stroke(DesignTokens.Colors.primary,
+                                style: StrokeStyle(lineWidth: 2, lineCap: .round, lineJoin: .round))
+                        .frame(width: 11.67, height: 5.83)
+                        .parityPosition(x: 118.2 * sx, y: 26 * sy)
+                }
+                .frame(width: 150 * sx, height: 56 * sy, alignment: .topLeading)
+                .contentShape(Rectangle())
             }
-            .frame(width: 150 * sx, height: 56 * sy, alignment: .topLeading)
+            .buttonStyle(.plain)
             .parityPosition(x: 108 * sx, y: 409 * sy)
             .accessibilityIdentifier("personalinfoedit.monthField")
 
@@ -200,20 +282,30 @@ struct ParityPersonalInfoEditView: View {
                 .parityPosition(x: 266 * sx, y: 380 * sy)
             // Figma 330:1676: pill (266,409) 105×56; 330:1678 '2000' (283,427);
             // 330:1679 chevron-down at (342.2,435)
-            ZStack(alignment: .topLeading) {
-                Color.clear
-                    .figmaGlassSurface(cornerRadius: 28, compact: true)
-                Text(year)
-                    .font(DesignTokens.Typography.smallMedium)
-                    .foregroundStyle(DesignTokens.Colors.textPrimary)
-                    .parityPosition(x: 17 * sx, y: 18 * sy)
-                ChevronDownShape()
-                    .stroke(DesignTokens.Colors.primary,
-                            style: StrokeStyle(lineWidth: 2, lineCap: .round, lineJoin: .round))
-                    .frame(width: 11.67, height: 5.83)
-                    .parityPosition(x: 76.2 * sx, y: 26 * sy)
+            Menu {
+                Picker("Year", selection: $selectedYear) {
+                    ForEach((Self.minYear...Self.maxYear).reversed(), id: \.self) { y in
+                        Text(String(y)).tag(y)
+                    }
+                }
+            } label: {
+                ZStack(alignment: .topLeading) {
+                    Color.clear
+                        .figmaGlassSurface(cornerRadius: 28, compact: true)
+                    Text(String(selectedYear))
+                        .font(DesignTokens.Typography.smallMedium)
+                        .foregroundStyle(DesignTokens.Colors.textPrimary)
+                        .parityPosition(x: 17 * sx, y: 18 * sy)
+                    ChevronDownShape()
+                        .stroke(DesignTokens.Colors.primary,
+                                style: StrokeStyle(lineWidth: 2, lineCap: .round, lineJoin: .round))
+                        .frame(width: 11.67, height: 5.83)
+                        .parityPosition(x: 76.2 * sx, y: 26 * sy)
+                }
+                .frame(width: 105 * sx, height: 56 * sy, alignment: .topLeading)
+                .contentShape(Rectangle())
             }
-            .frame(width: 105 * sx, height: 56 * sy, alignment: .topLeading)
+            .buttonStyle(.plain)
             .parityPosition(x: 266 * sx, y: 409 * sy)
             .accessibilityIdentifier("personalinfoedit.yearField")
         }
@@ -222,7 +314,10 @@ struct ParityPersonalInfoEditView: View {
     // MARK: - Save button (Figma 330:1766)
 
     private func saveButton(sx: CGFloat, sy: CGFloat) -> some View {
-        Button(action: onSave) {
+        Button {
+            guard let date = composedDate, !trimmedName.isEmpty else { return }
+            onSave(trimmedName, date)
+        } label: {
             ZStack(alignment: .topLeading) {
                 RoundedRectangle(cornerRadius: DesignTokens.Radii.button)
                     .fill(DesignTokens.Gradients.primary)
@@ -245,6 +340,9 @@ struct ParityPersonalInfoEditView: View {
             .frame(width: 353 * sx, height: 56 * sy)
         }
         .buttonStyle(.plain)
+        // Invalid input (empty name or impossible date, e.g. Feb 30): dim + inert.
+        .opacity(isSaveEnabled ? 1 : 0.5)
+        .disabled(!isSaveEnabled)
         .accessibilityIdentifier("personalinfoedit.saveButton")
     }
 }

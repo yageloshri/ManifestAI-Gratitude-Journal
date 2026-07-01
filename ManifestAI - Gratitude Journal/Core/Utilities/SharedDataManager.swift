@@ -24,7 +24,7 @@ class SharedDataManager {
         userDefaults?.set(numerologyTitle, forKey: keyNumerologyTitle)
         
         // Debug
-        print("💾 SharedDataManager: Saved data to \(appGroupId)")
+        dlog("💾 SharedDataManager: Saved data to \(appGroupId)")
     }
     
     // MARK: - READERS (Called by Widget)

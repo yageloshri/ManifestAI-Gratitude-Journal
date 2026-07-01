@@ -9,12 +9,32 @@ import SwiftUI
 struct ParityUpgradeProView: View {
     var onStartTrial: () -> Void = {}
     var onRestore: () -> Void = {}
+    var onPrivacy: () -> Void = {}
+    var onTerms: () -> Void = {}
+    /// Invoked with "yearly"/"weekly" when the user selects a plan.
+    var onSelectPlan: ((String) -> Void)? = nil
+    /// When non-nil, renders a visible back button top-left (nil keeps the
+    /// debug ParityGallery pixel-identical to the Figma frame).
+    var onBack: (() -> Void)? = nil
     /// Parity gallery: yearly plan selected (matches the Figma mock).
     var parityMode: Bool = false
 
     @State private var selectedPlan: Plan = .yearly
 
     enum Plan { case yearly, weekly }
+
+    /// Trial length claimed by the on-screen copy ("3- days Free", "In 3 Days",
+    /// "Start my 3-Day Free Trial", "3 days free, then …").
+    private static let trialDays = 3
+
+    /// First charge date: today + trial length, e.g. "2 Jul 2026".
+    private var chargeDateString: String {
+        let date = Calendar.current.date(byAdding: .day, value: Self.trialDays, to: Date()) ?? Date()
+        let formatter = DateFormatter()
+        formatter.locale = Locale(identifier: "en_US")
+        formatter.dateFormat = "d MMM yyyy"
+        return formatter.string(from: date)
+    }
 
     var body: some View {
         GeometryReader { geo in
@@ -119,16 +139,32 @@ struct ParityUpgradeProView: View {
                 // Figma 330:1780 'Frame 233': links row (31,806,331), op 0.7
                 HStack {
                     Text("Privacy")                                   // 330:1781
+                        .onTapGesture { onPrivacy() }
+                        .accessibilityAddTraits(.isButton)
                     Spacer()
-                    Text("Restore").onTapGesture { onRestore() }      // 330:1782
+                    Text("Restore")                                   // 330:1782
+                        .onTapGesture { onRestore() }
+                        .accessibilityAddTraits(.isButton)
                     Spacer()
                     Text("Terms")                                     // 330:1783
+                        .onTapGesture { onTerms() }
+                        .accessibilityAddTraits(.isButton)
                 }
                 .font(DesignTokens.Typography.label)
                 .foregroundStyle(DesignTokens.Colors.textSecondary)
                 .opacity(0.7)
                 .frame(width: 331 * sx)
                 .parityPosition(x: 31 * sx, y: 806 * sy)
+
+                // Visible back control (optional — live app also has an
+                // invisible top-left tap zone in MainTabView). Positioned to
+                // match sibling screens (ParityJournalEntryView et al: 20,68).
+                if let onBack {
+                    ParityBackButton40(sx: sx, sy: sy, action: onBack)
+                        .parityPosition(x: 20 * sx, y: 68 * sy)
+                        .accessibilityLabel("Back")
+                        .accessibilityIdentifier("upgradepro.backButton")
+                }
             }
             .ignoresSafeArea()
         }
@@ -175,7 +211,7 @@ struct ParityUpgradeProView: View {
                          sx: sx).parityPosition(x: 93 * sx, y: 286.67 * sy)
             // Figma 330:1821: In 3 Days (93,392,244)
             timelineText(title: "In 3 Days",
-                         body: "You’ll be charged on 27 Jan 2026 unless you cancel anytime before.",
+                         body: "You’ll be charged on \(chargeDateString) unless you cancel anytime before.",
                          sx: sx).parityPosition(x: 93 * sx, y: 393.67 * sy)
         }
     }
@@ -263,7 +299,12 @@ struct ParityUpgradeProView: View {
                     .parityPosition(x: 220 * sx, y: 16 * sy)
             }
             .frame(width: 320 * sx, height: 79 * sy, alignment: .topLeading)
-            .onTapGesture { if !parityMode { selectedPlan = .yearly } }
+            .onTapGesture {
+                if !parityMode {
+                    selectedPlan = .yearly
+                    onSelectPlan?("yearly")
+                }
+            }
             .parityPosition(x: 37 * sx, y: 495 * sy)
             .accessibilityIdentifier("upgradepro.plan.yearly")
 
@@ -323,7 +364,12 @@ struct ParityUpgradeProView: View {
                     .parityPosition(x: 213 * sx, y: 16 * sy)
             }
             .frame(width: 320 * sx, height: 56 * sy, alignment: .topLeading)
-            .onTapGesture { if !parityMode { selectedPlan = .weekly } }
+            .onTapGesture {
+                if !parityMode {
+                    selectedPlan = .weekly
+                    onSelectPlan?("weekly")
+                }
+            }
             .parityPosition(x: 37 * sx, y: 582 * sy)
             .accessibilityIdentifier("upgradepro.plan.weekly")
         }

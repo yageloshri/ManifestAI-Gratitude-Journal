@@ -8,7 +8,11 @@ struct VisionBoardEditorView: View {
     @ObservedObject var subscriptionManager = SubscriptionManager.shared
     @Environment(\.modelContext) private var modelContext
     @Environment(\.dismiss) var dismiss
-    
+
+    // Photo library save result (the in-app board save is tracked separately)
+    @State private var showPhotoSaveError = false
+    @State private var boardSavedDespitePhotoError = false
+
     var body: some View {
         ZStack {
             // App design language: cosmic background + purple glow.
@@ -45,11 +49,11 @@ struct VisionBoardEditorView: View {
                         
                         // Ensure we have items to save
                         guard !viewModel.gridItems.isEmpty else {
-                            print("❌ Cannot save: No images in board")
+                            dlog("❌ Cannot save: No images in board")
                             return
                         }
                         
-                        print("🎨 Starting snapshot capture with \(viewModel.gridItems.count) items")
+                        dlog("🎨 Starting snapshot capture with \(viewModel.gridItems.count) items")
                         
                         // Create preview image using UIGraphicsImageRenderer
                         let size = CGSize(width: 390, height: 844)
@@ -126,9 +130,19 @@ struct VisionBoardEditorView: View {
                             }
                         }
                         
-                        print("✅ Successfully rendered image: \(image.size)")
-                        viewModel.saveBoard(context: modelContext, previewImage: image)
-                        UIImageWriteToSavedPhotosAlbum(image, nil, nil, nil)
+                        dlog("✅ Successfully rendered image: \(image.size)")
+                        // Save in-app first, but defer the success alert until we
+                        // know whether the photo library write also succeeded.
+                        let boardSaved = viewModel.saveBoard(context: modelContext, previewImage: image, showSuccessAlert: false)
+                        PhotoAlbumSaver(onComplete: { error in
+                            if let error {
+                                dlog("❌ Failed to save wallpaper to Photos: \(error)")
+                                boardSavedDespitePhotoError = boardSaved
+                                showPhotoSaveError = true
+                            } else if boardSaved {
+                                viewModel.showSaveSuccess = true
+                            }
+                        }).save(image)
                     }) {
                         HStack(spacing: 8) {
                             Image(systemName: "arrow.down.circle.fill")
@@ -371,6 +385,43 @@ struct VisionBoardEditorView: View {
         } message: {
             Text("Your vision board has been saved to your gallery and is ready to be set as your lock screen wallpaper!")
         }
+        .alert("Couldn't Save to Photos", isPresented: $showPhotoSaveError) {
+            Button("Open Settings") {
+                if let url = URL(string: UIApplication.openSettingsURLString) {
+                    UIApplication.shared.open(url)
+                }
+            }
+            Button("OK", role: .cancel) { }
+        } message: {
+            Text(boardSavedDespitePhotoError
+                 ? "Couldn't save to Photos — check permission in Settings. Your board was still saved in the app."
+                 : "Couldn't save to Photos — check permission in Settings.")
+        }
+    }
+}
+
+/// Completion target for UIImageWriteToSavedPhotosAlbum so photo library
+/// write errors (e.g. Photos permission denied) aren't silently discarded.
+/// Keeps itself alive until the write callback fires, then reports on main.
+private final class PhotoAlbumSaver: NSObject {
+    private let onComplete: (Error?) -> Void
+    private var selfRetain: PhotoAlbumSaver?
+
+    init(onComplete: @escaping (Error?) -> Void) {
+        self.onComplete = onComplete
+        super.init()
+    }
+
+    func save(_ image: UIImage) {
+        selfRetain = self
+        UIImageWriteToSavedPhotosAlbum(image, self, #selector(image(_:didFinishSavingWithError:contextInfo:)), nil)
+    }
+
+    @objc private func image(_ image: UIImage, didFinishSavingWithError error: Error?, contextInfo: UnsafeRawPointer) {
+        DispatchQueue.main.async { [onComplete] in
+            onComplete(error)
+        }
+        selfRetain = nil
     }
 }
 

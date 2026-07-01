@@ -138,7 +138,7 @@ struct OnboardingContainerView: View {
     }
     
     private func completeOnboarding() {
-        print("🎉 Onboarding Complete! Saving user data...")
+        dlog("🎉 Onboarding Complete! Saving user data...")
         
         // Save persistent user data first
         UserManager.shared.saveUser(name: userName, birthDate: birthDate)
@@ -149,7 +149,7 @@ struct OnboardingContainerView: View {
         // Synchronize UserDefaults before updating app state
         UserDefaults.standard.synchronize()
         
-        print("✅ Calling AppState.completeOnboarding()...")
+        dlog("✅ Calling AppState.completeOnboarding()...")
         // Button actions are already on main thread, so we can call directly
         // This ensures immediate state update without async delay
         appState.completeOnboarding()

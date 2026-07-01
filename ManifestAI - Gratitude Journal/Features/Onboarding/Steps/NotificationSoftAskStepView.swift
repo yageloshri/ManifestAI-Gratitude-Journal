@@ -170,16 +170,26 @@ struct NotificationSoftAskStepView: View {
                 isRequestingPermission = false
                 
                 if let error = error {
-                    print("❌ Notification permission error: \(error.localizedDescription)")
+                    dlog("❌ Notification permission error: \(error.localizedDescription)")
                 }
                 
                 if granted {
-                    print("✅ User granted notification permission")
+                    dlog("✅ User granted notification permission")
+                    // Enable + schedule the daily reminders — same path as the
+                    // Profile > Daily Reminders toggle (MainTabView.toggleReminders),
+                    // so the toggle reflects reality.
+                    let nm = NotificationManager369.shared
+                    nm.setNotificationsEnabled(true)
+                    nm.scheduleAllNotifications()
+                    // Keep the Profile > Daily Reminders switch (bound to
+                    // "daily_reminders_on" in MainTabView) in sync.
+                    UserDefaults.standard.set(true, forKey: "daily_reminders_on")
                     // Success haptic
                     let successHaptic = UINotificationFeedbackGenerator()
                     successHaptic.notificationOccurred(.success)
                 } else {
-                    print("⚠️ User denied notification permission")
+                    dlog("⚠️ User denied notification permission")
+                    // Keep the reminders flag off so the Profile toggle stays accurate
                 }
                 
                 // Continue to next screen regardless of permission result
@@ -194,7 +204,7 @@ struct NotificationSoftAskStepView: View {
         let haptic = UIImpactFeedbackGenerator(style: .light)
         haptic.impactOccurred()
         
-        print("ℹ️ User chose 'Maybe later' for notifications")
+        dlog("ℹ️ User chose 'Maybe later' for notifications")
         
         // Navigate to next screen without requesting permission
         onSkip()
@@ -203,8 +213,8 @@ struct NotificationSoftAskStepView: View {
 
 #Preview {
     NotificationSoftAskStepView(
-        onContinue: { print("Continue pressed") },
-        onSkip: { print("Skip pressed") }
+        onContinue: { dlog("Continue pressed") },
+        onSkip: { dlog("Skip pressed") }
     )
 }
 

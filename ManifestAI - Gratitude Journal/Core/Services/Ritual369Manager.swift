@@ -31,6 +31,10 @@ final class Ritual369Manager: ObservableObject {
         var challengeStartKey: String?
         var completedDays: Int       // consecutive fully-completed days before today
         var lastCompleteKey: String? // dateKey of the last fully-completed day
+        // Days of progress lost when a missed day restarted the cycle —
+        // surfaced once so the reset isn't silent. Optional: decodes as nil
+        // from states persisted before this field existed.
+        var lostStreakDays: Int?
     }
 
     private static let storeKey = "ritual369State"
@@ -82,6 +86,7 @@ final class Ritual369Manager: ObservableObject {
                let days = cal.dateComponents([.day], from: cal.startOfDay(for: lastDate),
                                              to: cal.startOfDay(for: now)).day,
                days > 1 {
+                if state.completedDays > 0 { state.lostStreakDays = state.completedDays }
                 state.completedDays = 0
                 state.challengeStartKey = nil
                 state.lastCompleteKey = nil
@@ -136,6 +141,24 @@ final class Ritual369Manager: ObservableObject {
         return min(33, state.completedDays + 1)
     }
 
+    /// Days of progress lost the last time a missed day restarted the cycle;
+    /// nil once acknowledged (cleared on the next written affirmation).
+    var streakResetNotice: Int? { state.lostStreakDays }
+
+    /// All 33 consecutive days are done — the challenge is finished.
+    var cycleComplete: Bool {
+        rolloverIfNeeded()
+        return state.completedDays >= 33
+    }
+
+    /// Begin a fresh 33-day challenge after finishing one.
+    func startNewCycle(now: Date = Date()) {
+        state = State(dateKey: Self.key(now), counts: [0, 0, 0],
+                      challengeStartKey: nil, completedDays: 0,
+                      lastCompleteKey: nil, lostStreakDays: nil)
+        persist()
+    }
+
     // MARK: - Time windows
 
     /// The phase whose window contains `now`, or nil between 00:00–04:59.
@@ -175,6 +198,7 @@ final class Ritual369Manager: ObservableObject {
         rolloverIfNeeded(now: now)
         guard activeWindow(now: now) == phase, !isComplete(phase) else { return false }
         state.counts[index(of: phase)] += 1
+        state.lostStreakDays = nil   // writing again = reset acknowledged
         persist()
         return true
     }
@@ -190,11 +214,14 @@ final class Ritual369Manager: ObservableObject {
         case beforeMorning(opensAt: String)
         /// All 18 writings done today.
         case dayComplete
+        /// All 33 days completed — the challenge is finished.
+        case cycleComplete
     }
 
     func screenState(now: Date = Date()) -> ScreenState {
         rolloverIfNeeded(now: now)
 
+        if state.completedDays >= 33 { return .cycleComplete }
         if Phase.allCases.allSatisfy({ isComplete($0) }) { return .dayComplete }
 
         guard let phase = activeWindow(now: now) else {
@@ -223,7 +250,8 @@ final class Ritual369Manager: ObservableObject {
     /// by MainTabView to simulate a clock hour.
     func debugReset() {
         state = State(dateKey: Self.key(Date()), counts: [0, 0, 0],
-                      challengeStartKey: nil, completedDays: 0, lastCompleteKey: nil)
+                      challengeStartKey: nil, completedDays: 0,
+                      lastCompleteKey: nil, lostStreakDays: nil)
         persist()
     }
     #endif

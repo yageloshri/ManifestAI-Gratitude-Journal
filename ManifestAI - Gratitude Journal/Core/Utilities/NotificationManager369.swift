@@ -138,7 +138,7 @@ class NotificationManager369 {
         UNUserNotificationCenter.current().removePendingNotificationRequests(withIdentifiers: [morningIdentifier])
         UNUserNotificationCenter.current().add(request) { error in
             if let error = error {
-                print("Error scheduling morning notification: \(error)")
+                dlog("Error scheduling morning notification: \(error)")
             }
         }
     }
@@ -159,7 +159,7 @@ class NotificationManager369 {
         UNUserNotificationCenter.current().removePendingNotificationRequests(withIdentifiers: [afternoonIdentifier])
         UNUserNotificationCenter.current().add(request) { error in
             if let error = error {
-                print("Error scheduling afternoon notification: \(error)")
+                dlog("Error scheduling afternoon notification: \(error)")
             }
         }
     }
@@ -180,7 +180,7 @@ class NotificationManager369 {
         UNUserNotificationCenter.current().removePendingNotificationRequests(withIdentifiers: [eveningIdentifier])
         UNUserNotificationCenter.current().add(request) { error in
             if let error = error {
-                print("Error scheduling evening notification: \(error)")
+                dlog("Error scheduling evening notification: \(error)")
             }
         }
     }

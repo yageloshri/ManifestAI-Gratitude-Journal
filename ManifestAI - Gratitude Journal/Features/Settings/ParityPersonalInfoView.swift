@@ -32,8 +32,12 @@ struct ParityPersonalInfoView: View {
                         .font(.system(size: 15, weight: .medium))
                         .foregroundStyle(DesignTokens.Colors.primary)
                 }
+                .contentShape(Rectangle())
                 .onTapGesture { onBack() }
                 .parityPosition(x: 20 * sx, y: 68 * sy)
+                .accessibilityElement(children: .ignore)
+                .accessibilityLabel("Back")
+                .accessibilityAddTraits(.isButton)
                 .accessibilityIdentifier("personalinfo.backButton")
 
                 // Figma 330:1465: title Bitter Bold 18 #EBEBEB (84,74.5)
@@ -50,8 +54,12 @@ struct ParityPersonalInfoView: View {
                         .font(.system(size: 15, weight: .medium))
                         .foregroundStyle(DesignTokens.Colors.primary)
                 }
+                .contentShape(Rectangle())
                 .onTapGesture { onEdit() }
                 .parityPosition(x: 327 * sx, y: 68 * sy)
+                .accessibilityElement(children: .ignore)
+                .accessibilityLabel("Edit")
+                .accessibilityAddTraits(.isButton)
                 .accessibilityIdentifier("personalinfo.editButton")
 
                 // Figma 330:1614: avatar 72×72 r50 #2C1E49, stroke #45326D 2pt (20,148)

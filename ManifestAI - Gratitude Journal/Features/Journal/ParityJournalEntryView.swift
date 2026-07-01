@@ -33,7 +33,21 @@ struct ParityJournalEntryView: View {
     var onEdit: () -> Void = {}
     var onDelete: () -> Void = {}
     var onSelectColor: (Int) -> Void = { _ in }
+    /// Live mode: swatch hex driving the .color tint (default = Figma's #560E50)
+    /// and the ring position in the picker. Defaults reproduce the Figma frames.
+    var tintHex: String? = nil
+    var selectedColorIndex: Int? = nil
     var parityMode: Bool = false
+
+    private var effectiveTint: String { tintHex ?? "560E50" }
+    /// Figma pairs bg #1C051A with tint #560E50 — exactly tint × 0.325.
+    private var tintedBackground: Color {
+        let v = Int(effectiveTint, radix: 16) ?? 0x560E50
+        let r = Int((CGFloat((v >> 16) & 0xFF) * 0.325).rounded())
+        let g = Int((CGFloat((v >> 8) & 0xFF) * 0.325).rounded())
+        let b = Int((CGFloat(v & 0xFF) * 0.325).rounded())
+        return Color(hex: String(format: "%02X%02X%02X", r, g, b))
+    }
 
     var body: some View {
         GeometryReader { geo in
@@ -42,13 +56,13 @@ struct ParityJournalEntryView: View {
 
             ZStack(alignment: .topLeading) {
                 // Frame fill: #1C051A on .color (324:12068), #16062A otherwise
-                (variant == .color ? Color(hex: "1C051A") : DesignTokens.Colors.background)
+                (variant == .color ? tintedBackground : DesignTokens.Colors.background)
 
                 // Ellipse 1: (0,12,578.7,677.5) layer blur 514
                 // .color → fill #560E50 @1 (324:12069); else #4F31EC@0.29
                 if variant == .color {
                     Ellipse()
-                        .fill(Color(hex: "560E50"))
+                        .fill(Color(hex: effectiveTint))
                         .frame(width: 578.67 * sx, height: 677.5 * sy)
                         .parityPosition(x: 0, y: 12 * sy)
                         .blur(radius: 257 * sx)
@@ -96,7 +110,7 @@ struct ParityJournalEntryView: View {
                     // Frame 279 (20,577,353,86): 'Color' label + swatch panel
                     // .color → swatch 1 selected, ring op 0.5 (324:12134/12135)
                     // .plain → swatch 0 selected, ring op 1   (324:12015/12016)
-                    ParityColorPicker(selectedIndex: variant == .color ? 1 : 0,
+                    ParityColorPicker(selectedIndex: selectedColorIndex ?? (variant == .color ? 1 : 0),
                                       ringWidth: 1.5,
                                       ringOpacity: variant == .color ? 0.5 : 1.0,
                                       sx: sx, sy: sy, onSelect: onSelectColor)
@@ -131,6 +145,7 @@ struct ParityJournalEntryView: View {
             }
             .frame(width: 40 * sx, height: 40 * sy, alignment: .topLeading)
         }
+        .accessibilityLabel("Edit")
         .accessibilityIdentifier("journalEntry.editButton")
     }
 
@@ -148,6 +163,7 @@ struct ParityJournalEntryView: View {
             }
             .frame(width: 40 * sx, height: 40 * sy, alignment: .topLeading)
         }
+        .accessibilityLabel("Delete entry")
         .accessibilityIdentifier("journalEntry.deleteButton")
     }
 }

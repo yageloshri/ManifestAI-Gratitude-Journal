@@ -117,6 +117,9 @@ struct Parity369RitualView: View {
     /// Live mode: when set, the input card + save button are replaced by a
     /// locked/done card (phase finished or window closed). (title, message).
     var lockedInfo: (String, String)? = nil
+    /// Live mode: with `lockedInfo`, also show the primary CTA with this
+    /// title (e.g. "Start a New 33-Day Challenge"); tapping it calls onSave.
+    var lockedActionTitle: String? = nil
     var onBack: () -> Void = {}
     var onSave: () -> Void = {}
     var onSelectTab: (FigmaTab) -> Void = { _ in }
@@ -183,6 +186,11 @@ struct Parity369RitualView: View {
                 if let lockedInfo {
                     lockedCard(title: lockedInfo.0, message: lockedInfo.1, sx: sx, sy: sy)
                         .parityPosition(x: 26 * sx, y: 429 * sy)
+
+                    if lockedActionTitle != nil {
+                        saveButton(sx: sx, sy: sy)
+                            .parityPosition(x: 20 * sx, y: 598 * sy)
+                    }
                 } else {
                     inputCard(sx: sx, sy: sy)
                         .parityPosition(x: 26 * sx, y: 429 * sy)
@@ -469,6 +477,7 @@ struct Parity369RitualView: View {
     /// Save button label: live "(done+1/target)" when counts are provided,
     /// else the static Figma string.
     private var liveButtonTitle: String {
+        if let lockedActionTitle { return lockedActionTitle }
         if let completedCount, let targetCount {
             return "Save Manifestation (\(min(completedCount + 1, targetCount))/\(targetCount))"
         }

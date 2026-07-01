@@ -45,6 +45,9 @@ struct HomeView: View {
                     .contentShape(Rectangle())
                     .onTapGesture { onOpenNumerology() }
                     .parityPosition(x: 20 * sx, y: 145 * sy)
+                    .accessibilityAddTraits(.isButton)
+                    .accessibilityLabel("Daily Numerology — read full insight")
+                    .accessibilityIdentifier("home.numerologyCard")
 
                 streakCard(sx: sx, sy: sy)
                     .parityPosition(x: 20 * sx, y: 278 * sy)
@@ -59,16 +62,25 @@ struct HomeView: View {
                     .contentShape(Rectangle())
                     .onTapGesture { onOpenJournal() }
                     .parityPosition(x: 20 * sx, y: 402 * sy)
+                    .accessibilityAddTraits(.isButton)
+                    .accessibilityLabel("Gratitude Journal — write today's entry")
+                    .accessibilityIdentifier("home.journalCard")
 
                 visionCard(sx: sx, sy: sy)
                     .contentShape(Rectangle())
                     .onTapGesture { onOpenVision() }
                     .parityPosition(x: 20 * sx, y: 607 * sy)
+                    .accessibilityAddTraits(.isButton)
+                    .accessibilityLabel("Vision Board")
+                    .accessibilityIdentifier("home.visionCard")
 
                 method369Card(sx: sx, sy: sy)
                     .contentShape(Rectangle())
                     .onTapGesture { onOpen369() }
                     .parityPosition(x: 202 * sx, y: 607 * sy)
+                    .accessibilityAddTraits(.isButton)
+                    .accessibilityLabel("369 Method — start session")
+                    .accessibilityIdentifier("home.369Card")
 
                 // Figma 318:1814: tab bar at (0,774)
                 FigmaTabBar(active: .today, onSelect: onSelectTab, sx: sx, sy: sy)

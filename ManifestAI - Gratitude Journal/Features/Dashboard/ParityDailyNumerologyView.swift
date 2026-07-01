@@ -8,6 +8,9 @@ import SwiftUI
 struct ParityDailyNumerologyView: View {
     var userName: String = "Ali"
     var dailyNumber: Int = 3
+    /// Live mode: personalized content (DailyInsightManager). nil → the Figma
+    /// mock copy, keeping the parity gallery pixel-identical.
+    var insight: PersonalizedInsight? = nil
     var onClose: () -> Void = {}
     var parityMode: Bool = false
 
@@ -72,8 +75,12 @@ struct ParityDailyNumerologyView: View {
                     .frame(width: 13.5, height: 13.5)
             }
             .frame(width: 40, height: 40)
+            .contentShape(Rectangle())
             .onTapGesture { onClose() }
             .parityPosition(x: 336 * sx, y: 17 * sy)
+            .accessibilityElement(children: .ignore)
+            .accessibilityLabel("Close")
+            .accessibilityAddTraits(.isButton)
             .accessibilityIdentifier("dailynumerology.closeButton")
 
             // big gold Elemento — drawn live (frosted surface must blend)
@@ -81,7 +88,7 @@ struct ParityDailyNumerologyView: View {
                 .parityPosition(x: 162 * sx, y: 57 * sy)
 
             // title — abs (17,180) → rel (17,138), Bitter Bold 18/27 #FCD471
-            Text("Initiate Bold Action")
+            Text(insight?.headline ?? "Initiate Bold Action")
                 .font(DesignTokens.Typography.h4)
                 .foregroundStyle(DesignTokens.Colors.secondary)
                 .multilineTextAlignment(.center)
@@ -89,7 +96,7 @@ struct ParityDailyNumerologyView: View {
                 .parityPosition(x: 17 * sx, y: 141.33 * sy)
 
             // insight — abs (24,215) → rel (24,173), Poppins Regular 14/21 #EBEBEB
-            Text("Today, \(userName), is a powerful fresh start! The universe aligns to empower your independence and leadership. Seize energy to initiate new paths and confidently step into your unique potential.")
+            Text(insight?.generalVibe ?? "Today, \(userName), is a powerful fresh start! The universe aligns to empower your independence and leadership. Seize energy to initiate new paths and confidently step into your unique potential.")
                 .font(DesignTokens.Typography.smallText)
                 .foregroundStyle(DesignTokens.Colors.textPrimary)
                 .multilineTextAlignment(.center)
@@ -101,14 +108,18 @@ struct ParityDailyNumerologyView: View {
             insightCard(accent: Color(hex: "DE1212"),
                         elementoColor: Color(hex: "FC0D1B"),
                         icon: "GlyphDNHeart", iconTint: Color(hex: "FA2F2F"),
-                        body: "Initiate a new conversation or express a deeply held desire to your loved on with confidence and clarity.",
+                        title: "Love & Relationship",
+                        body: insight?.loveAdvice ?? "Initiate a new conversation or express a deeply held desire to your loved on with confidence and clarity.",
                         sx: sx, sy: sy)
                 .parityPosition(x: 17 * sx, y: 274 * sy)
 
+            // Figma mock titles both cards "Love & Relationship"; live content
+            // is career advice, so the live title says what the card contains.
             insightCard(accent: Color(hex: "0089FF"),
                         elementoColor: Color(hex: "0089FF"),
                         icon: "GlyphDNTarget", iconTint: Color(hex: "FF405C"),
-                        body: "Launch that new idea or project you’ve been contemplating, stepping forward as a confident leader.",
+                        title: insight == nil ? "Love & Relationship" : "Career & Goals",
+                        body: insight?.careerAdvice ?? "Launch that new idea or project you’ve been contemplating, stepping forward as a confident leader.",
                         sx: sx, sy: sy)
                 .parityPosition(x: 17 * sx, y: 417 * sy)
 
@@ -118,11 +129,14 @@ struct ParityDailyNumerologyView: View {
                 .foregroundStyle(DesignTokens.Colors.textSecondary)
                 .parityPosition(x: 17 * sx, y: 567 * sy)
 
-            attributeCard(label: "Color", value: "Crimson", icon: "paintpalette.fill", sx: sx, sy: sy)
+            attributeCard(label: "Color", value: insight?.luckyAttributes.color ?? "Crimson",
+                          icon: "paintpalette.fill", sx: sx, sy: sy)
                 .parityPosition(x: 17 * sx, y: 604.67 * sy)
-            attributeCard(label: "Crystal", value: "Carnelian", icon: "diamond.fill", sx: sx, sy: sy)
+            attributeCard(label: "Crystal", value: insight?.luckyAttributes.crystal ?? "Carnelian",
+                          icon: "diamond.fill", sx: sx, sy: sy)
                 .parityPosition(x: 135 * sx, y: 604.67 * sy)
-            attributeCard(label: "Time", value: "11:11", icon: "clock.fill", sx: sx, sy: sy)
+            attributeCard(label: "Time", value: insight?.luckyAttributes.time ?? "11:11",
+                          icon: "clock.fill", sx: sx, sy: sy)
                 .parityPosition(x: 253 * sx, y: 604.67 * sy)
 
             // Close CTA — abs (23,769) → rel (23,727), 347×56, white, #4E47A9
@@ -223,6 +237,7 @@ struct ParityDailyNumerologyView: View {
 
     private func insightCard(accent: Color, elementoColor: Color,
                              icon: String, iconTint: Color,
+                             title: String = "Love & Relationship",
                              body bodyText: String,
                              sx: CGFloat, sy: CGFloat) -> some View {
         ZStack(alignment: .topLeading) {
@@ -276,7 +291,7 @@ struct ParityDailyNumerologyView: View {
             .parityPosition(x: 16 * sx, y: 16 * sy)
 
             // Figma: both cards titled "Love & Relationship"
-            Text("Love & Relationship")
+            Text(title)
                 .font(DesignTokens.Typography.smallTextSemibold)
                 .foregroundStyle(Color(hex: "F2F2F2"))
                 .parityPosition(x: 59.33 * sx, y: 22.5 * sy)

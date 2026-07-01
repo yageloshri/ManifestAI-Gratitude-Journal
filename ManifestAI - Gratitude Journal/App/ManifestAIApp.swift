@@ -8,13 +8,17 @@ struct ManifestAIApp: App {
     
     init() {
         if Secrets.superwallApiKey.isEmpty {
-            print("⚠️ Superwall API key missing — paywall features will be unavailable")
+            dlog("⚠️ Superwall API key missing — paywall features will be unavailable")
         } else {
             Superwall.configure(apiKey: Secrets.superwallApiKey)
             Superwall.shared.delegate = SuperwallDelegateHandler.shared
+            // Sync the local Pro flag with Superwall's real subscription status
+            // at launch (no-op while status is still .unknown; the delegate's
+            // subscriptionStatusDidChange picks up the definitive value).
+            SuperwallDelegateHandler.shared.syncSubscriptionStatus(Superwall.shared.subscriptionStatus)
         }
 
-        print("🚀 App initialized")
+        dlog("🚀 App initialized")
     }
     
     var body: some Scene {
@@ -44,20 +48,25 @@ struct ManifestAIApp: App {
                     MainTabView()
                         .transition(.opacity)
                         .onAppear {
-                            print("📱 ManifestAIApp: MainTabView is now visible")
+                            dlog("📱 ManifestAIApp: MainTabView is now visible")
                         }
                 } else {
                     OnboardingContainerView()
                         .transition(.opacity)
                         .onAppear {
-                            print("📱 ManifestAIApp: OnboardingView is visible")
+                            dlog("📱 ManifestAIApp: OnboardingView is visible")
                         }
                 }
             }
             .animation(.easeInOut, value: appState.hasCompletedOnboarding)
             .preferredColorScheme(.dark)
+            // Screens are positioned at fixed Figma coordinates; larger
+            // accessibility text sizes would overflow/collide instead of
+            // reflowing, so clamp Dynamic Type at .large (truncation is worse
+            // than a frozen size here).
+            .dynamicTypeSize(...DynamicTypeSize.large)
             .onChange(of: appState.hasCompletedOnboarding) { oldValue, newValue in
-                print("🔄 ManifestAIApp: hasCompletedOnboarding changed: \(oldValue) -> \(newValue)")
+                dlog("🔄 ManifestAIApp: hasCompletedOnboarding changed: \(oldValue) -> \(newValue)")
             }
     }
 }

@@ -78,11 +78,11 @@ struct GridSwapOverlay: View {
             }
         }
         .onAppear {
-            print("🔄 GridSwapOverlay:")
-            print("   sourceIndex: \(sourceIndex)")
-            print("   items: \(items.count)")
+            dlog("🔄 GridSwapOverlay:")
+            dlog("   sourceIndex: \(sourceIndex)")
+            dlog("   items: \(items.count)")
             for item in sortedItems {
-                print("   [\(item.gridPosition)]: cell=(\(item.cell.x), \(item.cell.y), \(item.cell.width)x\(item.cell.height))")
+                dlog("   [\(item.gridPosition)]: cell=(\(item.cell.x), \(item.cell.y), \(item.cell.width)x\(item.cell.height))")
             }
         }
     }
@@ -107,7 +107,7 @@ struct SwapCellView: View {
     
     var body: some View {
         Button(action: {
-            print("🔘 Tapped: gridPosition=\(item.gridPosition), isSource=\(isSource)")
+            dlog("🔘 Tapped: gridPosition=\(item.gridPosition), isSource=\(isSource)")
             onTap()
         }) {
             ZStack {
@@ -163,7 +163,7 @@ struct SwapCellView: View {
             isPressed = pressing
         }, perform: {})
         .onAppear {
-            print("📍 Cell[\(item.gridPosition)] at: (\(scaledCell.x), \(scaledCell.y)), size: (\(scaledCell.width)x\(scaledCell.height)), isSource: \(isSource)")
+            dlog("📍 Cell[\(item.gridPosition)] at: (\(scaledCell.x), \(scaledCell.y)), size: (\(scaledCell.width)x\(scaledCell.height)), isSource: \(isSource)")
         }
     }
 }

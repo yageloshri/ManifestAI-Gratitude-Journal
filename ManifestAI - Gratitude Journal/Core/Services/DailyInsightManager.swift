@@ -17,12 +17,12 @@ class DailyInsightManager {
         // 1. Check if we already generated insight today
         if let cachedInsight = loadCachedInsight(),
            Calendar.current.isDateInToday(cachedInsight.date) {
-            print("✅ Using cached insight from today")
+            dlog("✅ Using cached insight from today")
             return cachedInsight.insight
         }
         
         // 2. Generate new insight via Gemini
-        print("🔮 Generating new insight via Gemini...")
+        dlog("🔮 Generating new insight via Gemini...")
         let newInsight = try await generateNewInsight()
         
         // 3. Save to cache
@@ -154,7 +154,7 @@ class DailyInsightManager {
         if let encoded = try? JSONEncoder().encode(cached) {
             userDefaults.set(encoded, forKey: cacheKey)
             userDefaults.set(Date(), forKey: lastInsightDateKey)
-            print("💾 Saved insight to cache")
+            dlog("💾 Saved insight to cache")
         }
     }
     

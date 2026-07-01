@@ -112,7 +112,7 @@ class DashboardViewModel: ObservableObject {
                 self.saveToWidget()
                 
             } catch {
-                print("Affirmation gen error: \(error)")
+                dlog("Affirmation gen error: \(error)")
                 self.dailyAffirmation = "I attract success and joy into my life effortlessly."
                 self.saveToWidget()
             }
@@ -139,9 +139,9 @@ class DashboardViewModel: ObservableObject {
             do {
                 let insight = try await DailyInsightManager.shared.fetchDailyInsight()
                 self.personalizedInsight = insight
-                print("✨ Loaded personalized insight: \(insight.headline)")
+                dlog("✨ Loaded personalized insight: \(insight.headline)")
             } catch {
-                print("❌ Failed to load insight: \(error.localizedDescription)")
+                dlog("❌ Failed to load insight: \(error.localizedDescription)")
                 self.insightError = error.localizedDescription
                 
                 // Fallback to generic insight
@@ -161,7 +161,7 @@ class DashboardViewModel: ObservableObject {
                 let insight = try await DailyInsightManager.shared.forceRefresh()
                 self.personalizedInsight = insight
             } catch {
-                print("❌ Failed to refresh insight: \(error.localizedDescription)")
+                dlog("❌ Failed to refresh insight: \(error.localizedDescription)")
                 self.insightError = error.localizedDescription
             }
             self.isLoadingInsight = false

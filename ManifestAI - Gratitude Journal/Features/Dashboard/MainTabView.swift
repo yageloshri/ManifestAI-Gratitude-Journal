@@ -6,6 +6,7 @@ import SwiftUI
 import SwiftData
 import PhotosUI
 import SuperwallKit
+import UserNotifications
 
 struct MainTabView: View {
     @Environment(\.modelContext) private var modelContext
@@ -32,11 +33,17 @@ struct MainTabView: View {
 
     // Today
     @State private var showDailyInsight = false
+    @State private var dailyInsight: PersonalizedInsight?
 
     // Journal
     private enum JournalRoute { case list, write, entry(JournalEntry) }
     @State private var journalRoute: JournalRoute = .list
     @State private var draftText: String = ""
+    @State private var draftColorIndex: Int = 0
+    @State private var editingEntry: JournalEntry?       // non-nil = editing, not creating
+    @State private var elevatingIDs: Set<UUID> = []      // Gemini calls in flight
+    @State private var failedElevation: JournalEntry?    // last entry whose elevation failed
+    @State private var showElevateError = false
 
     // Vision
     private enum VisionRoute { case home, category, photos(String), upload(String) }
@@ -54,6 +61,10 @@ struct MainTabView: View {
     @AppStorage("intention369") private var intention369: String = ""
     @State private var ritualDraft: String = ""
     @ObservedObject private var ritualManager = Ritual369Manager.shared
+    /// Re-evaluated by a timer so locked windows open (and midnight rolls
+    /// over) without the user leaving and re-entering the screen.
+    @State private var ritualClock: Date = MainTabView.ritualNow()
+    private let ritualTimer = Timer.publish(every: 30, on: .main, in: .common).autoconnect()
 
     // Profile
     private enum ProfileRoute { case main, personalInfo, personalInfoEdit, upgradePro }
@@ -106,6 +117,28 @@ struct MainTabView: View {
                 visionRoute = .home
             }
         }
+        .onAppear { presentPostOnboardingPaywallIfNeeded() }
+        .onReceive(ritualTimer) { _ in ritualClock = Self.ritualNow() }
+        .alert("Couldn't elevate your entry", isPresented: $showElevateError) {
+            Button("Try Again") {
+                if let entry = failedElevation { elevate(entry) }
+            }
+            Button("Not Now", role: .cancel) { failedElevation = nil }
+        } message: {
+            Text("The AI rewrite didn't go through — check your connection and try again. Your original entry is saved.")
+        }
+    }
+
+    /// Onboarding sets this flag for its post-completion paywall; it used to
+    /// be consumed only by the legacy DashboardView, which never ships.
+    private func presentPostOnboardingPaywallIfNeeded() {
+        guard UserDefaults.standard.bool(forKey: "should_show_paywall_after_onboarding") else { return }
+        UserDefaults.standard.set(false, forKey: "should_show_paywall_after_onboarding")
+        guard !SubscriptionManager.shared.isPro else { return }
+        // Let the onboarding → main transition settle before presenting.
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+            Superwall.shared.register(placement: "campaign_trigger")
+        }
     }
 
     // MARK: - Data
@@ -131,11 +164,29 @@ struct MainTabView: View {
         return count
     }
 
-    private var freeEntriesText: String {
+    /// Free-tier usage is a persistent per-week counter, not a live row count —
+    /// otherwise deleting entries would refund quota indefinitely. Existing
+    /// rows still count as a floor so pre-counter installs can't over-write.
+    private static func weekKey(_ date: Date = Date()) -> String {
+        let cal = Calendar.current
+        let comps = cal.dateComponents([.yearForWeekOfYear, .weekOfYear], from: date)
+        return "journal_week_used_\(comps.yearForWeekOfYear ?? 0)_\(comps.weekOfYear ?? 0)"
+    }
+
+    private var usedThisWeek: Int {
         let cal = Calendar.current
         let weekStart = cal.dateInterval(of: .weekOfYear, for: Date())?.start ?? Date()
-        let used = entries.filter { $0.date >= weekStart }.count
-        let left = max(0, 3 - used)
+        let liveCount = entries.filter { $0.date >= weekStart }.count
+        return max(UserDefaults.standard.integer(forKey: Self.weekKey()), liveCount)
+    }
+
+    private func countEntryAgainstQuota() {
+        let key = Self.weekKey()
+        UserDefaults.standard.set(usedThisWeek + 1, forKey: key)
+    }
+
+    private var freeEntriesText: String {
+        let left = max(0, 3 - usedThisWeek)
         return "\(left) Free entries left this week"
     }
 
@@ -157,7 +208,7 @@ struct MainTabView: View {
                 totalEntries: entries.count,
                 boardCount: boards.count,
                 onSelectTab: switchTab,
-                onOpenNumerology: { showDailyInsight = true },
+                onOpenNumerology: { openDailyInsight() },
                 onOpenJournal: { switchTab(.journal) },
                 onOpenVision: { switchTab(.vision) },
                 onOpen369: { switchTab(.method369) }
@@ -167,12 +218,27 @@ struct MainTabView: View {
                 ParityDailyNumerologyView(
                     userName: userManager.userName,
                     dailyNumber: dailyNumber,
+                    insight: dailyInsight,
                     onClose: { showDailyInsight = false }
                 )
                 .transition(.move(edge: .bottom))
             }
         }
         .animation(.easeInOut(duration: 0.25), value: showDailyInsight)
+    }
+
+    /// Real daily content: show the per-number reading immediately, then let
+    /// the personalized Gemini insight (cached once per day) replace it.
+    private func openDailyInsight() {
+        if dailyInsight == nil {
+            dailyInsight = DailyInsightManager.shared.getFallbackInsight(for: dailyNumber)
+        }
+        showDailyInsight = true
+        Task {
+            if let insight = try? await DailyInsightManager.shared.fetchDailyInsight() {
+                dailyInsight = insight
+            }
+        }
     }
 
     // MARK: - Journal
@@ -204,32 +270,63 @@ struct MainTabView: View {
                 }
             case .write:
                 ParityJournalWriteView(
-                    dateTitle: Self.dayTitle(Date()),
+                    dateTitle: Self.dayTitle(editingEntry?.date ?? Date()),
+                    selectedColorIndex: draftColorIndex,
                     liveText: $draftText,
                     onBack: { saveDraftIfNeeded(); journalRoute = .list },
-                    onElevate: { elevateDraft() }
+                    onElevate: { elevateDraft() },
+                    onSelectColor: { draftColorIndex = $0 }
                 )
             case .entry(let entry):
                 ParityJournalEntryView(
-                    variant: entry.isElevated ? .elevated : .plain,
+                    variant: entry.isElevated ? .elevated
+                           : (entry.tintIndex == 0 ? .plain : .color),
                     dateTitle: Self.dayTitle(entry.date),
                     entryText: entry.elevatedText ?? entry.rawText,
                     onBack: { journalRoute = .list },
+                    onElevate: {
+                        // Elevate an already-saved entry; the list row flips
+                        // to "Elevated Entry" when Gemini responds.
+                        elevate(entry)
+                        journalRoute = .list
+                    },
+                    onEdit: {
+                        draftText = entry.isElevated ? (entry.elevatedText ?? entry.rawText)
+                                                     : entry.rawText
+                        draftColorIndex = entry.tintIndex
+                        editingEntry = entry
+                        journalRoute = .write
+                    },
                     onDelete: {
                         modelContext.delete(entry)
                         try? modelContext.save()
                         journalRoute = .list
-                    }
+                    },
+                    onSelectColor: { i in
+                        entry.colorIndex = i
+                        try? modelContext.save()
+                    },
+                    tintHex: Self.swatchHex(entry.tintIndex),
+                    selectedColorIndex: entry.tintIndex
                 )
             }
         }
+    }
+
+    /// Journal swatch palette (same hexes as ParityColorPicker's spec row).
+    private static let swatchHexes = ["32166E", "560E50", "28450C", "45260C",
+                                      "450C33", "0E4356", "403B4A", "365111", "13217A"]
+
+    private static func swatchHex(_ index: Int) -> String {
+        swatchHexes.indices.contains(index) ? swatchHexes[index] : swatchHexes[0]
     }
 
     private func listRow(for entry: JournalEntry) -> ParityJournalListEntry {
         ParityJournalListEntry(
             id: entry.id,
             date: Self.listDate(entry.date),
-            title: entry.isElevated ? "Elevated Entry" : "Journal Entry",
+            title: elevatingIDs.contains(entry.id) ? "Elevating…"
+                 : (entry.isElevated ? "Elevated Entry" : "Journal Entry"),
             body: entry.elevatedText ?? entry.rawText,
             cardHeight: 127,
             tinted: entry.isElevated
@@ -238,11 +335,10 @@ struct MainTabView: View {
 
     /// Enforce the advertised free tier: 3 entries/week, unlimited for Pro.
     private func startWriting() {
-        let cal = Calendar.current
-        let weekStart = cal.dateInterval(of: .weekOfYear, for: Date())?.start ?? Date()
-        let used = entries.filter { $0.date >= weekStart }.count
-        if SubscriptionManager.shared.canWriteJournalEntry(entriesThisWeek: used) {
+        if SubscriptionManager.shared.canWriteJournalEntry(entriesThisWeek: usedThisWeek) {
             draftText = ""
+            draftColorIndex = 0
+            editingEntry = nil
             journalRoute = .write
         } else {
             Superwall.shared.register(placement: "campaign_trigger")
@@ -251,10 +347,17 @@ struct MainTabView: View {
 
     private func saveDraftIfNeeded() {
         let text = draftText.trimmingCharacters(in: .whitespacesAndNewlines)
+        defer { draftText = ""; editingEntry = nil }
         guard !text.isEmpty else { return }
-        modelContext.insert(JournalEntry(rawText: text))
+        if let entry = editingEntry {
+            // Editing in place: update whichever text the user was shown.
+            if entry.isElevated { entry.elevatedText = text } else { entry.rawText = text }
+            entry.colorIndex = draftColorIndex
+        } else {
+            modelContext.insert(JournalEntry(rawText: text, colorIndex: draftColorIndex))
+            countEntryAgainstQuota()
+        }
         try? modelContext.save()
-        draftText = ""
     }
 
     /// "Elevate with AI": save the entry, then rewrite it with Gemini in the
@@ -262,16 +365,44 @@ struct MainTabView: View {
     private func elevateDraft() {
         let text = draftText.trimmingCharacters(in: .whitespacesAndNewlines)
         guard !text.isEmpty else { return }
-        let entry = JournalEntry(rawText: text)
-        modelContext.insert(entry)
+        let entry: JournalEntry
+        if let editing = editingEntry {
+            if editing.isElevated { editing.elevatedText = text } else { editing.rawText = text }
+            editing.colorIndex = draftColorIndex
+            entry = editing
+        } else {
+            entry = JournalEntry(rawText: text, colorIndex: draftColorIndex)
+            modelContext.insert(entry)
+            countEntryAgainstQuota()
+        }
         try? modelContext.save()
         draftText = ""
+        editingEntry = nil
         journalRoute = .list
+        elevate(entry)
+    }
+
+    /// Run the Gemini rewrite for a saved entry, with an in-flight marker,
+    /// deleted-entry guard, and an error alert with retry.
+    private func elevate(_ entry: JournalEntry) {
+        let source = entry.isElevated ? (entry.elevatedText ?? entry.rawText) : entry.rawText
+        elevatingIDs.insert(entry.id)
+        failedElevation = nil
         Task {
-            if let elevated = try? await GeminiService.shared.generateElevation(from: text) {
-                entry.elevatedText = elevated.trimmingCharacters(in: .whitespacesAndNewlines)
-                try? modelContext.save()
+            do {
+                let elevated = try await GeminiService.shared.generateElevation(from: source)
+                // The user may have deleted the entry while Gemini was working.
+                if !entry.isDeleted, entry.modelContext != nil {
+                    entry.elevatedText = elevated.trimmingCharacters(in: .whitespacesAndNewlines)
+                    try? modelContext.save()
+                }
+            } catch {
+                if !entry.isDeleted, entry.modelContext != nil {
+                    failedElevation = entry
+                    showElevateError = true
+                }
             }
+            elevatingIDs.remove(entry.id)
         }
     }
 
@@ -314,6 +445,7 @@ struct MainTabView: View {
                 )
             case .photos(let category):
                 ParityVisionPhotosView(
+                    promptTitle: Self.photosPrompt(for: category),
                     onBack: { visionRoute = .category },
                     onContinue: { visionRoute = .upload(category) }
                 )
@@ -326,6 +458,27 @@ struct MainTabView: View {
                     onUpload: { uploadTapped(category: category) }
                 )
             }
+        }
+    }
+
+    /// Per-category "find your photos" prompt; Love is the Figma original,
+    /// the rest follow its voice (the Figma frame only mocked Love).
+    private static func photosPrompt(for category: String) -> String {
+        switch category {
+        case "Wealth":
+            return "Find a photo that represents the abundance you're calling in. Is it financial freedom? A dream home? A thriving business?"
+        case "Health":
+            return "Find a photo that represents the vitality you crave. Is it strength? Calm energy? Waking up rested and alive?"
+        case "Travel":
+            return "Find a photo that represents the journey you dream of. Is it a far-away city? An ocean sunrise? A mountain trail?"
+        case "Career":
+            return "Find a photo that represents the success you're building. Is it a dream role? Your own venture? A moment of recognition?"
+        case "Peace":
+            return "Find a photo that represents the calm you seek. Is it a quiet morning? Deep stillness? A place that feels like home?"
+        case "Family":
+            return "Find a photo that represents the family life you cherish. Is it laughter at dinner? A warm embrace? Time together at home?"
+        default: // "Love" — Figma 326:13106 verbatim
+            return "Find a photo that represents the partnership you crave. Is it a wedding? A quiet moment at home? Holding hands?"
         }
     }
 
@@ -379,7 +532,13 @@ struct MainTabView: View {
             : intention369
     }
 
-    private var ritualDayText: String { "Day \(ritualManager.dayNumber) of 33" }
+    private var ritualDayText: String {
+        // Acknowledge a streak reset instead of silently showing Day 1.
+        if let lost = ritualManager.streakResetNotice, lost > 0 {
+            return "Day 1 of 33 · streak reset (was day \(lost))"
+        }
+        return "Day \(ritualManager.dayNumber) of 33"
+    }
 
     /// Real clock, overridable in DEBUG with `-ritual369Hour <h>` for testing
     /// the time windows on the simulator.
@@ -396,7 +555,7 @@ struct MainTabView: View {
 
     @ViewBuilder
     private var ritualScreen: some View {
-        switch ritualManager.screenState(now: Self.ritualNow()) {
+        switch ritualManager.screenState(now: ritualClock) {
         case .writing(let phase, let done, let target):
             Parity369RitualView(
                 phase: phase,
@@ -447,6 +606,24 @@ struct MainTabView: View {
                 onBack: { flow369 = .intention },
                 onSelectTab: switchTab
             )
+        case .cycleComplete:
+            Parity369RitualView(
+                phase: .night,
+                affirmation: ritualAffirmation,
+                completedCount: ritualManager.target(for: .night),
+                targetCount: ritualManager.target(for: .night),
+                dayText: "33 of 33 days complete",
+                lockedInfo: ("Challenge complete!",
+                             "33 consecutive days of manifestation — extraordinary. Set a new intention and begin again whenever you're ready."),
+                lockedActionTitle: "Start a New 33-Day Challenge",
+                onBack: { flow369 = .intention },
+                onSave: {
+                    ritualManager.startNewCycle(now: ritualClock)
+                    intention369 = ""
+                    flow369 = .intention
+                },
+                onSelectTab: switchTab
+            )
         }
     }
 
@@ -488,20 +665,27 @@ struct MainTabView: View {
                     year: Self.comp(userManager.birthDate, "yyyy"),
                     avatarInitial: String(userManager.userName.prefix(1)),
                     onBack: { profileRoute = .personalInfo },
-                    onSave: { profileRoute = .personalInfo }
+                    onSave: { name, birthDate in
+                        UserManager.shared.saveUser(name: name, birthDate: birthDate)
+                        profileRoute = .personalInfo
+                    }
                 )
             case .upgradePro:
                 ParityUpgradeProView(
                     onStartTrial: { Superwall.shared.register(placement: "campaign_trigger") },
-                    onRestore: { Superwall.shared.restorePurchases { _ in } }
+                    onRestore: { Superwall.shared.restorePurchases { _ in } },
+                    onPrivacy: {
+                        if let url = URL(string: "https://dream-manifest-shine.lovable.app/privacy") {
+                            UIApplication.shared.open(url)
+                        }
+                    },
+                    onTerms: {
+                        if let url = URL(string: "https://dream-manifest-shine.lovable.app/terms") {
+                            UIApplication.shared.open(url)
+                        }
+                    },
+                    onBack: { profileRoute = .main }
                 )
-                .overlay(alignment: .topLeading) {
-                    // temporary back affordance over the panel's top-left corner
-                    Color.clear
-                        .frame(width: 60, height: 60)
-                        .contentShape(Rectangle())
-                        .onTapGesture { profileRoute = .main }
-                }
             }
         }
     }
@@ -520,9 +704,31 @@ struct MainTabView: View {
                 UIApplication.shared.open(url)
             }
         case "logout":
-            AppState.shared.hasCompletedOnboarding = false
+            logout()
         default: break
         }
+    }
+
+    /// Log out = a fresh start: the next onboarding run must not inherit this
+    /// user's journal, boards, intention, or ritual progress. (Purchases are
+    /// NOT touched — isPro re-syncs from Superwall.)
+    private func logout() {
+        for entry in entries { modelContext.delete(entry) }
+        for board in boards { modelContext.delete(board) }
+        try? modelContext.save()
+
+        let defaults = UserDefaults.standard
+        defaults.removeObject(forKey: "intention369")
+        defaults.removeObject(forKey: "ritual369State")
+        defaults.removeObject(forKey: "cachedPersonalizedInsight")
+        defaults.removeObject(forKey: "lastInsightDate")
+        defaults.removeObject(forKey: "should_show_paywall_after_onboarding")
+
+        remindersOn = false
+        NotificationManager369.shared.setNotificationsEnabled(false)
+        NotificationManager369.shared.cancelAllNotifications()
+
+        AppState.shared.hasCompletedOnboarding = false
     }
 
     /// Reminders switch = real local notifications for the three 369 windows
@@ -534,12 +740,24 @@ struct MainTabView: View {
             nm.setNotificationsEnabled(false)
             nm.cancelAllNotifications()
         } else {
-            nm.requestPermission { granted in
+            // If permission was denied earlier, a new request is a silent
+            // no-op — send the user to Settings instead of failing quietly.
+            UNUserNotificationCenter.current().getNotificationSettings { settings in
                 DispatchQueue.main.async {
-                    remindersOn = granted
-                    if granted {
-                        nm.setNotificationsEnabled(true)
-                        nm.scheduleAllNotifications()
+                    if settings.authorizationStatus == .denied {
+                        if let url = URL(string: UIApplication.openSettingsURLString) {
+                            UIApplication.shared.open(url)
+                        }
+                        return
+                    }
+                    nm.requestPermission { granted in
+                        DispatchQueue.main.async {
+                            remindersOn = granted
+                            if granted {
+                                nm.setNotificationsEnabled(true)
+                                nm.scheduleAllNotifications()
+                            }
+                        }
                     }
                 }
             }

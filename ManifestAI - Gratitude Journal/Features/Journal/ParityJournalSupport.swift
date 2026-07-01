@@ -97,6 +97,7 @@ struct ParityBackButton40: View {
             }
             .frame(width: 40 * sx, height: 40 * sy, alignment: .topLeading)
         }
+        .accessibilityLabel("Back")
     }
 }
 
@@ -120,12 +121,14 @@ struct ParityFreeEntriesBanner: View {
                     .resizable()
                     .frame(width: 30 * sx, height: 30 * sy)
                     .parityPosition(x: 59.5 * sx, y: 9 * sy)
+                    .accessibilityHidden(true) // decorative; banner text carries the meaning
             } else {
                 Image(systemName: "crown.fill")
                     .font(.system(size: 18))
                     .foregroundStyle(Color(hex: "FFC107"))
                     .frame(width: 24 * sx, height: 24 * sy)
                     .parityPosition(x: 62.5 * sx, y: 12 * sy)
+                    .accessibilityHidden(true)
             }
 
             // Figma 324:11846: Poppins-Medium 14, #EBEBEB
@@ -221,6 +224,17 @@ struct ParityColorPicker: View {
     var sy: CGFloat = 1
     var onSelect: (Int) -> Void = { _ in }
 
+    /// VoiceOver names for the spec swatch hexes (fallback: positional name).
+    private static let colorNamesByHex: [String: String] = [
+        "32166E": "Indigo", "560E50": "Plum", "28450C": "Forest green",
+        "45260C": "Brown", "450C33": "Berry", "0E4356": "Teal",
+        "403B4A": "Charcoal", "365111": "Olive", "13217A": "Navy blue"
+    ]
+
+    private func colorName(_ i: Int) -> String {
+        Self.colorNamesByHex[colors[i].uppercased()] ?? "Color \(i + 1)"
+    }
+
     var body: some View {
         ZStack(alignment: .topLeading) {
             // Figma 324:11979: 'Color' Poppins-Medium 14 #B9B9B9
@@ -247,15 +261,23 @@ struct ParityColorPicker: View {
                                     .frame(width: 24 * sx, height: 24 * sy)
                             }
                             .frame(width: 32 * sx, height: 32 * sy)
-                            .contentShape(Circle())
+                            // a11y/hit-target only: 32pt swatch → 44pt tap area
+                            .contentShape(Circle().inset(by: -6))
                             .onTapGesture { onSelect(i) }
+                            .accessibilityElement(children: .ignore)
+                            .accessibilityLabel(colorName(i))
+                            .accessibilityAddTraits([.isButton, .isSelected])
                             .accessibilityIdentifier("journal.colorSwatch.\(i)")
                         } else {
                             Circle()
                                 .fill(Color(hex: colors[i]))
                                 .frame(width: 24 * sx, height: 24 * sy)
-                                .contentShape(Circle())
+                                // a11y/hit-target only: 24pt swatch → 44pt tap area
+                                .contentShape(Circle().inset(by: -10))
                                 .onTapGesture { onSelect(i) }
+                                .accessibilityElement(children: .ignore)
+                                .accessibilityLabel(colorName(i))
+                                .accessibilityAddTraits(.isButton)
                                 .accessibilityIdentifier("journal.colorSwatch.\(i)")
                         }
                     }

@@ -58,6 +58,7 @@
 		0266CA182EFDE681009630BE /* Exceptions for "ManifestAI - Gratitude Journal" folder in "ManifestWidgetsExtension" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
+				Core/Utilities/Log.swift,
 				Core/Utilities/SharedDataManager.swift,
 			);
 			target = 0266C9F82EFDE601009630BE /* ManifestWidgetsExtension */;

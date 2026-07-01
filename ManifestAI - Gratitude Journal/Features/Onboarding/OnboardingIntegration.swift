@@ -87,8 +87,8 @@ class OnboardingManager: ObservableObject {
     private func trackOnboardingCompletion() {
         // TODO: Integrate with your analytics service
         // Example: Analytics.logEvent("onboarding_completed", parameters: [...])
-        print("✅ Onboarding completed for: \(userName)")
-        print("📅 Birth Date: \(birthDate)")
-        print("🎯 Goals: \(selectedGoals)")
+        dlog("✅ Onboarding completed for: \(userName)")
+        dlog("📅 Birth Date: \(birthDate)")
+        dlog("🎯 Goals: \(selectedGoals)")
     }
 }

@@ -12,7 +12,8 @@ struct ParityVisionBoardsView: View {
     var onSelectTab: (FigmaTab) -> Void = { _ in }
 
     @State private var viewing: VisionBoardEntity?
-    @State private var savedToast = false
+    @State private var savedToast: String?          // "Saved!" / failure text
+    @State private var albumSaver = BoardAlbumSaver()
 
     var body: some View {
         GeometryReader { geo in
@@ -140,14 +141,20 @@ struct ParityVisionBoardsView: View {
                 }
 
                 HStack(spacing: 12 * sx) {
-                    viewerAction(savedToast ? "Saved!" : "Save to Photos",
+                    viewerAction(savedToast ?? "Save to Photos",
                                  system: "square.and.arrow.down") {
                         if let data = board.previewImageData, let img = UIImage(data: data) {
-                            UIImageWriteToSavedPhotosAlbum(img, nil, nil, nil)
-                            savedToast = true
-                            DispatchQueue.main.asyncAfter(deadline: .now() + 1.5) {
-                                savedToast = false
+                            // completion target — don't claim success blindly
+                            albumSaver.onDone = { error in
+                                savedToast = error == nil ? "Saved!" : "Check permission"
+                                DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+                                    savedToast = nil
+                                }
                             }
+                            UIImageWriteToSavedPhotosAlbum(
+                                img, albumSaver,
+                                #selector(BoardAlbumSaver.image(_:didFinishSavingWithError:contextInfo:)),
+                                nil)
                         }
                     }
                     viewerAction("Delete", system: "trash", tint: DesignTokens.Colors.error) {
@@ -159,6 +166,17 @@ struct ParityVisionBoardsView: View {
             }
         }
         .accessibilityIdentifier("visionBoards.viewer")
+    }
+
+    /// Completion target for UIImageWriteToSavedPhotosAlbum (held in @State
+    /// so it outlives the call).
+    final class BoardAlbumSaver: NSObject {
+        var onDone: ((Error?) -> Void)?
+        @objc func image(_ image: UIImage,
+                         didFinishSavingWithError error: Error?,
+                         contextInfo: UnsafeRawPointer) {
+            DispatchQueue.main.async { self.onDone?(error) }
+        }
     }
 
     private func viewerAction(_ title: String, system: String,

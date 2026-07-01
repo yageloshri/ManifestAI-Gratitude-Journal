@@ -87,9 +87,14 @@ struct FigmaTabBar: View {
                                          : DesignTokens.Colors.tabInactive)
                 }
                 .frame(width: 53 * sx, height: 48 * sy)
-                .contentShape(Rectangle())
+                // a11y/hit-target only: outset shape enlarges the tap area to
+                // ≥44pt without touching layout (item pitch is 74pt, no overlap).
+                .contentShape(Rectangle().inset(by: -10))
                 .onTapGesture { onSelect(tab) }
                 .parityPosition(x: itemXs[tab.rawValue] * sx, y: 13 * sy)
+                .accessibilityElement(children: .ignore)
+                .accessibilityLabel(tab.label)
+                .accessibilityAddTraits(isActive ? [.isButton, .isSelected] : [.isButton])
                 .accessibilityIdentifier("tabbar.\(tab.label.lowercased())")
             }
         }
@@ -106,6 +111,7 @@ struct FigmaTabBar: View {
             Image(baked)
                 .resizable()
                 .frame(width: 30 * sx, height: 30 * sy)
+                .accessibilityHidden(true) // decorative baked glyph; item supplies the label
         } else {
             Image(systemName: tab.systemImage)
                 .font(.system(size: 19))
@@ -114,6 +120,7 @@ struct FigmaTabBar: View {
                     ? AnyShapeStyle(DesignTokens.Gradients.golden)
                     : AnyShapeStyle(DesignTokens.Colors.tabInactive)
                 )
+                .accessibilityHidden(true)
         }
     }
 }

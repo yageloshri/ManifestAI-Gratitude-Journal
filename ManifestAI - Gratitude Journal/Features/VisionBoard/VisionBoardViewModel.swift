@@ -302,23 +302,23 @@ class VisionBoardViewModel: ObservableObject {
     
     func updateCellSize(_ item: VisionBoardGridItemModel, newSize: CellSize) {
         guard let index = gridItems.firstIndex(where: { $0.id == item.id }) else {
-            print("❌ updateCellSize: Could not find item with ID \(item.id)")
+            dlog("❌ updateCellSize: Could not find item with ID \(item.id)")
             return
         }
         
-        print("📏 updateCellSize:")
-        print("   Item ID: \(item.id)")
-        print("   Array index: \(index)")
-        print("   gridPosition: \(gridItems[index].gridPosition)")
-        print("   Old size: \(gridItems[index].cellSize.displayName)")
-        print("   New size: \(newSize.displayName)")
+        dlog("📏 updateCellSize:")
+        dlog("   Item ID: \(item.id)")
+        dlog("   Array index: \(index)")
+        dlog("   gridPosition: \(gridItems[index].gridPosition)")
+        dlog("   Old size: \(gridItems[index].cellSize.displayName)")
+        dlog("   New size: \(newSize.displayName)")
         
         gridItems[index].cellSize = newSize
         
         // Recalculate flexible layout
         recalculateFlexibleLayout()
         
-        print("   ✅ Layout recalculated, \(gridItems.count) items")
+        dlog("   ✅ Layout recalculated, \(gridItems.count) items")
     }
     
     // MARK: - Flexible Masonry Layout Algorithm
@@ -421,11 +421,32 @@ class VisionBoardViewModel: ObservableObject {
             if selectedItemForMenu?.id == item.id {
                 selectedItemForMenu = nil
             }
-            // Recalculate layout
-            let images = gridItems.map { ($0.image, $0.imageData) }
-            if !images.isEmpty {
-                applyGridLayout(images: images)
-            }
+            // Recalculate layout while preserving each surviving photo's
+            // zoom/pan/cell-size state (don't rebuild items from scratch)
+            relayoutPreservingItemState()
+        }
+    }
+
+    /// Reassigns grid cells for the current item count without recreating the
+    /// items, so per-photo state (zoom, pan offsets, cell size) survives
+    /// layout changes like deleting a photo.
+    private func relayoutPreservingItemState() {
+        guard !gridItems.isEmpty else { return }
+
+        currentLayout = GridLayoutTemplate.templateFor(count: gridItems.count)
+        let cells = calculateGridCells(for: currentLayout, count: gridItems.count)
+
+        for index in gridItems.indices {
+            guard index < cells.count else { break }
+            let cell = cells[index]
+            gridItems[index].cell = cell
+            gridItems[index].gridPosition = index
+
+            // Clamp pan offsets so the image still covers its new cell
+            let maxOffsetX = max(0, cell.width * (gridItems[index].zoom - 1) / 2)
+            let maxOffsetY = max(0, cell.height * (gridItems[index].zoom - 1) / 2)
+            gridItems[index].offsetX = min(max(gridItems[index].offsetX, -maxOffsetX), maxOffsetX)
+            gridItems[index].offsetY = min(max(gridItems[index].offsetY, -maxOffsetY), maxOffsetY)
         }
     }
     
@@ -466,13 +487,17 @@ class VisionBoardViewModel: ObservableObject {
         self.currentStep = .editor
     }
     
-    func saveBoard(context: ModelContext, previewImage: UIImage?) {
-        print("💾 Saving board...")
-        print("   Preview image: \(previewImage != nil ? "✅ \(previewImage!.size)" : "❌ nil")")
-        print("   Grid items: \(gridItems.count)")
+    /// Saves the board to SwiftData. Returns true if the in-app save
+    /// succeeded. Pass `showSuccessAlert: false` when the caller wants to
+    /// present its own alert (e.g. after also writing to the photo library).
+    @discardableResult
+    func saveBoard(context: ModelContext, previewImage: UIImage?, showSuccessAlert: Bool = true) -> Bool {
+        dlog("💾 Saving board...")
+        dlog("   Preview image: \(previewImage != nil ? "✅ \(previewImage!.size)" : "❌ nil")")
+        dlog("   Grid items: \(gridItems.count)")
         
         if let id = existingBoardID {
-            print("   Updating existing board: \(id)")
+            dlog("   Updating existing board: \(id)")
             do {
                 let descriptor = FetchDescriptor<VisionBoardEntity>(predicate: #Predicate { $0.id == id })
                 if let existing = try context.fetch(descriptor).first {
@@ -480,9 +505,9 @@ class VisionBoardViewModel: ObservableObject {
                     
                     if let imageData = previewImage?.jpegData(compressionQuality: 0.7) {
                         existing.previewImageData = imageData
-                        print("   Preview data size: \(imageData.count) bytes")
+                        dlog("   Preview data size: \(imageData.count) bytes")
                     } else {
-                        print("   ⚠️ No preview data to save")
+                        dlog("   ⚠️ No preview data to save")
                     }
                     
                     existing.date = Date()
@@ -502,22 +527,24 @@ class VisionBoardViewModel: ObservableObject {
                     existing.items = newItemEntities
                     
                     try context.save()
-                    print("✅ Board updated successfully")
-                    showSaveSuccess = true
-                    return
+                    dlog("✅ Board updated successfully")
+                    if showSuccessAlert {
+                        showSaveSuccess = true
+                    }
+                    return true
                 }
             } catch {
-                print("❌ Error updating board: \(error)")
+                dlog("❌ Error updating board: \(error)")
             }
         }
         
         // Create New
-        print("   Creating new board")
+        dlog("   Creating new board")
         let imageData = previewImage?.jpegData(compressionQuality: 0.7)
         if let data = imageData {
-            print("   Preview data size: \(data.count) bytes")
+            dlog("   Preview data size: \(data.count) bytes")
         } else {
-            print("   ⚠️ No preview data")
+            dlog("   ⚠️ No preview data")
         }
         
         let boardEntity = VisionBoardEntity(
@@ -545,10 +572,14 @@ class VisionBoardViewModel: ObservableObject {
         // CRITICAL: Save the context
         do {
             try context.save()
-            print("✅ New board saved successfully with ID: \(boardEntity.id)")
-            showSaveSuccess = true
+            dlog("✅ New board saved successfully with ID: \(boardEntity.id)")
+            if showSuccessAlert {
+                showSaveSuccess = true
+            }
+            return true
         } catch {
-            print("❌ Error saving new board: \(error)")
+            dlog("❌ Error saving new board: \(error)")
+            return false
         }
     }
 }

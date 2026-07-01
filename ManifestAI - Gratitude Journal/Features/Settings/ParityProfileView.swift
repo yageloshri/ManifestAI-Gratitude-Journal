@@ -118,6 +118,7 @@ struct ParityProfileView: View {
                 .frame(width: 353 * sx, height: 181 * sy)
                 .opacity(0.09)
                 .parityPosition(x: -15 * sx, y: 1 * sy)
+                .accessibilityHidden(true) // decorative texture
 
             // Figma 326:13465: right light streaks, op 0.1 (#685EF5 vertical fades, rotated)
             Group {
@@ -246,6 +247,11 @@ struct ParityProfileView: View {
         .frame(width: 351 * sx, height: 70 * sy, alignment: .topLeading)
         .contentShape(Rectangle())
         .onTapGesture { onSelectRow(rowId) }
+        // a11y: single button element combining title + subtitle
+        .accessibilityElement(children: .ignore)
+        .accessibilityLabel(title)
+        .accessibilityValue(subtitle)
+        .accessibilityAddTraits(.isButton)
         .accessibilityIdentifier("profile.row.\(rowId)")
     }
 
@@ -280,6 +286,11 @@ struct ParityProfileView: View {
         .frame(width: 351 * sx, height: 70 * sy, alignment: .topLeading)
         .contentShape(Rectangle())
         .onTapGesture { onSelectRow("dailyReminders") }
+        // a11y: shape-drawn switch → expose the whole row as a single toggle
+        .accessibilityElement(children: .ignore)
+        .accessibilityLabel("Daily Reminders")
+        .accessibilityValue(remindersOn ? "On" : "Off")
+        .accessibilityAddTraits(.isToggle)
         .accessibilityIdentifier("profile.row.dailyReminders")
     }
 
@@ -303,6 +314,9 @@ struct ParityProfileView: View {
         .frame(width: 351 * sx, height: 70 * sy, alignment: .topLeading)
         .contentShape(Rectangle())
         .onTapGesture { onSelectRow("logout") }
+        .accessibilityElement(children: .ignore)
+        .accessibilityLabel("Log out")
+        .accessibilityAddTraits(.isButton)
         .accessibilityIdentifier("profile.row.logout")
     }
 
@@ -312,6 +326,7 @@ struct ParityProfileView: View {
         Image(name)
             .resizable()
             .frame(width: 44 * sx, height: size * sy)
+            .accessibilityHidden(true) // decorative baked icon; row supplies the label
     }
 
     /// Glass toggle (Figma Switch component 331:1998, OFF on this frame):
