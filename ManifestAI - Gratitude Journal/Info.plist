@@ -2,6 +2,12 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>UNSPLASH_ACCESS_KEY</key>
+	<string>$(UNSPLASH_ACCESS_KEY)</string>
+	<key>GEMINI_API_KEY</key>
+	<string>$(GEMINI_API_KEY)</string>
+	<key>SUPERWALL_API_KEY</key>
+	<string>$(SUPERWALL_API_KEY)</string>
 	<key>UIAppFonts</key>
 	<array>
 		<string>Bitter[wght].ttf</string>
@@ -9,6 +15,7 @@
 		<string>Poppins-Regular.ttf</string>
 		<string>Poppins-Medium.ttf</string>
 		<string>Poppins-SemiBold.ttf</string>
+		<string>Poppins-Bold.ttf</string>
 	</array>
 </dict>
 </plist>

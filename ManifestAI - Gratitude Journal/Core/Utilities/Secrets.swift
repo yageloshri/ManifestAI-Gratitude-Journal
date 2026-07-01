@@ -1,11 +1,42 @@
 import Foundation
 
 struct Secrets {
-    // ⚠️ IMPORTANT: Access Keys
-    
-    // Unsplash (Images)
-    static let unsplashAccessKey = "bqcXwA1uys1YLl2vNYb-K4DiVeaI30wATE0xBECQh6Y"
-    
-    // Google Gemini (AI Text)
-    static let geminiKey = "REMOVED_LEAKED_KEY"
+    // Keys are injected via Config.xcconfig -> Info.plist at build time.
+    // See Config.xcconfig.example for setup instructions.
+
+    static let unsplashAccessKey: String = {
+        guard let key = Bundle.main.infoDictionary?["UNSPLASH_ACCESS_KEY"] as? String, !key.isEmpty else {
+            #if DEBUG
+            fatalError("UNSPLASH_ACCESS_KEY not set. Copy Config.xcconfig.example to Config.xcconfig and add your key.")
+            #else
+            print("⚠️ UNSPLASH_ACCESS_KEY missing in release build - feature will be unavailable")
+            return ""
+            #endif
+        }
+        return key
+    }()
+
+    static let geminiKey: String = {
+        guard let key = Bundle.main.infoDictionary?["GEMINI_API_KEY"] as? String, !key.isEmpty else {
+            #if DEBUG
+            fatalError("GEMINI_API_KEY not set. Copy Config.xcconfig.example to Config.xcconfig and add your key.")
+            #else
+            print("⚠️ GEMINI_API_KEY missing in release build - feature will be unavailable")
+            return ""
+            #endif
+        }
+        return key
+    }()
+
+    static let superwallApiKey: String = {
+        guard let key = Bundle.main.infoDictionary?["SUPERWALL_API_KEY"] as? String, !key.isEmpty else {
+            #if DEBUG
+            fatalError("SUPERWALL_API_KEY not set. Copy Config.xcconfig.example to Config.xcconfig and add your key.")
+            #else
+            print("⚠️ SUPERWALL_API_KEY missing in release build - feature will be unavailable")
+            return ""
+            #endif
+        }
+        return key
+    }()
 }

@@ -1,0 +1,40 @@
+=== ROOT 324:11854 'Name' at (2708.0,7874.0) 393.0x852.0 ===
+[FRAM] 'Name' id=324:11854  xywh=(0,0,393,852)  fill=#16062A
+  [VECT] 'Ellipse 1' id=324:11855  xywh=(0,12,578.7,677.5)  fill=#4F31EC@0.29  fx=[LAYER_BLUR(514)]
+  [INST] 'Status Bar' id=324:11856  xywh=(0,0,393,44)
+        [VECT] '\U001002e6' id=I324:11856;1:288;1:205  xywh=(362,17,8,12)  fill=#FFFFFF
+        [GROU] 'Battery' id=I324:11856;1:288;1:208  xywh=(356,19,19,8)
+  [FRAM] 'Frame 277' id=324:11957  xywh=(20,68,353,99)
+    [FRAM] 'Frame 275' id=324:11954  xywh=(20,68,353,40)
+      [FRAM] 'Frame 276' id=324:11955  xywh=(20,68,236,40)
+        [GROU] 'Group 48095322' id=324:11859  xywh=(20,68,40,40)  radii=[0.0, 0.0, 0.0, 0.0]
+          [RECT] 'Rectangle 39318' id=324:11860  xywh=(20,68,40,40)  fill=#FBFBFB@0.01  stroke=GRADIENT_LINEAR[#63507A:0, #332643@0:1] handles=[(0.501, -0.38), (0.508, 1.014), (0.473, -0.377)] sw=1.0  r=12.0  fx=[INNER_SHADOW(#1A0B2C@1 dx=0 dy=1.256 blur=50.23 spread=0); INNER_SHADOW(#271839@1 dx=0 dy=5.023 blur=22.6 spread=0); INNER_SHADOW(#271839@1 dx=0 dy=123.1 blur=125.6 spread=-60.27); INNER_SHADOW(#271839@0.3 dx=0 dy=-103 blur=85.38 spread=-80.36); INNER_SHADOW(#271839@1 dx=0 dy=8.79 blur=13.81 spread=-5.023); INNER_SHADOW(#271839@1 dx=0 dy=-16.32 blur=11.3 spread=-17.58); INNER_SHADOW(#150F6C@0.5 dx=0 dy=48.97 blur=70.32 spread=-45.2); BACKGROUND_BLUR(113)]
+          [INST] 'vuesax/linear/arrow-left' id=324:11861  xywh=(30,78,20,20)
+            [GROU] 'vuesax/linear/arrow-left' id=I324:11861;324:4137  xywh=(30,78,20,20)
+              [GROU] 'arrow-left' id=I324:11861;324:4138  xywh=(30,78,20,20)
+                [VECT] 'Vector' id=I324:11861;324:4139  xywh=(32.92,82.94,5.058,10.12)  stroke=#685EF5 sw=1.5
+                [VECT] 'Vector' id=I324:11861;324:4140  xywh=(33.06,88,14.02,0)  stroke=#685EF5 sw=1.5
+                [VECT] 'Vector' id=I324:11861;324:4141  xywh=(30,78,20,20)  op=0
+        [TEXT] '24 January' id=324:11858  xywh=(138,74,118,28)  fill=#EBEBEB  font=Bitter Bitter-Bold 23.0pt w700 lh=27.6px ls=0 align=LEFT/TOP  chars='24 January'
+    [TEXT] 'What are you grateful for?' id=324:11956  xywh=(20,140,353,27)  op=0.4  fill=#EBEBEB  font=Bitter Bitter-Bold 18.0pt w700 lh=27px ls=0 align=LEFT/TOP  chars='What are you grateful for?'
+  [FRAM] 'Frame 279' id=324:11980  xywh=(20,577,353,86)
+    [TEXT] 'Color' id=324:11979  xywh=(20,577,353,21)  fill=#B9B9B9  font=Poppins Poppins-Medium 14.0pt w500 lh=21px ls=0 align=LEFT/TOP  chars='Color'
+    [FRAM] 'Frame 246' id=324:11958  xywh=(20,607,353,56)  fill=#291846  r=8.0
+      [GROU] 'Group 48095325' id=324:11975  xywh=(36,619,32,32)
+        [ELLI] 'Ellipse 5' id=324:11976  xywh=(36,619,32,32)  stroke=GRADIENT_LINEAR[#3B2DF7:0, #7C38FF:1] handles=[(0.319, 0.5), (1.0, 0.5), (0.319, 0.841)] sw=1.0
+        [ELLI] 'Ellipse 6' id=324:11977  xywh=(40,623,24,24)  fill=#32166E
+      [ELLI] 'Ellipse 7' id=324:11984  xywh=(80,623,24,24)  fill=#560E50
+      [ELLI] 'Ellipse 8' id=324:11986  xywh=(116,623,24,24)  fill=#28450C
+      [ELLI] 'Ellipse 9' id=324:11987  xywh=(152,623,24,24)  fill=#45260C
+      [ELLI] 'Ellipse 10' id=324:11988  xywh=(188,623,24,24)  fill=#450C33
+      [ELLI] 'Ellipse 11' id=324:11989  xywh=(224,623,24,24)  fill=#0E4356
+      [ELLI] 'Ellipse 12' id=324:11990  xywh=(260,623,24,24)  fill=#403B4A
+      [ELLI] 'Ellipse 13' id=324:11991  xywh=(296,623,24,24)  fill=#365111
+      [ELLI] 'Ellipse 14' id=324:11992  xywh=(332,623,24,24)  fill=#13217A
+  [INST] 'Button Default' id=324:11993  xywh=(20,714,353,56)  fill=GRADIENT_LINEAR[#3B2DF7:0, #7C38FF:1] handles=[(0.319, 0.5), (1.0, 0.5), (0.319, 0.841)]  r=13.0
+    [TEXT] 'Create Account' id=I324:11993;12:4957  xywh=(36,730,321,24)  fill=#FFFFFF  font=Poppins Poppins-Medium 16.0pt w500 lh=24px ls=0 align=CENTER/TOP  chars='Elevate'
+    [INST] 'vuesax/linear/arrow-left' id=I324:11993;14:13869  xywh=(319,730,24,24)
+      [GROU] 'vuesax/linear/arrow-left' id=I324:11993;14:13869;14:6320  xywh=(319,730,24,24)
+        [GROU] 'arrow-left' id=I324:11993;14:13869;14:6321  xywh=(319,730,24,24)
+          [VECT] 'Vector' id=I324:11993;14:13869;14:6322  xywh=(326.9,734.1,7.098,15.84)  stroke=#FFFFFF sw=1.5
+          [VECT] 'Vector' id=I324:11993;14:13869;14:6323  xywh=(319,730,24,24)  op=0

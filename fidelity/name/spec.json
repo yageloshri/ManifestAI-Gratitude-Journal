@@ -1,0 +1,32 @@
+{
+  "screen": "Name",
+  "figmaNodeId": "255:1190",
+  "frame": { "width": 393, "height": 852, "scale": 3, "device": "iPhone 16" },
+  "background": "#16062A",
+  "elements": {
+    "ellipseGlow": { "nodeId": "255:1191", "rect": { "x": 0, "y": 12, "w": 578.669, "h": 677.5 }, "fill": "#4F31EC", "opacity": 0.51, "blur": 257 },
+    "stepper": {
+      "nodeId": "255:1201", "rect": { "x": "center", "y": 76, "w": 353, "h": 6 },
+      "segments": 6, "gap": 2, "radius": 50,
+      "active": { "count": 1, "color": "#685EF5" },
+      "inactive": { "color": "#9F9E9E", "opacity": 0.30 }
+    },
+    "title": {
+      "nodeId": "255:1198", "rect": { "x": 20, "y": 122, "w": 353 },
+      "text": "What should we call you?", "font": "Bitter SemiBold 26", "lineHeight": 1.2, "color": "#EBEBEB"
+    },
+    "textField": {
+      "nodeId": "268:1548", "rect": { "x": 20, "y": 177, "w": 353, "h": 56 },
+      "gapFromTitle": 24, "cornerRadius": 150.678,
+      "border": { "color": "#63507A", "width": 2 },
+      "glass": "backdrop-blur 56.5 + rgba(251,251,251,0.01) + inset shadow stack",
+      "placeholder": { "text": "Enter Name", "font": "Poppins Regular 14", "lineHeight": 1.5, "color": "#EBEBEB", "opacity": 0.40, "paddingLeft": 16 }
+    },
+    "bottomBar": {
+      "nodeId": "282:2320", "rect": { "x": 20, "y": 734, "w": 355, "h": 56 }, "gap": 16,
+      "backButton": { "size": 56, "cornerRadius": 12, "border": "#63507A 2", "icon": "Arrow_Left_MD 28×28 #EBEBEB" },
+      "cta": { "w": 283, "h": 56, "cornerRadius": 13, "gradient": "#3B2DF7@31.858%→#7C38FF", "label": "Reveal My Path", "font": "Poppins Medium 16", "color": "#FFFFFF", "icon": null }
+    }
+  },
+  "fonts": ["Bitter[wght].ttf", "Poppins-Regular.ttf", "Poppins-Medium.ttf"]
+}

@@ -1,0 +1,94 @@
+=== ROOT 294:691 'Subscription' at (6277.0,4413.0) 393.0x852.0 ===
+[FRAM] 'Subscription' id=294:691  xywh=(0,0,393,852)  fill=#16062A
+  [VECT] 'Ellipse 1' id=294:692  xywh=(0,12,578.7,677.5)  fill=#4F31EC@0.51  fx=[LAYER_BLUR(514)]
+  [INST] 'Status Bar' id=294:693  xywh=(0,0,393,44)
+        [VECT] '\U001002e6' id=I294:693;1:288;1:205  xywh=(362,17,8,12)  fill=#FFFFFF
+        [GROU] 'Battery' id=I294:693;1:288;1:208  xywh=(356,19,19,8)
+  [FRAM] 'Frame 215' id=294:694  xywh=(1,0,392,853)  r=16.0
+    [RECT] 'milad-fakurian-nY14Fs8pxT8-unsplash 1' id=294:695  xywh=(-179,-118,713,635)  fill=IMAGE(ref=7b52d66cafda mode=STRETCH op=0.20000000298023224)
+    [RECT] 'Rectangle 39318' id=294:696  xywh=(1,0,392,853)  fill=#FBFBFB@0.01  stroke=GRADIENT_LINEAR[#63507A:0, #332643@0:1] handles=[(0.501, -0.38), (0.508, 1.014), (0.473, -0.377)] sw=2.0  r=16.0  fx=[INNER_SHADOW(#1A0B2C@1 dx=0 dy=1.256 blur=50.23 spread=0); INNER_SHADOW(#271839@1 dx=0 dy=5.023 blur=22.6 spread=0); INNER_SHADOW(#271839@1 dx=0 dy=123.1 blur=125.6 spread=-60.27); INNER_SHADOW(#271839@0.3 dx=0 dy=-103 blur=85.38 spread=-80.36); INNER_SHADOW(#271839@1 dx=0 dy=8.79 blur=13.81 spread=-5.023); INNER_SHADOW(#271839@1 dx=0 dy=-16.32 blur=11.3 spread=-17.58); INNER_SHADOW(#150F6C@0.5 dx=0 dy=48.97 blur=70.32 spread=-45.2); BACKGROUND_BLUR(113)]
+    [RECT] 'image-from-rawpixel-id-12672331-png 1' id=294:697  xywh=(-333,-241,955,637)  fill=IMAGE(ref=dc6e302d33a1 mode=FILL op=0.20000000298023224)
+  [INST] 'Status Bar' id=294:704  xywh=(0,0,393,44)
+        [VECT] '\U001002e6' id=I294:704;1:288;1:205  xywh=(362,17,8,12)  fill=#FFFFFF
+        [GROU] 'Battery' id=I294:704;1:288;1:208  xywh=(356,19,19,8)
+  [TEXT] 'Start your 3- days Free Trial to continue' id=294:775  xywh=(43,96,307,62)  fill=#FCD471  font=Bitter Bitter-SemiBold 26.0pt w600 lh=31.2px ls=0 align=CENTER/TOP  chars='Start your 3- days Free Trial to continue'
+  [RECT] 'Rectangle 39318' id=295:778  xywh=(21,172,352,707)  fill=#FBFBFB@0.01  stroke=GRADIENT_LINEAR[#63507A:0, #332643@0:1] handles=[(0.501, -0.38), (0.508, 1.014), (0.473, -0.377)] sw=2.0  r=16.0  fx=[BACKGROUND_BLUR(113)]
+  [FRAM] 'Frame 233' id=300:1009  xywh=(31,806,331,18)  op=0.7
+    [TEXT] 'Privacy' id=300:1005  xywh=(31,806,44,18)  fill=#B9B9B9  font=Poppins Poppins-Regular 12.0pt w400 lh=18px ls=0 align=LEFT/TOP  chars='Privacy'
+    [TEXT] 'Restore' id=300:1006  xywh=(177,806,45,18)  fill=#B9B9B9  font=Poppins Poppins-Regular 12.0pt w400 lh=18px ls=0 align=LEFT/TOP  chars='Restore'
+    [TEXT] 'Terms' id=300:1007  xywh=(324,806,38,18)  fill=#B9B9B9  font=Poppins Poppins-Regular 12.0pt w400 lh=18px ls=0 align=LEFT/TOP  chars='Terms'
+  [FRAM] 'Frame 235' id=300:1011  xywh=(37,666,320,116)
+    [FRAM] 'Frame 234' id=300:1010  xywh=(37,666,320,86)
+      [TEXT] 'No payment due now' id=300:1004  xywh=(37,666,320,18)  fill=#FFFFFF  font=Poppins Poppins-Regular 12.0pt w400 lh=18px ls=0 align=CENTER/TOP  chars='No payment due now'
+      [FRAM] 'Frame 224' id=300:992  xywh=(37,696,320,56)
+        [INST] 'Button Default' id=300:996  xywh=(37,696,320,56)  fill=GRADIENT_LINEAR[#3B2DF7:0, #7C38FF:1] handles=[(0.319, 0.5), (1.0, 0.5), (0.319, 0.841)]  r=13.0
+          [TEXT] 'Create Account' id=I300:996;12:4957  xywh=(53,712,288,24)  fill=#FFFFFF  font=Poppins Poppins-Medium 16.0pt w500 lh=24px ls=0 align=CENTER/TOP  chars='Start my 3-Day Free Trial'
+          [INST] 'vuesax/linear/arrow-left' id=I300:996;14:13869  xywh=(336,712,24,24)
+            [GROU] 'vuesax/linear/arrow-left' id=I300:996;14:13869;14:6320  xywh=(336,712,24,24)
+              [GROU] 'arrow-left' id=I300:996;14:13869;14:6321  xywh=(336,712,24,24)
+                [VECT] 'Vector' id=I300:996;14:13869;14:6322  xywh=(343.9,716.1,7.098,15.84)  stroke=#FFFFFF sw=1.5
+                [VECT] 'Vector' id=I300:996;14:13869;14:6323  xywh=(336,712,24,24)  op=0
+    [TEXT] '3 days free, then Rs 6,900 per year (Rs 575/mo)' id=300:1002  xywh=(37,764,320,18)  fill=#B9B9B9  font=Poppins Poppins-Regular 12.0pt w400 lh=18px ls=0 align=CENTER/TOP  chars='3 days free, then Rs 6,900 per year (Rs 575/mo) '
+  [FRAM] 'Frame 232' id=300:991  xywh=(37,495,320,143)
+    [GROU] 'Group 48095310' id=300:958  xywh=(37,495,320,79)  radii=[0.0, 0.0, 0.0, 0.0]
+      [RECT] 'Rectangle 39318' id=300:945  xywh=(37,495,320,79)  fill=#FBFBFB@0.01  stroke=GRADIENT_LINEAR[#FCD471:0, #FCD471@0:1] handles=[(0.573, -0.436), (0.462, 2.349), (0.516, -0.459)] sw=3.0  r=16.0  fx=[INNER_SHADOW(#1A0B2C@1 dx=0 dy=1.256 blur=50.23 spread=0); INNER_SHADOW(#271839@1 dx=0 dy=5.023 blur=22.6 spread=0); INNER_SHADOW(#271839@1 dx=0 dy=123.1 blur=125.6 spread=-60.27); INNER_SHADOW(#271839@0.3 dx=0 dy=-103 blur=85.38 spread=-80.36); INNER_SHADOW(#271839@1 dx=0 dy=8.79 blur=13.81 spread=-5.023); INNER_SHADOW(#271839@1 dx=0 dy=-16.32 blur=11.3 spread=-17.58); INNER_SHADOW(#150F6C@0.5 dx=0 dy=48.97 blur=70.32 spread=-45.2); BACKGROUND_BLUR(113)]
+      [FRAM] 'Frame 228' id=300:951  xywh=(53,511,288,47)
+        [FRAM] 'Frame 231' id=300:957  xywh=(53,511,192,47)
+          [GROU] 'Group 48095287' id=300:946  xywh=(53,511,24,24)  radii=[0.0, 0.0, 0.0, 0.0]
+            [RECT] 'Rectangle 39318' id=300:947  xywh=(53,511,24,24)  fill=#FBFBFB@0.01  stroke=GRADIENT_LINEAR[#E9C378:0, #D2AF69@0:1] handles=[(0.501, -0.38), (0.508, 1.014), (0.473, -0.377)] sw=1.0  r=200.0  fx=[INNER_SHADOW(#D2AF69@1 dx=0 dy=1.256 blur=50.23 spread=0); INNER_SHADOW(#D2AF69@1 dx=0 dy=5.023 blur=22.6 spread=0); INNER_SHADOW(#AE8941@1 dx=0 dy=123.1 blur=125.6 spread=-60.27); INNER_SHADOW(#D2AF69@0.3 dx=0 dy=-103 blur=85.38 spread=-80.36); INNER_SHADOW(#AE8941@0.39 dx=0 dy=8.79 blur=13.81 spread=-5.023); INNER_SHADOW(#AE8941@1 dx=0 dy=-16.32 blur=11.3 spread=-17.58); INNER_SHADOW(#AE8941@0.5 dx=0 dy=48.97 blur=70.32 spread=-45.2); BACKGROUND_BLUR(113)]
+            [INST] 'check' id=300:948  xywh=(59,517,12,12)
+              [VECT] 'Icon' id=I300:948;1027:6381  xywh=(61,520,8,5.5)  stroke=#FAFAFB sw=2.0
+          [FRAM] 'Frame 229' id=300:953  xywh=(89,511,99,47)
+            [TEXT] 'Yearly' id=300:949  xywh=(89,511,44,21)  fill=#EBEBEB  font=Poppins Poppins-Medium 14.0pt w500 lh=21px ls=0 align=LEFT/TOP  chars='Yearly'
+            [TEXT] 'Billed Rs, 6900' id=300:952  xywh=(89,537,99,21)  fill=#B9B9B9  font=Poppins Poppins-Regular 14.0pt w400 lh=21px ls=0 align=LEFT/TOP  chars='Billed Rs, 6900'
+        [FRAM] 'Frame 230' id=300:954  xywh=(257,511,84,21)
+          [TEXT] 'Rs 133/week' id=300:956  xywh=(257,511,84,21)  fill=#B9B9B9  font=Poppins Poppins-Regular 14.0pt w400 lh=21px ls=0 align=LEFT/TOP  chars='Rs 133/week'
+    [GROU] 'Group 48095311' id=300:972  xywh=(37,582,320,56)  radii=[0.0, 0.0, 0.0, 0.0]
+      [GROU] 'Group 48095312' id=300:990  xywh=(37,582,320,56)  radii=[0.0, 0.0, 0.0, 0.0]
+        [RECT] 'Rectangle 39319' id=300:985  xywh=(37,582,320,56)  fill=#FBFBFB@0.01  stroke=GRADIENT_LINEAR[#63507A:0, #332643@0:1] handles=[(0.501, -0.38), (0.513, 1.821), (0.457, -0.375)] sw=2.0  r=16.0  fx=[INNER_SHADOW(#1A0B2C@1 dx=0 dy=1.256 blur=50.23 spread=0); INNER_SHADOW(#271839@1 dx=0 dy=5.023 blur=22.6 spread=0); INNER_SHADOW(#271839@1 dx=0 dy=123.1 blur=125.6 spread=-60.27); INNER_SHADOW(#271839@0.3 dx=0 dy=-103 blur=85.38 spread=-80.36); INNER_SHADOW(#271839@1 dx=0 dy=8.79 blur=13.81 spread=-5.023); INNER_SHADOW(#271839@1 dx=0 dy=-16.32 blur=11.3 spread=-17.58); INNER_SHADOW(#150F6C@0.5 dx=0 dy=48.97 blur=70.32 spread=-45.2); BACKGROUND_BLUR(113)]
+        [FRAM] 'Frame 228' id=300:974  xywh=(53,598,289,24)
+          [FRAM] 'Frame 231' id=300:975  xywh=(53,598,185,24)
+            [GROU] 'Group 48095288' id=300:987  xywh=(53,598,24,24)  r=200.0
+              [RECT] 'Rectangle 39318' id=300:988  xywh=(53,598,24,24)  fill=#FBFBFB@0.01  stroke=GRADIENT_LINEAR[#BA9DDE:0, #7C5F9F@0:1] handles=[(0.501, -0.38), (0.508, 1.014), (0.473, -0.377)] sw=1.0  r=200.0  fx=[INNER_SHADOW(#1A0B2C@1 dx=0 dy=1.256 blur=50.23 spread=0); INNER_SHADOW(#271839@1 dx=0 dy=5.023 blur=22.6 spread=0); INNER_SHADOW(#271839@1 dx=0 dy=123.1 blur=125.6 spread=-60.27); INNER_SHADOW(#271839@0.3 dx=0 dy=-103 blur=85.38 spread=-80.36); INNER_SHADOW(#271839@1 dx=0 dy=8.79 blur=13.81 spread=-5.023); INNER_SHADOW(#271839@1 dx=0 dy=-16.32 blur=11.3 spread=-17.58); INNER_SHADOW(#150F6C@0.5 dx=0 dy=48.97 blur=70.32 spread=-45.2); BACKGROUND_BLUR(113)]
+            [FRAM] 'Frame 229' id=300:979  xywh=(89,598,51,21)
+              [TEXT] 'Weekly' id=300:980  xywh=(89,598,51,21)  fill=#EBEBEB  font=Poppins Poppins-Medium 14.0pt w500 lh=21px ls=0 align=LEFT/TOP  chars='Weekly'
+          [FRAM] 'Frame 230' id=300:982  xywh=(250,598,92,21)
+            [TEXT] 'Rs 11,00/week' id=300:983  xywh=(250,598,92,21)  fill=#B9B9B9  font=Poppins Poppins-Regular 14.0pt w400 lh=21px ls=0 align=LEFT/TOP  chars='Rs 11,00/week'
+  [GROU] 'Group 48095309' id=299:885  xywh=(37,188,300,275)  radii=[0.0, 0.0, 0.0, 0.0]
+    [FRAM] 'Frame 225' id=299:886  xywh=(93,188,244,71)
+      [TEXT] 'Today' id=299:887  xywh=(93,188,244,21)  fill=#EBEBEB  font=Poppins Poppins-SemiBold 14.0pt w600 lh=21px ls=0 align=LEFT/TOP  chars='Today'
+      [TEXT] 'Unlock AI Insights, Unlimited Journalism & Daily Affirmations.' id=299:888  xywh=(93,217,244,42)  fill=#B9B9B9  font=Poppins Poppins-Regular 14.0pt w400 lh=21px ls=0 align=LEFT/TOP  chars='Unlock AI Insights, Unlimited Journalism & Daily Affirmations.'
+    [FRAM] 'Frame 226' id=299:889  xywh=(93,285,244,71)
+      [TEXT] 'In 2 Days' id=299:890  xywh=(93,285,244,21)  fill=#EBEBEB  font=Poppins Poppins-SemiBold 14.0pt w600 lh=21px ls=0 align=LEFT/TOP  chars='In 2 Days'
+      [TEXT] 'We’ll send you a reminder that your trial is ending soon.' id=299:891  xywh=(93,314,244,42)  fill=#B9B9B9  font=Poppins Poppins-Regular 14.0pt w400 lh=21px ls=0 align=LEFT/TOP  chars='We’ll send you a reminder that your trial is ending soon.'
+    [FRAM] 'Frame 227' id=299:892  xywh=(93,392,244,71)
+      [TEXT] 'In 3 Days' id=299:893  xywh=(93,392,244,21)  fill=#EBEBEB  font=Poppins Poppins-SemiBold 14.0pt w600 lh=21px ls=0 align=LEFT/TOP  chars='In 3 Days'
+      [TEXT] 'You’ll be charged on 27 Jan 2026 unless you cancel anytime before.' id=299:894  xywh=(93,421,244,42)  fill=#B9B9B9  font=Poppins Poppins-Regular 14.0pt w400 lh=21px ls=0 align=LEFT/TOP  chars='You’ll be charged on 27 Jan 2026 unless you cancel anytime before.'
+    [GROU] 'Group 48095306' id=299:895  xywh=(57,243,0,156)
+      [VECT] 'Line 1' id=299:896  xywh=(57,243,0,56)  stroke=GRADIENT_LINEAR[#8E5BEB@0:0, #8E5BEB:0.4532, #8E5BEB@0:1] handles=[(0.0, 0.5), (1.0, 0.5), (0.0, 1.0)] sw=4.0
+      [VECT] 'Line 3' id=299:897  xywh=(57,343,0,56)  stroke=GRADIENT_LINEAR[#8E5BEB@0:0, #8E5BEB:0.4532, #8E5BEB@0:1] handles=[(0.0, 0.5), (1.0, 0.5), (0.0, 1.0)] sw=4.0
+    [GROU] 'Group 48095308' id=299:898  xywh=(37,203,42,246)  radii=[0.0, 0.0, 0.0, 0.0]
+      [GROU] 'Group 48095307' id=299:899  xywh=(37,203,42,246)  radii=[0.0, 0.0, 0.0, 0.0]
+        [GROU] 'Group 48095306' id=299:900  xywh=(37,203,42,246)  radii=[0.0, 0.0, 0.0, 0.0]
+          [GROU] 'Group 48095287' id=299:901  xywh=(37,203,42,42)  radii=[0.0, 0.0, 0.0, 0.0]
+            [RECT] 'Rectangle 39318' id=299:902  xywh=(37,203,42,42)  fill=#FBFBFB@0.01  stroke=GRADIENT_LINEAR[#63507A:0, #332643@0:1] handles=[(0.501, -0.38), (0.508, 1.014), (0.473, -0.377)] sw=2.0  r=12.0  fx=[INNER_SHADOW(#1A0B2C@1 dx=0 dy=1.256 blur=50.23 spread=0); INNER_SHADOW(#271839@1 dx=0 dy=5.023 blur=22.6 spread=0); INNER_SHADOW(#271839@1 dx=0 dy=123.1 blur=125.6 spread=-60.27); INNER_SHADOW(#271839@0.3 dx=0 dy=-103 blur=85.38 spread=-80.36); INNER_SHADOW(#271839@1 dx=0 dy=8.79 blur=13.81 spread=-5.023); INNER_SHADOW(#271839@1 dx=0 dy=-16.32 blur=11.3 spread=-17.58); INNER_SHADOW(#150F6C@0.5 dx=0 dy=48.97 blur=70.32 spread=-45.2); BACKGROUND_BLUR(113)]
+            [FRAM] 'Frame' id=299:903  xywh=(48,214,20,20)
+              [GROU] 'Group' id=299:904  xywh=(49.56,214.9,16.27,18.75)
+                [GROU] 'Layer 2' id=299:905  xywh=(49.56,214.9,16.27,18.75)
+                  [VECT] 'Vector' id=299:906  xywh=(49.56,214.9,16.27,18.75)  fill=#8480BE
+          [GROU] 'Group 48095301' id=299:907  xywh=(37,300,42,42)  radii=[0.0, 0.0, 0.0, 0.0]
+            [RECT] 'Rectangle 39318' id=299:908  xywh=(37,300,42,42)  fill=#FBFBFB@0.01  stroke=GRADIENT_LINEAR[#63507A:0, #332643@0:1] handles=[(0.501, -0.38), (0.508, 1.014), (0.473, -0.377)] sw=2.0  r=12.0  fx=[INNER_SHADOW(#1A0B2C@1 dx=0 dy=1.256 blur=50.23 spread=0); INNER_SHADOW(#271839@1 dx=0 dy=5.023 blur=22.6 spread=0); INNER_SHADOW(#271839@1 dx=0 dy=123.1 blur=125.6 spread=-60.27); INNER_SHADOW(#271839@0.3 dx=0 dy=-103 blur=85.38 spread=-80.36); INNER_SHADOW(#271839@1 dx=0 dy=8.79 blur=13.81 spread=-5.023); INNER_SHADOW(#271839@1 dx=0 dy=-16.32 blur=11.3 spread=-17.58); INNER_SHADOW(#150F6C@0.5 dx=0 dy=48.97 blur=70.32 spread=-45.2); BACKGROUND_BLUR(113)]
+            [FRAM] 'Frame' id=299:909  xywh=(48,311,20,20)
+              [GROU] 'Group' id=299:910  xywh=(49.21,311,17.58,20)
+                [VECT] 'Vector' id=299:911  xywh=(49.21,311,17.58,20)  fill=#8480BE
+          [GROU] 'Group 48095300' id=299:912  xywh=(37,407,42,42)  radii=[0.0, 0.0, 0.0, 0.0]
+            [FRAM] 'Elemento' id=299:913  xywh=(37,407,42,42)  fill=GRADIENT_LINEAR[#F8FBFF:0, #FFFFFF@0:1] handles=[(0.0, 0.0), (1.0, 1.0), (-0.5, 0.5)]  stroke=GRADIENT_LINEAR[#D8D8D8@0.05:0, #FFFFFF@0.4:1] handles=[(0.021, -0.021), (0.969, 1.0), (-0.49, 0.453)] sw=0.800000011920929  r=12.0  fx=[BACKGROUND_BLUR(20); DROP_SHADOW(#000000@0.08 dx=8 dy=4 blur=16 spread=0); INNER_SHADOW(#F39E09@0.32 dx=0 dy=0 blur=8 spread=0)]
+              [FRAM] 'youtube' id=299:914  xywh=(45,415,32,32)  op=0.5  fx=[LAYER_BLUR(12)]
+                [VECT] 'bg' id=299:915  xywh=(47,421,28,20)  fill=#F39E09  radii=[0.0, 0.0, 0.0, 0.0]
+                [VECT] 'play' id=299:916  xywh=(58,427,8,8)  fill=#FFFFFF
+              [ELLI] 'Ellipse 1' id=299:917  xywh=(50,448,23,13)  fill=#F39E09  fx=[LAYER_BLUR(18)]
+            [FRAM] 'Frame' id=299:918  xywh=(45,417,24,24)
+              [GROU] 'Group' id=299:919  xywh=(45,421,24,16)
+                [VECT] 'Vector' id=299:920  xywh=(45,421,24,13.5)  fill=#FFC107
+                [VECT] 'Vector' id=299:921  xywh=(48.5,431.5,17,5.001)  fill=#FFA000
+                [VECT] 'Vector' id=299:922  xywh=(48,431,18,6.001)  fill=#FFD54F

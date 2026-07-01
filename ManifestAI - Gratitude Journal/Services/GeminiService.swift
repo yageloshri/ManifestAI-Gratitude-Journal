@@ -31,9 +31,20 @@ class GeminiService {
         }
     }
     
+    enum GeminiError: LocalizedError {
+        case apiKeyMissing
+
+        var errorDescription: String? {
+            switch self {
+            case .apiKeyMissing:
+                return "AI features are unavailable — Gemini API key not configured."
+            }
+        }
+    }
+
     func generateContent(prompt: String) async throws -> String {
         guard !Secrets.geminiKey.isEmpty else {
-            throw URLError(.userAuthenticationRequired)
+            throw GeminiError.apiKeyMissing
         }
         
         guard let url = URL(string: "https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key=\(Secrets.geminiKey)") else {

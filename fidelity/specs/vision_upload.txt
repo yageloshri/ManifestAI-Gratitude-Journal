@@ -1,0 +1,55 @@
+=== ROOT 326:13117 'Name' at (4007.0,8929.0) 393.0x852.0 ===
+[FRAM] 'Name' id=326:13117  xywh=(0,0,393,852)  fill=#16062A
+  [VECT] 'Ellipse 1' id=326:13118  xywh=(0,12,578.7,677.5)  fill=#4F31EC@0.29  fx=[LAYER_BLUR(514)]
+  [INST] 'Status Bar' id=326:13119  xywh=(0,0,393,44)
+        [VECT] '\U001002e6' id=I326:13119;1:288;1:205  xywh=(362,17,8,12)  fill=#FFFFFF
+        [GROU] 'Battery' id=I326:13119;1:288;1:208  xywh=(356,19,19,8)
+  [FRAM] 'Frame 290' id=326:13120  xywh=(20,68,183,40)
+    [GROU] 'Group 48095322' id=326:13121  xywh=(20,68,40,40)  radii=[0.0, 0.0, 0.0, 0.0]
+      [RECT] 'Rectangle 39318' id=326:13122  xywh=(20,68,40,40)  fill=#FBFBFB@0.01  stroke=GRADIENT_LINEAR[#63507A:0, #332643@0:1] handles=[(0.501, -0.38), (0.508, 1.014), (0.473, -0.377)] sw=1.0  r=12.0  fx=[INNER_SHADOW(#1A0B2C@1 dx=0 dy=1.256 blur=50.23 spread=0); INNER_SHADOW(#271839@1 dx=0 dy=5.023 blur=22.6 spread=0); INNER_SHADOW(#271839@1 dx=0 dy=123.1 blur=125.6 spread=-60.27); INNER_SHADOW(#271839@0.3 dx=0 dy=-103 blur=85.38 spread=-80.36); INNER_SHADOW(#271839@1 dx=0 dy=8.79 blur=13.81 spread=-5.023); INNER_SHADOW(#271839@1 dx=0 dy=-16.32 blur=11.3 spread=-17.58); INNER_SHADOW(#150F6C@0.5 dx=0 dy=48.97 blur=70.32 spread=-45.2); BACKGROUND_BLUR(113)]
+      [INST] 'vuesax/linear/arrow-left' id=326:13123  xywh=(30,78,20,20)
+        [GROU] 'vuesax/linear/arrow-left' id=I326:13123;324:4137  xywh=(30,78,20,20)
+          [GROU] 'arrow-left' id=I326:13123;324:4138  xywh=(30,78,20,20)
+            [VECT] 'Vector' id=I326:13123;324:4139  xywh=(32.92,82.94,5.058,10.12)  stroke=#685EF5 sw=1.5
+            [VECT] 'Vector' id=I326:13123;324:4140  xywh=(33.06,88,14.02,0)  stroke=#685EF5 sw=1.5
+            [VECT] 'Vector' id=I326:13123;324:4141  xywh=(30,78,20,20)  op=0
+    [TEXT] 'Upload Image' id=326:13124  xywh=(84,74.5,119,27)  fill=#EBEBEB  font=Bitter Bitter-Bold 18.0pt w700 lh=27px ls=0 align=LEFT/TOP  chars='Upload Image'
+  [INST] 'Button Default' id=326:13224  xywh=(20,714,353,56)  fill=GRADIENT_LINEAR[#3B2DF7:0, #7C38FF:1] handles=[(0.319, 0.5), (1.0, 0.5), (0.319, 0.841)]  r=13.0
+    [TEXT] 'Create Account' id=I326:13224;12:4957  xywh=(36,730,321,24)  fill=#FFFFFF  font=Poppins Poppins-Medium 16.0pt w500 lh=24px ls=0 align=CENTER/TOP  chars='Upload Image'
+    [INST] 'vuesax/linear/arrow-left' id=I326:13224;14:13869  xywh=(319,730,24,24)
+      [GROU] 'vuesax/linear/arrow-left' id=I326:13224;14:13869;14:6320  xywh=(319,730,24,24)
+        [GROU] 'arrow-left' id=I326:13224;14:13869;14:6321  xywh=(319,730,24,24)
+          [VECT] 'Vector' id=I326:13224;14:13869;14:6322  xywh=(326.9,734.1,7.098,15.84)  stroke=#FFFFFF sw=1.5
+          [VECT] 'Vector' id=I326:13224;14:13869;14:6323  xywh=(319,730,24,24)  op=0
+  [RECT] 'Rectangle 39330' id=326:13265  xywh=(32,146,330,529)  fill=#D9D9D9|IMAGE(ref=1dc6caaf541b mode=FILL op=1)  stroke=#685EF5@0.28 sw=11.0  r=20.0
+  [FRAM] 'Frame 1000003716' id=326:13300  xywh=(40,621,314,46)
+    [FRAM] 'Button Default' id=326:13270  xywh=(40,621,154,46)  fill=#FFFFFF  r=13.0
+      [INST] 'vuesax/linear/edit-2' id=326:13277  xywh=(52,634,20,20)
+        [GROU] 'vuesax/linear/edit-2' id=I326:13277;324:9121  xywh=(52,634,20,20)
+          [GROU] 'edit-2' id=I326:13277;324:9122  xywh=(52,634,20,20)
+            [VECT] 'Vector' id=I326:13277;324:9123  xywh=(55.33,635.8,13.33,13.83)  stroke=#16062A sw=1.5
+            [VECT] 'Vector' id=I326:13277;324:9124  xywh=(61.91,638.2,4.542,4.292)  stroke=#16062A sw=1.5
+            [VECT] 'Vector' id=I326:13277;324:9125  xywh=(54.5,652.3,15,0)  stroke=#292D32 sw=1.5
+            [VECT] 'Vector' id=I326:13277;324:9126  xywh=(52,634,20,20)  op=0
+      [TEXT] 'Change Photo' id=326:13271  xywh=(82,633.5,100,21)  fill=#16062A  font=Poppins Poppins-Regular 14.0pt w400 lh=21px ls=0 align=CENTER/TOP  chars='Change Photo'
+      [INST] 'vuesax/linear/arrow-left' id=326:13272  xywh=(339,637,24,24)
+        [GROU] 'vuesax/linear/arrow-left' id=I326:13272;14:6320  xywh=(339,637,24,24)
+          [GROU] 'arrow-left' id=I326:13272;14:6321  xywh=(339,637,24,24)
+            [VECT] 'Vector' id=I326:13272;14:6322  xywh=(346.9,641.1,7.098,15.84)  stroke=#FFFFFF sw=1.5
+            [VECT] 'Vector' id=I326:13272;14:6323  xywh=(339,637,24,24)  op=0
+    [FRAM] 'Button Default' id=326:13290  xywh=(202,621,152,46)  fill=#FFFFFF  r=13.0
+      [INST] 'vuesax/linear/trash' id=326:13291  xywh=(214,635,18,18)
+        [GROU] 'vuesax/linear/trash' id=I326:13291;324:7929  xywh=(214,635,18,18)
+          [GROU] 'trash' id=I326:13291;324:7930  xywh=(214,635,18,18)
+            [VECT] 'Vector' id=I326:13291;324:7931  xywh=(216.2,639.1,13.5,0.375)  stroke=#CC2123 sw=1.5
+            [VECT] 'Vector' id=I326:13291;324:7932  xywh=(220.4,636.5,5.25,2.227)  stroke=#CC2123 sw=1.5
+            [VECT] 'Vector' id=I326:13291;324:7933  xywh=(217.9,641.9,10.28,9.645)  stroke=#CC2123 sw=1.5
+            [VECT] 'Vector' id=I326:13291;324:7934  xywh=(221.7,647.4,2.497,0)  stroke=#CC2123 sw=1.5
+            [VECT] 'Vector' id=I326:13291;324:7935  xywh=(221.1,644.4,3.75,0)  stroke=#CC2123 sw=1.5
+            [VECT] 'Vector' id=I326:13291;324:7936  xywh=(214,635,18,18)  op=0
+      [TEXT] 'Change Photo' id=326:13292  xywh=(242,633.5,100,21)  fill=#16062A  font=Poppins Poppins-Regular 14.0pt w400 lh=21px ls=0 align=CENTER/TOP  chars='Change Photo'
+      [INST] 'vuesax/linear/arrow-left' id=326:13293  xywh=(501,637,24,24)
+        [GROU] 'vuesax/linear/arrow-left' id=I326:13293;14:6320  xywh=(501,637,24,24)
+          [GROU] 'arrow-left' id=I326:13293;14:6321  xywh=(501,637,24,24)
+            [VECT] 'Vector' id=I326:13293;14:6322  xywh=(508.9,641.1,7.098,15.84)  stroke=#FFFFFF sw=1.5
+            [VECT] 'Vector' id=I326:13293;14:6323  xywh=(501,637,24,24)  op=0

@@ -11,16 +11,13 @@ struct VisionBoardEditorView: View {
     
     var body: some View {
         ZStack {
-            // Background gradient
-            LinearGradient(
-                colors: [
-                    Color(hex: "1a1a2e"),
-                    Color(hex: "16213e")
-                ],
-                startPoint: .top,
-                endPoint: .bottom
-            )
-            .ignoresSafeArea()
+            // App design language: cosmic background + purple glow.
+            // Glow as overlay+clipped so its oversized blur frame doesn't
+            // inflate the ZStack union (that shifts centered siblings).
+            DesignTokens.Colors.background
+                .overlay(EllipseGlowBackground(sx: 1, sy: 1).allowsHitTesting(false))
+                .clipped()
+                .ignoresSafeArea()
             
             VStack(spacing: 16) {
                 // === TOP CONTROLS (Above iPhone Frame) ===
@@ -141,9 +138,9 @@ struct VisionBoardEditorView: View {
                         .foregroundStyle(.black)
                         .padding(.horizontal, 20)
                         .padding(.vertical, 12)
-                        .background(Color(hex: "FFD700"))
+                        .background(DesignTokens.Gradients.golden)
                         .clipShape(Capsule())
-                        .shadow(color: Color(hex: "FFD700").opacity(0.4), radius: 10)
+                        .shadow(color: DesignTokens.Colors.secondary.opacity(0.4), radius: 10)
                     }
                     .buttonStyle(.plain)
                 }
@@ -304,14 +301,8 @@ struct VisionBoardEditorView: View {
                     .foregroundStyle(.white)
                     .frame(maxWidth: .infinity)
                     .padding(.vertical, 14)
-                    .background(
-                        LinearGradient(
-                            colors: [Color.blue.opacity(0.7), Color.purple.opacity(0.7)],
-                            startPoint: .leading,
-                            endPoint: .trailing
-                        )
-                    )
-                    .clipShape(RoundedRectangle(cornerRadius: 14))
+                    .background(DesignTokens.Gradients.primary)
+                    .clipShape(RoundedRectangle(cornerRadius: DesignTokens.Radii.button))
                     .overlay(
                         RoundedRectangle(cornerRadius: 14)
                             .stroke(Color.white.opacity(0.3), lineWidth: 1)

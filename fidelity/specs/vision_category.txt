@@ -1,0 +1,115 @@
+=== ROOT 325:12793 'Name' at (2708.0,8929.0) 393.0x852.0 ===
+[FRAM] 'Name' id=325:12793  xywh=(0,0,393,852)  fill=#16062A
+  [VECT] 'Ellipse 1' id=325:12794  xywh=(0,12,578.7,677.5)  fill=#4F31EC@0.29  fx=[LAYER_BLUR(514)]
+  [INST] 'Status Bar' id=325:12795  xywh=(0,0,393,44)
+        [VECT] '\U001002e6' id=I325:12795;1:288;1:205  xywh=(362,17,8,12)  fill=#FFFFFF
+        [GROU] 'Battery' id=I325:12795;1:288;1:208  xywh=(356,19,19,8)
+  [FRAM] 'Frame 290' id=325:12910  xywh=(20,68,197,40)
+    [GROU] 'Group 48095322' id=325:12899  xywh=(20,68,40,40)  radii=[0.0, 0.0, 0.0, 0.0]
+      [RECT] 'Rectangle 39318' id=325:12900  xywh=(20,68,40,40)  fill=#FBFBFB@0.01  stroke=GRADIENT_LINEAR[#63507A:0, #332643@0:1] handles=[(0.501, -0.38), (0.508, 1.014), (0.473, -0.377)] sw=1.0  r=12.0  fx=[INNER_SHADOW(#1A0B2C@1 dx=0 dy=1.256 blur=50.23 spread=0); INNER_SHADOW(#271839@1 dx=0 dy=5.023 blur=22.6 spread=0); INNER_SHADOW(#271839@1 dx=0 dy=123.1 blur=125.6 spread=-60.27); INNER_SHADOW(#271839@0.3 dx=0 dy=-103 blur=85.38 spread=-80.36); INNER_SHADOW(#271839@1 dx=0 dy=8.79 blur=13.81 spread=-5.023); INNER_SHADOW(#271839@1 dx=0 dy=-16.32 blur=11.3 spread=-17.58); INNER_SHADOW(#150F6C@0.5 dx=0 dy=48.97 blur=70.32 spread=-45.2); BACKGROUND_BLUR(113)]
+      [INST] 'vuesax/linear/arrow-left' id=325:12901  xywh=(30,78,20,20)
+        [GROU] 'vuesax/linear/arrow-left' id=I325:12901;324:4137  xywh=(30,78,20,20)
+          [GROU] 'arrow-left' id=I325:12901;324:4138  xywh=(30,78,20,20)
+            [VECT] 'Vector' id=I325:12901;324:4139  xywh=(32.92,82.94,5.058,10.12)  stroke=#685EF5 sw=1.5
+            [VECT] 'Vector' id=I325:12901;324:4140  xywh=(33.06,88,14.02,0)  stroke=#685EF5 sw=1.5
+            [VECT] 'Vector' id=I325:12901;324:4141  xywh=(30,78,20,20)  op=0
+    [TEXT] 'Select Category' id=325:12902  xywh=(84,74.5,133,27)  fill=#EBEBEB  font=Bitter Bitter-Bold 18.0pt w700 lh=27px ls=0 align=LEFT/TOP  chars='Select Category'
+  [FRAM] 'Frame 294' id=327:1341  xywh=(20,125,346,350)
+    [TEXT] 'What are you calling in?' id=327:1340  xywh=(20,125,346,24)  fill=#B9B9B9  font=Poppins Poppins-Medium 16.0pt w500 lh=24px ls=0 align=LEFT/TOP  chars='What are you calling in?'
+    [FRAM] 'Frame 293' id=327:1339  xywh=(20,165,346,310)
+      [FRAM] 'Frame 267' id=327:1054  xywh=(20,165,346,98)
+        [GROU] 'Group 48095318' id=327:1055  xywh=(20,165,110,98)  radii=[0.0, 0.0, 0.0, 0.0]
+          [RECT] 'Rectangle 39320' id=327:1056  xywh=(20,165,110,98)  fill=#FBFBFB@0.01  stroke=GRADIENT_LINEAR[#63507A:0, #332643@0:1] handles=[(0.501, -0.38), (0.508, 1.014), (0.473, -0.377)] sw=2.0  r=16.0  fx=[INNER_SHADOW(#1A0B2C@1 dx=0 dy=1.256 blur=50.23 spread=0); INNER_SHADOW(#271839@1 dx=0 dy=5.023 blur=22.6 spread=0); INNER_SHADOW(#271839@1 dx=0 dy=123.1 blur=125.6 spread=-60.27); INNER_SHADOW(#271839@0.3 dx=0 dy=-103 blur=85.38 spread=-80.36); INNER_SHADOW(#271839@1 dx=0 dy=8.79 blur=13.81 spread=-5.023); INNER_SHADOW(#271839@1 dx=0 dy=-16.32 blur=11.3 spread=-17.58); INNER_SHADOW(#150F6C@0.5 dx=0 dy=48.97 blur=70.32 spread=-45.2); BACKGROUND_BLUR(113)]
+          [FRAM] 'Frame 266' id=327:1057  xywh=(42,185,66,59)
+            [GROU] 'Group 48095317' id=327:1058  xywh=(59,185,32,32)
+              [FRAM] 'youtube' id=327:1059  xywh=(59,185,32,32)  op=0.3  fx=[LAYER_BLUR(16)]
+                [VECT] 'bg' id=327:1060  xywh=(61,191,28,20)  fill=#685EF5  radii=[0.0, 0.0, 0.0, 0.0]
+                [VECT] 'play' id=327:1061  xywh=(72,197,8,8)  fill=#FFFFFF
+              [FRAM] 'Frame' id=327:1246  xywh=(63,189,24,24)
+                [GROU] 'Group' id=327:1247  xywh=(63,190.3,24,21.4)
+                  [VECT] 'Vector' id=327:1248  xywh=(63,190.3,24,21.39)  fill=#685EF5
+                  [VECT] 'Vector' id=327:1249  xywh=(68.17,190.6,18.83,21.12)  fill=#000000@0.0824
+                  [VECT] 'Vector' id=327:1250  xywh=(63.76,191.2,5.603,5.922)  op=0.3  fill=#FFFFFF
+            [FRAM] 'Frame 241' id=327:1065  xywh=(42,223,66,21)
+              [TEXT] 'Love' id=327:1067  xywh=(59,223,32,21)  fill=#EBEBEB  font=Poppins Poppins-Medium 14.0pt w500 lh=21px ls=0 align=LEFT/TOP  chars='Love'
+        [GROU] 'Group 48095322' id=327:1111  xywh=(138,165,110,98)  radii=[0.0, 0.0, 0.0, 0.0]
+          [RECT] 'Rectangle 39320' id=327:1112  xywh=(138,165,110,98)  fill=#FBFBFB@0.01  stroke=GRADIENT_LINEAR[#63507A:0, #332643@0:1] handles=[(0.501, -0.38), (0.508, 1.014), (0.473, -0.377)] sw=2.0  r=16.0  fx=[INNER_SHADOW(#1A0B2C@1 dx=0 dy=1.256 blur=50.23 spread=0); INNER_SHADOW(#271839@1 dx=0 dy=5.023 blur=22.6 spread=0); INNER_SHADOW(#271839@1 dx=0 dy=123.1 blur=125.6 spread=-60.27); INNER_SHADOW(#271839@0.3 dx=0 dy=-103 blur=85.38 spread=-80.36); INNER_SHADOW(#271839@1 dx=0 dy=8.79 blur=13.81 spread=-5.023); INNER_SHADOW(#271839@1 dx=0 dy=-16.32 blur=11.3 spread=-17.58); INNER_SHADOW(#150F6C@0.5 dx=0 dy=48.97 blur=70.32 spread=-45.2); BACKGROUND_BLUR(113)]
+          [FRAM] 'Frame 266' id=327:1113  xywh=(160,185,66,59)
+            [GROU] 'Group 48095318' id=327:1198  xywh=(177,185,32,32)
+              [FRAM] 'youtube' id=327:1199  xywh=(177,185,32,32)  op=0.3  fx=[LAYER_BLUR(16)]
+                [VECT] 'bg' id=327:1200  xywh=(179,191,28,20)  fill=#685EF5  radii=[0.0, 0.0, 0.0, 0.0]
+                [VECT] 'play' id=327:1201  xywh=(190,197,8,8)  fill=#FFFFFF
+              [FRAM] 'Frame' id=327:1276  xywh=(181,189,24,24)
+                [GROU] 'Group' id=327:1277  xywh=(183.3,189.4,19.37,23.25)
+                  [VECT] 'Vector' id=327:1278  xywh=(183.3,189.4,19.37,23.25)  fill=#685EF5
+            [FRAM] 'Frame 241' id=327:1121  xywh=(160,223,66,21)
+              [TEXT] 'Wealth' id=327:1122  xywh=(167.5,223,51,21)  fill=#EBEBEB  font=Poppins Poppins-Medium 14.0pt w500 lh=21px ls=0 align=LEFT/TOP  chars='Wealth'
+        [GROU] 'Group 48095321' id=327:1098  xywh=(256,165,110,98)  radii=[0.0, 0.0, 0.0, 0.0]
+          [RECT] 'Rectangle 39320' id=327:1099  xywh=(256,165,110,98)  fill=#FBFBFB@0.01  stroke=GRADIENT_LINEAR[#63507A:0, #332643@0:1] handles=[(0.501, -0.38), (0.508, 1.014), (0.473, -0.377)] sw=2.0  r=16.0  fx=[INNER_SHADOW(#1A0B2C@1 dx=0 dy=1.256 blur=50.23 spread=0); INNER_SHADOW(#271839@1 dx=0 dy=5.023 blur=22.6 spread=0); INNER_SHADOW(#271839@1 dx=0 dy=123.1 blur=125.6 spread=-60.27); INNER_SHADOW(#271839@0.3 dx=0 dy=-103 blur=85.38 spread=-80.36); INNER_SHADOW(#271839@1 dx=0 dy=8.79 blur=13.81 spread=-5.023); INNER_SHADOW(#271839@1 dx=0 dy=-16.32 blur=11.3 spread=-17.58); INNER_SHADOW(#150F6C@0.5 dx=0 dy=48.97 blur=70.32 spread=-45.2); BACKGROUND_BLUR(113)]
+          [FRAM] 'Frame 266' id=327:1100  xywh=(278,185,66,59)
+            [GROU] 'Group 48095318' id=327:1206  xywh=(295,185,32,32)
+              [FRAM] 'youtube' id=327:1207  xywh=(295,185,32,32)  op=0.3  fx=[LAYER_BLUR(16)]
+                [VECT] 'bg' id=327:1208  xywh=(297,191,28,20)  fill=#685EF5  radii=[0.0, 0.0, 0.0, 0.0]
+                [VECT] 'play' id=327:1209  xywh=(308,197,8,8)  fill=#FFFFFF
+              [FRAM] 'Frame' id=327:1290  xywh=(299,189,24,24)
+                [GROU] 'Group' id=327:1291  xywh=(299,190.2,24,21.66)
+                  [VECT] 'Vector' id=327:1292  xywh=(299,190.2,24,12.38)  fill=#685EF5
+                  [VECT] 'Vector' id=327:1293  xywh=(301.3,198.4,19.42,13.39)  fill=#685EF5
+            [FRAM] 'Frame 241' id=327:1108  xywh=(278,223,66,21)
+              [TEXT] 'Health' id=327:1109  xywh=(288,223,46,21)  fill=#EBEBEB  font=Poppins Poppins-Medium 14.0pt w500 lh=21px ls=0 align=LEFT/TOP  chars='Health'
+      [FRAM] 'Frame 291' id=327:1124  xywh=(20,271,346,98)
+        [GROU] 'Group 48095318' id=327:1125  xywh=(20,271,110,98)  radii=[0.0, 0.0, 0.0, 0.0]
+          [RECT] 'Rectangle 39320' id=327:1126  xywh=(20,271,110,98)  fill=#FBFBFB@0.01  stroke=GRADIENT_LINEAR[#63507A:0, #332643@0:1] handles=[(0.501, -0.38), (0.508, 1.014), (0.473, -0.377)] sw=2.0  r=16.0  fx=[INNER_SHADOW(#1A0B2C@1 dx=0 dy=1.256 blur=50.23 spread=0); INNER_SHADOW(#271839@1 dx=0 dy=5.023 blur=22.6 spread=0); INNER_SHADOW(#271839@1 dx=0 dy=123.1 blur=125.6 spread=-60.27); INNER_SHADOW(#271839@0.3 dx=0 dy=-103 blur=85.38 spread=-80.36); INNER_SHADOW(#271839@1 dx=0 dy=8.79 blur=13.81 spread=-5.023); INNER_SHADOW(#271839@1 dx=0 dy=-16.32 blur=11.3 spread=-17.58); INNER_SHADOW(#150F6C@0.5 dx=0 dy=48.97 blur=70.32 spread=-45.2); BACKGROUND_BLUR(113)]
+          [FRAM] 'Frame 266' id=327:1127  xywh=(42,291,66,59)
+            [GROU] 'Group 48095318' id=327:1214  xywh=(59,291,32,32)
+              [FRAM] 'youtube' id=327:1215  xywh=(59,291,32,32)  op=0.3  fx=[LAYER_BLUR(16)]
+                [VECT] 'bg' id=327:1216  xywh=(61,297,28,20)  fill=#685EF5  radii=[0.0, 0.0, 0.0, 0.0]
+                [VECT] 'play' id=327:1217  xywh=(72,303,8,8)  fill=#FFFFFF
+              [FRAM] 'Frame' id=327:1299  xywh=(63,293.7,24,24)
+                [GROU] 'Group' id=327:1300  xywh=(63,293.7,24,24)
+                  [VECT] 'Vector' id=327:1301  xywh=(63,293.7,24,24)  fill=#685EF5
+            [FRAM] 'Frame 241' id=327:1135  xywh=(42,329,66,21)
+              [TEXT] 'Travel' id=327:1136  xywh=(53,329,44,21)  fill=#EBEBEB  font=Poppins Poppins-Medium 14.0pt w500 lh=21px ls=0 align=LEFT/TOP  chars='Travel'
+        [GROU] 'Group 48095322' id=327:1137  xywh=(138,271,110,98)  radii=[0.0, 0.0, 0.0, 0.0]
+          [RECT] 'Rectangle 39320' id=327:1138  xywh=(138,271,110,98)  fill=#FBFBFB@0.01  stroke=GRADIENT_LINEAR[#63507A:0, #332643@0:1] handles=[(0.501, -0.38), (0.508, 1.014), (0.473, -0.377)] sw=2.0  r=16.0  fx=[INNER_SHADOW(#1A0B2C@1 dx=0 dy=1.256 blur=50.23 spread=0); INNER_SHADOW(#271839@1 dx=0 dy=5.023 blur=22.6 spread=0); INNER_SHADOW(#271839@1 dx=0 dy=123.1 blur=125.6 spread=-60.27); INNER_SHADOW(#271839@0.3 dx=0 dy=-103 blur=85.38 spread=-80.36); INNER_SHADOW(#271839@1 dx=0 dy=8.79 blur=13.81 spread=-5.023); INNER_SHADOW(#271839@1 dx=0 dy=-16.32 blur=11.3 spread=-17.58); INNER_SHADOW(#150F6C@0.5 dx=0 dy=48.97 blur=70.32 spread=-45.2); BACKGROUND_BLUR(113)]
+          [FRAM] 'Frame 266' id=327:1139  xywh=(160,291,66,59)
+            [GROU] 'Group 48095318' id=327:1222  xywh=(177,291,32,32)
+              [FRAM] 'youtube' id=327:1223  xywh=(177,291,32,32)  op=0.3  fx=[LAYER_BLUR(16)]
+                [VECT] 'bg' id=327:1224  xywh=(179,297,28,20)  fill=#685EF5  radii=[0.0, 0.0, 0.0, 0.0]
+                [VECT] 'play' id=327:1225  xywh=(190,303,8,8)  fill=#FFFFFF
+              [FRAM] 'Frame' id=327:1307  xywh=(181,293.7,24,24)
+                [GROU] 'Group' id=327:1308  xywh=(183.2,295.9,19.5,19.5)
+                  [VECT] 'Vector' id=327:1309  xywh=(183.2,295.9,19.5,19.5)  fill=#685EF5
+            [FRAM] 'Frame 241' id=327:1147  xywh=(160,329,66,21)
+              [TEXT] 'Career' id=327:1148  xywh=(168.5,329,49,21)  fill=#EBEBEB  font=Poppins Poppins-Medium 14.0pt w500 lh=21px ls=0 align=LEFT/TOP  chars='Career'
+        [GROU] 'Group 48095321' id=327:1149  xywh=(256,271,110,98)  radii=[0.0, 0.0, 0.0, 0.0]
+          [RECT] 'Rectangle 39320' id=327:1150  xywh=(256,271,110,98)  fill=#FBFBFB@0.01  stroke=GRADIENT_LINEAR[#63507A:0, #332643@0:1] handles=[(0.501, -0.38), (0.508, 1.014), (0.473, -0.377)] sw=2.0  r=16.0  fx=[INNER_SHADOW(#1A0B2C@1 dx=0 dy=1.256 blur=50.23 spread=0); INNER_SHADOW(#271839@1 dx=0 dy=5.023 blur=22.6 spread=0); INNER_SHADOW(#271839@1 dx=0 dy=123.1 blur=125.6 spread=-60.27); INNER_SHADOW(#271839@0.3 dx=0 dy=-103 blur=85.38 spread=-80.36); INNER_SHADOW(#271839@1 dx=0 dy=8.79 blur=13.81 spread=-5.023); INNER_SHADOW(#271839@1 dx=0 dy=-16.32 blur=11.3 spread=-17.58); INNER_SHADOW(#150F6C@0.5 dx=0 dy=48.97 blur=70.32 spread=-45.2); BACKGROUND_BLUR(113)]
+          [FRAM] 'Frame 266' id=327:1151  xywh=(278,291,66,59)
+            [GROU] 'Group 48095318' id=327:1230  xywh=(295,291,32,32)
+              [FRAM] 'youtube' id=327:1231  xywh=(295,291,32,32)  op=0.3  fx=[LAYER_BLUR(16)]
+                [VECT] 'bg' id=327:1232  xywh=(297,297,28,20)  fill=#685EF5  radii=[0.0, 0.0, 0.0, 0.0]
+                [VECT] 'play' id=327:1233  xywh=(308,303,8,8)  fill=#FFFFFF
+              [FRAM] 'Frame' id=327:1315  xywh=(299,293.7,24,24)
+                [GROU] 'Group' id=327:1316  xywh=(300.4,295.2,21.12,21.23)
+                  [VECT] 'Vector' id=327:1317  xywh=(300.4,295.2,21.12,21.23)  fill=#685EF5
+            [FRAM] 'Frame 241' id=327:1159  xywh=(278,329,66,21)
+              [TEXT] 'Peace' id=327:1160  xywh=(289,329,44,21)  fill=#EBEBEB  font=Poppins Poppins-Medium 14.0pt w500 lh=21px ls=0 align=LEFT/TOP  chars='Peace'
+      [FRAM] 'Frame 292' id=327:1161  xywh=(20,377,110,98)
+        [GROU] 'Group 48095318' id=327:1162  xywh=(20,377,110,98)  radii=[0.0, 0.0, 0.0, 0.0]
+          [RECT] 'Rectangle 39320' id=327:1163  xywh=(20,377,110,98)  fill=#FBFBFB@0.01  stroke=GRADIENT_LINEAR[#63507A:0, #332643@0:1] handles=[(0.501, -0.38), (0.508, 1.014), (0.473, -0.377)] sw=2.0  r=16.0  fx=[INNER_SHADOW(#1A0B2C@1 dx=0 dy=1.256 blur=50.23 spread=0); INNER_SHADOW(#271839@1 dx=0 dy=5.023 blur=22.6 spread=0); INNER_SHADOW(#271839@1 dx=0 dy=123.1 blur=125.6 spread=-60.27); INNER_SHADOW(#271839@0.3 dx=0 dy=-103 blur=85.38 spread=-80.36); INNER_SHADOW(#271839@1 dx=0 dy=8.79 blur=13.81 spread=-5.023); INNER_SHADOW(#271839@1 dx=0 dy=-16.32 blur=11.3 spread=-17.58); INNER_SHADOW(#150F6C@0.5 dx=0 dy=48.97 blur=70.32 spread=-45.2); BACKGROUND_BLUR(113)]
+          [FRAM] 'Frame 266' id=327:1164  xywh=(42,397,66,59)
+            [GROU] 'Group 48095318' id=327:1238  xywh=(59,397,32,32)
+              [FRAM] 'youtube' id=327:1239  xywh=(59,397,32,32)  op=0.3  fx=[LAYER_BLUR(16)]
+                [VECT] 'bg' id=327:1240  xywh=(61,403,28,20)  fill=#685EF5  radii=[0.0, 0.0, 0.0, 0.0]
+                [VECT] 'play' id=327:1241  xywh=(72,409,8,8)  fill=#FFFFFF
+              [FRAM] 'Frame' id=327:1329  xywh=(63,399.7,24,24)
+                [GROU] 'Group' id=327:1330  xywh=(63,399.7,24,23.91)
+                  [VECT] 'Vector' id=327:1331  xywh=(63,412,7.989,11.59)  fill=#685EF5
+                  [VECT] 'Vector' id=327:1332  xywh=(65.11,405.3,7.031,7.031)  fill=#685EF5
+                  [VECT] 'Vector' id=327:1333  xywh=(79.01,412,7.989,11.59)  fill=#685EF5
+                  [VECT] 'Vector' id=327:1334  xywh=(77.86,405.3,7.031,7.031)  fill=#685EF5
+                  [VECT] 'Vector' id=327:1335  xywh=(70.78,417.1,8.438,6.553)  fill=#685EF5
+                  [VECT] 'Vector' id=327:1336  xywh=(72.19,411.7,5.625,5.625)  fill=#685EF5
+                  [VECT] 'Vector' id=327:1337  xywh=(71.25,399.7,7.5,7.031)  fill=#685EF5
+            [FRAM] 'Frame 241' id=327:1172  xywh=(42,435,66,21)
+              [TEXT] 'Family' id=327:1173  xywh=(51.5,435,47,21)  fill=#EBEBEB  font=Poppins Poppins-Medium 14.0pt w500 lh=21px ls=0 align=LEFT/TOP  chars='Family'

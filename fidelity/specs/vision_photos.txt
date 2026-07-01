@@ -1,0 +1,45 @@
+=== ROOT 327:1492 'Name' at (3574.0,8929.0) 393.0x852.0 ===
+[FRAM] 'Name' id=327:1492  xywh=(0,0,393,852)  fill=#16062A
+  [VECT] 'Ellipse 1' id=327:1493  xywh=(0,12,578.7,677.5)  fill=#4F31EC@0.29  fx=[LAYER_BLUR(514)]
+  [FRAM] 'Frame 1000003711' id=327:2363  xywh=(-67,51,565.1,605.5)
+    [FRAM] 'Frame 1000003709' id=327:2364  xywh=(-67,51,526.3,173.8)
+      [RECT] 'image' id=327:2366  xywh=(-67,84.22,156.5,140.6)  fill=IMAGE(ref=3f5373a94435 mode=FILL op=1)  r=9.397782325744629
+      [RECT] 'image' id=327:2369  xywh=(89.78,70.13,156.5,140.6)  fill=IMAGE(ref=6dc0e193f46d mode=FILL op=1)  r=9.397782325744629
+      [RECT] 'image' id=327:2372  xywh=(246.6,56.05,156.5,140.6)  fill=IMAGE(ref=dc12cee21254 mode=FILL op=1)  r=9.397782325744629
+    [FRAM] 'Frame 1000003714' id=327:2409  xywh=(-54.07,194.9,526.3,173.8)
+      [RECT] 'image' id=327:2410  xywh=(-54.07,228.1,156.5,140.6)  fill=IMAGE(ref=8fdda723006f mode=FILL op=1)  r=9.397782325744629
+      [RECT] 'image' id=327:2411  xywh=(102.7,214,156.5,140.6)  fill=IMAGE(ref=0978cbdac398 mode=FILL op=1)  r=9.397782325744629
+      [RECT] 'image' id=327:2412  xywh=(259.5,200,156.5,140.6)  fill=IMAGE(ref=427b0dcab6e2 mode=FILL op=1)  r=9.397782325744629
+    [FRAM] 'Frame 1000003713' id=327:2404  xywh=(-41.14,338.8,526.3,173.8)
+      [RECT] 'image' id=327:2405  xywh=(-41.14,372,156.5,140.6)  fill=IMAGE(ref=3f5373a94435 mode=FILL op=1)  r=9.397782325744629
+      [RECT] 'image' id=327:2406  xywh=(115.6,358,156.5,140.6)  fill=IMAGE(ref=1d28ca776737 mode=FILL op=1)  r=9.397782325744629
+      [RECT] 'image' id=327:2407  xywh=(272.4,343.9,156.5,140.6)  fill=IMAGE(ref=6e384179a1d7 mode=FILL op=1)  r=9.397782325744629
+    [FRAM] 'Frame 1000003712' id=327:2399  xywh=(-28.21,482.7,526.3,173.8)
+      [RECT] 'image' id=327:2400  xywh=(-28.21,516,156.5,140.6)  fill=IMAGE(ref=3f5373a94435 mode=FILL op=1)  r=9.397782325744629
+      [RECT] 'image' id=327:2401  xywh=(128.6,501.9,156.5,140.6)  fill=IMAGE(ref=1d28ca776737 mode=FILL op=1)  r=9.397782325744629
+      [RECT] 'image' id=327:2402  xywh=(285.4,487.8,156.5,140.6)  fill=IMAGE(ref=6e384179a1d7 mode=FILL op=1)  r=9.397782325744629
+  [RECT] 'Rectangle 39328' id=327:2413  xywh=(0,0,393,852)  fill=GRADIENT_LINEAR[#49179B@0:0, #190835:1] handles=[(0.5, -0.0), (0.5, 0.556), (0.222, -0.0)]
+  [INST] 'Status Bar' id=327:1494  xywh=(0,0,393,44)
+        [VECT] '\U001002e6' id=I327:1494;1:288;1:205  xywh=(362,17,8,12)  fill=#FFFFFF
+        [GROU] 'Battery' id=I327:1494;1:288;1:208  xywh=(356,19,19,8)
+  [FRAM] 'Frame 290' id=327:2423  xywh=(20,68,40,40)
+    [GROU] 'Group 48095322' id=327:2424  xywh=(20,68,40,40)  radii=[0.0, 0.0, 0.0, 0.0]
+      [RECT] 'Rectangle 39318' id=327:2425  xywh=(20,68,40,40)  fill=#FBFBFB@0.01  stroke=GRADIENT_LINEAR[#63507A:0, #332643@0:1] handles=[(0.501, -0.38), (0.508, 1.014), (0.473, -0.377)] sw=1.0  r=12.0  fx=[INNER_SHADOW(#1A0B2C@1 dx=0 dy=1.256 blur=50.23 spread=0); INNER_SHADOW(#271839@1 dx=0 dy=5.023 blur=22.6 spread=0); INNER_SHADOW(#271839@1 dx=0 dy=123.1 blur=125.6 spread=-60.27); INNER_SHADOW(#271839@0.3 dx=0 dy=-103 blur=85.38 spread=-80.36); INNER_SHADOW(#271839@1 dx=0 dy=8.79 blur=13.81 spread=-5.023); INNER_SHADOW(#271839@1 dx=0 dy=-16.32 blur=11.3 spread=-17.58); INNER_SHADOW(#150F6C@0.5 dx=0 dy=48.97 blur=70.32 spread=-45.2); BACKGROUND_BLUR(113)]
+      [INST] 'vuesax/linear/arrow-left' id=327:2426  xywh=(30,78,20,20)
+        [GROU] 'vuesax/linear/arrow-left' id=I327:2426;324:4137  xywh=(30,78,20,20)
+          [GROU] 'arrow-left' id=I327:2426;324:4138  xywh=(30,78,20,20)
+            [VECT] 'Vector' id=I327:2426;324:4139  xywh=(32.92,82.94,5.058,10.12)  stroke=#685EF5 sw=1.5
+            [VECT] 'Vector' id=I327:2426;324:4140  xywh=(33.06,88,14.02,0)  stroke=#685EF5 sw=1.5
+            [VECT] 'Vector' id=I327:2426;324:4141  xywh=(30,78,20,20)  op=0
+  [FRAM] 'Frame 273' id=326:13105  xywh=(20,478,356,189)
+    [RECT] 'Rectangle 39329' id=326:13114  xywh=(20,478,41,9)  fill=GRADIENT_LINEAR[#FCD471:0, #BF8800:1] handles=[(0.132, 0.106), (0.676, 0.825), (-0.227, 0.155)]  r=30.0
+    [FRAM] 'Frame 1000003715' id=326:13116  xywh=(20,499,270,168)
+      [TEXT] 'Find a photo that represents the partnership you crave. Is it a wedding? A quiet moment at home? Holding hands?' id=326:13106  xywh=(20,499,270,108)  fill=#EBEBEB  font=Bitter Bitter-Bold 18.0pt w700 lh=27px ls=0 align=LEFT/TOP  chars='Find a photo that represents the partnership you crave. Is it a wedding? A quiet moment at home? Holding hands?'
+      [TEXT] 'Take a moment to find photo that match this energy' id=326:13107  xywh=(20,625,270,42)  fill=#B9B9B9  font=Poppins Poppins-Regular 14.0pt w400 lh=21px ls=0 align=LEFT/TOP  chars='Take a moment to find photo that match this energy'
+  [INST] 'Button Default' id=326:13109  xywh=(20,714,353,56)  fill=GRADIENT_LINEAR[#3B2DF7:0, #7C38FF:1] handles=[(0.319, 0.5), (1.0, 0.5), (0.319, 0.841)]  r=13.0
+    [TEXT] 'Create Account' id=I326:13109;12:4957  xywh=(36,730,321,24)  fill=#FFFFFF  font=Poppins Poppins-Medium 16.0pt w500 lh=24px ls=0 align=CENTER/TOP  chars='I Have My Photos Ready'
+    [INST] 'vuesax/linear/arrow-left' id=I326:13109;14:13869  xywh=(319,730,24,24)
+      [GROU] 'vuesax/linear/arrow-left' id=I326:13109;14:13869;14:6320  xywh=(319,730,24,24)
+        [GROU] 'arrow-left' id=I326:13109;14:13869;14:6321  xywh=(319,730,24,24)
+          [VECT] 'Vector' id=I326:13109;14:13869;14:6322  xywh=(326.9,734.1,7.098,15.84)  stroke=#FFFFFF sw=1.5
+          [VECT] 'Vector' id=I326:13109;14:13869;14:6323  xywh=(319,730,24,24)  op=0

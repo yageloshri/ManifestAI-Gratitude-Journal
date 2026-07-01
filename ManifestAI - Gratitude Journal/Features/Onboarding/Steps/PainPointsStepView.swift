@@ -1,233 +1,202 @@
 // PainPointsStepView.swift
-// Pain points selection screen - Step 2 of 5
+// Figma: "Problems" frame (256:1133) in Registration Screens section
+// All geometry from fidelity/problems spec — do not eyeball values.
 
 import SwiftUI
-import UIKit
 
 struct PainPointsStepView: View {
     @Binding var selected: [String]
     let userName: String
     let onContinue: () -> Void
     let onBack: () -> Void
-    
-    @State private var titleText = ""
-    @State private var showContent = false
-    @State private var titleInCenter = true
-    
-    private var fullTitle: String {
-        "\(userName.isEmpty ? "" : "\(userName), ")what is holding you back right now?"
-    }
-    
-    let points = [
-        "Procrastination", "Self-Doubt", "Anxiety", "Fear of Failure",
-        "Lack of Direction", "Don't know where to start",
-        "Emotional Fatigue", "Imposter Syndrome",
-        "Financial Stress", "Past Trauma"
+    /// Parity gallery: fixed mock state, full-opacity bottom bar.
+    var parityMode: Bool = false
+
+    // Figma rows 256:1517…256:1590, top to bottom
+    static let options = [
+        "Select All",
+        "Procrastination",
+        "Self-Doubt",
+        "Lack of Direction",
+        "Don’t know where to Start ",
+        "Emotional Fatigue",
+        "Impostor Syndrome"
     ]
-    
+
     var body: some View {
-        ZStack {
-            // Layer 0: Background
-            LinearGradient(
-                colors: [
-                    Color(hex: "0a0e17"),
-                    Color(hex: "0f0c29"),
-                    Color(hex: "2d1b4e").opacity(0.3)
-                ],
-                startPoint: .topLeading,
-                endPoint: .bottomTrailing
-            )
-            .ignoresSafeArea()
-            
-            // Layer 1: Content (Header + ScrollView)
-            VStack(spacing: 0) {
-                // Header
-                ZStack(alignment: .center) {
-                    HStack {
-                        Button(action: onBack) {
-                            Image(systemName: "arrow.left")
-                                .font(Theme.Fonts.system(size: 20, weight: .medium))
-                                .foregroundStyle(.white.opacity(0.8))
-                                .frame(width: 44.responsive, height: 44.responsive)
-                                .background(Color.white.opacity(0.05))
-                                .clipShape(Circle())
-                        }
-                        Spacer()
+        GeometryReader { geo in
+            let sx = geo.size.width / 393
+            let sy = geo.size.height / 852
+
+            ZStack(alignment: .topLeading) {
+                DesignTokens.Colors.background
+
+                // Figma 256:1134: ellipse x -30, #4F31EC@0.29, blur 514
+                EllipseGlowBackground(sx: sx, sy: sy, xOffset: -30)
+
+                // Figma 256:1284: step 3/6
+                OnboardingStepper(currentStep: 3)
+                    .frame(width: 353 * sx)
+                    .parityPosition(x: 20 * sx, y: 76 * sy)
+
+                // Figma 256:1140: Bitter SemiBold 26/1.2 #EBEBEB
+                Text("\(displayName), What is holding you back right now?")
+                    .font(DesignTokens.Typography.h1)
+                    .foregroundStyle(DesignTokens.Colors.textPrimary)
+                    .frame(width: 353 * sx, alignment: .topLeading)
+                    .parityPosition(x: 20 * sx, y: 122 * sy)
+
+                // Figma 256:1141: rows at y 208, 353×52, gap 12
+                VStack(spacing: 12 * sy) {
+                    ForEach(Self.options, id: \.self) { option in
+                        pillRow(option, sx: sx, sy: sy)
+                            .onTapGesture { toggle(option) }
+                            .accessibilityIdentifier("problems.row.\(option.trimmingCharacters(in: .whitespaces))")
                     }
-                    .padding(.horizontal, Theme.Spacing.xl)
-                    
-                    Text("STEP 2 OF 5")
-                        .font(Theme.Fonts.system(size: 12, weight: .semibold))
-                        .tracking(1.5)
-                        .foregroundStyle(.white.opacity(0.6))
                 }
-                .frame(height: 44.responsive)
-                .padding(.top, Theme.Spacing.sm + Theme.Spacing.xs)
-                .padding(.bottom, Theme.Spacing.xl)
-                .opacity(showContent ? 1 : 0)
-                
-                // Centered title during typewriter
-                if titleInCenter {
-                    Spacer()
-                    
-                    Text(titleText)
-                        .font(Theme.Fonts.system(size: 28, weight: .bold))
-                        .foregroundStyle(.white)
-                        .multilineTextAlignment(.center)
-                        .padding(.horizontal, Theme.Spacing.xxxl)
-                    
-                    Spacer()
-                }
-                
-                ScrollView(showsIndicators: false) {
-                    VStack(alignment: .leading, spacing: Theme.Spacing.xxl) {
-                        VStack(alignment: .center, spacing: Theme.Spacing.md) {
-                            if !titleInCenter {
-                                Text(titleText)
-                                    .font(Theme.Fonts.system(size: 28, weight: .bold))
-                                    .foregroundStyle(.white)
-                                    .multilineTextAlignment(.center)
-                                    .shadow(color: .black.opacity(0.3), radius: 10)
-                            }
-                            
-                            if showContent {
-                                Text("Select all that resonate with your spirit to begin clearing your path.")
-                                    .font(Theme.Fonts.system(size: 16))
-                                    .foregroundStyle(.white.opacity(0.6))
-                                    .multilineTextAlignment(.center)
-                                    .transition(.opacity.combined(with: .move(edge: .top)))
-                            }
-                        }
-                        .frame(maxWidth: .infinity)
-                        .padding(.horizontal, Theme.Spacing.sm + Theme.Spacing.xs)
-                        
-                        if showContent {
-                            VStack(spacing: Theme.Spacing.sm + Theme.Spacing.xs) {
-                            ForEach(points, id: \.self) { point in
-                                Button {
-                                    if selected.contains(point) {
-                                        selected.removeAll { $0 == point }
-                                    } else {
-                                        selected.append(point)
-                                    }
-                                } label: {
-                                    HStack(spacing: Theme.Spacing.sm + Theme.Spacing.xs) {
-                                        Text(point)
-                                            .font(Theme.Fonts.system(size: 16, weight: selected.contains(point) ? .bold : .medium))
-                                            .foregroundStyle(selected.contains(point) ? Color(hex: "FFD700") : .white)
-                                            .lineLimit(1)
-                                            .minimumScaleFactor(0.9)
-                                        
-                                        Spacer(minLength: 0)
-                                        
-                                        if selected.contains(point) {
-                                            Image(systemName: "checkmark")
-                                                .font(Theme.Fonts.system(size: 14, weight: .bold))
-                                                .foregroundStyle(Color(hex: "FFD700"))
-                                        }
-                                    }
-                                    .padding(.horizontal, Theme.Spacing.lg)
-                                    .padding(.vertical, 14.responsive)
-                                    .frame(maxWidth: .infinity, alignment: .leading)
-                                    .background(selected.contains(point) ? Color(hex: "FFD700").opacity(0.1) : Color.white.opacity(0.06))
-                                    .clipShape(RoundedRectangle(cornerRadius: 14.responsive))
-                                    .overlay(
-                                        RoundedRectangle(cornerRadius: 14.responsive)
-                                            .stroke(selected.contains(point) ? Color(hex: "FFD700") : Color.white.opacity(0.15), lineWidth: 1)
-                                    )
-                                }
-                                .buttonStyle(.plain)
-                            }
-                            }
-                            .transition(.opacity.combined(with: .move(edge: .top)))
-                        }
-                        
-                        // רווח שקוף לגלילה סופית
-                        Color.clear.frame(height: 120.responsive)
+                .parityPosition(x: 20 * sx, y: 208 * sy)
+
+                // Figma 282:2334: bottom bar at (19,736), w 355, gap 16
+                HStack(spacing: 16 * sx) {
+                    GlassBackButton(action: onBack)
+                        .accessibilityIdentifier("problems.backButton")
+
+                    PrimaryButton(title: "Reveal My Path", icon: nil) {
+                        onContinue()
                     }
-                    .padding(.horizontal, Theme.Spacing.xxl)
-                    .padding(.bottom, Theme.Spacing.xxl)
+                    .accessibilityIdentifier("problems.continueButton")
                 }
-                .opacity(titleInCenter ? 0 : 1)
+                .frame(width: 355 * sx)
+                .parityPosition(x: 19 * sx, y: 736 * sy)
+                .opacity(parityMode || !selected.isEmpty ? 1 : 0.4)
             }
-            
-            // Layer 2: Floating Bottom Buttons
-            VStack {
-                Spacer() // Push buttons down
-                
-                VStack(spacing: Theme.Spacing.sm + Theme.Spacing.xs) {
-                    Text(selected.isEmpty ? "Select at least one (or skip)" : "\(selected.count) selected")
-                        .font(Theme.Fonts.system(size: 14, weight: .medium))
-                        .foregroundStyle(.white.opacity(0.7))
-                    
-                    Button(action: onContinue) {
-                        Text(selected.isEmpty ? "Skip for Now" : "Reveal My Path")
-                            .font(Theme.Fonts.system(size: 18, weight: .bold))
-                            .foregroundStyle(.black)
-                            .frame(maxWidth: .infinity)
-                            .responsiveHeight(56)
-                            .background(Color(hex: "FFD700"))
-                            .clipShape(RoundedRectangle(cornerRadius: Theme.Spacing.lg))
-                            .shadow(color: Color(hex: "FFD700").opacity(0.3), radius: 20)
-                    }
-                }
-                .padding(.horizontal, Theme.Spacing.xxl)
-                .padding(.top, Theme.Spacing.xxl)
-                .safeBottomPadding()
-                .background(
-                    LinearGradient(
-                        colors: [
-                            Color.clear,
-                            Color(hex: "0a0e17").opacity(0.9),
-                            Color(hex: "0a0e17")
+            .ignoresSafeArea()
+        }
+        .ignoresSafeArea()
+        .accessibilityIdentifier("problems.root")
+    }
+
+    private var displayName: String {
+        userName.isEmpty ? "Friend" : userName
+    }
+
+    private func isSelected(_ option: String) -> Bool {
+        selected.contains(option)
+    }
+
+    private func toggle(_ option: String) {
+        withAnimation(.easeInOut(duration: 0.2)) {
+            if option == "Select All" {
+                selected = selected.count == Self.options.count - 1
+                    ? [] : Array(Self.options.dropFirst())
+            } else if let i = selected.firstIndex(of: option) {
+                selected.remove(at: i)
+            } else {
+                selected.append(option)
+            }
+        }
+    }
+
+    // MARK: - Pill row (Figma: 353×52, r200 capsule, glass)
+
+    private func pillRow(_ option: String, sx: CGFloat, sy: CGFloat) -> some View {
+        let on = isSelected(option)
+        return ZStack(alignment: .topLeading) {
+            Color.clear
+                .figmaGlassSurface(cornerRadius: 26 * sy)
+                .overlay(
+                    // Figma selected stroke: #685EF5, handles (0.5,-0.45)→(0.53,2.37)
+                    // → effective alpha 0.84 top, 0.48 bottom
+                    RoundedRectangle(cornerRadius: 26 * sy)
+                        .stroke(
+                            LinearGradient(
+                                stops: [
+                                    .init(color: DesignTokens.Colors.primary.opacity(0.84), location: 0),
+                                    .init(color: DesignTokens.Colors.primary.opacity(0.48), location: 1)
+                                ],
+                                startPoint: .top, endPoint: .bottom
+                            ),
+                            lineWidth: 2
+                        )
+                        .opacity(on ? 1 : 0)
+                )
+
+            // label — Figma rel (15,16), Poppins Regular 14/21, #EBEBEB
+            Text(option)
+                .font(DesignTokens.Typography.smallText)
+                .foregroundStyle(DesignTokens.Colors.textPrimary)
+                .frame(height: 21 * sy)
+                .parityPosition(x: 15 * sx, y: 16 * sy)
+
+            // selector circle — Figma rel (305,14), 24×24
+            selectorCircle(on: on)
+                .frame(width: 24, height: 24)
+                .parityPosition(x: 305 * sx, y: 14 * sy)
+        }
+        .frame(width: 353 * sx, height: 52 * sy, alignment: .topLeading)
+    }
+
+    @ViewBuilder
+    private func selectorCircle(on: Bool) -> some View {
+        if on {
+            // Figma: glass circle filled by #685EF5 inset shadows → muted dark
+            // purple body (≈#4A3C96 center, ≈#4E42AD edge) with a light
+            // lavender rim (≈#B6B2D4) and a white check 8×5.5 @2pt.
+            // Values sampled from the reference export.
+            Circle()
+                .fill(
+                    RadialGradient(
+                        stops: [
+                            .init(color: Color(hex: "463896"), location: 0),
+                            .init(color: Color(hex: "4E41AD"), location: 1)
                         ],
-                        startPoint: .top,
-                        endPoint: .bottom
+                        center: .center, startRadius: 0, endRadius: 12
                     )
                 )
-            }
-        }
-        .onAppear {
-            runTypewriterAnimation()
+                .overlay(
+                    Circle().stroke(Color(hex: "B6B2D4").opacity(0.85), lineWidth: 1.2)
+                )
+                .overlay(
+                    CheckmarkShape()
+                        .stroke(Color(hex: "FAFAFB"),
+                                style: StrokeStyle(lineWidth: 2, lineCap: .round, lineJoin: .round))
+                        .frame(width: 8, height: 5.5)
+                )
+        } else {
+            // Figma: glass circle, stroke #BA9DDE@0.73 → #7C5F9F@0, 1pt
+            Circle()
+                .fill(Color.white.opacity(0.01))
+                .overlay(
+                    Circle().stroke(
+                        LinearGradient(
+                            stops: [
+                                .init(color: DesignTokens.Colors.unselectedBorder.opacity(0.73), location: 0),
+                                .init(color: Color(hex: "7C5F9F").opacity(0), location: 1)
+                            ],
+                            startPoint: .top, endPoint: .bottom
+                        ),
+                        lineWidth: 1
+                    )
+                )
         }
     }
-    
-    private func runTypewriterAnimation() {
-        guard titleText.isEmpty else { return }
-        
-        let haptic = UIImpactFeedbackGenerator(style: .light)
-        haptic.prepare()
-        
-        // Type title character by character
-        for (index, char) in fullTitle.enumerated() {
-            let delay = Double(index) * 0.05
-            DispatchQueue.main.asyncAfter(deadline: .now() + delay) {
-                titleText.append(char)
-                haptic.impactOccurred(intensity: 0.5)
-            }
-        }
-        
-        // After typing completes, wait a bit then slide up
-        let slideUpDelay = Double(fullTitle.count) * 0.05 + 0.5
-        DispatchQueue.main.asyncAfter(deadline: .now() + slideUpDelay) {
-            withAnimation(.spring(response: 0.6, dampingFraction: 0.8)) {
-                titleInCenter = false
-            }
-            
-            // Show content after slide up
-            DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
-                withAnimation(.easeIn(duration: 0.5)) {
-                    showContent = true
-                }
-            }
-        }
+}
+
+/// ✓ check, matches Figma check icon vector (8×5.5).
+struct CheckmarkShape: Shape {
+    func path(in rect: CGRect) -> Path {
+        var p = Path()
+        p.move(to: CGPoint(x: rect.minX, y: rect.minY + rect.height * 0.55))
+        p.addLine(to: CGPoint(x: rect.minX + rect.width * 0.35, y: rect.maxY))
+        p.addLine(to: CGPoint(x: rect.maxX, y: rect.minY))
+        return p
     }
 }
 
 #Preview {
     PainPointsStepView(
-        selected: .constant([]),
-        userName: "Yagel",
+        selected: .constant(["Self-Doubt"]),
+        userName: "Ali",
         onContinue: {},
         onBack: {}
     )

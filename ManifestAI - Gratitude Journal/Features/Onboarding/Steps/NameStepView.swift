@@ -1,5 +1,6 @@
 // NameStepView.swift
-// Name input screen with beautiful golden border
+// Figma: "Name" frame (255:1190) in Registration Screens section
+// All geometry from fidelity/name/spec — do not eyeball values.
 
 import SwiftUI
 import UIKit
@@ -8,178 +9,69 @@ struct NameStepView: View {
     @Binding var userName: String
     let onContinue: () -> Void
     let onBack: () -> Void
+    /// Parity gallery: render final state, no autofocus/keyboard, full opacity.
+    var parityMode: Bool = false
+
     @FocusState private var isFocused: Bool
-    
-    @State private var titleLine1 = ""
-    @State private var titleLine2 = ""
-    @State private var showSubtitle = false
-    @State private var showInput = false
-    
-    private let fullLine1 = "Let's align with"
-    private let fullLine2 = "your frequency"
-    
+
     var body: some View {
-        ZStack {
-            // Beautiful gradient
-            LinearGradient(
-                colors: [
-                    Color(hex: "0a0e17"),
-                    Color(hex: "0f0c29"),
-                    Color(hex: "2d1b4e").opacity(0.3)
-                ],
-                startPoint: .topLeading,
-                endPoint: .bottomTrailing
-            )
-            .ignoresSafeArea()
-            
-            VStack(spacing: 0) {
-                HStack {
-                    Button(action: onBack) {
-                        Image(systemName: "arrow.left")
-                            .font(.system(size: 20))
-                            .foregroundStyle(.white)
-                            .frame(width: 44, height: 44)
-                    }
-                    Spacer()
+        GeometryReader { geo in
+            let sx = geo.size.width / 393
+            let sy = geo.size.height / 852
+
+            ZStack(alignment: .topLeading) {
+                // Figma 255:1190 background — no glass panel on this screen
+                DesignTokens.Colors.background
+
+                // Ellipse glow — Figma 255:1191: (0,12) 578.67×677.5
+                EllipseGlowBackground(sx: sx, sy: sy)
+
+                // Stepper — Figma 255:1201: centered, top 76, w 353, step 1/6
+                OnboardingStepper(currentStep: 1)
+                    .frame(width: 353 * sx)
+                    .parityPosition(x: 20 * sx, y: 76 * sy)
+
+                // Title + field — Figma 255:1193: left 20, top 122, gap 24
+                VStack(alignment: .leading, spacing: 24 * sy) {
+                    // Figma 255:1198: Bitter SemiBold 26/1.2 #EBEBEB
+                    Text("What should we call you?")
+                        .font(DesignTokens.Typography.h1)
+                        .foregroundStyle(DesignTokens.Colors.textPrimary)
+
+                    // Figma 268:1548: 353×56 glass capsule
+                    GlassTextField(
+                        text: $userName,
+                        placeholder: "Enter Name",
+                        isFocused: $isFocused
+                    )
+                    .accessibilityIdentifier("name.textField")
                 }
-                .padding(.horizontal, 24)
-                .padding(.top, 10)
-                
-                Spacer()
-                
-                VStack(spacing: 40) {
-                    VStack(spacing: 12) {
-                        VStack(spacing: 4) {
-                            Text(titleLine1)
-                                .font(.system(size: 32, weight: .bold))
-                                .foregroundStyle(.white)
-                                .multilineTextAlignment(.center)
-                                .frame(height: 40, alignment: .bottom)
-                            
-                            Text(titleLine2)
-                                .font(.system(size: 32, weight: .bold))
-                                .foregroundStyle(.white)
-                                .multilineTextAlignment(.center)
-                                .frame(height: 40, alignment: .top)
-                        }
-                        
-                        Text("What is your name?")
-                            .font(.system(size: 18))
-                            .foregroundStyle(.white.opacity(0.6))
-                            .opacity(showSubtitle ? 1 : 0)
-                    }
-                    
-                    if showInput {
-                        VStack(spacing: 12) {
-                            TextField("", text: $userName)
-                                .focused($isFocused)
-                                .font(.system(size: 32, weight: .bold))
-                                .foregroundStyle(Color(hex: "FFD700"))
-                                .multilineTextAlignment(.center)
-                                .tint(Color(hex: "FFD700"))
-                                .overlay(
-                                    Text(userName.isEmpty ? "Your Name" : "")
-                                        .font(.system(size: 32, weight: .bold))
-                                        .foregroundStyle(.white.opacity(0.3))
-                                        .allowsHitTesting(false)
-                                )
-                            
-                            Rectangle()
-                                .fill(
-                                    LinearGradient(
-                                        colors: [
-                                            Color.clear,
-                                            Color(hex: "FFD700").opacity(userName.isEmpty ? 0.3 : 1.0),
-                                            Color.clear
-                                        ],
-                                        startPoint: .leading,
-                                        endPoint: .trailing
-                                    )
-                                )
-                                .frame(height: 2)
-                                .shadow(color: Color(hex: "FFD700").opacity(userName.isEmpty ? 0 : 0.5), radius: 8)
-                        }
-                        .padding(.horizontal, 40)
-                        .transition(.opacity.combined(with: .move(edge: .bottom)))
-                    }
-                }
-                
-                Spacer()
-                
-                if userName.count >= 2 {
-                    Button {
+                .frame(width: 353 * sx, alignment: .topLeading)
+                .parityPosition(x: 20 * sx, y: 122 * sy)
+
+                // Bottom bar — Figma 282:2320: left 20, top 734, w 355, gap 16
+                HStack(spacing: 16 * sx) {
+                    GlassBackButton(action: onBack)
+                        .accessibilityIdentifier("name.backButton")
+
+                    PrimaryButton(title: "Reveal My Path", icon: nil) {
                         isFocused = false
                         UserDefaults.standard.set(userName, forKey: "user_name")
                         onContinue()
-                    } label: {
-                        HStack(spacing: 8) {
-                            Text("Begin Journey")
-                                .font(.system(size: 18, weight: .bold))
-                                .tracking(1)
-                            
-                            Image(systemName: "arrow.right")
-                                .font(.system(size: 18, weight: .bold))
-                        }
-                        .foregroundStyle(.black)
-                        .frame(maxWidth: .infinity)
-                        .frame(height: 56)
-                        .background(Color(hex: "FFD700"))
-                        .clipShape(RoundedRectangle(cornerRadius: 16))
-                        .shadow(color: Color(hex: "FFD700").opacity(0.3), radius: 20)
                     }
-                    .padding(.horizontal, 32)
-                    .padding(.bottom, 40)
-                    .transition(.opacity)
+                    .accessibilityIdentifier("name.continueButton")
                 }
+                .frame(width: 355 * sx)
+                .parityPosition(x: 20 * sx, y: 734 * sy)
+                .opacity(parityMode || userName.count >= 2 ? 1 : 0.4)
             }
+            .ignoresSafeArea()
         }
+        .ignoresSafeArea()
+        .accessibilityIdentifier("name.root")
         .onAppear {
-            runTypewriterAnimation()
-        }
-    }
-    
-    private func runTypewriterAnimation() {
-        guard titleLine1.isEmpty else { return }
-        
-        let haptic = UIImpactFeedbackGenerator(style: .light)
-        haptic.prepare()
-        
-        // Type line 1
-        for (index, char) in fullLine1.enumerated() {
-            let delay = Double(index) * 0.05
-            DispatchQueue.main.asyncAfter(deadline: .now() + delay) {
-                titleLine1.append(char)
-                haptic.impactOccurred(intensity: 0.5)
-            }
-        }
-        
-        // Small pause, then type line 2
-        let line2StartDelay = Double(fullLine1.count) * 0.05 + 0.2
-        for (index, char) in fullLine2.enumerated() {
-            let delay = line2StartDelay + Double(index) * 0.05
-            DispatchQueue.main.asyncAfter(deadline: .now() + delay) {
-                titleLine2.append(char)
-                haptic.impactOccurred(intensity: 0.5)
-            }
-        }
-        
-        // Show subtitle after typing
-        let subtitleDelay = line2StartDelay + Double(fullLine2.count) * 0.05 + 0.3
-        DispatchQueue.main.asyncAfter(deadline: .now() + subtitleDelay) {
-            withAnimation(.easeIn(duration: 0.5)) {
-                showSubtitle = true
-            }
-        }
-        
-        // Show input field after subtitle
-        let inputDelay = subtitleDelay + 0.3
-        DispatchQueue.main.asyncAfter(deadline: .now() + inputDelay) {
-            withAnimation(.easeIn(duration: 0.5)) {
-                showInput = true
-            }
-            
-            // Focus on input field
-            DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
+            guard !parityMode else { return }
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
                 isFocused = true
             }
         }
@@ -193,5 +85,3 @@ struct NameStepView: View {
         onBack: {}
     )
 }
-
-

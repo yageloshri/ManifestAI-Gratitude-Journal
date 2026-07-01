@@ -1,0 +1,37 @@
+=== ROOT 324:12306 'Name' at (4440.0,7874.0) 393.0x852.0 ===
+[FRAM] 'Name' id=324:12306  xywh=(0,0,393,852)  fill=#16062A
+  [VECT] 'Ellipse 1' id=324:12307  xywh=(0,12,578.7,677.5)  fill=#4F31EC@0.29  fx=[LAYER_BLUR(514)]
+  [INST] 'Status Bar' id=324:12308  xywh=(0,0,393,44)
+        [VECT] '\U001002e6' id=I324:12308;1:288;1:205  xywh=(362,17,8,12)  fill=#FFFFFF
+        [GROU] 'Battery' id=I324:12308;1:288;1:208  xywh=(356,19,19,8)
+  [FRAM] 'Frame 276' id=324:12311  xywh=(20,68,236,40)
+    [GROU] 'Group 48095322' id=324:12312  xywh=(20,68,40,40)  radii=[0.0, 0.0, 0.0, 0.0]
+      [RECT] 'Rectangle 39318' id=324:12313  xywh=(20,68,40,40)  fill=#FBFBFB@0.01  stroke=GRADIENT_LINEAR[#63507A:0, #332643@0:1] handles=[(0.501, -0.38), (0.508, 1.014), (0.473, -0.377)] sw=1.0  r=12.0  fx=[INNER_SHADOW(#1A0B2C@1 dx=0 dy=1.256 blur=50.23 spread=0); INNER_SHADOW(#271839@1 dx=0 dy=5.023 blur=22.6 spread=0); INNER_SHADOW(#271839@1 dx=0 dy=123.1 blur=125.6 spread=-60.27); INNER_SHADOW(#271839@0.3 dx=0 dy=-103 blur=85.38 spread=-80.36); INNER_SHADOW(#271839@1 dx=0 dy=8.79 blur=13.81 spread=-5.023); INNER_SHADOW(#271839@1 dx=0 dy=-16.32 blur=11.3 spread=-17.58); INNER_SHADOW(#150F6C@0.5 dx=0 dy=48.97 blur=70.32 spread=-45.2); BACKGROUND_BLUR(113)]
+      [INST] 'vuesax/linear/arrow-left' id=324:12314  xywh=(30,78,20,20)
+        [GROU] 'vuesax/linear/arrow-left' id=I324:12314;324:4137  xywh=(30,78,20,20)
+          [GROU] 'arrow-left' id=I324:12314;324:4138  xywh=(30,78,20,20)
+            [VECT] 'Vector' id=I324:12314;324:4139  xywh=(32.92,82.94,5.058,10.12)  stroke=#685EF5 sw=1.5
+            [VECT] 'Vector' id=I324:12314;324:4140  xywh=(33.06,88,14.02,0)  stroke=#685EF5 sw=1.5
+            [VECT] 'Vector' id=I324:12314;324:4141  xywh=(30,78,20,20)  op=0
+    [TEXT] '24 January' id=324:12315  xywh=(78,74.5,93,27)  fill=#EBEBEB  font=Bitter Bitter-Bold 18.0pt w700 lh=27px ls=0 align=LEFT/TOP  chars='24 January'
+  [GROU] 'Group 48095324' id=324:12380  xywh=(333,68,40,40)  radii=[0.0, 0.0, 0.0, 0.0]
+    [RECT] 'Rectangle 39318' id=324:12381  xywh=(333,68,40,40)  fill=#FBFBFB@0.01  stroke=GRADIENT_LINEAR[#63507A:0, #332643@0:1] handles=[(0.501, -0.38), (0.508, 1.014), (0.473, -0.377)] sw=1.0  r=12.0  fx=[INNER_SHADOW(#1A0B2C@1 dx=0 dy=1.256 blur=50.23 spread=0); INNER_SHADOW(#271839@1 dx=0 dy=5.023 blur=22.6 spread=0); INNER_SHADOW(#271839@1 dx=0 dy=123.1 blur=125.6 spread=-60.27); INNER_SHADOW(#271839@0.3 dx=0 dy=-103 blur=85.38 spread=-80.36); INNER_SHADOW(#271839@1 dx=0 dy=8.79 blur=13.81 spread=-5.023); INNER_SHADOW(#271839@1 dx=0 dy=-16.32 blur=11.3 spread=-17.58); INNER_SHADOW(#150F6C@0.5 dx=0 dy=48.97 blur=70.32 spread=-45.2); BACKGROUND_BLUR(113)]
+    [INST] 'vuesax/linear/trash' id=324:12382  xywh=(343,78,20,20)
+      [GROU] 'vuesax/linear/trash' id=I324:12382;324:7929  xywh=(343,78,20,20)
+        [GROU] 'trash' id=I324:12382;324:7930  xywh=(343,78,20,20)
+          [VECT] 'Vector' id=I324:12382;324:7931  xywh=(345.5,82.57,15,0.4167)  stroke=#CC2123 sw=1.5
+          [VECT] 'Vector' id=I324:12382;324:7932  xywh=(350.1,79.67,5.833,2.475)  stroke=#CC2123 sw=1.5
+          [VECT] 'Vector' id=I324:12382;324:7933  xywh=(347.3,85.62,11.42,10.72)  stroke=#CC2123 sw=1.5
+          [VECT] 'Vector' id=I324:12382;324:7934  xywh=(351.6,91.75,2.775,0)  stroke=#CC2123 sw=1.5
+          [VECT] 'Vector' id=I324:12382;324:7935  xywh=(350.9,88.42,4.167,0)  stroke=#CC2123 sw=1.5
+          [VECT] 'Vector' id=I324:12382;324:7936  xywh=(343,78,20,20)  op=0
+  [GROU] 'Group 48095325' id=324:12401  xywh=(286,68,40,40)  radii=[0.0, 0.0, 0.0, 0.0]
+    [RECT] 'Rectangle 39318' id=324:12402  xywh=(286,68,40,40)  fill=#FBFBFB@0.01  stroke=GRADIENT_LINEAR[#63507A:0, #332643@0:1] handles=[(0.501, -0.38), (0.508, 1.014), (0.473, -0.377)] sw=1.0  r=12.0  fx=[INNER_SHADOW(#1A0B2C@1 dx=0 dy=1.256 blur=50.23 spread=0); INNER_SHADOW(#271839@1 dx=0 dy=5.023 blur=22.6 spread=0); INNER_SHADOW(#271839@1 dx=0 dy=123.1 blur=125.6 spread=-60.27); INNER_SHADOW(#271839@0.3 dx=0 dy=-103 blur=85.38 spread=-80.36); INNER_SHADOW(#271839@1 dx=0 dy=8.79 blur=13.81 spread=-5.023); INNER_SHADOW(#271839@1 dx=0 dy=-16.32 blur=11.3 spread=-17.58); INNER_SHADOW(#150F6C@0.5 dx=0 dy=48.97 blur=70.32 spread=-45.2); BACKGROUND_BLUR(113)]
+    [INST] 'vuesax/linear/edit-2' id=324:12403  xywh=(296,78,20,20)
+      [GROU] 'vuesax/linear/edit-2' id=I324:12403;324:9121  xywh=(296,78,20,20)
+        [GROU] 'edit-2' id=I324:12403;324:9122  xywh=(296,78,20,20)
+          [VECT] 'Vector' id=I324:12403;324:9123  xywh=(299.3,79.8,13.33,13.83)  stroke=#685EF5 sw=1.5
+          [VECT] 'Vector' id=I324:12403;324:9124  xywh=(305.9,82.21,4.542,4.292)  stroke=#685EF5 sw=1.5
+          [VECT] 'Vector' id=I324:12403;324:9125  xywh=(298.5,96.33,15,0)  stroke=#685EF5 sw=1.5
+          [VECT] 'Vector' id=I324:12403;324:9126  xywh=(296,78,20,20)  op=0
+  [TEXT] 'I am very hardworking and confident.' id=324:12316  xywh=(20,140,353,27)  fill=#EBEBEB  font=Bitter Bitter-Bold 18.0pt w700 lh=27px ls=0 align=LEFT/TOP  chars=' I am very hardworking and confident.'

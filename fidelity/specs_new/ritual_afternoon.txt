@@ -1,0 +1,107 @@
+=== ROOT 364:3878 'Afternoon Ritual' at (6678.0,9984.0) 393.0x852.0 ===
+[FRAM] 'Afternoon Ritual' id=364:3878  xywh=(0,0,393,852)  fill=#16062A
+  [VECT] 'Ellipse 1' id=364:3879  xywh=(0,12,578.7,677.5)  fill=#4F31EC@0.29  fx=[LAYER_BLUR(514)]
+  [INST] 'Status Bar' id=364:3880  xywh=(0,0,393,44)
+        [VECT] '\U001002e6' id=I364:3880;1:288;1:205  xywh=(362,17,8,12)  fill=#FFFFFF
+        [GROU] 'Battery' id=I364:3880;1:288;1:208  xywh=(356,19,19,8)
+  [RECT] 'image-from-rawpixel-id-12672331-png 1' id=364:3881  xywh=(0,145,392,382)  fill=IMAGE(ref=dc6e302d33a1 mode=STRETCH op=0.20000000298023224)
+  [TEXT] 'Label' id=364:3882  xywh=(25.5,353,353,21)  fill=#9F9E9E  font=Poppins Poppins-Medium 14.0pt w500 lh=21px ls=0 align=LEFT/TOP  chars='Label'
+  [GROU] 'Group 48095329' id=364:3883  xywh=(0,774,393,78)  radii=[0.0, 0.0, 0.0, 0.0]
+    [GROU] 'Group 48095328' id=364:3884  xywh=(0,774,393,78)  radii=[0.0, 0.0, 0.0, 0.0]
+      [GROU] 'Group 48095315' id=364:3885  xywh=(0,774,393,78)  radii=[0.0, 0.0, 0.0, 0.0]
+        [RECT] 'Rectangle 39318' id=364:3886  xywh=(0,774,393,78)  fill=GRADIENT_LINEAR[#3B2DF7:0, #7C38FF:1] handles=[(0.319, 0.5), (1.0, 0.5), (0.319, 0.841)]  radii=[12.0, 12.0, 0.0, 0.0]  fx=[INNER_SHADOW(#1A0B2C@1 dx=0 dy=1.256 blur=50.23 spread=0); INNER_SHADOW(#271839@1 dx=0 dy=5.023 blur=22.6 spread=0); INNER_SHADOW(#271839@1 dx=0 dy=123.1 blur=125.6 spread=-60.27); INNER_SHADOW(#271839@0.3 dx=0 dy=-103 blur=85.38 spread=-80.36); INNER_SHADOW(#271839@1 dx=0 dy=8.79 blur=13.81 spread=-5.023); INNER_SHADOW(#271839@1 dx=0 dy=-16.32 blur=11.3 spread=-17.58); INNER_SHADOW(#150F6C@0.5 dx=0 dy=48.97 blur=70.32 spread=-45.2); BACKGROUND_BLUR(113)]
+    [FRAM] 'Frame 288' id=364:3887  xywh=(22,774,349,61)
+      [FRAM] 'Frame 284' id=364:3888  xywh=(22,774,53,61)
+        [RECT] 'Rectangle 39324' id=364:3889  xywh=(29.5,774,38,4)  op=0  fill=GRADIENT_LINEAR[#FCD471:0, #BF8800:1] handles=[(0.132, 0.106), (0.676, 0.825), (-0.227, 0.155)]  radii=[0.0, 0.0, 12.0, 12.0]
+        [FRAM] 'Frame 254' id=364:3890  xywh=(22,787,53,48)
+          [FRAM] 'Frame' id=364:3891  xywh=(36.5,787,24,24)
+            [GROU] 'Group' id=364:3892  xywh=(36.5,787,24,24)
+              [VECT] 'Vector' id=364:3893  xywh=(36.5,787,24,24)  fill=#8D7CD3
+          [TEXT] 'Today' id=364:3894  xywh=(22,817,53,18)  fill=#8D7CD3  font=Poppins Poppins-Regular 12.0pt w400 lh=18px ls=0 align=CENTER/TOP  chars='Today'
+      [FRAM] 'Frame 283' id=364:3895  xywh=(96,774,53,61)
+        [RECT] 'Rectangle 39324' id=364:3896  xywh=(103.5,774,38,4)  op=0  fill=GRADIENT_LINEAR[#FCD471:0, #BF8800:1] handles=[(0.132, 0.106), (0.676, 0.825), (-0.227, 0.155)]  radii=[0.0, 0.0, 12.0, 12.0]
+        [FRAM] 'Frame 255' id=364:3897  xywh=(96,787,53,48)
+          [FRAM] 'Frame' id=364:3898  xywh=(110.5,787,24,24)
+            [GROU] 'Group' id=364:3899  xywh=(112.9,787.5,19.17,22.97)
+              [VECT] 'Vector' id=364:3900  xywh=(112.9,787.5,19.17,22.97)  fill=#8D7CD3
+          [TEXT] 'Journal' id=364:3901  xywh=(96,817,53,18)  fill=#8D7CD3  font=Poppins Poppins-Regular 12.0pt w400 lh=18px ls=0 align=CENTER/TOP  chars='Journal'
+      [FRAM] 'Frame 287' id=364:3902  xywh=(170,774,53,61)
+        [RECT] 'Rectangle 39324' id=364:3903  xywh=(177.5,774,38,4)  op=0  fill=GRADIENT_LINEAR[#FCD471:0, #BF8800:1] handles=[(0.132, 0.106), (0.676, 0.825), (-0.227, 0.155)]  radii=[0.0, 0.0, 12.0, 12.0]
+        [FRAM] 'Frame 256' id=364:3904  xywh=(170,787,53,48)
+          [FRAM] 'Frame' id=364:3905  xywh=(184.5,787,24,24)
+            [GROU] 'Group' id=364:3906  xywh=(185.2,787.7,22.5,22.5)
+              [VECT] 'Vector' id=364:3907  xywh=(185.2,787.7,22.5,22.5)  fill=#8D7CD3
+          [TEXT] 'Vision' id=364:3908  xywh=(170,817,53,18)  fill=#8D7CD3  font=Poppins Poppins-Regular 12.0pt w400 lh=18px ls=0 align=CENTER/TOP  chars='Vision'
+      [FRAM] 'Frame 286' id=364:3909  xywh=(244,774,53,61)
+        [RECT] 'Rectangle 39325' id=364:3910  xywh=(251.5,774,38,4)  fill=GRADIENT_LINEAR[#FCD471:0, #BF8800:1] handles=[(0.132, 0.106), (0.676, 0.825), (-0.227, 0.155)]  radii=[0.0, 0.0, 12.0, 12.0]
+        [FRAM] 'Frame 257' id=364:3911  xywh=(244,787,53,48)
+          [FRAM] 'Frame' id=364:3912  xywh=(258.5,787,24,24)
+            [GROU] 'Group' id=364:3913  xywh=(259.1,790.5,22.8,17.01)
+              [VECT] 'Vector' id=364:3914  xywh=(259.1,790.5,22.8,17.01)  fill=GRADIENT_LINEAR[#FCD471:0, #BF8800:1] handles=[(0.132, 0.106), (0.676, 0.825), (-0.227, 0.155)]
+          [TEXT] '369' id=364:3915  xywh=(244,817,53,18)  fill=#FCD471  font=Poppins Poppins-Regular 12.0pt w400 lh=18px ls=0 align=CENTER/TOP  chars='369'
+      [FRAM] 'Frame 285' id=364:3916  xywh=(318,774,53,61)
+        [RECT] 'Rectangle 39326' id=364:3917  xywh=(325.5,774,38,4)  op=0  fill=GRADIENT_LINEAR[#FCD471:0, #BF8800:1] handles=[(0.132, 0.106), (0.676, 0.825), (-0.227, 0.155)]  radii=[0.0, 0.0, 12.0, 12.0]
+        [FRAM] 'Frame 258' id=364:3918  xywh=(318,787,53,48)
+          [FRAM] 'Frame' id=364:3919  xywh=(332.5,787,24,24)
+            [GROU] 'Group' id=364:3920  xywh=(333.2,787.8,22.5,22.5)
+              [GROU] 'Layer 2' id=364:3921  xywh=(333.2,787.8,22.5,22.5)
+                [VECT] 'Vector' id=364:3922  xywh=(340,790.8,9,9)  fill=#8D7CD3
+                [VECT] 'Vector' id=364:3923  xywh=(335.4,801.1,18.17,9.178)  fill=#8D7CD3
+                [VECT] 'Vector' id=364:3924  xywh=(333.2,787.8,22.5,22.5)  fill=#8D7CD3
+                [VECT] 'Vector' id=364:3925  xywh=(336.4,801.7,16.23,7.952)  fill=#8D7CD3
+                [VECT] 'Vector' id=364:3926  xywh=(340.8,791.5,7.5,7.5)  fill=#8D7CD3
+          [TEXT] 'Profile' id=364:3927  xywh=(318,817,53,18)  fill=#8D7CD3  font=Poppins Poppins-Regular 12.0pt w400 lh=18px ls=0 align=CENTER/TOP  chars='Profile'
+  [FRAM] 'Frame 1000003740' id=364:4496  xywh=(18,121,356,163)
+    [FRAM] 'Frame 1000003735' id=364:3928  xywh=(99.5,121,193,28)
+      [GROU] 'Group 48095333' id=364:3929  xywh=(99.5,121,28,28)  r=233.33334350585938
+        [RECT] 'Rectangle 39318' id=364:3930  xywh=(99.5,121,28,28)  stroke=#D4D3D3 sw=1.1666667461395264  r=233.33334350585938  fx=[INNER_SHADOW(#D2AF69@1 dx=0 dy=1.465 blur=58.6 spread=0); INNER_SHADOW(#D2AF69@1 dx=0 dy=5.86 blur=26.37 spread=0); INNER_SHADOW(#AE8941@1 dx=0 dy=143.6 blur=146.5 spread=-70.32); INNER_SHADOW(#D2AF69@0.3 dx=0 dy=-120.1 blur=99.61 spread=-93.75); INNER_SHADOW(#AE8941@0.39 dx=0 dy=10.25 blur=16.11 spread=-5.86); INNER_SHADOW(#AE8941@1 dx=0 dy=-19.04 blur=13.18 spread=-20.51); INNER_SHADOW(#AE8941@0.5 dx=0 dy=57.13 blur=82.04 spread=-52.74); BACKGROUND_BLUR(131.8)]
+        [RECT] 'Rectangle 39319' id=364:3931  xywh=(106.5,128,14,14)  fill=GRADIENT_LINEAR[#FCD471:0, #BF8800:1] handles=[(0.132, 0.106), (0.676, 0.825), (-0.227, 0.155)]  r=233.33334350585938  fx=[INNER_SHADOW(#D2AF69@1 dx=0 dy=1.465 blur=58.6 spread=0); INNER_SHADOW(#D2AF69@1 dx=0 dy=5.86 blur=26.37 spread=0); INNER_SHADOW(#AE8941@1 dx=0 dy=143.6 blur=146.5 spread=-70.32); INNER_SHADOW(#D2AF69@0.3 dx=0 dy=-120.1 blur=99.61 spread=-93.75); INNER_SHADOW(#AE8941@0.39 dx=0 dy=10.25 blur=16.11 spread=-5.86); INNER_SHADOW(#AE8941@1 dx=0 dy=-19.04 blur=13.18 spread=-20.51); INNER_SHADOW(#AE8941@0.5 dx=0 dy=57.13 blur=82.04 spread=-52.74); BACKGROUND_BLUR(131.8)]
+      [GROU] 'Group 48095332' id=364:3932  xywh=(132.5,121,28,28)  r=233.33334350585938
+        [RECT] 'Rectangle 39318' id=364:3933  xywh=(132.5,121,28,28)  fill=#FBFBFB@0.01  stroke=GRADIENT_LINEAR[#63507A:0, #63507A@0:1] handles=[(0.501, -0.38), (0.508, 1.014), (0.473, -0.377)] sw=1.1666667461395264  r=233.33334350585938  fx=[INNER_SHADOW(#352A42@1 dx=0 dy=1.465 blur=58.6 spread=0); INNER_SHADOW(#352A42@1 dx=0 dy=5.86 blur=26.37 spread=0); INNER_SHADOW(#352A42@1 dx=0 dy=143.6 blur=146.5 spread=-70.32); INNER_SHADOW(#352A42@0.3 dx=0 dy=-120.1 blur=99.61 spread=-93.75); INNER_SHADOW(#352A42@0.39 dx=0 dy=10.25 blur=16.11 spread=-5.86); INNER_SHADOW(#352A42@1 dx=0 dy=-19.04 blur=13.18 spread=-20.51); INNER_SHADOW(#352A42@0.5 dx=0 dy=57.13 blur=82.04 spread=-52.74); BACKGROUND_BLUR(131.8)]
+      [GROU] 'Group 48095334' id=364:4195  xywh=(165.5,121,28,28)  r=233.33334350585938
+        [RECT] 'Rectangle 39318' id=364:4196  xywh=(165.5,121,28,28)  fill=#FBFBFB@0.01  stroke=GRADIENT_LINEAR[#63507A:0, #63507A@0:1] handles=[(0.501, -0.38), (0.508, 1.014), (0.473, -0.377)] sw=1.1666667461395264  r=233.33334350585938  fx=[INNER_SHADOW(#352A42@1 dx=0 dy=1.465 blur=58.6 spread=0); INNER_SHADOW(#352A42@1 dx=0 dy=5.86 blur=26.37 spread=0); INNER_SHADOW(#352A42@1 dx=0 dy=143.6 blur=146.5 spread=-70.32); INNER_SHADOW(#352A42@0.3 dx=0 dy=-120.1 blur=99.61 spread=-93.75); INNER_SHADOW(#352A42@0.39 dx=0 dy=10.25 blur=16.11 spread=-5.86); INNER_SHADOW(#352A42@1 dx=0 dy=-19.04 blur=13.18 spread=-20.51); INNER_SHADOW(#352A42@0.5 dx=0 dy=57.13 blur=82.04 spread=-52.74); BACKGROUND_BLUR(131.8)]
+      [GROU] 'Group 48095335' id=364:4197  xywh=(198.5,121,28,28)  r=233.33334350585938
+        [RECT] 'Rectangle 39318' id=364:4198  xywh=(198.5,121,28,28)  fill=#FBFBFB@0.01  stroke=GRADIENT_LINEAR[#63507A:0, #63507A@0:1] handles=[(0.501, -0.38), (0.508, 1.014), (0.473, -0.377)] sw=1.1666667461395264  r=233.33334350585938  fx=[INNER_SHADOW(#352A42@1 dx=0 dy=1.465 blur=58.6 spread=0); INNER_SHADOW(#352A42@1 dx=0 dy=5.86 blur=26.37 spread=0); INNER_SHADOW(#352A42@1 dx=0 dy=143.6 blur=146.5 spread=-70.32); INNER_SHADOW(#352A42@0.3 dx=0 dy=-120.1 blur=99.61 spread=-93.75); INNER_SHADOW(#352A42@0.39 dx=0 dy=10.25 blur=16.11 spread=-5.86); INNER_SHADOW(#352A42@1 dx=0 dy=-19.04 blur=13.18 spread=-20.51); INNER_SHADOW(#352A42@0.5 dx=0 dy=57.13 blur=82.04 spread=-52.74); BACKGROUND_BLUR(131.8)]
+      [GROU] 'Group 48095336' id=364:4199  xywh=(231.5,121,28,28)  r=233.33334350585938
+        [RECT] 'Rectangle 39318' id=364:4200  xywh=(231.5,121,28,28)  fill=#FBFBFB@0.01  stroke=GRADIENT_LINEAR[#63507A:0, #63507A@0:1] handles=[(0.501, -0.38), (0.508, 1.014), (0.473, -0.377)] sw=1.1666667461395264  r=233.33334350585938  fx=[INNER_SHADOW(#352A42@1 dx=0 dy=1.465 blur=58.6 spread=0); INNER_SHADOW(#352A42@1 dx=0 dy=5.86 blur=26.37 spread=0); INNER_SHADOW(#352A42@1 dx=0 dy=143.6 blur=146.5 spread=-70.32); INNER_SHADOW(#352A42@0.3 dx=0 dy=-120.1 blur=99.61 spread=-93.75); INNER_SHADOW(#352A42@0.39 dx=0 dy=10.25 blur=16.11 spread=-5.86); INNER_SHADOW(#352A42@1 dx=0 dy=-19.04 blur=13.18 spread=-20.51); INNER_SHADOW(#352A42@0.5 dx=0 dy=57.13 blur=82.04 spread=-52.74); BACKGROUND_BLUR(131.8)]
+      [GROU] 'Group 48095288' id=364:3934  xywh=(264.5,121,28,28)  r=233.33334350585938
+        [RECT] 'Rectangle 39318' id=364:3935  xywh=(264.5,121,28,28)  fill=#FBFBFB@0.01  stroke=GRADIENT_LINEAR[#63507A:0, #63507A@0:1] handles=[(0.501, -0.38), (0.508, 1.014), (0.473, -0.377)] sw=1.1666667461395264  r=233.33334350585938  fx=[INNER_SHADOW(#352A42@1 dx=0 dy=1.465 blur=58.6 spread=0); INNER_SHADOW(#352A42@1 dx=0 dy=5.86 blur=26.37 spread=0); INNER_SHADOW(#352A42@1 dx=0 dy=143.6 blur=146.5 spread=-70.32); INNER_SHADOW(#352A42@0.3 dx=0 dy=-120.1 blur=99.61 spread=-93.75); INNER_SHADOW(#352A42@0.39 dx=0 dy=10.25 blur=16.11 spread=-5.86); INNER_SHADOW(#352A42@1 dx=0 dy=-19.04 blur=13.18 spread=-20.51); INNER_SHADOW(#352A42@0.5 dx=0 dy=57.13 blur=82.04 spread=-52.74); BACKGROUND_BLUR(131.8)]
+    [FRAM] 'Frame 1000003731' id=364:3936  xywh=(18,177,356,107)
+      [GROU] 'Group 48095294' id=364:4132  xywh=(165,177,62,62)  radii=[0.0, 0.0, 0.0, 0.0]
+        [FRAM] 'Elemento' id=364:4133  xywh=(165,177,62,62)  fill=GRADIENT_LINEAR[#F8FBFF:0, #FFFFFF@0:1] handles=[(0.0, 0.0), (1.0, 1.0), (-0.5, 0.5)]  r=12.0  fx=[BACKGROUND_BLUR(20); DROP_SHADOW(#000000@0.08 dx=8 dy=4 blur=16 spread=0); INNER_SHADOW(#6F5B28@0.32 dx=0 dy=0 blur=8 spread=0)]
+          [FRAM] 'youtube' id=364:4134  xywh=(173,185,32,32)  op=0.5  fx=[LAYER_BLUR(12)]
+            [VECT] 'bg' id=364:4135  xywh=(175,191,28,20)  fill=#6F5B28  radii=[0.0, 0.0, 0.0, 0.0]
+            [VECT] 'play' id=364:4136  xywh=(186,197,8,8)  fill=#FFFFFF
+          [ELLI] 'Ellipse 1' id=364:4137  xywh=(178,218,23,13)  fill=#6F5B28  fx=[LAYER_BLUR(18)]
+        [FRAM] 'Frame' id=364:4138  xywh=(178.3,190.3,35.43,35.43)
+          [FRAM] 'Frame' id=364:4139  xywh=(178,191,35,35)
+            [GROU] 'Group' id=364:4140  xywh=(178,195,35,26.98)
+              [VECT] 'Vector' id=364:4141  xywh=(178,195,35,18.53)  fill=#E66F00
+              [VECT] 'Vector' id=364:4142  xywh=(181.8,203.7,27.36,18.33)  fill=#E66F00
+      [TEXT] 'Afternoon Ritual' id=364:3947  xywh=(18,257,356,27)  fill=#EBEBEB  font=Bitter Bitter-Bold 18.0pt w700 lh=27px ls=0 align=CENTER/TOP  chars='Afternoon Ritual'
+  [GROU] 'Group 48095330' id=364:4120  xywh=(26,429,345,132)  radii=[0.0, 0.0, 0.0, 0.0]
+    [RECT] 'Rectangle 39318' id=364:4121  xywh=(26,429,345,132)  fill=#FBFBFB@0.01  stroke=GRADIENT_LINEAR[#63507A:0, #332643@0:1] handles=[(0.501, -0.38), (0.508, 1.014), (0.473, -0.377)] sw=2.0  r=16.0  fx=[INNER_SHADOW(#1A0B2C@1 dx=0 dy=1.256 blur=50.23 spread=0); INNER_SHADOW(#271839@1 dx=0 dy=5.023 blur=22.6 spread=0); INNER_SHADOW(#271839@1 dx=0 dy=123.1 blur=125.6 spread=-60.27); INNER_SHADOW(#271839@0.3 dx=0 dy=-103 blur=85.38 spread=-80.36); INNER_SHADOW(#271839@1 dx=0 dy=8.79 blur=13.81 spread=-5.023); INNER_SHADOW(#271839@1 dx=0 dy=-16.32 blur=11.3 spread=-17.58); INNER_SHADOW(#150F6C@0.5 dx=0 dy=48.97 blur=70.32 spread=-45.2); BACKGROUND_BLUR(113)]
+    [FRAM] 'Frame 3' id=364:4122  xywh=(41,445,313,21)
+      [TEXT] 'Type your affirmation here...' id=364:4123  xywh=(41,445,194,21)  op=0.5  fill=#EBEBEB  font=Poppins Poppins-Regular 14.0pt w400 lh=21px ls=0 align=LEFT/TOP  chars='Type your affirmation here...'
+      [INST] 'Arrow / Arrow_Left_MD' id=364:4124  xywh=(330,445,24,24)
+        [VECT] 'Vector' id=I364:4124;226:3511  xywh=(335,451,14,12)  stroke=#685EF5 sw=2.0
+  [INST] 'Button Default' id=364:3953  xywh=(20,598,353,56)  fill=GRADIENT_LINEAR[#3B2DF7:0, #7C38FF:1] handles=[(0.319, 0.5), (1.0, 0.5), (0.319, 0.841)]  r=13.0
+    [TEXT] 'Create Account' id=I364:3953;12:4957  xywh=(36,614,321,24)  fill=#FFFFFF  font=Poppins Poppins-Medium 16.0pt w500 lh=24px ls=0 align=CENTER/TOP  chars='Save Manifestation (1/6)'
+    [INST] 'vuesax/linear/arrow-left' id=I364:3953;14:13869  xywh=(319,614,24,24)
+      [GROU] 'vuesax/linear/arrow-left' id=I364:3953;14:13869;14:6320  xywh=(319,614,24,24)
+        [GROU] 'arrow-left' id=I364:3953;14:13869;14:6321  xywh=(319,614,24,24)
+          [VECT] 'Vector' id=I364:3953;14:13869;14:6322  xywh=(326.9,618.1,7.098,15.84)  stroke=#FFFFFF sw=1.5
+          [VECT] 'Vector' id=I364:3953;14:13869;14:6323  xywh=(319,614,24,24)  op=0
+  [FRAM] 'Frame 1000003737' id=364:3954  xywh=(44,324,309,83)  fill=#2A1B47  r=16.0
+    [FRAM] 'Frame 1000003736' id=364:3955  xywh=(54,332,289,67)
+      [TEXT] 'My Affirmation' id=364:3956  xywh=(54,332,289,21)  fill=#B9B9B9  font=Poppins Poppins-Medium 14.0pt w500 lh=21px ls=0 align=CENTER/TOP  chars='My Affirmation'
+      [TEXT] 'I am so happy and grateful now that I am earning $10,000 a month.' id=364:3957  xywh=(54,357,289,42)  fill=#FCD471  font=Poppins Poppins-Medium 14.0pt w500 lh=21px ls=0 align=CENTER/TOP  chars='I am so happy and grateful now that I am earning $10,000 a month.'
+  [FRAM] 'Frame 290' id=364:4179  xywh=(20,68,40,40)
+    [GROU] 'Group 48095322' id=364:4180  xywh=(20,68,40,40)  radii=[0.0, 0.0, 0.0, 0.0]
+      [RECT] 'Rectangle 39318' id=364:4181  xywh=(20,68,40,40)  fill=#FBFBFB@0.01  stroke=GRADIENT_LINEAR[#63507A:0, #332643@0:1] handles=[(0.501, -0.38), (0.508, 1.014), (0.473, -0.377)] sw=1.0  r=12.0  fx=[INNER_SHADOW(#1A0B2C@1 dx=0 dy=1.256 blur=50.23 spread=0); INNER_SHADOW(#271839@1 dx=0 dy=5.023 blur=22.6 spread=0); INNER_SHADOW(#271839@1 dx=0 dy=123.1 blur=125.6 spread=-60.27); INNER_SHADOW(#271839@0.3 dx=0 dy=-103 blur=85.38 spread=-80.36); INNER_SHADOW(#271839@1 dx=0 dy=8.79 blur=13.81 spread=-5.023); INNER_SHADOW(#271839@1 dx=0 dy=-16.32 blur=11.3 spread=-17.58); INNER_SHADOW(#150F6C@0.5 dx=0 dy=48.97 blur=70.32 spread=-45.2); BACKGROUND_BLUR(113)]
+      [INST] 'vuesax/linear/arrow-left' id=364:4182  xywh=(30,78,20,20)
+        [GROU] 'vuesax/linear/arrow-left' id=I364:4182;324:4137  xywh=(30,78,20,20)
+          [GROU] 'arrow-left' id=I364:4182;324:4138  xywh=(30,78,20,20)
+            [VECT] 'Vector' id=I364:4182;324:4139  xywh=(32.92,82.94,5.058,10.12)  stroke=#685EF5 sw=1.5
+            [VECT] 'Vector' id=I364:4182;324:4140  xywh=(33.06,88,14.02,0)  stroke=#685EF5 sw=1.5
+            [VECT] 'Vector' id=I364:4182;324:4141  xywh=(30,78,20,20)  op=0

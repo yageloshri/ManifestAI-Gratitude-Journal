@@ -1,0 +1,36 @@
+=== ROOT 330:1458 'Personal Info' at (2748.0,11569.0) 393.0x852.0 ===
+[FRAM] 'Personal Info' id=330:1458  xywh=(0,0,393,852)  fill=#16062A
+  [VECT] 'Ellipse 1' id=330:1459  xywh=(0,12,578.7,677.5)  fill=#4F31EC@0.29  fx=[LAYER_BLUR(514)]
+  [INST] 'Status Bar' id=330:1460  xywh=(0,0,393,44)
+        [VECT] '\U001002e6' id=I330:1460;1:288;1:205  xywh=(362,17,8,12)  fill=#FFFFFF
+        [GROU] 'Battery' id=I330:1460;1:288;1:208  xywh=(356,19,19,8)
+  [FRAM] 'Frame 290' id=330:1461  xywh=(20,68,249,40)
+    [GROU] 'Group 48095322' id=330:1462  xywh=(20,68,40,40)  radii=[0.0, 0.0, 0.0, 0.0]
+      [RECT] 'Rectangle 39318' id=330:1463  xywh=(20,68,40,40)  fill=#FBFBFB@0.01  stroke=GRADIENT_LINEAR[#63507A:0, #332643@0:1] handles=[(0.501, -0.38), (0.508, 1.014), (0.473, -0.377)] sw=1.0  r=12.0  fx=[INNER_SHADOW(#1A0B2C@1 dx=0 dy=1.256 blur=50.23 spread=0); INNER_SHADOW(#271839@1 dx=0 dy=5.023 blur=22.6 spread=0); INNER_SHADOW(#271839@1 dx=0 dy=123.1 blur=125.6 spread=-60.27); INNER_SHADOW(#271839@0.3 dx=0 dy=-103 blur=85.38 spread=-80.36); INNER_SHADOW(#271839@1 dx=0 dy=8.79 blur=13.81 spread=-5.023); INNER_SHADOW(#271839@1 dx=0 dy=-16.32 blur=11.3 spread=-17.58); INNER_SHADOW(#150F6C@0.5 dx=0 dy=48.97 blur=70.32 spread=-45.2); BACKGROUND_BLUR(113)]
+      [INST] 'vuesax/linear/arrow-left' id=330:1464  xywh=(30,78,20,20)
+        [GROU] 'vuesax/linear/arrow-left' id=I330:1464;324:4137  xywh=(30,78,20,20)
+          [GROU] 'arrow-left' id=I330:1464;324:4138  xywh=(30,78,20,20)
+            [VECT] 'Vector' id=I330:1464;324:4139  xywh=(32.92,82.94,5.058,10.12)  stroke=#685EF5 sw=1.5
+            [VECT] 'Vector' id=I330:1464;324:4140  xywh=(33.06,88,14.02,0)  stroke=#685EF5 sw=1.5
+            [VECT] 'Vector' id=I330:1464;324:4141  xywh=(30,78,20,20)  op=0
+    [TEXT] 'Personal Information' id=330:1465  xywh=(84,74.5,185,27)  fill=#EBEBEB  font=Bitter Bitter-Bold 18.0pt w700 lh=27px ls=0 align=LEFT/TOP  chars='Personal Information'
+  [GROU] 'Group 48095322' id=330:1742  xywh=(327,68,40,40)  radii=[0.0, 0.0, 0.0, 0.0]
+    [RECT] 'Rectangle 39318' id=330:1743  xywh=(327,68,40,40)  fill=#FBFBFB@0.01  stroke=GRADIENT_LINEAR[#63507A:0, #332643@0:1] handles=[(0.501, -0.38), (0.508, 1.014), (0.473, -0.377)] sw=1.0  r=12.0  fx=[INNER_SHADOW(#1A0B2C@1 dx=0 dy=1.256 blur=50.23 spread=0); INNER_SHADOW(#271839@1 dx=0 dy=5.023 blur=22.6 spread=0); INNER_SHADOW(#271839@1 dx=0 dy=123.1 blur=125.6 spread=-60.27); INNER_SHADOW(#271839@0.3 dx=0 dy=-103 blur=85.38 spread=-80.36); INNER_SHADOW(#271839@1 dx=0 dy=8.79 blur=13.81 spread=-5.023); INNER_SHADOW(#271839@1 dx=0 dy=-16.32 blur=11.3 spread=-17.58); INNER_SHADOW(#150F6C@0.5 dx=0 dy=48.97 blur=70.32 spread=-45.2); BACKGROUND_BLUR(113)]
+    [INST] 'vuesax/linear/edit-2' id=330:1744  xywh=(337,78,20,20)
+      [GROU] 'vuesax/linear/edit-2' id=I330:1744;324:9121  xywh=(337,78,20,20)
+        [GROU] 'edit-2' id=I330:1744;324:9122  xywh=(337,78,20,20)
+          [VECT] 'Vector' id=I330:1744;324:9123  xywh=(340.3,79.8,13.33,13.83)  stroke=#685EF5 sw=1.5
+          [VECT] 'Vector' id=I330:1744;324:9124  xywh=(346.9,82.21,4.542,4.292)  stroke=#685EF5 sw=1.5
+          [VECT] 'Vector' id=I330:1744;324:9125  xywh=(339.5,96.33,15,0)  stroke=#685EF5 sw=1.5
+          [VECT] 'Vector' id=I330:1744;324:9126  xywh=(337,78,20,20)  op=0
+  [FRAM] 'Frame 1000003728' id=330:1618  xywh=(20,148,353,248)
+    [GROU] 'Group 48095338' id=330:1612  xywh=(20,148,72,72)  r=50.0
+      [FRAM] 'Frame 1000003717' id=330:1614  xywh=(20,148,72,72)  fill=#2C1E49  stroke=#45326D sw=2.0  r=50.0
+        [TEXT] 'A' id=330:1615  xywh=(45,166,22,36)  fill=#FFFFFF@0.68  font=Bitter Bitter-SemiBold 30.0pt w600 lh=36px ls=0 align=CENTER/TOP  chars='A'
+    [FRAM] 'Frame 1000003729' id=330:1643  xywh=(20,260,353,136)
+      [FRAM] 'Text Field' id=330:1727  xywh=(20,260,353,53)
+        [TEXT] 'Label' id=330:1728  xywh=(20,260,353,21)  fill=#9F9E9E  font=Poppins Poppins-Medium 14.0pt w500 lh=21px ls=0 align=LEFT/TOP  chars='Name'
+        [TEXT] 'Ali Ahmad' id=330:1735  xywh=(20,289,353,24)  fill=#EBEBEB  font=Poppins Poppins-SemiBold 16.0pt w600 lh=24px ls=0 align=LEFT/TOP  chars='Ali Ahmad'
+      [FRAM] 'Text Field' id=330:1738  xywh=(20,343,353,53)
+        [TEXT] 'DOB' id=330:1739  xywh=(20,343,353,21)  fill=#9F9E9E  font=Poppins Poppins-Medium 14.0pt w500 lh=21px ls=0 align=LEFT/TOP  chars='DOB'
+        [TEXT] '2nd June 2001' id=330:1740  xywh=(20,372,353,24)  fill=#EBEBEB  font=Poppins Poppins-SemiBold 16.0pt w600 lh=24px ls=0 align=LEFT/TOP  chars='2nd June 2001'

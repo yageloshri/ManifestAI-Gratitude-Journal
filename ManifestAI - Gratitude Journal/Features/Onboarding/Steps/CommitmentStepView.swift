@@ -1,225 +1,225 @@
 // CommitmentStepView.swift
-// Commitment screen with hold-to-commit interaction - Step 5 of 5
+// Figma: "A promise to you self" frame (282:570) in Registration Screens section
+// All geometry from fidelity/commitment spec — do not eyeball values.
 
 import SwiftUI
+import UIKit
 
 struct CommitmentStepView: View {
     let onComplete: () -> Void
     let onBack: () -> Void
-    
+    /// Parity gallery: deterministic final state, no hold interaction running.
+    var parityMode: Bool = false
+
     @State private var isHolding = false
-    @State private var progress: CGFloat = 0.0
-    @State private var holdTimer: DispatchWorkItem?
-    @State private var hasCompleted = false
-    let holdDuration: TimeInterval = 2.0
-    
+    @State private var progress: CGFloat = 0
+
     var body: some View {
-        ZStack {
-            // Beautiful gradient
-            LinearGradient(
-                colors: [
-                    Color(hex: "0a0e17"),
-                    Color(hex: "0f0c29"),
-                    Color(hex: "2d1b4e").opacity(0.3)
-                ],
-                startPoint: .topLeading,
-                endPoint: .bottomTrailing
-            )
-            .ignoresSafeArea()
-            
-            // Ambient glow
-            Circle()
-                .fill(Color(hex: "FFD700").opacity(0.05))
-                .frame(width: 300, height: 300)
-                .blur(radius: 80)
-                .offset(x: -100, y: -200)
-            
-            VStack {
-                // Header
-                ZStack(alignment: .center) {
-                    // Buttons layer
-                    HStack {
-                        Button(action: onBack) {
-                            Image(systemName: "arrow.left")
-                                .font(.system(size: 20))
-                                .foregroundStyle(.white)
-                                .frame(width: 44, height: 44)
-                                .background(Color.white.opacity(0.1))
-                                .clipShape(Circle())
-                        }
-                        Spacer()
-                        Image(systemName: "sparkles")
-                            .font(.system(size: 24))
-                            .foregroundStyle(Color(hex: "FFD700"))
-                            .frame(width: 44, height: 44)
-                    }
-                    .padding(.horizontal, 24)
-                    
-                    // Centered text layer
-                    Text("STEP 5 OF 5")
-                        .font(.system(size: 12, weight: .semibold))
-                        .tracking(1.5)
-                        .foregroundStyle(.white.opacity(0.6))
-                }
-                .frame(height: 44)
-                .padding(.top, 10)
-                
-                Spacer()
-                
-                VStack(spacing: 32) {
-                    VStack(spacing: 16) {
-                        Text("A Promise to Yourself")
-                            .font(.system(size: 28, weight: .light))
-                            .tracking(1)
-                            .foregroundStyle(.white.opacity(0.9))
-                        
-                        Capsule()
-                            .fill(Color(hex: "FFD700").opacity(0.5))
-                            .frame(width: 48, height: 4)
-                    }
-                    
-                    Text("Change requires consistency.\nCan you commit to investing **3 minutes a day** in yourself?")
-                        .font(.system(size: 20))
-                        .foregroundStyle(.white.opacity(0.8))
-                        .multilineTextAlignment(.center)
-                        .lineSpacing(6)
-                        .padding(.horizontal, 24)
-                }
-                
-                Spacer()
-                
-                // Fingerprint with hold interaction
-                ZStack {
-                    // Breathing rings (subtle)
-                    ForEach(0..<3) { i in
-                        Circle()
-                            .stroke(Color(hex: "FFD700").opacity(0.2), lineWidth: 1)
-                            .frame(width: 120 + CGFloat(i * 30), height: 120 + CGFloat(i * 30))
-                            .scaleEffect(isHolding ? 1.05 : 1.0)
-                            .opacity(isHolding ? 0.6 : 0.2)
-                    }
-                    
-                    // Scanner base
-                    RoundedRectangle(cornerRadius: 24)
-                        .fill(
-                            LinearGradient(
-                                colors: [Color(hex: "2a2640"), Color(hex: "151322")],
-                                startPoint: .topLeading,
-                                endPoint: .bottomTrailing
-                            )
-                        )
-                        .frame(width: 100, height: 100)
-                        .overlay(
-                            RoundedRectangle(cornerRadius: 24)
-                                .stroke(Color.white.opacity(0.1), lineWidth: 1)
-                        )
-                        .shadow(color: Color(hex: "FFD700").opacity(isHolding ? 0.4 : 0.0), radius: 20)
-                    
-                    // Fingerprint icon
-                    Image(systemName: "touchid")
-                        .font(.system(size: 56, weight: .thin))
-                        .foregroundStyle(Color(hex: "FFD700").opacity(0.8))
-                    
-                    // Progress fill
-                    if isHolding {
-                        GeometryReader { geometry in
-                            Rectangle()
-                                .fill(Color(hex: "FFD700").opacity(0.3))
-                                .frame(height: geometry.size.height * progress)
-                                .offset(y: geometry.size.height * (1.0 - progress))
-                        }
-                        .frame(width: 100, height: 100)
-                        .clipShape(RoundedRectangle(cornerRadius: 24))
-                    }
-                }
-                .frame(width: 100, height: 100)
-                .contentShape(Rectangle()) // Ensure entire area is tappable
-                .scaleEffect(isHolding ? 0.95 : 1.0)
-                .onLongPressGesture(minimumDuration: holdDuration, maximumDistance: 50, pressing: { pressing in
-                    withAnimation {
-                        isHolding = pressing
-                    }
-                    if pressing {
-                        print("👆 User started holding...")
-                        hasCompleted = false
-                        
-                        // מתחיל את אנימציית המילוי
-                        withAnimation(.linear(duration: holdDuration)) {
-                            progress = 1.0
-                        }
-                        
-                        // מגדיר טיימר שיקרא ל-onComplete אחרי שהאנימציה תסתיים
-                        let workItem = DispatchWorkItem {
-                            print("⏰ Timer completed! Calling onComplete...")
-                            print("🔍 isHolding state: \(isHolding)")
-                            hasCompleted = true
-                            // אם הטיימר לא בוטל, זה אומר שהמשתמש החזיק עד הסוף
-                            onComplete()
-                        }
-                        holdTimer = workItem
-                        DispatchQueue.main.asyncAfter(deadline: .now() + holdDuration, execute: workItem)
-                        
-                    } else {
-                        // המשתמש הרפה - רק נבטל אם התהליך עדיין לא הושלם
-                        if !hasCompleted {
-                            print("👋 User released early - canceling timer")
-                            holdTimer?.cancel()
-                            holdTimer = nil
-                            
-                            withAnimation(.easeOut(duration: 0.2)) {
-                                progress = 0.0
-                            }
-                        } else {
-                            print("✅ User released after completion - this is expected")
-                        }
-                    }
-                }, perform: {
-                    // Fallback: if long press completes, call onComplete
-                    print("✅ Long press gesture completed")
-                    if !hasCompleted {
-                        hasCompleted = true
+        GeometryReader { geo in
+            let sx = geo.size.width / 393
+            let sy = geo.size.height / 852
+
+            ZStack(alignment: .topLeading) {
+                DesignTokens.Colors.background
+
+                // Figma 282:571: ellipse #4F31EC@0.29, blur 514
+                EllipseGlowBackground(sx: sx, sy: sy)
+
+                // Figma 282:690: step 6/6 (all active)
+                OnboardingStepper(currentStep: 6)
+                    .frame(width: 353 * sx)
+                    .parityPosition(x: 20 * sx, y: 76 * sy)
+
+                // Figma 282:676: inner glass card (21,135) 353×561, r16
+                promiseCard(sx: sx, sy: sy)
+                    .frame(width: 353 * sx, height: 564 * sy)
+                    .parityPosition(x: 21 * sx, y: 135 * sy)
+
+                // Figma 282:2370: bottom bar (19.5,737)
+                HStack(spacing: 16 * sx) {
+                    GlassBackButton(action: onBack)
+                        .accessibilityIdentifier("commitment.backButton")
+
+                    PrimaryButton(title: "Continue", icon: nil) {
                         onComplete()
                     }
-                })
-                
-                Text("Touch & Hold to Commit")
-                    .font(.system(size: 12, weight: .semibold))
-                    .tracking(2)
-                    .textCase(.uppercase)
-                    .foregroundStyle(.white.opacity(0.4))
-                
-                // Fallback button for iPad - visible if gesture fails
-                // This ensures the onboarding can always be completed
-                Button(action: {
-                    print("🔄 Fallback button tapped - completing onboarding")
-                    hasCompleted = true
-                    holdTimer?.cancel()
-                    onComplete()
-                }) {
-                    Text("Complete Setup")
-                        .font(.system(size: 16, weight: .semibold))
-                        .foregroundStyle(.black)
-                        .frame(maxWidth: .infinity)
-                        .frame(height: 50)
-                        .background(Color(hex: "FFD700"))
-                        .clipShape(RoundedRectangle(cornerRadius: 12))
+                    .accessibilityIdentifier("commitment.continueButton")
                 }
-                .padding(.horizontal, 32)
-                .padding(.bottom, 40)
+                .frame(width: 355 * sx)
+                .parityPosition(x: 19.5 * sx, y: 737 * sy)
+            }
+            .ignoresSafeArea()
+        }
+        .ignoresSafeArea()
+        .accessibilityIdentifier("commitment.root")
+    }
+
+    // MARK: - Promise card (Figma 282:676, card-relative geometry)
+
+    private func promiseCard(sx: CGFloat, sy: CGFloat) -> some View {
+        ZStack(alignment: .topLeading) {
+            // Figma 282:677: abstract texture rel (-180,-118) 713×635, op 0.2
+            Image("AbstractGradient")
+                .resizable()
+                .frame(width: 713 * 1.2086 * sx, height: 635 * sy)
+                .parityPosition(x: 713 * -0.0276 * sx, y: 0)
+                .blur(radius: 28)
+                .frame(width: 713 * sx, height: 635 * sy, alignment: .topLeading)
+                .clipped()
+                .opacity(0.20)
+                .parityPosition(x: -180 * sx, y: -118 * sy)
+
+            // Figma 282:678: glass surface 353×561
+            Color.clear
+                .figmaGlassSurface(cornerRadius: DesignTokens.Radii.card, compact: false)
+                .frame(width: 353 * sx, height: 561 * sy)
+
+            // Figma 282:684: cosmic texture rel (-98,-83) 493×329, op 0.6
+            Image("CosmicTexture")
+                .resizable()
+                .frame(width: 493 * sx, height: 329 * sy)
+                .parityPosition(x: -98 * sx, y: -83 * sy)
+                .opacity(0.60)
+
+            // Figma 282:685: owl rel (79,18) 195×195, FILL crop
+            Image("CommitOwl")
+                .resizable()
+                .scaledToFill()
+                .frame(width: 195 * sx, height: 195 * sy)
+                .clipped()
+                .parityPosition(x: 79 * sx, y: 18 * sy)
+
+            // Figma 282:681: Bitter SemiBold 26/1.2 #FCD471, centered, rel (23,234)
+            Text("A promise to you self")
+                .font(DesignTokens.Typography.h1)
+                .foregroundStyle(DesignTokens.Colors.secondary)
+                .multilineTextAlignment(.center)
+                .frame(width: 307 * sx)
+                .parityPosition(x: 23 * sx, y: 234 * sy)
+
+            // Figma 282:682: Poppins Medium 16/24 #EBEBEB, rel (23,277) — bulleted list
+            Text("• Change requires consistency.")
+                .font(DesignTokens.Typography.bodyMedium)
+                .foregroundStyle(DesignTokens.Colors.textPrimary)
+                .multilineTextAlignment(.center)
+                .frame(width: 307 * sx)
+                .parityPosition(x: 23 * sx, y: 278.33 * sy)
+
+            // Figma 282:703: Poppins Medium 16/24 #EBEBEB, rel (23,313) — bulleted list
+            Text("• Can you commit to investing 3 minutes a day in yourself?")
+                .font(DesignTokens.Typography.bodyMedium)
+                .foregroundStyle(DesignTokens.Colors.textPrimary)
+                .multilineTextAlignment(.center)
+                .lineSpacing(poppinsLineSpacing)
+                .frame(width: 307 * sx)
+                .parityPosition(x: 23 * sx, y: 314.33 * sy)
+
+            // Figma 282:704: purple Elemento 88×88 — frosted container DRAWN
+            // live (baked crops show square seams); abs (154,548) → card-rel (133,413)
+            commitElemento(sx: sx, sy: sy)
+                .parityPosition(x: 133 * sx, y: 413 * sy)
+
+            // Figma 282:734: Poppins Regular 14/21 #B9B9B9, rel (84,515)
+            Text("Touch and hold to commit")
+                .font(DesignTokens.Typography.smallText)
+                .foregroundStyle(DesignTokens.Colors.textSecondary)
+                .multilineTextAlignment(.center)
+                .frame(width: 186 * sx)
+                .parityPosition(x: 84 * sx, y: 515 * sy)
+        }
+        .frame(width: 353 * sx, height: 564 * sy, alignment: .topLeading)
+        .clipShape(RoundedRectangle(cornerRadius: DesignTokens.Radii.card))
+    }
+
+    // MARK: - Purple hold-to-commit Elemento (Figma 282:704)
+
+    private func commitElemento(sx: CGFloat, sy: CGFloat) -> some View {
+        ZStack(alignment: .topLeading) {
+            // gold pool under (Figma 282:709: 48.19×27.24 rel (27.2,85.9),
+            // layer blur 37.71) — CLIPPED by the Elemento frame in Figma:
+            // fig returns to bg immediately below the container
+            ZStack(alignment: .topLeading) {
+                Ellipse()
+                    .fill(DesignTokens.Colors.secondary)
+                    .frame(width: 48.19, height: 27.24)
+                    .parityPosition(x: 27.2, y: 85.9)
+                    .blur(radius: 15)
+                    .opacity(0.6)
+            }
+            .frame(width: 88, height: 88, alignment: .topLeading)
+            .clipShape(RoundedRectangle(cornerRadius: 25.14))
+
+            // container — fill #685EF5→clear, purple inner glow
+            RoundedRectangle(cornerRadius: 25.14)
+                .fill(
+                    LinearGradient(
+                        stops: [
+                            .init(color: DesignTokens.Colors.primary.opacity(0.18), location: 0),
+                            .init(color: DesignTokens.Colors.primary.opacity(0), location: 1)
+                        ],
+                        startPoint: .topLeading, endPoint: .bottomTrailing
+                    )
+                )
+                .overlay(
+                    RoundedRectangle(cornerRadius: 25.14)
+                        .strokeBorder(
+                            LinearGradient(
+                                stops: [
+                                    .init(color: Color(hex: "D8D8D8").opacity(0.05), location: 0),
+                                    .init(color: Color.white.opacity(0.22), location: 1)
+                                ],
+                                startPoint: .topLeading, endPoint: .bottomTrailing
+                            ),
+                            lineWidth: 1.68
+                        )
+                )
+                .overlay(
+                    // INNER_SHADOW(#685EF5@1 blur 16.76)
+                    RoundedRectangle(cornerRadius: 25.14)
+                        .stroke(DesignTokens.Colors.primary.opacity(0.36), lineWidth: 17.6)
+                        .blur(radius: 8.8)
+                        .clipShape(RoundedRectangle(cornerRadius: 25.14))
+                )
+                .frame(width: 88, height: 88)
+                .shadow(color: Color.black.opacity(0.08), radius: 16.76, x: 16.76, y: 8.38)
+
+            // fingerprint glyph + in-container glow baked TOGETHER —
+            // 80×80 interior crop at rel (4,4)
+            Image("GlyphCommitHands")
+                .resizable()
+                .frame(width: 80, height: 80)
+                .parityPosition(x: 4, y: 4)
+
+            // hold progress ring
+            if progress > 0 {
+                RoundedRectangle(cornerRadius: 25.14)
+                    .trim(from: 0, to: progress)
+                    .stroke(DesignTokens.Colors.secondary, lineWidth: 3)
+                    .frame(width: 88, height: 88)
             }
         }
-        .onDisappear {
-            // ניקוי הטיימר כאשר המסך נעלם
-            holdTimer?.cancel()
-            holdTimer = nil
-        }
+        .frame(width: 88, height: 88, alignment: .topLeading)
+        .contentShape(Rectangle())
+        .onLongPressGesture(minimumDuration: 1.5, perform: {
+            guard !parityMode else { return }
+            UINotificationFeedbackGenerator().notificationOccurred(.success)
+            onComplete()
+        }, onPressingChanged: { pressing in
+            guard !parityMode else { return }
+            withAnimation(.linear(duration: pressing ? 1.5 : 0.2)) {
+                progress = pressing ? 1 : 0
+            }
+        })
+        .accessibilityIdentifier("commitment.holdButton")
+        .scaleEffect(x: sx, y: sy, anchor: .topLeading)
+    }
+
+    private var poppinsLineSpacing: CGFloat {
+        let font = UIFont(name: "Poppins-Medium", size: 16) ?? .systemFont(ofSize: 16)
+        return max(0, 24 - font.lineHeight)
     }
 }
 
 #Preview {
-    CommitmentStepView(
-        onComplete: {},
-        onBack: {}
-    )
+    CommitmentStepView(onComplete: {}, onBack: {}, parityMode: true)
 }
-

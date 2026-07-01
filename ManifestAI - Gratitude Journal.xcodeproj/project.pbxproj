@@ -44,6 +44,7 @@
 		0266C9FB2EFDE601009630BE /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
 		0266C9FD2EFDE601009630BE /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
 		0266CA162EFDE645009630BE /* ManifestWidgetsExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ManifestWidgetsExtension.entitlements; sourceTree = "<group>"; };
+		AACFG0012EFE0000009630BE /* Config.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
@@ -61,12 +62,20 @@
 			);
 			target = 0266C9F82EFDE601009630BE /* ManifestWidgetsExtension */;
 		};
+		AACFG0022EFE0001009630BE /* Exceptions for "ManifestAI - Gratitude Journal" folder in "ManifestAI - Gratitude Journal" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = 0266C9152EFC67D2009630BE /* ManifestAI - Gratitude Journal */;
+		};
 /* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		0266C9182EFC67D2009630BE /* ManifestAI - Gratitude Journal */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			exceptions = (
+				AACFG0022EFE0001009630BE /* Exceptions for "ManifestAI - Gratitude Journal" folder in "ManifestAI - Gratitude Journal" target */,
 				0266CA182EFDE681009630BE /* Exceptions for "ManifestAI - Gratitude Journal" folder in "ManifestWidgetsExtension" target */,
 			);
 			path = "ManifestAI - Gratitude Journal";
@@ -107,6 +116,7 @@
 		0266C90D2EFC67D2009630BE = {
 			isa = PBXGroup;
 			children = (
+				AACFG0012EFE0000009630BE /* Config.xcconfig */,
 				0266CA162EFDE645009630BE /* ManifestWidgetsExtension.entitlements */,
 				0266C9182EFC67D2009630BE /* ManifestAI - Gratitude Journal */,
 				0266C9FF2EFDE601009630BE /* ManifestWidgets */,
@@ -271,6 +281,7 @@
 /* Begin XCBuildConfiguration section */
 		0266C91F2EFC67DF009630BE /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AACFG0012EFE0000009630BE /* Config.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
@@ -335,6 +346,7 @@
 		};
 		0266C9202EFC67DF009630BE /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AACFG0012EFE0000009630BE /* Config.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
@@ -401,6 +413,7 @@
 				DEVELOPMENT_TEAM = 2GP242AXJ8;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "ManifestAI - Gratitude Journal/Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = "Gratitude Journal";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.healthcare-fitness";
 				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "ManifestAI needs access to save your created Vision Boards to your Photos library.";
@@ -439,6 +452,7 @@
 				DEVELOPMENT_TEAM = 2GP242AXJ8;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "ManifestAI - Gratitude Journal/Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = "Gratitude Journal";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.healthcare-fitness";
 				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "ManifestAI needs access to save your created Vision Boards to your Photos library.";

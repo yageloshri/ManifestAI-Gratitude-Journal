@@ -1,0 +1,58 @@
+=== ROOT 282:570 'A promise to you self' at (5411.0,4413.0) 393.0x852.0 ===
+[FRAM] 'A promise to you self' id=282:570  xywh=(0,0,393,852)  fill=#16062A
+  [VECT] 'Ellipse 1' id=282:571  xywh=(0,12,578.7,677.5)  fill=#4F31EC@0.29  fx=[LAYER_BLUR(514)]
+  [INST] 'Status Bar' id=282:572  xywh=(0,0,393,44)
+        [VECT] '\U001002e6' id=I282:572;1:288;1:205  xywh=(362,17,8,12)  fill=#FFFFFF
+        [GROU] 'Battery' id=I282:572;1:288;1:208  xywh=(356,19,19,8)
+  [FRAM] 'Frame 215' id=282:573  xywh=(1,0,392,853)  r=16.0
+    [VECT] 'Rectangle 39319' id=282:577  xywh=(169,398,93,12)
+    [FRAM] 'Frame 216' id=282:676  xywh=(21,135,353,564)  r=16.0
+      [RECT] 'milad-fakurian-nY14Fs8pxT8-unsplash 1' id=282:677  xywh=(-159,17,713,635)  fill=IMAGE(ref=7b52d66cafda mode=STRETCH op=0.20000000298023224)
+      [RECT] 'Rectangle 39318' id=282:678  xywh=(21,135,353,561)  fill=#FBFBFB@0.01  stroke=GRADIENT_LINEAR[#63507A:0, #332643@0:1] handles=[(0.501, -0.38), (0.508, 1.014), (0.473, -0.377)] sw=2.0  r=16.0  fx=[INNER_SHADOW(#1A0B2C@1 dx=0 dy=1.256 blur=50.23 spread=0); INNER_SHADOW(#271839@1 dx=0 dy=5.023 blur=22.6 spread=0); INNER_SHADOW(#271839@1 dx=0 dy=123.1 blur=125.6 spread=-60.27); INNER_SHADOW(#271839@0.3 dx=0 dy=-103 blur=85.38 spread=-80.36); INNER_SHADOW(#271839@1 dx=0 dy=8.79 blur=13.81 spread=-5.023); INNER_SHADOW(#271839@1 dx=0 dy=-16.32 blur=11.3 spread=-17.58); INNER_SHADOW(#150F6C@0.5 dx=0 dy=48.97 blur=70.32 spread=-45.2); BACKGROUND_BLUR(113)]
+      [FRAM] 'Frame 201' id=282:679  xywh=(44,369,307,127)
+        [FRAM] 'Frame 203' id=282:680  xywh=(44,369,307,127)
+          [TEXT] 'A promise to you self' id=282:681  xywh=(44,369,307,31)  fill=#FCD471  font=Bitter Bitter-SemiBold 26.0pt w600 lh=31.2px ls=0 align=CENTER/TOP  chars='A promise to you self'
+          [TEXT] 'Change requires consistency.' id=282:682  xywh=(44,412,307,24)  fill=#EBEBEB  font=Poppins Poppins-Medium 16.0pt w500 lh=24px ls=0 align=CENTER/TOP  chars='Change requires consistency.'
+      [TEXT] 'Can you commit to investing 3 minutes a day in yourself?' id=282:703  xywh=(44,448,307,48)  fill=#EBEBEB  font=Poppins Poppins-Medium 16.0pt w500 lh=24px ls=0 align=CENTER/TOP  chars='Can you commit to investing 3 minutes a day in yourself?'
+      [RECT] 'image-from-rawpixel-id-12672331-png 1' id=282:684  xywh=(-77,52,493,329)  fill=IMAGE(ref=dc6e302d33a1 mode=FILL op=0.6000000238418579)
+      [RECT] 'ChatGPT Image Jan 24, 2026, 04_06_56 PM 1' id=282:685  xywh=(100,153,195,195)  fill=IMAGE(ref=6162ff5f260f mode=FILL op=1)
+      [FRAM] 'Frame 223' id=282:735  xywh=(105,548,186,123)
+        [GROU] 'Group 48095293' id=282:704  xywh=(154,548,88,88)  r=25.142858505249023
+          [FRAM] 'Elemento' id=282:705  xywh=(154,548,88,88)  fill=GRADIENT_LINEAR[#685EF5:0, #685EF5@0:1] handles=[(0.0, 0.0), (1.0, 1.0), (-0.5, 0.5)]  stroke=GRADIENT_LINEAR[#D8D8D8@0.05:0, #FFFFFF@0.4:1] handles=[(0.021, -0.021), (0.969, 1.0), (-0.49, 0.453)] sw=1.6761906147003174  r=25.142858505249023  fx=[BACKGROUND_BLUR(41.9); DROP_SHADOW(#000000@0.08 dx=16.76 dy=8.381 blur=33.52 spread=0); INNER_SHADOW(#685EF5@1 dx=0 dy=0 blur=16.76 spread=0)]
+            [FRAM] 'Frame' id=282:725  xywh=(170.8,564.8,56,56)
+              [GROU] 'Group' id=282:726  xywh=(174.3,564.8,49,56)
+                [VECT] 'Vector' id=282:727  xywh=(177.3,564.8,42.99,11.24)  fill=#B9B9B9
+                [VECT] 'Vector' id=282:728  xywh=(174.3,571.6,49,15.83)  fill=#B9B9B9
+                [VECT] 'Vector' id=282:729  xywh=(182.6,585.3,32.24,35.46)  fill=#B9B9B9
+                [VECT] 'Vector' id=282:730  xywh=(176,578.5,45.51,42.31)  fill=#B9B9B9
+                [VECT] 'Vector' id=282:731  xywh=(196.9,599,15.66,18.34)  fill=#B9B9B9
+            [ELLI] 'Ellipse 1' id=282:709  xywh=(181.2,633.9,48.19,27.24)  fill=#FCD471  fx=[LAYER_BLUR(37.71)]
+        [TEXT] 'Touch and hold to commit' id=282:734  xywh=(105,650,186,21)  fill=#B9B9B9  font=Poppins Poppins-Regular 14.0pt w400 lh=21px ls=0 align=CENTER/TOP  chars='Touch and hold to commit'
+  [FRAM] 'Frame 224' id=282:2370  xywh=(19.5,737,355,56)
+    [GROU] 'Group 48095287' id=282:2371  xywh=(19.5,737,56,56)  radii=[0.0, 0.0, 0.0, 0.0]
+      [RECT] 'Rectangle 39318' id=282:2372  xywh=(19.5,737,56,56)  fill=#FBFBFB@0.01  stroke=GRADIENT_LINEAR[#63507A:0, #332643@0:1] handles=[(0.501, -0.38), (0.508, 1.014), (0.473, -0.377)] sw=2.0  r=12.0  fx=[INNER_SHADOW(#1A0B2C@1 dx=0 dy=1.256 blur=50.23 spread=0); INNER_SHADOW(#271839@1 dx=0 dy=5.023 blur=22.6 spread=0); INNER_SHADOW(#271839@1 dx=0 dy=123.1 blur=125.6 spread=-60.27); INNER_SHADOW(#271839@0.3 dx=0 dy=-103 blur=85.38 spread=-80.36); INNER_SHADOW(#271839@1 dx=0 dy=8.79 blur=13.81 spread=-5.023); INNER_SHADOW(#271839@1 dx=0 dy=-16.32 blur=11.3 spread=-17.58); INNER_SHADOW(#150F6C@0.5 dx=0 dy=48.97 blur=70.32 spread=-45.2); BACKGROUND_BLUR(113)]
+      [INST] 'Arrow / Arrow_Left_MD' id=282:2373  xywh=(33.5,751,28,28)
+        [VECT] 'Vector' id=I282:2373;226:3511  xywh=(39.33,758,16.33,14)  stroke=#685EF5 sw=2.0
+    [INST] 'Button Default' id=282:2374  xywh=(91.5,737,283,56)  fill=GRADIENT_LINEAR[#3B2DF7:0, #7C38FF:1] handles=[(0.319, 0.5), (1.0, 0.5), (0.319, 0.841)]  r=13.0
+      [TEXT] 'Create Account' id=I282:2374;12:4957  xywh=(107.5,753,251,24)  fill=#FFFFFF  font=Poppins Poppins-Medium 16.0pt w500 lh=24px ls=0 align=CENTER/TOP  chars='Continue'
+      [INST] 'vuesax/linear/arrow-left' id=I282:2374;14:13869  xywh=(390.5,753,24,24)
+        [GROU] 'vuesax/linear/arrow-left' id=I282:2374;14:13869;14:6320  xywh=(390.5,753,24,24)
+          [GROU] 'arrow-left' id=I282:2374;14:13869;14:6321  xywh=(390.5,753,24,24)
+            [VECT] 'Vector' id=I282:2374;14:13869;14:6322  xywh=(398.4,757.1,7.098,15.84)  stroke=#FFFFFF sw=1.5
+            [VECT] 'Vector' id=I282:2374;14:13869;14:6323  xywh=(390.5,753,24,24)  op=0
+  [INST] 'Status Bar' id=282:590  xywh=(0,0,393,44)
+        [VECT] '\U001002e6' id=I282:590;1:288;1:205  xywh=(362,17,8,12)  fill=#FFFFFF
+        [GROU] 'Battery' id=I282:590;1:288;1:208  xywh=(356,19,19,8)
+  [FRAM] 'Stepper' id=282:690  xywh=(20,76,353,6)
+    [INST] 'Rectangle 66' id=282:691  xywh=(20,76,57.17,6)
+      [RECT] 'Rectangle 65' id=I282:691;226:2221  xywh=(20,76,57.17,6)  fill=#685EF5  r=50.0
+    [INST] 'Rectangle 67' id=282:692  xywh=(79.17,76,57.17,6)
+      [RECT] 'Rectangle 65' id=I282:692;226:2221  xywh=(79.17,76,57.17,6)  fill=#685EF5  r=50.0
+    [INST] 'Rectangle 71' id=282:693  xywh=(138.3,76,57.17,6)
+      [RECT] 'Rectangle 65' id=I282:693;226:2221  xywh=(138.3,76,57.17,6)  fill=#685EF5  r=50.0
+    [INST] 'Rectangle 73' id=282:2438  xywh=(197.5,76,57.17,6)
+      [RECT] 'Rectangle 65' id=I282:2438;226:2221  xywh=(197.5,76,57.17,6)  fill=#685EF5  r=50.0
+    [INST] 'Rectangle 74' id=282:2440  xywh=(256.7,76,57.17,6)
+      [RECT] 'Rectangle 65' id=I282:2440;226:2221  xywh=(256.7,76,57.17,6)  fill=#685EF5  r=50.0
+    [INST] 'Rectangle 75' id=282:2442  xywh=(315.8,76,57.17,6)
+      [RECT] 'Rectangle 65' id=I282:2442;226:2221  xywh=(315.8,76,57.17,6)  fill=#685EF5  r=50.0

@@ -1,0 +1,23 @@
+# Xcode
+build/
+DerivedData/
+*.xcuserstate
+*.xcuserdatad/
+xcuserdata/
+
+# Swift Package Manager
+.build/
+Packages/
+
+# CocoaPods
+Pods/
+
+# Secrets - API keys injected via xcconfig, never commit
+Config.xcconfig
+
+# macOS
+.DS_Store
+*.swp
+*~
+.figma_token
+.parity/

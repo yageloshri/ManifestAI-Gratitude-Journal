@@ -1,0 +1,90 @@
+{
+  "screen": "Onboarding (Welcome)",
+  "figmaNodeId": "258:1851",
+  "frame": { "width": 393, "height": 852, "scale": 3, "device": "iPhone 16" },
+  "background": "#16062A",
+  "elements": {
+    "ellipseGlow": {
+      "nodeId": "258:1852",
+      "rect": { "x": 0, "y": 12, "w": 578.669, "h": 677.5 },
+      "fill": "#4F31EC", "opacity": 0.51, "blur": 257
+    },
+    "glassPanel": {
+      "nodeId": "264:859",
+      "rect": { "x": 1, "y": 0, "w": 392, "h": 853 },
+      "cornerRadius": 16,
+      "border": { "color": "#63507A", "width": 2 },
+      "backdropBlur": 56.504,
+      "fill": "rgba(251,251,251,0.01)",
+      "innerShadows": [
+        "0 48.97 70.316 -45.203 rgba(21,15,108,0.5)",
+        "0 -16.323 11.301 -17.579 #271839",
+        "0 8.79 13.812 -5.023 #271839",
+        "0 -102.963 85.384 -80.361 rgba(39,24,57,0.3)",
+        "0 123.053 125.565 -60.271 #271839",
+        "0 5.023 22.602 0 #271839",
+        "0 1.256 50.226 0 #1A0B2C"
+      ]
+    },
+    "unsplashTexture": {
+      "nodeId": "264:858",
+      "rect": { "x": -180, "y": -118, "w": 713, "h": 635 },
+      "transform": "rotate(180) scaleY(-1)",
+      "opacity": 0.20,
+      "asset": "AbstractGradient"
+    },
+    "cosmicTexture": {
+      "nodeId": "264:865",
+      "rect": { "x": -1, "y": 0, "w": 393, "h": 396 },
+      "opacity": 0.60,
+      "asset": "CosmicTexture",
+      "innerImageCrop": { "h": "160.86%", "left": "-84.87%", "top": "-60.86%", "w": "243.28%" }
+    },
+    "owl": {
+      "nodeId": "265:960",
+      "rect": { "x": -1, "y": 120, "w": 364, "h": 369 },
+      "asset": "WelcomeOwl",
+      "innerImageCrop": { "h": "179.4%", "left": "-21.2%", "top": "-33.33%", "w": "121.25%" }
+    },
+    "welcomeBadge": {
+      "boxNodeId": "268:1015",
+      "rect": { "x": "center-1", "y": 65, "w": 229, "h": 75 },
+      "cornerRadius": 14,
+      "border": { "color": "#63507A", "width": 2 },
+      "text": {
+        "nodeId": "268:1012",
+        "content": "Welcome to Gratitude Journal: Manifest",
+        "font": "Bitter Bold 18", "lineHeight": 1.38,
+        "color": "#FCD471", "width": 195, "align": "center", "y": 78
+      }
+    },
+    "headline": {
+      "nodeId": "264:874",
+      "rect": { "x": 34, "y": 508, "w": 330 },
+      "fontSize": 37, "lineHeight": 1.2, "color": "#EBEBEB",
+      "spans": [
+        { "text": "Turn your dreams", "font": "Bitter Light Italic" },
+        { "text": " ", "font": "Bitter Light" },
+        { "text": "in to reality in 5 mins a day.", "font": "Bitter SemiBold" }
+      ]
+    },
+    "ctaButton": {
+      "nodeId": "264:879",
+      "rect": { "x": "center+0.5", "y": 690, "w": 332, "h": 56 },
+      "cornerRadius": 13,
+      "gradient": { "angle": 90, "stops": [["#3B2DF7", "31.858%"], ["#7C38FF", "100%"]] },
+      "paddingX": 16, "gap": 10,
+      "label": { "text": "Start My Journey", "font": "Poppins Medium 16", "lineHeight": 1.5, "color": "#FFFFFF", "align": "center", "layout": "flex-1" },
+      "icon": { "name": "Arrow_Right_LG", "size": 24 }
+    },
+    "statusBar": { "height": 44, "time": "9:41", "note": "compare with frozen sim status bar; crop if noisy" }
+  },
+  "fonts": ["Bitter[wght].ttf", "Bitter-Italic[wght].ttf", "Poppins-Medium.ttf"],
+  "variables": {
+    "Background Color": "#16062A",
+    "Text Color": "#EBEBEB",
+    "Secondary Color": "#FCD471",
+    "Card": "#FFFFFF",
+    "Body-Medium": "Poppins Medium 16 / 1.5"
+  }
+}

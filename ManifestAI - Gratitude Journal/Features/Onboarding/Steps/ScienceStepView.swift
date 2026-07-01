@@ -1,253 +1,129 @@
 // ScienceStepView.swift
-// Science fact screen with typewriter animation - Step 3 of 5
+// Figma: "Did you know" frame (257:1658) in Registration Screens section
+// All geometry from fidelity/didyouknow spec — do not eyeball values.
 
 import SwiftUI
-import UIKit
 
 struct ScienceStepView: View {
     let onContinue: () -> Void
     let onBack: () -> Void
-    
-    @State private var titleText = ""
-    @State private var showContent = false
-    @State private var titleInCenter = true
-    @State private var bodyText1 = ""
-    @State private var bodyText2 = ""
-    @State private var showButton = false
-    
-    private let fullTitle = "DID YOU KNOW?"
-    private let fullBody1 = "Neuroscience shows that practicing gratitude for 21 days physically rewires your brain."
-    private let fullBody2 = "It boosts happiness levels by 25% and improves long-term mental clarity."
-    
+    /// Parity gallery: deterministic final state.
+    var parityMode: Bool = false
+
     var body: some View {
-        ZStack {
-            // Beautiful gradient with radial glow
-            LinearGradient(
-                colors: [
-                    Color(hex: "0a0e17"),
-                    Color(hex: "0f0c29")
-                ],
-                startPoint: .topLeading,
-                endPoint: .bottomTrailing
-            )
-            .ignoresSafeArea()
-            
-            RadialGradient(
-                colors: [
-                    Color(hex: "FFD700").opacity(0.15),
-                    Color.clear
-                ],
-                center: .center,
-                startRadius: 0,
-                endRadius: 300
-            )
-            .ignoresSafeArea()
-            .opacity(0.8)
-            
-            VStack(spacing: 0) {
-                // Header
-                ZStack(alignment: .center) {
-                    // Back button layer
-                    HStack {
-                        Button(action: onBack) {
-                            Image(systemName: "arrow.left")
-                                .font(.system(size: 24))
-                                .foregroundStyle(.white.opacity(0.8))
-                                .frame(width: 44, height: 44)
-                        }
-                        Spacer()
+        GeometryReader { geo in
+            let sx = geo.size.width / 393
+            let sy = geo.size.height / 852
+
+            ZStack(alignment: .topLeading) {
+                DesignTokens.Colors.background
+
+                // Figma 257:1659: ellipse x -30, #4F31EC@0.29, blur 514
+                EllipseGlowBackground(sx: sx, sy: sy, xOffset: -30)
+
+                // Figma 257:1760: step 4/6
+                OnboardingStepper(currentStep: 4)
+                    .frame(width: 353 * sx)
+                    .parityPosition(x: 20 * sx, y: 76 * sy)
+
+                // Figma 257:1833: glass card (13,151) 353×484, r16, clipped
+                factCard(sx: sx, sy: sy)
+                    .frame(width: 353 * sx, height: 484 * sy)
+                    .parityPosition(x: 13 * sx, y: 151 * sy)
+
+                // Figma 282:2343: bottom bar at (19,703), w 355, gap 16
+                HStack(spacing: 16 * sx) {
+                    GlassBackButton(action: onBack)
+                        .accessibilityIdentifier("didyouknow.backButton")
+
+                    PrimaryButton(title: "Wow Tell Me More", icon: nil) {
+                        onContinue()
                     }
-                    .padding(.horizontal, 20)
-                    
-                    // Centered text layer
-                    Text("STEP 3 OF 5")
-                        .font(.system(size: 12, weight: .semibold))
-                        .tracking(1.5)
-                        .foregroundStyle(.white.opacity(0.6))
+                    .accessibilityIdentifier("didyouknow.continueButton")
                 }
-                .frame(height: 44)
-                .padding(.top, 10)
-                .opacity(showContent ? 1 : 0)
-                
-                // Centered title during typewriter
-                if titleInCenter {
-                    Spacer()
-                    
-                    Text(titleText)
-                        .font(.system(size: 32, weight: .bold))
-                        .tracking(2)
-                        .foregroundStyle(Color(hex: "FFD700"))
-                        .padding(.horizontal, 32)
-                    
-                    Spacer()
-                } else {
-                    Spacer()
-                    
-                    VStack(spacing: 0) {
-                        // Title at top after slide up
-                        Text(titleText)
-                            .font(.system(size: 14, weight: .bold))
-                            .tracking(2)
-                            .foregroundStyle(Color(hex: "FFD700"))
-                            .opacity(0.9)
-                            .padding(.bottom, 32)
-                            .frame(height: 20)
-                        
-                        VStack(spacing: 0) {
-                            ZStack {
-                                Circle()
-                                    .fill(Color(hex: "FFD700").opacity(0.2))
-                                    .frame(width: 250, height: 250)
-                                    .blur(radius: 60)
-                                
-                                LottieView(
-                                    name: "Brain Creative Ideas Animation",
-                                    loopMode: .loop,
-                                    animationSpeed: 1.0,
-                                    tintColor: .white
-                                )
-                                .frame(width: 280, height: 280)
-                                .shadow(color: Color(hex: "FFD700").opacity(0.3), radius: 30)
-                            }
-                            .frame(height: 320)
-                            .padding(.bottom, 20)
-                            .opacity(showContent ? 1 : 0)
-                            
-                            VStack(spacing: 24) {
-                                Text(bodyText1)
-                                    .font(.system(size: 22, weight: .regular))
-                                    .multilineTextAlignment(.center)
-                                    .lineLimit(nil)
-                                    .minimumScaleFactor(0.8)
-                                    .fixedSize(horizontal: false, vertical: true)
-                                    .foregroundStyle(.white)
-                                    .padding(.horizontal, 24)
-                                
-                                Text(bodyText2)
-                                    .font(.system(size: 18))
-                                    .foregroundStyle(.white.opacity(0.7))
-                                    .multilineTextAlignment(.center)
-                                    .lineSpacing(6)
-                            }
-                            .padding(.horizontal, 32)
-                            
-                            Spacer()
-                            
-                            if showButton {
-                                Button(action: onContinue) {
-                                    HStack {
-                                        Text("Wow, tell me more")
-                                            .font(.system(size: 18, weight: .bold))
-                                            .tracking(0.5)
-                                        
-                                        Image(systemName: "arrow.right")
-                                            .font(.system(size: 18, weight: .bold))
-                                    }
-                                    .foregroundStyle(.black)
-                                    .frame(maxWidth: .infinity)
-                                    .frame(height: 56)
-                                    .background(Color(hex: "FFD700"))
-                                    .clipShape(RoundedRectangle(cornerRadius: 16))
-                                    .shadow(color: Color(hex: "FFD700").opacity(0.3), radius: 20)
-                                }
-                                .padding(.horizontal, 24)
-                                .padding(.bottom, 20)
-                                .transition(.opacity.combined(with: .move(edge: .bottom)))
-                            }
-                        }
-                    }
-                }
+                .frame(width: 355 * sx)
+                .parityPosition(x: 19 * sx, y: 703 * sy)
             }
+            .ignoresSafeArea()
         }
-        .onAppear {
-            runTypewriterAnimation()
-        }
+        .ignoresSafeArea()
+        .accessibilityIdentifier("didyouknow.root")
     }
-    
-    private func runTypewriterAnimation() {
-        guard titleText.isEmpty else { return }
-        
-        let haptic = UIImpactFeedbackGenerator(style: .light)
-        haptic.prepare()
-        
-        // Type title character by character
-        for (index, char) in fullTitle.enumerated() {
-            let delay = Double(index) * 0.08
-            DispatchQueue.main.asyncAfter(deadline: .now() + delay) {
-                titleText.append(char)
-                haptic.impactOccurred(intensity: 0.5)
-            }
+
+    // MARK: - Fact card (Figma 257:1833)
+
+    private func factCard(sx: CGFloat, sy: CGFloat) -> some View {
+        ZStack(alignment: .topLeading) {
+            // Figma 257:1830: abstract texture, card-rel (-180,-118) 713×635,
+            // flipped horizontally, op 0.2, softened by the panel backdrop-blur
+            Image("AbstractGradient")
+                .resizable()
+                .frame(width: 713 * 1.2086 * sx, height: 635 * sy)
+                .parityPosition(x: 713 * -0.0276 * sx, y: 0)
+                .blur(radius: 28)
+                .frame(width: 713 * sx, height: 635 * sy, alignment: .topLeading)
+                .clipped()
+                .scaleEffect(x: -1, y: 1)
+                .opacity(0.20)
+                .parityPosition(x: -180 * sx, y: -118 * sy)
+
+            // Figma 257:1834: glass surface below texts/images
+            Color.clear
+                .figmaGlassSurface(cornerRadius: DesignTokens.Radii.card, compact: false)
+                .frame(width: 353 * sx, height: 484 * sy)
+
+            // Figma 258:1840: cosmic texture, card-rel (-98,-83) 493×329, op 0.6
+            Image("CosmicTexture")
+                .resizable()
+                .frame(width: 493 * sx, height: 329 * sy)
+                .parityPosition(x: -98 * sx, y: -83 * sy)
+                .opacity(0.60)
+
+            // Figma 257:1836: owl illustration, card-rel (80,18) 194×194
+            Image("ScienceOwl")
+                .resizable()
+                .frame(width: 194 * sx, height: 194 * sy)
+                .parityPosition(x: 80 * sx, y: 18 * sy)
+
+            // Figma 258:1843: Bitter SemiBold 26/1.2 #FCD471, centered
+            Text("Did you know?")
+                .font(DesignTokens.Typography.h1)
+                .foregroundStyle(DesignTokens.Colors.secondary)
+                .multilineTextAlignment(.center)
+                .frame(width: 323 * sx)
+                .parityPosition(x: 15 * sx, y: 246 * sy)
+
+            // Figma 258:1844: Poppins Medium 16/24 #EBEBEB, centered
+            Text("Neuroscience shows that practicing gratitude for 21 days physically rewires your brain.")
+                .font(DesignTokens.Typography.bodyMedium)
+                .foregroundStyle(DesignTokens.Colors.textPrimary)
+                .multilineTextAlignment(.center)
+                .lineSpacing(poppinsLineSpacing)
+                .frame(width: 307 * sx)
+                // 289 in Figma; +1.33 absorbs SwiftUI half-leading (measured)
+                .parityPosition(x: 23 * sx, y: 290.33 * sy)
+
+            // Figma 258:1845: Poppins Medium 16/24 #B9B9B9, centered
+            Text("It boosts happiness levels by 25% and improves long-term mental clarity.")
+                .font(DesignTokens.Typography.bodyMedium)
+                .foregroundStyle(DesignTokens.Colors.textSecondary)
+                .multilineTextAlignment(.center)
+                .lineSpacing(poppinsLineSpacing)
+                .frame(width: 323 * sx)
+                // 385 in Figma; +1.33 absorbs SwiftUI half-leading (measured)
+                .parityPosition(x: 15 * sx, y: 386.33 * sy)
         }
-        
-        // After typing completes, wait a bit then slide up
-        let slideUpDelay = Double(fullTitle.count) * 0.08 + 0.5
-        DispatchQueue.main.asyncAfter(deadline: .now() + slideUpDelay) {
-            withAnimation(.spring(response: 0.6, dampingFraction: 0.8)) {
-                titleInCenter = false
-            }
-            
-            // Show icon after slide up
-            DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
-                withAnimation(.easeIn(duration: 0.5)) {
-                    showContent = true
-                }
-                
-                // Start typing body text 1
-                DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
-                    typeBodyText1()
-                }
-            }
-        }
+        .frame(width: 353 * sx, height: 484 * sy, alignment: .topLeading)
+        .clipShape(RoundedRectangle(cornerRadius: DesignTokens.Radii.card))
     }
-    
-    private func typeBodyText1() {
-        let haptic = UIImpactFeedbackGenerator(style: .light)
-        
-        for (index, char) in fullBody1.enumerated() {
-            let delay = Double(index) * 0.03
-            DispatchQueue.main.asyncAfter(deadline: .now() + delay) {
-                bodyText1.append(char)
-                if index % 3 == 0 {
-                    haptic.impactOccurred(intensity: 0.3)
-                }
-            }
-        }
-        
-        // Start typing body text 2
-        let body2Delay = Double(fullBody1.count) * 0.03 + 0.3
-        DispatchQueue.main.asyncAfter(deadline: .now() + body2Delay) {
-            typeBodyText2()
-        }
-    }
-    
-    private func typeBodyText2() {
-        let haptic = UIImpactFeedbackGenerator(style: .light)
-        
-        for (index, char) in fullBody2.enumerated() {
-            let delay = Double(index) * 0.03
-            DispatchQueue.main.asyncAfter(deadline: .now() + delay) {
-                bodyText2.append(char)
-                if index % 3 == 0 {
-                    haptic.impactOccurred(intensity: 0.3)
-                }
-            }
-        }
-        
-        // Show button after all text is typed
-        let buttonDelay = Double(fullBody2.count) * 0.03 + 0.3
-        DispatchQueue.main.asyncAfter(deadline: .now() + buttonDelay) {
-            withAnimation(.easeIn(duration: 0.5)) {
-                showButton = true
-            }
-        }
+
+    /// Poppins 16 with Figma line-height 24px.
+    private var poppinsLineSpacing: CGFloat {
+        let font = UIFont(name: "Poppins-Medium", size: 16) ?? .systemFont(ofSize: 16)
+        return max(0, 24 - font.lineHeight)
     }
 }
 
 #Preview {
-    ScienceStepView(
-        onContinue: {},
-        onBack: {}
-    )
+    ScienceStepView(onContinue: {}, onBack: {}, parityMode: true)
 }
-
-

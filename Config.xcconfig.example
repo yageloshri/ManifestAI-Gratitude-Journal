@@ -1,0 +1,7 @@
+// Config.xcconfig.example
+// Copy this file to Config.xcconfig and fill in your API keys.
+// Config.xcconfig is gitignored and will not be committed.
+
+UNSPLASH_ACCESS_KEY = your_unsplash_key_here
+GEMINI_API_KEY = your_gemini_key_here
+SUPERWALL_API_KEY = your_superwall_key_here

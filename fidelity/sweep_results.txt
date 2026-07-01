@@ -1,0 +1,23 @@
+subscription: diff_pixels=50332 total=2836674 pct=1.774% PASS 
+home: diff_pixels=721605 total=2836674 pct=25.438% FAIL 
+method369: diff_pixels=11946 total=2836674 pct=0.421% PASS 
+howitworks: diff_pixels=18695 total=2836674 pct=0.659% PASS 
+setintention: diff_pixels=23280 total=2836674 pct=0.821% PASS (elemento drawn live + glyph+glow crop)
+ritual_morning: diff_pixels=22022 total=2836674 pct=0.776% PASS (elemento drawn live + glyph+glow crop)
+ritual_afternoon: diff_pixels=21785 total=2836674 pct=0.768% PASS (elemento drawn live + glyph+glow crop)
+ritual_night: diff_pixels=21761 total=2836674 pct=0.767% PASS (elemento drawn live + glyph+glow crop)
+journal_empty: diff_pixels=18541 total=2836674 pct=0.654% PASS
+journal_list: diff_pixels=30242 total=2836674 pct=1.066% PASS
+journal_write: diff_pixels=12909 total=2836674 pct=0.455% PASS 
+journal_entry: diff_pixels=17768 total=2836674 pct=0.626% PASS 
+vision_empty: diff_pixels=22314 total=2836674 pct=0.787% PASS
+vision_category: diff_pixels=41395 total=2836674 pct=1.459% PASS 
+vision_upload: diff_pixels=10618 total=2836674 pct=0.374% PASS
+vision_photos: diff_pixels=10197 total=2836674 pct=0.359% PASS
+profile: diff_pixels=20166 total=2836674 pct=0.711% PASS
+personalinfo: diff_pixels=14232 total=2836674 pct=0.502% PASS 
+personalinfo_edit: diff_pixels=25245 total=2836674 pct=0.890% PASS 
+dailyreminders: diff_pixels=19414 total=2836674 pct=0.684% PASS
+upgradepro: diff_pixels=50318 total=2836674 pct=1.774% PASS
+commitment: diff_pixels=33370 total=2836674 pct=1.176% PASS (elemento drawn live + glyph+glow crop)
+category: diff_pixels=44972 total=2836674 pct=1.585% PASS (elementos drawn live + glyph+glow crops)

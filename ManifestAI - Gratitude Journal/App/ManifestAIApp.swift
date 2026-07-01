@@ -7,22 +7,44 @@ struct ManifestAIApp: App {
     @StateObject private var appState = AppState.shared
     
     init() {
-        Superwall.configure(apiKey: "pk_9nLkGzwmrqk-gso1NsP5Z")
-        
-        // Set up Superwall delegate to track subscription status
-        Superwall.shared.delegate = SuperwallDelegateHandler.shared
-        
+        if Secrets.superwallApiKey.isEmpty {
+            print("⚠️ Superwall API key missing — paywall features will be unavailable")
+        } else {
+            Superwall.configure(apiKey: Secrets.superwallApiKey)
+            Superwall.shared.delegate = SuperwallDelegateHandler.shared
+        }
+
         print("🚀 App initialized")
     }
     
     var body: some Scene {
         WindowGroup {
+            rootView
+        }
+        .modelContainer(for: [JournalEntry.self, VisionBoardEntity.self])
+    }
+
+    @ViewBuilder
+    private var rootView: some View {
+        #if DEBUG
+        if let parityScreen = ParityScreen.fromLaunchArguments() {
+            ParityGalleryView(screen: parityScreen)
+                .preferredColorScheme(.dark)
+        } else {
+            mainContent
+        }
+        #else
+        mainContent
+        #endif
+    }
+
+    private var mainContent: some View {
             Group {
                 if appState.hasCompletedOnboarding {
-                    DashboardView()
+                    MainTabView()
                         .transition(.opacity)
                         .onAppear {
-                            print("📱 ManifestAIApp: DashboardView is now visible")
+                            print("📱 ManifestAIApp: MainTabView is now visible")
                         }
                 } else {
                     OnboardingContainerView()
@@ -37,7 +59,5 @@ struct ManifestAIApp: App {
             .onChange(of: appState.hasCompletedOnboarding) { oldValue, newValue in
                 print("🔄 ManifestAIApp: hasCompletedOnboarding changed: \(oldValue) -> \(newValue)")
             }
-        }
-        .modelContainer(for: [JournalEntry.self, VisionBoardEntity.self])
     }
 }
