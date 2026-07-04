@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+# TODO(owner): update the domain below once this site is deployed to production
+Sitemap: https://manifestai.app/sitemap.xml
