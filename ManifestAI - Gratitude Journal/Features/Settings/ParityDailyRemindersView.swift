@@ -1,23 +1,65 @@
 // ParityDailyRemindersView.swift
-// Figma: "Daily Reminders" frame (331:2779) — My Profile screen with the
-// reminders toggle state, 393×951 (scrollable).
-// All geometry from fidelity/specs/dailyreminders.txt — do not eyeball values.
-// Content lives at exact Figma coordinates inside a ScrollView (scrolling
-// disabled in parityMode) so the visible top 852pt match the frame's top
-// 852pt. sy stays geo.height/852.
+// Figma: "Daily Reminders" frame (331:2779) — My Profile screen, 393×951
+// (scrollable). Geometry below the profile card is a hand-reflowed layout
+// (retention-plan.md §3.5): the single Figma "Daily Reminders" switch is
+// replaced with 3 independent per-window toggles (Morning/Afternoon/Evening),
+// so it intentionally departs from strict pixel parity from this point down
+// — everything above (title, profile card, section label, the two settings
+// rows) is untouched Figma-exact geometry. Content lives at fixed coordinates
+// inside a ScrollView (scrolling disabled in parityMode). sy stays
+// geo.height/852, matching the original frame's scale convention.
+//
+// This is the dedicated notification-settings screen for §3.5 — it isn't
+// wired into live navigation yet (that's MainTabView/ParityProfileView,
+// owned by another engineer mid-edit). It reads/writes real
+// NotificationManager369 state directly so it's functional as soon as a
+// route is added; see the integration note returned with this change.
 
 import SwiftUI
+import UserNotifications
 
 struct ParityDailyRemindersView: View {
     // mock-friendly inputs, defaults match the Figma frame exactly
     var userName: String = "Ali Ahmad"
     var avatarInitial: String = "A"
     var personalDayNumber: Int = 1
-    var remindersOn: Bool = true
     var onSelectTab: (FigmaTab) -> Void = { _ in }
     var onSelectRow: (String) -> Void = { _ in }
-    /// Parity gallery: fixed mock data matching the Figma frame.
+    /// Parity gallery: fixed mock data matching the Figma frame (all 3
+    /// reminder toggles ON, matching the original single-switch ON state).
     var parityMode: Bool = false
+
+    // §3.5: three independent reminder toggles, backed by
+    // NotificationManager369 (separate UserDefaults keys) instead of one
+    // all-or-nothing switch. Seeded from real device state unless parityMode
+    // asks for the fixed mock (all ON).
+    @State private var morningOn: Bool
+    @State private var afternoonOn: Bool
+    @State private var eveningOn: Bool
+
+    init(userName: String = "Ali Ahmad",
+         avatarInitial: String = "A",
+         personalDayNumber: Int = 1,
+         onSelectTab: @escaping (FigmaTab) -> Void = { _ in },
+         onSelectRow: @escaping (String) -> Void = { _ in },
+         parityMode: Bool = false) {
+        self.userName = userName
+        self.avatarInitial = avatarInitial
+        self.personalDayNumber = personalDayNumber
+        self.onSelectTab = onSelectTab
+        self.onSelectRow = onSelectRow
+        self.parityMode = parityMode
+
+        if parityMode {
+            _morningOn = State(initialValue: true)
+            _afternoonOn = State(initialValue: true)
+            _eveningOn = State(initialValue: true)
+        } else {
+            _morningOn = State(initialValue: NotificationManager369.shared.isMorningEnabled())
+            _afternoonOn = State(initialValue: NotificationManager369.shared.isAfternoonEnabled())
+            _eveningOn = State(initialValue: NotificationManager369.shared.isEveningEnabled())
+        }
+    }
 
     var body: some View {
         GeometryReader { geo in
@@ -29,7 +71,7 @@ struct ParityDailyRemindersView: View {
 
                 ScrollView(.vertical, showsIndicators: false) {
                     content(sx: sx, sy: sy)
-                        .frame(width: 393 * sx, height: 951 * sy, alignment: .topLeading)
+                        .frame(width: 393 * sx, height: 1130 * sy, alignment: .topLeading)
                 }
                 .scrollDisabled(parityMode)
             }
@@ -39,7 +81,9 @@ struct ParityDailyRemindersView: View {
         .accessibilityIdentifier("dailyreminders.root")
     }
 
-    // MARK: - 951pt content canvas
+    // MARK: - 1130pt content canvas
+    // (was 951pt around the single Daily Reminders row; grown to fit the
+    // 3-toggle notifications card added by §3.5 — see file header.)
 
     private func content(sx: CGFloat, sy: CGFloat) -> some View {
         ZStack(alignment: .topLeading) {
@@ -77,31 +121,40 @@ struct ParityDailyRemindersView: View {
                         showArrow: true, rowId: "upgradePro")
                 .parityPosition(x: 20 * sx, y: 458 * sy)
 
-            // Figma 331:2886: Daily Reminders row (20,536) with Switch 331:2946
-            remindersRow(sx: sx, sy: sy)
-                .parityPosition(x: 20 * sx, y: 536 * sy)
+            // §3.5 replaces the single Figma 331:2886 "Daily Reminders" row
+            // with a section label + a 3-row notifications card (Morning /
+            // Afternoon / Evening), same visual language (glass card, same
+            // fonts/switch) but no longer 1:1 with the Figma frame.
+            Text("Notifications")
+                .font(DesignTokens.Typography.bodyMedium)
+                .foregroundStyle(DesignTokens.Colors.textSecondary)
+                .parityPosition(x: 20 * sx + 1.67, y: 536 * sy + 1.33)
 
-            // Figma 331:2899: Support row (20,614)
+            notificationWindowsCard(sx: sx, sy: sy)
+                .parityPosition(x: 20 * sx, y: 576 * sy)
+
+            // Support row — shifted down from the original 614 to make room
+            // for the 3-row notifications card above.
             settingsRow(sx: sx, sy: sy,
                         title: "Support", subtitle: "Any question?",
                         icon: "ProfileIcon_Support", // baked crop (same glyph as profile)
                         showArrow: true, rowId: "support")
-                .parityPosition(x: 20 * sx, y: 614 * sy)
+                .parityPosition(x: 20 * sx, y: 784 * sy)
 
-            // Figma 331:2916: Privacy Policy row (20,692)
+            // Privacy Policy row — shifted down from the original 692.
             settingsRow(sx: sx, sy: sy,
                         title: "Privacy Policy", subtitle: "Name, DOD",
                         icon: "ProfileIcon_Privacy", // baked crop (same glyph as profile)
                         showArrow: true, rowId: "privacyPolicy")
-                .parityPosition(x: 20 * sx, y: 692 * sy)
+                .parityPosition(x: 20 * sx, y: 862 * sy)
 
-            // Figma 331:2931: Log out row (20,770)
+            // Log out row — shifted down from the original 770.
             logoutRow(sx: sx, sy: sy)
-                .parityPosition(x: 20 * sx, y: 770 * sy)
+                .parityPosition(x: 20 * sx, y: 940 * sy)
 
-            // Figma 331:2782: tab bar group at (0,873,393,78), Profile active
+            // Tab bar group — shifted down from the original 873.
             FigmaTabBar(active: .profile, onSelect: onSelectTab, sx: sx, sy: sy)
-                .parityPosition(x: 0, y: 873 * sy)
+                .parityPosition(x: 0, y: 1043 * sy)
         }
     }
 
@@ -167,6 +220,8 @@ struct ParityDailyRemindersView: View {
             Text("Personal Day Number: \(personalDayNumber)")
                 .font(DesignTokens.Typography.smallMedium)
                 .foregroundStyle(DesignTokens.Gradients.golden)
+                .lineLimit(1)
+                .minimumScaleFactor(0.75)
                 .frame(width: 168 * sx, alignment: .center)
                 .parityPosition(x: 93 * sx, y: 144 * sy)
         }
@@ -249,36 +304,134 @@ struct ParityDailyRemindersView: View {
         .accessibilityIdentifier("dailyreminders.row.\(rowId)")
     }
 
-    // Daily Reminders (Figma 331:2886 bg + 331:2888 content + 331:2946 Switch)
-    private func remindersRow(sx: CGFloat, sy: CGFloat) -> some View {
+    // MARK: - §3.5 notifications card (3 independent per-window toggles)
+    // Not a Figma 1:1 — see file header. Same glass-card visual language as
+    // the settings rows above; internal layout is row-relative like
+    // `profileCard`.
+
+    private func notificationWindowsCard(sx: CGFloat, sy: CGFloat) -> some View {
         ZStack(alignment: .topLeading) {
             Color.clear
                 .figmaGlassSurface(cornerRadius: DesignTokens.Radii.card,
                                    compact: true, insetStroke: true)
 
-            // Figma 331:2889: icon (frame 36,553.5 → row-rel 16,17.5)
-            bakedRowIcon("ProfileIcon_Bell", sx: sx, sy: sy)
-                .parityPosition(x: 10 * sx, y: 11 * sy)
+            reminderWindowRow(sx: sx, sy: sy,
+                               icon: "GlyphRitualMorning",
+                               title: "Morning Ritual", subtitle: "8:00 AM · 3 lines",
+                               isOn: morningOn, accessibilityId: "dailyreminders.morningSwitch",
+                               onToggle: toggleMorning)
+                .parityPosition(x: 0, y: 0)
 
-            // Figma 331:2897 (frame 80,548 → row-rel 60,12)
-            Text("Daily Reminders")
+            Rectangle()
+                .fill(DesignTokens.Colors.glassBorder.opacity(0.35))
+                .frame(width: 327 * sx, height: 1)
+                .parityPosition(x: 12 * sx, y: 64 * sy)
+
+            reminderWindowRow(sx: sx, sy: sy,
+                               icon: "GlyphRitualAfternoon",
+                               title: "Afternoon Ritual", subtitle: "2:00 PM · 6 lines",
+                               isOn: afternoonOn, accessibilityId: "dailyreminders.afternoonSwitch",
+                               onToggle: toggleAfternoon)
+                .parityPosition(x: 0, y: 64 * sy)
+
+            Rectangle()
+                .fill(DesignTokens.Colors.glassBorder.opacity(0.35))
+                .frame(width: 327 * sx, height: 1)
+                .parityPosition(x: 12 * sx, y: 128 * sy)
+
+            reminderWindowRow(sx: sx, sy: sy,
+                               icon: "GlyphRitualNight",
+                               title: "Evening Ritual", subtitle: "8:00 PM · 9 lines",
+                               isOn: eveningOn, accessibilityId: "dailyreminders.eveningSwitch",
+                               onToggle: toggleEvening)
+                .parityPosition(x: 0, y: 128 * sy)
+        }
+        .frame(width: 351 * sx, height: 192 * sy, alignment: .topLeading)
+        .accessibilityIdentifier("dailyreminders.row.notifications")
+    }
+
+    /// One 64pt-tall toggle row inside `notificationWindowsCard` — same
+    /// title/subtitle/switch layout as the old single reminders row.
+    private func reminderWindowRow(sx: CGFloat, sy: CGFloat,
+                                    icon: String, title: String, subtitle: String,
+                                    isOn: Bool, accessibilityId: String,
+                                    onToggle: @escaping () -> Void) -> some View {
+        ZStack(alignment: .topLeading) {
+            Image(icon)
+                .resizable()
+                .frame(width: 38 * sx, height: 38 * sy)
+                .parityPosition(x: 12 * sx, y: 13 * sy)
+                .accessibilityHidden(true)
+
+            Text(title)
                 .font(DesignTokens.Typography.smallMedium)
                 .foregroundStyle(DesignTokens.Colors.textPrimary)
                 .parityPosition(x: 60 * sx, y: 12 * sy)
 
-            // Figma 331:2898 (frame 80,573 → row-rel 60,37)
-            Text("Get All notifications")
+            Text(subtitle)
                 .font(DesignTokens.Typography.label)
                 .foregroundStyle(DesignTokens.Colors.textSecondary)
                 .parityPosition(x: 60 * sx, y: 37 * sy)
 
-            // Figma 331:2946: Switch ON (frame 291,555 → row-rel 271,19) 56×32
-            glassSwitch(on: remindersOn)
-                .parityPosition(x: 271 * sx, y: 19 * sy)
-                .accessibilityIdentifier("dailyreminders.remindersSwitch")
+            glassSwitch(on: isOn)
+                .parityPosition(x: 271 * sx, y: 16 * sy)
         }
-        .frame(width: 351 * sx, height: 70 * sy, alignment: .topLeading)
-        .accessibilityIdentifier("dailyreminders.row.dailyReminders")
+        .frame(width: 351 * sx, height: 64 * sy, alignment: .topLeading)
+        .contentShape(Rectangle())
+        .onTapGesture { onToggle() }
+        .accessibilityElement(children: .ignore)
+        .accessibilityLabel(title)
+        .accessibilityValue(isOn ? "On" : "Off")
+        .accessibilityAddTraits(.isToggle)
+        .accessibilityIdentifier(accessibilityId)
+    }
+
+    // MARK: - §3.5 toggle handlers
+    // Same "denied → open Settings, undetermined → request, else flip"
+    // pattern as MainTabView.toggleReminders(), applied per-window.
+
+    private func toggleMorning() {
+        setWindow(morningOn, apply: NotificationManager369.shared.setMorningEnabled) { morningOn = $0 }
+    }
+
+    private func toggleAfternoon() {
+        setWindow(afternoonOn, apply: NotificationManager369.shared.setAfternoonEnabled) { afternoonOn = $0 }
+    }
+
+    private func toggleEvening() {
+        setWindow(eveningOn, apply: NotificationManager369.shared.setEveningEnabled) { eveningOn = $0 }
+    }
+
+    private func setWindow(_ isOn: Bool, apply: @escaping (Bool) -> Void, update: @escaping (Bool) -> Void) {
+        if isOn {
+            update(false)
+            apply(false)
+            return
+        }
+        guard !parityMode else {
+            update(true) // gallery/preview: no real permission plumbing
+            return
+        }
+        UNUserNotificationCenter.current().getNotificationSettings { settings in
+            DispatchQueue.main.async {
+                switch settings.authorizationStatus {
+                case .denied:
+                    if let url = URL(string: UIApplication.openSettingsURLString) {
+                        UIApplication.shared.open(url)
+                    }
+                case .authorized, .provisional:
+                    update(true)
+                    apply(true)
+                default:
+                    NotificationManager369.shared.requestPermission { granted in
+                        DispatchQueue.main.async {
+                            update(granted)
+                            if granted { apply(true) }
+                        }
+                    }
+                }
+            }
+        }
     }
 
     // Log out (Figma 331:2931) — red glow icon, single label

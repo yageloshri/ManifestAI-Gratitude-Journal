@@ -102,3 +102,32 @@ struct GridImageCellView: View {
             }
     }
 }
+
+/// Placeholder for a template cell that has no photo yet (Task 2: templates
+/// have a fixed cell count independent of how many photos are loaded, so
+/// there can be empty cells; Task 3: those must render the same card
+/// background used elsewhere in the app — never black). Tapping it opens a
+/// single-photo picker scoped to just this cell.
+struct EmptyGridCellView: View {
+    let cell: GridCell
+    var onTap: () -> Void = {}
+
+    var body: some View {
+        ZStack {
+            RoundedRectangle(cornerRadius: 6, style: .continuous)
+                .fill(DesignTokens.Colors.surfaceDark.opacity(0.6))
+
+            RoundedRectangle(cornerRadius: 6, style: .continuous)
+                .strokeBorder(style: StrokeStyle(lineWidth: 1, dash: [5, 4]))
+                .foregroundStyle(.white.opacity(0.22))
+
+            Image(systemName: "plus")
+                .font(.system(size: min(cell.width, cell.height) * 0.18, weight: .semibold))
+                .foregroundStyle(.white.opacity(0.35))
+        }
+        .frame(width: cell.width, height: cell.height)
+        .contentShape(Rectangle())
+        .offset(x: cell.x, y: cell.y)
+        .onTapGesture(perform: onTap)
+    }
+}

@@ -12,6 +12,7 @@
 		0266CA0F2EFDE605009630BE /* ManifestWidgetsExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 0266C9F92EFDE601009630BE /* ManifestWidgetsExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		0266CAD72EFDF789009630BE /* SuperwallKit in Frameworks */ = {isa = PBXBuildFile; productRef = 0266CAD62EFDF789009630BE /* SuperwallKit */; };
 		0266CADA2EFE03A9009630BE /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = 0266CAD92EFE03A9009630BE /* Lottie */; };
+		FB1A2B3C4D5E6F0000000001 /* FirebaseMessaging in Frameworks */ = {isa = PBXBuildFile; productRef = FB1A2B3C4D5E6F0000000002 /* FirebaseMessaging */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -99,6 +100,7 @@
 			files = (
 				0266CAD72EFDF789009630BE /* SuperwallKit in Frameworks */,
 				0266CADA2EFE03A9009630BE /* Lottie in Frameworks */,
+				FB1A2B3C4D5E6F0000000001 /* FirebaseMessaging in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -168,6 +170,7 @@
 			packageProductDependencies = (
 				0266CAD62EFDF789009630BE /* SuperwallKit */,
 				0266CAD92EFE03A9009630BE /* Lottie */,
+				FB1A2B3C4D5E6F0000000002 /* FirebaseMessaging */,
 			);
 			productName = "ManifestAI - Gratitude Journal";
 			productReference = 0266C9162EFC67D2009630BE /* ManifestAI - Gratitude Journal.app */;
@@ -225,6 +228,7 @@
 			packageReferences = (
 				0266CAD52EFDF789009630BE /* XCRemoteSwiftPackageReference "Superwall-iOS" */,
 				0266CAD82EFE03A9009630BE /* XCRemoteSwiftPackageReference "lottie-ios" */,
+				FB1A2B3C4D5E6F0000000003 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 0266C9172EFC67D2009630BE /* Products */;
@@ -488,7 +492,7 @@
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
 				CODE_SIGN_ENTITLEMENTS = ManifestWidgetsExtension.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_TEAM = 2GP242AXJ8;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = ManifestWidgets/Info.plist;
@@ -517,7 +521,7 @@
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
 				CODE_SIGN_ENTITLEMENTS = ManifestWidgetsExtension.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_TEAM = 2GP242AXJ8;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = ManifestWidgets/Info.plist;
@@ -588,6 +592,14 @@
 				minimumVersion = 4.5.2;
 			};
 		};
+		FB1A2B3C4D5E6F0000000003 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 11.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -600,6 +612,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 0266CAD82EFE03A9009630BE /* XCRemoteSwiftPackageReference "lottie-ios" */;
 			productName = Lottie;
+		};
+		FB1A2B3C4D5E6F0000000002 /* FirebaseMessaging */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FB1A2B3C4D5E6F0000000003 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseMessaging;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

@@ -9,6 +9,7 @@ struct ParityVisionBoardsView: View {
     var boards: [VisionBoardEntity] = []
     var onCreateBoard: () -> Void = {}
     var onDeleteBoard: (VisionBoardEntity) -> Void = { _ in }
+    var onEditBoard: (VisionBoardEntity) -> Void = { _ in }
     var onSelectTab: (FigmaTab) -> Void = { _ in }
 
     @State private var viewing: VisionBoardEntity?
@@ -101,8 +102,36 @@ struct ParityVisionBoardsView: View {
                     .padding(8)
             }
         }
+        .overlay(alignment: .topTrailing) {
+            // Small edit affordance directly on the card, in addition to the
+            // context menu and the fullscreen viewer's Edit action (Task 1).
+            Button {
+                onEditBoard(board)
+            } label: {
+                Image(systemName: "pencil")
+                    .font(.system(size: 12, weight: .semibold))
+                    .foregroundStyle(.white)
+                    .padding(7)
+                    .background(Color.black.opacity(0.45), in: Circle())
+            }
+            .buttonStyle(.plain)
+            .padding(8)
+            .accessibilityIdentifier("visionBoards.card.edit")
+        }
         .contentShape(Rectangle())
         .onTapGesture { viewing = board }
+        .contextMenu {
+            Button {
+                onEditBoard(board)
+            } label: {
+                Label("Edit Board", systemImage: "pencil")
+            }
+            Button(role: .destructive) {
+                onDeleteBoard(board)
+            } label: {
+                Label("Delete", systemImage: "trash")
+            }
+        }
         .accessibilityIdentifier("visionBoards.card")
     }
 
@@ -140,7 +169,11 @@ struct ParityVisionBoardsView: View {
                         .clipShape(RoundedRectangle(cornerRadius: DesignTokens.Radii.card))
                 }
 
-                HStack(spacing: 12 * sx) {
+                HStack(spacing: 8 * sx) {
+                    viewerAction("Edit", system: "pencil") {
+                        viewing = nil
+                        onEditBoard(board)
+                    }
                     viewerAction(savedToast ?? "Save to Photos",
                                  system: "square.and.arrow.down") {
                         if let data = board.previewImageData, let img = UIImage(data: data) {
@@ -188,7 +221,7 @@ struct ParityVisionBoardsView: View {
                 Text(title).font(DesignTokens.Typography.label)
             }
             .foregroundStyle(tint)
-            .frame(width: 96, height: 56)
+            .frame(width: 78, height: 56)
             .background(Color.white.opacity(0.08),
                         in: RoundedRectangle(cornerRadius: DesignTokens.Radii.smallCard))
         }

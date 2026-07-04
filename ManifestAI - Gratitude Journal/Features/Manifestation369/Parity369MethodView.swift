@@ -36,14 +36,19 @@ struct Parity369MethodView: View {
                     .accessibilityHidden(true) // decorative texture
 
                 // Figma 340:3230: SKIP (327,70,34,24) Poppins-Medium 16 #B9B9B9
+                // NOTE: the 34pt Figma frame is narrower than the rendered
+                // text, which forced a "SKI\nP" wrap. .fixedSize() keeps the
+                // label single-line; widening the frame + right-aligning
+                // preserves the original right edge (327+34=361) placement.
                 Text("SKIP")
                     .font(DesignTokens.Typography.bodyMedium)
                     .foregroundStyle(DesignTokens.Colors.textSecondary)
-                    .frame(width: 34 * sx, alignment: .center)
-                    // a11y/hit-target only: outset the 34pt frame to a ≥44pt tap area
+                    .fixedSize()
+                    .frame(width: 60 * sx, alignment: .trailing)
+                    // a11y/hit-target only: outset the frame to a ≥44pt tap area
                     .contentShape(Rectangle().inset(by: -10))
                     .onTapGesture { onSkip() }
-                    .parityPosition(x: 327 * sx, y: 70 * sy + 1.33 * sy)
+                    .parityPosition(x: 301 * sx, y: 70 * sy + 1.33 * sy)
                     .accessibilityLabel("Skip")
                     .accessibilityAddTraits(.isButton)
                     .accessibilityIdentifier("method369.skip")

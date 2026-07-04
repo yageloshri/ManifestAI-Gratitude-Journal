@@ -36,6 +36,10 @@ struct FigmaTabBar: View {
     var sx: CGFloat = 1
     var sy: CGFloat = 1
 
+    /// Landing animation: the gold indicator grows in and the active icon
+    /// springs up slightly every time a screen (and its bar) appears.
+    @State private var landed = false
+
     private let itemXs: [CGFloat] = [22, 96, 170, 244, 318]
 
     var body: some View {
@@ -69,10 +73,13 @@ struct FigmaTabBar: View {
                 )
 
             // gold active indicator — Figma: 38×4, bottom corners r12,
-            // x = itemX + 7.5 (e.g. 29.5 for tab 0, 251.5 for 369)
+            // x = itemX + 7.5 (e.g. 29.5 for tab 0, 251.5 for 369).
+            // Grows out from the center when the bar lands.
             UnevenRoundedRectangle(bottomLeadingRadius: 12, bottomTrailingRadius: 12)
                 .fill(DesignTokens.Gradients.golden)
                 .frame(width: 38 * sx, height: 4)
+                .scaleEffect(x: landed ? 1 : 0.15, anchor: .center)
+                .opacity(landed ? 1 : 0)
                 .parityPosition(x: (itemXs[active.rawValue] + (53 - 38) / 2) * sx, y: 0)
 
             ForEach(FigmaTab.allCases, id: \.rawValue) { tab in
@@ -80,6 +87,8 @@ struct FigmaTabBar: View {
                 VStack(spacing: 6) {
                     tabIcon(tab, isActive: isActive)
                         .frame(width: 24, height: 24)
+                        .scaleEffect(isActive && !landed ? 0.7 : 1)
+                        .offset(y: isActive && !landed ? 3 : 0)
                     Text(tab.label)
                         .font(DesignTokens.Typography.label)
                         .foregroundStyle(isActive
@@ -90,7 +99,11 @@ struct FigmaTabBar: View {
                 // a11y/hit-target only: outset shape enlarges the tap area to
                 // ≥44pt without touching layout (item pitch is 74pt, no overlap).
                 .contentShape(Rectangle().inset(by: -10))
-                .onTapGesture { onSelect(tab) }
+                .onTapGesture {
+                    guard tab != active else { return }
+                    UIImpactFeedbackGenerator(style: .light).impactOccurred()
+                    onSelect(tab)
+                }
                 .parityPosition(x: itemXs[tab.rawValue] * sx, y: 13 * sy)
                 .accessibilityElement(children: .ignore)
                 .accessibilityLabel(tab.label)
@@ -99,6 +112,11 @@ struct FigmaTabBar: View {
             }
         }
         .frame(width: 393 * sx, height: 78 * sy, alignment: .topLeading)
+        .onAppear {
+            withAnimation(.spring(response: 0.45, dampingFraction: 0.66)) {
+                landed = true
+            }
+        }
     }
 
     /// Figma icon glyphs are bespoke vectors; where a baked reference crop

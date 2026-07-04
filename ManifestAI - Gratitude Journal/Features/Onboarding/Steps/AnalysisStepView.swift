@@ -13,7 +13,9 @@ struct AnalysisStepView: View {
     var parityMode: Bool = false
 
     var personalYear: Int {
-        parityMode ? 3 : ((Calendar.current.component(.year, from: Date()) % 9) + 1)
+        parityMode
+            ? 3
+            : NumerologyService.shared.calculatePersonalYearNumber(birthDate: birthDate)
     }
 
     private var displayName: String {
@@ -36,17 +38,19 @@ struct AnalysisStepView: View {
                     .frame(width: 392 * sx, height: 853 * sy)
                     .parityPosition(x: 1 * sx, y: 0)
 
-                // Figma 271:526: badge (82,111) 229×53, r14
-                ZStack {
-                    Color.clear
-                        .figmaGlassSurface(cornerRadius: 14)
-                    Text("Analysis Complete, \(displayName)")
-                        .font(DesignTokens.Typography.h4)
-                        .foregroundStyle(DesignTokens.Colors.secondary)
-                        .multilineTextAlignment(.center)
-                }
-                .frame(width: 229 * sx, height: 53 * sy)
-                .parityPosition(x: 82 * sx, y: 111 * sy)
+                // Figma 271:526: badge (82,111) h53, r14 — width hugs the text
+                // (fixed 229pt clipped/wrapped longer names) and is truly
+                // centered on the screen.
+                Text("Analysis Complete, \(displayName)")
+                    .font(DesignTokens.Typography.h4)
+                    .foregroundStyle(DesignTokens.Colors.secondary)
+                    .lineLimit(1)
+                    .minimumScaleFactor(0.7)
+                    .padding(.horizontal, 24 * sx)
+                    .frame(height: 53 * sy)
+                    .figmaGlassSurface(cornerRadius: 14)
+                    .frame(width: 393 * sx, alignment: .center)
+                    .parityPosition(x: 0, y: 111 * sy)
 
                 // Figma 276:538: owl illustration (56,184) 281×207.7 —
                 // baked crop from the reference export (eliminates resampling
@@ -63,25 +67,27 @@ struct AnalysisStepView: View {
                     .parityPosition(x: 136 * sx, y: 399 * sy)
                     .blur(radius: 7)
 
-                // Figma 270:522: Poppins SemiBold 18/27 #EBEBEB (77,431,248)
-                Text("According to Numberology")
+                // Figma 270:522: Poppins SemiBold 18/27 #EBEBEB — centered
+                // (Figma frame sat ~4.5pt right of center; "Numberology" was a
+                // Figma typo, see docs/figma-typos-to-fix.md)
+                Text("According to Numerology")
                     .font(DesignTokens.Typography.bodySemibold18)
                     .foregroundStyle(DesignTokens.Colors.textPrimary)
                     .multilineTextAlignment(.center)
-                    .frame(width: 248 * sx)
-                    .parityPosition(x: 77 * sx, y: 431 * sy)
+                    .frame(width: 393 * sx, alignment: .center)
+                    .parityPosition(x: 0, y: 431 * sy)
 
-                // Figma 276:558: gold Elemento 88×88 r25.14 at (157,474) with "3"
+                // Figma 276:558: gold Elemento 88×88 r25.14 with "3" — centered
                 goldNumber(sx: sx, sy: sy)
-                    .parityPosition(x: 157 * sx, y: 474 * sy)
+                    .parityPosition(x: 152.5 * sx, y: 474 * sy)
 
-                // Figma 270:523: Poppins Medium 16/24 #EBEBEB (79,578,244)
+                // Figma 270:523: Poppins Medium 16/24 #EBEBEB — centered
                 Text("is your year of transformation")
                     .font(DesignTokens.Typography.bodyMedium)
                     .foregroundStyle(DesignTokens.Colors.textPrimary)
                     .multilineTextAlignment(.center)
-                    .frame(width: 244 * sx)
-                    .parityPosition(x: 79 * sx, y: 578 * sy)
+                    .frame(width: 393 * sx, alignment: .center)
+                    .parityPosition(x: 0, y: 578 * sy)
 
                 // Figma 282:2361: bottom bar (19.5,713)
                 HStack(spacing: 16 * sx) {
@@ -115,6 +121,18 @@ struct AnalysisStepView: View {
                 .blur(radius: 28)
                 .frame(width: 713 * sx, height: 635 * sy, alignment: .topLeading)
                 .clipped()
+                // fade the bottom edge — a hard cut left a visible seam line
+                // across the screen where the texture ended
+                .mask(
+                    LinearGradient(
+                        stops: [
+                            .init(color: .white, location: 0),
+                            .init(color: .white, location: 0.7),
+                            .init(color: .white.opacity(0), location: 1)
+                        ],
+                        startPoint: .top, endPoint: .bottom
+                    )
+                )
                 .opacity(0.10)
                 .parityPosition(x: -180 * sx, y: -118 * sy)
 
@@ -122,10 +140,21 @@ struct AnalysisStepView: View {
                 .figmaGlassSurface(cornerRadius: DesignTokens.Radii.card, compact: false)
                 .frame(width: 392 * sx, height: 853 * sy)
 
-            // Figma 270:443: cosmic texture rel (-334,-241) 955×637, op 0.70
+            // Figma 270:443: cosmic texture rel (-334,-241) 955×637, op 0.70 —
+            // bottom edge faded so the texture cut doesn't draw a seam line
             Image("CosmicTexture")
                 .resizable()
                 .frame(width: 955 * sx, height: 637 * sy)
+                .mask(
+                    LinearGradient(
+                        stops: [
+                            .init(color: .white, location: 0),
+                            .init(color: .white, location: 0.7),
+                            .init(color: .white.opacity(0), location: 1)
+                        ],
+                        startPoint: .top, endPoint: .bottom
+                    )
+                )
                 .parityPosition(x: -334 * sx, y: -241 * sy)
                 .opacity(0.70)
         }

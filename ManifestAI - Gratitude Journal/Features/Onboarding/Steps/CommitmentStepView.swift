@@ -13,6 +13,10 @@ struct CommitmentStepView: View {
 
     @State private var isHolding = false
     @State private var progress: CGFloat = 0
+    @State private var committed = false
+
+    /// How long the fingerprint must be held to commit.
+    private static let holdDuration: Double = 3.0
 
     var body: some View {
         GeometryReader { geo in
@@ -35,18 +39,11 @@ struct CommitmentStepView: View {
                     .frame(width: 353 * sx, height: 564 * sy)
                     .parityPosition(x: 21 * sx, y: 135 * sy)
 
-                // Figma 282:2370: bottom bar (19.5,737)
-                HStack(spacing: 16 * sx) {
-                    GlassBackButton(action: onBack)
-                        .accessibilityIdentifier("commitment.backButton")
-
-                    PrimaryButton(title: "Continue", icon: nil) {
-                        onComplete()
-                    }
-                    .accessibilityIdentifier("commitment.continueButton")
-                }
-                .frame(width: 355 * sx)
-                .parityPosition(x: 19.5 * sx, y: 737 * sy)
+                // Bottom bar: back button only — committing happens by
+                // holding the fingerprint for 3s, not via a Continue button.
+                GlassBackButton(action: onBack)
+                    .accessibilityIdentifier("commitment.backButton")
+                    .parityPosition(x: 19.5 * sx, y: 737 * sy)
             }
             .ignoresSafeArea()
         }
@@ -66,6 +63,17 @@ struct CommitmentStepView: View {
                 .blur(radius: 28)
                 .frame(width: 713 * sx, height: 635 * sy, alignment: .topLeading)
                 .clipped()
+                // fade the bottom edge — a hard cut leaves a seam line
+                .mask(
+                    LinearGradient(
+                        stops: [
+                            .init(color: .white, location: 0),
+                            .init(color: .white, location: 0.7),
+                            .init(color: .white.opacity(0), location: 1)
+                        ],
+                        startPoint: .top, endPoint: .bottom
+                    )
+                )
                 .opacity(0.20)
                 .parityPosition(x: -180 * sx, y: -118 * sy)
 
@@ -120,7 +128,7 @@ struct CommitmentStepView: View {
                 .parityPosition(x: 133 * sx, y: 413 * sy)
 
             // Figma 282:734: Poppins Regular 14/21 #B9B9B9, rel (84,515)
-            Text("Touch and hold to commit")
+            Text("Touch and hold for 3 seconds to commit")
                 .font(DesignTokens.Typography.smallText)
                 .foregroundStyle(DesignTokens.Colors.textSecondary)
                 .multilineTextAlignment(.center)
@@ -190,6 +198,25 @@ struct CommitmentStepView: View {
                 .frame(width: 80, height: 80)
                 .parityPosition(x: 4, y: 4)
 
+            // gold takeover: a hue-shifted duplicate of the glyph fades in
+            // while the finger is held, turning the fingerprint golden.
+            Image("GlyphCommitHands")
+                .resizable()
+                .frame(width: 80, height: 80)
+                .hueRotation(.degrees(150))
+                .saturation(1.4)
+                .brightness(0.08)
+                .opacity(progress)
+                .parityPosition(x: 4, y: 4)
+
+            // gold inner glow that builds with the hold
+            RoundedRectangle(cornerRadius: 25.14)
+                .stroke(DesignTokens.Colors.secondary.opacity(0.5), lineWidth: 17.6)
+                .blur(radius: 8.8)
+                .clipShape(RoundedRectangle(cornerRadius: 25.14))
+                .frame(width: 88, height: 88)
+                .opacity(progress)
+
             // hold progress ring
             if progress > 0 {
                 RoundedRectangle(cornerRadius: 25.14)
@@ -200,13 +227,20 @@ struct CommitmentStepView: View {
         }
         .frame(width: 88, height: 88, alignment: .topLeading)
         .contentShape(Rectangle())
-        .onLongPressGesture(minimumDuration: 1.5, perform: {
-            guard !parityMode else { return }
+        .scaleEffect(committed ? 1.12 : 1.0)
+        .animation(.spring(response: 0.35, dampingFraction: 0.55), value: committed)
+        .onLongPressGesture(minimumDuration: Self.holdDuration, perform: {
+            guard !parityMode, !committed else { return }
+            committed = true
+            withAnimation(.easeOut(duration: 0.2)) { progress = 1 }
             UINotificationFeedbackGenerator().notificationOccurred(.success)
-            onComplete()
+            // let the gold state land for a beat before moving on
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.45) {
+                onComplete()
+            }
         }, onPressingChanged: { pressing in
-            guard !parityMode else { return }
-            withAnimation(.linear(duration: pressing ? 1.5 : 0.2)) {
+            guard !parityMode, !committed else { return }
+            withAnimation(.linear(duration: pressing ? Self.holdDuration : 0.25)) {
                 progress = pressing ? 1 : 0
             }
         })

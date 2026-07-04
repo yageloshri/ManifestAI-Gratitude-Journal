@@ -1,9 +1,12 @@
 // ParityProfileView.swift
-// Figma: "Name" frame (326:13312) — My Profile screen, 393×951 (scrollable).
-// All geometry from fidelity/specs/profile.txt — do not eyeball values.
-// The frame is 951pt tall: content lives at exact Figma coordinates inside a
-// ScrollView (scrolling disabled in parityMode) so the visible top 852pt
-// match the frame's top 852pt. sy stays geo.height/852.
+// Figma: "Name" frame (326:13312) — My Profile screen.
+// The original Figma frame was 951pt tall (taller than the 852pt device
+// canvas every other tab uses), which forced this screen alone into a
+// ScrollView. Per product decision, Profile must fit on one screen with
+// no scrolling like the rest of the tabs, so the layout below is compacted
+// (tighter gaps + slightly shorter row height) to fit the same 852pt
+// canvas — the tab bar lands at y=774 exactly like every other tab.
+// sy stays geo.height/852.
 
 import SwiftUI
 
@@ -16,7 +19,8 @@ struct ParityProfileView: View {
     var remindersOn: Bool = false
     var onSelectTab: (FigmaTab) -> Void = { _ in }
     var onSelectRow: (String) -> Void = { _ in }
-    /// Parity gallery: fixed mock data matching the Figma frame.
+    /// Parity gallery: fixed mock data matching the Figma frame. The layout
+    /// no longer scrolls, so this only affects the mock data callers pass in.
     var parityMode: Bool = false
 
     var body: some View {
@@ -26,12 +30,8 @@ struct ParityProfileView: View {
 
             ZStack(alignment: .topLeading) {
                 DesignTokens.Colors.background
-
-                ScrollView(.vertical, showsIndicators: false) {
-                    content(sx: sx, sy: sy)
-                        .frame(width: 393 * sx, height: 951 * sy, alignment: .topLeading)
-                }
-                .scrollDisabled(parityMode)
+                content(sx: sx, sy: sy)
+                    .frame(width: 393 * sx, height: 852 * sy, alignment: .topLeading)
             }
             .ignoresSafeArea()
         }
@@ -39,69 +39,63 @@ struct ParityProfileView: View {
         .accessibilityIdentifier("profile.root")
     }
 
-    // MARK: - 951pt content canvas
+    // MARK: - 852pt content canvas (no scroll — fits in one screen)
 
     private func content(sx: CGFloat, sy: CGFloat) -> some View {
         ZStack(alignment: .topLeading) {
             // Figma 326:13313: ellipse #4F31EC@0.29, blur 514
             EllipseGlowBackground(sx: sx, sy: sy)
 
-            // Figma 326:13316: "My Profile" Bitter SemiBold 26 #EBEBEB (20,68,353,31)
+            // Figma 326:13316: "My Profile" Bitter SemiBold 26 #EBEBEB
             Text("My Profile")
                 .font(DesignTokens.Typography.h1)
                 .foregroundStyle(DesignTokens.Colors.textPrimary)
-                .parityPosition(x: 20 * sx, y: 68 * sy)
+                .parityPosition(x: 20 * sx, y: 44 * sy)
 
-            // Figma 326:13431: profile card (20,123) 353×182
+            // Figma 326:13431: profile card 353×182
             profileCard(sx: sx, sy: sy)
-                .parityPosition(x: 20 * sx, y: 123 * sy)
+                .parityPosition(x: 20 * sx, y: 92 * sy)
 
-            // Figma 326:13478: section label (20,340) Poppins Medium 16 #B9B9B9
-            // (+1.67,+1.33pt: measured MSE shift vs reference)
+            // Figma 326:13478: section label, Poppins Medium 16 #B9B9B9
             Text("What are you calling in?")
                 .font(DesignTokens.Typography.bodyMedium)
                 .foregroundStyle(DesignTokens.Colors.textSecondary)
-                .parityPosition(x: 20 * sx + 1.67, y: 340 * sy + 1.33)
+                .parityPosition(x: 20 * sx + 1.67, y: 294 * sy + 1.33)
 
-            // Figma 326:13579: Personal Information row (20,380)
+            // "Upgrade to Pro" removed — the app uses a hard paywall with a
+            // 3-day trial, so every user already has an active subscription.
+            // "Log out" removed — there is no sign-in; all data lives on the
+            // device, so logging out would only destroy the user's data.
+
+            // Figma 326:13579: Personal Information row
             settingsRow(sx: sx, sy: sy,
-                        title: "Personal Information", subtitle: "Name, DOD",
+                        title: "Personal Information", subtitle: "Name, DOB",
                         icon: "ProfileIcon_Personal", // baked crop 326:13626 + glow
                         showArrow: true, rowId: "personalInfo")
-                .parityPosition(x: 20 * sx, y: 380 * sy)
+                .parityPosition(x: 20 * sx, y: 340 * sy)
 
-            // Figma 326:13580: Upgrade to Pro row (20,458)
-            settingsRow(sx: sx, sy: sy,
-                        title: "Upgrade to Pro", subtitle: "Unlock all features",
-                        icon: "ProfileIcon_Crown", // baked crop 326:13635 + glow
-                        showArrow: true, rowId: "upgradePro")
-                .parityPosition(x: 20 * sx, y: 458 * sy)
-
-            // Figma 326:13596 + 362:1821: Daily Reminders row (20,536) with Switch
+            // Figma 326:13596 + 362:1821: Daily Reminders row with Switch
             remindersRow(sx: sx, sy: sy)
-                .parityPosition(x: 20 * sx, y: 536 * sy)
+                .parityPosition(x: 20 * sx, y: 424 * sy)
 
-            // Figma 326:13611: Support row (20,614)
+            // Figma 326:13611: Support row
             settingsRow(sx: sx, sy: sy,
                         title: "Support", subtitle: "Any question?",
                         icon: "ProfileIcon_Support", // baked crop 328:13717 + glow
                         showArrow: true, rowId: "support")
-                .parityPosition(x: 20 * sx, y: 614 * sy)
+                .parityPosition(x: 20 * sx, y: 508 * sy)
 
-            // Figma 326:13641: Privacy Policy row (20,692)
+            // Figma 326:13641: Privacy Policy row
             settingsRow(sx: sx, sy: sy,
-                        title: "Privacy Policy", subtitle: "Name, DOD",
+                        title: "Privacy Policy", subtitle: "How we protect your data",
                         icon: "ProfileIcon_Privacy", // baked crop 328:13731 + glow
                         showArrow: true, rowId: "privacyPolicy")
-                .parityPosition(x: 20 * sx, y: 692 * sy)
+                .parityPosition(x: 20 * sx, y: 592 * sy)
 
-            // Figma 328:13735: Log out row (20,770) — red icon, no subtitle, no arrow
-            logoutRow(sx: sx, sy: sy)
-                .parityPosition(x: 20 * sx, y: 770 * sy)
-
-            // Figma 326:13330: tab bar group at (0,873,393,78), Profile active
+            // Figma 326:13330: tab bar group, Profile active — y=774 matches
+            // the tab bar position used by every other tab (0,774,393,78).
             FigmaTabBar(active: .profile, onSelect: onSelectTab, sx: sx, sy: sy)
-                .parityPosition(x: 0, y: 873 * sy)
+                .parityPosition(x: 0, y: 774 * sy)
         }
     }
 
@@ -168,6 +162,8 @@ struct ParityProfileView: View {
             Text("Personal Day Number: \(personalDayNumber)")
                 .font(DesignTokens.Typography.smallMedium)
                 .foregroundStyle(DesignTokens.Gradients.golden)
+                .lineLimit(1)
+                .minimumScaleFactor(0.75)
                 .frame(width: 168 * sx, alignment: .center)
                 .parityPosition(x: 93 * sx, y: 144 * sy)
         }
@@ -244,7 +240,7 @@ struct ParityProfileView: View {
                     .parityPosition(x: 318.4 * sx, y: 26.9 * sy)
             }
         }
-        .frame(width: 351 * sx, height: 70 * sy, alignment: .topLeading)
+        .frame(width: 351 * sx, height: 64 * sy, alignment: .topLeading)
         .contentShape(Rectangle())
         .onTapGesture { onSelectRow(rowId) }
         // a11y: single button element combining title + subtitle
@@ -283,7 +279,7 @@ struct ParityProfileView: View {
                 .parityPosition(x: 269 * sx, y: 17.5 * sy)
                 .accessibilityIdentifier("profile.remindersSwitch")
         }
-        .frame(width: 351 * sx, height: 70 * sy, alignment: .topLeading)
+        .frame(width: 351 * sx, height: 64 * sy, alignment: .topLeading)
         .contentShape(Rectangle())
         .onTapGesture { onSelectRow("dailyReminders") }
         // a11y: shape-drawn switch → expose the whole row as a single toggle
@@ -294,31 +290,7 @@ struct ParityProfileView: View {
         .accessibilityIdentifier("profile.row.dailyReminders")
     }
 
-    // Log out (Figma 328:13735) — red glow icon, single label
-    private func logoutRow(sx: CGFloat, sy: CGFloat) -> some View {
-        ZStack(alignment: .topLeading) {
-            Color.clear
-                .figmaGlassSurface(cornerRadius: DesignTokens.Radii.card,
-                                   compact: true, insetStroke: true)
-
-            // Figma 328:13739: icon (frame 36,789 → row-rel 16,19) — baked
-            bakedRowIcon("ProfileIcon_Logout", sx: sx, sy: sy, size: 44)
-                .parityPosition(x: 10 * sx, y: 13 * sy)
-
-            // Figma 328:13747 (frame 80,794.5 → row-rel 60,24.5)
-            Text("Log out")
-                .font(DesignTokens.Typography.smallMedium)
-                .foregroundStyle(DesignTokens.Colors.textPrimary)
-                .parityPosition(x: 60 * sx, y: 24.5 * sy)
-        }
-        .frame(width: 351 * sx, height: 70 * sy, alignment: .topLeading)
-        .contentShape(Rectangle())
-        .onTapGesture { onSelectRow("logout") }
-        .accessibilityElement(children: .ignore)
-        .accessibilityLabel("Log out")
-        .accessibilityAddTraits(.isButton)
-        .accessibilityIdentifier("profile.row.logout")
-    }
+    // (logoutRow removed — no sign-in exists; data lives on-device only.)
 
     /// Baked 44×45pt reference crop of 'Group 48095317' (glyph + glow margin).
     private func bakedRowIcon(_ name: String, sx: CGFloat, sy: CGFloat,

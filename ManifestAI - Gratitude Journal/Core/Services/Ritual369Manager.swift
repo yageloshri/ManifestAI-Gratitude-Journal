@@ -17,6 +17,7 @@
 
 import Foundation
 import Combine
+import WidgetKit
 
 final class Ritual369Manager: ObservableObject {
     static let shared = Ritual369Manager()
@@ -70,6 +71,9 @@ final class Ritual369Manager: ObservableObject {
         let today = Self.key(now)
         guard state.dateKey != today else { return }
 
+        // A stale in-progress Live Activity must not survive midnight.
+        RitualLiveActivityController.shared.end()
+
         let finishedDay = state.dateKey
         let wasComplete = Phase.allCases.allSatisfy { state.counts[index(of: $0)] >= target(for: $0) }
 
@@ -79,17 +83,26 @@ final class Ritual369Manager: ObservableObject {
             state.lastCompleteKey = finishedDay
         }
 
-        // A gap (any non-complete day in between) restarts the cycle.
+        // A gap (any non-complete day in between) restarts the cycle —
+        // unless a streak freeze (retention-plan.md §3.6) is available to
+        // bridge it instead.
         if let last = state.lastCompleteKey {
             let cal = Calendar.current
             if let lastDate = dateFrom(key: last),
                let days = cal.dateComponents([.day], from: cal.startOfDay(for: lastDate),
                                              to: cal.startOfDay(for: now)).day,
                days > 1 {
-                if state.completedDays > 0 { state.lostStreakDays = state.completedDays }
-                state.completedDays = 0
-                state.challengeStartKey = nil
-                state.lastCompleteKey = nil
+                if StreakFreezeManager.shared.consumeFreezeIfAvailable(now: now) {
+                    // Grace day: bridge the gap without resetting or
+                    // crediting progress for the missed day itself.
+                    dlog("🧊 Ritual369Manager: streak freeze bridged a missed day (day \(state.completedDays + 1) preserved)")
+                    state.lastCompleteKey = finishedDay
+                } else {
+                    if state.completedDays > 0 { state.lostStreakDays = state.completedDays }
+                    state.completedDays = 0
+                    state.challengeStartKey = nil
+                    state.lastCompleteKey = nil
+                }
             }
         } else if !wasComplete {
             state.completedDays = 0
@@ -144,6 +157,20 @@ final class Ritual369Manager: ObservableObject {
     /// Days of progress lost the last time a missed day restarted the cycle;
     /// nil once acknowledged (cleared on the next written affirmation).
     var streakResetNotice: Int? { state.lostStreakDays }
+
+    /// Consecutive fully-completed days *before* today — the {streak_count}
+    /// used by the streak-at-risk push (§3.7) and available to surface next
+    /// to the freeze count (StreakFreezeManager) in Settings/Profile.
+    var activeStreakCount: Int {
+        rolloverIfNeeded()
+        return state.completedDays
+    }
+
+    /// All 3 windows (morning/afternoon/night) are written for today.
+    var isTodayComplete: Bool {
+        rolloverIfNeeded()
+        return Phase.allCases.allSatisfy { isComplete($0) }
+    }
 
     /// All 33 consecutive days are done — the challenge is finished.
     var cycleComplete: Bool {
@@ -200,6 +227,43 @@ final class Ritual369Manager: ObservableObject {
         state.counts[index(of: phase)] += 1
         state.lostStreakDays = nil   // writing again = reset acknowledged
         persist()
+
+        // §3.3: badge always reflects real unwritten-window state.
+        NotificationManager369.shared.refreshBadge()
+
+        // §3.8/§3.11: mirror progress to the widgets (App Group) and drive
+        // the Lock Screen / Dynamic Island Live Activity for this session.
+        let written = state.counts[index(of: phase)]
+        let displayName: String
+        switch phase {
+        case .morning: displayName = "Morning"
+        case .afternoon: displayName = "Afternoon"
+        case .night: displayName = "Evening"
+        }
+        SharedDataManager.shared.saveRitualProgress(phaseName: displayName,
+                                                    written: written,
+                                                    target: target(for: phase))
+        WidgetCenter.shared.reloadAllTimelines()
+        if written == 1 {
+            RitualLiveActivityController.shared.start(phase: displayName,
+                                                      target: target(for: phase),
+                                                      written: written)
+        } else {
+            RitualLiveActivityController.shared.update(written: written)
+        }
+        if isComplete(phase) {
+            RitualLiveActivityController.shared.end()
+        }
+
+        if isComplete(phase) {
+            // §3.4: first-ever phase completion primes the contextual full
+            // notification-permission ask (see ManifestAIApp).
+            FirstMeaningfulAction.markCompletedIfNeeded()
+        }
+        if Phase.allCases.allSatisfy({ isComplete($0) }) {
+            // §3.7: today's ritual is done — the streak-at-risk push is moot.
+            NotificationManager369.shared.cancelStreakAtRiskNotification()
+        }
         return true
     }
 
@@ -253,6 +317,7 @@ final class Ritual369Manager: ObservableObject {
                       challengeStartKey: nil, completedDays: 0,
                       lastCompleteKey: nil, lostStreakDays: nil)
         persist()
+        StreakFreezeManager.shared.debugReset()
     }
     #endif
 }

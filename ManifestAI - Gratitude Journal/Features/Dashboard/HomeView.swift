@@ -94,39 +94,43 @@ struct HomeView: View {
 
     // MARK: - Header (Figma 307:1314)
 
+    // No avatar — greeting and subtitle are centered across the screen.
     private func header(sx: CGFloat, sy: CGFloat) -> some View {
         ZStack(alignment: .topLeading) {
-            // Figma 307:1242: avatar 48, stroke #F5BC15@0.3 2pt
-            avatarView
-                .frame(width: 48, height: 48)
-                .clipShape(Circle())
-                .overlay(Circle().stroke(Color(hex: "F5BC15").opacity(0.3), lineWidth: 2))
-                .parityPosition(x: 20 * sx, y: 70.5 * sy)
-                .accessibilityIdentifier("home.avatar")
-
-            Text("Good Morning, \(userName)")
+            Text("\(timeGreeting), \(userName)")
                 .font(DesignTokens.Typography.h4)
                 .foregroundStyle(DesignTokens.Colors.textPrimary)
-                .parityPosition(x: 80 * sx, y: 70.67 * sy)
+                .lineLimit(1)
+                .minimumScaleFactor(0.75)
+                .frame(width: 353 * sx, alignment: .center)
+                .parityPosition(x: 20 * sx, y: 70.67 * sy)
 
-            Text("A calm start to your day.")
+            Text(timeSubtitle)
                 .font(DesignTokens.Typography.smallText)
                 .foregroundStyle(DesignTokens.Colors.textSecondary)
-                .parityPosition(x: 80 * sx, y: 100 * sy)
+                .frame(width: 353 * sx, alignment: .center)
+                .parityPosition(x: 20 * sx, y: 100 * sy)
         }
     }
 
-    @ViewBuilder
-    private var avatarView: some View {
-        if UIImage(named: "HomeAvatar") != nil {
-            Image("HomeAvatar").resizable().scaledToFill()
-        } else {
-            Circle().fill(DesignTokens.Colors.avatarBg)
-                .overlay(
-                    Text(String(userName.prefix(1)))
-                        .font(DesignTokens.Typography.h4)
-                        .foregroundStyle(DesignTokens.Colors.secondary)
-                )
+    /// Greeting follows the user's local time of day.
+    private var timeGreeting: String {
+        if parityMode { return "Good Morning" }
+        switch Calendar.current.component(.hour, from: Date()) {
+        case 5..<12: return "Good Morning"
+        case 12..<17: return "Good Afternoon"
+        case 17..<22: return "Good Evening"
+        default: return "Good Night"
+        }
+    }
+
+    private var timeSubtitle: String {
+        if parityMode { return "A calm start to your day." }
+        switch Calendar.current.component(.hour, from: Date()) {
+        case 5..<12: return "A calm start to your day."
+        case 12..<17: return "A mindful pause in your day."
+        case 17..<22: return "Time to reflect and manifest."
+        default: return "Rest well — tomorrow is yours."
         }
     }
 
@@ -162,7 +166,7 @@ struct HomeView: View {
             .parityPosition(x: 59 * sx, y: 21 * sy)
 
             // Figma 310:1371
-            Text("Daily Numberology")
+            Text("Daily Numerology")
                 .font(DesignTokens.Typography.smallText)
                 .foregroundStyle(DesignTokens.Colors.secondary)
                 .parityPosition(x: 16 * sx, y: 16 * sy)
@@ -193,14 +197,8 @@ struct HomeView: View {
         }
         .frame(width: 353 * sx, height: 133 * sy, alignment: .topLeading)
         .clipShape(RoundedRectangle(cornerRadius: DesignTokens.Radii.card))
-        // bottom strip baked from reference: the card's soft bottom fade
-        // (card spans y145-278; strip covers card-rel y111-133 + 2pt below)
-        .overlay(alignment: .topLeading) {
-            Image("HomeNumCardBottomCrop")
-                .resizable()
-                .frame(width: 353 * sx, height: 24 * sy)
-                .parityPosition(x: 0, y: 111 * sy)
-        }
+        // (baked "HomeNumCardBottomCrop" strip removed — its hard top edge
+        // drew a visible line across the bottom of the card)
         .accessibilityIdentifier("home.numerologyCard")
     }
 
@@ -280,13 +278,8 @@ struct HomeView: View {
                         )
                 )
 
-            // decorative tinted blocks (Figma 311:1394/1396: #685EF5@0.07)
-            Rectangle().fill(DesignTokens.Colors.primary.opacity(0.07))
-                .frame(width: 160 * sx, height: 64 * sy)
-                .parityPosition(x: 195 * sx, y: 0)
-            Rectangle().fill(DesignTokens.Colors.primary.opacity(0.07))
-                .frame(width: 100 * sx, height: 24 * sy)
-                .parityPosition(x: 0, y: 40 * sy)
+            // (Figma's decorative tinted blocks 311:1394/1396 removed — they
+            // rendered as odd lighter rectangles over the card)
 
             // flame + count (content block at card-rel 112,10)
             // flame baked from reference (126,287)-(170,337) → card-rel (106,9)
@@ -334,25 +327,12 @@ struct HomeView: View {
 
     private func journalCard(sx: CGFloat, sy: CGFloat) -> some View {
         ZStack(alignment: .topLeading) {
-            // Figma 312:1464: solid-white container seen through the glass rect's
-            // BACKGROUND_BLUR(113) → frosted blob: white blurred (σ≈53) and
-            // clipped to the card, fading toward the edges. 1pt black stroke
-            // on the container, plus the usual fading glass border + tint bands.
-            // card surface baked as opaque RGB from the reference export
-            // (borders and frost included; content areas interpolated out)
-            Image("JournalCardFrost")
-                .resizable()
-                .frame(width: 353 * sx, height: 197 * sy)
-
-            // Figma 312:1464: the white container is 355pt wide (2pt wider than
-            // the glass) — its raw white edge + 1pt black stroke peek out on
-            // the right side of the card
-            Rectangle().fill(Color.white)
-                .frame(width: 1 * sx, height: 193 * sy)
-                .parityPosition(x: 353 * sx, y: 2 * sy)
-            Rectangle().fill(Color.black.opacity(0.85))
-                .frame(width: 1 * sx, height: 193 * sy)
-                .parityPosition(x: 354 * sx, y: 2 * sy)
+            // Same dark translucent purple glass surface used by the other
+            // Manifestation Hub cards (Vision Board / 369 Method) — the
+            // previous baked "frost" asset rendered near-white and washed
+            // out the "Total Entries" row.
+            Color.clear
+                .figmaGlassSurface(cornerRadius: DesignTokens.Radii.card, compact: false)
 
             elementoSmall(color: Color(hex: "3F36C3"), glyphAsset: "GlyphJournal")
                 .parityPosition(x: 16 * sx, y: 19.5 * sy)
@@ -413,12 +393,12 @@ struct HomeView: View {
             elementoSmall(color: Color(hex: "0089FF"), glyphAsset: "GlyphVision")
                 .parityPosition(x: 16 * sx, y: 16 * sy)
 
-            Text("Vision Borad")
+            Text("Vision Board")
                 .font(DesignTokens.Typography.bodyMedium)
                 .foregroundStyle(DesignTokens.Colors.textPrimary)
                 .parityPosition(x: 16 * sx, y: 70 * sy)
 
-            Text("\(boardCount) boars")
+            Text("\(boardCount) board\(boardCount == 1 ? "" : "s")")
                 .font(DesignTokens.Typography.smallText)
                 .foregroundStyle(DesignTokens.Colors.textSecondary)
                 .parityPosition(x: 16 * sx, y: 98 * sy)

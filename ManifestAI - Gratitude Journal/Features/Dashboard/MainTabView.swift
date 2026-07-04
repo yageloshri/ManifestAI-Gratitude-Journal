@@ -31,6 +31,8 @@ struct MainTabView: View {
         return .today
     }()
 
+    @Environment(\.scenePhase) private var scenePhase
+
     // Today
     @State private var showDailyInsight = false
     @State private var dailyInsight: PersonalizedInsight?
@@ -53,6 +55,7 @@ struct MainTabView: View {
     @State private var showPhotoPicker = false
     private struct EditorCategory: Identifiable { let id = UUID(); let name: String }
     @State private var editorCategory: EditorCategory?   // non-nil presents the editor
+    @State private var editingBoard: VisionBoardEntity?  // non-nil re-opens that board for editing (Task 1)
 
     // 369 — time-window gated (Ritual369Manager): 3× morning / 6× afternoon /
     // 9× night, persisted per day, 33-day cycle.
@@ -73,14 +76,20 @@ struct MainTabView: View {
 
     var body: some View {
         ZStack {
-            switch tab {
-            case .today: todayTab
-            case .journal: journalTab
-            case .vision: visionTab
-            case .method369: tab369
-            case .profile: profileTab
+            Group {
+                switch tab {
+                case .today: todayTab
+                case .journal: journalTab
+                case .vision: visionTab
+                case .method369: tab369
+                case .profile: profileTab
+                }
             }
+            .transition(.opacity)
         }
+        // One animation driver for every tab/route change — tab switches
+        // crossfade, inner screens slide in (see each tab's .transition).
+        .animation(.easeInOut(duration: 0.28), value: navAnimationKey)
         #if DEBUG
         .onAppear {
             // Smoke-test hook: `-ritual369Reset` clears the 369 daily progress
@@ -117,8 +126,29 @@ struct MainTabView: View {
                 visionRoute = .home
             }
         }
-        .onAppear { presentPostOnboardingPaywallIfNeeded() }
+        .fullScreenCover(item: $editingBoard) { board in
+            VisionEditBoardSheet(board: board)
+        }
+        .onAppear {
+            presentPostOnboardingPaywallIfNeeded()
+            SharedDataManager.shared.saveStreak(streak)
+        }
         .onReceive(ritualTimer) { _ in ritualClock = Self.ritualNow() }
+        // Notification "Write Now" action / notification tap → 369 tab.
+        .onReceive(NotificationCenter.default.publisher(for: .openRitualRequested)) { _ in
+            switchTab(.method369)
+        }
+        // Widget button / Siri App Intents leave a pending deep link.
+        .onChange(of: scenePhase) { _, newPhase in
+            guard newPhase == .active,
+                  let link = SharedDataManager.shared.consumePendingDeepLink() else { return }
+            if link == "ritual" { switchTab(.method369); flow369 = .ritual }
+            if link == "journal_write" { switchTab(.journal); journalRoute = .write }
+        }
+        // Keep the Lock Screen / Home Screen widgets' streak in sync.
+        .onChange(of: streak) { _, newValue in
+            SharedDataManager.shared.saveStreak(newValue)
+        }
         .alert("Couldn't elevate your entry", isPresented: $showElevateError) {
             Button("Try Again") {
                 if let entry = failedElevation { elevate(entry) }
@@ -129,11 +159,14 @@ struct MainTabView: View {
         }
     }
 
-    /// Onboarding sets this flag for its post-completion paywall; it used to
-    /// be consumed only by the legacy DashboardView, which never ships.
+    /// HARD paywall: the app requires an active subscription (3-day trial
+    /// included) — a non-subscribed user is always brought back to the
+    /// paywall, on first launch after onboarding and on every later launch.
+    /// Re-presentation after a dismissed paywall is handled by
+    /// SuperwallDelegateHandler.handlePaywallDismissed.
     private func presentPostOnboardingPaywallIfNeeded() {
-        guard UserDefaults.standard.bool(forKey: "should_show_paywall_after_onboarding") else { return }
         UserDefaults.standard.set(false, forKey: "should_show_paywall_after_onboarding")
+        guard SuperwallDelegateHandler.hardPaywallEnforced else { return }
         guard !SubscriptionManager.shared.isPro else { return }
         // Let the onboarding → main transition settle before presenting.
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
@@ -147,21 +180,13 @@ struct MainTabView: View {
         NumerologyService.shared.calculatePersonalDayNumber(birthDate: userManager.birthDate)
     }
 
+    /// Journal streak with streak-freeze protection (retention-plan §3.6):
+    /// an available grace day bridges a single missed day instead of
+    /// resetting the count to zero.
     private var streak: Int {
-        let cal = Calendar.current
-        let days = Set(entries.map { cal.startOfDay(for: $0.date) })
-        var count = 0
-        var day = cal.startOfDay(for: Date())
-        if !days.contains(day) {
-            guard let prev = cal.date(byAdding: .day, value: -1, to: day), days.contains(prev) else { return 0 }
-            day = prev
-        }
-        while days.contains(day) {
-            count += 1
-            guard let prev = cal.date(byAdding: .day, value: -1, to: day) else { break }
-            day = prev
-        }
-        return count
+        StreakFreezeManager.shared.effectiveJournalStreak(
+            entryDays: Set(entries.map { $0.date })
+        )
     }
 
     /// Free-tier usage is a persistent per-week counter, not a live row count —
@@ -183,6 +208,9 @@ struct MainTabView: View {
     private func countEntryAgainstQuota() {
         let key = Self.weekKey()
         UserDefaults.standard.set(usedThisWeek + 1, forKey: key)
+        // §3.4: a saved journal entry counts as the first meaningful action
+        // that primes the contextual notification-permission ask.
+        FirstMeaningfulAction.markCompletedIfNeeded()
     }
 
     private var freeEntriesText: String {
@@ -195,6 +223,29 @@ struct MainTabView: View {
         journalRoute = .list
         visionRoute = .home
         profileRoute = .main
+    }
+
+    // MARK: - Navigation animation key
+    // A single Equatable fingerprint of "which screen is showing" — drives
+    // the .animation on the root so every tab/route change is animated.
+    private var navAnimationKey: String {
+        "\(tab.rawValue)-\(journalRouteKey)-\(visionRouteKey)-\(flow369Key)-\(profileRouteKey)"
+    }
+
+    private var journalRouteKey: Int {
+        switch journalRoute { case .list: return 0; case .write: return 1; case .entry: return 2 }
+    }
+
+    private var visionRouteKey: Int {
+        switch visionRoute { case .home: return 0; case .category: return 1; case .photos: return 2; case .upload: return 3 }
+    }
+
+    private var flow369Key: Int {
+        switch flow369 { case .method: return 0; case .how: return 1; case .intention: return 2; case .ritual: return 3 }
+    }
+
+    private var profileRouteKey: Int {
+        switch profileRoute { case .main: return 0; case .personalInfo: return 1; case .personalInfoEdit: return 2; case .upgradePro: return 3 }
     }
 
     // MARK: - Today
@@ -214,21 +265,39 @@ struct MainTabView: View {
                 onOpen369: { switchTab(.method369) }
             )
 
-            if showDailyInsight {
+            // Kept mounted (slid off-screen) instead of if-inserted: building
+            // this screen's glass/blur stack on first tap caused a visible
+            // hitch before the sheet appeared. Pre-mounted, opening is instant.
+            GeometryReader { geo in
                 ParityDailyNumerologyView(
                     userName: userManager.userName,
                     dailyNumber: dailyNumber,
                     insight: dailyInsight,
-                    onClose: { showDailyInsight = false }
+                    onClose: { showDailyInsight = false },
+                    liveOverlay: true
                 )
-                .transition(.move(edge: .bottom))
+                .offset(y: showDailyInsight ? 0 : geo.size.height * 1.2)
+                .opacity(showDailyInsight ? 1 : 0)
+                .allowsHitTesting(showDailyInsight)
+            }
+            .ignoresSafeArea()
+        }
+        .animation(.easeInOut(duration: 0.3), value: showDailyInsight)
+        // The day's Gemini insight is prefetched (cached once per day), so by
+        // the time the user taps "Read Full Insight" the final content is
+        // already there — no mid-read text swap.
+        .task {
+            if dailyInsight == nil {
+                dailyInsight = DailyInsightManager.shared.getFallbackInsight(for: dailyNumber)
+            }
+            if let insight = try? await DailyInsightManager.shared.fetchDailyInsight() {
+                withAnimation(.easeInOut(duration: 0.25)) { dailyInsight = insight }
             }
         }
-        .animation(.easeInOut(duration: 0.25), value: showDailyInsight)
     }
 
-    /// Real daily content: show the per-number reading immediately, then let
-    /// the personalized Gemini insight (cached once per day) replace it.
+    /// Real daily content: the reading is prefetched when Home appears; the
+    /// tap only slides the (already-built) screen in.
     private func openDailyInsight() {
         if dailyInsight == nil {
             dailyInsight = DailyInsightManager.shared.getFallbackInsight(for: dailyNumber)
@@ -236,7 +305,7 @@ struct MainTabView: View {
         showDailyInsight = true
         Task {
             if let insight = try? await DailyInsightManager.shared.fetchDailyInsight() {
-                dailyInsight = insight
+                withAnimation(.easeInOut(duration: 0.25)) { dailyInsight = insight }
             }
         }
     }
@@ -244,6 +313,7 @@ struct MainTabView: View {
     // MARK: - Journal
 
     private var journalTab: some View {
+        ZStack {
         Group {
             switch journalRoute {
             case .list:
@@ -275,6 +345,9 @@ struct MainTabView: View {
                     liveText: $draftText,
                     onBack: { saveDraftIfNeeded(); journalRoute = .list },
                     onElevate: { elevateDraft() },
+                    onElevateApproved: { original, approved in
+                        saveApprovedElevation(original: original, approved: approved)
+                    },
                     onSelectColor: { draftColorIndex = $0 }
                 )
             case .entry(let entry):
@@ -285,8 +358,9 @@ struct MainTabView: View {
                     entryText: entry.elevatedText ?? entry.rawText,
                     onBack: { journalRoute = .list },
                     onElevate: {
-                        // Elevate an already-saved entry; the list row flips
-                        // to "Elevated Entry" when Gemini responds.
+                        // Fallback path (parity/mock contexts only): elevate
+                        // in the background; the list row flips when Gemini
+                        // responds. The live cinematic uses onElevateApproved.
                         elevate(entry)
                         journalRoute = .list
                     },
@@ -306,11 +380,27 @@ struct MainTabView: View {
                         entry.colorIndex = i
                         try? modelContext.save()
                     },
+                    onElevateApproved: { approved in
+                        // The user already saw and approved this wording in
+                        // the Elevate cinematic — persist it verbatim.
+                        entry.elevatedText = approved
+                            .trimmingCharacters(in: .whitespacesAndNewlines)
+                        try? modelContext.save()
+                        journalRoute = .list
+                    },
                     tintHex: Self.swatchHex(entry.tintIndex),
                     selectedColorIndex: entry.tintIndex
                 )
             }
         }
+        // write/entry screens (no tab bar) slide in from the right
+        .id(journalRouteKey)
+        .transition(.asymmetric(
+            insertion: .move(edge: .trailing).combined(with: .opacity),
+            removal: .opacity
+        ))
+        }
+        .transition(.opacity) // tab-level switches crossfade
     }
 
     /// Journal swatch palette (same hexes as ParityColorPicker's spec row).
@@ -382,6 +472,30 @@ struct MainTabView: View {
         elevate(entry)
     }
 
+    /// Persist an elevation the user already approved in the Elevate
+    /// cinematic (write flow): save the original as rawText and the approved
+    /// wording verbatim as elevatedText — no second Gemini call.
+    private func saveApprovedElevation(original: String, approved: String) {
+        let approvedText = approved.trimmingCharacters(in: .whitespacesAndNewlines)
+        guard !approvedText.isEmpty else { return }
+
+        if let editing = editingEntry {
+            if !editing.isElevated { editing.rawText = original }
+            editing.elevatedText = approvedText
+            editing.colorIndex = draftColorIndex
+        } else {
+            let entry = JournalEntry(rawText: original,
+                                     elevatedText: approvedText,
+                                     colorIndex: draftColorIndex)
+            modelContext.insert(entry)
+            countEntryAgainstQuota()
+        }
+        try? modelContext.save()
+        draftText = ""
+        editingEntry = nil
+        journalRoute = .list
+    }
+
     /// Run the Gemini rewrite for a saved entry, with an in-flight marker,
     /// deleted-entry guard, and an error alert with retry.
     private func elevate(_ entry: JournalEntry) {
@@ -419,6 +533,7 @@ struct MainTabView: View {
     // MARK: - Vision
 
     private var visionTab: some View {
+        ZStack {
         Group {
             switch visionRoute {
             case .home:
@@ -435,6 +550,7 @@ struct MainTabView: View {
                             modelContext.delete(board)
                             try? modelContext.save()
                         },
+                        onEditBoard: { board in editingBoard = board },
                         onSelectTab: switchTab
                     )
                 }
@@ -459,6 +575,14 @@ struct MainTabView: View {
                 )
             }
         }
+        // category/photos/upload screens slide in from the right
+        .id(visionRouteKey)
+        .transition(.asymmetric(
+            insertion: .move(edge: .trailing).combined(with: .opacity),
+            removal: .opacity
+        ))
+        }
+        .transition(.opacity) // tab-level switches crossfade
     }
 
     /// Per-category "find your photos" prompt; Love is the Figma original,
@@ -524,6 +648,10 @@ struct MainTabView: View {
                 ritualScreen
             }
         }
+        // 369 flow screens carry their own tab bar — crossfade only, so the
+        // bar never appears to slide sideways.
+        .id(flow369Key)
+        .transition(.opacity)
     }
 
     private var ritualAffirmation: String {
@@ -688,6 +816,9 @@ struct MainTabView: View {
                 )
             }
         }
+        // profile detail screens crossfade (some carry their own tab bar)
+        .id(profileRouteKey)
+        .transition(.opacity)
     }
 
     private func handleProfileRow(_ rowId: String) {
@@ -793,6 +924,24 @@ private struct VisionEditorSheet: View {
                 }
             }
             .onDisappear { onFinished() }
+    }
+}
+
+/// Reopens an existing saved board in the same grid editor (Task 1), with a
+/// fresh view model per session that restores every photo (crop/zoom) and
+/// the saved grid template via `loadBoard`. The editor's own Save button
+/// updates this same `VisionBoardEntity` in place (matched by id in
+/// `VisionBoardViewModel.saveBoard`), so editing never creates a duplicate.
+private struct VisionEditBoardSheet: View {
+    let board: VisionBoardEntity
+
+    @StateObject private var vm = VisionBoardViewModel()
+
+    var body: some View {
+        VisionBoardEditorView(viewModel: vm)
+            .onAppear {
+                vm.loadBoard(board)
+            }
     }
 }
 

@@ -17,7 +17,7 @@ struct WelcomeStepView: View {
 
     // Figma 264:874 — exact span text from the design
     private static let fullLine1 = "Turn your dreams "
-    private static let fullLine2 = "in to reality in 5 mins a day."
+    private static let fullLine2 = "into reality in 5 mins a day."
 
     init(onContinue: @escaping () -> Void, parityMode: Bool = false) {
         self.onContinue = onContinue

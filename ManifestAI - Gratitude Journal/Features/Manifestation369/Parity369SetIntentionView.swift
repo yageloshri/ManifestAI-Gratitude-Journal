@@ -22,6 +22,8 @@ struct Parity369SetIntentionView: View {
     /// Parity gallery: fixed mock data matching the Figma frame.
     var parityMode: Bool = false
 
+    @FocusState private var editorFocused: Bool
+
     var body: some View {
         GeometryReader { geo in
             let sx = geo.size.width / 393
@@ -41,22 +43,19 @@ struct Parity369SetIntentionView: View {
                     .parityPosition(x: 0, y: 145 * sy)
 
                 // Figma 341:3340: SKIP (327,70,34,24) Poppins-Medium 16 #B9B9B9
+                // NOTE: the 34pt Figma frame is narrower than the rendered
+                // text, which forced a "SKI\nP" wrap. .fixedSize() keeps the
+                // label single-line; widening the frame + right-aligning
+                // preserves the original right edge (327+34=361) placement.
                 Text("SKIP")
                     .font(DesignTokens.Typography.bodyMedium)
                     .foregroundStyle(DesignTokens.Colors.textSecondary)
-                    .frame(width: 34 * sx, alignment: .center)
+                    .fixedSize()
+                    .frame(width: 60 * sx, alignment: .trailing)
                     .contentShape(Rectangle())
                     .onTapGesture { onSkip() }
-                    .parityPosition(x: 327 * sx, y: 70 * sy + 1.33 * sy)
+                    .parityPosition(x: 301 * sx, y: 70 * sy + 1.33 * sy)
                     .accessibilityIdentifier("setintention369.skip")
-
-                // Figma 341:3572: stray 'Label' (25.5,353,353,21) #9F9E9E Poppins-Medium 14
-                // (sits behind Frame 1000003731 in the Figma z-order)
-                Text("Label")
-                    .font(DesignTokens.Typography.smallMedium)
-                    .foregroundStyle(DesignTokens.Colors.lightGrey)
-                    .frame(width: 353 * sx, alignment: .leading)
-                    .parityPosition(x: 25.5 * sx, y: 353 * sy)
 
                 // Figma 341:3397: progress dots (159,107,75,9), active = 2
                 Parity369ProgressDots(activeIndex: 2)
@@ -92,6 +91,12 @@ struct Parity369SetIntentionView: View {
                 FigmaTabBar(active: .method369, onSelect: onSelectTab, sx: sx, sy: sy)
                     .parityPosition(x: 0, y: 774 * sy)
             }
+            // lift the whole layout above the keyboard while typing
+            .offset(y: editorFocused ? -150 * sy : 0)
+            .animation(.easeOut(duration: 0.25), value: editorFocused)
+            // tapping anywhere outside the editor dismisses the keyboard
+            .contentShape(Rectangle())
+            .onTapGesture { editorFocused = false }
             .ignoresSafeArea()
         }
         .ignoresSafeArea()
@@ -113,6 +118,13 @@ struct Parity369SetIntentionView: View {
                     .foregroundStyle(DesignTokens.Colors.textPrimary)
                     .scrollContentBackground(.hidden)
                     .tint(DesignTokens.Colors.primary)
+                    .focused($editorFocused)
+                    .toolbar {
+                        ToolbarItemGroup(placement: .keyboard) {
+                            Spacer()
+                            Button("Done") { editorFocused = false }
+                        }
+                    }
                     .frame(width: 316 * sx, height: 100 * sy, alignment: .topLeading)
                     .parityPosition(x: 11 * sx, y: 8 * sy)
                     .overlay(alignment: .topLeading) {

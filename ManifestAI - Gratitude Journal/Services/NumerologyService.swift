@@ -163,7 +163,22 @@ struct NumerologyService {
         
         return reduceToSingleDigit(sum)
     }
-    
+
+    /// Personal Year = Birth Day + Birth Month + Current Year, reduced to a
+    /// single digit. Used by the onboarding "year of transformation" screen so
+    /// the number genuinely derives from the birth date the user entered.
+    func calculatePersonalYearNumber(birthDate: Date?) -> Int {
+        let calendar = Calendar.current
+        let currentYear = calendar.component(.year, from: Date())
+
+        guard let birthDate = birthDate else {
+            return reduceToSingleDigit(currentYear)
+        }
+        let birthDay = calendar.component(.day, from: birthDate)
+        let birthMonth = calendar.component(.month, from: birthDate)
+        return reduceToSingleDigit(birthDay + birthMonth + currentYear)
+    }
+
     /// Get a random daily message for the given number
     func getDailyMessage(for number: Int) -> DailyMessage {
         guard let messages = numerologyData[number], !messages.isEmpty else {

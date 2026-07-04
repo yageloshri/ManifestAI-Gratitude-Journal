@@ -229,65 +229,13 @@ struct VisionBoardDetailView: View {
         }
     }
     
-    // MARK: - Grid Calculation (same as in ViewModel)
-    
+    // MARK: - Grid Calculation
+    // Delegates to `GridLayoutTemplate.cells(in:)` — the same normalized
+    // cell geometry the live editor and exporter use — instead of a
+    // hand-duplicated switch, which would otherwise need updating (and can
+    // drift out of sync) every time a new template is added.
     private func calculateGridCells(for layout: GridLayoutTemplate, count: Int) -> [GridCell] {
-        var cells: [GridCell] = []
-        
-        switch layout {
-        case .single:
-            cells.append(GridCell(x: 0, y: 0, width: screenWidth, height: screenHeight))
-            
-        case .splitHorizontal:
-            let halfWidth = screenWidth / 2
-            cells.append(GridCell(x: 0, y: 0, width: halfWidth, height: screenHeight))
-            cells.append(GridCell(x: halfWidth, y: 0, width: halfWidth, height: screenHeight))
-            
-        case .threeTop:
-            let halfWidth = screenWidth / 2
-            let halfHeight = screenHeight / 2
-            cells.append(GridCell(x: 0, y: 0, width: halfWidth, height: halfHeight))
-            cells.append(GridCell(x: halfWidth, y: 0, width: halfWidth, height: halfHeight))
-            cells.append(GridCell(x: 0, y: halfHeight, width: screenWidth, height: halfHeight))
-            
-        case .grid2x2:
-            let halfWidth = screenWidth / 2
-            let halfHeight = screenHeight / 2
-            cells.append(GridCell(x: 0, y: 0, width: halfWidth, height: halfHeight))
-            cells.append(GridCell(x: halfWidth, y: 0, width: halfWidth, height: halfHeight))
-            cells.append(GridCell(x: 0, y: halfHeight, width: halfWidth, height: halfHeight))
-            cells.append(GridCell(x: halfWidth, y: halfHeight, width: halfWidth, height: halfHeight))
-            
-        case .fiveAsymmetric:
-            let halfWidth = screenWidth / 2
-            let thirdWidth = screenWidth / 3
-            let halfHeight = screenHeight / 2
-            cells.append(GridCell(x: 0, y: 0, width: halfWidth, height: halfHeight))
-            cells.append(GridCell(x: halfWidth, y: 0, width: halfWidth, height: halfHeight))
-            cells.append(GridCell(x: 0, y: halfHeight, width: thirdWidth, height: halfHeight))
-            cells.append(GridCell(x: thirdWidth, y: halfHeight, width: thirdWidth, height: halfHeight))
-            cells.append(GridCell(x: thirdWidth * 2, y: halfHeight, width: thirdWidth, height: halfHeight))
-            
-        case .grid3x2:
-            let halfWidth = screenWidth / 2
-            let thirdHeight = screenHeight / 3
-            for row in 0..<3 {
-                for col in 0..<2 {
-                    cells.append(GridCell(
-                        x: CGFloat(col) * halfWidth,
-                        y: CGFloat(row) * thirdHeight,
-                        width: halfWidth,
-                        height: thirdHeight
-                    ))
-                }
-            }
-            
-        case .flexible:
-            // For flexible layout, return empty
-            break
-        }
-        
-        return cells
+        layout.cells(in: CGSize(width: screenWidth, height: screenHeight))
     }
 }
 

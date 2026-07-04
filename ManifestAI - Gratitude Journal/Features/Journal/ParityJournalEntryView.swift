@@ -33,11 +33,23 @@ struct ParityJournalEntryView: View {
     var onEdit: () -> Void = {}
     var onDelete: () -> Void = {}
     var onSelectColor: (Int) -> Void = { _ in }
+    /// Fires once the user approves the elevated text at the end of the
+    /// cinematic (with any edits they made), *before* `onElevate()` is
+    /// called. Not wired by the current MainTabView call site — hook point
+    /// for persisting the exact approved wording once that owner is ready
+    /// to consume it, without changing today's `onElevate()` contract.
+    var onElevateApproved: (String) -> Void = { _ in }
     /// Live mode: swatch hex driving the .color tint (default = Figma's #560E50)
     /// and the ring position in the picker. Defaults reproduce the Figma frames.
     var tintHex: String? = nil
     var selectedColorIndex: Int? = nil
     var parityMode: Bool = false
+
+    // MARK: - Elevate cinematic state
+    @State private var elevatePhase: ElevatePhase = .idle
+    @State private var capturedOriginalText: String = ""
+    @State private var elevatedDraft: String = ""
+    @Environment(\.accessibilityReduceMotion) private var reduceMotion
 
     private var effectiveTint: String { tintHex ?? "560E50" }
     /// Figma pairs bg #1C051A with tint #560E50 — exactly tint × 0.325.
@@ -74,6 +86,8 @@ struct ParityJournalEntryView: View {
                 ParityBackButton40(sx: sx, sy: sy, action: onBack)
                     .parityPosition(x: 20 * sx, y: 68 * sy)
                     .accessibilityIdentifier("journalEntry.backButton")
+                    .opacity(elevatePhase == .idle ? 1 : 0)
+                    .allowsHitTesting(elevatePhase == .idle)
 
                 if variant == .elevated {
                     // Figma 324:12315: '24 January' Bitter-Bold 18 at (78,74.5)
@@ -95,6 +109,7 @@ struct ParityJournalEntryView: View {
                         .font(DesignTokens.Typography.h2Bold)
                         .foregroundStyle(DesignTokens.Colors.textPrimary)
                         .parityPosition(x: 138 * sx, y: 74 * sy)
+                        .opacity(elevatePhase == .idle ? 1 : 0)
                 }
 
                 // Entry text Bitter-Bold 18 #EBEBEB at (20,140,353,27)
@@ -105,6 +120,7 @@ struct ParityJournalEntryView: View {
                     .frame(width: 353 * sx, alignment: .topLeading)
                     .parityPosition(x: 20 * sx, y: 140 * sy)
                     .accessibilityIdentifier("journalEntry.entryText")
+                    .opacity(elevatePhase == .idle ? 1 : 0)
 
                 if variant != .elevated {
                     // Frame 279 (20,577,353,86): 'Color' label + swatch panel
@@ -116,17 +132,89 @@ struct ParityJournalEntryView: View {
                                       sx: sx, sy: sy, onSelect: onSelectColor)
                         .parityPosition(x: 20 * sx, y: 577 * sy)
                         .accessibilityIdentifier("journalEntry.colorPicker")
+                        .opacity(elevatePhase == .idle ? 1 : 0)
+                        .allowsHitTesting(elevatePhase == .idle)
 
                     // 'Elevate' button (20,714,353,56) — 324:12093 / 324:12026
-                    ParityElevateButton(title: "Elevate", sx: sx, sy: sy, action: onElevate)
+                    ParityElevateButton(title: "Elevate", sx: sx, sy: sy, action: beginElevate)
                         .parityPosition(x: 20 * sx, y: 714 * sy)
                         .accessibilityIdentifier("journalEntry.elevateButton")
+                        .opacity(elevatePhase == .idle ? 1 : 0)
+                        .allowsHitTesting(elevatePhase == .idle)
+                }
+
+                if elevatePhase != .idle {
+                    ElevateCinematicOverlay(
+                        phase: elevatePhase,
+                        originalText: capturedOriginalText,
+                        elevatedText: $elevatedDraft,
+                        errorMessage: "The AI rewrite didn't go through — your original entry is safe.",
+                        sx: sx, sy: sy,
+                        screenSize: geo.size,
+                        onSave: { finalText in
+                            withAnimation(ElevateMotion.settle(reduceMotion: reduceMotion)) {
+                                elevatePhase = .idle
+                            }
+                            // The host persists the approved wording as-is and
+                            // handles navigation — no second AI call.
+                            onElevateApproved(finalText)
+                        },
+                        onRevert: {
+                            withAnimation(ElevateMotion.settle(reduceMotion: reduceMotion)) {
+                                elevatePhase = .idle
+                            }
+                        }
+                    )
                 }
             }
             .ignoresSafeArea()
         }
         .ignoresSafeArea()
         .accessibilityIdentifier("journalEntry.root")
+    }
+
+    /// Kicks off the Elevate cinematic on this saved entry's text. The
+    /// original `entryText` is never mutated — a failed call, or the user
+    /// tapping Revert, simply dismisses the overlay with nothing lost.
+    private func beginElevate() {
+        guard !parityMode else { onElevate(); return }
+        let source = entryText.trimmingCharacters(in: .whitespacesAndNewlines)
+        guard !source.isEmpty else { return }
+
+        capturedOriginalText = source
+        elevatedDraft = ""
+
+        withAnimation(ElevateMotion.spring(reduceMotion: reduceMotion)) {
+            elevatePhase = .centering
+        }
+
+        Task {
+            try? await Task.sleep(nanoseconds: reduceMotion ? 150_000_000 : 450_000_000)
+            withAnimation(ElevateMotion.spring(reduceMotion: reduceMotion, response: 0.45, damping: 0.75)) {
+                elevatePhase = .thinking
+            }
+
+            do {
+                let result = try await GeminiService.shared.generateElevation(from: source)
+                elevatedDraft = result.trimmingCharacters(in: .whitespacesAndNewlines)
+
+                withAnimation(ElevateMotion.flight(reduceMotion: reduceMotion)) {
+                    elevatePhase = .revealing
+                }
+                try? await Task.sleep(nanoseconds: reduceMotion ? 200_000_000 : 900_000_000)
+                withAnimation(ElevateMotion.settle(reduceMotion: reduceMotion)) {
+                    elevatePhase = .editing
+                }
+            } catch {
+                withAnimation(.easeInOut(duration: 0.4)) {
+                    elevatePhase = .failed
+                }
+                try? await Task.sleep(nanoseconds: 1_400_000_000)
+                withAnimation(ElevateMotion.settle(reduceMotion: reduceMotion)) {
+                    elevatePhase = .idle
+                }
+            }
+        }
     }
 
     // MARK: - Elevated-state header buttons

@@ -2,10 +2,21 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>UNSPLASH_ACCESS_KEY</key>
-	<string>$(UNSPLASH_ACCESS_KEY)</string>
+	<key>CFBundleURLTypes</key>
+	<array>
+		<dict>
+			<key>CFBundleURLName</key>
+			<string>com.manifestai.deeplink</string>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>manifestai</string>
+			</array>
+		</dict>
+	</array>
 	<key>GEMINI_API_KEY</key>
 	<string>$(GEMINI_API_KEY)</string>
+	<key>NSSupportsLiveActivities</key>
+	<true/>
 	<key>SUPERWALL_API_KEY</key>
 	<string>$(SUPERWALL_API_KEY)</string>
 	<key>UIAppFonts</key>
@@ -17,5 +28,11 @@
 		<string>Poppins-SemiBold.ttf</string>
 		<string>Poppins-Bold.ttf</string>
 	</array>
+	<key>UIBackgroundModes</key>
+	<array>
+		<string>remote-notification</string>
+	</array>
+	<key>UNSPLASH_ACCESS_KEY</key>
+	<string>$(UNSPLASH_ACCESS_KEY)</string>
 </dict>
 </plist>

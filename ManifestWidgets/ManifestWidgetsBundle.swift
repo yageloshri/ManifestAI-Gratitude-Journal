@@ -12,5 +12,6 @@ import SwiftUI
 struct ManifestWidgetsBundle: WidgetBundle {
     var body: some Widget {
         ManifestWidgets()
+        ManifestWidgetsLiveActivity()
     }
 }

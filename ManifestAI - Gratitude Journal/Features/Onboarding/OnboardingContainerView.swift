@@ -12,9 +12,9 @@ enum OnboardingStep {
     case painPoints
     case science
     case numerology
+    case analyzing
     case analysis
     case commitment
-    case notificationSoftAsk
 }
 
 struct OnboardingContainerView: View {
@@ -94,14 +94,21 @@ struct OnboardingContainerView: View {
                 case .numerology:
                     NumerologyStepView(birthDate: $birthDate) {
                         withAnimation(.easeInOut(duration: 0.4)) {
-                            currentStep = .analysis
+                            currentStep = .analyzing
                         }
                     } onBack: {
                         withAnimation(.easeInOut(duration: 0.4)) {
                             currentStep = .science
                         }
                     }
-                    
+
+                case .analyzing:
+                    AnalyzingStepView(birthDate: birthDate) {
+                        withAnimation(.easeInOut(duration: 0.4)) {
+                            currentStep = .analysis
+                        }
+                    }
+
                 case .analysis:
                     AnalysisStepView(birthDate: birthDate, userName: userName) {
                         withAnimation(.easeInOut(duration: 0.4)) {
@@ -111,28 +118,19 @@ struct OnboardingContainerView: View {
                     
                 case .commitment:
                     CommitmentStepView {
-                        withAnimation(.easeInOut(duration: 0.4)) {
-                            currentStep = .notificationSoftAsk
-                        }
+                        completeOnboarding()
                     } onBack: {
                         withAnimation(.easeInOut(duration: 0.4)) {
                             currentStep = .analysis
                         }
                     }
-                
-                case .notificationSoftAsk:
-                    NotificationSoftAskStepView {
-                        // User accepted - permission was requested
-                        completeOnboarding()
-                    } onSkip: {
-                        // User skipped - no permission requested
-                        completeOnboarding()
-                    }
                 }
             }
+            // Soft forward-slide crossfade. (The previous 0.95 scale-in made
+            // every new screen visibly "shrink then snap" for a beat.)
             .transition(.asymmetric(
-                insertion: .opacity.combined(with: .scale(scale: 0.95)),
-                removal: .opacity.combined(with: .scale(scale: 1.05))
+                insertion: .move(edge: .trailing).combined(with: .opacity),
+                removal: .opacity
             ))
         }
     }

@@ -45,11 +45,15 @@ struct GridSwapOverlay: View {
                         )
                     }
                     
-                    // Separators
-                    GridSeparatorsView(layout: currentLayout)
-                        .opacity(0.3)
-                        .scaleEffect(0.5)
-                        .frame(width: 195, height: 422, alignment: .topLeading)
+                    // Separators — same per-cell geometry the editor canvas
+                    // and exporter use, scaled down for this mini preview.
+                    GridSeparatorsView(
+                        cells: currentLayout.cells(in: CGSize(width: 390, height: 844)),
+                        canvasSize: CGSize(width: 390, height: 844)
+                    )
+                    .opacity(0.3)
+                    .scaleEffect(0.5)
+                    .frame(width: 195, height: 422, alignment: .topLeading)
                 }
                 .frame(width: 195, height: 422)
                 .clipShape(RoundedRectangle(cornerRadius: 30))

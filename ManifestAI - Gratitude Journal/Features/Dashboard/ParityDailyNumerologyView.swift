@@ -13,6 +13,11 @@ struct ParityDailyNumerologyView: View {
     var insight: PersonalizedInsight? = nil
     var onClose: () -> Void = {}
     var parityMode: Bool = false
+    /// Live overlay mode (MainTabView): the REAL Home screen is already
+    /// behind this view, so skip the duplicated `HomeView().blur(7)` backdrop
+    /// — a second fully-blurred Home is what made the sheet slide in with a
+    /// visible stutter on device. A simple dim scrim reads the same.
+    var liveOverlay: Bool = false
 
     var body: some View {
         GeometryReader { geo in
@@ -20,11 +25,14 @@ struct ParityDailyNumerologyView: View {
             let sy = geo.size.height / 852
 
             ZStack(alignment: .topLeading) {
-                // Home behind, dimmed: Figma Rectangle 39325 #16062A@0.8 + blur 14
-                HomeView(userName: userName, dailyNumber: dailyNumber, parityMode: parityMode)
-                    .blur(radius: 7)
-
-                Color(hex: "16062A").opacity(0.8)
+                if liveOverlay {
+                    Color(hex: "16062A").opacity(0.88)
+                } else {
+                    // Parity gallery: Figma Rectangle 39325 #16062A@0.8 + blur 14
+                    HomeView(userName: userName, dailyNumber: dailyNumber, parityMode: parityMode)
+                        .blur(radius: 7)
+                    Color(hex: "16062A").opacity(0.8)
+                }
 
                 sheet(sx: sx, sy: sy)
                     .parityPosition(x: 0, y: 42 * sy)
@@ -87,21 +95,29 @@ struct ParityDailyNumerologyView: View {
             bigGoldElemento(sx: sx, sy: sy)
                 .parityPosition(x: 162 * sx, y: 57 * sy)
 
-            // title — abs (17,180) → rel (17,138), Bitter Bold 18/27 #FCD471
+            // title — abs (17,180) → rel (17,138), Bitter Bold 18/27 #FCD471.
+            // AI headline length varies — one line only, scale down to fit
+            // (a wrapped headline would overlap the vibe text below).
             Text(insight?.headline ?? "Initiate Bold Action")
                 .font(DesignTokens.Typography.h4)
                 .foregroundStyle(DesignTokens.Colors.secondary)
                 .multilineTextAlignment(.center)
+                .lineLimit(1)
+                .minimumScaleFactor(0.6)
                 .frame(width: 356 * sx)
                 .parityPosition(x: 17 * sx, y: 141.33 * sy)
 
-            // insight — abs (24,215) → rel (24,173), Poppins Regular 14/21 #EBEBEB
+            // insight — abs (24,215) → rel (24,173), Poppins Regular 14/21 #EBEBEB.
+            // The slot below (until the first card at y=274) fits 4 lines —
+            // longer AI text scales down instead of overlapping the cards.
             Text(insight?.generalVibe ?? "Today, \(userName), is a powerful fresh start! The universe aligns to empower your independence and leadership. Seize energy to initiate new paths and confidently step into your unique potential.")
                 .font(DesignTokens.Typography.smallText)
                 .foregroundStyle(DesignTokens.Colors.textPrimary)
                 .multilineTextAlignment(.center)
                 .lineSpacing(smallLineSpacing)
-                .frame(width: 342 * sx)
+                .lineLimit(4)
+                .minimumScaleFactor(0.75)
+                .frame(width: 342 * sx, height: 96 * sy, alignment: .top)
                 .parityPosition(x: 24 * sx, y: 173.33 * sy)
 
             // insight cards — abs y317/460 → rel 275/418, 355×131, accent strokes
@@ -296,11 +312,15 @@ struct ParityDailyNumerologyView: View {
                 .foregroundStyle(Color(hex: "F2F2F2"))
                 .parityPosition(x: 59.33 * sx, y: 22.5 * sy)
 
+            // AI advice length varies — the card fits 3 lines; longer text
+            // scales down instead of spilling out of the 131pt card.
             Text(bodyText)
                 .font(DesignTokens.Typography.smallText)
                 .foregroundStyle(DesignTokens.Colors.textPrimary.opacity(0.8))
                 .lineSpacing(smallLineSpacing)
-                .frame(width: 322 * sx, alignment: .topLeading)
+                .lineLimit(3)
+                .minimumScaleFactor(0.75)
+                .frame(width: 322 * sx, height: 64 * sy, alignment: .topLeading)
                 .parityPosition(x: 15.33 * sx, y: 57.33 * sy)
         }
         .frame(width: 355 * sx, height: 131 * sy, alignment: .topLeading)
@@ -322,9 +342,14 @@ struct ParityDailyNumerologyView: View {
                 Text(label)
                     .font(DesignTokens.Typography.smallText)
                     .foregroundStyle(DesignTokens.Colors.textSecondary)
+                // AI values ("Emerald Green"…) vary in length — one line,
+                // scaled to fit the 110pt card.
                 Text(value)
                     .font(DesignTokens.Typography.smallMedium)
                     .foregroundStyle(DesignTokens.Colors.textPrimary)
+                    .lineLimit(1)
+                    .minimumScaleFactor(0.6)
+                    .padding(.horizontal, 6)
                     .padding(.top, -7)
             }
             .padding(.top, 14)

@@ -295,6 +295,8 @@ struct ParityUpgradeProView: View {
                 Text("Rs 133/week")
                     .font(DesignTokens.Typography.smallText)
                     .foregroundStyle(DesignTokens.Colors.textSecondary)
+                    .lineLimit(1)
+                    .minimumScaleFactor(0.75)
                     .frame(width: 84 * sx, alignment: .leading)
                     .parityPosition(x: 220 * sx, y: 16 * sy)
             }
@@ -360,6 +362,8 @@ struct ParityUpgradeProView: View {
                 Text("Rs 11,00/week")
                     .font(DesignTokens.Typography.smallText)
                     .foregroundStyle(DesignTokens.Colors.textSecondary)
+                    .lineLimit(1)
+                    .minimumScaleFactor(0.75)
                     .frame(width: 92 * sx, alignment: .leading)
                     .parityPosition(x: 213 * sx, y: 16 * sy)
             }

@@ -136,8 +136,10 @@ struct ParityVisionEmptyView: View {
                 Text("Create New Board")
                     .font(DesignTokens.Typography.smallMedium)
                     .foregroundStyle(.white)
-                    .frame(width: 129 * sx, alignment: .top)
-                    .parityPosition(x: 59.5 * sx, y: 17.5 * sy)
+                    .lineLimit(1)
+                    .minimumScaleFactor(0.75)
+                    .frame(width: 146 * sx, alignment: .center)
+                    .parityPosition(x: 56 * sx, y: 17.5 * sy)
             }
         }
         .frame(width: 214 * sx, height: 56 * sy, alignment: .topLeading)

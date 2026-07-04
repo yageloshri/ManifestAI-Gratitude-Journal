@@ -6,8 +6,16 @@ import SuperwallKit
 
 class SuperwallDelegateHandler: SuperwallDelegate {
     static let shared = SuperwallDelegateHandler()
-    
+
     private init() {}
+
+    /// The app ships with a HARD paywall (3-day trial): without an active
+    /// subscription the paywall keeps coming back. QA/simulator runs can
+    /// disable enforcement via `defaults write <bundle> debug_bypass_paywall
+    /// -bool true` (or the -forceProState launch argument path below).
+    static var hardPaywallEnforced: Bool {
+        !UserDefaults.standard.bool(forKey: "debug_bypass_paywall")
+    }
 
     // MARK: - Subscription Status Sync
 
@@ -70,9 +78,18 @@ class SuperwallDelegateHandler: SuperwallDelegate {
         dlog("📱 Paywall presented: \(paywallInfo.name ?? "unknown")")
     }
     
-    // Optional: Track when paywall is dismissed
+    // Hard paywall: closing the paywall without subscribing just brings it
+    // back — there is no free path into the app.
     func handlePaywallDismissed(withInfo paywallInfo: PaywallInfo) {
         dlog("📱 Paywall dismissed: \(paywallInfo.name ?? "unknown")")
+        guard Self.hardPaywallEnforced else { return }
+        guard AppState.shared.hasCompletedOnboarding else { return }
+        guard !SubscriptionManager.shared.isPro else { return }
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.6) {
+            guard !SubscriptionManager.shared.isPro else { return }
+            dlog("🔒 Hard paywall: re-presenting after dismissal without purchase")
+            Superwall.shared.register(placement: "campaign_trigger")
+        }
     }
 }
 

@@ -44,6 +44,9 @@ struct NameStepView: View {
                         placeholder: "Enter Name",
                         isFocused: $isFocused
                     )
+                    // Names must never be autocorrected (e.g. "Yagel" → "Tavel")
+                    .autocorrectionDisabled()
+                    .textInputAutocapitalization(.words)
                     .accessibilityIdentifier("name.textField")
                 }
                 .frame(width: 353 * sx, alignment: .topLeading)

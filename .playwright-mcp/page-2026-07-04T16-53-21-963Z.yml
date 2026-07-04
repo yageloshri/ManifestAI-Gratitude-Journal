@@ -1,0 +1,255 @@
+- generic [active] [ref=f3e1]:
+  - link "Skip to content" [ref=f3e2] [cursor=pointer]:
+    - /url: "#main"
+  - banner [ref=f3e3]:
+    - generic [ref=f3e4]:
+      - link "ManifestAI home" [ref=f3e5] [cursor=pointer]:
+        - /url: "#top"
+        - text: Manifest
+        - generic [ref=f3e6]: AI
+      - generic [ref=f3e7]:
+        - link "Get the App" [ref=f3e8] [cursor=pointer]:
+          - /url: "#appstore"
+        - button "Toggle menu" [ref=f3e9]:
+          - img [ref=f3e10]
+  - main [ref=f3e12]:
+    - generic [ref=f3e13]:
+      - generic:
+        - generic: "3"
+        - generic: "6"
+        - generic: "9"
+        - generic: "3"
+      - generic [ref=f3e16]:
+        - generic [ref=f3e17]:
+          - paragraph [ref=f3e18]: AI Gratitude & Manifestation Journal
+          - heading "Turn your dreams into reality in 5 minutes a day." [level=1] [ref=f3e19]
+          - paragraph [ref=f3e20]: ManifestAI blends daily gratitude journaling with AI-powered insights, Daily Numerology, Tesla's 369 manifestation method, and Vision Boards — one calm ritual to start and end your day.
+          - generic [ref=f3e21]:
+            - link "Download ManifestAI on the App Store (link coming soon)" [ref=f3e22] [cursor=pointer]:
+              - /url: "#appstore"
+              - img [ref=f3e23]
+              - generic [ref=f3e25]:
+                - generic [ref=f3e26]: Download on the
+                - strong [ref=f3e27]: App Store
+            - link "See how it works" [ref=f3e28] [cursor=pointer]:
+              - /url: "#how-it-works"
+          - list [ref=f3e29]:
+            - listitem [ref=f3e30]:
+              - img [ref=f3e31]
+              - text: 3-day free trial
+            - listitem [ref=f3e33]:
+              - img [ref=f3e34]
+              - text: Just 5 minutes a day
+            - listitem [ref=f3e36]:
+              - img [ref=f3e37]
+              - text: Cancel anytime
+        - generic [ref=f3e43]:
+          - img "ManifestAI Today screen showing a Good Morning greeting, Daily Numerology insight, day streak, and Manifestation Hub with Gratitude Journal, Vision Board, and 369 Method cards" [ref=f3e44]
+          - img "ManifestAI 369 Method screen with a wise owl mascot holding golden 3, 6, and 9 numerals, explaining Tesla's manifestation technique" [ref=f3e45]
+      - link "Scroll to explore" [ref=f3e46] [cursor=pointer]:
+        - /url: "#proof"
+        - generic [ref=f3e47]: Explore
+    - generic [ref=f3e50]:
+      - generic [ref=f3e51]:
+        - generic [ref=f3e52]: 5 min
+        - generic [ref=f3e53]: a day, morning & night
+      - generic [ref=f3e54]:
+        - generic [ref=f3e55]: 3, 6, 9
+        - generic [ref=f3e56]: Tesla's manifestation method
+      - generic [ref=f3e57]:
+        - generic [ref=f3e58]: AI
+        - generic [ref=f3e59]: insights on every entry
+      - generic [ref=f3e60]:
+        - generic [ref=f3e61]: 3-day
+        - generic [ref=f3e62]: free trial, cancel anytime
+    - generic [ref=f3e64]:
+      - generic [ref=f3e65]:
+        - paragraph [ref=f3e66]: What's Inside
+        - heading "Four rituals. One calm home for your dreams." [level=2] [ref=f3e67]
+        - paragraph [ref=f3e68]: "Every feature in ManifestAI is built around a single idea: a few intentional minutes a day can reshape how you see your life."
+      - generic [ref=f3e69]:
+        - article [ref=f3e70]:
+          - heading "AI Gratitude Journal" [level=3] [ref=f3e72]
+          - paragraph [ref=f3e73]: Write freely each day and receive gentle, AI-powered insights that surface patterns in your gratitude and help you reflect deeper.
+          - generic [ref=f3e74]: Daily ritual
+        - article [ref=f3e75]:
+          - heading "Daily Numerology" [level=3] [ref=f3e77]
+          - paragraph [ref=f3e78]: ManifestAI calculates your personal day number from your birth date and delivers a short daily insight to guide your focus.
+          - generic [ref=f3e79]: Personal day number
+        - article [ref=f3e80]:
+          - heading "Tesla's 369 Method" [level=3] [ref=f3e82]
+          - paragraph [ref=f3e83]: Write your affirmation 3 times in the morning, 6 times in the afternoon, and 9 times at night — the manifestation ritual Tesla swore by.
+          - generic [ref=f3e84]: 3 · 6 · 9
+        - article [ref=f3e85]:
+          - heading "Vision Boards" [level=3] [ref=f3e87]
+          - paragraph [ref=f3e88]: Collect the images and words of the life you're manifesting into a private board you can revisit any time you need a reminder.
+          - generic [ref=f3e89]: See it, feel it
+    - generic [ref=f3e91]:
+      - generic [ref=f3e92]:
+        - paragraph [ref=f3e93]: How It Works
+        - heading "Three small steps, every day." [level=2] [ref=f3e94]
+        - paragraph [ref=f3e95]: ManifestAI turns manifestation into a habit — not a chore. Here's the whole ritual.
+      - generic [ref=f3e96]:
+        - generic [ref=f3e97]:
+          - generic [ref=f3e98]: "1"
+          - heading "Reflect & write" [level=3] [ref=f3e99]
+          - paragraph [ref=f3e100]: Open your Gratitude Journal each morning and evening and write what you're thankful for — AI gently suggests prompts if you're stuck.
+        - generic [ref=f3e101]:
+          - generic [ref=f3e102]: "2"
+          - heading "Check your numbers" [level=3] [ref=f3e103]
+          - paragraph [ref=f3e104]: "Read your Daily Numerology insight, then practice the 369 method: 3 affirmations in the morning, 6 in the afternoon, 9 at night."
+        - generic [ref=f3e105]:
+          - generic [ref=f3e106]: "3"
+          - heading "Watch it grow" [level=3] [ref=f3e107]
+          - paragraph [ref=f3e108]: Build your day streak and fill your Vision Board — a living, growing picture of the life you're manifesting.
+    - generic [ref=f3e110]:
+      - generic [ref=f3e111]:
+        - paragraph [ref=f3e112]: Early Believers
+        - heading "Five minutes that changed how people start their day." [level=2] [ref=f3e113]
+      - generic [ref=f3e114]:
+        - article [ref=f3e115]:
+          - generic "5 out of 5 stars" [ref=f3e116]:
+            - img [ref=f3e117]
+            - img [ref=f3e119]
+            - img [ref=f3e121]
+            - img [ref=f3e123]
+            - img [ref=f3e125]
+          - blockquote [ref=f3e127]: "\"The 369 method sounded silly until I actually tried it. Writing my affirmation 9 times before bed has become the calmest part of my night.\""
+          - generic [ref=f3e128]:
+            - generic [ref=f3e129]: R
+            - generic [ref=f3e130]:
+              - strong [ref=f3e131]: Rina M.
+              - text: Product designer
+        - article [ref=f3e132]:
+          - generic "5 out of 5 stars" [ref=f3e133]:
+            - img [ref=f3e134]
+            - img [ref=f3e136]
+            - img [ref=f3e138]
+            - img [ref=f3e140]
+            - img [ref=f3e142]
+          - blockquote [ref=f3e144]: "\"My Daily Numerology insight is the first thing I read every morning. It sounds small, but it genuinely reframes how I approach the day.\""
+          - generic [ref=f3e145]:
+            - generic [ref=f3e146]: D
+            - generic [ref=f3e147]:
+              - strong [ref=f3e148]: Devon K.
+              - text: Nurse practitioner
+        - article [ref=f3e149]:
+          - generic "5 out of 5 stars" [ref=f3e150]:
+            - img [ref=f3e151]
+            - img [ref=f3e153]
+            - img [ref=f3e155]
+            - img [ref=f3e157]
+            - img [ref=f3e159]
+          - blockquote [ref=f3e161]: "\"I've tried three other gratitude apps. This is the only one I've kept open past a week — the vision board makes my goals feel real instead of abstract.\""
+          - generic [ref=f3e162]:
+            - generic [ref=f3e163]: A
+            - generic [ref=f3e164]:
+              - strong [ref=f3e165]: Ana P.
+              - text: Freelance illustrator
+    - generic [ref=f3e167]:
+      - generic [ref=f3e168]:
+        - paragraph [ref=f3e169]: Pricing
+        - heading "Start free. Stay for the ritual." [level=2] [ref=f3e170]
+        - paragraph [ref=f3e171]: Try every feature for 3 days at no cost. No commitment until you decide it's worth it.
+      - generic [ref=f3e173]:
+        - generic [ref=f3e174]: 3-Day Free Trial
+        - generic [ref=f3e175]:
+          - generic [ref=f3e176]: $24.99
+          - generic [ref=f3e177]: / year
+        - paragraph [ref=f3e178]: or $3.99 / week — cancel anytime
+        - list [ref=f3e179]:
+          - listitem [ref=f3e180]:
+            - img [ref=f3e181]
+            - text: Unlimited AI-powered gratitude journaling
+          - listitem [ref=f3e183]:
+            - img [ref=f3e184]
+            - text: Daily Numerology insights
+          - listitem [ref=f3e186]:
+            - img [ref=f3e187]
+            - text: Tesla's 369 manifestation method
+          - listitem [ref=f3e189]:
+            - img [ref=f3e190]
+            - text: Unlimited Vision Boards
+          - listitem [ref=f3e192]:
+            - img [ref=f3e193]
+            - text: Day-streak tracking
+        - link "Start My Free Trial" [ref=f3e195] [cursor=pointer]:
+          - /url: "#appstore"
+        - paragraph [ref=f3e196]: 3 days free, then $24.99/year or $3.99/week. Cancel anytime in the App Store before your trial ends and you won't be charged.
+    - generic [ref=f3e198]:
+      - generic [ref=f3e199]:
+        - paragraph [ref=f3e200]: FAQ
+        - heading "Questions, answered." [level=2] [ref=f3e201]
+      - generic [ref=f3e202]:
+        - group [ref=f3e203]:
+          - 'generic "What is ManifestAI: Gratitude Journal?" [ref=f3e204] [cursor=pointer]': "What is ManifestAI: Gratitude Journal?"
+          - paragraph [ref=f3e207]: ManifestAI is an iOS app that combines daily gratitude journaling with AI-powered insights, Daily Numerology, Tesla's 369 manifestation method, and Vision Boards — designed to fit into just 5 minutes of your day.
+        - group [ref=f3e208]:
+          - generic "How does the 3-day free trial work?" [ref=f3e209] [cursor=pointer]: How does the 3-day free trial work?
+        - group [ref=f3e211]:
+          - generic "What is the Tesla 369 manifestation method?" [ref=f3e212] [cursor=pointer]: What is the Tesla 369 manifestation method?
+        - group [ref=f3e214]:
+          - generic "How is my Daily Numerology calculated?" [ref=f3e215] [cursor=pointer]: How is my Daily Numerology calculated?
+        - group [ref=f3e217]:
+          - generic "Can I cancel anytime?" [ref=f3e218] [cursor=pointer]: Can I cancel anytime?
+        - group [ref=f3e220]:
+          - generic "Is my journal private?" [ref=f3e221] [cursor=pointer]: Is my journal private?
+    - generic [ref=f3e225]:
+      - img "Wise owl mascot holding golden 3, 6, and 9 numerals, representing Tesla's 369 manifestation method" [ref=f3e226]
+      - heading "Your dreams are 5 minutes away." [level=2] [ref=f3e227]
+      - paragraph [ref=f3e228]: Download ManifestAI and start your 3-day free trial today. No pressure, no clutter — just a calm ritual that's entirely yours.
+      - link "Download ManifestAI on the App Store (link coming soon)" [ref=f3e230] [cursor=pointer]:
+        - /url: "#appstore"
+        - img [ref=f3e231]
+        - generic [ref=f3e233]:
+          - generic [ref=f3e234]: Download on the
+          - strong [ref=f3e235]: App Store
+  - contentinfo [ref=f3e236]:
+    - generic [ref=f3e237]:
+      - generic [ref=f3e238]:
+        - generic [ref=f3e239]:
+          - link "Manifest AI" [ref=f3e240] [cursor=pointer]:
+            - /url: "#top"
+            - text: Manifest
+            - generic [ref=f3e241]: AI
+          - paragraph [ref=f3e242]: An AI-powered gratitude & manifestation journal for iOS. Daily Numerology, Tesla's 369 method, and Vision Boards — 5 minutes a day.
+        - generic [ref=f3e243]:
+          - generic [ref=f3e244]:
+            - heading "Product" [level=4] [ref=f3e245]
+            - list [ref=f3e246]:
+              - listitem [ref=f3e247]:
+                - link "Features" [ref=f3e248] [cursor=pointer]:
+                  - /url: "#features"
+              - listitem [ref=f3e249]:
+                - link "How it Works" [ref=f3e250] [cursor=pointer]:
+                  - /url: "#how-it-works"
+              - listitem [ref=f3e251]:
+                - link "Pricing" [ref=f3e252] [cursor=pointer]:
+                  - /url: "#pricing"
+              - listitem [ref=f3e253]:
+                - link "FAQ" [ref=f3e254] [cursor=pointer]:
+                  - /url: "#faq"
+          - generic [ref=f3e255]:
+            - heading "Legal" [level=4] [ref=f3e256]
+            - list [ref=f3e257]:
+              - listitem [ref=f3e258]:
+                - link "Privacy Policy" [ref=f3e259] [cursor=pointer]:
+                  - /url: privacy.html
+              - listitem [ref=f3e260]:
+                - link "Terms of Service" [ref=f3e261] [cursor=pointer]:
+                  - /url: terms.html
+          - generic [ref=f3e262]:
+            - heading "Get the App" [level=4] [ref=f3e263]
+            - list [ref=f3e264]:
+              - listitem [ref=f3e265]:
+                - link "App Store (coming soon)" [ref=f3e266] [cursor=pointer]:
+                  - /url: "#appstore"
+      - generic [ref=f3e267]:
+        - generic [ref=f3e268]: © 2026 ManifestAI. All rights reserved.
+        - generic [ref=f3e269]:
+          - link "ManifestAI on Instagram" [ref=f3e270] [cursor=pointer]:
+            - /url: "#"
+            - img [ref=f3e271]
+          - link "ManifestAI on TikTok" [ref=f3e275] [cursor=pointer]:
+            - /url: "#"
+            - img [ref=f3e276]

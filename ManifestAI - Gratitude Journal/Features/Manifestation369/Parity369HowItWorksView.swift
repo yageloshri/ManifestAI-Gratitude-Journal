@@ -39,13 +39,18 @@ struct Parity369HowItWorksView: View {
                     .parityPosition(x: 0, y: 145 * sy)
 
                 // Figma 340:3236: SKIP (327,70,34,24) Poppins-Medium 16 #B9B9B9
+                // NOTE: the 34pt Figma frame is narrower than the rendered
+                // text, which forced a "SKI\nP" wrap. .fixedSize() keeps the
+                // label single-line; widening the frame + right-aligning
+                // preserves the original right edge (327+34=361) placement.
                 Text("SKIP")
                     .font(DesignTokens.Typography.bodyMedium)
                     .foregroundStyle(DesignTokens.Colors.textSecondary)
-                    .frame(width: 34 * sx, alignment: .center)
+                    .fixedSize()
+                    .frame(width: 60 * sx, alignment: .trailing)
                     .contentShape(Rectangle())
                     .onTapGesture { onSkip() }
-                    .parityPosition(x: 327 * sx, y: 70 * sy + 1.33 * sy)
+                    .parityPosition(x: 301 * sx, y: 70 * sy + 1.33 * sy)
                     .accessibilityIdentifier("howitworks369.skip")
 
                 // Figma 340:3293: progress dots (159,107,75,9), active = 1

@@ -164,8 +164,10 @@ struct ParityWriteEntryButton: View {
                 Text("Write Entry")
                     .font(DesignTokens.Typography.smallMedium)
                     .foregroundStyle(.white)
-                    .frame(width: 77 * sx, alignment: .center)
-                    .parityPosition(x: 50 * sx, y: 17.5 * sy)
+                    .lineLimit(1)
+                    .minimumScaleFactor(0.75)
+                    .frame(width: 85 * sx, alignment: .center)
+                    .parityPosition(x: 48 * sx, y: 17.5 * sy)
             }
             .frame(width: 143 * sx, height: 56 * sy, alignment: .topLeading)
         }
