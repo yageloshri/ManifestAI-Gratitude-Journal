@@ -1,0 +1,100 @@
+{
+  "sourceLanguage": "en",
+  "strings": {
+    "NSHumanReadableCopyright": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "© 2026 ManifestAI. جميع الحقوق محفوظة."
+          }
+        },
+        "da": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "© 2026 ManifestAI. Alle rettigheder forbeholdes."
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "© 2026 ManifestAI. Alle Rechte vorbehalten."
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "© 2026 ManifestAI. Todos los derechos reservados."
+          }
+        },
+        "fi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "© 2026 ManifestAI. Kaikki oikeudet pidätetään."
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "© ManifestAI. Tous droits réservés."
+          }
+        },
+        "he": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "© 2026 ManifestAI. כל הזכויות שמורות."
+          }
+        },
+        "id": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "© 2026 ManifestAI. Semua hak dilindungi."
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "© 2026 ManifestAI. Tutti i diritti riservati."
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Copyright © 2026 ManifestAI. 無断複写・転載を禁じます。"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "© ManifestAI. 모든 권리 보유."
+          }
+        },
+        "nb": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "© 2026 ManifestAI. Alle rettigheter forbeholdt."
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Copyright © 2026 ManifestAI. Todos os direitos reservados."
+          }
+        },
+        "vi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "© 2026 ManifestAI. Đã đăng ký bản quyền."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "© 2026 ManifestAI。保留所有权利。"
+          }
+        }
+      }
+    }
+  },
+  "version": "1.0"
+}

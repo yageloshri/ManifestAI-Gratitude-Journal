@@ -10,11 +10,11 @@ enum FigmaTab: Int, CaseIterable {
 
     var label: String {
         switch self {
-        case .today: return "Today"
-        case .journal: return "Journal"
-        case .vision: return "Vision"
+        case .today: return String(localized: "Today")
+        case .journal: return String(localized: "Journal")
+        case .vision: return String(localized: "Vision")
         case .method369: return "369"
-        case .profile: return "Profile"
+        case .profile: return String(localized: "Profile")
         }
     }
 
@@ -91,6 +91,8 @@ struct FigmaTabBar: View {
                         .offset(y: isActive && !landed ? 3 : 0)
                     Text(tab.label)
                         .font(DesignTokens.Typography.label)
+                        .lineLimit(1)
+                        .minimumScaleFactor(0.65) // localized labels (ja/de…) can be wide
                         .foregroundStyle(isActive
                                          ? DesignTokens.Colors.secondary
                                          : DesignTokens.Colors.tabInactive)

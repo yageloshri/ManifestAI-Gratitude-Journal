@@ -215,7 +215,7 @@ struct MainTabView: View {
 
     private var freeEntriesText: String {
         let left = max(0, 3 - usedThisWeek)
-        return "\(left) Free entries left this week"
+        return String(localized: "\(left) Free entries left this week")
     }
 
     private func switchTab(_ newTab: FigmaTab) {

@@ -87,6 +87,10 @@ struct ManifestAIApp: App {
             }
             .animation(.easeInOut, value: appState.hasCompletedOnboarding)
             .preferredColorScheme(.dark)
+            // Localization: the app ships in 20+ languages, incl. RTL (he/ar).
+            // Screens use fixed Figma coordinates that must not mirror — text
+            // localizes and renders RTL inside its labels, layout stays LTR.
+            .environment(\.layoutDirection, .leftToRight)
             // Screens are positioned at fixed Figma coordinates; larger
             // accessibility text sizes would overflow/collide instead of
             // reflowing, so clamp Dynamic Type at .large (truncation is worse

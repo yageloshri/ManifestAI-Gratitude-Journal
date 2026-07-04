@@ -117,20 +117,20 @@ struct HomeView: View {
     private var timeGreeting: String {
         if parityMode { return "Good Morning" }
         switch Calendar.current.component(.hour, from: Date()) {
-        case 5..<12: return "Good Morning"
-        case 12..<17: return "Good Afternoon"
-        case 17..<22: return "Good Evening"
-        default: return "Good Night"
+        case 5..<12: return String(localized: "Good Morning")
+        case 12..<17: return String(localized: "Good Afternoon")
+        case 17..<22: return String(localized: "Good Evening")
+        default: return String(localized: "Good Night")
         }
     }
 
     private var timeSubtitle: String {
         if parityMode { return "A calm start to your day." }
         switch Calendar.current.component(.hour, from: Date()) {
-        case 5..<12: return "A calm start to your day."
-        case 12..<17: return "A mindful pause in your day."
-        case 17..<22: return "Time to reflect and manifest."
-        default: return "Rest well — tomorrow is yours."
+        case 5..<12: return String(localized: "A calm start to your day.")
+        case 12..<17: return String(localized: "A mindful pause in your day.")
+        case 17..<22: return String(localized: "Time to reflect and manifest.")
+        default: return String(localized: "Rest well — tomorrow is yours.")
         }
     }
 
@@ -370,14 +370,19 @@ struct HomeView: View {
             .frame(width: 326 * sx, height: 62 * sy, alignment: .topLeading)
             .parityPosition(x: 14 * sx, y: 85 * sy)
 
-            Text("Total Entries:")
-                .font(DesignTokens.Typography.smallText)
-                .foregroundStyle(DesignTokens.Colors.textSecondary)
-                .parityPosition(x: 17 * sx, y: 157.67 * sy)
-            Text("\(totalEntries)")
-                .font(DesignTokens.Typography.smallMedium)
-                .foregroundStyle(DesignTokens.Colors.textPrimary)
-                .parityPosition(x: 109 * sx, y: 157.67 * sy)
+            // One flowing row (localized labels vary in width — absolute
+            // positioning made long translations overlap the count).
+            HStack(spacing: 6) {
+                Text("Total Entries:")
+                    .font(DesignTokens.Typography.smallText)
+                    .foregroundStyle(DesignTokens.Colors.textSecondary)
+                Text("\(totalEntries)")
+                    .font(DesignTokens.Typography.smallMedium)
+                    .foregroundStyle(DesignTokens.Colors.textPrimary)
+            }
+            .lineLimit(1)
+            .minimumScaleFactor(0.8)
+            .parityPosition(x: 17 * sx, y: 157.67 * sy)
         }
         .frame(width: 353 * sx, height: 197 * sy, alignment: .topLeading)
         .accessibilityIdentifier("home.journalCard")
@@ -398,7 +403,8 @@ struct HomeView: View {
                 .foregroundStyle(DesignTokens.Colors.textPrimary)
                 .parityPosition(x: 16 * sx, y: 70 * sy)
 
-            Text("\(boardCount) board\(boardCount == 1 ? "" : "s")")
+            // Two distinct keys — English "-s" suffixing doesn't localize.
+            (boardCount == 1 ? Text("1 board") : Text("\(boardCount) boards"))
                 .font(DesignTokens.Typography.smallText)
                 .foregroundStyle(DesignTokens.Colors.textSecondary)
                 .parityPosition(x: 16 * sx, y: 98 * sy)
