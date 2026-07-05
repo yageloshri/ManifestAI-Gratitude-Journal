@@ -89,10 +89,19 @@ class GeminiService {
         1. Do NOT provide options or variations.
         2. Do NOT include conversational filler like 'Here is a rewrite'.
         3. Output **ONLY** the final rewritten text.
-        
+        4. Respond in the SAME language as the entry. If the entry's language is ambiguous, respond in \(Self.appLanguageName).
+
         Entry: "\(text)"
         """
         return try await generateContent(prompt: prompt)
+    }
+
+    /// English name of the app's active UI language (e.g. "German", "Hebrew"),
+    /// used to steer Gemini responses into the user's language.
+    static var appLanguageName: String {
+        let code = Bundle.main.preferredLocalizations.first ?? "en"
+        let base = code.split(separator: "-").first.map(String.init) ?? code
+        return Locale(identifier: "en").localizedString(forLanguageCode: base) ?? "English"
     }
 }
 

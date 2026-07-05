@@ -5,7 +5,11 @@ class DailyInsightManager {
     static let shared = DailyInsightManager()
     
     private let userDefaults = UserDefaults.standard
-    private let cacheKey = "cachedPersonalizedInsight"
+    // Cache is per-language so switching the app language regenerates the
+    // reading in the new language instead of serving yesterday's locale.
+    private var cacheKey: String {
+        "cachedPersonalizedInsight_\(Bundle.main.preferredLocalizations.first ?? "en")"
+    }
     private let lastInsightDateKey = "lastInsightDate"
     
     private init() {}
@@ -93,6 +97,7 @@ class DailyInsightManager {
         }
         
         IMPORTANT: Return ONLY the JSON. No extra text, no markdown, no explanations.
+        LANGUAGE: Every text value in the JSON (headline, general_vibe, love_advice, career_advice, color, crystal) MUST be written in \(GeminiService.appLanguageName). Keep the JSON keys in English exactly as in the schema.
         """
     }
     
