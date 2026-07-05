@@ -97,7 +97,7 @@ struct ParityJournalWriteView: View {
                     .allowsHitTesting(elevatePhase == .idle)
 
                 // Figma 324:11993: 'Elevate' button (20,714,353,56)
-                ParityElevateButton(title: "Elevate", sx: sx, sy: sy, action: beginElevate)
+                ParityElevateButton(title: String(localized: "Elevate"), sx: sx, sy: sy, action: beginElevate)
                     .parityPosition(x: 20 * sx, y: 714 * sy)
                     .accessibilityIdentifier("journalWrite.elevateButton")
                     .opacity(elevatePhase == .idle ? 1 : 0)

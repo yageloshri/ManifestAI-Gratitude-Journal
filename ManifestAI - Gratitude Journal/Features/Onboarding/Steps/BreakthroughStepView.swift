@@ -65,7 +65,7 @@ struct BreakthroughStepView: View {
                     GlassBackButton(action: onBack)
                         .accessibilityIdentifier("category.backButton")
 
-                    PrimaryButton(title: "Reveal My Path", icon: nil) {
+                    PrimaryButton(title: String(localized: "Reveal My Path"), icon: nil) {
                         onContinue()
                     }
                     .accessibilityIdentifier("category.continueButton")

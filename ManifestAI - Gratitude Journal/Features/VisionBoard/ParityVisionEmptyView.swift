@@ -48,10 +48,13 @@ struct ParityVisionEmptyView: View {
                     .parityPosition(x: 85 * sx, y: 228 * sy)
 
                 // Figma 325:12679: 'My Vision' Bitter-SemiBold 26, #EBEBEB (20,68,353,31)
+                // Centered app-wide per product decision (owner override).
                 Text("My Vision")
                     .font(DesignTokens.Typography.h1)
                     .foregroundStyle(DesignTokens.Colors.textPrimary)
-                    .frame(width: 353 * sx, alignment: .topLeading)
+                    .lineLimit(1)
+                    .minimumScaleFactor(0.7)
+                    .frame(width: 353 * sx, alignment: .center)
                     .parityPosition(x: 20 * sx, y: 68 * sy)
 
                 // Figma 325:12693: 'Your Vision Gallery' Bitter-Bold 18, centered (18,444,356,27)

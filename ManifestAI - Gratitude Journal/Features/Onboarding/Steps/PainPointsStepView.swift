@@ -61,7 +61,7 @@ struct PainPointsStepView: View {
                     GlassBackButton(action: onBack)
                         .accessibilityIdentifier("problems.backButton")
 
-                    PrimaryButton(title: "Reveal My Path", icon: nil) {
+                    PrimaryButton(title: String(localized: "Reveal My Path"), icon: nil) {
                         onContinue()
                     }
                     .accessibilityIdentifier("problems.continueButton")

@@ -32,10 +32,15 @@ struct ParityVisionUploadView: View {
                     .accessibilityIdentifier("visionUpload.back")
 
                 // Figma 326:13124: 'Upload Image' Bitter-Bold 18, #EBEBEB (84,74.5,119,27)
+                // Centered app-wide per product decision (owner override —
+                // the back button at x:20 stays put).
                 Text("Upload Image")
                     .font(DesignTokens.Typography.h4)
                     .foregroundStyle(DesignTokens.Colors.textPrimary)
-                    .parityPosition(x: 84 * sx, y: 74.5 * sy)
+                    .lineLimit(1)
+                    .minimumScaleFactor(0.7)
+                    .frame(width: 353 * sx, alignment: .center)
+                    .parityPosition(x: 20 * sx, y: 74.5 * sy)
 
                 // Figma 326:13265: 'Rectangle 39330' (32,146,330,529)
                 // fill #D9D9D9 + IMAGE(mode=FILL), stroke #685EF5@0.28 sw=11, r20

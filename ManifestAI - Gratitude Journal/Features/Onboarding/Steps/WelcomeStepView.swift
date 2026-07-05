@@ -16,8 +16,11 @@ struct WelcomeStepView: View {
     @State private var showContent: Bool
 
     // Figma 264:874 — exact span text from the design
-    private static let fullLine1 = "Turn your dreams "
-    private static let fullLine2 = "into reality in 5 mins a day."
+    // String(localized:) here (not a raw literal) so the typewriter text is
+    // localized — as a String parameter it isn't auto-extracted by Xcode's
+    // string-catalog scanner otherwise.
+    private static let fullLine1 = String(localized: "Turn your dreams ")
+    private static let fullLine2 = String(localized: "into reality in 5 mins a day.")
 
     init(onContinue: @escaping () -> Void, parityMode: Bool = false) {
         self.onContinue = onContinue
@@ -60,7 +63,7 @@ struct WelcomeStepView: View {
                     .accessibilityIdentifier("welcome.headline")
 
                 // CTA — Figma 264:879: centered+0.5, top 690, 332×56
-                PrimaryButton(title: "Start My Journey", icon: "arrow.right") {
+                PrimaryButton(title: String(localized: "Start My Journey"), icon: "arrow.right") {
                     onContinue()
                 }
                 .frame(width: 332 * sx)

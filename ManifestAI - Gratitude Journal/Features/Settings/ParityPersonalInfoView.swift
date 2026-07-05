@@ -41,10 +41,16 @@ struct ParityPersonalInfoView: View {
                 .accessibilityIdentifier("personalinfo.backButton")
 
                 // Figma 330:1465: title Bitter Bold 18 #EBEBEB (84,74.5)
+                // Centered app-wide per product decision (owner override —
+                // the back button at x:20 and edit button at x:327 stay put;
+                // the title centers across the full canvas independent of them).
                 Text("Personal Information")
                     .font(DesignTokens.Typography.h4)
                     .foregroundStyle(DesignTokens.Colors.textPrimary)
-                    .parityPosition(x: 84 * sx, y: 74.5 * sy)
+                    .lineLimit(1)
+                    .minimumScaleFactor(0.7)
+                    .frame(width: 353 * sx, alignment: .center)
+                    .parityPosition(x: 20 * sx, y: 74.5 * sy)
 
                 // Figma 330:1742: edit button 40×40 glass r12 (327,68)
                 navSquare {

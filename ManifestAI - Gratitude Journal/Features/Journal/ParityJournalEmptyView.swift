@@ -31,9 +31,15 @@ struct ParityJournalEmptyView: View {
                     .parityPosition(x: 1 * sx, y: 205 * sy)
 
                 // Figma 324:1943: 'My Journey (0)' Bitter-SemiBold 26 #EBEBEB
+                // Centered app-wide per product decision (owner override —
+                // the search button at (333,68) stays put; the title is
+                // centered across the full canvas independent of it).
                 Text("My Journey (\(journeyCount))")
                     .font(DesignTokens.Typography.h1)
                     .foregroundStyle(DesignTokens.Colors.textPrimary)
+                    .lineLimit(1)
+                    .minimumScaleFactor(0.7)
+                    .frame(width: 353 * sx, alignment: .center)
                     .parityPosition(x: 20 * sx, y: 68 * sy)
 
                 // Figma 324:11798: search glass square (333,68,40,40)

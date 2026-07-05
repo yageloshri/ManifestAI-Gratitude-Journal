@@ -91,9 +91,13 @@ struct ParityDailyRemindersView: View {
             EllipseGlowBackground(sx: sx, sy: sy)
 
             // Figma 331:2829: "My Profile" Bitter SemiBold 26 #EBEBEB (20,68,353,31)
+            // Centered app-wide per product decision (owner override).
             Text("My Profile")
                 .font(DesignTokens.Typography.h1)
                 .foregroundStyle(DesignTokens.Colors.textPrimary)
+                .lineLimit(1)
+                .minimumScaleFactor(0.7)
+                .frame(width: 353 * sx, alignment: .center)
                 .parityPosition(x: 20 * sx, y: 68 * sy)
 
             // Figma 331:2830: profile card (20,123) 353×182
@@ -102,21 +106,29 @@ struct ParityDailyRemindersView: View {
 
             // Figma 331:2846: section label (20,340) Poppins Medium 16 #B9B9B9
             // (+1.67,+1.33pt: measured MSE shift vs reference on profile)
+            // Centered app-wide per product decision (owner override).
             Text("What are you calling in?")
                 .font(DesignTokens.Typography.bodyMedium)
                 .foregroundStyle(DesignTokens.Colors.textSecondary)
-                .parityPosition(x: 20 * sx + 1.67, y: 340 * sy + 1.33)
+                .lineLimit(1)
+                .minimumScaleFactor(0.7)
+                .frame(width: 353 * sx, alignment: .center)
+                .parityPosition(x: 20 * sx, y: 340 * sy + 1.33)
 
             // Figma 331:2849: Personal Information row (20,380)
+            // (subtitle typo "Name, DOD" fixed to reuse the "Name, DOB" key
+            // shared with ParityProfileView's identical row.)
             settingsRow(sx: sx, sy: sy,
-                        title: "Personal Information", subtitle: "Name, DOD",
+                        title: String(localized: "Personal Information"),
+                        subtitle: String(localized: "Name, DOB"),
                         icon: "ProfileIcon_Personal", // baked crop (same glyph as profile)
                         showArrow: true, rowId: "personalInfo")
                 .parityPosition(x: 20 * sx, y: 380 * sy)
 
             // Figma 331:2869: Upgrade to Pro row (20,458)
             settingsRow(sx: sx, sy: sy,
-                        title: "Upgrade to Pro", subtitle: "Unlock all features",
+                        title: String(localized: "Upgrade to Pro"),
+                        subtitle: String(localized: "Unlock all features"),
                         icon: "ProfileIcon_Crown", // baked crop (same glyph as profile)
                         showArrow: true, rowId: "upgradePro")
                 .parityPosition(x: 20 * sx, y: 458 * sy)
@@ -125,10 +137,14 @@ struct ParityDailyRemindersView: View {
             // with a section label + a 3-row notifications card (Morning /
             // Afternoon / Evening), same visual language (glass card, same
             // fonts/switch) but no longer 1:1 with the Figma frame.
+            // Centered app-wide per product decision (owner override).
             Text("Notifications")
                 .font(DesignTokens.Typography.bodyMedium)
                 .foregroundStyle(DesignTokens.Colors.textSecondary)
-                .parityPosition(x: 20 * sx + 1.67, y: 536 * sy + 1.33)
+                .lineLimit(1)
+                .minimumScaleFactor(0.7)
+                .frame(width: 353 * sx, alignment: .center)
+                .parityPosition(x: 20 * sx, y: 536 * sy + 1.33)
 
             notificationWindowsCard(sx: sx, sy: sy)
                 .parityPosition(x: 20 * sx, y: 576 * sy)
@@ -136,14 +152,18 @@ struct ParityDailyRemindersView: View {
             // Support row — shifted down from the original 614 to make room
             // for the 3-row notifications card above.
             settingsRow(sx: sx, sy: sy,
-                        title: "Support", subtitle: "Any question?",
+                        title: String(localized: "Support"),
+                        subtitle: String(localized: "Any question?"),
                         icon: "ProfileIcon_Support", // baked crop (same glyph as profile)
                         showArrow: true, rowId: "support")
                 .parityPosition(x: 20 * sx, y: 784 * sy)
 
             // Privacy Policy row — shifted down from the original 692.
+            // (subtitle typo "Name, DOD" fixed to reuse the "How we protect
+            // your data" key shared with ParityProfileView's identical row.)
             settingsRow(sx: sx, sy: sy,
-                        title: "Privacy Policy", subtitle: "Name, DOD",
+                        title: String(localized: "Privacy Policy"),
+                        subtitle: String(localized: "How we protect your data"),
                         icon: "ProfileIcon_Privacy", // baked crop (same glyph as profile)
                         showArrow: true, rowId: "privacyPolicy")
                 .parityPosition(x: 20 * sx, y: 862 * sy)
@@ -317,7 +337,8 @@ struct ParityDailyRemindersView: View {
 
             reminderWindowRow(sx: sx, sy: sy,
                                icon: "GlyphRitualMorning",
-                               title: "Morning Ritual", subtitle: "8:00 AM · 3 lines",
+                               title: String(localized: "Morning Ritual"),
+                               subtitle: String(localized: "8:00 AM · 3 lines"),
                                isOn: morningOn, accessibilityId: "dailyreminders.morningSwitch",
                                onToggle: toggleMorning)
                 .parityPosition(x: 0, y: 0)
@@ -329,7 +350,8 @@ struct ParityDailyRemindersView: View {
 
             reminderWindowRow(sx: sx, sy: sy,
                                icon: "GlyphRitualAfternoon",
-                               title: "Afternoon Ritual", subtitle: "2:00 PM · 6 lines",
+                               title: String(localized: "Afternoon Ritual"),
+                               subtitle: String(localized: "2:00 PM · 6 lines"),
                                isOn: afternoonOn, accessibilityId: "dailyreminders.afternoonSwitch",
                                onToggle: toggleAfternoon)
                 .parityPosition(x: 0, y: 64 * sy)
@@ -341,7 +363,8 @@ struct ParityDailyRemindersView: View {
 
             reminderWindowRow(sx: sx, sy: sy,
                                icon: "GlyphRitualNight",
-                               title: "Evening Ritual", subtitle: "8:00 PM · 9 lines",
+                               title: String(localized: "Evening Ritual"),
+                               subtitle: String(localized: "8:00 PM · 9 lines"),
                                isOn: eveningOn, accessibilityId: "dailyreminders.eveningSwitch",
                                onToggle: toggleEvening)
                 .parityPosition(x: 0, y: 128 * sy)

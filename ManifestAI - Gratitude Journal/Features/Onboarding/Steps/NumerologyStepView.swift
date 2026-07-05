@@ -57,7 +57,7 @@ struct NumerologyStepView: View {
                     GlassBackButton(action: onBack)
                         .accessibilityIdentifier("dob.backButton")
 
-                    PrimaryButton(title: "Calculate", icon: nil) {
+                    PrimaryButton(title: String(localized: "Calculate"), icon: nil) {
                         onContinue()
                     }
                     .accessibilityIdentifier("dob.continueButton")

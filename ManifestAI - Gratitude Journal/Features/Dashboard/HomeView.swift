@@ -53,9 +53,14 @@ struct HomeView: View {
                     .parityPosition(x: 20 * sx, y: 278 * sy)
 
                 // Figma 312:1446
+                // Centered app-wide per product decision (owner override —
+                // same treatment as the profile's gray section heading).
                 Text("Your Manifestation Hub")
                     .font(DesignTokens.Typography.bodyMedium)
                     .foregroundStyle(DesignTokens.Colors.textSecondary)
+                    .lineLimit(1)
+                    .minimumScaleFactor(0.7)
+                    .frame(width: 353 * sx, alignment: .center)
                     .parityPosition(x: 20 * sx, y: 366 * sy)
 
                 journalCard(sx: sx, sy: sy)

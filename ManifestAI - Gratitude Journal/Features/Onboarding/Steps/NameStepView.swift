@@ -41,7 +41,7 @@ struct NameStepView: View {
                     // Figma 268:1548: 353×56 glass capsule
                     GlassTextField(
                         text: $userName,
-                        placeholder: "Enter Name",
+                        placeholder: String(localized: "Enter Name"),
                         isFocused: $isFocused
                     )
                     // Names must never be autocorrected (e.g. "Yagel" → "Tavel")
@@ -57,7 +57,7 @@ struct NameStepView: View {
                     GlassBackButton(action: onBack)
                         .accessibilityIdentifier("name.backButton")
 
-                    PrimaryButton(title: "Reveal My Path", icon: nil) {
+                    PrimaryButton(title: String(localized: "Reveal My Path"), icon: nil) {
                         isFocused = false
                         UserDefaults.standard.set(userName, forKey: "user_name")
                         onContinue()

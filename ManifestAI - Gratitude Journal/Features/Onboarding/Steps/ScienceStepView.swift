@@ -36,7 +36,7 @@ struct ScienceStepView: View {
                     GlassBackButton(action: onBack)
                         .accessibilityIdentifier("didyouknow.backButton")
 
-                    PrimaryButton(title: "Wow Tell Me More", icon: nil) {
+                    PrimaryButton(title: String(localized: "Wow Tell Me More"), icon: nil) {
                         onContinue()
                     }
                     .accessibilityIdentifier("didyouknow.continueButton")

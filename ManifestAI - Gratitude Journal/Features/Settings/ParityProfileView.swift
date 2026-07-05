@@ -47,9 +47,14 @@ struct ParityProfileView: View {
             EllipseGlowBackground(sx: sx, sy: sy)
 
             // Figma 326:13316: "My Profile" Bitter SemiBold 26 #EBEBEB
+            // Centered app-wide per product decision (owner override — no
+            // longer strict Figma parity for this title's alignment).
             Text("My Profile")
                 .font(DesignTokens.Typography.h1)
                 .foregroundStyle(DesignTokens.Colors.textPrimary)
+                .lineLimit(1)
+                .minimumScaleFactor(0.7)
+                .frame(width: 353 * sx, alignment: .center)
                 .parityPosition(x: 20 * sx, y: 44 * sy)
 
             // Figma 326:13431: profile card 353×182
@@ -57,10 +62,14 @@ struct ParityProfileView: View {
                 .parityPosition(x: 20 * sx, y: 92 * sy)
 
             // Figma 326:13478: section label, Poppins Medium 16 #B9B9B9
+            // Centered app-wide per product decision (owner override).
             Text("What are you calling in?")
                 .font(DesignTokens.Typography.bodyMedium)
                 .foregroundStyle(DesignTokens.Colors.textSecondary)
-                .parityPosition(x: 20 * sx + 1.67, y: 294 * sy + 1.33)
+                .lineLimit(1)
+                .minimumScaleFactor(0.7)
+                .frame(width: 353 * sx, alignment: .center)
+                .parityPosition(x: 20 * sx, y: 294 * sy + 1.33)
 
             // "Upgrade to Pro" removed — the app uses a hard paywall with a
             // 3-day trial, so every user already has an active subscription.
@@ -69,7 +78,8 @@ struct ParityProfileView: View {
 
             // Figma 326:13579: Personal Information row
             settingsRow(sx: sx, sy: sy,
-                        title: "Personal Information", subtitle: "Name, DOB",
+                        title: String(localized: "Personal Information"),
+                        subtitle: String(localized: "Name, DOB"),
                         icon: "ProfileIcon_Personal", // baked crop 326:13626 + glow
                         showArrow: true, rowId: "personalInfo")
                 .parityPosition(x: 20 * sx, y: 340 * sy)
@@ -80,14 +90,16 @@ struct ParityProfileView: View {
 
             // Figma 326:13611: Support row
             settingsRow(sx: sx, sy: sy,
-                        title: "Support", subtitle: "Any question?",
+                        title: String(localized: "Support"),
+                        subtitle: String(localized: "Any question?"),
                         icon: "ProfileIcon_Support", // baked crop 328:13717 + glow
                         showArrow: true, rowId: "support")
                 .parityPosition(x: 20 * sx, y: 508 * sy)
 
             // Figma 326:13641: Privacy Policy row
             settingsRow(sx: sx, sy: sy,
-                        title: "Privacy Policy", subtitle: "How we protect your data",
+                        title: String(localized: "Privacy Policy"),
+                        subtitle: String(localized: "How we protect your data"),
                         icon: "ProfileIcon_Privacy", // baked crop 328:13731 + glow
                         showArrow: true, rowId: "privacyPolicy")
                 .parityPosition(x: 20 * sx, y: 592 * sy)

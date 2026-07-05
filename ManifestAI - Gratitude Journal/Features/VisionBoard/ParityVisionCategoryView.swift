@@ -53,16 +53,24 @@ struct ParityVisionCategoryView: View {
                     .accessibilityIdentifier("visionCategory.back")
 
                 // Figma 325:12902: 'Select Category' Bitter-Bold 18, #EBEBEB (84,74.5,133,27)
+                // Centered app-wide per product decision (owner override —
+                // the back button at x:20 stays put).
                 Text("Select Category")
                     .font(DesignTokens.Typography.h4)
                     .foregroundStyle(DesignTokens.Colors.textPrimary)
-                    .parityPosition(x: 84 * sx, y: 74.5 * sy)
+                    .lineLimit(1)
+                    .minimumScaleFactor(0.7)
+                    .frame(width: 353 * sx, alignment: .center)
+                    .parityPosition(x: 20 * sx, y: 74.5 * sy)
 
                 // Figma 327:1340: 'What are you calling in?' Poppins-Medium 16, #B9B9B9 (20,125,346,24)
+                // Centered app-wide per product decision (owner override).
                 Text("What are you calling in?")
                     .font(DesignTokens.Typography.bodyMedium)
                     .foregroundStyle(DesignTokens.Colors.textSecondary)
-                    .frame(width: 346 * sx, alignment: .topLeading)
+                    .lineLimit(1)
+                    .minimumScaleFactor(0.7)
+                    .frame(width: 353 * sx, alignment: .center)
                     .parityPosition(x: 20 * sx, y: 125 * sy)
 
                 // Figma 327:1339: category grid, 110×98 glass cards

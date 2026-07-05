@@ -94,7 +94,7 @@ struct AnalysisStepView: View {
                     GlassBackButton(action: onBack)
                         .accessibilityIdentifier("analysis.backButton")
 
-                    PrimaryButton(title: "Continue", icon: nil) {
+                    PrimaryButton(title: String(localized: "Continue"), icon: nil) {
                         onContinue()
                     }
                     .accessibilityIdentifier("analysis.continueButton")
