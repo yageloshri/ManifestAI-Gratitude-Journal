@@ -60,8 +60,22 @@ struct MainTabView: View {
     // 369 — time-window gated (Ritual369Manager): 3× morning / 6× afternoon /
     // 9× night, persisted per day, 33-day cycle.
     private enum Flow369 { case method, how, intention, ritual }
-    @State private var flow369: Flow369 = .method
+    // Landing screen is decided on entry (see initialFlow369): the intro shows
+    // only once ever; afterwards we land on the ritual (if an intention exists)
+    // or on Set Intention.
+    @State private var flow369: Flow369 = MainTabView.initialFlow369()
+    // Legacy single-intention key — now a ONE-WAY mirror of the active
+    // intention (written by IntentionStore) kept only for external readers.
     @AppStorage("intention369") private var intention369: String = ""
+    @AppStorage("has_seen_369_intro") private var hasSeen369Intro = false
+    @ObservedObject private var intentionStore = IntentionStore.shared
+    /// Editor draft for Set Intention (kept separate so typing doesn't mutate
+    /// the active intention until "Start Manifesting").
+    @State private var intentionDraft: String = ""
+    /// Non-nil = the Set Intention editor is refining this saved intention;
+    /// nil = it will create a new one.
+    @State private var editingIntentionId: UUID?
+    @State private var showIntentionsManager = false
     @State private var ritualDraft: String = ""
     @ObservedObject private var ritualManager = Ritual369Manager.shared
     /// Re-evaluated by a timer so locked windows open (and midnight rolls
@@ -223,6 +237,14 @@ struct MainTabView: View {
         journalRoute = .list
         visionRoute = .home
         profileRoute = .main
+        // Re-decide the 369 landing screen every time the tab is entered.
+        if newTab == .method369 {
+            flow369 = Self.initialFlow369()
+            if flow369 == .intention {
+                editingIntentionId = nil
+                intentionDraft = ""
+            }
+        }
     }
 
     // MARK: - Navigation animation key
@@ -624,24 +646,20 @@ struct MainTabView: View {
             case .method:
                 Parity369MethodView(
                     onNext: { flow369 = .how },
-                    onSkip: { flow369 = intention369.isEmpty ? .intention : .ritual },
+                    onSkip: { passIntro() },
                     onSelectTab: switchTab
                 )
             case .how:
                 Parity369HowItWorksView(
-                    onNext: { flow369 = .intention },
-                    onSkip: { flow369 = .intention },
+                    onNext: { passIntro() },
+                    onSkip: { passIntro() },
                     onSelectTab: switchTab
                 )
             case .intention:
                 Parity369SetIntentionView(
-                    liveText: $intention369,
-                    onStart: {
-                        if !intention369.trimmingCharacters(in: .whitespaces).isEmpty {
-                            flow369 = .ritual
-                        }
-                    },
-                    onSkip: { flow369 = .method },
+                    liveText: $intentionDraft,
+                    onStart: { commitIntention() },
+                    onSkip: { flow369 = .ritual },
                     onSelectTab: switchTab
                 )
             case .ritual:
@@ -652,12 +670,83 @@ struct MainTabView: View {
         // bar never appears to slide sideways.
         .id(flow369Key)
         .transition(.opacity)
+        // "My Intentions" manager — opened from the ritual affirmation chip.
+        .sheet(isPresented: $showIntentionsManager) {
+            Parity369IntentionsView(
+                onSetActive: { id in intentionStore.setActive(id) },
+                onEdit: { intention in
+                    showIntentionsManager = false
+                    editingIntentionId = intention.id
+                    intentionDraft = intention.text
+                    flow369 = .intention
+                },
+                onNew: {
+                    showIntentionsManager = false
+                    editingIntentionId = nil
+                    intentionDraft = ""
+                    flow369 = .intention
+                },
+                onClose: { showIntentionsManager = false }
+            )
+        }
+    }
+
+    /// Landing screen for the 369 tab: the intro is shown only once ever;
+    /// afterwards land on the ritual when an intention exists, else on Set
+    /// Intention. Read directly from persistence so it can seed @State.
+    private static func initialFlow369() -> Flow369 {
+        guard UserDefaults.standard.bool(forKey: "has_seen_369_intro") else { return .method }
+        let active = IntentionStore.shared.activeText.trimmingCharacters(in: .whitespacesAndNewlines)
+        return active.isEmpty ? .intention : .ritual
+    }
+
+    /// User passed the intro (Next-Next or SKIP): remember it forever and move
+    /// on to the ritual (if an intention already exists) or to Set Intention.
+    private func passIntro() {
+        hasSeen369Intro = true
+        if intentionStore.activeText.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty {
+            editingIntentionId = nil
+            intentionDraft = ""
+            flow369 = .intention
+        } else {
+            flow369 = .ritual
+        }
+    }
+
+    /// "Start Manifesting": save the draft (new or edited), make it active,
+    /// and go to the ritual. Empty drafts are ignored.
+    private func commitIntention() {
+        let text = intentionDraft.trimmingCharacters(in: .whitespacesAndNewlines)
+        guard !text.isEmpty else { return }
+        if let id = editingIntentionId {
+            intentionStore.update(id: id, text: text)
+            intentionStore.setActive(id)
+        } else {
+            intentionStore.add(text: text)   // add makes it active
+        }
+        editingIntentionId = nil
+        intentionDraft = ""
+        flow369 = .ritual
+    }
+
+    /// Ritual back arrow → refine the active intention in the Set Intention
+    /// editor (or start a new one when none exists).
+    private func editActiveIntention() {
+        if let active = intentionStore.activeIntention {
+            editingIntentionId = active.id
+            intentionDraft = active.text
+        } else {
+            editingIntentionId = nil
+            intentionDraft = ""
+        }
+        flow369 = .intention
     }
 
     private var ritualAffirmation: String {
-        intention369.isEmpty
+        let active = intentionStore.activeText.trimmingCharacters(in: .whitespacesAndNewlines)
+        return active.isEmpty
             ? "I am so happy and grateful now that I am earning $10,000 a month."
-            : intention369
+            : active
     }
 
     private var ritualDayText: String {
@@ -692,7 +781,8 @@ struct MainTabView: View {
                 completedCount: done,
                 targetCount: target,
                 dayText: ritualDayText,
-                onBack: { flow369 = .intention },
+                onBack: { editActiveIntention() },
+                onManageIntentions: { showIntentionsManager = true },
                 onSave: { saveRitualWriting(phase: phase) },
                 onSelectTab: switchTab
             )
@@ -708,7 +798,8 @@ struct MainTabView: View {
                     next.map { "\($0.title) opens at \(opensAt ?? "")" }
                         ?? "All done for today — see you tomorrow morning"
                 ),
-                onBack: { flow369 = .intention },
+                onBack: { editActiveIntention() },
+                onManageIntentions: { showIntentionsManager = true },
                 onSelectTab: switchTab
             )
         case .beforeMorning(let opensAt):
@@ -719,7 +810,8 @@ struct MainTabView: View {
                 targetCount: ritualManager.target(for: .morning),
                 dayText: ritualDayText,
                 lockedInfo: ("A new day is coming", "Morning Ritual opens at \(opensAt)"),
-                onBack: { flow369 = .intention },
+                onBack: { editActiveIntention() },
+                onManageIntentions: { showIntentionsManager = true },
                 onSelectTab: switchTab
             )
         case .dayComplete:
@@ -731,7 +823,8 @@ struct MainTabView: View {
                 dayText: ritualDayText,
                 lockedInfo: ("\(ritualDayText) complete!",
                              "All 18 affirmations written. Come back tomorrow morning."),
-                onBack: { flow369 = .intention },
+                onBack: { editActiveIntention() },
+                onManageIntentions: { showIntentionsManager = true },
                 onSelectTab: switchTab
             )
         case .cycleComplete:
@@ -744,10 +837,14 @@ struct MainTabView: View {
                 lockedInfo: ("Challenge complete!",
                              "33 consecutive days of manifestation — extraordinary. Set a new intention and begin again whenever you're ready."),
                 lockedActionTitle: "Start a New 33-Day Challenge",
-                onBack: { flow369 = .intention },
+                onBack: { editActiveIntention() },
+                onManageIntentions: { showIntentionsManager = true },
                 onSave: {
+                    // New challenge: keep saved intentions, open a fresh
+                    // Set Intention editor for this next cycle.
                     ritualManager.startNewCycle(now: ritualClock)
-                    intention369 = ""
+                    editingIntentionId = nil
+                    intentionDraft = ""
                     flow369 = .intention
                 },
                 onSelectTab: switchTab
@@ -849,6 +946,9 @@ struct MainTabView: View {
         try? modelContext.save()
 
         let defaults = UserDefaults.standard
+        // Clears intentions369 list + active id + the intention369 mirror +
+        // the has_seen_369_intro flag (next user starts from the intro).
+        IntentionStore.shared.clearAll()
         defaults.removeObject(forKey: "intention369")
         defaults.removeObject(forKey: "ritual369State")
         defaults.removeObject(forKey: "cachedPersonalizedInsight")

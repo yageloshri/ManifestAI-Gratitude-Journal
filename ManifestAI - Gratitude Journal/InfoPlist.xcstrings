@@ -1,254 +1,294 @@
 {
-  "sourceLanguage": "en",
-  "strings": {
-    "NSPhotoLibraryAddUsageDescription": {
-      "localizations": {
-        "ar": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "لحفظ لوحة رؤيتك في مكتبة الصور"
-          }
-        },
-        "da": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Bruges til at gemme dine visionstavler i dit fotobibliotek."
-          }
-        },
-        "de": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Wird benötigt, um dein Vision Board in deiner Fotomediathek zu speichern."
-          }
-        },
-        "es": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Necesitamos tu permiso para guardar tus tableros de visión en la galería de fotos."
-          }
-        },
-        "fi": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Tarvitsemme luvan tallentaaksemme visiotaulusi kuvakirjastoosi."
-          }
-        },
-        "fr": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Nous avons besoin d'accéder à ta photothèque pour enregistrer tes tableaux de vision dans tes photos."
-          }
-        },
-        "he": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "כדי לשמור את לוח החזון שלך לאלבום התמונות"
-          }
-        },
-        "id": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Untuk menyimpan papan visimu ke Galeri Foto"
-          }
-        },
-        "it": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Consente di salvare le tue vision board nella libreria foto."
-          }
-        },
-        "ja": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "ビジョンボードを写真に保存するために使用します。"
-          }
-        },
-        "ko": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "비전 보드를 사진 앱에 저장하려면 접근 권한이 필요해요."
-          }
-        },
-        "nb": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Vi trenger tilgang for å lagre visjonstavlene dine i bildebiblioteket."
-          }
-        },
-        "nl": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "ManifestAI heeft toegang nodig om je gemaakte Vision Boards op te slaan in je Foto's-bibliotheek."
-          }
-        },
-        "pl": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Aplikacja ManifestAI potrzebuje dostępu, aby zapisać Twoje Vision Boards w bibliotece Zdjęć."
-          }
-        },
-        "pt-BR": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Permite salvar seus quadros dos sonhos e fotos na sua galeria."
-          }
-        },
-        "ru": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "ManifestAI нужен доступ, чтобы сохранять твои доски визуализации в библиотеку Фото."
-          }
-        },
-        "sv": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "ManifestAI behöver åtkomst för att spara dina Vision Boards i ditt Fotobibliotek."
-          }
-        },
-        "tr": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "ManifestAI, oluşturduğun Vizyon Panolarını Fotoğraflar kitaplığına kaydetmek için erişim istiyor."
-          }
-        },
-        "vi": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Để lưu bảng tầm nhìn của bạn vào Ảnh"
-          }
-        },
-        "zh-Hans": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "用于将你的愿景板保存到\"照片\"图库"
+  "sourceLanguage" : "en",
+  "strings" : {
+    "CFBundleDisplayName" : {
+      "comment" : "Bundle display name",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Gratitude Journal"
           }
         }
       }
     },
-    "NSPhotoLibraryUsageDescription": {
-      "localizations": {
-        "ar": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "لاختيار الصور من مكتبتك لإضافتها إلى لوحة الرؤية"
+    "CFBundleName" : {
+      "comment" : "Bundle name",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "ManifestAI - Gratitude Journal"
+          }
+        }
+      }
+    },
+    "NSPhotoLibraryAddUsageDescription" : {
+      "comment" : "Privacy - Photo Library Additions Usage Description",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "لحفظ لوحة رؤيتك في مكتبة الصور"
           }
         },
-        "da": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Bruges til at vælge fotos til dine visionstavler."
+        "da" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Bruges til at gemme dine visionstavler i dit fotobibliotek."
           }
         },
-        "de": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Wird benötigt, um Fotos für dein Vision Board auszuwählen."
+        "de" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Wird benötigt, um dein Vision Board in deiner Fotomediathek zu speichern."
           }
         },
-        "es": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Necesitamos acceso a tus fotos para que puedas añadirlas a tu tablero de visión."
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "ManifestAI needs access to save your created Vision Boards to your Photos library."
           }
         },
-        "fi": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Tarvitsemme pääsyn kuvakirjastoosi, jotta voit lisätä kuvia visiotauluusi."
+        "es" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Necesitamos tu permiso para guardar tus tableros de visión en la galería de fotos."
           }
         },
-        "fr": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Nous avons besoin d'accéder à ta photothèque pour choisir des photos pour ton tableau de vision."
+        "fi" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Tarvitsemme luvan tallentaaksemme visiotaulusi kuvakirjastoosi."
           }
         },
-        "he": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "כדי לבחור תמונות מהספרייה עבור לוח החזון שלך"
+        "fr" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Nous avons besoin d'accéder à ta photothèque pour enregistrer tes tableaux de vision dans tes photos."
           }
         },
-        "id": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Untuk memilih foto dari galerimu ke papan visi"
+        "he" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "כדי לשמור את לוח החזון שלך לאלבום התמונות"
           }
         },
-        "it": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Consente di scegliere foto dalla tua libreria per le vision board."
+        "id" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Untuk menyimpan papan visimu ke Galeri Foto"
           }
         },
-        "ja": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "ビジョンボードに写真を追加するために使用します。"
+        "it" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Consente di salvare le tue vision board nella libreria foto."
           }
         },
-        "ko": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "비전 보드에 쓸 사진을 선택하려면 사진 라이브러리 접근 권한이 필요해요."
+        "ja" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "ビジョンボードを写真に保存するために使用します。"
           }
         },
-        "nb": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Vi trenger tilgang til bildebiblioteket for å legge til bilder i visjonstavlen din."
+        "ko" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "비전 보드를 사진 앱에 저장하려면 접근 권한이 필요해요."
           }
         },
-        "nl": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "ManifestAI heeft toegang tot foto's nodig zodat je Vision Boards kunt maken."
+        "nb" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Vi trenger tilgang for å lagre visjonstavlene dine i bildebiblioteket."
           }
         },
-        "pl": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Aplikacja ManifestAI potrzebuje dostępu do zdjęć, aby umożliwić tworzenie Vision Boards."
+        "nl" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "ManifestAI heeft toegang nodig om je gemaakte Vision Boards op te slaan in je Foto's-bibliotheek."
           }
         },
-        "pt-BR": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Permite selecionar fotos para criar seu Quadro dos Sonhos."
+        "pl" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Aplikacja ManifestAI potrzebuje dostępu, aby zapisać Twoje Vision Boards w bibliotece Zdjęć."
           }
         },
-        "ru": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "ManifestAI нужен доступ к фото, чтобы ты мог(ла) создавать доски визуализации."
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Permite salvar seus quadros dos sonhos e fotos na sua galeria."
           }
         },
-        "sv": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "ManifestAI behöver åtkomst till foton för att du ska kunna skapa Vision Boards."
+        "ru" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "ManifestAI нужен доступ, чтобы сохранять твои доски визуализации в библиотеку Фото."
           }
         },
-        "tr": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "ManifestAI, Vizyon Panoları oluşturabilmen için fotoğraflarına erişim istiyor."
+        "sv" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "ManifestAI behöver åtkomst för att spara dina Vision Boards i ditt Fotobibliotek."
           }
         },
-        "vi": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Để chọn ảnh từ thư viện cho bảng tầm nhìn của bạn"
+        "tr" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "ManifestAI, oluşturduğun Vizyon Panolarını Fotoğraflar kitaplığına kaydetmek için erişim istiyor."
           }
         },
-        "zh-Hans": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "用于从\"照片\"图库选择图片添加到愿景板"
+        "vi" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Để lưu bảng tầm nhìn của bạn vào Ảnh"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "用于将你的愿景板保存到\"照片\"图库"
+          }
+        }
+      }
+    },
+    "NSPhotoLibraryUsageDescription" : {
+      "comment" : "Privacy - Photo Library Usage Description",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "لاختيار الصور من مكتبتك لإضافتها إلى لوحة الرؤية"
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Bruges til at vælge fotos til dine visionstavler."
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Wird benötigt, um Fotos für dein Vision Board auszuwählen."
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "ManifestAI needs access to photos to allow you to create Vision Boards."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Necesitamos acceso a tus fotos para que puedas añadirlas a tu tablero de visión."
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Tarvitsemme pääsyn kuvakirjastoosi, jotta voit lisätä kuvia visiotauluusi."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Nous avons besoin d'accéder à ta photothèque pour choisir des photos pour ton tableau de vision."
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "כדי לבחור תמונות מהספרייה עבור לוח החזון שלך"
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Untuk memilih foto dari galerimu ke papan visi"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Consente di scegliere foto dalla tua libreria per le vision board."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "ビジョンボードに写真を追加するために使用します。"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "비전 보드에 쓸 사진을 선택하려면 사진 라이브러리 접근 권한이 필요해요."
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Vi trenger tilgang til bildebiblioteket for å legge til bilder i visjonstavlen din."
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "ManifestAI heeft toegang tot foto's nodig zodat je Vision Boards kunt maken."
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Aplikacja ManifestAI potrzebuje dostępu do zdjęć, aby umożliwić tworzenie Vision Boards."
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Permite selecionar fotos para criar seu Quadro dos Sonhos."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "ManifestAI нужен доступ к фото, чтобы ты мог(ла) создавать доски визуализации."
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "ManifestAI behöver åtkomst till foton för att du ska kunna skapa Vision Boards."
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "ManifestAI, Vizyon Panoları oluşturabilmen için fotoğraflarına erişim istiyor."
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Để chọn ảnh từ thư viện cho bảng tầm nhìn của bạn"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "用于从\"照片\"图库选择图片添加到愿景板"
           }
         }
       }
     }
   },
-  "version": "1.0"
+  "version" : "1.0"
 }

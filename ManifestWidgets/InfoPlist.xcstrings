@@ -1,100 +1,132 @@
 {
-  "sourceLanguage": "en",
-  "strings": {
-    "NSHumanReadableCopyright": {
-      "localizations": {
-        "ar": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "© 2026 ManifestAI. جميع الحقوق محفوظة."
+  "sourceLanguage" : "en",
+  "strings" : {
+    "CFBundleDisplayName" : {
+      "comment" : "Bundle display name",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "ManifestWidgets"
+          }
+        }
+      }
+    },
+    "CFBundleName" : {
+      "comment" : "Bundle name",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "ManifestWidgetsExtension"
+          }
+        }
+      }
+    },
+    "NSHumanReadableCopyright" : {
+      "comment" : "Copyright (human-readable)",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "© 2026 ManifestAI. جميع الحقوق محفوظة."
           }
         },
-        "da": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "© 2026 ManifestAI. Alle rettigheder forbeholdes."
+        "da" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "© 2026 ManifestAI. Alle rettigheder forbeholdes."
           }
         },
-        "de": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "© 2026 ManifestAI. Alle Rechte vorbehalten."
+        "de" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "© 2026 ManifestAI. Alle Rechte vorbehalten."
           }
         },
-        "es": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "© 2026 ManifestAI. Todos los derechos reservados."
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : ""
           }
         },
-        "fi": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "© 2026 ManifestAI. Kaikki oikeudet pidätetään."
+        "es" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "© 2026 ManifestAI. Todos los derechos reservados."
           }
         },
-        "fr": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "© ManifestAI. Tous droits réservés."
+        "fi" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "© 2026 ManifestAI. Kaikki oikeudet pidätetään."
           }
         },
-        "he": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "© 2026 ManifestAI. כל הזכויות שמורות."
+        "fr" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "© ManifestAI. Tous droits réservés."
           }
         },
-        "id": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "© 2026 ManifestAI. Semua hak dilindungi."
+        "he" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "© 2026 ManifestAI. כל הזכויות שמורות."
           }
         },
-        "it": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "© 2026 ManifestAI. Tutti i diritti riservati."
+        "id" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "© 2026 ManifestAI. Semua hak dilindungi."
           }
         },
-        "ja": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Copyright © 2026 ManifestAI. 無断複写・転載を禁じます。"
+        "it" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "© 2026 ManifestAI. Tutti i diritti riservati."
           }
         },
-        "ko": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "© ManifestAI. 모든 권리 보유."
+        "ja" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Copyright © 2026 ManifestAI. 無断複写・転載を禁じます。"
           }
         },
-        "nb": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "© 2026 ManifestAI. Alle rettigheter forbeholdt."
+        "ko" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "© ManifestAI. 모든 권리 보유."
           }
         },
-        "pt-BR": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Copyright © 2026 ManifestAI. Todos os direitos reservados."
+        "nb" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "© 2026 ManifestAI. Alle rettigheter forbeholdt."
           }
         },
-        "vi": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "© 2026 ManifestAI. Đã đăng ký bản quyền."
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Copyright © 2026 ManifestAI. Todos os direitos reservados."
           }
         },
-        "zh-Hans": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "© 2026 ManifestAI。保留所有权利。"
+        "vi" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "© 2026 ManifestAI. Đã đăng ký bản quyền."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "© 2026 ManifestAI。保留所有权利。"
           }
         }
       }
     }
   },
-  "version": "1.0"
+  "version" : "1.0"
 }

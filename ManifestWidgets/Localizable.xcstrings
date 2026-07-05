@@ -1,1866 +1,1869 @@
 {
-  "sourceLanguage": "en",
-  "strings": {
-    "%@ Ritual": {
-      "localizations": {
-        "ar": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "طقس %@"
+  "sourceLanguage" : "en",
+  "strings" : {
+    "\"%@\"" : {
+
+    },
+    "%@ Ritual" : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "طقس %@"
           }
         },
-        "da": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "%@-ritual"
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@-ritual"
           }
         },
-        "de": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "%@-Ritual"
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@-Ritual"
           }
         },
-        "es": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Ritual %@"
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ritual %@"
           }
         },
-        "fi": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "%@-rituaali"
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@-rituaali"
           }
         },
-        "fr": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Rituel %@"
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Rituel %@"
           }
         },
-        "he": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "טקס %@"
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "טקס %@"
           }
         },
-        "id": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Ritual %@"
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ritual %@"
           }
         },
-        "it": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Rituale %@"
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Rituale %@"
           }
         },
-        "ja": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "%@リチュアル"
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@リチュアル"
           }
         },
-        "ko": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "%@ 리추얼"
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@ 리추얼"
           }
         },
-        "nb": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "%@-ritual"
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@-ritual"
           }
         },
-        "nl": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "%@-ritueel"
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@-ritueel"
           }
         },
-        "pl": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Rytuał %@"
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Rytuał %@"
           }
         },
-        "pt-BR": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Ritual %@"
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ritual %@"
           }
         },
-        "ru": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Ритуал %@"
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ритуал %@"
           }
         },
-        "sv": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "%@-ritual"
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@-ritual"
           }
         },
-        "tr": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "%@ Ritüeli"
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@ Ritüeli"
           }
         },
-        "vi": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Nghi Thức %@"
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nghi Thức %@"
           }
         },
-        "zh-Hans": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "%@ 仪式"
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@ 仪式"
           }
         }
       }
     },
-    "%lld": {
-      "localizations": {
-        "ar": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "%lld"
+    "%lld" : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld"
           }
         },
-        "da": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "%lld"
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld"
           }
         },
-        "de": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "%lld"
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld"
           }
         },
-        "es": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "%lld"
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld"
           }
         },
-        "fi": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "%lld"
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld"
           }
         },
-        "fr": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "%lld"
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld"
           }
         },
-        "he": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "%lld"
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld"
           }
         },
-        "id": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "%lld"
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld"
           }
         },
-        "it": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "%lld"
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld"
           }
         },
-        "ja": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "%lld"
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld"
           }
         },
-        "ko": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "%lld"
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld"
           }
         },
-        "nb": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "%lld"
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld"
           }
         },
-        "nl": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "%lld"
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld"
           }
         },
-        "pl": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "%lld"
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld"
           }
         },
-        "pt-BR": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "%lld"
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld"
           }
         },
-        "ru": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "%lld"
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld"
           }
         },
-        "sv": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "%lld"
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld"
           }
         },
-        "tr": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "%lld"
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld"
           }
         },
-        "vi": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "%lld"
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld"
           }
         },
-        "zh-Hans": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "%lld"
-          }
-        }
-      }
-    },
-    "%lld-day streak · Day %lld": {
-      "localizations": {
-        "ar": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "%lld يوم متتالٍ · اليوم %lld"
-          }
-        },
-        "da": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "%lld-dages stribe · Dag %lld"
-          }
-        },
-        "de": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "%lld-Tage-Serie · Tag %lld"
-          }
-        },
-        "es": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Racha de %lld días · Día %lld"
-          }
-        },
-        "fi": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "%lld päivän putki · Päivä %lld"
-          }
-        },
-        "fr": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Série de %lld jours · Jour %lld"
-          }
-        },
-        "he": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "רצף של %lld ימים · יום %lld"
-          }
-        },
-        "id": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "%lld hari beruntun · Hari %lld"
-          }
-        },
-        "it": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "%lld giorni di serie · Giorno %lld"
-          }
-        },
-        "ja": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "%lld日連続 · デイ%lld"
-          }
-        },
-        "ko": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "%lld일 연속 · Day %lld"
-          }
-        },
-        "nb": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "%lld-dagers rekke · Dag %lld"
-          }
-        },
-        "nl": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "%lld-dagenreeks · dag %lld"
-          }
-        },
-        "pl": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Passa: %lld dni · Dzień %lld"
-          }
-        },
-        "pt-BR": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Sequência de %lld dias · Dia %lld"
-          }
-        },
-        "ru": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "%lld дней подряд · День %lld"
-          }
-        },
-        "sv": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "%lld-dagars streak · Dag %lld"
-          }
-        },
-        "tr": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "%lld günlük seri · Gün %lld"
-          }
-        },
-        "vi": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Chuỗi %lld ngày · Ngày %lld"
-          }
-        },
-        "zh-Hans": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "连续 %lld 天 · 第 %lld 天"
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld"
           }
         }
       }
     },
-    "%lld/%lld": {
-      "localizations": {
-        "ar": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "%lld/%lld"
+    "%lld-day streak · Day %lld" : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld يوم متتالٍ · اليوم %lld"
           }
         },
-        "da": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "%lld/%lld"
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld-dages stribe · Dag %lld"
           }
         },
-        "de": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "%lld/%lld"
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld-Tage-Serie · Tag %lld"
           }
         },
-        "es": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "%lld/%lld"
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Racha de %lld días · Día %lld"
           }
         },
-        "fi": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "%lld/%lld"
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld päivän putki · Päivä %lld"
           }
         },
-        "fr": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "%lld/%lld"
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Série de %lld jours · Jour %lld"
           }
         },
-        "he": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "%lld/%lld"
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "רצף של %lld ימים · יום %lld"
           }
         },
-        "id": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "%lld/%lld"
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld hari beruntun · Hari %lld"
           }
         },
-        "it": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "%lld/%lld"
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld giorni di serie · Giorno %lld"
           }
         },
-        "ja": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "%lld/%lld"
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld日連続 · デイ%lld"
           }
         },
-        "ko": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "%lld/%lld"
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld일 연속 · Day %lld"
           }
         },
-        "nb": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "%lld/%lld"
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld-dagers rekke · Dag %lld"
           }
         },
-        "nl": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "%lld/%lld"
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld-dagenreeks · dag %lld"
           }
         },
-        "pl": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "%lld/%lld"
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Passa: %lld dni · Dzień %lld"
           }
         },
-        "pt-BR": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "%lld/%lld"
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sequência de %lld dias · Dia %lld"
           }
         },
-        "ru": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "%lld/%lld"
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld дней подряд · День %lld"
           }
         },
-        "sv": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "%lld/%lld"
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld-dagars streak · Dag %lld"
           }
         },
-        "tr": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "%lld/%lld"
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld günlük seri · Gün %lld"
           }
         },
-        "vi": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "%lld/%lld"
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Chuỗi %lld ngày · Ngày %lld"
           }
         },
-        "zh-Hans": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "%lld/%lld"
-          }
-        }
-      }
-    },
-    "369 Manifestation": {
-      "localizations": {
-        "ar": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "تجلّي 369"
-          }
-        },
-        "da": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "369-manifestation"
-          }
-        },
-        "de": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "369-Manifestation"
-          }
-        },
-        "es": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Manifestación 369"
-          }
-        },
-        "fi": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "369-manifestointi"
-          }
-        },
-        "fr": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Manifestation 369"
-          }
-        },
-        "he": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "מניפסטציה 369"
-          }
-        },
-        "id": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Manifestasi 369"
-          }
-        },
-        "it": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Manifestazione 369"
-          }
-        },
-        "ja": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "369引き寄せ"
-          }
-        },
-        "ko": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "369 매니페스테이션"
-          }
-        },
-        "nb": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "369-manifestasjon"
-          }
-        },
-        "nl": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "369-manifestatie"
-          }
-        },
-        "pl": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Manifestacja 369"
-          }
-        },
-        "pt-BR": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Manifestação 369"
-          }
-        },
-        "ru": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Манифестация 369"
-          }
-        },
-        "sv": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "369-manifestation"
-          }
-        },
-        "tr": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "369 Manifestasyonu"
-          }
-        },
-        "vi": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Hiện Thực Hóa 369"
-          }
-        },
-        "zh-Hans": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "369 显化"
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "连续 %lld 天 · 第 %lld 天"
           }
         }
       }
     },
-    "369 Manifestation Method": {
-      "localizations": {
-        "ar": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "طريقة التجلّي 369"
+    "%lld/%lld" : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld/%lld"
           }
         },
-        "da": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "369-manifestationsmetode"
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld/%lld"
           }
         },
-        "de": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "369-Manifestationsmethode"
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld/%lld"
           }
         },
-        "es": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Método de Manifestación 369"
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld/%lld"
           }
         },
-        "fi": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "369-manifestointimenetelmä"
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld/%lld"
           }
         },
-        "fr": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Méthode de manifestation 369"
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld/%lld"
           }
         },
-        "he": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "שיטת המניפסטציה 369"
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld/%lld"
           }
         },
-        "id": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Metode Manifestasi 369"
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld/%lld"
           }
         },
-        "it": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Metodo di Manifestazione 369"
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld/%lld"
           }
         },
-        "ja": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "369引き寄せメソッド"
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld/%lld"
           }
         },
-        "ko": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "369 확언 메소드"
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld/%lld"
           }
         },
-        "nb": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "369-manifestasjonsmetoden"
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld/%lld"
           }
         },
-        "nl": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "369 Manifestatiemethode"
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld/%lld"
           }
         },
-        "pl": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Metoda Manifestacji 369"
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld/%lld"
           }
         },
-        "pt-BR": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Método de Manifestação 369"
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld/%lld"
           }
         },
-        "ru": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Метод манифестации 369"
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld/%lld"
           }
         },
-        "sv": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "369 Manifestationsmetod"
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld/%lld"
           }
         },
-        "tr": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "369 Manifestasyon Yöntemi"
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld/%lld"
           }
         },
-        "vi": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Phương Pháp Hiện Thực Hóa 369"
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld/%lld"
           }
         },
-        "zh-Hans": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "369 显化法"
-          }
-        }
-      }
-    },
-    "DAILY AFFIRMATION": {
-      "localizations": {
-        "ar": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "التأكيد اليومي"
-          }
-        },
-        "da": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "DAGLIG BEKRÆFTELSE"
-          }
-        },
-        "de": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "TÄGLICHE AFFIRMATION"
-          }
-        },
-        "es": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "AFIRMACIÓN DIARIA"
-          }
-        },
-        "fi": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "PÄIVÄN AFFIRMAATIO"
-          }
-        },
-        "fr": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "AFFIRMATION DU JOUR"
-          }
-        },
-        "he": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "אפירמציה יומית"
-          }
-        },
-        "id": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "AFIRMASI HARIAN"
-          }
-        },
-        "it": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "AFFERMAZIONE QUOTIDIANA"
-          }
-        },
-        "ja": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "デイリーアファメーション"
-          }
-        },
-        "ko": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "데일리 확언"
-          }
-        },
-        "nb": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "DAGLIG BEKREFTELSE"
-          }
-        },
-        "nl": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "DAGELIJKSE AFFIRMATIE"
-          }
-        },
-        "pl": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "AFIRMACJA DNIA"
-          }
-        },
-        "pt-BR": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "AFIRMAÇÃO DIÁRIA"
-          }
-        },
-        "ru": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "ЕЖЕДНЕВНАЯ АФФИРМАЦИЯ"
-          }
-        },
-        "sv": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "DAGLIG AFFIRMATION"
-          }
-        },
-        "tr": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "GÜNLÜK OLUMLAMA"
-          }
-        },
-        "vi": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "LỜI KHẲNG ĐỊNH HẰNG NGÀY"
-          }
-        },
-        "zh-Hans": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "每日肯定语"
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld/%lld"
           }
         }
       }
     },
-    "DAY": {
-      "localizations": {
-        "ar": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "اليوم"
+    "369 Manifestation" : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "تجلّي 369"
           }
         },
-        "da": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "DAG"
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "369-manifestation"
           }
         },
-        "de": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "TAG"
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "369-Manifestation"
           }
         },
-        "es": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "DÍA"
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Manifestación 369"
           }
         },
-        "fi": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "PÄIVÄ"
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "369-manifestointi"
           }
         },
-        "fr": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "JOUR"
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Manifestation 369"
           }
         },
-        "he": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "יום"
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "מניפסטציה 369"
           }
         },
-        "id": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "HARI"
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Manifestasi 369"
           }
         },
-        "it": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "GIORNO"
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Manifestazione 369"
           }
         },
-        "ja": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "デイ"
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "369引き寄せ"
           }
         },
-        "ko": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "DAY"
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "369 매니페스테이션"
           }
         },
-        "nb": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "DAG"
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "369-manifestasjon"
           }
         },
-        "nl": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "DAG"
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "369-manifestatie"
           }
         },
-        "pl": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "DZIEŃ"
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Manifestacja 369"
           }
         },
-        "pt-BR": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "DIA"
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Manifestação 369"
           }
         },
-        "ru": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "ДЕНЬ"
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Манифестация 369"
           }
         },
-        "sv": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "DAG"
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "369-manifestation"
           }
         },
-        "tr": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "GÜN"
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "369 Manifestasyonu"
           }
         },
-        "vi": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "NGÀY"
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hiện Thực Hóa 369"
           }
         },
-        "zh-Hans": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "日"
-          }
-        }
-      }
-    },
-    "DAY NUMBER": {
-      "localizations": {
-        "ar": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "رقم اليوم"
-          }
-        },
-        "da": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "DAGSTAL"
-          }
-        },
-        "de": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "TAGESZAHL"
-          }
-        },
-        "es": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "NÚMERO DEL DÍA"
-          }
-        },
-        "fi": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "PÄIVÄLUKU"
-          }
-        },
-        "fr": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "NOMBRE DU JOUR"
-          }
-        },
-        "he": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "מספר היום"
-          }
-        },
-        "id": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "NOMOR HARI"
-          }
-        },
-        "it": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "NUMERO DEL GIORNO"
-          }
-        },
-        "ja": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "デイナンバー"
-          }
-        },
-        "ko": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "데이 넘버"
-          }
-        },
-        "nb": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "DAGSTALL"
-          }
-        },
-        "nl": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "DAGCIJFER"
-          }
-        },
-        "pl": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "LICZBA DNIA"
-          }
-        },
-        "pt-BR": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "NÚMERO DO DIA"
-          }
-        },
-        "ru": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "ЧИСЛО ДНЯ"
-          }
-        },
-        "sv": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "DAGSNUMMER"
-          }
-        },
-        "tr": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "GÜN SAYISI"
-          }
-        },
-        "vi": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "SỐ NGÀY"
-          }
-        },
-        "zh-Hans": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "日数字"
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "369 显化"
           }
         }
       }
     },
-    "Daily Manifestation": {
-      "localizations": {
-        "ar": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "التجلّي اليومي"
+    "369 Manifestation Method" : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "طريقة التجلّي 369"
           }
         },
-        "da": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Daglig manifestation"
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "369-manifestationsmetode"
           }
         },
-        "de": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Tägliche Manifestation"
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "369-Manifestationsmethode"
           }
         },
-        "es": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Manifestación diaria"
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Método de Manifestación 369"
           }
         },
-        "fi": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Päivittäinen manifestointi"
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "369-manifestointimenetelmä"
           }
         },
-        "fr": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Manifestation quotidienne"
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Méthode de manifestation 369"
           }
         },
-        "he": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "מניפסטציה יומית"
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "שיטת המניפסטציה 369"
           }
         },
-        "id": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Manifestasi Harian"
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Metode Manifestasi 369"
           }
         },
-        "it": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Manifestazione Quotidiana"
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Metodo di Manifestazione 369"
           }
         },
-        "ja": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "デイリー引き寄せ"
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "369引き寄せメソッド"
           }
         },
-        "ko": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "데일리 매니페스테이션"
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "369 확언 메소드"
           }
         },
-        "nb": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Daglig manifestasjon"
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "369-manifestasjonsmetoden"
           }
         },
-        "nl": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Dagelijkse Manifestatie"
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "369 Manifestatiemethode"
           }
         },
-        "pl": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Codzienna Manifestacja"
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Metoda Manifestacji 369"
           }
         },
-        "pt-BR": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Manifestação Diária"
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Método de Manifestação 369"
           }
         },
-        "ru": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Ежедневная манифестация"
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Метод манифестации 369"
           }
         },
-        "sv": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Daglig manifestation"
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "369 Manifestationsmetod"
           }
         },
-        "tr": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Günlük Manifestasyon"
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "369 Manifestasyon Yöntemi"
           }
         },
-        "vi": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Hiện Thực Hóa Hằng Ngày"
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Phương Pháp Hiện Thực Hóa 369"
           }
         },
-        "zh-Hans": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "每日显化"
-          }
-        }
-      }
-    },
-    "Marks today's 369 ritual as started from the widget.": {
-      "localizations": {
-        "ar": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "يُعلّم طقس 369 لهذا اليوم كأنه بدأ من الودجت."
-          }
-        },
-        "da": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Markerer dagens 369-ritual som startet fra widgeten."
-          }
-        },
-        "de": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Markiert dein heutiges 369-Ritual vom Widget aus als gestartet."
-          }
-        },
-        "es": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Marca el ritual 369 de hoy como iniciado desde el widget."
-          }
-        },
-        "fi": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Merkitsee tämän päivän 369-rituaalin aloitetuksi widgetistä."
-          }
-        },
-        "fr": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Marque le rituel 369 du jour comme démarré depuis le widget."
-          }
-        },
-        "he": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "מסמן את טקס ה-369 של היום כמתחיל, ישירות מהווידג'ט."
-          }
-        },
-        "id": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Menandai ritual 369 hari ini sebagai dimulai dari widget."
-          }
-        },
-        "it": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Segna l'inizio del rituale 369 di oggi dal widget."
-          }
-        },
-        "ja": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "ウィジェットから今日の369リチュアルを開始済みにします。"
-          }
-        },
-        "ko": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "위젯에서 오늘의 369 리추얼을 시작된 것으로 표시해요."
-          }
-        },
-        "nb": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Markerer dagens 369-ritual som startet fra widgeten."
-          }
-        },
-        "nl": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Markeert het 369-ritueel van vandaag als gestart vanuit de widget."
-          }
-        },
-        "pl": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Oznacza dzisiejszy rytuał 369 jako rozpoczęty z poziomu widżetu."
-          }
-        },
-        "pt-BR": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Marca o ritual 369 de hoje como iniciado a partir do widget."
-          }
-        },
-        "ru": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Отмечает сегодняшний ритуал 369 как начатый прямо из виджета."
-          }
-        },
-        "sv": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Markerar dagens 369-ritual som startad från widgeten."
-          }
-        },
-        "tr": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Bugünkü 369 ritüelini widget üzerinden başlatılmış olarak işaretler."
-          }
-        },
-        "vi": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Đánh dấu nghi thức 369 hôm nay là đã bắt đầu từ tiện ích."
-          }
-        },
-        "zh-Hans": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "从小组件将今天的369仪式标记为已开始。"
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "369 显化法"
           }
         }
       }
     },
-    "START RITUAL": {
-      "localizations": {
-        "ar": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "ابدأ الطقس"
+    "DAILY AFFIRMATION" : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "التأكيد اليومي"
           }
         },
-        "da": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "START RITUAL"
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "DAGLIG BEKRÆFTELSE"
           }
         },
-        "de": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "RITUAL STARTEN"
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "TÄGLICHE AFFIRMATION"
           }
         },
-        "es": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "INICIAR RITUAL"
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "AFIRMACIÓN DIARIA"
           }
         },
-        "fi": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "ALOITA RITUAALI"
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "PÄIVÄN AFFIRMAATIO"
           }
         },
-        "fr": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "DÉMARRER LE RITUEL"
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "AFFIRMATION DU JOUR"
           }
         },
-        "he": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "התחלת טקס"
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "אפירמציה יומית"
           }
         },
-        "id": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "MULAI RITUAL"
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "AFIRMASI HARIAN"
           }
         },
-        "it": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "INIZIA RITUALE"
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "AFFERMAZIONE QUOTIDIANA"
           }
         },
-        "ja": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "リチュアルを開始"
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "デイリーアファメーション"
           }
         },
-        "ko": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "리추얼 시작"
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "데일리 확언"
           }
         },
-        "nb": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "START RITUAL"
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "DAGLIG BEKREFTELSE"
           }
         },
-        "nl": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "START RITUEEL"
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "DAGELIJKSE AFFIRMATIE"
           }
         },
-        "pl": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "ROZPOCZNIJ RYTUAŁ"
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "AFIRMACJA DNIA"
           }
         },
-        "pt-BR": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "INICIAR RITUAL"
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "AFIRMAÇÃO DIÁRIA"
           }
         },
-        "ru": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "НАЧАТЬ РИТУАЛ"
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ЕЖЕДНЕВНАЯ АФФИРМАЦИЯ"
           }
         },
-        "sv": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "STARTA RITUAL"
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "DAGLIG AFFIRMATION"
           }
         },
-        "tr": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "RİTÜELİ BAŞLAT"
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "GÜNLÜK OLUMLAMA"
           }
         },
-        "vi": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "BẮT ĐẦU NGHI THỨC"
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "LỜI KHẲNG ĐỊNH HẰNG NGÀY"
           }
         },
-        "zh-Hans": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "开始仪式"
-          }
-        }
-      }
-    },
-    "STREAK": {
-      "localizations": {
-        "ar": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "التتابع"
-          }
-        },
-        "da": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "STRIBE"
-          }
-        },
-        "de": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "SERIE"
-          }
-        },
-        "es": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "RACHA"
-          }
-        },
-        "fi": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "PUTKI"
-          }
-        },
-        "fr": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "SÉRIE"
-          }
-        },
-        "he": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "רצף"
-          }
-        },
-        "id": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "BERUNTUN"
-          }
-        },
-        "it": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "SERIE"
-          }
-        },
-        "ja": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "連続記録"
-          }
-        },
-        "ko": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "연속 기록"
-          }
-        },
-        "nb": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "REKKE"
-          }
-        },
-        "nl": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "REEKS"
-          }
-        },
-        "pl": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "PASSA"
-          }
-        },
-        "pt-BR": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "SEQUÊNCIA"
-          }
-        },
-        "ru": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "СЕРИЯ"
-          }
-        },
-        "sv": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "STREAK"
-          }
-        },
-        "tr": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "SERİ"
-          }
-        },
-        "vi": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "CHUỖI NGÀY"
-          }
-        },
-        "zh-Hans": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "连续天数"
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "每日肯定语"
           }
         }
       }
     },
-    "Start Ritual": {
-      "localizations": {
-        "ar": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "ابدأ الطقس"
+    "Daily Manifestation" : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "التجلّي اليومي"
           }
         },
-        "da": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Start ritual"
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Daglig manifestation"
           }
         },
-        "de": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Ritual starten"
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tägliche Manifestation"
           }
         },
-        "es": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Iniciar ritual"
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Manifestación diaria"
           }
         },
-        "fi": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Aloita rituaali"
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Päivittäinen manifestointi"
           }
         },
-        "fr": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Démarrer le rituel"
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Manifestation quotidienne"
           }
         },
-        "he": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "התחלת טקס"
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "מניפסטציה יומית"
           }
         },
-        "id": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Mulai Ritual"
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Manifestasi Harian"
           }
         },
-        "it": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Inizia Rituale"
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Manifestazione Quotidiana"
           }
         },
-        "ja": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "リチュアルを開始"
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "デイリー引き寄せ"
           }
         },
-        "ko": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "리추얼 시작"
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "데일리 매니페스테이션"
           }
         },
-        "nb": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Start ritual"
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Daglig manifestasjon"
           }
         },
-        "nl": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Start Ritueel"
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dagelijkse Manifestatie"
           }
         },
-        "pl": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Rozpocznij Rytuał"
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Codzienna Manifestacja"
           }
         },
-        "pt-BR": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Iniciar Ritual"
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Manifestação Diária"
           }
         },
-        "ru": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Начать ритуал"
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ежедневная манифестация"
           }
         },
-        "sv": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Starta ritual"
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Daglig manifestation"
           }
         },
-        "tr": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Ritüeli Başlat"
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Günlük Manifestasyon"
           }
         },
-        "vi": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Bắt Đầu Nghi Thức"
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hiện Thực Hóa Hằng Ngày"
           }
         },
-        "zh-Hans": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "开始仪式"
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "每日显化"
           }
         }
       }
     },
-    "Your daily numerology, streak, and affirmation at a glance.": {
-      "localizations": {
-        "ar": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "أرقامك اليومية وسلسلة أيامك وتأكيدك في لمحة واحدة."
+    "DAY" : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "اليوم"
           }
         },
-        "da": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Din daglige numerologi, stribe og bekræftelse på et øjeblik."
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "DAG"
           }
         },
-        "de": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Deine tägliche Numerologie, Serie und Affirmation auf einen Blick."
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "TAG"
           }
         },
-        "es": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Tu numerología diaria, tu racha y tu afirmación de un vistazo."
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "DÍA"
           }
         },
-        "fi": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Päivittäinen numerologiasi, putkesi ja affirmaatiosi yhdellä silmäyksellä."
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "PÄIVÄ"
           }
         },
-        "fr": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Ta numérologie du jour, ta série et ton affirmation en un coup d'œil."
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "JOUR"
           }
         },
-        "he": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "הנומרולוגיה היומית, הרצף והאפירמציה שלך במבט אחד."
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "יום"
           }
         },
-        "id": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Numerologi harian, hari beruntun, dan afirmasimu sekilas pandang."
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "HARI"
           }
         },
-        "it": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "La tua numerologia quotidiana, serie e affermazione in un colpo d'occhio."
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "GIORNO"
           }
         },
-        "ja": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "デイリー数秘術、連続記録、アファメーションを一目で確認。"
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "デイ"
           }
         },
-        "ko": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "매일의 수비학, 연속 기록, 확언을 한눈에 확인하세요."
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "DAY"
           }
         },
-        "nb": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Din daglige nummerologi, rekke og bekreftelse på et blikk."
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "DAG"
           }
         },
-        "nl": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Jouw dagelijkse numerologie, reeks en affirmatie in één oogopslag."
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "DAG"
           }
         },
-        "pl": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Twoja dzienna numerologia, passa i afirmacja w jednym miejscu."
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "DZIEŃ"
           }
         },
-        "pt-BR": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Sua numerologia diária, sequência e afirmação em um só lugar."
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "DIA"
           }
         },
-        "ru": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Твоя ежедневная нумерология, серия дней и аффирмация — в одном взгляде."
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ДЕНЬ"
           }
         },
-        "sv": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Din dagliga numerologi, streak och affirmation på en snabb överblick."
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "DAG"
           }
         },
-        "tr": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Günlük numerolojini, serini ve olumlamanı tek bakışta gör."
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "GÜN"
           }
         },
-        "vi": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Xem nhanh thần số học hằng ngày, chuỗi ngày và lời khẳng định của bạn."
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "NGÀY"
           }
         },
-        "zh-Hans": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "一目了然地查看你的每日数字命理、连续记录和肯定语。"
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "日"
+          }
+        }
+      }
+    },
+    "DAY NUMBER" : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "رقم اليوم"
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "DAGSTAL"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "TAGESZAHL"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "NÚMERO DEL DÍA"
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "PÄIVÄLUKU"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "NOMBRE DU JOUR"
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "מספר היום"
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "NOMOR HARI"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "NUMERO DEL GIORNO"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "デイナンバー"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "데이 넘버"
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "DAGSTALL"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "DAGCIJFER"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "LICZBA DNIA"
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "NÚMERO DO DIA"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ЧИСЛО ДНЯ"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "DAGSNUMMER"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "GÜN SAYISI"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "SỐ NGÀY"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "日数字"
+          }
+        }
+      }
+    },
+    "Marks today's 369 ritual as started from the widget." : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "يُعلّم طقس 369 لهذا اليوم كأنه بدأ من الودجت."
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Markerer dagens 369-ritual som startet fra widgeten."
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Markiert dein heutiges 369-Ritual vom Widget aus als gestartet."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Marca el ritual 369 de hoy como iniciado desde el widget."
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Merkitsee tämän päivän 369-rituaalin aloitetuksi widgetistä."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Marque le rituel 369 du jour comme démarré depuis le widget."
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "מסמן את טקס ה-369 של היום כמתחיל, ישירות מהווידג'ט."
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Menandai ritual 369 hari ini sebagai dimulai dari widget."
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Segna l'inizio del rituale 369 di oggi dal widget."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ウィジェットから今日の369リチュアルを開始済みにします。"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "위젯에서 오늘의 369 리추얼을 시작된 것으로 표시해요."
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Markerer dagens 369-ritual som startet fra widgeten."
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Markeert het 369-ritueel van vandaag als gestart vanuit de widget."
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Oznacza dzisiejszy rytuał 369 jako rozpoczęty z poziomu widżetu."
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Marca o ritual 369 de hoje como iniciado a partir do widget."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Отмечает сегодняшний ритуал 369 как начатый прямо из виджета."
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Markerar dagens 369-ritual som startad från widgeten."
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bugünkü 369 ritüelini widget üzerinden başlatılmış olarak işaretler."
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Đánh dấu nghi thức 369 hôm nay là đã bắt đầu từ tiện ích."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "从小组件将今天的369仪式标记为已开始。"
+          }
+        }
+      }
+    },
+    "Start Ritual" : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ابدأ الطقس"
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Start ritual"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ritual starten"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Iniciar ritual"
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Aloita rituaali"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Démarrer le rituel"
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "התחלת טקס"
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mulai Ritual"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Inizia Rituale"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "リチュアルを開始"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "리추얼 시작"
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Start ritual"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Start Ritueel"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Rozpocznij Rytuał"
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Iniciar Ritual"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Начать ритуал"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Starta ritual"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ritüeli Başlat"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bắt Đầu Nghi Thức"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "开始仪式"
+          }
+        }
+      }
+    },
+    "START RITUAL" : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ابدأ الطقس"
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "START RITUAL"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "RITUAL STARTEN"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "INICIAR RITUAL"
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ALOITA RITUAALI"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "DÉMARRER LE RITUEL"
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "התחלת טקס"
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "MULAI RITUAL"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "INIZIA RITUALE"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "リチュアルを開始"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "리추얼 시작"
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "START RITUAL"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "START RITUEEL"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ROZPOCZNIJ RYTUAŁ"
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "INICIAR RITUAL"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "НАЧАТЬ РИТУАЛ"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "STARTA RITUAL"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "RİTÜELİ BAŞLAT"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "BẮT ĐẦU NGHI THỨC"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "开始仪式"
+          }
+        }
+      }
+    },
+    "STREAK" : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "التتابع"
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "STRIBE"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "SERIE"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "RACHA"
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "PUTKI"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "SÉRIE"
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "רצף"
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "BERUNTUN"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "SERIE"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "連続記録"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "연속 기록"
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "REKKE"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "REEKS"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "PASSA"
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "SEQUÊNCIA"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "СЕРИЯ"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "STREAK"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "SERİ"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "CHUỖI NGÀY"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "连续天数"
+          }
+        }
+      }
+    },
+    "Your daily numerology, streak, and affirmation at a glance." : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "أرقامك اليومية وسلسلة أيامك وتأكيدك في لمحة واحدة."
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Din daglige numerologi, stribe og bekræftelse på et øjeblik."
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Deine tägliche Numerologie, Serie und Affirmation auf einen Blick."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tu numerología diaria, tu racha y tu afirmación de un vistazo."
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Päivittäinen numerologiasi, putkesi ja affirmaatiosi yhdellä silmäyksellä."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ta numérologie du jour, ta série et ton affirmation en un coup d'œil."
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "הנומרולוגיה היומית, הרצף והאפירמציה שלך במבט אחד."
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Numerologi harian, hari beruntun, dan afirmasimu sekilas pandang."
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "La tua numerologia quotidiana, serie e affermazione in un colpo d'occhio."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "デイリー数秘術、連続記録、アファメーションを一目で確認。"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "매일의 수비학, 연속 기록, 확언을 한눈에 확인하세요."
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Din daglige nummerologi, rekke og bekreftelse på et blikk."
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Jouw dagelijkse numerologie, reeks en affirmatie in één oogopslag."
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Twoja dzienna numerologia, passa i afirmacja w jednym miejscu."
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sua numerologia diária, sequência e afirmação em um só lugar."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Твоя ежедневная нумерология, серия дней и аффирмация — в одном взгляде."
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Din dagliga numerologi, streak och affirmation på en snabb överblick."
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Günlük numerolojini, serini ve olumlamanı tek bakışta gör."
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Xem nhanh thần số học hằng ngày, chuỗi ngày và lời khẳng định của bạn."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "一目了然地查看你的每日数字命理、连续记录和肯定语。"
           }
         }
       }
     }
   },
-  "version": "1.0"
+  "version" : "1.0"
 }

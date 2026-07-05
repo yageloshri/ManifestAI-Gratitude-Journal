@@ -121,6 +121,10 @@ struct Parity369RitualView: View {
     /// title (e.g. "Start a New 33-Day Challenge"); tapping it calls onSave.
     var lockedActionTitle: String? = nil
     var onBack: () -> Void = {}
+    /// Live mode: tapping the affirmation chip opens the "My Intentions"
+    /// manager. nil (parity) leaves the chip non-interactive and pixel-identical.
+    /// Declared before onSave so live call sites keep memberwise-init order.
+    var onManageIntentions: (() -> Void)? = nil
     var onSave: () -> Void = {}
     var onSelectTab: (FigmaTab) -> Void = { _ in }
     /// Parity gallery: fixed mock data matching the Figma frame.
@@ -393,7 +397,13 @@ struct Parity369RitualView: View {
                 .parityPosition(x: 10 * sx, y: 33 * sy + 0.33 * sy)
         }
         .frame(width: 309 * sx, height: 83 * sy, alignment: .topLeading)
+        // Live mode only: the whole chip becomes a tap target that opens the
+        // "My Intentions" manager. No visual change → parity stays identical.
+        .contentShape(Rectangle())
+        .onTapGesture { onManageIntentions?() }
         .accessibilityIdentifier("ritual369.affirmation")
+        .accessibilityAddTraits(onManageIntentions != nil ? .isButton : [])
+        .accessibilityHint(onManageIntentions != nil ? Text("Opens your saved intentions") : Text(""))
     }
 
     // MARK: - Input card (Figma 364:2292: (26,429,345,132) r16 glass)

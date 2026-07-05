@@ -1,378 +1,408 @@
 {
-  "sourceLanguage": "en",
-  "strings": {
-    "Log gratitude in ${applicationName}": {
-      "localizations": {
-        "ar": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "تسجيل الامتنان في ${applicationName}"
+  "sourceLanguage" : "en",
+  "strings" : {
+    "Log gratitude in ${applicationName}" : {
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "تسجيل الامتنان في ${applicationName}"
           }
         },
-        "da": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Log taknemmelighed i ${applicationName}"
+        "da" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Log taknemmelighed i ${applicationName}"
           }
         },
-        "de": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Dankbarkeit in ${applicationName} eintragen"
+        "de" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Dankbarkeit in ${applicationName} eintragen"
           }
         },
-        "es": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Registrar gratitud en ${applicationName}"
+        "en" : {
+          "stringSet" : {
+            "state" : "new",
+            "values" : [
+              "Log gratitude in ${applicationName}",
+              "Write in my gratitude journal with ${applicationName}"
+            ]
           }
         },
-        "fi": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Kirjaa kiitollisuutta sovelluksessa ${applicationName}"
+        "es" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Registrar gratitud en ${applicationName}"
           }
         },
-        "fr": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Enregistrer un moment de gratitude dans ${applicationName}"
+        "fi" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Kirjaa kiitollisuutta sovelluksessa ${applicationName}"
           }
         },
-        "he": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "לתעד הכרת תודה ב-${applicationName}"
+        "fr" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Enregistrer un moment de gratitude dans ${applicationName}"
           }
         },
-        "id": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Catat rasa syukur di ${applicationName}"
+        "he" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "לתעד הכרת תודה ב-${applicationName}"
           }
         },
-        "it": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Registra la gratitudine in ${applicationName}"
+        "id" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Catat rasa syukur di ${applicationName}"
           }
         },
-        "ja": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "${applicationName}で感謝を記録する"
+        "it" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Registra la gratitudine in ${applicationName}"
           }
         },
-        "ko": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "${applicationName}에서 감사 기록하기"
+        "ja" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "${applicationName}で感謝を記録する"
           }
         },
-        "nb": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Logg takknemlighet i ${applicationName}"
+        "ko" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "${applicationName}에서 감사 기록하기"
           }
         },
-        "nl": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Log dankbaarheid in ${applicationName}"
+        "nb" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Logg takknemlighet i ${applicationName}"
           }
         },
-        "pl": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Zapisz wdzięczność w ${applicationName}"
+        "nl" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Log dankbaarheid in ${applicationName}"
           }
         },
-        "pt-BR": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Registrar gratidão no ${applicationName}"
+        "pl" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Zapisz wdzięczność w ${applicationName}"
           }
         },
-        "ru": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Записать благодарность в ${applicationName}"
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Registrar gratidão no ${applicationName}"
           }
         },
-        "sv": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Logga tacksamhet i ${applicationName}"
+        "ru" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Записать благодарность в ${applicationName}"
           }
         },
-        "tr": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "${applicationName} uygulamasında minnettarlığını kaydet"
+        "sv" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Logga tacksamhet i ${applicationName}"
           }
         },
-        "vi": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Ghi lại lòng biết ơn trong ${applicationName}"
+        "tr" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "${applicationName} uygulamasında minnettarlığını kaydet"
           }
         },
-        "zh-Hans": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "在${applicationName}中记录感恩"
+        "vi" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Ghi lại lòng biết ơn trong ${applicationName}"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "在${applicationName}中记录感恩"
           }
         }
       }
     },
-    "Start my ritual in ${applicationName}": {
-      "localizations": {
-        "ar": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "بدء طقسي في ${applicationName}"
+    "Start my ritual in ${applicationName}" : {
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "بدء طقسي في ${applicationName}"
           }
         },
-        "da": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Start mit ritual i ${applicationName}"
+        "da" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Start mit ritual i ${applicationName}"
           }
         },
-        "de": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Mein Ritual in ${applicationName} starten"
+        "de" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Mein Ritual in ${applicationName} starten"
           }
         },
-        "es": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Iniciar mi ritual en ${applicationName}"
+        "en" : {
+          "stringSet" : {
+            "state" : "new",
+            "values" : [
+              "Start my ritual in ${applicationName}",
+              "Start my 369 ritual in ${applicationName}"
+            ]
           }
         },
-        "fi": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Aloita rituaalini sovelluksessa ${applicationName}"
+        "es" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Iniciar mi ritual en ${applicationName}"
           }
         },
-        "fr": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Commencer mon rituel dans ${applicationName}"
+        "fi" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Aloita rituaalini sovelluksessa ${applicationName}"
           }
         },
-        "he": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "להתחיל את הטקס שלי ב-${applicationName}"
+        "fr" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Commencer mon rituel dans ${applicationName}"
           }
         },
-        "id": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Mulai ritualku di ${applicationName}"
+        "he" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "להתחיל את הטקס שלי ב-${applicationName}"
           }
         },
-        "it": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Inizia il mio rituale in ${applicationName}"
+        "id" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Mulai ritualku di ${applicationName}"
           }
         },
-        "ja": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "${applicationName}でリチュアルを開始する"
+        "it" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Inizia il mio rituale in ${applicationName}"
           }
         },
-        "ko": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "${applicationName}에서 리추얼 시작하기"
+        "ja" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "${applicationName}でリチュアルを開始する"
           }
         },
-        "nb": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Start ritualet mitt i ${applicationName}"
+        "ko" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "${applicationName}에서 리추얼 시작하기"
           }
         },
-        "nl": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Start mijn ritueel in ${applicationName}"
+        "nb" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Start ritualet mitt i ${applicationName}"
           }
         },
-        "pl": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Rozpocznij mój rytuał w ${applicationName}"
+        "nl" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Start mijn ritueel in ${applicationName}"
           }
         },
-        "pt-BR": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Iniciar meu ritual no ${applicationName}"
+        "pl" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Rozpocznij mój rytuał w ${applicationName}"
           }
         },
-        "ru": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Начать мой ритуал в ${applicationName}"
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Iniciar meu ritual no ${applicationName}"
           }
         },
-        "sv": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Starta min ritual i ${applicationName}"
+        "ru" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Начать мой ритуал в ${applicationName}"
           }
         },
-        "tr": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "${applicationName} uygulamasında ritüelimi başlat"
+        "sv" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Starta min ritual i ${applicationName}"
           }
         },
-        "vi": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Bắt đầu nghi thức của tôi trong ${applicationName}"
+        "tr" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "${applicationName} uygulamasında ritüelimi başlat"
           }
         },
-        "zh-Hans": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "在${applicationName}中开始我的仪式"
+        "vi" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Bắt đầu nghi thức của tôi trong ${applicationName}"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "在${applicationName}中开始我的仪式"
           }
         }
       }
     },
-    "What's my number in ${applicationName}": {
-      "localizations": {
-        "ar": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "ما هو رقمي في ${applicationName}"
+    "What's my number in ${applicationName}" : {
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "ما هو رقمي في ${applicationName}"
           }
         },
-        "da": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Hvad er mit tal i ${applicationName}"
+        "da" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Hvad er mit tal i ${applicationName}"
           }
         },
-        "de": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Meine Zahl in ${applicationName} abrufen"
+        "de" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Meine Zahl in ${applicationName} abrufen"
           }
         },
-        "es": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Cuál es mi número en ${applicationName}"
+        "en" : {
+          "stringSet" : {
+            "state" : "new",
+            "values" : [
+              "What's my number in ${applicationName}",
+              "What's today's number in ${applicationName}"
+            ]
           }
         },
-        "fi": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Mikä on lukuni sovelluksessa ${applicationName}"
+        "es" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Cuál es mi número en ${applicationName}"
           }
         },
-        "fr": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Quel est mon nombre dans ${applicationName}"
+        "fi" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Mikä on lukuni sovelluksessa ${applicationName}"
           }
         },
-        "he": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "מה המספר שלי ב-${applicationName}"
+        "fr" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Quel est mon nombre dans ${applicationName}"
           }
         },
-        "id": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Berapa nomorku di ${applicationName}"
+        "he" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "מה המספר שלי ב-${applicationName}"
           }
         },
-        "it": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Qual è il mio numero in ${applicationName}"
+        "id" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Berapa nomorku di ${applicationName}"
           }
         },
-        "ja": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "${applicationName}で今日の数字を確認する"
+        "it" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Qual è il mio numero in ${applicationName}"
           }
         },
-        "ko": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "${applicationName}에서 오늘의 숫자 확인하기"
+        "ja" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "${applicationName}で今日の数字を確認する"
           }
         },
-        "nb": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Hva er tallet mitt i ${applicationName}"
+        "ko" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "${applicationName}에서 오늘의 숫자 확인하기"
           }
         },
-        "nl": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Wat is mijn cijfer in ${applicationName}"
+        "nb" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Hva er tallet mitt i ${applicationName}"
           }
         },
-        "pl": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Jaka jest moja liczba w ${applicationName}"
+        "nl" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Wat is mijn cijfer in ${applicationName}"
           }
         },
-        "pt-BR": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Qual é o meu número no ${applicationName}"
+        "pl" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Jaka jest moja liczba w ${applicationName}"
           }
         },
-        "ru": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Какое моё число в ${applicationName}"
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Qual é o meu número no ${applicationName}"
           }
         },
-        "sv": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Vad är mitt nummer i ${applicationName}"
+        "ru" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Какое моё число в ${applicationName}"
           }
         },
-        "tr": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "${applicationName} uygulamasında sayım nedir"
+        "sv" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Vad är mitt nummer i ${applicationName}"
           }
         },
-        "vi": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Con số của tôi trong ${applicationName} là gì"
+        "tr" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "${applicationName} uygulamasında sayım nedir"
           }
         },
-        "zh-Hans": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "在${applicationName}中查看我的数字"
+        "vi" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Con số của tôi trong ${applicationName} là gì"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "在${applicationName}中查看我的数字"
           }
         }
       }
     }
   },
-  "version": "1.0"
+  "version" : "1.0"
 }
