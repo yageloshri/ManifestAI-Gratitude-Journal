@@ -237,9 +237,10 @@ struct MainTabView: View {
         FirstMeaningfulAction.markCompletedIfNeeded()
     }
 
+    /// Hard paywall: every user is subscribed — the old "N free entries left"
+    /// quota banner is replaced by a premium-status line (owner decision).
     private var freeEntriesText: String {
-        let left = max(0, 3 - usedThisWeek)
-        return String(localized: "\(left) Free entries left this week")
+        String(localized: "You're a Premium member")
     }
 
     private func switchTab(_ newTab: FigmaTab) {

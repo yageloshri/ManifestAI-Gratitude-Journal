@@ -18,7 +18,21 @@ final class PaywallManager: ObservableObject {
     /// Bound to MainTabView's `.fullScreenCover(isPresented:)`.
     @Published var isPresented = false
 
-    private init() {}
+    private var cancellable: AnyCancellable?
+
+    private init() {
+        // The launch entitlement sync from RevenueCat lands ASYNC — a device
+        // holding a stale cached `user_is_pro = true` (e.g. from the old
+        // Superwall era) passes the first onAppear enforcement and would
+        // never see the paywall. Re-enforce the moment isPro flips false.
+        cancellable = SubscriptionManager.shared.$isPro
+            .removeDuplicates()
+            .receive(on: DispatchQueue.main)
+            .sink { [weak self] isPro in
+                guard let self, !isPro else { return }
+                self.enforceHardPaywallIfNeeded()
+            }
+    }
 
     /// True unless QA disabled enforcement with the `debug_bypass_paywall`
     /// default. Mirrors the old `SuperwallDelegateHandler.hardPaywallEnforced`.
