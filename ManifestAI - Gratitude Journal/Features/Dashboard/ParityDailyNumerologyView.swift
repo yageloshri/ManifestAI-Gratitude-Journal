@@ -124,7 +124,7 @@ struct ParityDailyNumerologyView: View {
             insightCard(accent: Color(hex: "DE1212"),
                         elementoColor: Color(hex: "FC0D1B"),
                         icon: "GlyphDNHeart", iconTint: Color(hex: "FA2F2F"),
-                        title: "Love & Relationship",
+                        title: String(localized: "Love & Relationship"),
                         body: insight?.loveAdvice ?? "Initiate a new conversation or express a deeply held desire to your loved on with confidence and clarity.",
                         sx: sx, sy: sy)
                 .parityPosition(x: 17 * sx, y: 274 * sy)
@@ -134,7 +134,7 @@ struct ParityDailyNumerologyView: View {
             insightCard(accent: Color(hex: "0089FF"),
                         elementoColor: Color(hex: "0089FF"),
                         icon: "GlyphDNTarget", iconTint: Color(hex: "FF405C"),
-                        title: insight == nil ? "Love & Relationship" : "Career & Goals",
+                        title: insight == nil ? String(localized: "Love & Relationship") : String(localized: "Career & Goals"),
                         body: insight?.careerAdvice ?? "Launch that new idea or project you’ve been contemplating, stepping forward as a confident leader.",
                         sx: sx, sy: sy)
                 .parityPosition(x: 17 * sx, y: 417 * sy)
@@ -145,13 +145,13 @@ struct ParityDailyNumerologyView: View {
                 .foregroundStyle(DesignTokens.Colors.textSecondary)
                 .parityPosition(x: 17 * sx, y: 567 * sy)
 
-            attributeCard(label: "Color", value: insight?.luckyAttributes.color ?? "Crimson",
+            attributeCard(label: String(localized: "Color"), value: insight?.luckyAttributes.color ?? "Crimson",
                           icon: "paintpalette.fill", sx: sx, sy: sy)
                 .parityPosition(x: 17 * sx, y: 604.67 * sy)
-            attributeCard(label: "Crystal", value: insight?.luckyAttributes.crystal ?? "Carnelian",
+            attributeCard(label: String(localized: "Crystal"), value: insight?.luckyAttributes.crystal ?? "Carnelian",
                           icon: "diamond.fill", sx: sx, sy: sy)
                 .parityPosition(x: 135 * sx, y: 604.67 * sy)
-            attributeCard(label: "Time", value: insight?.luckyAttributes.time ?? "11:11",
+            attributeCard(label: String(localized: "Time"), value: insight?.luckyAttributes.time ?? "11:11",
                           icon: "clock.fill", sx: sx, sy: sy)
                 .parityPosition(x: 253 * sx, y: 604.67 * sy)
 
@@ -253,7 +253,7 @@ struct ParityDailyNumerologyView: View {
 
     private func insightCard(accent: Color, elementoColor: Color,
                              icon: String, iconTint: Color,
-                             title: String = "Love & Relationship",
+                             title: String = String(localized: "Love & Relationship"),
                              body bodyText: String,
                              sx: CGFloat, sy: CGFloat) -> some View {
         ZStack(alignment: .topLeading) {

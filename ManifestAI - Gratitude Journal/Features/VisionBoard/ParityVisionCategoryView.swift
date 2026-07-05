@@ -85,6 +85,23 @@ struct ParityVisionCategoryView: View {
         .accessibilityIdentifier("visionCategory.root")
     }
 
+    /// English identifiers are what's used for routing/persistence
+    /// (`onSelectCategory`, `MainTabView.photosPrompt(for:)`, editor category);
+    /// this maps them to a localized display string without touching the
+    /// value passed through routing.
+    static func localizedName(for rawName: String) -> String {
+        switch rawName {
+        case "Love": return String(localized: "Love")
+        case "Wealth": return String(localized: "Wealth")
+        case "Health": return String(localized: "Health")
+        case "Travel": return String(localized: "Travel")
+        case "Career": return String(localized: "Career")
+        case "Peace": return String(localized: "Peace")
+        case "Family": return String(localized: "Family")
+        default: return rawName
+        }
+    }
+
     // MARK: - Category card (Figma 'Group 48095318' etc., 110×98 r16, 2px glass border)
 
     private func categoryCard(_ category: Category, sx: CGFloat, sy: CGFloat) -> some View {
@@ -113,7 +130,10 @@ struct ParityVisionCategoryView: View {
                     .parityPosition(x: 43 * sx, y: category.iconY * sy)
 
                 // Figma 'Frame 241' label: Poppins-Medium 14, #EBEBEB, card-rel y 58, centered
-                Text(category.name)
+                // NOTE: `category.name` is the English identifier used for
+                // routing/persistence (onSelectCategory, photosPrompt(for:));
+                // only the on-screen label is localized here.
+                Text(Self.localizedName(for: category.name))
                     .font(DesignTokens.Typography.smallMedium)
                     .foregroundStyle(DesignTokens.Colors.textPrimary)
                     .frame(width: 110 * sx, alignment: .top)

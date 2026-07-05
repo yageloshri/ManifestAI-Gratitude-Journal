@@ -623,19 +623,19 @@ struct MainTabView: View {
     private static func photosPrompt(for category: String) -> String {
         switch category {
         case "Wealth":
-            return "Find a photo that represents the abundance you're calling in. Is it financial freedom? A dream home? A thriving business?"
+            return String(localized: "Find a photo that represents the abundance you're calling in. Is it financial freedom? A dream home? A thriving business?")
         case "Health":
-            return "Find a photo that represents the vitality you crave. Is it strength? Calm energy? Waking up rested and alive?"
+            return String(localized: "Find a photo that represents the vitality you crave. Is it strength? Calm energy? Waking up rested and alive?")
         case "Travel":
-            return "Find a photo that represents the journey you dream of. Is it a far-away city? An ocean sunrise? A mountain trail?"
+            return String(localized: "Find a photo that represents the journey you dream of. Is it a far-away city? An ocean sunrise? A mountain trail?")
         case "Career":
-            return "Find a photo that represents the success you're building. Is it a dream role? Your own venture? A moment of recognition?"
+            return String(localized: "Find a photo that represents the success you're building. Is it a dream role? Your own venture? A moment of recognition?")
         case "Peace":
-            return "Find a photo that represents the calm you seek. Is it a quiet morning? Deep stillness? A place that feels like home?"
+            return String(localized: "Find a photo that represents the calm you seek. Is it a quiet morning? Deep stillness? A place that feels like home?")
         case "Family":
-            return "Find a photo that represents the family life you cherish. Is it laughter at dinner? A warm embrace? Time together at home?"
+            return String(localized: "Find a photo that represents the family life you cherish. Is it laughter at dinner? A warm embrace? Time together at home?")
         default: // "Love" — Figma 326:13106 verbatim
-            return "Find a photo that represents the partnership you crave. Is it a wedding? A quiet moment at home? Holding hands?"
+            return String(localized: "Find a photo that represents the partnership you crave. Is it a wedding? A quiet moment at home? Holding hands?")
         }
     }
 

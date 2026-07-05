@@ -33,14 +33,16 @@ struct NumerologyStepView: View {
                 Text("Let’s align with your stars.")
                     .font(DesignTokens.Typography.h1)
                     .foregroundStyle(DesignTokens.Colors.textPrimary)
-                    .frame(width: 353 * sx, alignment: .topLeading)
+                    .multilineTextAlignment(appIsRTL ? .trailing : .leading)
+                    .frame(width: 353 * sx, alignment: appIsRTL ? .topTrailing : .topLeading)
                     .parityPosition(x: 20 * sx, y: 122 * sy)
 
                 // Figma 268:2316: Poppins Regular 16/24 #B9B9B9
                 Text("Enter your date of birth below")
                     .font(DesignTokens.Typography.bodyRegular)
                     .foregroundStyle(DesignTokens.Colors.textSecondary)
-                    .frame(width: 353 * sx, alignment: .topLeading)
+                    .multilineTextAlignment(appIsRTL ? .trailing : .leading)
+                    .frame(width: 353 * sx, alignment: appIsRTL ? .topTrailing : .topLeading)
                     .parityPosition(x: 20 * sx, y: 177 * sy)
 
                 // Figma 268:2318: info box (20,209) 353×62, #251540, r18
@@ -97,7 +99,8 @@ struct NumerologyStepView: View {
                 .font(DesignTokens.Typography.smallText)
                 .foregroundStyle(DesignTokens.Colors.lightGrey)
                 .lineSpacing(smallLineSpacing)
-                .frame(width: 275 * sx, alignment: .topLeading)
+                .multilineTextAlignment(appIsRTL ? .trailing : .leading)
+                .frame(width: 275 * sx, alignment: appIsRTL ? .topTrailing : .topLeading)
                 .parityPosition(x: 42 * sx, y: 10 * sy)
         }
     }

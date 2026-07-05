@@ -23,16 +23,18 @@ struct GlassTextField: View {
 
             // Text field
             TextField("", text: $text)
+                .multilineTextAlignment(appIsRTL ? .trailing : .leading)
                 .focused(isFocused)
                 .font(DesignTokens.Typography.smallText) // Poppins Regular 14
                 .foregroundStyle(DesignTokens.Colors.textPrimary)
                 .tint(DesignTokens.Colors.primary)
                 .padding(.horizontal, DesignTokens.Spacing.cardPadding) // 16
-                .overlay(alignment: .leading) {
+                .overlay(alignment: appIsRTL ? .trailing : .leading) {
                     if text.isEmpty {
                         Text(placeholder)
                             .font(DesignTokens.Typography.smallText)
                             .foregroundStyle(DesignTokens.Colors.textPrimary.opacity(0.40))
+                            .multilineTextAlignment(appIsRTL ? .trailing : .leading)
                             .padding(.horizontal, DesignTokens.Spacing.cardPadding)
                             .allowsHitTesting(false)
                     }

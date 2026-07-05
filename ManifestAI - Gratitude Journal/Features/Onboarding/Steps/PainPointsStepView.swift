@@ -43,7 +43,8 @@ struct PainPointsStepView: View {
                 Text("\(displayName), What is holding you back right now?")
                     .font(DesignTokens.Typography.h1)
                     .foregroundStyle(DesignTokens.Colors.textPrimary)
-                    .frame(width: 353 * sx, alignment: .topLeading)
+                    .multilineTextAlignment(appIsRTL ? .trailing : .leading)
+                    .frame(width: 353 * sx, alignment: appIsRTL ? .topTrailing : .topLeading)
                     .parityPosition(x: 20 * sx, y: 122 * sy)
 
                 // Figma 256:1141: rows at y 208, 353×52, gap 12
@@ -74,6 +75,21 @@ struct PainPointsStepView: View {
         }
         .ignoresSafeArea()
         .accessibilityIdentifier("problems.root")
+    }
+
+    /// English identifiers are what gets SAVED (`selected`); this maps them
+    /// to a localized display string without touching the stored value.
+    static func localizedName(for rawOption: String) -> String {
+        switch rawOption {
+        case "Select All": return String(localized: "Select All")
+        case "Procrastination": return String(localized: "Procrastination")
+        case "Self-Doubt": return String(localized: "Self-Doubt")
+        case "Lack of Direction": return String(localized: "Lack of Direction")
+        case "Don’t know where to Start ": return String(localized: "Don’t know where to Start ")
+        case "Emotional Fatigue": return String(localized: "Emotional Fatigue")
+        case "Impostor Syndrome": return String(localized: "Impostor Syndrome")
+        default: return rawOption
+        }
     }
 
     private var displayName: String {
@@ -122,9 +138,13 @@ struct PainPointsStepView: View {
                 )
 
             // label — Figma rel (15,16), Poppins Regular 14/21, #EBEBEB
-            Text(option)
+            // NOTE: `option` is the English identifier that gets SAVED into
+            // `selected` (persistence stays stable across languages); only
+            // the on-screen label is localized here.
+            Text(Self.localizedName(for: option))
                 .font(DesignTokens.Typography.smallText)
                 .foregroundStyle(DesignTokens.Colors.textPrimary)
+                .multilineTextAlignment(appIsRTL ? .trailing : .leading)
                 .frame(height: 21 * sy)
                 .parityPosition(x: 15 * sx, y: 16 * sy)
 

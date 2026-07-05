@@ -225,6 +225,12 @@ struct WelcomeStepView: View {
                 .lineSpacing(badgeLineSpacing)
                 .foregroundStyle(DesignTokens.Colors.secondary)
                 .multilineTextAlignment(.center)
+                // Longer translations of the brand line don't fit on one line
+                // at this width — allow wrapping to 2 lines and shrink text
+                // as a last resort so the full brand name always shows
+                // (was truncating with "…" in Hebrew).
+                .lineLimit(2)
+                .minimumScaleFactor(0.7)
                 .frame(width: 195 * sx)
                 // Figma text top is y78 in a y65/h75 box (+0.34pt off-center);
                 // remainder absorbs Bitter metrics, measured via pixel diff

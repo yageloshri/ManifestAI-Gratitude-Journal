@@ -43,7 +43,8 @@ struct BreakthroughStepView: View {
                 Text("Where do you need a breakthrough?")
                     .font(DesignTokens.Typography.h1)
                     .foregroundStyle(DesignTokens.Colors.textPrimary)
-                    .frame(width: 353 * sx, alignment: .topLeading)
+                    .multilineTextAlignment(appIsRTL ? .trailing : .leading)
+                    .frame(width: 353 * sx, alignment: appIsRTL ? .topTrailing : .topLeading)
                     .parityPosition(x: 20 * sx, y: 122 * sy)
 
                 // Figma 255:1381: cards at y 208, 353×82, gap 12
@@ -80,6 +81,18 @@ struct BreakthroughStepView: View {
         .accessibilityIdentifier("category.root")
     }
 
+    /// English identifiers are what gets SAVED (`selected`); this maps them
+    /// to a localized display string without touching the stored value.
+    static func localizedName(for rawName: String) -> String {
+        switch rawName {
+        case "Love & Relationship": return String(localized: "Love & Relationship")
+        case "Financial Abundance": return String(localized: "Financial Abundance")
+        case "Inner Peace": return String(localized: "Inner Peace")
+        case "Career Growth": return String(localized: "Career Growth")
+        default: return rawName
+        }
+    }
+
     // MARK: - Category Card (Figma: 353×82, r16, gradient border, glass)
 
     private func categoryCard(_ category: (name: String, asset: String, glow: Color),
@@ -100,10 +113,14 @@ struct BreakthroughStepView: View {
                 .parityPosition(x: 15 * sx, y: 20 * sy)
 
             // Label — Figma rel (68, 27.33), Poppins Medium 16/24, #F2F2F2
-            Text(category.name)
+            // NOTE: `category.name` is the English identifier that gets SAVED
+            // (persistence/analytics stay stable across languages); only the
+            // on-screen label is localized here.
+            Text(Self.localizedName(for: category.name))
                 .font(DesignTokens.Typography.bodyMedium)
                 .foregroundStyle(Color(hex: "F2F2F2"))
-                .frame(width: 278 * sx, height: 28 * sy, alignment: .leading)
+                .multilineTextAlignment(appIsRTL ? .trailing : .leading)
+                .frame(width: 278 * sx, height: 28 * sy, alignment: appIsRTL ? .trailing : .leading)
                 .parityPosition(x: 68 * sx, y: 27.33 * sy)
 
             // Arrow → — Figma vector rel (314, 34.2), 14×13.67, #685EF5, 2pt

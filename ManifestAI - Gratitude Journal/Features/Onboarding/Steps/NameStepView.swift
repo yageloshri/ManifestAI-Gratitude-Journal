@@ -32,11 +32,13 @@ struct NameStepView: View {
                     .parityPosition(x: 20 * sx, y: 76 * sy)
 
                 // Title + field — Figma 255:1193: left 20, top 122, gap 24
-                VStack(alignment: .leading, spacing: 24 * sy) {
+                VStack(alignment: appIsRTL ? .trailing : .leading, spacing: 24 * sy) {
                     // Figma 255:1198: Bitter SemiBold 26/1.2 #EBEBEB
                     Text("What should we call you?")
                         .font(DesignTokens.Typography.h1)
                         .foregroundStyle(DesignTokens.Colors.textPrimary)
+                        .multilineTextAlignment(appIsRTL ? .trailing : .leading)
+                        .frame(maxWidth: .infinity, alignment: appIsRTL ? .trailing : .leading)
 
                     // Figma 268:1548: 353×56 glass capsule
                     GlassTextField(

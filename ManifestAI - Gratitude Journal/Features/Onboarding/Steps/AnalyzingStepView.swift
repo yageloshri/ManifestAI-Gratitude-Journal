@@ -19,10 +19,10 @@ struct AnalyzingStepView: View {
     private static let totalDuration: Double = 7
 
     private let messages = [
-        "Reading your birth date…",
-        "Calculating your life path number…",
-        "Mapping your personal year cycle…",
-        "Aligning your transformation profile…"
+        String(localized: "Reading your birth date…"),
+        String(localized: "Calculating your life path number…"),
+        String(localized: "Mapping your personal year cycle…"),
+        String(localized: "Aligning your transformation profile…")
     ]
 
     private var formattedBirthDate: String {
