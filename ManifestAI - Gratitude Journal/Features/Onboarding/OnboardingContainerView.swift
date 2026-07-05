@@ -3,7 +3,6 @@
 // Uses simple state machine to prevent navigation memory issues
 
 import SwiftUI
-import SuperwallKit
 
 enum OnboardingStep {
     case welcome

@@ -1,6 +1,5 @@
 import SwiftUI
 import SwiftData
-import SuperwallKit
 import UserNotifications
 
 @main
@@ -18,16 +17,10 @@ struct ManifestAIApp: App {
     @State private var showNotificationPrePrompt = false
 
     init() {
-        if Secrets.superwallApiKey.isEmpty {
-            dlog("⚠️ Superwall API key missing — paywall features will be unavailable")
-        } else {
-            Superwall.configure(apiKey: Secrets.superwallApiKey)
-            Superwall.shared.delegate = SuperwallDelegateHandler.shared
-            // Sync the local Pro flag with Superwall's real subscription status
-            // at launch (no-op while status is still .unknown; the delegate's
-            // subscriptionStatusDidChange picks up the definitive value).
-            SuperwallDelegateHandler.shared.syncSubscriptionStatus(Superwall.shared.subscriptionStatus)
-        }
+        // Monetization: RevenueCat native paywall (replaces Superwall).
+        // Configure Purchases at launch; PurchasesManager mirrors the "pro"
+        // entitlement into SubscriptionManager and drives the native paywall.
+        PurchasesManager.shared.configure()
 
         // §3.2: register the "Write Now" / "Snooze 1h" actionable-notification
         // category and hand delivery/response handling to NotificationDelegate.

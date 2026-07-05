@@ -5,7 +5,6 @@
 import SwiftUI
 import SwiftData
 import PhotosUI
-import SuperwallKit
 import UserNotifications
 
 struct MainTabView: View {
@@ -13,6 +12,7 @@ struct MainTabView: View {
     @Query(sort: \JournalEntry.date, order: .reverse) private var entries: [JournalEntry]
     @Query private var boards: [VisionBoardEntity]
     @ObservedObject private var userManager = UserManager.shared
+    @ObservedObject private var paywall = PaywallManager.shared
 
     @State private var tab: FigmaTab = {
         #if DEBUG
@@ -147,6 +147,14 @@ struct MainTabView: View {
             presentPostOnboardingPaywallIfNeeded()
             SharedDataManager.shared.saveStreak(streak)
         }
+        // Native RevenueCat paywall. onDismiss re-presents under the hard
+        // paywall (closing without a purchase brings it back); a successful
+        // purchase/restore sets isPro and stays closed.
+        .fullScreenCover(isPresented: $paywall.isPresented, onDismiss: {
+            paywall.handleDismiss()
+        }) {
+            PaywallView(onClose: { paywall.isPresented = false })
+        }
         .onReceive(ritualTimer) { _ in ritualClock = Self.ritualNow() }
         // Notification "Write Now" action / notification tap → 369 tab.
         .onReceive(NotificationCenter.default.publisher(for: .openRitualRequested)) { _ in
@@ -154,8 +162,10 @@ struct MainTabView: View {
         }
         // Widget button / Siri App Intents leave a pending deep link.
         .onChange(of: scenePhase) { _, newPhase in
-            guard newPhase == .active,
-                  let link = SharedDataManager.shared.consumePendingDeepLink() else { return }
+            guard newPhase == .active else { return }
+            // Hard paywall: re-evaluate every time the app comes to the fore.
+            paywall.enforceHardPaywallIfNeeded()
+            guard let link = SharedDataManager.shared.consumePendingDeepLink() else { return }
             if link == "ritual" { switchTab(.method369); flow369 = .ritual }
             if link == "journal_write" { switchTab(.journal); journalRoute = .write }
         }
@@ -177,14 +187,14 @@ struct MainTabView: View {
     /// included) — a non-subscribed user is always brought back to the
     /// paywall, on first launch after onboarding and on every later launch.
     /// Re-presentation after a dismissed paywall is handled by
-    /// SuperwallDelegateHandler.handlePaywallDismissed.
+    /// PaywallManager.handleDismiss (the fullScreenCover onDismiss).
     private func presentPostOnboardingPaywallIfNeeded() {
         UserDefaults.standard.set(false, forKey: "should_show_paywall_after_onboarding")
-        guard SuperwallDelegateHandler.hardPaywallEnforced else { return }
+        guard PaywallManager.hardPaywallEnforced else { return }
         guard !SubscriptionManager.shared.isPro else { return }
         // Let the onboarding → main transition settle before presenting.
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
-            Superwall.shared.register(placement: "campaign_trigger")
+            PaywallManager.shared.enforceHardPaywallIfNeeded()
         }
     }
 
@@ -453,7 +463,7 @@ struct MainTabView: View {
             editingEntry = nil
             journalRoute = .write
         } else {
-            Superwall.shared.register(placement: "campaign_trigger")
+            PaywallManager.shared.present()
         }
     }
 
@@ -897,8 +907,8 @@ struct MainTabView: View {
                 )
             case .upgradePro:
                 ParityUpgradeProView(
-                    onStartTrial: { Superwall.shared.register(placement: "campaign_trigger") },
-                    onRestore: { Superwall.shared.restorePurchases { _ in } },
+                    onStartTrial: { PaywallManager.shared.present() },
+                    onRestore: { Task { try? await PurchasesManager.shared.restore() } },
                     onPrivacy: {
                         if let url = URL(string: "https://dream-manifest-shine.lovable.app/privacy") {
                             UIApplication.shared.open(url)
@@ -939,7 +949,7 @@ struct MainTabView: View {
 
     /// Log out = a fresh start: the next onboarding run must not inherit this
     /// user's journal, boards, intention, or ritual progress. (Purchases are
-    /// NOT touched — isPro re-syncs from Superwall.)
+    /// NOT touched — isPro re-syncs from RevenueCat.)
     private func logout() {
         for entry in entries { modelContext.delete(entry) }
         for board in boards { modelContext.delete(board) }

@@ -4,7 +4,6 @@
 /// (Morning, Afternoon, Evening) that unlock sequentially.
 
 import SwiftUI
-import SuperwallKit
 
 struct Manifest369View: View {
     @StateObject private var viewModel = Manifest369ViewModel()
@@ -62,10 +61,8 @@ struct Manifest369View: View {
                             .padding(.horizontal, 40.responsive)
                     }
                     
-                    Button(action: { 
-                        Task {
-                            await Superwall.shared.register(placement: "campaign_trigger")
-                        }
+                    Button(action: {
+                        PaywallManager.shared.present()
                     }) {
                         HStack(spacing: Theme.Spacing.md) {
                             Image(systemName: "crown.fill")
@@ -110,9 +107,7 @@ struct Manifest369View: View {
         .onAppear {
             // Check if user should see paywall immediately
             if !subscriptionManager.can369Method {
-                Task {
-                    await Superwall.shared.register(placement: "campaign_trigger")
-                }
+                PaywallManager.shared.present()
             }
         }
     }

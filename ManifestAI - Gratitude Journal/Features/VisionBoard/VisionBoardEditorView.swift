@@ -1,7 +1,6 @@
 import SwiftUI
 import PhotosUI
 import SwiftData
-import SuperwallKit
 
 struct VisionBoardEditorView: View {
     @ObservedObject var viewModel: VisionBoardViewModel
@@ -48,9 +47,7 @@ struct VisionBoardEditorView: View {
                     Button(action: {
                         // Check if user can save
                         if !subscriptionManager.canSaveVisionBoard {
-                            Task {
-                                await Superwall.shared.register(placement: "campaign_trigger")
-                            }
+                            PaywallManager.shared.present()
                             return
                         }
                         

@@ -1,7 +1,6 @@
 import SwiftUI
 import UIKit
 import SwiftData
-import SuperwallKit
 
 struct DashboardView: View {
     @StateObject private var viewModel = DashboardViewModel()
@@ -69,10 +68,10 @@ struct DashboardView: View {
             
             // עיכוב קטנטן כדי לתת לאנימציית המעבר להסתיים (חווית משתמש טובה יותר)
             DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
-                dlog("📱 DashboardView: Triggering Superwall paywall NOW...")
-                
-                // 1. קריאה ל-Superwall עם register placement
-                Superwall.shared.register(placement: "campaign_trigger")
+                dlog("📱 DashboardView: Triggering native paywall NOW...")
+
+                // 1. הצגת ה-paywall הנייטיב של RevenueCat
+                PaywallManager.shared.present()
                 
                 // 2. איפוס הדגל כדי שזה לא יקרה בכל פעם שנכנסים לאפליקציה
                 UserDefaults.standard.set(false, forKey: "should_show_paywall_after_onboarding")

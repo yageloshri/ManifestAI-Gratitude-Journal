@@ -13,6 +13,7 @@
 		0266CAD72EFDF789009630BE /* SuperwallKit in Frameworks */ = {isa = PBXBuildFile; productRef = 0266CAD62EFDF789009630BE /* SuperwallKit */; };
 		0266CADA2EFE03A9009630BE /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = 0266CAD92EFE03A9009630BE /* Lottie */; };
 		FB1A2B3C4D5E6F0000000001 /* FirebaseMessaging in Frameworks */ = {isa = PBXBuildFile; productRef = FB1A2B3C4D5E6F0000000002 /* FirebaseMessaging */; };
+		RC1A2B3C4D5E6F0000000001 /* RevenueCat in Frameworks */ = {isa = PBXBuildFile; productRef = RC1A2B3C4D5E6F0000000002 /* RevenueCat */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -101,6 +102,7 @@
 				0266CAD72EFDF789009630BE /* SuperwallKit in Frameworks */,
 				0266CADA2EFE03A9009630BE /* Lottie in Frameworks */,
 				FB1A2B3C4D5E6F0000000001 /* FirebaseMessaging in Frameworks */,
+				RC1A2B3C4D5E6F0000000001 /* RevenueCat in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -171,6 +173,7 @@
 				0266CAD62EFDF789009630BE /* SuperwallKit */,
 				0266CAD92EFE03A9009630BE /* Lottie */,
 				FB1A2B3C4D5E6F0000000002 /* FirebaseMessaging */,
+				RC1A2B3C4D5E6F0000000002 /* RevenueCat */,
 			);
 			productName = "ManifestAI - Gratitude Journal";
 			productReference = 0266C9162EFC67D2009630BE /* ManifestAI - Gratitude Journal.app */;
@@ -249,6 +252,7 @@
 				0266CAD52EFDF789009630BE /* XCRemoteSwiftPackageReference "Superwall-iOS" */,
 				0266CAD82EFE03A9009630BE /* XCRemoteSwiftPackageReference "lottie-ios" */,
 				FB1A2B3C4D5E6F0000000003 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				RC1A2B3C4D5E6F0000000003 /* XCRemoteSwiftPackageReference "purchases-ios" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 0266C9172EFC67D2009630BE /* Products */;
@@ -620,6 +624,14 @@
 				minimumVersion = 11.0.0;
 			};
 		};
+		RC1A2B3C4D5E6F0000000003 /* XCRemoteSwiftPackageReference "purchases-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/RevenueCat/purchases-ios";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -637,6 +649,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = FB1A2B3C4D5E6F0000000003 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseMessaging;
+		};
+		RC1A2B3C4D5E6F0000000002 /* RevenueCat */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = RC1A2B3C4D5E6F0000000003 /* XCRemoteSwiftPackageReference "purchases-ios" */;
+			productName = RevenueCat;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

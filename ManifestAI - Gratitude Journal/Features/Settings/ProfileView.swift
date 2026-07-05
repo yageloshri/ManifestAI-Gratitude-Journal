@@ -1,6 +1,5 @@
 import SwiftUI
 import StoreKit
-import SuperwallKit
 
 struct ProfileView: View {
     @ObservedObject var userManager = UserManager.shared
@@ -150,9 +149,7 @@ struct ProfileView: View {
                                         if SubscriptionManager.shared.isPro {
                                             showingSubscription = true
                                         } else {
-                                            Task {
-                                                await Superwall.shared.register(placement: "campaign_trigger")
-                                            }
+                                            PaywallManager.shared.present()
                                         }
                                     }
                                 )

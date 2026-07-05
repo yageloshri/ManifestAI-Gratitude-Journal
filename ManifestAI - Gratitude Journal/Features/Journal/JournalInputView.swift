@@ -1,7 +1,6 @@
 import SwiftUI
 import SwiftData
 import UIKit
-import SuperwallKit
 
 // MARK: - Animation Phases
 enum JournalAnimationPhase {
@@ -331,9 +330,7 @@ struct JournalInputView: View {
         
         // Show paywall if limit reached
         if !subscriptionManager.canWriteJournalEntry(entriesThisWeek: entriesThisWeek) {
-            Task {
-                await Superwall.shared.register(placement: "campaign_trigger")
-            }
+            PaywallManager.shared.present()
             dismiss()
         }
     }
