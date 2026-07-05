@@ -1,14 +1,16 @@
 // PaywallView.swift
-// Native, fully-localized, RTL-aware RevenueCat paywall. Replaces the old
-// Superwall-hosted paywall. Built with adaptive layout (VStack/HStack,
-// leading/trailing) — NOT fixed Figma coordinates — so he/ar mirror correctly.
+// Native, fully-localized, RTL-aware RevenueCat paywall.
 //
-// Content mirrors the previous Superwall trial paywall:
-//   headline → 3-step timeline (Today / In 2 Days / In 3 Days+charge date) →
-//   plan cards (annual default, weekly) with localized StoreKit prices →
-//   "No payment due now" → golden CTA → Privacy / Restore / Terms.
+// Design: faithful to the original (proven) trial paywall — near-black
+// backdrop, warm gold accents, connected 3-step trial timeline, gold-rimmed
+// annual card with a floating "3-DAY FREE TRIAL" badge, solid gold CTA.
+// Everything fits ONE screen (no scrolling): fixed compact rows + flexible
+// breathing space that collapses first on short devices.
 //
-// All user-facing copy is a Text("…") literal so the String Catalog localizes it.
+// All user-facing copy is a Text("…") literal so the String Catalog
+// localizes it (20 languages). Layout is adaptive leading/trailing (not
+// fixed coordinates), and the root restores the natural layout direction so
+// he/ar render true RTL.
 
 import SwiftUI
 import RevenueCat
@@ -23,30 +25,46 @@ struct PaywallView: View {
     private let privacyURL = URL(string: "https://dream-manifest-shine.lovable.app/privacy")!
     private let termsURL = URL(string: "https://dream-manifest-shine.lovable.app/terms")!
 
+    // MARK: Palette (matches the original paywall, not the in-app purple)
+
+    private let bg = Color(hex: "0D0915")
+    private let gold = Color(hex: "FFD44D")
+    private let goldDeep = Color(hex: "F2B90D")
+    private let inkOnGold = Color(hex: "1C1503")
+    private let stepCircle = Color(hex: "262230")
+    private let stepIcon = Color(hex: "CBC7D8")
+    private let connectorDim = Color(hex: "353041")
+    private let cardStroke = Color(hex: "3B3550")
+
+    private var goldGradient: LinearGradient {
+        LinearGradient(colors: [gold, goldDeep], startPoint: .top, endPoint: .bottom)
+    }
+
     /// The app root forces LTR for the fixed-coordinate parity screens; this
     /// native paywall restores the NATURAL direction so he/ar get true RTL.
     private var naturalDirection: LayoutDirection {
         let lang = Locale.preferredLanguages.first ?? "en"
-        let direction = Locale.Language(identifier: lang).characterDirection
-        return direction == .rightToLeft ? .rightToLeft : .leftToRight
+        return Locale.Language(identifier: lang).characterDirection == .rightToLeft
+            ? .rightToLeft : .leftToRight
     }
 
     var body: some View {
         ZStack {
-            DesignTokens.Colors.background.ignoresSafeArea()
-            // Contain the 578pt-wide glow ellipse inside a flexible, clipped
-            // layer so it can't inflate the ZStack past the screen width.
-            Color.clear
-                .overlay(alignment: .top) { EllipseGlowBackground(figmaOpacity: 0.51) }
-                .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .top)
-                .clipped()
-                .ignoresSafeArea()
+            bg.ignoresSafeArea()
+            // Whisper of the brand purple rising from the bottom.
+            LinearGradient(
+                stops: [
+                    .init(color: Color(hex: "16062A").opacity(0), location: 0.55),
+                    .init(color: Color(hex: "2A1650").opacity(0.35), location: 1)
+                ],
+                startPoint: .top, endPoint: .bottom
+            )
+            .ignoresSafeArea()
 
-            // Pin the content column to the safe-area width so long strings
-            // wrap instead of overflowing the screen.
-            GeometryReader { geo in
-                content(width: geo.size.width)
-                    .frame(width: geo.size.width, height: geo.size.height, alignment: .top)
+            switch model.state {
+            case .loading: loadingState
+            case .error: errorState
+            case .loaded: loadedState
             }
         }
         .environment(\.layoutDirection, naturalDirection)
@@ -58,333 +76,296 @@ struct PaywallView: View {
         .accessibilityIdentifier("paywall.root")
     }
 
-    @ViewBuilder
-    private func content(width: CGFloat) -> some View {
-        switch model.state {
-        case .loading:
-            loadingState
-        case .error:
-            errorState
-        case .loaded:
-            loadedState(width: width)
-        }
-    }
+    // MARK: - One-screen loaded layout
 
-    // MARK: - Loading
-
-    private var loadingState: some View {
-        VStack(spacing: 20) {
-            closeButtonRow
-            Spacer()
-            ProgressView()
-                .tint(DesignTokens.Colors.secondary)
-                .scaleEffect(1.4)
-            Text("Loading your plan…")
-                .font(DesignTokens.Typography.bodyMedium)
-                .foregroundStyle(DesignTokens.Colors.textSecondary)
-            Spacer()
-        }
-        .padding(.horizontal, DesignTokens.Spacing.screenPadding)
-    }
-
-    // MARK: - Error
-
-    private var errorState: some View {
-        VStack(spacing: 24) {
-            closeButtonRow
-            Spacer()
-            owl
-            Text("We couldn't load subscription options right now.")
-                .font(DesignTokens.Typography.bodyMedium)
-                .foregroundStyle(DesignTokens.Colors.textPrimary)
-                .multilineTextAlignment(.center)
-                .padding(.horizontal, DesignTokens.Spacing.screenPadding)
-            Button {
-                Task { await model.reload() }
-            } label: {
-                Text("Try Again")
-                    .font(DesignTokens.Typography.bodyMedium)
-                    .foregroundStyle(.white)
-                    .frame(maxWidth: .infinity)
-                    .frame(height: DesignTokens.Sizes.buttonHeight)
-                    .background(
-                        RoundedRectangle(cornerRadius: DesignTokens.Radii.button)
-                            .fill(DesignTokens.Gradients.golden)
-                    )
-            }
-            .buttonStyle(.plain)
-            .padding(.horizontal, DesignTokens.Spacing.screenPadding)
-            Spacer()
-            footerLinks
-        }
-    }
-
-    // MARK: - Loaded
-
-    private func loadedState(width: CGFloat) -> some View {
+    private var loadedState: some View {
         VStack(spacing: 0) {
             closeButtonRow
-            ScrollView(showsIndicators: false) {
-                VStack(spacing: 22) {
-                    owl
-                    trialBadge
-                    headline
-                    timeline
-                    planCards
-                    Text("No payment due now")
-                        .font(DesignTokens.Typography.label)
-                        .foregroundStyle(.white)
-                        .multilineTextAlignment(.center)
-                    ctaButton
-                    footnote
-                    footerLinks
+
+            Spacer(minLength: 4)
+
+            headline
+                .padding(.horizontal, 28)
+
+            Spacer(minLength: 14).frame(maxHeight: 26)
+
+            timeline
+                .padding(.horizontal, 26)
+
+            Spacer(minLength: 14).frame(maxHeight: 30)
+
+            VStack(spacing: 12) {
+                if let annual = model.annualPackage {
+                    annualCard(annual)
                 }
-                .padding(.horizontal, DesignTokens.Spacing.screenPadding)
-                .padding(.bottom, 24)
-                // Pin the scrolling column to a concrete width so Text wraps
-                // instead of taking its unbounded ideal width.
-                .frame(width: width)
+                if let weekly = model.weeklyPackage {
+                    weeklyCard(weekly)
+                }
             }
+            .padding(.horizontal, 20)
+
+            Spacer(minLength: 10).frame(maxHeight: 18)
+
+            noPaymentRow
+
+            Spacer(minLength: 10).frame(maxHeight: 16)
+
+            ctaButton
+                .padding(.horizontal, 20)
+
+            footnote
+                .padding(.top, 10)
+                .padding(.horizontal, 24)
+
+            Spacer(minLength: 6).frame(maxHeight: 14)
+
+            footerLinks
         }
+        .padding(.bottom, 4)
     }
 
-    // MARK: - Pieces
+    // MARK: - Header
 
     private var closeButtonRow: some View {
         HStack {
+            Spacer()
             Button(action: onClose) {
                 Image(systemName: "xmark")
-                    .font(.system(size: 15, weight: .semibold))
-                    .foregroundStyle(DesignTokens.Colors.textSecondary)
-                    .frame(width: 36, height: 36)
-                    .background(Circle().fill(Color.white.opacity(0.06)))
-                    .overlay(Circle().stroke(DesignTokens.Colors.glassBorder.opacity(0.5), lineWidth: 1))
+                    .font(.system(size: 16, weight: .medium))
+                    .foregroundStyle(Color(hex: "9B96A8"))
+                    .frame(width: 40, height: 40)
+                    .contentShape(Circle())
             }
             .buttonStyle(.plain)
             .accessibilityLabel(Text("Close"))
             .accessibilityIdentifier("paywall.closeButton")
-            Spacer()
         }
-        .padding(.horizontal, DesignTokens.Spacing.screenPadding)
-        .padding(.top, 12)
+        .padding(.horizontal, 12)
+        .padding(.top, 2)
     }
 
-    private var owl: some View {
-        Image("AnalysisOwl")
-            .resizable()
-            .scaledToFit()
-            .frame(width: 92, height: 92)
-            .accessibilityHidden(true)
-    }
-
-    private var trialBadge: some View {
-        Text("3-DAY FREE TRIAL")
-            .font(DesignTokens.Typography.smallTextSemibold)
-            .foregroundStyle(DesignTokens.Colors.secondary)
-            .padding(.horizontal, 14)
-            .padding(.vertical, 6)
-            .background(
-                Capsule().fill(DesignTokens.Colors.secondary.opacity(0.12))
-            )
-            .overlay(
-                Capsule().stroke(DesignTokens.Colors.secondary.opacity(0.5), lineWidth: 1)
-            )
-    }
-
+    /// Big two-line headline with the localized "FREE" word lit in gold.
     private var headline: some View {
-        Text("Start your 3-day FREE trial to continue")
-            .font(DesignTokens.Typography.h1)
-            .foregroundStyle(DesignTokens.Colors.textPrimary)
+        highlightedHeadline
+            .font(.system(size: 29, weight: .bold))
+            .foregroundStyle(.white)
             .multilineTextAlignment(.center)
+            .lineLimit(3)
+            .minimumScaleFactor(0.7)
             .fixedSize(horizontal: false, vertical: true)
+            .frame(maxWidth: .infinity)
     }
 
-    // MARK: Timeline
+    /// Colors the localized emphatic word (key "FREE") inside the localized
+    /// headline. Falls back to the plain headline if not found.
+    private var highlightedHeadline: Text {
+        let headline = String(localized: "Start your 3-day FREE trial to continue")
+        let free = String(localized: "FREE")
+        var attributed = AttributedString(headline)
+        if !free.isEmpty, let range = attributed.range(of: free) {
+            attributed[range].foregroundColor = gold
+        }
+        return Text(attributed)
+    }
+
+    // MARK: - Timeline (connected steps, crown lit gold)
 
     private var timeline: some View {
         VStack(alignment: .leading, spacing: 0) {
             timelineRow(
-                icon: "SubTimelineIcon1",
+                systemIcon: "lock.open.fill", lit: false,
                 title: Text("Today"),
-                body: Text("Unlock AI-Insights, unlimited journaling and daily affirmations."),
-                showConnector: true
+                caption: Text("Unlock AI-Insights, unlimited journaling and daily affirmations."),
+                connector: .dim
             )
             timelineRow(
-                icon: "SubTimelineIcon2",
+                systemIcon: "bell.fill", lit: false,
                 title: Text("In 2 Days"),
-                body: Text("We'll send you a reminder before your trial ends."),
-                showConnector: true
+                caption: Text("We'll send you a reminder before your trial ends."),
+                connector: .toGold
             )
             timelineRow(
-                icon: "SubTimelineIcon3",
+                systemIcon: "crown.fill", lit: true,
                 title: Text("In 3 Days"),
-                body: Text("You'll be charged on \(model.chargeDateString) unless you cancel before."),
-                showConnector: false
+                caption: Text("You'll be charged on \(model.chargeDateString) unless you cancel before."),
+                connector: .none
             )
         }
-        .padding(18)
-        .frame(maxWidth: .infinity, alignment: .leading)
-        .background(
-            RoundedRectangle(cornerRadius: DesignTokens.Radii.card)
-                .fill(Color.white.opacity(0.01))
-        )
-        .figmaGlassSurface(cornerRadius: DesignTokens.Radii.card, compact: false)
     }
 
-    private func timelineRow(icon: String, title: Text, body: Text, showConnector: Bool) -> some View {
-        HStack(alignment: .top, spacing: 14) {
+    private enum Connector { case none, dim, toGold }
+
+    private func timelineRow(systemIcon: String, lit: Bool,
+                             title: Text, caption: Text,
+                             connector: Connector) -> some View {
+        HStack(alignment: .top, spacing: 16) {
             VStack(spacing: 0) {
-                Image(icon)
-                    .resizable()
-                    .frame(width: 44, height: 44)
-                if showConnector {
+                ZStack {
+                    Circle()
+                        .fill(lit ? AnyShapeStyle(goldGradient) : AnyShapeStyle(stepCircle))
+                        .frame(width: 42, height: 42)
+                    Image(systemName: systemIcon)
+                        .font(.system(size: 17, weight: .semibold))
+                        .foregroundStyle(lit ? inkOnGold : stepIcon)
+                }
+                if connector != .none {
                     Rectangle()
-                        .fill(Color(hex: "8E5BEB"))
-                        .frame(width: 3)
-                        .frame(maxHeight: .infinity)
-                        .padding(.vertical, 2)
+                        .fill(connector == .toGold
+                              ? AnyShapeStyle(LinearGradient(colors: [connectorDim, goldDeep],
+                                                             startPoint: .top, endPoint: .bottom))
+                              : AnyShapeStyle(connectorDim))
+                        .frame(width: 4)
+                        .frame(minHeight: 22, maxHeight: .infinity)
                 }
             }
             .fixedSize(horizontal: true, vertical: false)
 
-            VStack(alignment: .leading, spacing: 6) {
+            VStack(alignment: .leading, spacing: 3) {
                 title
-                    .font(DesignTokens.Typography.smallTextSemibold)
-                    .foregroundStyle(DesignTokens.Colors.textPrimary)
-                body
-                    .font(DesignTokens.Typography.smallText)
-                    .foregroundStyle(DesignTokens.Colors.textSecondary)
+                    .font(.system(size: 17, weight: .bold))
+                    .foregroundStyle(.white)
+                caption
+                    .font(.system(size: 14))
+                    .foregroundStyle(Color(hex: "A49FB3"))
+                    .lineLimit(3)
+                    .minimumScaleFactor(0.8)
                     .fixedSize(horizontal: false, vertical: true)
             }
-            .padding(.bottom, showConnector ? 18 : 0)
+            .padding(.bottom, connector == .none ? 0 : 16)
+            .padding(.top, 1)
+
             Spacer(minLength: 0)
         }
     }
 
-    // MARK: Plan cards
+    // MARK: - Plan cards
 
-    private var planCards: some View {
-        VStack(spacing: 12) {
-            if let annual = model.annualPackage {
-                planCard(
-                    package: annual,
-                    title: Text("Yearly"),
-                    subtitle: Text("Billed \(annual.storeProduct.localizedPriceString) / year"),
-                    trailing: model.perWeekString(for: annual)
-                )
-            }
-            if let weekly = model.weeklyPackage {
-                planCard(
-                    package: weekly,
-                    title: Text("Weekly"),
-                    subtitle: nil,
-                    trailing: model.perWeekString(for: weekly)
-                )
-            }
-        }
-    }
-
-    private func planCard(package: Package, title: Text, subtitle: Text?, trailing: String?) -> some View {
-        let selected = model.selectedPackage?.identifier == package.identifier
-        return Button {
-            model.selectedPackage = package
-        } label: {
-            HStack(spacing: 14) {
-                selectionIndicator(selected: selected)
-                VStack(alignment: .leading, spacing: 4) {
-                    title
-                        .font(DesignTokens.Typography.smallMedium)
-                        .foregroundStyle(DesignTokens.Colors.textPrimary)
-                    if let subtitle {
-                        subtitle
-                            .font(DesignTokens.Typography.smallText)
-                            .foregroundStyle(DesignTokens.Colors.textSecondary)
-                    }
+    private func annualCard(_ package: Package) -> some View {
+        Button { model.selectedPackage = package } label: {
+            HStack(alignment: .center) {
+                VStack(alignment: .leading, spacing: 3) {
+                    Text("Yearly")
+                        .font(.system(size: 17, weight: .bold))
+                        .foregroundStyle(.white)
+                    Text("Billed \(package.storeProduct.localizedPriceString) / year")
+                        .font(.system(size: 12))
+                        .foregroundStyle(Color(hex: "A49FB3"))
+                        .lineLimit(1)
+                        .minimumScaleFactor(0.7)
                 }
                 Spacer(minLength: 8)
-                if let trailing {
-                    Text(trailing)
-                        .font(DesignTokens.Typography.smallText)
-                        .foregroundStyle(DesignTokens.Colors.textSecondary)
+                if let perWeek = model.perWeekString(for: package) {
+                    Text(perWeek)
+                        .font(.system(size: 15, weight: .semibold))
+                        .foregroundStyle(.white)
                         .lineLimit(1)
                         .minimumScaleFactor(0.7)
                 }
             }
-            .padding(16)
-            .frame(maxWidth: .infinity, alignment: .leading)
+            .padding(.horizontal, 18)
+            .frame(maxWidth: .infinity)
+            .frame(height: 64)
             .background(
-                RoundedRectangle(cornerRadius: DesignTokens.Radii.card)
-                    .fill(Color.white.opacity(0.02))
+                RoundedRectangle(cornerRadius: 16)
+                    .fill(Color.white.opacity(isSelected(package) ? 0.05 : 0.03))
             )
             .overlay(
-                RoundedRectangle(cornerRadius: DesignTokens.Radii.card)
-                    .strokeBorder(
-                        selected
-                        ? AnyShapeStyle(LinearGradient(
-                            stops: [
-                                .init(color: DesignTokens.Colors.secondary.opacity(0.85), location: 0),
-                                .init(color: DesignTokens.Colors.secondary.opacity(0.4), location: 1)
-                            ],
-                            startPoint: .top, endPoint: .bottom))
-                        : AnyShapeStyle(DesignTokens.Colors.glassBorder.opacity(0.5)),
-                        lineWidth: selected ? 3 : 1
-                    )
+                RoundedRectangle(cornerRadius: 16)
+                    .strokeBorder(isSelected(package) ? AnyShapeStyle(goldGradient)
+                                                      : AnyShapeStyle(cardStroke),
+                                  lineWidth: isSelected(package) ? 2 : 1)
+            )
+            // Floating badge riding the card's top edge — original design.
+            .overlay(alignment: .top) {
+                Text("3-DAY FREE TRIAL")
+                    .font(.system(size: 11, weight: .heavy))
+                    .kerning(0.5)
+                    .foregroundStyle(inkOnGold)
+                    .lineLimit(1)
+                    .minimumScaleFactor(0.6)
+                    .padding(.horizontal, 12)
+                    .padding(.vertical, 4)
+                    .background(Capsule().fill(goldGradient))
+                    .offset(y: -11)
+            }
+            .padding(.top, 11) // room for the badge overhang
+        }
+        .buttonStyle(.plain)
+        .accessibilityAddTraits(isSelected(package) ? [.isButton, .isSelected] : .isButton)
+        .accessibilityIdentifier("paywall.plan.yearly")
+    }
+
+    private func weeklyCard(_ package: Package) -> some View {
+        Button { model.selectedPackage = package } label: {
+            HStack {
+                Text("Weekly")
+                    .font(.system(size: 17, weight: .bold))
+                    .foregroundStyle(.white)
+                Spacer(minLength: 8)
+                if let perWeek = model.perWeekString(for: package) {
+                    Text(perWeek)
+                        .font(.system(size: 15, weight: .semibold))
+                        .foregroundStyle(.white)
+                        .lineLimit(1)
+                        .minimumScaleFactor(0.7)
+                }
+            }
+            .padding(.horizontal, 18)
+            .frame(maxWidth: .infinity)
+            .frame(height: 56)
+            .background(
+                RoundedRectangle(cornerRadius: 16)
+                    .fill(Color.white.opacity(isSelected(package) ? 0.05 : 0.02))
+            )
+            .overlay(
+                RoundedRectangle(cornerRadius: 16)
+                    .strokeBorder(isSelected(package) ? AnyShapeStyle(goldGradient)
+                                                      : AnyShapeStyle(cardStroke),
+                                  lineWidth: isSelected(package) ? 2 : 1)
             )
         }
         .buttonStyle(.plain)
-        .accessibilityAddTraits(selected ? [.isButton, .isSelected] : .isButton)
-        .accessibilityIdentifier("paywall.plan.\(package.packageType == .annual ? "yearly" : "weekly")")
+        .accessibilityAddTraits(isSelected(package) ? [.isButton, .isSelected] : .isButton)
+        .accessibilityIdentifier("paywall.plan.weekly")
     }
 
-    private func selectionIndicator(selected: Bool) -> some View {
-        ZStack {
-            Circle()
-                .fill(selected
-                      ? AnyShapeStyle(RadialGradient(
-                        stops: [
-                            .init(color: Color(hex: "A8842F"), location: 0),
-                            .init(color: Color(hex: "C7A14B"), location: 1)
-                        ], center: .center, startRadius: 0, endRadius: 12))
-                      : AnyShapeStyle(Color.white.opacity(0.01)))
-                .overlay(
-                    Circle().stroke(
-                        selected ? DesignTokens.Colors.selectedBorderGold.opacity(0.85)
-                                 : DesignTokens.Colors.unselectedBorder.opacity(0.6),
-                        lineWidth: 1)
-                )
-                .frame(width: 24, height: 24)
-            if selected {
-                Image(systemName: "checkmark")
-                    .font(.system(size: 12, weight: .bold))
-                    .foregroundStyle(Color(hex: "FAFAFB"))
-            }
+    private func isSelected(_ package: Package) -> Bool {
+        model.selectedPackage?.identifier == package.identifier
+    }
+
+    // MARK: - Bottom stack
+
+    private var noPaymentRow: some View {
+        HStack(spacing: 8) {
+            Image(systemName: "checkmark")
+                .font(.system(size: 13, weight: .bold))
+                .foregroundStyle(.white)
+            Text("No payment due now")
+                .font(.system(size: 15, weight: .semibold))
+                .foregroundStyle(.white)
         }
     }
-
-    // MARK: CTA + footnote
 
     private var ctaButton: some View {
         Button {
             Task { await model.purchaseSelected() }
         } label: {
             ZStack {
-                RoundedRectangle(cornerRadius: DesignTokens.Radii.button)
-                    .fill(DesignTokens.Gradients.golden)
+                RoundedRectangle(cornerRadius: 15).fill(goldGradient)
                 if model.isPurchasing {
-                    ProgressView().tint(.white)
+                    ProgressView().tint(inkOnGold)
                 } else {
-                    HStack {
-                        Text("Start my 3-day free trial")
-                            .font(DesignTokens.Typography.bodyMedium)
-                            .foregroundStyle(Color(hex: "3A2A05"))
-                        Image(systemName: "chevron.forward")
-                            .font(.system(size: 14, weight: .semibold))
-                            .foregroundStyle(Color(hex: "3A2A05"))
-                    }
+                    Text("Start my 3-day free trial")
+                        .font(.system(size: 17, weight: .bold))
+                        .foregroundStyle(inkOnGold)
+                        .lineLimit(1)
+                        .minimumScaleFactor(0.7)
+                        .padding(.horizontal, 12)
                 }
             }
             .frame(maxWidth: .infinity)
-            .frame(height: DesignTokens.Sizes.buttonHeight)
+            .frame(height: 56)
+            .shadow(color: goldDeep.opacity(0.35), radius: 14, y: 4)
         }
         .buttonStyle(.plain)
         .disabled(model.isPurchasing || model.selectedPackage == nil)
@@ -395,37 +376,74 @@ struct PaywallView: View {
     private var footnote: some View {
         if let annual = model.annualPackage {
             Text("3 days free, then \(annual.storeProduct.localizedPriceString) per year (\(model.perMonthString(for: annual))/mo)")
-                .font(DesignTokens.Typography.label)
-                .foregroundStyle(DesignTokens.Colors.textSecondary)
+                .font(.system(size: 12))
+                .foregroundStyle(Color(hex: "8B8698"))
                 .multilineTextAlignment(.center)
+                .lineLimit(2)
+                .minimumScaleFactor(0.8)
         }
     }
 
     private var footerLinks: some View {
-        HStack {
-            Button { UIApplication.shared.open(privacyURL) } label: {
-                Text("Privacy")
-            }
-            .accessibilityIdentifier("paywall.privacy")
-            Spacer()
-            Button {
-                Task { await model.restore() }
-            } label: {
-                Text("Restore")
-            }
-            .accessibilityIdentifier("paywall.restore")
-            Spacer()
-            Button { UIApplication.shared.open(termsURL) } label: {
-                Text("Terms")
-            }
-            .accessibilityIdentifier("paywall.terms")
+        HStack(spacing: 34) {
+            Button { UIApplication.shared.open(privacyURL) } label: { Text("Privacy") }
+                .accessibilityIdentifier("paywall.privacy")
+            Button { Task { await model.restore() } } label: { Text("Restore") }
+                .accessibilityIdentifier("paywall.restore")
+            Button { UIApplication.shared.open(termsURL) } label: { Text("Terms") }
+                .accessibilityIdentifier("paywall.terms")
         }
         .buttonStyle(.plain)
-        .font(DesignTokens.Typography.label)
-        .foregroundStyle(DesignTokens.Colors.textSecondary)
-        .opacity(0.8)
-        .padding(.horizontal, DesignTokens.Spacing.screenPadding)
-        .padding(.vertical, 10)
+        .font(.system(size: 13))
+        .foregroundStyle(Color(hex: "716C80"))
+        .padding(.vertical, 8)
+    }
+
+    // MARK: - Loading / Error
+
+    private var loadingState: some View {
+        VStack(spacing: 20) {
+            closeButtonRow
+            Spacer()
+            ProgressView()
+                .tint(gold)
+                .scaleEffect(1.4)
+            Text("Loading your plan…")
+                .font(.system(size: 15))
+                .foregroundStyle(Color(hex: "A49FB3"))
+            Spacer()
+        }
+    }
+
+    private var errorState: some View {
+        VStack(spacing: 22) {
+            closeButtonRow
+            Spacer()
+            Image("AnalysisOwl")
+                .resizable()
+                .scaledToFit()
+                .frame(width: 96, height: 96)
+                .accessibilityHidden(true)
+            Text("We couldn't load subscription options right now.")
+                .font(.system(size: 15))
+                .foregroundStyle(.white)
+                .multilineTextAlignment(.center)
+                .padding(.horizontal, 32)
+            Button {
+                Task { await model.reload() }
+            } label: {
+                Text("Try Again")
+                    .font(.system(size: 17, weight: .bold))
+                    .foregroundStyle(inkOnGold)
+                    .frame(maxWidth: .infinity)
+                    .frame(height: 56)
+                    .background(RoundedRectangle(cornerRadius: 15).fill(goldGradient))
+            }
+            .buttonStyle(.plain)
+            .padding(.horizontal, 20)
+            Spacer()
+            footerLinks
+        }
     }
 }
 
