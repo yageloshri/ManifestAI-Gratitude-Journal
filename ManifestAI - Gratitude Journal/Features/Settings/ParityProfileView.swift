@@ -104,6 +104,10 @@ struct ParityProfileView: View {
                         showArrow: true, rowId: "privacyPolicy")
                 .parityPosition(x: 20 * sx, y: 592 * sy)
 
+            // Language row — opens the in-app language picker (21 languages).
+            languageRow(sx: sx, sy: sy)
+                .parityPosition(x: 20 * sx, y: 676 * sy)
+
             // Figma 326:13330: tab bar group, Profile active — y=774 matches
             // the tab bar position used by every other tab (0,774,393,78).
             FigmaTabBar(active: .profile, onSelect: onSelectTab, sx: sx, sy: sy)
@@ -303,6 +307,52 @@ struct ParityProfileView: View {
     }
 
     // (logoutRow removed — no sign-in exists; data lives on-device only.)
+
+    // Language row — same glass row style; globe icon drawn live (no baked
+    // asset exists for it), subtitle shows the active language's native name.
+    private func languageRow(sx: CGFloat, sy: CGFloat) -> some View {
+        ZStack(alignment: .topLeading) {
+            Color.clear
+                .figmaGlassSurface(cornerRadius: DesignTokens.Radii.card,
+                                   compact: true, insetStroke: true)
+
+            // globe icon in the shared row-icon style (purple glow + glass)
+            ZStack {
+                RoundedRectangle(cornerRadius: 8)
+                    .fill(DesignTokens.Colors.primary.opacity(0.35))
+                    .frame(width: 24, height: 18)
+                    .blur(radius: 9)
+                Image(systemName: "globe")
+                    .font(.system(size: 19, weight: .medium))
+                    .foregroundStyle(DesignTokens.Colors.primary)
+            }
+            .frame(width: 44 * sx, height: 45 * sy)
+            .parityPosition(x: 10 * sx, y: 11 * sy)
+
+            Text("Language")
+                .font(DesignTokens.Typography.smallMedium)
+                .foregroundStyle(DesignTokens.Colors.textPrimary)
+                .parityPosition(x: 60 * sx, y: 12 * sy)
+
+            Text(AppLanguage.activeNativeName)
+                .font(DesignTokens.Typography.label)
+                .foregroundStyle(DesignTokens.Colors.textSecondary)
+                .parityPosition(x: 60 * sx, y: 37 * sy)
+
+            VuesaxChevronShape()
+                .stroke(DesignTokens.Colors.primary,
+                        style: StrokeStyle(lineWidth: 1.5, lineCap: .round, lineJoin: .round))
+                .frame(width: 5.915, height: 13.2)
+                .parityPosition(x: 318.4 * sx, y: 26.9 * sy)
+        }
+        .frame(width: 351 * sx, height: 64 * sy, alignment: .topLeading)
+        .contentShape(Rectangle())
+        .onTapGesture { onSelectRow("language") }
+        .accessibilityElement(children: .ignore)
+        .accessibilityLabel(Text("Language"))
+        .accessibilityAddTraits(.isButton)
+        .accessibilityIdentifier("profile.row.language")
+    }
 
     /// Baked 44×45pt reference crop of 'Group 48095317' (glyph + glow margin).
     private func bakedRowIcon(_ name: String, sx: CGFloat, sy: CGFloat,

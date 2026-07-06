@@ -87,6 +87,7 @@ struct MainTabView: View {
     private enum ProfileRoute { case main, personalInfo, personalInfoEdit, upgradePro }
     @State private var profileRoute: ProfileRoute = .main
     @AppStorage("daily_reminders_on") private var remindersOn = false
+    @State private var showLanguagePicker = false
 
     var body: some View {
         ZStack {
@@ -142,6 +143,9 @@ struct MainTabView: View {
         }
         .fullScreenCover(item: $editingBoard) { board in
             VisionEditBoardSheet(board: board)
+        }
+        .sheet(isPresented: $showLanguagePicker) {
+            LanguagePickerView(onClose: { showLanguagePicker = false })
         }
         .onAppear {
             presentPostOnboardingPaywallIfNeeded()
@@ -942,6 +946,8 @@ struct MainTabView: View {
             if let url = URL(string: "https://dream-manifest-shine.lovable.app/privacy") {
                 UIApplication.shared.open(url)
             }
+        case "language":
+            showLanguagePicker = true
         case "logout":
             logout()
         default: break
