@@ -2784,6 +2784,7 @@
       }
     },
     "3-DAY FREE TRIAL" : {
+      "extractionState" : "stale",
       "localizations" : {
         "ar" : {
           "stringUnit" : {
@@ -4032,7 +4033,7 @@
         }
       }
     },
-    "A promise to you self" : {
+    "A promise to yourself" : {
       "localizations" : {
         "ar" : {
           "stringUnit" : {
@@ -5516,6 +5517,130 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "有疑问吗?"
+          }
+        }
+      }
+    },
+    "Auto-renewable subscription. It renews at the price shown unless canceled at least 24 hours before the end of the current period. Manage or cancel anytime in Settings." : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "اشتراك متجدد تلقائيًا. يتجدد بالسعر الموضح ما لم يتم إلغاؤه قبل 24 ساعة على الأقل من نهاية الفترة الحالية. يمكنك الإدارة أو الإلغاء في أي وقت من الإعدادات."
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Automatisk fornyende abonnement. Det fornyes til den viste pris, medmindre det opsiges mindst 24 timer før udgangen af den nuværende periode. Administrer eller opsig når som helst i Indstillinger."
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Automatisch verlängerndes Abo. Es verlängert sich zum angezeigten Preis, sofern es nicht mindestens 24 Stunden vor Ende des aktuellen Zeitraums gekündigt wird. Verwalte oder kündige es jederzeit in den Einstellungen."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Suscripción de renovación automática. Se renueva al precio indicado a menos que se cancele al menos 24 horas antes de que finalice el periodo actual. Gestiónala o cancélala en cualquier momento en Ajustes."
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Automaattisesti uudistuva tilaus. Se uudistuu näytetyllä hinnalla, ellei sitä peruuteta vähintään 24 tuntia ennen nykyisen jakson päättymistä. Hallinnoi tai peruuta milloin tahansa Asetuksista."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Abonnement à renouvellement automatique. Il se renouvelle au prix indiqué sauf annulation au moins 24 heures avant la fin de la période en cours. Gère-le ou annule-le à tout moment dans Réglages."
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "מנוי בחידוש אוטומטי. הוא מתחדש במחיר המוצג אלא אם מבטלים אותו לפחות 24 שעות לפני סוף התקופה הנוכחית. אפשר לנהל או לבטל בכל עת בהגדרות."
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Langganan perpanjangan otomatis. Akan diperpanjang dengan harga yang ditampilkan kecuali dibatalkan setidaknya 24 jam sebelum akhir periode saat ini. Kelola atau batalkan kapan saja di Pengaturan."
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Abbonamento a rinnovo automatico. Si rinnova al prezzo indicato salvo disdetta almeno 24 ore prima della fine del periodo in corso. Gestiscilo o annullalo in qualsiasi momento in Impostazioni."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "自動更新されるサブスクリプションです。現在の期間終了の少なくとも24時間前にキャンセルしない限り、表示された価格で更新されます。設定からいつでも管理・解約できます。"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "자동 갱신 구독입니다. 현재 기간이 끝나기 최소 24시간 전에 취소하지 않으면 표시된 가격으로 갱신됩니다. 설정에서 언제든지 관리하거나 취소할 수 있습니다."
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Abonnement med automatisk fornyelse. Det fornyes til vist pris med mindre det sies opp minst 24 timer før slutten av inneværende periode. Administrer eller si opp når som helst i Innstillinger."
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Automatisch verlengend abonnement. Het wordt verlengd tegen de getoonde prijs, tenzij het minstens 24 uur voor het einde van de huidige periode wordt opgezegd. Beheer of zeg op elk moment op in Instellingen."
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Subskrypcja z automatycznym odnawianiem. Odnawia się w podanej cenie, chyba że zostanie anulowana co najmniej 24 godziny przed końcem bieżącego okresu. Zarządzaj lub anuluj w dowolnym momencie w Ustawieniach."
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Assinatura com renovação automática. Ela é renovada pelo preço exibido, a menos que seja cancelada pelo menos 24 horas antes do fim do período atual. Gerencie ou cancele quando quiser em Ajustes."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Подписка с автоматическим продлением. Она продлевается по указанной цене, если не отменена как минимум за 24 часа до окончания текущего периода. Управляйте или отменяйте её в любое время в Настройках."
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Prenumeration med automatisk förnyelse. Den förnyas till det visade priset om den inte sägs upp minst 24 timmar innan den aktuella perioden slutar. Hantera eller säg upp den när som helst i Inställningar."
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Otomatik yenilenen abonelik. Mevcut dönemin bitiminden en az 24 saat önce iptal edilmediği sürece gösterilen fiyattan yenilenir. Ayarlar'dan istediğiniz zaman yönetebilir veya iptal edebilirsiniz."
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Gói đăng ký tự động gia hạn. Gói sẽ gia hạn theo mức giá hiển thị trừ khi bạn hủy ít nhất 24 giờ trước khi kỳ hiện tại kết thúc. Bạn có thể quản lý hoặc hủy bất kỳ lúc nào trong Cài Đặt."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "自动续期订阅。除非在当前订阅期结束前至少24小时取消，否则将按显示价格续订。您可以随时在“设置”中管理或取消。"
           }
         }
       }
@@ -8123,6 +8248,10 @@
           }
         }
       }
+    },
+    "Commit" : {
+      "comment" : "A label describing",
+      "isCommentAutoGenerated" : true
     },
     "Complete Ritual" : {
       "localizations" : {
@@ -14325,6 +14454,7 @@
       }
     },
     "FREE" : {
+      "extractionState" : "stale",
       "localizations" : {
         "ar" : {
           "stringUnit" : {
@@ -28839,6 +28969,7 @@
       }
     },
     "Start my 3-day free trial" : {
+      "extractionState" : "stale",
       "localizations" : {
         "ar" : {
           "stringUnit" : {
@@ -29583,6 +29714,7 @@
       }
     },
     "Start your 3-day FREE trial to continue" : {
+      "extractionState" : "stale",
       "localizations" : {
         "ar" : {
           "stringUnit" : {
@@ -32570,6 +32702,9 @@
         }
       }
     },
+    "Touch and hold for three seconds, or double-tap, to commit." : {
+
+    },
     "Travel" : {
       "localizations" : {
         "ar" : {
@@ -33682,6 +33817,130 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "解锁全部功能"
+          }
+        }
+      }
+    },
+    "Unlock Premium Access" : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "افتح الوصول المميّز"
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Lås op for Premium-adgang"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Premium-Zugang freischalten"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Desbloquea el acceso Premium"
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Avaa Premium-käyttöoikeus"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Débloquer l’accès Premium"
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "פתחו גישת פרימיום"
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Buka Akses Premium"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sblocca l’accesso Premium"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "プレミアムアクセスを解除"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "프리미엄 액세스 잠금 해제"
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Lås opp Premium-tilgang"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ontgrendel Premium-toegang"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Odblokuj dostęp Premium"
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Desbloqueie o acesso Premium"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Откройте Премиум-доступ"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Lås upp Premium-åtkomst"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Premium Erişiminin Kilidini Aç"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mở khóa Quyền truy cập Premium"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "解锁高级访问权限"
           }
         }
       }
@@ -39887,5 +40146,5 @@
       }
     }
   },
-  "version" : "1.0"
+  "version" : "1.1"
 }

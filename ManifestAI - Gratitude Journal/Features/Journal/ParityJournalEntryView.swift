@@ -181,6 +181,7 @@ struct ParityJournalEntryView: View {
         let source = entryText.trimmingCharacters(in: .whitespacesAndNewlines)
         guard !source.isEmpty else { return }
 
+        AnalyticsManager.log("journal_elevate_used")
         capturedOriginalText = source
         elevatedDraft = ""
 

@@ -27,6 +27,9 @@ struct ManifestAIApp: App {
         NotificationManager369.shared.registerNotificationCategories()
         UNUserNotificationCenter.current().delegate = NotificationDelegate.shared
 
+        // Anchor "days since install" for the App Store rating prompt gating.
+        ReviewRequestManager.recordLaunch()
+
         dlog("🚀 App initialized")
     }
 

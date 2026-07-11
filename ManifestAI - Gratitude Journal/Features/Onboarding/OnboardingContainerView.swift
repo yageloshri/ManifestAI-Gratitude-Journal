@@ -132,9 +132,13 @@ struct OnboardingContainerView: View {
                 removal: .opacity
             ))
         }
+        .onAppear {
+            AnalyticsManager.log("onboarding_start")
+        }
     }
-    
+
     private func completeOnboarding() {
+        AnalyticsManager.log("onboarding_complete")
         dlog("🎉 Onboarding Complete! Saving user data...")
         
         // Save persistent user data first

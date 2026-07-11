@@ -14,9 +14,47 @@ struct CommitmentStepView: View {
     @State private var isHolding = false
     @State private var progress: CGFloat = 0
     @State private var committed = false
+    /// Pending "hold complete" work, cancelled if the finger lifts early.
+    @State private var holdWork: DispatchWorkItem?
 
     /// How long the fingerprint must be held to commit.
     private static let holdDuration: Double = 3.0
+
+    // MARK: - Hold-to-commit (drift-tolerant)
+    //
+    // Uses a DragGesture(minimumDistance: 0) + timer instead of
+    // `onLongPressGesture`, whose small default maximumDistance (10pt) cancels
+    // the hold the moment the finger drifts — which happens easily over a 3s
+    // hold, especially on a large iPad screen (this caused an App Review 2.1
+    // rejection). A drag gesture keeps tracking regardless of movement.
+
+    private func beginHold() {
+        guard !parityMode, !committed, !isHolding else { return }
+        isHolding = true
+        withAnimation(.linear(duration: Self.holdDuration)) { progress = 1 }
+        let work = DispatchWorkItem { completeCommit() }
+        holdWork = work
+        DispatchQueue.main.asyncAfter(deadline: .now() + Self.holdDuration, execute: work)
+    }
+
+    private func endHold() {
+        guard !committed else { return }
+        isHolding = false
+        holdWork?.cancel(); holdWork = nil
+        withAnimation(.easeOut(duration: 0.25)) { progress = 0 }
+    }
+
+    private func completeCommit() {
+        guard !parityMode, !committed else { return }
+        committed = true
+        isHolding = false
+        withAnimation(.easeOut(duration: 0.2)) { progress = 1 }
+        UINotificationFeedbackGenerator().notificationOccurred(.success)
+        // let the gold state land for a beat before moving on
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.45) {
+            onComplete()
+        }
+    }
 
     var body: some View {
         GeometryReader { geo in
@@ -98,7 +136,7 @@ struct CommitmentStepView: View {
                 .parityPosition(x: 79 * sx, y: 18 * sy)
 
             // Figma 282:681: Bitter SemiBold 26/1.2 #FCD471, centered, rel (23,234)
-            Text("A promise to you self")
+            Text("A promise to yourself")
                 .font(DesignTokens.Typography.h1)
                 .foregroundStyle(DesignTokens.Colors.secondary)
                 .multilineTextAlignment(.center)
@@ -229,22 +267,22 @@ struct CommitmentStepView: View {
         .contentShape(Rectangle())
         .scaleEffect(committed ? 1.12 : 1.0)
         .animation(.spring(response: 0.35, dampingFraction: 0.55), value: committed)
-        .onLongPressGesture(minimumDuration: Self.holdDuration, perform: {
-            guard !parityMode, !committed else { return }
-            committed = true
-            withAnimation(.easeOut(duration: 0.2)) { progress = 1 }
-            UINotificationFeedbackGenerator().notificationOccurred(.success)
-            // let the gold state land for a beat before moving on
-            DispatchQueue.main.asyncAfter(deadline: .now() + 0.45) {
-                onComplete()
-            }
-        }, onPressingChanged: { pressing in
-            guard !parityMode, !committed else { return }
-            withAnimation(.linear(duration: pressing ? Self.holdDuration : 0.25)) {
-                progress = pressing ? 1 : 0
-            }
-        })
+        // Enlarge the hit target well beyond the 88pt glyph so it's easy to
+        // press-and-hold on any device, and make the whole area hit-testable.
+        .contentShape(Rectangle().inset(by: -24))
+        .gesture(
+            DragGesture(minimumDistance: 0)
+                .onChanged { _ in beginHold() }
+                .onEnded { _ in endHold() }
+        )
+        // Accessible activation: a hold-only control is unusable with VoiceOver
+        // or Switch Control, which can't perform a timed press. Expose it as a
+        // button so assistive tech (and a plain double-tap) can commit directly.
         .accessibilityIdentifier("commitment.holdButton")
+        .accessibilityAddTraits(.isButton)
+        .accessibilityLabel(Text("Commit"))
+        .accessibilityHint(Text("Touch and hold for three seconds, or double-tap, to commit."))
+        .accessibilityAction { completeCommit() }
         .scaleEffect(x: sx, y: sy, anchor: .topLeading)
     }
 

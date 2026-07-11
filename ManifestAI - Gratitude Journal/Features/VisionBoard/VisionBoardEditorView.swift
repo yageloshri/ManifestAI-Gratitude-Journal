@@ -182,6 +182,10 @@ struct VisionBoardEditorView: View {
                                 showPhotoSaveError = true
                             } else if boardSaved {
                                 viewModel.showSaveSuccess = true
+                                // Exporting a finished vision board is a proud
+                                // moment — eligible to prompt for a rating.
+                                AnalyticsManager.log("vision_board_saved")
+                                ReviewRequestManager.registerWowMoment("vision_board_saved")
                             }
                         }).save(image)
                     }) {

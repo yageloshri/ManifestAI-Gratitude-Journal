@@ -121,6 +121,9 @@ final class PurchasesManager: NSObject, PurchasesDelegate {
         }
         let isActive = result.customerInfo.entitlements[Self.proEntitlementID]?.isActive == true
         dlog("✅ Purchase complete — pro active: \(isActive)")
+        if isActive {
+            AnalyticsManager.log("purchase_success", ["product": package.storeProduct.productIdentifier])
+        }
         syncEntitlement(from: result.customerInfo)
         return isActive
     }
@@ -131,6 +134,9 @@ final class PurchasesManager: NSObject, PurchasesDelegate {
         let customerInfo = try await Purchases.shared.restorePurchases()
         let isActive = customerInfo.entitlements[Self.proEntitlementID]?.isActive == true
         dlog("✅ Restore complete — pro active: \(isActive)")
+        if isActive {
+            AnalyticsManager.log("purchase_restore")
+        }
         syncEntitlement(from: customerInfo)
         return isActive
     }

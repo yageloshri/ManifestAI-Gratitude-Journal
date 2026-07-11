@@ -24,14 +24,24 @@ enum ElevatePhase: Equatable {
 
 // MARK: - Owl thinking animation
 
-/// Floating/bobbing owl with a thought-sparkle halo, looped while the AI
-/// call is in flight. Uses the generated "ElevateOwlThinking" asset when
-/// present, falling back to the existing "AnalysisOwl" asset otherwise.
+/// The owl mascot thinking while the AI call is in flight. When the bundled
+/// transparent "ElevateOwl" video is present it plays a fully-animated loop of
+/// the owl walking side to side and pondering (a real character animation, not
+/// a canned transform) with a thought-sparkle halo; otherwise it falls back to
+/// the bobbing "ElevateOwlThinking"/"AnalysisOwl" still image so the flow keeps
+/// working on any build.
 struct OwlThinkingView: View {
+    /// Height of the animated owl band; the video keeps its own aspect ratio.
     var size: CGFloat = 168
+    /// Pause the video when the owl is not actively thinking.
+    var isThinking: Bool = true
 
     @Environment(\.accessibilityReduceMotion) private var reduceMotion
     @State private var bob = false
+
+    private var hasVideo: Bool {
+        Bundle.main.url(forResource: "ElevateOwl", withExtension: "mov") != nil
+    }
 
     private var imageName: String {
         UIImage(named: "ElevateOwlThinking") != nil ? "ElevateOwlThinking" : "AnalysisOwl"
@@ -40,25 +50,35 @@ struct OwlThinkingView: View {
     var body: some View {
         ZStack {
             ThoughtSparkles(active: !reduceMotion)
-                .frame(width: size * 1.5, height: size * 0.9)
-                .offset(y: -size * 0.58)
+                .frame(width: size * 1.9, height: size * 0.9)
+                .offset(y: -size * 0.72)
 
-            Image(imageName)
-                .resizable()
-                .scaledToFit()
-                .frame(width: size, height: size)
-                .rotationEffect(.degrees(reduceMotion ? 0 : (bob ? 2.5 : -2.5)))
-                .offset(y: reduceMotion ? 0 : (bob ? -8 : 8))
-                .scaleEffect(reduceMotion ? 1 : (bob ? 1.02 : 0.98))
-                .shadow(color: DesignTokens.Colors.primary.opacity(0.35), radius: 28, y: 14)
-        }
-        .onAppear {
-            guard !reduceMotion else { return }
-            withAnimation(.easeInOut(duration: 1.6).repeatForever(autoreverses: true)) {
-                bob = true
+            if hasVideo {
+                // A small owl that walks and ponders (real character animation).
+                // Placed to pace just over the top of the centred entry text.
+                // The video frame is ~square with the owl filling ~88% of its
+                // height, so frame height ≈ target owl height / 0.88.
+                LoopingVideoView(resourceName: "ElevateOwl", isPlaying: isThinking && !reduceMotion)
+                    .frame(width: size * 1.16, height: size * 1.14)
+                    .accessibilityLabel("Your owl guide is thinking")
+            } else {
+                Image(imageName)
+                    .resizable()
+                    .scaledToFit()
+                    .frame(width: size, height: size)
+                    .rotationEffect(.degrees(reduceMotion ? 0 : (bob ? 2.5 : -2.5)))
+                    .offset(y: reduceMotion ? 0 : (bob ? -8 : 8))
+                    .scaleEffect(reduceMotion ? 1 : (bob ? 1.02 : 0.98))
+                    .shadow(color: DesignTokens.Colors.primary.opacity(0.35), radius: 28, y: 14)
+                    .onAppear {
+                        guard !reduceMotion else { return }
+                        withAnimation(.easeInOut(duration: 1.6).repeatForever(autoreverses: true)) {
+                            bob = true
+                        }
+                    }
+                    .accessibilityLabel("Your owl guide is thinking")
             }
         }
-        .accessibilityLabel("Your owl guide is thinking")
     }
 }
 
@@ -194,14 +214,14 @@ struct ElevateCinematicOverlay: View {
 
             // Step 2/3: the owl thinks, then flies off.
             FlyOffSparkleTrail(active: owlFlyOff)
-                .position(x: screenSize.width / 2, y: screenSize.height * 0.48)
+                .position(x: screenSize.width / 2, y: screenSize.height * owlYFactor)
 
-            OwlThinkingView(size: 168)
+            OwlThinkingView(size: 140, isThinking: phase == .thinking)
                 .offset(x: owlOffsetX, y: owlOffsetY)
                 .rotationEffect(.degrees(owlRotation))
                 .scaleEffect(owlScale)
                 .opacity(owlOpacity)
-                .position(x: screenSize.width / 2, y: screenSize.height * 0.48)
+                .position(x: screenSize.width / 2, y: screenSize.height * owlYFactor)
                 .allowsHitTesting(false)
 
             if phase == .failed {
@@ -250,11 +270,12 @@ struct ElevateCinematicOverlay: View {
     }
 
     private var heroYFactor: CGFloat {
-        if reduceMotion { return phase == .idle ? 0.19 : 0.24 }
         switch phase {
         case .idle, .failed: return 0.19
-        case .centering: return 0.30
-        case .thinking, .revealing, .editing: return 0.20
+        // The user's entry settles to the screen centre while the owl ponders
+        // just above where the text begins.
+        case .centering, .thinking: return 0.44
+        case .revealing, .editing: return 0.20
         }
     }
 
@@ -264,6 +285,11 @@ struct ElevateCinematicOverlay: View {
         case .centering, .thinking, .failed: return 1
         }
     }
+
+    /// The owl paces just above where the centred entry text begins (the text
+    /// sits at `heroYFactor` 0.44 while thinking), so it reads as hovering over
+    /// the top of the text.
+    private var owlYFactor: CGFloat { 0.29 }
 
     /// True once the owl has launched off screen (success path only).
     private var owlFlyOff: Bool { phase == .revealing || phase == .editing }

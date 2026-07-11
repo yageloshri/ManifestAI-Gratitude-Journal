@@ -17,7 +17,7 @@ struct ProfileView: View {
     
     // URLs
     private let privacyPolicyURL = URL(string: "https://dream-manifest-shine.lovable.app/privacy")!
-    private let supportURL = URL(string: "https://dream-manifest-shine.lovable.app/support")!
+    private let supportURL = URL(string: "mailto:info@ai-manifest.com?subject=Manifest%20Support")!
     
     var body: some View {
         NavigationView {

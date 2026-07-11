@@ -37,7 +37,12 @@ final class PaywallManager: ObservableObject {
     /// True unless QA disabled enforcement with the `debug_bypass_paywall`
     /// default. Mirrors the old `SuperwallDelegateHandler.hardPaywallEnforced`.
     static var hardPaywallEnforced: Bool {
-        !UserDefaults.standard.bool(forKey: "debug_bypass_paywall")
+        #if DEBUG
+        return !UserDefaults.standard.bool(forKey: "debug_bypass_paywall")
+        #else
+        // The bypass is a QA-only escape hatch; never disable enforcement in Release.
+        return true
+        #endif
     }
 
     /// Present the paywall from a feature gate (369, vision save, journal

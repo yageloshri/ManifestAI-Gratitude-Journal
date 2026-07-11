@@ -69,6 +69,7 @@ struct PaywallView: View {
         }
         .environment(\.layoutDirection, naturalDirection)
         .preferredColorScheme(.dark)
+        .onAppear { AnalyticsManager.log("paywall_shown") }
         .task { await model.loadIfNeeded() }
         .alert("Something went wrong. Please try again.", isPresented: $model.showPurchaseError) {
             Button("OK", role: .cancel) {}
@@ -127,45 +128,26 @@ struct PaywallView: View {
     // MARK: - Header
 
     private var closeButtonRow: some View {
-        HStack {
-            Spacer()
-            Button(action: onClose) {
-                Image(systemName: "xmark")
-                    .font(.system(size: 16, weight: .medium))
-                    .foregroundStyle(Color(hex: "9B96A8"))
-                    .frame(width: 40, height: 40)
-                    .contentShape(Circle())
-            }
-            .buttonStyle(.plain)
-            .accessibilityLabel(Text("Close"))
-            .accessibilityIdentifier("paywall.closeButton")
-        }
-        .padding(.horizontal, 12)
-        .padding(.top, 2)
+        // Hard paywall: no close (X) control — the only ways out are purchasing
+        // or restoring (both close the sheet programmatically). We still reserve
+        // the top inset the X used to occupy so the headline sits correctly.
+        Color.clear
+            .frame(height: 42)
+            .accessibilityHidden(true)
     }
 
-    /// Big two-line headline with the localized "FREE" word lit in gold.
+    /// Value-focused headline. Deliberately does NOT promote the free trial
+    /// (Guideline 3.1.2(c): free-trial messaging must stay subordinate to the
+    /// billed amount, which is the most conspicuous pricing element below).
     private var headline: some View {
-        highlightedHeadline
-            .font(.system(size: 29, weight: .bold))
+        Text("Unlock Premium Access")
+            .font(.system(size: 24, weight: .bold))
             .foregroundStyle(.white)
             .multilineTextAlignment(.center)
-            .lineLimit(3)
+            .lineLimit(2)
             .minimumScaleFactor(0.7)
             .fixedSize(horizontal: false, vertical: true)
             .frame(maxWidth: .infinity)
-    }
-
-    /// Colors the localized emphatic word (key "FREE") inside the localized
-    /// headline. Falls back to the plain headline if not found.
-    private var highlightedHeadline: Text {
-        let headline = String(localized: "Start your 3-day FREE trial to continue")
-        let free = String(localized: "FREE")
-        var attributed = AttributedString(headline)
-        if !free.isEmpty, let range = attributed.range(of: free) {
-            attributed[range].foregroundColor = gold
-        }
-        return Text(attributed)
     }
 
     // MARK: - Timeline (connected steps, crown lit gold)
@@ -243,23 +225,26 @@ struct PaywallView: View {
     private func annualCard(_ package: Package) -> some View {
         Button { model.selectedPackage = package } label: {
             HStack(alignment: .center) {
-                VStack(alignment: .leading, spacing: 3) {
-                    Text("Yearly")
-                        .font(.system(size: 17, weight: .bold))
-                        .foregroundStyle(.white)
-                    Text("Billed \(package.storeProduct.localizedPriceString) / year")
-                        .font(.system(size: 12))
-                        .foregroundStyle(Color(hex: "A49FB3"))
-                        .lineLimit(1)
-                        .minimumScaleFactor(0.7)
-                }
+                Text("Yearly")
+                    .font(.system(size: 16, weight: .semibold))
+                    .foregroundStyle(.white)
                 Spacer(minLength: 8)
-                if let perWeek = model.perWeekString(for: package) {
-                    Text(perWeek)
-                        .font(.system(size: 15, weight: .semibold))
+                // Guideline 3.1.2(c): the total billed amount is the most clear
+                // and conspicuous pricing element; the calculated per-week price
+                // is subordinate (smaller and dimmer) beneath it.
+                VStack(alignment: .trailing, spacing: 1) {
+                    Text("Billed \(package.storeProduct.localizedPriceString) / year")
+                        .font(.system(size: 19, weight: .bold))
                         .foregroundStyle(.white)
                         .lineLimit(1)
-                        .minimumScaleFactor(0.7)
+                        .minimumScaleFactor(0.6)
+                    if let perWeek = model.perWeekString(for: package) {
+                        Text(perWeek)
+                            .font(.system(size: 11, weight: .regular))
+                            .foregroundStyle(Color(hex: "8B8698"))
+                            .lineLimit(1)
+                            .minimumScaleFactor(0.7)
+                    }
                 }
             }
             .padding(.horizontal, 18)
@@ -275,20 +260,6 @@ struct PaywallView: View {
                                                       : AnyShapeStyle(cardStroke),
                                   lineWidth: isSelected(package) ? 2 : 1)
             )
-            // Floating badge riding the card's top edge — original design.
-            .overlay(alignment: .top) {
-                Text("3-DAY FREE TRIAL")
-                    .font(.system(size: 11, weight: .heavy))
-                    .kerning(0.5)
-                    .foregroundStyle(inkOnGold)
-                    .lineLimit(1)
-                    .minimumScaleFactor(0.6)
-                    .padding(.horizontal, 12)
-                    .padding(.vertical, 4)
-                    .background(Capsule().fill(goldGradient))
-                    .offset(y: -11)
-            }
-            .padding(.top, 11) // room for the badge overhang
         }
         .buttonStyle(.plain)
         .accessibilityAddTraits(isSelected(package) ? [.isButton, .isSelected] : .isButton)
@@ -299,12 +270,13 @@ struct PaywallView: View {
         Button { model.selectedPackage = package } label: {
             HStack {
                 Text("Weekly")
-                    .font(.system(size: 17, weight: .bold))
+                    .font(.system(size: 16, weight: .semibold))
                     .foregroundStyle(.white)
                 Spacer(minLength: 8)
+                // The weekly billed amount is the prominent pricing element.
                 if let perWeek = model.perWeekString(for: package) {
                     Text(perWeek)
-                        .font(.system(size: 15, weight: .semibold))
+                        .font(.system(size: 19, weight: .bold))
                         .foregroundStyle(.white)
                         .lineLimit(1)
                         .minimumScaleFactor(0.7)
@@ -336,18 +308,19 @@ struct PaywallView: View {
     // MARK: - Bottom stack
 
     private var noPaymentRow: some View {
-        HStack(spacing: 8) {
+        HStack(spacing: 6) {
             Image(systemName: "checkmark")
-                .font(.system(size: 13, weight: .bold))
-                .foregroundStyle(.white)
+                .font(.system(size: 11, weight: .semibold))
+                .foregroundStyle(Color(hex: "A49FB3"))
             Text("No payment due now")
-                .font(.system(size: 15, weight: .semibold))
-                .foregroundStyle(.white)
+                .font(.system(size: 13, weight: .regular))
+                .foregroundStyle(Color(hex: "A49FB3"))
         }
     }
 
     private var ctaButton: some View {
         Button {
+            AnalyticsManager.log("paywall_start_trial_tapped")
             Task { await model.purchaseSelected() }
         } label: {
             ZStack {
@@ -355,7 +328,7 @@ struct PaywallView: View {
                 if model.isPurchasing {
                     ProgressView().tint(inkOnGold)
                 } else {
-                    Text("Start my 3-day free trial")
+                    Text("Continue")
                         .font(.system(size: 17, weight: .bold))
                         .foregroundStyle(inkOnGold)
                         .lineLimit(1)
@@ -374,14 +347,20 @@ struct PaywallView: View {
 
     @ViewBuilder
     private var footnote: some View {
-        if let annual = model.annualPackage {
-            Text("3 days free, then \(annual.storeProduct.localizedPriceString) per year (\(model.perMonthString(for: annual))/mo)")
-                .font(.system(size: 12))
-                .foregroundStyle(Color(hex: "8B8698"))
-                .multilineTextAlignment(.center)
-                .lineLimit(2)
-                .minimumScaleFactor(0.8)
+        VStack(spacing: 6) {
+            if let annual = model.annualPackage {
+                Text("3 days free, then \(annual.storeProduct.localizedPriceString) per year (\(model.perMonthString(for: annual))/mo)")
+                    .lineLimit(2)
+            }
+            // Guideline 3.1.2: explicit auto-renewable subscription disclosure.
+            Text("Auto-renewable subscription. It renews at the price shown unless canceled at least 24 hours before the end of the current period. Manage or cancel anytime in Settings.")
+                .lineLimit(4)
         }
+        .font(.system(size: 12))
+        .foregroundStyle(Color(hex: "8B8698"))
+        .multilineTextAlignment(.center)
+        .minimumScaleFactor(0.8)
+        .padding(.horizontal, 8)
     }
 
     private var footerLinks: some View {

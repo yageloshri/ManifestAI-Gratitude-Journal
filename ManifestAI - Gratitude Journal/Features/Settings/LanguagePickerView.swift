@@ -125,6 +125,7 @@ struct LanguagePickerView: View {
             guard !selected else { return }
             selectedCode = language.code
             UserDefaults.standard.set([language.code], forKey: "AppleLanguages")
+            AnalyticsManager.log("language_changed", ["language": language.code])
             showRestartPrompt = true
         } label: {
             HStack {

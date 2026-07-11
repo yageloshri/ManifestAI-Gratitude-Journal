@@ -1,0 +1,240 @@
+- generic [active] [ref=e1]:
+  - banner [ref=e2]:
+    - generic [ref=e3]:
+      - link "Manifest app icon — owl on a cloud under a night sky Manifest" [ref=e4] [cursor=pointer]:
+        - /url: index.html
+        - img "Manifest app icon — owl on a cloud under a night sky" [ref=e5]
+        - text: Manifest
+      - navigation "Main" [ref=e6]:
+        - link "Screenshots" [ref=e7] [cursor=pointer]:
+          - /url: "#screenshots"
+        - link "How it works" [ref=e8] [cursor=pointer]:
+          - /url: "#how-it-works"
+        - link "Guides" [ref=e9] [cursor=pointer]:
+          - /url: "#guides"
+        - link "FAQ" [ref=e10] [cursor=pointer]:
+          - /url: "#faq"
+        - link "Download" [ref=e11] [cursor=pointer]:
+          - /url: https://apps.apple.com/us/app/manifest-vision-board-369/id6757018484
+  - main [ref=e12]:
+    - generic [ref=e14]:
+      - generic [ref=e15]:
+        - img "Manifest app icon" [ref=e16]
+        - paragraph [ref=e17]: "Manifest: Vision Board & 369 — for iPhone"
+        - heading "The manifestation app with a vision board & the 369 method" [level=1] [ref=e18]
+        - paragraph [ref=e19]: Write your intention 3-6-9 times a day, keep your dreams visible on a beautiful vision board, and start each morning with your personal numerology reading — one quiet daily ritual, guided by a wise little owl.
+        - link "Download Manifest on the App Store" [ref=e21] [cursor=pointer]:
+          - /url: https://apps.apple.com/us/app/manifest-vision-board-369/id6757018484
+          - img "Download on the App Store" [ref=e22]
+        - generic "Highlights" [ref=e23]:
+          - generic [ref=e24]: ✦ 3-day free trial
+          - generic [ref=e25]: ✦ 20 languages
+          - generic [ref=e26]: ✦ AI-powered
+      - img "Manifest app home screen on iPhone — Manifest Your Dream Life with daily ritual, streak, and numerology" [ref=e29]
+    - generic [ref=e31]:
+      - heading "Begin your ritual today" [level=2] [ref=e32]
+      - paragraph [ref=e33]: Free to download · 3-day free trial · cancel anytime
+      - link "Download Manifest on the App Store" [ref=e34] [cursor=pointer]:
+        - /url: https://apps.apple.com/us/app/manifest-vision-board-369/id6757018484
+        - img "Download on the App Store" [ref=e35]
+    - generic [ref=e37]:
+      - generic [ref=e38]:
+        - paragraph [ref=e39]: Inside the app
+        - heading "One app for your whole manifestation practice" [level=2] [ref=e40]
+      - generic [ref=e41]:
+        - figure "Your daily manifestation ritual — the 369 method, streaks & affirmations in one place" [ref=e42]:
+          - img "Manifest app daily home screen with 369 ritual, streaks, and affirmations" [ref=e44]
+          - generic [ref=e45]: Your daily manifestation ritual — the 369 method, streaks & affirmations in one place
+        - figure "Vision board maker with grid templates — save your board as iPhone wallpaper" [ref=e46]:
+          - img "Vision board maker in the Manifest app with photo grid templates" [ref=e48]
+          - generic [ref=e49]: Vision board maker with grid templates — save your board as iPhone wallpaper
+        - figure "Daily numerology — your personal day number from your birth date, with an AI reading" [ref=e50]:
+          - img "Daily numerology reading in the Manifest app showing a personal day number" [ref=e52]
+          - generic [ref=e53]: Daily numerology — your personal day number from your birth date, with an AI reading
+        - figure "AI gratitude journal — write it raw, let AI elevate it into an affirming reflection" [ref=e54]:
+          - img "AI gratitude journal in the Manifest app elevating an entry into affirming prose" [ref=e56]
+          - generic [ref=e57]: AI gratitude journal — write it raw, let AI elevate it into an affirming reflection
+    - generic [ref=e59]:
+      - generic [ref=e60]:
+        - paragraph [ref=e61]: How it works
+        - heading "Manifest in four small daily moves" [level=2] [ref=e62]
+        - paragraph [ref=e63]: No pressure, no comparison — one quiet ritual, a few minutes at a time.
+      - generic [ref=e64]:
+        - generic [ref=e65]:
+          - generic [ref=e66]: 🌙
+          - heading "Set your intention" [level=3] [ref=e67]
+          - paragraph [ref=e68]: Choose one specific desire and phrase it as an affirmation — as if it has already happened.
+        - generic [ref=e69]:
+          - generic [ref=e70]: ✍️
+          - heading "Write it 3-6-9 times daily" [level=3] [ref=e71]
+          - paragraph [ref=e72]: 3× in the morning, 6× in the afternoon, 9× at night. Guided time windows and reminders keep you on rhythm.
+        - generic [ref=e73]:
+          - generic [ref=e74]: 🖼️
+          - heading "Visualize with your board" [level=3] [ref=e75]
+          - paragraph [ref=e76]: Build a vision board from your photos, then set it as your wallpaper so your goals stay in view.
+        - generic [ref=e77]:
+          - generic [ref=e78]: 🔢
+          - heading "Track your energy" [level=3] [ref=e79]
+          - paragraph [ref=e80]: Each morning, read your personal day number and AI numerology insight — then keep your streak alive.
+    - generic [ref=e82]:
+      - generic [ref=e83]:
+        - paragraph [ref=e84]: Free guides
+        - heading "Learn manifestation, step by step" [level=2] [ref=e85]
+        - paragraph [ref=e86]: Practical, no-fluff guides to the 369 method, vision boards, numerology, and gratitude journaling.
+      - generic [ref=e87]:
+        - link "What Is the 369 Manifestation Method? Tesla's favorite numbers, the viral ritual, and why 3-6-9 works. Read the guide →" [ref=e88] [cursor=pointer]:
+          - /url: guides/369-manifestation-method.html
+          - generic [ref=e89]: ⚡
+          - heading "What Is the 369 Manifestation Method?" [level=3] [ref=e90]
+          - paragraph [ref=e91]: Tesla's favorite numbers, the viral ritual, and why 3-6-9 works.
+          - generic [ref=e92]: Read the guide →
+        - link "How to Do the 369 Method A step-by-step daily schedule — morning, afternoon, and night. Read the guide →" [ref=e93] [cursor=pointer]:
+          - /url: guides/how-to-do-the-369-method.html
+          - generic [ref=e94]: 📝
+          - heading "How to Do the 369 Method" [level=3] [ref=e95]
+          - paragraph [ref=e96]: A step-by-step daily schedule — morning, afternoon, and night.
+          - generic [ref=e97]: Read the guide →
+        - 'link "369 Method Examples: What to Write 25+ copy-ready affirmations for love, money, career, and health. Read the guide →" [ref=e98] [cursor=pointer]':
+          - /url: guides/369-method-examples.html
+          - generic [ref=e99]: 💫
+          - 'heading "369 Method Examples: What to Write" [level=3] [ref=e100]'
+          - paragraph [ref=e101]: 25+ copy-ready affirmations for love, money, career, and health.
+          - generic [ref=e102]: Read the guide →
+        - link "The 33-Day Manifestation Challenge How long the 369 method takes, and what actually happens by day 33. Read the guide →" [ref=e103] [cursor=pointer]:
+          - /url: guides/33-day-manifestation-challenge.html
+          - generic [ref=e104]: 🗓️
+          - heading "The 33-Day Manifestation Challenge" [level=3] [ref=e105]
+          - paragraph [ref=e106]: How long the 369 method takes, and what actually happens by day 33.
+          - generic [ref=e107]: Read the guide →
+        - link "How to Make a Vision Board on Your Phone Build a digital vision board on iPhone and set it as your wallpaper. Read the guide →" [ref=e108] [cursor=pointer]:
+          - /url: guides/how-to-make-a-vision-board-on-your-phone.html
+          - generic [ref=e109]: 📱
+          - heading "How to Make a Vision Board on Your Phone" [level=3] [ref=e110]
+          - paragraph [ref=e111]: Build a digital vision board on iPhone and set it as your wallpaper.
+          - generic [ref=e112]: Read the guide →
+        - link "What Is My Personal Day Number? Calculate today's numerology number from your birth date — with meanings 1–9. Read the guide →" [ref=e113] [cursor=pointer]:
+          - /url: guides/personal-day-number-numerology.html
+          - generic [ref=e114]: 🔮
+          - heading "What Is My Personal Day Number?" [level=3] [ref=e115]
+          - paragraph [ref=e116]: Calculate today's numerology number from your birth date — with meanings 1–9.
+          - generic [ref=e117]: Read the guide →
+        - 'link "Angel Numbers Meaning: 111 to 999 What 111, 222, 333, and 444 are trying to tell you. Read the guide →" [ref=e118] [cursor=pointer]':
+          - /url: guides/angel-numbers-meaning.html
+          - generic [ref=e119]: 🪽
+          - 'heading "Angel Numbers Meaning: 111 to 999" [level=3] [ref=e120]'
+          - paragraph [ref=e121]: What 111, 222, 333, and 444 are trying to tell you.
+          - generic [ref=e122]: Read the guide →
+        - link "Gratitude Journal Prompts for Manifestation 30 prompts that shift you from lack to abundance. Read the guide →" [ref=e123] [cursor=pointer]:
+          - /url: guides/gratitude-journal-prompts-for-manifestation.html
+          - generic [ref=e124]: 🙏
+          - heading "Gratitude Journal Prompts for Manifestation" [level=3] [ref=e125]
+          - paragraph [ref=e126]: 30 prompts that shift you from lack to abundance.
+          - generic [ref=e127]: Read the guide →
+        - link "How to Start a Manifestation Journal Scripting, affirmations, and gratitude — one simple journaling system. Read the guide →" [ref=e128] [cursor=pointer]:
+          - /url: guides/manifestation-journal.html
+          - generic [ref=e129]: 📖
+          - heading "How to Start a Manifestation Journal" [level=3] [ref=e130]
+          - paragraph [ref=e131]: Scripting, affirmations, and gratitude — one simple journaling system.
+          - generic [ref=e132]: Read the guide →
+        - link "How to Manifest Something A beginner's guide to manifesting — from first intention to daily practice. Read the guide →" [ref=e133] [cursor=pointer]:
+          - /url: guides/how-to-manifest-something.html
+          - generic [ref=e134]: 🌠
+          - heading "How to Manifest Something" [level=3] [ref=e135]
+          - paragraph [ref=e136]: A beginner's guide to manifesting — from first intention to daily practice.
+          - generic [ref=e137]: Read the guide →
+    - generic [ref=e139]:
+      - generic [ref=e140]:
+        - paragraph [ref=e141]: FAQ
+        - heading "Questions people ask about manifesting" [level=2] [ref=e142]
+      - generic [ref=e143]:
+        - group [ref=e144]:
+          - generic "What is the 369 manifestation method? +" [ref=e145] [cursor=pointer]
+        - group [ref=e146]:
+          - generic "How do I write 369 method affirmations? +" [ref=e147] [cursor=pointer]
+        - group [ref=e148]:
+          - generic "How long should you do the 369 method? +" [ref=e149] [cursor=pointer]
+        - group [ref=e150]:
+          - generic "How do I make a vision board on iPhone? +" [ref=e151] [cursor=pointer]
+        - group [ref=e152]:
+          - generic "What is a personal day number? +" [ref=e153] [cursor=pointer]
+        - group [ref=e154]:
+          - generic "What do angel numbers 111, 222, and 333 mean? +" [ref=e155] [cursor=pointer]
+        - group [ref=e156]:
+          - generic "Is the Manifest app free? +" [ref=e157] [cursor=pointer]
+        - group [ref=e158]:
+          - generic "What should I write in a gratitude journal for manifestation? +" [ref=e159] [cursor=pointer]
+        - group [ref=e160]:
+          - generic "How do I start manifesting as a beginner? +" [ref=e161] [cursor=pointer]
+        - group [ref=e162]:
+          - generic "Does Manifest work in my language? +" [ref=e163] [cursor=pointer]
+    - generic [ref=e165]:
+      - img "The Manifest owl mascot welcoming you" [ref=e168]
+      - heading "Your dream life starts with one small ritual" [level=2] [ref=e169]:
+        - text: Your dream life starts with
+        - text: one small ritual
+      - paragraph [ref=e170]: Three lines in the morning. Six in the afternoon. Nine under the stars. In 33 days, see what changes.
+      - link "Download Manifest on the App Store" [ref=e171] [cursor=pointer]:
+        - /url: https://apps.apple.com/us/app/manifest-vision-board-369/id6757018484
+        - img "Download on the App Store" [ref=e172]
+  - contentinfo [ref=e173]:
+    - generic [ref=e174]:
+      - generic [ref=e175]:
+        - generic [ref=e176]:
+          - generic [ref=e177]:
+            - img "Manifest app icon" [ref=e178]
+            - text: "Manifest: Vision Board & 369"
+          - paragraph [ref=e179]: A mystical gratitude journal for iPhone — the 369 method, vision boards, daily numerology, and AI-elevated journaling.
+          - link "Download Manifest on the App Store" [ref=e180] [cursor=pointer]:
+            - /url: https://apps.apple.com/us/app/manifest-vision-board-369/id6757018484
+            - img "Download on the App Store" [ref=e181]
+        - navigation "Guides" [ref=e182]:
+          - heading "Guides" [level=4] [ref=e183]
+          - list [ref=e184]:
+            - listitem [ref=e185]:
+              - link "369 Manifestation Method" [ref=e186] [cursor=pointer]:
+                - /url: guides/369-manifestation-method.html
+            - listitem [ref=e187]:
+              - link "How to Do the 369 Method" [ref=e188] [cursor=pointer]:
+                - /url: guides/how-to-do-the-369-method.html
+            - listitem [ref=e189]:
+              - link "369 Method Examples" [ref=e190] [cursor=pointer]:
+                - /url: guides/369-method-examples.html
+            - listitem [ref=e191]:
+              - link "33-Day Challenge" [ref=e192] [cursor=pointer]:
+                - /url: guides/33-day-manifestation-challenge.html
+            - listitem [ref=e193]:
+              - link "Vision Board on Your Phone" [ref=e194] [cursor=pointer]:
+                - /url: guides/how-to-make-a-vision-board-on-your-phone.html
+            - listitem [ref=e195]:
+              - link "Personal Day Number" [ref=e196] [cursor=pointer]:
+                - /url: guides/personal-day-number-numerology.html
+            - listitem [ref=e197]:
+              - link "Angel Numbers Meaning" [ref=e198] [cursor=pointer]:
+                - /url: guides/angel-numbers-meaning.html
+            - listitem [ref=e199]:
+              - link "Gratitude Journal Prompts" [ref=e200] [cursor=pointer]:
+                - /url: guides/gratitude-journal-prompts-for-manifestation.html
+            - listitem [ref=e201]:
+              - link "Manifestation Journal" [ref=e202] [cursor=pointer]:
+                - /url: guides/manifestation-journal.html
+            - listitem [ref=e203]:
+              - link "How to Manifest Something" [ref=e204] [cursor=pointer]:
+                - /url: guides/how-to-manifest-something.html
+        - navigation "Company" [ref=e205]:
+          - heading "App" [level=4] [ref=e206]
+          - list [ref=e207]:
+            - listitem [ref=e208]:
+              - link "Download on the App Store" [ref=e209] [cursor=pointer]:
+                - /url: https://apps.apple.com/us/app/manifest-vision-board-369/id6757018484
+            - listitem [ref=e210]:
+              - link "Privacy Policy" [ref=e211] [cursor=pointer]:
+                - /url: privacy.html
+            - listitem [ref=e212]:
+              - link "Terms of Use" [ref=e213] [cursor=pointer]:
+                - /url: terms.html
+            - listitem [ref=e214]:
+              - link "Support" [ref=e215] [cursor=pointer]:
+                - /url: mailto:info@ai-manifest.com
+      - generic [ref=e216]:
+        - generic [ref=e217]: © 2026 ManifestAI. All rights reserved.
+        - generic [ref=e218]: Made with ✦ under the night sky.

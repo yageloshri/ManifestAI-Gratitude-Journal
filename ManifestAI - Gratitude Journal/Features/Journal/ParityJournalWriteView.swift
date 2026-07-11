@@ -149,6 +149,7 @@ struct ParityJournalWriteView: View {
             return
         }
 
+        AnalyticsManager.log("journal_elevate_used")
         capturedOriginalText = source
         elevatedDraft = ""
 

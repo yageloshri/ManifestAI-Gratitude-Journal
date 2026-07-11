@@ -13,6 +13,7 @@
 		0266CAD72EFDF789009630BE /* SuperwallKit in Frameworks */ = {isa = PBXBuildFile; productRef = 0266CAD62EFDF789009630BE /* SuperwallKit */; };
 		0266CADA2EFE03A9009630BE /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = 0266CAD92EFE03A9009630BE /* Lottie */; };
 		FB1A2B3C4D5E6F0000000001 /* FirebaseMessaging in Frameworks */ = {isa = PBXBuildFile; productRef = FB1A2B3C4D5E6F0000000002 /* FirebaseMessaging */; };
+		FBA0A1B2C3D4E5F600000001 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = FBA0A1B2C3D4E5F600000002 /* FirebaseAnalytics */; };
 		RC1A2B3C4D5E6F0000000001 /* RevenueCat in Frameworks */ = {isa = PBXBuildFile; productRef = RC1A2B3C4D5E6F0000000002 /* RevenueCat */; };
 /* End PBXBuildFile section */
 
@@ -102,6 +103,7 @@
 				0266CAD72EFDF789009630BE /* SuperwallKit in Frameworks */,
 				0266CADA2EFE03A9009630BE /* Lottie in Frameworks */,
 				FB1A2B3C4D5E6F0000000001 /* FirebaseMessaging in Frameworks */,
+				FBA0A1B2C3D4E5F600000001 /* FirebaseAnalytics in Frameworks */,
 				RC1A2B3C4D5E6F0000000001 /* RevenueCat in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -173,6 +175,7 @@
 				0266CAD62EFDF789009630BE /* SuperwallKit */,
 				0266CAD92EFE03A9009630BE /* Lottie */,
 				FB1A2B3C4D5E6F0000000002 /* FirebaseMessaging */,
+				FBA0A1B2C3D4E5F600000002 /* FirebaseAnalytics */,
 				RC1A2B3C4D5E6F0000000002 /* RevenueCat */,
 			);
 			productName = "ManifestAI - Gratitude Journal";
@@ -438,7 +441,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = "ManifestAI - Gratitude Journal/ManifestAI - Gratitude Journal.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 3;
+				CURRENT_PROJECT_VERSION = 11;
 				DEVELOPMENT_TEAM = 2GP242AXJ8;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -457,7 +460,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.6;
 				PRODUCT_BUNDLE_IDENTIFIER = "ManifestAI.ManifestAI---Gratitude-Journal";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
@@ -477,7 +480,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = "ManifestAI - Gratitude Journal/ManifestAI - Gratitude Journal.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 3;
+				CURRENT_PROJECT_VERSION = 11;
 				DEVELOPMENT_TEAM = 2GP242AXJ8;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -496,7 +499,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.6;
 				PRODUCT_BUNDLE_IDENTIFIER = "ManifestAI.ManifestAI---Gratitude-Journal";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
@@ -516,7 +519,7 @@
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
 				CODE_SIGN_ENTITLEMENTS = ManifestWidgetsExtension.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 3;
+				CURRENT_PROJECT_VERSION = 11;
 				DEVELOPMENT_TEAM = 2GP242AXJ8;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = ManifestWidgets/Info.plist;
@@ -528,7 +531,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.6;
 				PRODUCT_BUNDLE_IDENTIFIER = "ManifestAI.ManifestAI---Gratitude-Journal.ManifestWidgets";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -545,7 +548,7 @@
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
 				CODE_SIGN_ENTITLEMENTS = ManifestWidgetsExtension.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 3;
+				CURRENT_PROJECT_VERSION = 11;
 				DEVELOPMENT_TEAM = 2GP242AXJ8;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = ManifestWidgets/Info.plist;
@@ -557,7 +560,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.6;
 				PRODUCT_BUNDLE_IDENTIFIER = "ManifestAI.ManifestAI---Gratitude-Journal.ManifestWidgets";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -649,6 +652,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = FB1A2B3C4D5E6F0000000003 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseMessaging;
+		};
+		FBA0A1B2C3D4E5F600000002 /* FirebaseAnalytics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FB1A2B3C4D5E6F0000000003 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalytics;
 		};
 		RC1A2B3C4D5E6F0000000002 /* RevenueCat */ = {
 			isa = XCSwiftPackageProductDependency;

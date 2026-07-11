@@ -336,6 +336,7 @@ struct MainTabView: View {
     /// Real daily content: the reading is prefetched when Home appears; the
     /// tap only slides the (already-built) screen in.
     private func openDailyInsight() {
+        AnalyticsManager.log("daily_insight_opened")
         if dailyInsight == nil {
             dailyInsight = DailyInsightManager.shared.getFallbackInsight(for: dailyNumber)
         }
@@ -483,6 +484,7 @@ struct MainTabView: View {
         } else {
             modelContext.insert(JournalEntry(rawText: text, colorIndex: draftColorIndex))
             countEntryAgainstQuota()
+            AnalyticsManager.log("journal_entry_created")
         }
         try? modelContext.save()
     }
@@ -526,11 +528,17 @@ struct MainTabView: View {
                                      colorIndex: draftColorIndex)
             modelContext.insert(entry)
             countEntryAgainstQuota()
+            AnalyticsManager.log("journal_entry_created")
         }
         try? modelContext.save()
         draftText = ""
         editingEntry = nil
         journalRoute = .list
+
+        // Keeping an AI-elevated entry is a genuine delight beat — a good
+        // moment to (rarely) ask for an App Store rating.
+        AnalyticsManager.log("journal_elevate_saved")
+        ReviewRequestManager.registerWowMoment("elevate_approved")
     }
 
     /// Run the Gemini rewrite for a saved entry, with an in-flight marker,
@@ -871,8 +879,19 @@ struct MainTabView: View {
     /// (that's the method); it is cleared for the next repetition.
     private func saveRitualWriting(phase: Parity369RitualView.RitualPhase) {
         guard !ritualDraft.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty else { return }
-        ritualManager.record(phase, now: Self.ritualNow())
+        let now = Self.ritualNow()
+        ritualManager.record(phase, now: now)
         ritualDraft = ""
+
+        // Finishing all 18 writings for the day (or the whole challenge) is a
+        // peak accomplishment moment — a strong point to ask for a rating.
+        switch ritualManager.screenState(now: now) {
+        case .dayComplete, .cycleComplete:
+            AnalyticsManager.log("ritual369_day_complete")
+            ReviewRequestManager.registerWowMoment("ritual369_day_complete")
+        default:
+            break
+        }
     }
 
     // MARK: - Profile
@@ -911,21 +930,11 @@ struct MainTabView: View {
                     }
                 )
             case .upgradePro:
-                ParityUpgradeProView(
-                    onStartTrial: { PaywallManager.shared.present() },
-                    onRestore: { Task { try? await PurchasesManager.shared.restore() } },
-                    onPrivacy: {
-                        if let url = URL(string: "https://dream-manifest-shine.lovable.app/privacy") {
-                            UIApplication.shared.open(url)
-                        }
-                    },
-                    onTerms: {
-                        if let url = URL(string: "https://dream-manifest-shine.lovable.app/terms") {
-                            UIApplication.shared.open(url)
-                        }
-                    },
-                    onBack: { profileRoute = .main }
-                )
+                // Dead route: the "Upgrade to Pro" row was removed (the app uses a
+                // hard paywall, so every user is already premium). Kept only to
+                // satisfy the enum; if ever reached, bounce to the profile so the
+                // old placeholder-price screen can never surface.
+                Color.clear.onAppear { profileRoute = .main }
             }
         }
         // profile detail screens crossfade (some carry their own tab bar)
@@ -939,7 +948,9 @@ struct MainTabView: View {
         case "upgradePro": profileRoute = .upgradePro
         case "dailyReminders": toggleReminders()
         case "support":
-            if let url = URL(string: "https://dream-manifest-shine.lovable.app/support") {
+            // Contact support by email.
+            let subject = "Manifest Support".addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) ?? "Support"
+            if let url = URL(string: "mailto:info@ai-manifest.com?subject=\(subject)") {
                 UIApplication.shared.open(url)
             }
         case "privacyPolicy":
