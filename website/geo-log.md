@@ -37,3 +37,17 @@ Running log of AI-answer-engine landscape probes, on-site GEO changes, and outre
 
 ### Next move
 Highest-leverage: publish an honest "Best Manifestation Apps (2026)" comparison page — that query's citations are 100% competitor-owned listicles; it's the format engines lift and the one asset we lack. (New-page work — coordinate with seo-expert round.)
+
+---
+
+## 2026-07-11 — Round 2 (shipped: Best Manifestation Apps comparison page)
+
+**Target query:** "best manifestation app" (+ "what is the best manifestation app", "manifestation apps free", "what app do people use for the 369 method"). Round 1 found every citation for this query is a competitor-owned self-published listicle — this page is our entry into that format, differentiated by honesty (real data, disclosed authorship, a genuine limitation per app including ours).
+
+**Shipped:** `guides/best-manifestation-apps.html` — 8-app comparison (Manifest: Vision Board & 369, I am, Gratitude: Self-Care Journal, Stella, Soul, Law of Attraction Toolbox, Vision Board & Goal Tracker, Myla). All competitor ratings/counts/price models pulled from Apple's iTunes Search API + App Store listings on 2026-07-11; our rating column says "New (2026)" (no fabricated rating). Liftable assets: answer-first lead ("The best manifestation app depends on your practice…"), the comparison table, "How we compared" disclosure box, 4-question FAQ. JSON-LD: Article + ItemList (8 ranked items) + FAQPage + BreadcrumbList.
+
+**Wiring:** index guides grid (first card) + footer guide list on index and all 10 existing guides + sitemap.xml (lastmod 2026-07-11) + llms.txt line. Link check passed; JSON-LD validated.
+
+**Deploy/verify:** Vercel prod deploy aliased to www.ai-manifest.com; live page 200 + correct title with normal UA and GPTBot UA. IndexNow: 12 URLs submitted, HTTP 200. GSC: sitemap re-submitted via API, HTTP 204.
+
+**Watch next round:** (1) does the page get indexed / start appearing for "best manifestation app" probes — re-probe ChatGPT/Perplexity-style answers; (2) GSC queries containing "best" or "apps" at position 5–20 → strengthen title/intro; (3) competitor data drift — re-pull iTunes API ratings monthly and bump the visible "Updated" date + lastmod when refreshed; (4) consider a dedicated "best 369 app" section/page if the FAQ answer starts drawing impressions.
