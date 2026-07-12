@@ -1,0 +1,338 @@
+{
+ "country": "it",
+ "storefront_id": 143450,
+ "harvested_at": "2026-07-12T21:24+0300",
+ "seed_errors": [],
+ "terms": [
+  {
+   "term": "manifestazione",
+   "seed": "manifest",
+   "position": 1,
+   "relevant": true
+  },
+  {
+   "term": "gratitude journal",
+   "seed": "gratitud",
+   "position": 1,
+   "relevant": true
+  },
+  {
+   "term": "affermazioni positive",
+   "seed": "affermaz",
+   "position": 1,
+   "relevant": true
+  },
+  {
+   "term": "vision link",
+   "seed": "vision",
+   "position": 1,
+   "relevant": false
+  },
+  {
+   "term": "life 360",
+   "seed": "369",
+   "position": 1,
+   "relevant": false
+  },
+  {
+   "term": "legge di ohm calcolatrice",
+   "seed": "legge d",
+   "position": 1,
+   "relevant": false
+  },
+  {
+   "term": "vision board",
+   "seed": "vision",
+   "position": 2,
+   "relevant": true
+  },
+  {
+   "term": "gratitude: self-care journal",
+   "seed": "gratitud",
+   "position": 2,
+   "relevant": true
+  },
+  {
+   "term": "369 manifestation & meditation",
+   "seed": "369",
+   "position": 2,
+   "relevant": true
+  },
+  {
+   "term": "affermazioni",
+   "seed": "affermaz",
+   "position": 2,
+   "relevant": true
+  },
+  {
+   "term": "legge dell'attrazione giornali",
+   "seed": "legge d",
+   "position": 2,
+   "relevant": true
+  },
+  {
+   "term": "il manifesto",
+   "seed": "manifest",
+   "position": 2,
+   "relevant": false
+  },
+  {
+   "term": "manifest",
+   "seed": "manifest",
+   "position": 3,
+   "relevant": true
+  },
+  {
+   "term": "diario della gratitudine",
+   "seed": "gratitud",
+   "position": 3,
+   "relevant": true
+  },
+  {
+   "term": "369 journal: manifestation",
+   "seed": "369",
+   "position": 3,
+   "relevant": true
+  },
+  {
+   "term": "affermazioni e moodboard",
+   "seed": "affermaz",
+   "position": 3,
+   "relevant": true
+  },
+  {
+   "term": "visione notturna",
+   "seed": "vision",
+   "position": 3,
+   "relevant": false
+  },
+  {
+   "term": "legge di ohm e di alimentazione law calculator",
+   "seed": "legge d",
+   "position": 3,
+   "relevant": false
+  },
+  {
+   "term": "gratitude",
+   "seed": "gratitud",
+   "position": 4,
+   "relevant": true
+  },
+  {
+   "term": "affermazioni ogni giorno",
+   "seed": "affermaz",
+   "position": 4,
+   "relevant": true
+  },
+  {
+   "term": "manifesto",
+   "seed": "manifest",
+   "position": 4,
+   "relevant": false
+  },
+  {
+   "term": "369出行-济南公交",
+   "seed": "369",
+   "position": 4,
+   "relevant": false
+  },
+  {
+   "term": "vision",
+   "seed": "vision",
+   "position": 4,
+   "relevant": false
+  },
+  {
+   "term": "legge di ohm facile",
+   "seed": "legge d",
+   "position": 4,
+   "relevant": false
+  },
+  {
+   "term": "gratitude journal - gratly",
+   "seed": "gratitud",
+   "position": 5,
+   "relevant": true
+  },
+  {
+   "term": "affermazioni positive: widget",
+   "seed": "affermaz",
+   "position": 5,
+   "relevant": true
+  },
+  {
+   "term": "manifesto funebre",
+   "seed": "manifest",
+   "position": 5,
+   "relevant": false
+  },
+  {
+   "term": "369sonic",
+   "seed": "369",
+   "position": 5,
+   "relevant": false
+  },
+  {
+   "term": "vision by strong",
+   "seed": "vision",
+   "position": 5,
+   "relevant": false
+  },
+  {
+   "term": "calcolatrice legge di ohm",
+   "seed": "legge d",
+   "position": 5,
+   "relevant": false
+  },
+  {
+   "term": "manifest love",
+   "seed": "manifest",
+   "position": 6,
+   "relevant": true
+  },
+  {
+   "term": "gratitude journal: daily diary",
+   "seed": "gratitud",
+   "position": 6,
+   "relevant": true
+  },
+  {
+   "term": "affermazioni & motivazione",
+   "seed": "affermaz",
+   "position": 6,
+   "relevant": true
+  },
+  {
+   "term": "3-6-9 mucize teknik",
+   "seed": "369",
+   "position": 6,
+   "relevant": true
+  },
+  {
+   "term": "vision hair and beauty bm",
+   "seed": "vision",
+   "position": 6,
+   "relevant": false
+  },
+  {
+   "term": "manifest with zara",
+   "seed": "manifest",
+   "position": 7,
+   "relevant": true
+  },
+  {
+   "term": "1 good thing: gratitude jar",
+   "seed": "gratitud",
+   "position": 7,
+   "relevant": true
+  },
+  {
+   "term": "affermazioni positive - ita",
+   "seed": "affermaz",
+   "position": 7,
+   "relevant": true
+  },
+  {
+   "term": "369-证件照美颜简单制作软件",
+   "seed": "369",
+   "position": 7,
+   "relevant": false
+  },
+  {
+   "term": "vision fitness",
+   "seed": "vision",
+   "position": 7,
+   "relevant": false
+  },
+  {
+   "term": "manifest: affirmations & focus",
+   "seed": "manifest",
+   "position": 8,
+   "relevant": true
+  },
+  {
+   "term": "gratitudine",
+   "seed": "gratitud",
+   "position": 8,
+   "relevant": true
+  },
+  {
+   "term": "3-6-9 manifestation companion",
+   "seed": "369",
+   "position": 8,
+   "relevant": true
+  },
+  {
+   "term": "affermazioniー app motivazional",
+   "seed": "affermaz",
+   "position": 8,
+   "relevant": true
+  },
+  {
+   "term": "visionario",
+   "seed": "vision",
+   "position": 8,
+   "relevant": false
+  },
+  {
+   "term": "manifesta — manifestation",
+   "seed": "manifest",
+   "position": 9,
+   "relevant": true
+  },
+  {
+   "term": "diario gratitudine",
+   "seed": "gratitud",
+   "position": 9,
+   "relevant": true
+  },
+  {
+   "term": "affermazioni e motivazione",
+   "seed": "affermaz",
+   "position": 9,
+   "relevant": true
+  },
+  {
+   "term": "369 reels",
+   "seed": "369",
+   "position": 9,
+   "relevant": false
+  },
+  {
+   "term": "tim vision",
+   "seed": "vision",
+   "position": 9,
+   "relevant": false
+  },
+  {
+   "term": "manifestation bank",
+   "seed": "manifest",
+   "position": 10,
+   "relevant": true
+  },
+  {
+   "term": "gratitude journal - the life-changing app",
+   "seed": "gratitud",
+   "position": 10,
+   "relevant": true
+  },
+  {
+   "term": "avoid 369",
+   "seed": "369",
+   "position": 10,
+   "relevant": false
+  },
+  {
+   "term": "vision tomorrow",
+   "seed": "vision",
+   "position": 10,
+   "relevant": false
+  },
+  {
+   "term": "affermazione quotidiana quotes",
+   "seed": "affermaz",
+   "position": 10,
+   "relevant": false
+  }
+ ]
+}

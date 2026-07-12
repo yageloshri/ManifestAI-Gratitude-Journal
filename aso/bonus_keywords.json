@@ -4,13 +4,18 @@
   "vision board app",
   "369 method",
   "gratitude journal",
-  "law of attraction"
+  "law of attraction",
+  "angel numbers",
+  "manifestation journal",
+  "daily affirmations"
  ],
  "en-GB": [
   "manifestation app",
   "vision board app",
   "369 method",
-  "gratitude journal"
+  "gratitude journal",
+  "angel numbers",
+  "law of attraction"
  ],
  "en-AU": [
   "manifestation app",
@@ -27,19 +32,27 @@
   "לוח חזון",
   "הכרת תודה",
   "יומן תודה",
-  "שיטת 369"
+  "שיטת 369",
+  "חוק המשיכה",
+  "יומן הכרת תודה"
  ],
  "de-DE": [
   "manifestieren app",
   "vision board",
   "dankbarkeitstagebuch",
-  "369 methode"
+  "369 methode",
+  "manifestieren",
+  "dankbarkeit tagebuch",
+  "gesetz der anziehung"
  ],
  "fr-FR": [
   "manifestation app",
   "tableau de visualisation",
   "journal de gratitude",
-  "méthode 369"
+  "méthode 369",
+  "tableau de vision",
+  "affirmation positive",
+  "loi de l'attraction"
  ],
  "it": [
   "manifestazione",
@@ -51,19 +64,27 @@
   "manifestar",
   "tablero de visión",
   "diario de gratitud",
-  "método 369"
+  "método 369",
+  "afirmaciones positivas",
+  "números angélicos",
+  "ley de atracción"
  ],
  "es-MX": [
   "manifestar",
   "tablero de visión",
   "diario de gratitud",
-  "método 369"
+  "método 369",
+  "afirmaciones positivas",
+  "números angélicos",
+  "ley de atracción"
  ],
  "pt-BR": [
   "manifestação",
   "quadro de visualização",
   "diário de gratidão",
-  "método 369"
+  "método 369",
+  "afirmações diárias",
+  "lei da atração"
  ],
  "nl-NL": [
   "manifesteren",
@@ -111,7 +132,9 @@
   "引き寄せ",
   "ビジョンボード",
   "感謝日記",
-  "369メソッド"
+  "369メソッド",
+  "引き寄せノート",
+  "引き寄せの法則"
  ],
  "ko": [
   "끌어당김",

@@ -1,0 +1,428 @@
+{
+ "country": "gb",
+ "storefront_id": 143444,
+ "harvested_at": "2026-07-12T21:23+0300",
+ "seed_errors": [],
+ "terms": [
+  {
+   "term": "manifest: daily affirmation",
+   "seed": "manif",
+   "position": 1,
+   "relevant": true
+  },
+  {
+   "term": "gratitude journal",
+   "seed": "gratit",
+   "position": 1,
+   "relevant": true
+  },
+  {
+   "term": "angel numbers",
+   "seed": "angel nu",
+   "position": 1,
+   "relevant": true
+  },
+  {
+   "term": "law of attraction toolbox",
+   "seed": "law of at",
+   "position": 1,
+   "relevant": true
+  },
+  {
+   "term": "369出行-济南公交",
+   "seed": "369",
+   "position": 1,
+   "relevant": false
+  },
+  {
+   "term": "vision express",
+   "seed": "vision",
+   "position": 1,
+   "relevant": false
+  },
+  {
+   "term": "affirm",
+   "seed": "affirm",
+   "position": 1,
+   "relevant": false
+  },
+  {
+   "term": "manifest",
+   "seed": "manif",
+   "position": 2,
+   "relevant": true
+  },
+  {
+   "term": "gratitude",
+   "seed": "gratit",
+   "position": 2,
+   "relevant": true
+  },
+  {
+   "term": "369",
+   "seed": "369",
+   "position": 2,
+   "relevant": true
+  },
+  {
+   "term": "angel numbers numerology",
+   "seed": "angel nu",
+   "position": 2,
+   "relevant": true
+  },
+  {
+   "term": "law of attraction",
+   "seed": "law of at",
+   "position": 2,
+   "relevant": true
+  },
+  {
+   "term": "vision leisure",
+   "seed": "vision",
+   "position": 2,
+   "relevant": false
+  },
+  {
+   "term": "affirm uk",
+   "seed": "affirm",
+   "position": 2,
+   "relevant": false
+  },
+  {
+   "term": "manifestation journal",
+   "seed": "manif",
+   "position": 3,
+   "relevant": true
+  },
+  {
+   "term": "vision board",
+   "seed": "vision",
+   "position": 3,
+   "relevant": true
+  },
+  {
+   "term": "gratitude free",
+   "seed": "gratit",
+   "position": 3,
+   "relevant": true
+  },
+  {
+   "term": "angel number signs",
+   "seed": "angel nu",
+   "position": 3,
+   "relevant": true
+  },
+  {
+   "term": "daily affirmations free",
+   "seed": "affirm",
+   "position": 3,
+   "relevant": true
+  },
+  {
+   "term": "law of attraction mindful meditations",
+   "seed": "law of at",
+   "position": 3,
+   "relevant": true
+  },
+  {
+   "term": "3-6-9 mucize teknik",
+   "seed": "369",
+   "position": 3,
+   "relevant": true
+  },
+  {
+   "term": "manifestation paradox",
+   "seed": "manif",
+   "position": 4,
+   "relevant": true
+  },
+  {
+   "term": "gratitude plus",
+   "seed": "gratit",
+   "position": 4,
+   "relevant": true
+  },
+  {
+   "term": "angel numbers & meanings",
+   "seed": "angel nu",
+   "position": 4,
+   "relevant": true
+  },
+  {
+   "term": "affirmation counter",
+   "seed": "affirm",
+   "position": 4,
+   "relevant": true
+  },
+  {
+   "term": "law of attraction quotes",
+   "seed": "law of at",
+   "position": 4,
+   "relevant": true
+  },
+  {
+   "term": "vision bus",
+   "seed": "vision",
+   "position": 4,
+   "relevant": false
+  },
+  {
+   "term": "life 360",
+   "seed": "369",
+   "position": 4,
+   "relevant": false
+  },
+  {
+   "term": "manifestive – manifest it",
+   "seed": "manif",
+   "position": 5,
+   "relevant": true
+  },
+  {
+   "term": "gratitude jar",
+   "seed": "gratit",
+   "position": 5,
+   "relevant": true
+  },
+  {
+   "term": "angel numbers meaning",
+   "seed": "angel nu",
+   "position": 5,
+   "relevant": true
+  },
+  {
+   "term": "law of attraction - sleep",
+   "seed": "law of at",
+   "position": 5,
+   "relevant": true
+  },
+  {
+   "term": "vision driver app",
+   "seed": "vision",
+   "position": 5,
+   "relevant": false
+  },
+  {
+   "term": "live 360",
+   "seed": "369",
+   "position": 5,
+   "relevant": false
+  },
+  {
+   "term": "affirm: pay over time",
+   "seed": "affirm",
+   "position": 5,
+   "relevant": false
+  },
+  {
+   "term": "free gratitude journal",
+   "seed": "gratit",
+   "position": 6,
+   "relevant": true
+  },
+  {
+   "term": "369 manifestation & meditation",
+   "seed": "369",
+   "position": 6,
+   "relevant": true
+  },
+  {
+   "term": "angel numbers: numerology",
+   "seed": "angel nu",
+   "position": 6,
+   "relevant": true
+  },
+  {
+   "term": "affirmation widget",
+   "seed": "affirm",
+   "position": 6,
+   "relevant": true
+  },
+  {
+   "term": "law of attraction everyday",
+   "seed": "law of at",
+   "position": 6,
+   "relevant": true
+  },
+  {
+   "term": "manifold markets",
+   "seed": "manif",
+   "position": 6,
+   "relevant": false
+  },
+  {
+   "term": "vision rcl",
+   "seed": "vision",
+   "position": 6,
+   "relevant": false
+  },
+  {
+   "term": "manifesting free",
+   "seed": "manif",
+   "position": 7,
+   "relevant": true
+  },
+  {
+   "term": "vision board free",
+   "seed": "vision",
+   "position": 7,
+   "relevant": true
+  },
+  {
+   "term": "gratitude plus – journal",
+   "seed": "gratit",
+   "position": 7,
+   "relevant": true
+  },
+  {
+   "term": "369 manifestation journal",
+   "seed": "369",
+   "position": 7,
+   "relevant": true
+  },
+  {
+   "term": "angelpath: angel numbers",
+   "seed": "angel nu",
+   "position": 7,
+   "relevant": true
+  },
+  {
+   "term": "positive affirmations app",
+   "seed": "affirm",
+   "position": 7,
+   "relevant": true
+  },
+  {
+   "term": "law of attraction mastery",
+   "seed": "law of at",
+   "position": 7,
+   "relevant": true
+  },
+  {
+   "term": "manifest6",
+   "seed": "manif",
+   "position": 8,
+   "relevant": true
+  },
+  {
+   "term": "gratitude garden",
+   "seed": "gratit",
+   "position": 8,
+   "relevant": true
+  },
+  {
+   "term": "369 journal: manifestation",
+   "seed": "369",
+   "position": 8,
+   "relevant": true
+  },
+  {
+   "term": "nums: daily angel numbers",
+   "seed": "angel nu",
+   "position": 8,
+   "relevant": true
+  },
+  {
+   "term": "affirm day manifest",
+   "seed": "affirm",
+   "position": 8,
+   "relevant": true
+  },
+  {
+   "term": "law of attraction, manifest",
+   "seed": "law of at",
+   "position": 8,
+   "relevant": true
+  },
+  {
+   "term": "vision libraries",
+   "seed": "vision",
+   "position": 8,
+   "relevant": false
+  },
+  {
+   "term": "manifest code",
+   "seed": "manif",
+   "position": 9,
+   "relevant": true
+  },
+  {
+   "term": "gratitude journal - gratly",
+   "seed": "gratit",
+   "position": 9,
+   "relevant": true
+  },
+  {
+   "term": "3-6-9 manifestation companion",
+   "seed": "369",
+   "position": 9,
+   "relevant": true
+  },
+  {
+   "term": "seraph: angel number diary",
+   "seed": "angel nu",
+   "position": 9,
+   "relevant": true
+  },
+  {
+   "term": "affirmly: speak & manifest",
+   "seed": "affirm",
+   "position": 9,
+   "relevant": true
+  },
+  {
+   "term": "law of attraction space",
+   "seed": "law of at",
+   "position": 9,
+   "relevant": true
+  },
+  {
+   "term": "vision redbridge culture & leisure",
+   "seed": "vision",
+   "position": 9,
+   "relevant": false
+  },
+  {
+   "term": "manifest love",
+   "seed": "manif",
+   "position": 10,
+   "relevant": true
+  },
+  {
+   "term": "gratitude journal: daily diary",
+   "seed": "gratit",
+   "position": 10,
+   "relevant": true
+  },
+  {
+   "term": "synchra: angel numbers",
+   "seed": "angel nu",
+   "position": 10,
+   "relevant": true
+  },
+  {
+   "term": "manifest: affirmations & focus",
+   "seed": "affirm",
+   "position": 10,
+   "relevant": true
+  },
+  {
+   "term": "law of attraction tribe llc",
+   "seed": "law of at",
+   "position": 10,
+   "relevant": true
+  },
+  {
+   "term": "369sonic",
+   "seed": "369",
+   "position": 10,
+   "relevant": false
+  },
+  {
+   "term": "vision engage",
+   "seed": "vision",
+   "position": 10,
+   "relevant": false
+  }
+ ]
+}

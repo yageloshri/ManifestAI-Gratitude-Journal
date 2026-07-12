@@ -1,0 +1,338 @@
+{
+ "country": "mx",
+ "storefront_id": 143468,
+ "harvested_at": "2026-07-12T21:25+0300",
+ "seed_errors": [],
+ "terms": [
+  {
+   "term": "manifestacion",
+   "seed": "manifes",
+   "position": 1,
+   "relevant": true
+  },
+  {
+   "term": "gratitude",
+   "seed": "gratitud",
+   "position": 1,
+   "relevant": true
+  },
+  {
+   "term": "369",
+   "seed": "369",
+   "position": 1,
+   "relevant": true
+  },
+  {
+   "term": "tablero de visión",
+   "seed": "tablero de v",
+   "position": 1,
+   "relevant": true
+  },
+  {
+   "term": "afirmaciones positivas diarias",
+   "seed": "afirmac",
+   "position": 1,
+   "relevant": true
+  },
+  {
+   "term": "ley de ohms calc",
+   "seed": "ley de",
+   "position": 1,
+   "relevant": false
+  },
+  {
+   "term": "manifestar",
+   "seed": "manifes",
+   "position": 2,
+   "relevant": true
+  },
+  {
+   "term": "ia 369",
+   "seed": "369",
+   "position": 2,
+   "relevant": true
+  },
+  {
+   "term": "tablero de vision",
+   "seed": "tablero de v",
+   "position": 2,
+   "relevant": true
+  },
+  {
+   "term": "diario de gratitud",
+   "seed": "gratitud",
+   "position": 2,
+   "relevant": true
+  },
+  {
+   "term": "afirmaciones positivas diarias gratis",
+   "seed": "afirmac",
+   "position": 2,
+   "relevant": true
+  },
+  {
+   "term": "ley de atracción frases",
+   "seed": "ley de",
+   "position": 2,
+   "relevant": true
+  },
+  {
+   "term": "aya manifestacion",
+   "seed": "manifes",
+   "position": 3,
+   "relevant": true
+  },
+  {
+   "term": "gratitude journal",
+   "seed": "gratitud",
+   "position": 3,
+   "relevant": true
+  },
+  {
+   "term": "tablero de visión lucky widget",
+   "seed": "tablero de v",
+   "position": 3,
+   "relevant": true
+  },
+  {
+   "term": "afirmaciones",
+   "seed": "afirmac",
+   "position": 3,
+   "relevant": true
+  },
+  {
+   "term": "life 360",
+   "seed": "369",
+   "position": 3,
+   "relevant": false
+  },
+  {
+   "term": "ley de ohm y calculadora ley del poder",
+   "seed": "ley de",
+   "position": 3,
+   "relevant": false
+  },
+  {
+   "term": "manifest love",
+   "seed": "manifes",
+   "position": 4,
+   "relevant": true
+  },
+  {
+   "term": "gratitude journal - gratly",
+   "seed": "gratitud",
+   "position": 4,
+   "relevant": true
+  },
+  {
+   "term": "369 manifestation & meditation",
+   "seed": "369",
+   "position": 4,
+   "relevant": true
+  },
+  {
+   "term": "be her - tablero de visión",
+   "seed": "tablero de v",
+   "position": 4,
+   "relevant": true
+  },
+  {
+   "term": "i am: afirmaciones positivas",
+   "seed": "afirmac",
+   "position": 4,
+   "relevant": true
+  },
+  {
+   "term": "ley de easy ohm",
+   "seed": "ley de",
+   "position": 4,
+   "relevant": false
+  },
+  {
+   "term": "manifest with zara",
+   "seed": "manifes",
+   "position": 5,
+   "relevant": true
+  },
+  {
+   "term": "vision board tablero de visión",
+   "seed": "tablero de v",
+   "position": 5,
+   "relevant": true
+  },
+  {
+   "term": "gratitude journal: daily diary",
+   "seed": "gratitud",
+   "position": 5,
+   "relevant": true
+  },
+  {
+   "term": "afirmaciones gratis",
+   "seed": "afirmac",
+   "position": 5,
+   "relevant": true
+  },
+  {
+   "term": "369出行-济南公交",
+   "seed": "369",
+   "position": 5,
+   "relevant": false
+  },
+  {
+   "term": "ley de ohm app",
+   "seed": "ley de",
+   "position": 5,
+   "relevant": false
+  },
+  {
+   "term": "manifest: affirmations & focus",
+   "seed": "manifes",
+   "position": 6,
+   "relevant": true
+  },
+  {
+   "term": "1 good thing: gratitude jar",
+   "seed": "gratitud",
+   "position": 6,
+   "relevant": true
+  },
+  {
+   "term": "3-6-9 manifestation companion",
+   "seed": "369",
+   "position": 6,
+   "relevant": true
+  },
+  {
+   "term": "afirmaciones positivas",
+   "seed": "afirmac",
+   "position": 6,
+   "relevant": true
+  },
+  {
+   "term": "ley del trabajo méxico",
+   "seed": "ley de",
+   "position": 6,
+   "relevant": false
+  },
+  {
+   "term": "manifesta — manifestation",
+   "seed": "manifes",
+   "position": 7,
+   "relevant": true
+  },
+  {
+   "term": "gratitude: self-care journal",
+   "seed": "gratitud",
+   "position": 7,
+   "relevant": true
+  },
+  {
+   "term": "quantum - afirmações diarias",
+   "seed": "afirmac",
+   "position": 7,
+   "relevant": true
+  },
+  {
+   "term": "369 cinemas app",
+   "seed": "369",
+   "position": 7,
+   "relevant": false
+  },
+  {
+   "term": "ley de amparo",
+   "seed": "ley de",
+   "position": 7,
+   "relevant": false
+  },
+  {
+   "term": "manifestation bank",
+   "seed": "manifes",
+   "position": 8,
+   "relevant": true
+  },
+  {
+   "term": "gratitude plus: journal",
+   "seed": "gratitud",
+   "position": 8,
+   "relevant": true
+  },
+  {
+   "term": "afirmaciones diarias",
+   "seed": "afirmac",
+   "position": 8,
+   "relevant": true
+  },
+  {
+   "term": "ley de atracción feliz",
+   "seed": "ley de",
+   "position": 8,
+   "relevant": true
+  },
+  {
+   "term": "369sonic",
+   "seed": "369",
+   "position": 8,
+   "relevant": false
+  },
+  {
+   "term": "vibrations: manifest daily",
+   "seed": "manifes",
+   "position": 9,
+   "relevant": true
+  },
+  {
+   "term": "gratitude de gratefulday",
+   "seed": "gratitud",
+   "position": 9,
+   "relevant": true
+  },
+  {
+   "term": "afirmaciones positivas gratis",
+   "seed": "afirmac",
+   "position": 9,
+   "relevant": true
+  },
+  {
+   "term": "369-证件照美颜简单制作软件",
+   "seed": "369",
+   "position": 9,
+   "relevant": false
+  },
+  {
+   "term": "calculadora de la ley de ohm",
+   "seed": "ley de",
+   "position": 9,
+   "relevant": false
+  },
+  {
+   "term": "align manifest",
+   "seed": "manifes",
+   "position": 10,
+   "relevant": true
+  },
+  {
+   "term": "gratitude meditation℠",
+   "seed": "gratitud",
+   "position": 10,
+   "relevant": true
+  },
+  {
+   "term": "im afirmaciones positivas",
+   "seed": "afirmac",
+   "position": 10,
+   "relevant": true
+  },
+  {
+   "term": "la ley de la atracción",
+   "seed": "ley de",
+   "position": 10,
+   "relevant": true
+  },
+  {
+   "term": "avoid 369",
+   "seed": "369",
+   "position": 10,
+   "relevant": false
+  }
+ ]
+}

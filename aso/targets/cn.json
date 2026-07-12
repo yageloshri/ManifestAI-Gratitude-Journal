@@ -1,0 +1,320 @@
+{
+ "country": "cn",
+ "storefront_id": 143465,
+ "harvested_at": "2026-07-12T21:28+0300",
+ "seed_errors": [],
+ "terms": [
+  {
+   "term": "显化助手",
+   "seed": "显化",
+   "position": 1,
+   "relevant": true
+  },
+  {
+   "term": "愿景板",
+   "seed": "愿景",
+   "position": 1,
+   "relevant": true
+  },
+  {
+   "term": "感恩日记",
+   "seed": "感恩",
+   "position": 1,
+   "relevant": true
+  },
+  {
+   "term": "吸引力法则",
+   "seed": "吸引力",
+   "position": 1,
+   "relevant": true
+  },
+  {
+   "term": "369出行-济南公交",
+   "seed": "369",
+   "position": 1,
+   "relevant": false
+  },
+  {
+   "term": "肯定基",
+   "seed": "肯定",
+   "position": 1,
+   "relevant": false
+  },
+  {
+   "term": "显化钥匙",
+   "seed": "显化",
+   "position": 2,
+   "relevant": true
+  },
+  {
+   "term": "感恩日志",
+   "seed": "感恩",
+   "position": 2,
+   "relevant": true
+  },
+  {
+   "term": "吸引力法则每一天",
+   "seed": "吸引力",
+   "position": 2,
+   "relevant": true
+  },
+  {
+   "term": "369出行",
+   "seed": "369",
+   "position": 2,
+   "relevant": false
+  },
+  {
+   "term": "愿景征途",
+   "seed": "愿景",
+   "position": 2,
+   "relevant": false
+  },
+  {
+   "term": "肯定鸡",
+   "seed": "肯定",
+   "position": 2,
+   "relevant": false
+  },
+  {
+   "term": "显化日记",
+   "seed": "显化",
+   "position": 3,
+   "relevant": true
+  },
+  {
+   "term": "感恩之行",
+   "seed": "感恩",
+   "position": 3,
+   "relevant": true
+  },
+  {
+   "term": "369",
+   "seed": "369",
+   "position": 3,
+   "relevant": true
+  },
+  {
+   "term": "肯定语",
+   "seed": "肯定",
+   "position": 3,
+   "relevant": true
+  },
+  {
+   "term": "manifest - 吸引力日记",
+   "seed": "吸引力",
+   "position": 3,
+   "relevant": true
+  },
+  {
+   "term": "愿景 - 有目标地生活",
+   "seed": "愿景",
+   "position": 3,
+   "relevant": false
+  },
+  {
+   "term": "显化",
+   "seed": "显化",
+   "position": 4,
+   "relevant": true
+  },
+  {
+   "term": "显化大师 - 吸引力法则",
+   "seed": "吸引力",
+   "position": 4,
+   "relevant": true
+  },
+  {
+   "term": "愿景板 完美快乐应用程序 vision board app",
+   "seed": "愿景",
+   "position": 4,
+   "relevant": true
+  },
+  {
+   "term": "感恩",
+   "seed": "感恩",
+   "position": 4,
+   "relevant": true
+  },
+  {
+   "term": "369借条",
+   "seed": "369",
+   "position": 4,
+   "relevant": false
+  },
+  {
+   "term": "肯定",
+   "seed": "肯定",
+   "position": 4,
+   "relevant": false
+  },
+  {
+   "term": "显化心灵日记: kira",
+   "seed": "显化",
+   "position": 5,
+   "relevant": true
+  },
+  {
+   "term": "愿景 - 每日愿景板",
+   "seed": "愿景",
+   "position": 5,
+   "relevant": true
+  },
+  {
+   "term": "感恩之行经销商端",
+   "seed": "感恩",
+   "position": 5,
+   "relevant": true
+  },
+  {
+   "term": "369浏览器",
+   "seed": "369",
+   "position": 5,
+   "relevant": true
+  },
+  {
+   "term": "肯定和动机",
+   "seed": "肯定",
+   "position": 5,
+   "relevant": false
+  },
+  {
+   "term": "显化闹钟",
+   "seed": "显化",
+   "position": 6,
+   "relevant": true
+  },
+  {
+   "term": "愿景板激励向导",
+   "seed": "愿景",
+   "position": 6,
+   "relevant": true
+  },
+  {
+   "term": "感恩节照片编辑器",
+   "seed": "感恩",
+   "position": 6,
+   "relevant": true
+  },
+  {
+   "term": "3699小游戏",
+   "seed": "369",
+   "position": 6,
+   "relevant": true
+  },
+  {
+   "term": "肯定语计数器",
+   "seed": "肯定",
+   "position": 6,
+   "relevant": true
+  },
+  {
+   "term": "感恩节 邀请 和 问候 卡",
+   "seed": "感恩",
+   "position": 7,
+   "relevant": true
+  },
+  {
+   "term": "肯定语 / 在最短时间内实现你的愿望",
+   "seed": "肯定",
+   "position": 7,
+   "relevant": true
+  },
+  {
+   "term": "369出行-济南",
+   "seed": "369",
+   "position": 7,
+   "relevant": false
+  },
+  {
+   "term": "愿景人生",
+   "seed": "愿景",
+   "position": 7,
+   "relevant": false
+  },
+  {
+   "term": "显化吸引力法则潜意识心想事成许愿打卡369法则肯定语冥想工具",
+   "seed": "显化",
+   "position": 8,
+   "relevant": true
+  },
+  {
+   "term": "be her - 愿景板小组件",
+   "seed": "愿景",
+   "position": 8,
+   "relevant": true
+  },
+  {
+   "term": "感恩节快乐问候着色书 - 学习画卡通人物为孩子们",
+   "seed": "感恩",
+   "position": 8,
+   "relevant": true
+  },
+  {
+   "term": "肯定语·每日金句",
+   "seed": "肯定",
+   "position": 8,
+   "relevant": true
+  },
+  {
+   "term": "369出行-济南地铁",
+   "seed": "369",
+   "position": 8,
+   "relevant": false
+  },
+  {
+   "term": "显化之光",
+   "seed": "显化",
+   "position": 9,
+   "relevant": true
+  },
+  {
+   "term": "vision board - 愿景板",
+   "seed": "愿景",
+   "position": 9,
+   "relevant": true
+  },
+  {
+   "term": "感恩100+贴纸动画",
+   "seed": "感恩",
+   "position": 9,
+   "relevant": true
+  },
+  {
+   "term": "369畅行",
+   "seed": "369",
+   "position": 9,
+   "relevant": true
+  },
+  {
+   "term": "feelscape: ai 肯定语",
+   "seed": "肯定",
+   "position": 9,
+   "relevant": true
+  },
+  {
+   "term": "显化-愿望神灯-梦想成真",
+   "seed": "显化",
+   "position": 10,
+   "relevant": true
+  },
+  {
+   "term": "感恩日记, 情绪记录, 情绪记录 | sunrise",
+   "seed": "感恩",
+   "position": 10,
+   "relevant": true
+  },
+  {
+   "term": "369通行",
+   "seed": "369",
+   "position": 10,
+   "relevant": true
+  },
+  {
+   "term": "innerpeace - 激励, 名言, 肯定, 正能量",
+   "seed": "肯定",
+   "position": 10,
+   "relevant": false
+  }
+ ]
+}

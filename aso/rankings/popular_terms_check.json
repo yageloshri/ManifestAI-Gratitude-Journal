@@ -1,0 +1,254 @@
+[
+ {
+  "country": "us",
+  "keyword": "budget app",
+  "popularity": 67,
+  "difficulty": 70,
+  "rank": null
+ },
+ {
+  "country": "us",
+  "keyword": "pregnancy tracker",
+  "popularity": 67,
+  "difficulty": 78,
+  "rank": null
+ },
+ {
+  "country": "us",
+  "keyword": "baby tracker",
+  "popularity": 63,
+  "difficulty": 78,
+  "rank": null
+ },
+ {
+  "country": "us",
+  "keyword": "contraction timer",
+  "popularity": 62,
+  "difficulty": 57,
+  "rank": null
+ },
+ {
+  "country": "us",
+  "keyword": "book tracker",
+  "popularity": 61,
+  "difficulty": 67,
+  "rank": null
+ },
+ {
+  "country": "us",
+  "keyword": "dog translator",
+  "popularity": 61,
+  "difficulty": 58,
+  "rank": null
+ },
+ {
+  "country": "us",
+  "keyword": "subscription manager",
+  "popularity": 60,
+  "difficulty": 57,
+  "rank": null
+ },
+ {
+  "country": "us",
+  "keyword": "subscription manager",
+  "popularity": 60,
+  "difficulty": 62,
+  "rank": null
+ },
+ {
+  "country": "us",
+  "keyword": "cat translator",
+  "popularity": 60,
+  "difficulty": 48,
+  "rank": null
+ },
+ {
+  "country": "gb",
+  "keyword": "cancel subscriptions",
+  "popularity": 54,
+  "difficulty": 23,
+  "rank": null
+ },
+ {
+  "country": "gb",
+  "keyword": "subscription tracker",
+  "popularity": 52,
+  "difficulty": 17,
+  "rank": null
+ },
+ {
+  "country": "gb",
+  "keyword": "money tracker",
+  "popularity": 41,
+  "difficulty": 49,
+  "rank": null
+ },
+ {
+  "country": "gb",
+  "keyword": "expense tracker",
+  "popularity": 37,
+  "difficulty": 55,
+  "rank": null
+ },
+ {
+  "country": "gb",
+  "keyword": "bill tracker",
+  "popularity": 33,
+  "difficulty": 40,
+  "rank": null
+ },
+ {
+  "country": "gb",
+  "keyword": "manage subscriptions",
+  "popularity": 18,
+  "difficulty": 13,
+  "rank": null
+ },
+ {
+  "country": "au",
+  "keyword": "expense tracker",
+  "popularity": 49,
+  "difficulty": 47,
+  "rank": null
+ },
+ {
+  "country": "au",
+  "keyword": "cancel subscriptions",
+  "popularity": 49,
+  "difficulty": 38,
+  "rank": null
+ },
+ {
+  "country": "au",
+  "keyword": "money tracker",
+  "popularity": 39,
+  "difficulty": 43,
+  "rank": null
+ },
+ {
+  "country": "au",
+  "keyword": "bill tracker",
+  "popularity": 33,
+  "difficulty": 21,
+  "rank": null
+ },
+ {
+  "country": "au",
+  "keyword": "manage subscriptions",
+  "popularity": 18,
+  "difficulty": 7,
+  "rank": null
+ },
+ {
+  "country": "fr",
+  "keyword": "cancel subscriptions",
+  "popularity": 37,
+  "difficulty": 23,
+  "rank": null
+ },
+ {
+  "country": "fr",
+  "keyword": "budgeting app",
+  "popularity": 33,
+  "difficulty": 41,
+  "rank": null
+ },
+ {
+  "country": "fr",
+  "keyword": "manage subscriptions",
+  "popularity": 25,
+  "difficulty": 13,
+  "rank": null
+ },
+ {
+  "country": "es",
+  "keyword": "cancel subscriptions",
+  "popularity": 37,
+  "difficulty": 21,
+  "rank": null
+ },
+ {
+  "country": "es",
+  "keyword": "manage subscriptions",
+  "popularity": 25,
+  "difficulty": 13,
+  "rank": null
+ },
+ {
+  "country": "de",
+  "keyword": "ausgaben tracker",
+  "popularity": 55,
+  "difficulty": 54,
+  "rank": null
+ },
+ {
+  "country": "de",
+  "keyword": "cancel subscriptions",
+  "popularity": 37,
+  "difficulty": 23,
+  "rank": null
+ },
+ {
+  "country": "de",
+  "keyword": "expense tracker",
+  "popularity": 33,
+  "difficulty": 49,
+  "rank": null
+ },
+ {
+  "country": "de",
+  "keyword": "money tracker",
+  "popularity": 33,
+  "difficulty": 52,
+  "rank": null
+ },
+ {
+  "country": "de",
+  "keyword": "manage subscriptions",
+  "popularity": 25,
+  "difficulty": 11,
+  "rank": null
+ },
+ {
+  "country": "de",
+  "keyword": "abonnements verwalten",
+  "popularity": 25,
+  "difficulty": 36,
+  "rank": null
+ },
+ {
+  "country": "it",
+  "keyword": "cancel subscriptions",
+  "popularity": 37,
+  "difficulty": 21,
+  "rank": null
+ },
+ {
+  "country": "it",
+  "keyword": "money tracker",
+  "popularity": 31,
+  "difficulty": 50,
+  "rank": null
+ },
+ {
+  "country": "it",
+  "keyword": "expense tracker",
+  "popularity": 31,
+  "difficulty": 50,
+  "rank": null
+ },
+ {
+  "country": "it",
+  "keyword": "manage subscriptions",
+  "popularity": 25,
+  "difficulty": 13,
+  "rank": null
+ },
+ {
+  "country": "nl",
+  "keyword": "expense tracker",
+  "popularity": 27,
+  "difficulty": 39,
+  "rank": null
+ }
+]

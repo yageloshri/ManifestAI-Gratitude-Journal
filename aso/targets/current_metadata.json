@@ -1,0 +1,236 @@
+{
+ "appInfos": {
+  "e245c7fd-4f7e-47ee-a0c5-4e9830dd2a26": {
+   "state": "READY_FOR_SALE",
+   "localizations": {
+    "it": {
+     "name": "Manifest: Vision Board e 369",
+     "subtitle": "Gratitudine & Numerologia",
+     "id": "f7d78c28-6eee-4439-a83b-6b3974223ce1"
+    },
+    "en-CA": {
+     "name": "Manifest: Vision Board & 369",
+     "subtitle": "Gratitude Journal & Numerology",
+     "id": "1915fd03-9bc0-4458-9076-91185033a204"
+    },
+    "es-MX": {
+     "name": "Manifest: Vision Board y 369",
+     "subtitle": "Gratitud y Numerología",
+     "id": "d028348b-e771-40fc-a1af-ec5591f56da5"
+    },
+    "en-US": {
+     "name": "Manifest: Vision Board & 369",
+     "subtitle": "Gratitude Journal & Numerology",
+     "id": "3e1ab7d4-7c47-4bf1-aff0-a7eedc75cff6"
+    },
+    "en-AU": {
+     "name": "Manifest: Vision Board & 369",
+     "subtitle": "Gratitude Journal & Numerology",
+     "id": "cbbc1c77-f354-43af-8c57-7d58b4ee0a47"
+    },
+    "de-DE": {
+     "name": "Manifest: Vision Board & 369",
+     "subtitle": "Dankbarkeit & Numerologie",
+     "id": "4bfa8d9b-fda5-4f3b-a6f1-e36b4d9a1d74"
+    },
+    "en-GB": {
+     "name": "Manifest: Vision Board & 369",
+     "subtitle": "Gratitude Journal & Numerology",
+     "id": "59ba5832-8771-4979-aa2a-3bf716892b7c"
+    },
+    "es-ES": {
+     "name": "Manifest: Vision Board y 369",
+     "subtitle": "Gratitud y Numerología",
+     "id": "bc3f4bde-86b7-4d8a-9b27-9b20d8f403f2"
+    },
+    "ja": {
+     "name": "引き寄せ手帳:ビジョンボード&369の法則",
+     "subtitle": "感謝日記×毎日の数秘術占い",
+     "id": "af70f1ec-52cb-4c0a-a66f-3e0b9f4ebd75"
+    },
+    "he": {
+     "name": "מניפסטציה: לוח חזון ו-369",
+     "subtitle": "הכרת תודה ונומרולוגיה",
+     "id": "14466621-53ee-4d93-92d5-8e3642fffc4f"
+    },
+    "fi": {
+     "name": "Manifest: Unelmakartta & 369",
+     "subtitle": "Kiitollisuus & Numerologia",
+     "id": "1c61ccbe-8aa9-4bee-a637-1f4af03a44e8"
+    },
+    "pt-BR": {
+     "name": "Manifest: Vision Board e 369",
+     "subtitle": "Gratidão e Numerologia",
+     "id": "101d9b7c-093d-48aa-96c4-6f87a6ff9915"
+    },
+    "nl-NL": {
+     "name": "Manifest: Vision Board & 369",
+     "subtitle": "Dankbaarheid & Numerologie",
+     "id": "07bb9a7a-6501-4832-8850-2a8b215d5c61"
+    },
+    "id": {
+     "name": "Vision Board: Manifestasi 369",
+     "subtitle": "Jurnal Syukur & Numerologi",
+     "id": "5cf132f9-e5bd-4c1c-b9ca-f53bc75f9489"
+    },
+    "ru": {
+     "name": "Доска желаний: Манифест 369",
+     "subtitle": "Благодарность и нумерология",
+     "id": "5452a189-394a-447f-9045-56fc0d21857c"
+    },
+    "fr-FR": {
+     "name": "Manifest : Vision Board & 369",
+     "subtitle": "Gratitude & Numérologie",
+     "id": "119e0b1a-990d-4f21-a9be-7a8c6bc5f3b4"
+    },
+    "zh-Hans": {
+     "name": "显化日记:愿景板与369法则",
+     "subtitle": "感恩手账与每日数字命理",
+     "id": "5846300a-abd9-4a4a-9405-4ed274b389a8"
+    },
+    "tr": {
+     "name": "Manifest: Vision Board ve 369",
+     "subtitle": "Şükran & Numeroloji",
+     "id": "d78b3000-5bad-4dae-9e50-bfd857256e88"
+    },
+    "ko": {
+     "name": "끌어당김: 비전보드 & 369",
+     "subtitle": "감사일기와 수비학",
+     "id": "97795af2-f4f0-4ec1-a3a2-47f567760f78"
+    },
+    "pl": {
+     "name": "Manifest: Vision Board i 369",
+     "subtitle": "Wdzięczność i Numerologia",
+     "id": "ecbc357b-0b3d-4fe7-8f17-cc1d7d5867ff"
+    },
+    "ar-SA": {
+     "name": "تجسيد: لوحة الرؤية و369",
+     "subtitle": "يوميات الامتنان وعلم الأرقام",
+     "id": "2b835f10-13b2-46f9-8868-48b21d280d41"
+    },
+    "da": {
+     "name": "Manifestér: Vision Board 369",
+     "subtitle": "Taknemmelighed & Numerologi",
+     "id": "9583d9d7-5e44-452b-a579-4948e2d60764"
+    },
+    "no": {
+     "name": "Manifest: Vision Board & 369",
+     "subtitle": "Takknemlighet & Numerologi",
+     "id": "13778c6b-3520-4f0f-a5a7-98b73cba192a"
+    },
+    "sv": {
+     "name": "Vision Board: Manifestera 369",
+     "subtitle": "Tacksamhetsdagbok & Numerologi",
+     "id": "a8c04027-990b-4896-92df-7bcb208620b0"
+    },
+    "vi": {
+     "name": "Vision Board: Biểu Hiện & 369",
+     "subtitle": "Nhật Ký Biết Ơn & Thần Số Học",
+     "id": "9c1746da-4690-4d16-9c5b-d37ef5bada42"
+    }
+   }
+  }
+ },
+ "versionKeywords": {
+  "vi": {
+   "id": "592a1cf0-946e-48e2-bc95-2210326ed3c9",
+   "keywords": "tarot,affirmation,angelnumber,luathapdan,tamlinh,cunghoangdao,tuvi,mayman,chualanh,mantra"
+  },
+  "ar-SA": {
+   "id": "73653869-52df-4435-a808-2f6f6b8ee37b",
+   "keywords": "تاروت,اللاوعي,الروحانية,تطوير,الذات,تأمل,الطاقة,الكون,الملائكة,الجذب,عرافة,تدوين,تحفيز"
+  },
+  "ja": {
+   "id": "358efd02-fcd6-4710-876f-471673154ba8",
+   "keywords": "スピリチュアル,タロット,アファメーション,開運,エンジェルナンバー,潜在意識,願望実現,目標達成,自己啓発,瞑想,星座,ヴィジョン"
+  },
+  "da": {
+   "id": "4e92f850-9d8d-4020-ae17-960f35b76279",
+   "keywords": "dagbog,bekræftelser,englenumre,spiritualitet,tarot,selvudvikling,manifestation,ritual,universet"
+  },
+  "he": {
+   "id": "3dc83d12-3445-44eb-858b-10e3539eed6a",
+   "keywords": "יומן,אפירמציות,חוק,משיכה,רוחניות,טארוט,מלאכים,מספרים,התעוררות,מודעות,ריטואל,תת,מודע"
+  },
+  "id": {
+   "id": "013acafd-1784-4b85-9ff3-6abe61b99b53",
+   "keywords": "tarot,afirmasi,spiritual,zodiak,horoskop,angka,malaikat,semesta,energi,rejeki,mantra,meditasi,ritual"
+  },
+  "pt-BR": {
+   "id": "e53aeab6-d07c-4e6f-8c1d-ee72d3128bd0",
+   "keywords": "manifestacao,despertarespiritual,numeroangelical,leidaatracao,luckygirl,tarot,afirmacoes,widget,ia"
+  },
+  "no": {
+   "id": "233bdd33-91b6-45e2-a633-877eaa1565d2",
+   "keywords": "dagbok,tarot,englenumre,bekreftelser,tiltrekningsloven,åndelighet,selvutvikling,widget,spirituell"
+  },
+  "sv": {
+   "id": "fbab9e82-a759-4c6f-9193-61c9c2998856",
+   "keywords": "dagbok,änglanummer,affirmationer,attraktionslagen,andlighet,tarot,självutveckling,horoskop,ritual"
+  },
+  "fi": {
+   "id": "2bf00443-ab4e-4fea-9eca-8f02f60f0869",
+   "keywords": "manifestointi,päiväkirja,enkelinumerot,affirmaatiot,henkisyys,widget,tarot,itsetuntemus,horoskooppi"
+  },
+  "es-MX": {
+   "id": "808ec117-bdc0-4525-bc4e-536bdbd6771e",
+   "keywords": "manifestacion,despertarespiritual,numeroangelical,leydeatraccion,luckygirl,tarot,afirmaciones,ia"
+  },
+  "de-DE": {
+   "id": "aa3cfab9-0f62-41e7-b448-bf2510951d49",
+   "keywords": "manifestation,engelszahlen,gesetzanziehung,luckygirl,tarot,affirmationen,widget,ki,täglich"
+  },
+  "it": {
+   "id": "b006b584-a858-4ded-9d47-8f9e5d4a399d",
+   "keywords": "manifestazione,risveglispirituale,numeriangelici,leggeattrazione,luckygirl,tarocchi,affermazioni,ia"
+  },
+  "en-US": {
+   "id": "ccfc700e-caee-4d52-8183-fbafc6dc2135",
+   "keywords": "manifestation,spiritualawakening,angelnumbers,lawofattraction,luckygirl,tarot,affirmation,widget,ai"
+  },
+  "en-AU": {
+   "id": "2272f764-4d73-4195-a84c-e9632c3d34ad",
+   "keywords": "manifestation,spiritualawakening,angelnumbers,lawofattraction,luckygirl,tarot,affirmation,widget,ai"
+  },
+  "en-GB": {
+   "id": "b9644bd2-fc04-4d01-8106-efd506c7de0f",
+   "keywords": "manifestation,spiritualawakening,angelnumbers,lawofattraction,luckygirl,tarot,affirmation,widget,ai"
+  },
+  "en-CA": {
+   "id": "2e284707-8d79-4e88-91ec-17132fcd9fdf",
+   "keywords": "manifestation,spiritualawakening,angelnumbers,lawofattraction,luckygirl,tarot,affirmation,widget,ai"
+  },
+  "es-ES": {
+   "id": "a20e3a1b-f3f8-4e61-85c6-9e9e4fa84983",
+   "keywords": "manifestacion,despertarespiritual,numeroangelical,leydeatraccion,luckygirl,tarot,afirmaciones,ia"
+  },
+  "tr": {
+   "id": "017e27cf-2bab-491d-ae48-abe8082bdfe9",
+   "keywords": "tezahür,ruhseluyanış,meleksayıları,çekimyasası,luckygirl,tarot,olumlamalar,widget,yapayzeka"
+  },
+  "nl-NL": {
+   "id": "ee6435af-49f7-4e57-8349-577c7a262c5f",
+   "keywords": "manifestatie,spirituelontwaking,engelengetallen,wetaantrekking,luckygirl,tarot,affirmaties,widget,ai"
+  },
+  "ru": {
+   "id": "0b1c8687-f5e3-4fae-8ec5-11146cb50554",
+   "keywords": "дневник,аффирмации,ангелы,духовность,таро,саморазвитие,вселенная,ритуал,привлечение,энергия,цели"
+  },
+  "zh-Hans": {
+   "id": "80114511-7e73-4955-b3d7-bdbece792d1f",
+   "keywords": "塔罗,占卜,潜意识,天使数字,灵性觉醒,冥想,能量,水晶,自我提升,吸引力,正念,疗愈,生日,愿望清单,星座,宇宙,梦想板,心想事成,潜能开发"
+  },
+  "pl": {
+   "id": "1b4b824b-2e21-4698-a2c1-572c2b64e2c0",
+   "keywords": "manifestacja,przebudzenieduchowe,aniolskieliczby,prawoprzyciagania,luckygirl,tarot,afirmacje,ai"
+  },
+  "fr-FR": {
+   "id": "f8b46976-c907-49cb-802e-c23ec2f372db",
+   "keywords": "manifestation,eveilspirituel,nombresangeliques,loidattraction,luckygirl,tarot,affirmations,widget,ia"
+  },
+  "ko": {
+   "id": "09978d41-d034-4963-82ac-5fc67edc7dae",
+   "keywords": "확언,시크릿,타로,엔젤넘버,잠재의식,셀프케어,영성,다이어리,사주,명상,힐링,긍정,버킷리스트,자기계발,드림보드,운세,점성술,차크라"
+  }
+ }
+}

@@ -1,0 +1,302 @@
+{
+ "country": "jp",
+ "storefront_id": 143462,
+ "harvested_at": "2026-07-12T21:27+0300",
+ "seed_errors": [],
+ "terms": [
+  {
+   "term": "引き寄せノート",
+   "seed": "引き寄せ",
+   "position": 1,
+   "relevant": true
+  },
+  {
+   "term": "ビジョンボード：夢を叶える引き寄せの法則・dreamer",
+   "seed": "ビジョンボ",
+   "position": 1,
+   "relevant": true
+  },
+  {
+   "term": "感謝日記",
+   "seed": "感謝",
+   "position": 1,
+   "relevant": true
+  },
+  {
+   "term": "369",
+   "seed": "369",
+   "position": 1,
+   "relevant": true
+  },
+  {
+   "term": "アファメーション",
+   "seed": "アファ",
+   "position": 1,
+   "relevant": true
+  },
+  {
+   "term": "潜在意識",
+   "seed": "潜在意識",
+   "position": 1,
+   "relevant": true
+  },
+  {
+   "term": "引き寄せの法則",
+   "seed": "引き寄せ",
+   "position": 2,
+   "relevant": true
+  },
+  {
+   "term": "ビジョンボード",
+   "seed": "ビジョンボ",
+   "position": 2,
+   "relevant": true
+  },
+  {
+   "term": "感謝",
+   "seed": "感謝",
+   "position": 2,
+   "relevant": true
+  },
+  {
+   "term": "アファメーションで引き寄せる「セルフノート」",
+   "seed": "アファ",
+   "position": 2,
+   "relevant": true
+  },
+  {
+   "term": "潜在意識を書き換えて自己実現するメルマガ",
+   "seed": "潜在意識",
+   "position": 2,
+   "relevant": true
+  },
+  {
+   "term": "369出行-济南公交",
+   "seed": "369",
+   "position": 2,
+   "relevant": false
+  },
+  {
+   "term": "引き寄せ",
+   "seed": "引き寄せ",
+   "position": 3,
+   "relevant": true
+  },
+  {
+   "term": "ビジョンボード アファメーション vision board+",
+   "seed": "ビジョンボ",
+   "position": 3,
+   "relevant": true
+  },
+  {
+   "term": "感謝ノート",
+   "seed": "感謝",
+   "position": 3,
+   "relevant": true
+  },
+  {
+   "term": "アファメーション（録音音声、音声合成）",
+   "seed": "アファ",
+   "position": 3,
+   "relevant": true
+  },
+  {
+   "term": "369-证件照美颜简单制作软件",
+   "seed": "369",
+   "position": 3,
+   "relevant": false
+  },
+  {
+   "term": "引き寄せ女神keikoのマゼンタ・ラブ・オラクルカード",
+   "seed": "引き寄せ",
+   "position": 4,
+   "relevant": true
+  },
+  {
+   "term": "ビジョンボードアプリ perfectlyhappy",
+   "seed": "ビジョンボ",
+   "position": 4,
+   "relevant": true
+  },
+  {
+   "term": "感謝日記 無料",
+   "seed": "感謝",
+   "position": 4,
+   "relevant": true
+  },
+  {
+   "term": "アファメーション 自己暗示 引き寄せの法則 kotone",
+   "seed": "アファ",
+   "position": 4,
+   "relevant": true
+  },
+  {
+   "term": "369sonic",
+   "seed": "369",
+   "position": 4,
+   "relevant": false
+  },
+  {
+   "term": "引き寄せ - アファメーション習慣アプリ",
+   "seed": "引き寄せ",
+   "position": 5,
+   "relevant": true
+  },
+  {
+   "term": "ビジョンボード: visus",
+   "seed": "ビジョンボ",
+   "position": 5,
+   "relevant": true
+  },
+  {
+   "term": "感謝の庭",
+   "seed": "感謝",
+   "position": 5,
+   "relevant": true
+  },
+  {
+   "term": "369 manifestation & meditation",
+   "seed": "369",
+   "position": 5,
+   "relevant": true
+  },
+  {
+   "term": "アファメーション そして モチベーション",
+   "seed": "アファ",
+   "position": 5,
+   "relevant": true
+  },
+  {
+   "term": "引き寄せ手帳:ビジョンボード&369の法則",
+   "seed": "引き寄せ",
+   "position": 6,
+   "relevant": true
+  },
+  {
+   "term": "ビジョンボード・モチベーション・ウィザード",
+   "seed": "ビジョンボ",
+   "position": 6,
+   "relevant": true
+  },
+  {
+   "term": "神棚アプリ: 感謝の日記・引き寄せ・愚痴を手放す習慣",
+   "seed": "感謝",
+   "position": 6,
+   "relevant": true
+  },
+  {
+   "term": "369miroku",
+   "seed": "369",
+   "position": 6,
+   "relevant": true
+  },
+  {
+   "term": "アファメーション録音",
+   "seed": "アファ",
+   "position": 6,
+   "relevant": true
+  },
+  {
+   "term": "aria · 引き寄せ日記",
+   "seed": "引き寄せ",
+   "position": 7,
+   "relevant": true
+  },
+  {
+   "term": "ビジョンボード – lucky widget",
+   "seed": "ビジョンボ",
+   "position": 7,
+   "relevant": true
+  },
+  {
+   "term": "my感謝日記 -毎日のありがとうを習慣化するsnsアプリ",
+   "seed": "感謝",
+   "position": 7,
+   "relevant": true
+  },
+  {
+   "term": "アファメーションアラーム - 二度寝防止目覚まし",
+   "seed": "アファ",
+   "position": 7,
+   "relevant": true
+  },
+  {
+   "term": "369 grand",
+   "seed": "369",
+   "position": 7,
+   "relevant": false
+  },
+  {
+   "term": "claim it - 引き寄せアファメーション",
+   "seed": "引き寄せ",
+   "position": 8,
+   "relevant": true
+  },
+  {
+   "term": "感謝日記-シンプルなポジティブ記録・いいことメモ",
+   "seed": "感謝",
+   "position": 8,
+   "relevant": true
+  },
+  {
+   "term": "アファメーション記録 - mytale",
+   "seed": "アファ",
+   "position": 8,
+   "relevant": true
+  },
+  {
+   "term": "3-6-9 mucize teknik",
+   "seed": "369",
+   "position": 8,
+   "relevant": true
+  },
+  {
+   "term": "dreamwall: 引き寄せ369",
+   "seed": "引き寄せ",
+   "position": 9,
+   "relevant": true
+  },
+  {
+   "term": "感謝祭の塗り絵本!",
+   "seed": "感謝",
+   "position": 9,
+   "relevant": true
+  },
+  {
+   "term": "369 journal: manifestation",
+   "seed": "369",
+   "position": 9,
+   "relevant": true
+  },
+  {
+   "term": "アファメーション / 最短距離で願いを叶える",
+   "seed": "アファ",
+   "position": 9,
+   "relevant": true
+  },
+  {
+   "term": "manifest - 引き寄せ日記",
+   "seed": "引き寄せ",
+   "position": 10,
+   "relevant": true
+  },
+  {
+   "term": "感謝日記・いいこと習慣 - goodgood",
+   "seed": "感謝",
+   "position": 10,
+   "relevant": true
+  },
+  {
+   "term": "3-6-9 manifestation companion",
+   "seed": "369",
+   "position": 10,
+   "relevant": true
+  },
+  {
+   "term": "アファメーション 名言 ウィジェット",
+   "seed": "アファ",
+   "position": 10,
+   "relevant": true
+  }
+ ]
+}

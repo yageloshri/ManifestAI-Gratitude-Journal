@@ -1,0 +1,266 @@
+{
+ "country": "ru",
+ "storefront_id": 143469,
+ "harvested_at": "2026-07-12T21:26+0300",
+ "seed_errors": [],
+ "terms": [
+  {
+   "term": "манифест: аффирмации",
+   "seed": "манифест",
+   "position": 1,
+   "relevant": true
+  },
+  {
+   "term": "доска визуализации желаний",
+   "seed": "доска в",
+   "position": 1,
+   "relevant": true
+  },
+  {
+   "term": "дневник благодарности",
+   "seed": "благодарн",
+   "position": 1,
+   "relevant": true
+  },
+  {
+   "term": "369",
+   "seed": "369",
+   "position": 1,
+   "relevant": true
+  },
+  {
+   "term": "ангельское таро - гадание таро",
+   "seed": "ангельск",
+   "position": 1,
+   "relevant": true
+  },
+  {
+   "term": "аффирмации на каждый день",
+   "seed": "аффирмац",
+   "position": 1,
+   "relevant": true
+  },
+  {
+   "term": "закон привлечения каждый день",
+   "seed": "закон при",
+   "position": 1,
+   "relevant": true
+  },
+  {
+   "term": "манифест - ежедневная визия",
+   "seed": "манифест",
+   "position": 2,
+   "relevant": true
+  },
+  {
+   "term": "дневник благодарностей",
+   "seed": "благодарн",
+   "position": 2,
+   "relevant": true
+  },
+  {
+   "term": "ангельские числа - гид",
+   "seed": "ангельск",
+   "position": 2,
+   "relevant": true
+  },
+  {
+   "term": "аффирмация",
+   "seed": "аффирмац",
+   "position": 2,
+   "relevant": true
+  },
+  {
+   "term": "manifest: закон притяжения",
+   "seed": "закон при",
+   "position": 2,
+   "relevant": true
+  },
+  {
+   "term": "369出行-济南公交",
+   "seed": "369",
+   "position": 2,
+   "relevant": false
+  },
+  {
+   "term": "aria · аффирмации и манифест",
+   "seed": "манифест",
+   "position": 3,
+   "relevant": true
+  },
+  {
+   "term": "благодарность",
+   "seed": "благодарн",
+   "position": 3,
+   "relevant": true
+  },
+  {
+   "term": "369 manifestation & meditation",
+   "seed": "369",
+   "position": 3,
+   "relevant": true
+  },
+  {
+   "term": "spoki: медитации и аффирмации",
+   "seed": "аффирмац",
+   "position": 3,
+   "relevant": true
+  },
+  {
+   "term": "вучы to be ангельская мова",
+   "seed": "ангельск",
+   "position": 3,
+   "relevant": false
+  },
+  {
+   "term": "cosmostune: сон, манифестация",
+   "seed": "манифест",
+   "position": 4,
+   "relevant": true
+  },
+  {
+   "term": "lumi: дневник благодарности",
+   "seed": "благодарн",
+   "position": 4,
+   "relevant": true
+  },
+  {
+   "term": "аффирмации",
+   "seed": "аффирмац",
+   "position": 4,
+   "relevant": true
+  },
+  {
+   "term": "3-6-9 mucize teknik",
+   "seed": "369",
+   "position": 4,
+   "relevant": true
+  },
+  {
+   "term": "soul wish: манифестация",
+   "seed": "манифест",
+   "position": 5,
+   "relevant": true
+  },
+  {
+   "term": "mindhappy - благодарности",
+   "seed": "благодарн",
+   "position": 5,
+   "relevant": true
+  },
+  {
+   "term": "аффирмации каждый день",
+   "seed": "аффирмац",
+   "position": 5,
+   "relevant": true
+  },
+  {
+   "term": "369sonic",
+   "seed": "369",
+   "position": 5,
+   "relevant": false
+  },
+  {
+   "term": "дневник манифестации lumina",
+   "seed": "манифест",
+   "position": 6,
+   "relevant": true
+  },
+  {
+   "term": "orbify: дневник благодарности",
+   "seed": "благодарн",
+   "position": 6,
+   "relevant": true
+  },
+  {
+   "term": "аффирмации и дыхание - gromi",
+   "seed": "аффирмац",
+   "position": 6,
+   "relevant": true
+  },
+  {
+   "term": "369 grand",
+   "seed": "369",
+   "position": 6,
+   "relevant": false
+  },
+  {
+   "term": "загадать желание-24h манифест",
+   "seed": "манифест",
+   "position": 7,
+   "relevant": true
+  },
+  {
+   "term": "thankful: благодарность",
+   "seed": "благодарн",
+   "position": 7,
+   "relevant": true
+  },
+  {
+   "term": "3-6-9 manifestation companion",
+   "seed": "369",
+   "position": 7,
+   "relevant": true
+  },
+  {
+   "term": "аффирмации - affirm8",
+   "seed": "аффирмац",
+   "position": 7,
+   "relevant": true
+  },
+  {
+   "term": "банка благодарности – дневник",
+   "seed": "благодарн",
+   "position": 8,
+   "relevant": true
+  },
+  {
+   "term": "аффирмации и мотивация: 7 days",
+   "seed": "аффирмац",
+   "position": 8,
+   "relevant": true
+  },
+  {
+   "term": "369 cinemas app",
+   "seed": "369",
+   "position": 8,
+   "relevant": false
+  },
+  {
+   "term": "дневник благодарности - obim",
+   "seed": "благодарн",
+   "position": 9,
+   "relevant": true
+  },
+  {
+   "term": "аффирмации и саморазвитие",
+   "seed": "аффирмац",
+   "position": 9,
+   "relevant": true
+  },
+  {
+   "term": "avoid 369",
+   "seed": "369",
+   "position": 9,
+   "relevant": false
+  },
+  {
+   "term": "дневник благодарности и карты",
+   "seed": "благодарн",
+   "position": 10,
+   "relevant": true
+  },
+  {
+   "term": "lumosphere: 369 path",
+   "seed": "369",
+   "position": 10,
+   "relevant": true
+  },
+  {
+   "term": "аффирмации и мотивация",
+   "seed": "аффирмац",
+   "position": 10,
+   "relevant": true
+  }
+ ]
+}

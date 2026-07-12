@@ -1,0 +1,164 @@
+{
+ "country": "sa",
+ "storefront_id": 143479,
+ "harvested_at": "2026-07-12T21:28+0300",
+ "seed_errors": [],
+ "terms": [
+  {
+   "term": "369",
+   "seed": "369",
+   "position": 1,
+   "relevant": true
+  },
+  {
+   "term": "توكيدات ايجابية",
+   "seed": "توكيد",
+   "position": 1,
+   "relevant": true
+  },
+  {
+   "term": "دار امتنان",
+   "seed": "امتنان",
+   "position": 1,
+   "relevant": false
+  },
+  {
+   "term": "لوحة المفاتيح",
+   "seed": "لوحة ال",
+   "position": 1,
+   "relevant": false
+  },
+  {
+   "term": "تليجرام",
+   "seed": "تجلي",
+   "position": 1,
+   "relevant": false
+  },
+  {
+   "term": "امتنان",
+   "seed": "امتنان",
+   "position": 2,
+   "relevant": true
+  },
+  {
+   "term": "توكيدات",
+   "seed": "توكيد",
+   "position": 2,
+   "relevant": true
+  },
+  {
+   "term": "369出行-济南公交",
+   "seed": "369",
+   "position": 2,
+   "relevant": false
+  },
+  {
+   "term": "برنامج تجليخ",
+   "seed": "تجلي",
+   "position": 2,
+   "relevant": false
+  },
+  {
+   "term": "لوحة المفاتيح العربية",
+   "seed": "لوحة ال",
+   "position": 2,
+   "relevant": false
+  },
+  {
+   "term": "369 manifestation & meditation",
+   "seed": "369",
+   "position": 3,
+   "relevant": true
+  },
+  {
+   "term": "تمام لوحة المفاتيح العربية",
+   "seed": "لوحة ال",
+   "position": 3,
+   "relevant": false
+  },
+  {
+   "term": "3-6-9 mucize teknik",
+   "seed": "369",
+   "position": 4,
+   "relevant": true
+  },
+  {
+   "term": "لوحة الكلمات",
+   "seed": "لوحة ال",
+   "position": 4,
+   "relevant": false
+  },
+  {
+   "term": "369 cinemas app",
+   "seed": "369",
+   "position": 5,
+   "relevant": false
+  },
+  {
+   "term": "لوحة النتائج",
+   "seed": "لوحة ال",
+   "position": 5,
+   "relevant": false
+  },
+  {
+   "term": "3-6-9 manifestation companion",
+   "seed": "369",
+   "position": 6,
+   "relevant": true
+  },
+  {
+   "term": "لوحة الملاحظات",
+   "seed": "لوحة ال",
+   "position": 6,
+   "relevant": false
+  },
+  {
+   "term": "369 reels",
+   "seed": "369",
+   "position": 7,
+   "relevant": false
+  },
+  {
+   "term": "لوحة المتابعة المدرسية",
+   "seed": "لوحة ال",
+   "position": 7,
+   "relevant": false
+  },
+  {
+   "term": "369-证件照美颜简单制作软件",
+   "seed": "369",
+   "position": 8,
+   "relevant": false
+  },
+  {
+   "term": "اتمام لوحة المفاتيح",
+   "seed": "لوحة ال",
+   "position": 8,
+   "relevant": false
+  },
+  {
+   "term": "369sonic",
+   "seed": "369",
+   "position": 9,
+   "relevant": false
+  },
+  {
+   "term": "تمام لوحة المفاتيح",
+   "seed": "لوحة ال",
+   "position": 9,
+   "relevant": false
+  },
+  {
+   "term": "avoid 369",
+   "seed": "369",
+   "position": 10,
+   "relevant": false
+  },
+  {
+   "term": "لوحة التحدي : سؤال وجواب",
+   "seed": "لوحة ال",
+   "position": 10,
+   "relevant": false
+  }
+ ]
+}

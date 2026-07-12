@@ -1,0 +1,404 @@
+{
+ "country": "br",
+ "storefront_id": 143503,
+ "harvested_at": "2026-07-12T21:25+0300",
+ "seed_errors": [],
+ "terms": [
+  {
+   "term": "manifested",
+   "seed": "manifest",
+   "position": 1,
+   "relevant": true
+  },
+  {
+   "term": "gratidao",
+   "seed": "gratid",
+   "position": 1,
+   "relevant": true
+  },
+  {
+   "term": "369",
+   "seed": "369",
+   "position": 1,
+   "relevant": true
+  },
+  {
+   "term": "afirmacoes diarias",
+   "seed": "afirmac",
+   "position": 1,
+   "relevant": true
+  },
+  {
+   "term": "lei da atração",
+   "seed": "lei da atra",
+   "position": 1,
+   "relevant": true
+  },
+  {
+   "term": "quadro de fotos",
+   "seed": "quadro de",
+   "position": 1,
+   "relevant": false
+  },
+  {
+   "term": "anjos da guarda condomínio",
+   "seed": "anjo",
+   "position": 1,
+   "relevant": false
+  },
+  {
+   "term": "manifestação",
+   "seed": "manifest",
+   "position": 2,
+   "relevant": true
+  },
+  {
+   "term": "diário de gratidão",
+   "seed": "gratid",
+   "position": 2,
+   "relevant": true
+  },
+  {
+   "term": "afirmacoes diarias gratis",
+   "seed": "afirmac",
+   "position": 2,
+   "relevant": true
+  },
+  {
+   "term": "lei da atração citações",
+   "seed": "lei da atra",
+   "position": 2,
+   "relevant": true
+  },
+  {
+   "term": "quadro de desenho",
+   "seed": "quadro de",
+   "position": 2,
+   "relevant": false
+  },
+  {
+   "term": "anjos della pizza",
+   "seed": "anjo",
+   "position": 2,
+   "relevant": false
+  },
+  {
+   "term": "insta 360",
+   "seed": "369",
+   "position": 2,
+   "relevant": false
+  },
+  {
+   "term": "manifested: afirmações",
+   "seed": "manifest",
+   "position": 3,
+   "relevant": true
+  },
+  {
+   "term": "caderno da gratidao",
+   "seed": "gratid",
+   "position": 3,
+   "relevant": true
+  },
+  {
+   "term": "afirmações",
+   "seed": "afirmac",
+   "position": 3,
+   "relevant": true
+  },
+  {
+   "term": "a lei da atração no cotidiano",
+   "seed": "lei da atra",
+   "position": 3,
+   "relevant": true
+  },
+  {
+   "term": "quadro de escrever",
+   "seed": "quadro de",
+   "position": 3,
+   "relevant": false
+  },
+  {
+   "term": "anjos telecom",
+   "seed": "anjo",
+   "position": 3,
+   "relevant": false
+  },
+  {
+   "term": "life 360",
+   "seed": "369",
+   "position": 3,
+   "relevant": false
+  },
+  {
+   "term": "manifestar",
+   "seed": "manifest",
+   "position": 4,
+   "relevant": true
+  },
+  {
+   "term": "369 manifestation & meditation",
+   "seed": "369",
+   "position": 4,
+   "relevant": true
+  },
+  {
+   "term": "afirmações positivas diárias",
+   "seed": "afirmac",
+   "position": 4,
+   "relevant": true
+  },
+  {
+   "term": "manifest: lei da atração",
+   "seed": "lei da atra",
+   "position": 4,
+   "relevant": true
+  },
+  {
+   "term": "quadro de futsal",
+   "seed": "quadro de",
+   "position": 4,
+   "relevant": false
+  },
+  {
+   "term": "pet anjo",
+   "seed": "anjo",
+   "position": 4,
+   "relevant": false
+  },
+  {
+   "term": "filmes gratis",
+   "seed": "gratid",
+   "position": 4,
+   "relevant": false
+  },
+  {
+   "term": "manifestd",
+   "seed": "manifest",
+   "position": 5,
+   "relevant": true
+  },
+  {
+   "term": "afirmacoes positivas",
+   "seed": "afirmac",
+   "position": 5,
+   "relevant": true
+  },
+  {
+   "term": "manifestiva: lei da atração",
+   "seed": "lei da atra",
+   "position": 5,
+   "relevant": true
+  },
+  {
+   "term": "quadro de futebol",
+   "seed": "quadro de",
+   "position": 5,
+   "relevant": false
+  },
+  {
+   "term": "369出行-济南公交",
+   "seed": "369",
+   "position": 5,
+   "relevant": false
+  },
+  {
+   "term": "anjos da guarda",
+   "seed": "anjo",
+   "position": 5,
+   "relevant": false
+  },
+  {
+   "term": "jogos gratis",
+   "seed": "gratid",
+   "position": 5,
+   "relevant": false
+  },
+  {
+   "term": "manifest love",
+   "seed": "manifest",
+   "position": 6,
+   "relevant": true
+  },
+  {
+   "term": "369 manifestation journal",
+   "seed": "369",
+   "position": 6,
+   "relevant": true
+  },
+  {
+   "term": "afirmação diária",
+   "seed": "afirmac",
+   "position": 6,
+   "relevant": true
+  },
+  {
+   "term": "ser lei da atração - beguides",
+   "seed": "lei da atra",
+   "position": 6,
+   "relevant": true
+  },
+  {
+   "term": "quadro de distribuição",
+   "seed": "quadro de",
+   "position": 6,
+   "relevant": false
+  },
+  {
+   "term": "anjo",
+   "seed": "anjo",
+   "position": 6,
+   "relevant": false
+  },
+  {
+   "term": "musica gratid",
+   "seed": "gratid",
+   "position": 6,
+   "relevant": false
+  },
+  {
+   "term": "manifest with zara",
+   "seed": "manifest",
+   "position": 7,
+   "relevant": true
+  },
+  {
+   "term": "quadro de visão",
+   "seed": "quadro de",
+   "position": 7,
+   "relevant": true
+  },
+  {
+   "term": "afirmação",
+   "seed": "afirmac",
+   "position": 7,
+   "relevant": true
+  },
+  {
+   "term": "vision board e lei da atração",
+   "seed": "lei da atra",
+   "position": 7,
+   "relevant": true
+  },
+  {
+   "term": "369 grand",
+   "seed": "369",
+   "position": 7,
+   "relevant": false
+  },
+  {
+   "term": "sorteio instagram gratis",
+   "seed": "gratid",
+   "position": 7,
+   "relevant": false
+  },
+  {
+   "term": "enjoei",
+   "seed": "anjo",
+   "position": 7,
+   "relevant": false
+  },
+  {
+   "term": "manifest: affirmations & focus",
+   "seed": "manifest",
+   "position": 8,
+   "relevant": true
+  },
+  {
+   "term": "gratidão",
+   "seed": "gratid",
+   "position": 8,
+   "relevant": true
+  },
+  {
+   "term": "3-6-9 mucize teknik",
+   "seed": "369",
+   "position": 8,
+   "relevant": true
+  },
+  {
+   "term": "quadro de saudação de feliz an",
+   "seed": "quadro de",
+   "position": 8,
+   "relevant": false
+  },
+  {
+   "term": "pizzaria anjos",
+   "seed": "anjo",
+   "position": 8,
+   "relevant": false
+  },
+  {
+   "term": "manifesta — manifestation",
+   "seed": "manifest",
+   "position": 9,
+   "relevant": true
+  },
+  {
+   "term": "quadro de visão 2027",
+   "seed": "quadro de",
+   "position": 9,
+   "relevant": true
+  },
+  {
+   "term": "gratidão diária",
+   "seed": "gratid",
+   "position": 9,
+   "relevant": true
+  },
+  {
+   "term": "quantum - afirmações diarias",
+   "seed": "afirmac",
+   "position": 9,
+   "relevant": true
+  },
+  {
+   "term": "369 cinemas app",
+   "seed": "369",
+   "position": 9,
+   "relevant": false
+  },
+  {
+   "term": "santo anjo",
+   "seed": "anjo",
+   "position": 9,
+   "relevant": false
+  },
+  {
+   "term": "manifestation bank",
+   "seed": "manifest",
+   "position": 10,
+   "relevant": true
+  },
+  {
+   "term": "gratidão app",
+   "seed": "gratid",
+   "position": 10,
+   "relevant": true
+  },
+  {
+   "term": "sentimentos afirmacoes diarias",
+   "seed": "afirmac",
+   "position": 10,
+   "relevant": true
+  },
+  {
+   "term": "quadro de horários pro",
+   "seed": "quadro de",
+   "position": 10,
+   "relevant": false
+  },
+  {
+   "term": "369 reels",
+   "seed": "369",
+   "position": 10,
+   "relevant": false
+  },
+  {
+   "term": "santo anjo onibus",
+   "seed": "anjo",
+   "position": 10,
+   "relevant": false
+  }
+ ]
+}

@@ -1,0 +1,134 @@
+{
+ "country": "vn",
+ "storefront_id": 143471,
+ "harvested_at": "2026-07-12T21:29+0300",
+ "seed_errors": [],
+ "terms": [
+  {
+   "term": "lời khẳng định",
+   "seed": "khẳng định",
+   "position": 1,
+   "relevant": true
+  },
+  {
+   "term": "manifest",
+   "seed": "manifest",
+   "position": 1,
+   "relevant": true
+  },
+  {
+   "term": "tv 369",
+   "seed": "369",
+   "position": 1,
+   "relevant": false
+  },
+  {
+   "term": "369",
+   "seed": "369",
+   "position": 2,
+   "relevant": true
+  },
+  {
+   "term": "manifest love",
+   "seed": "manifest",
+   "position": 2,
+   "relevant": true
+  },
+  {
+   "term": "manifest with zara",
+   "seed": "manifest",
+   "position": 3,
+   "relevant": true
+  },
+  {
+   "term": "369出行-济南公交",
+   "seed": "369",
+   "position": 3,
+   "relevant": false
+  },
+  {
+   "term": "369 manifestation & meditation",
+   "seed": "369",
+   "position": 4,
+   "relevant": true
+  },
+  {
+   "term": "manifest: affirmations & focus",
+   "seed": "manifest",
+   "position": 4,
+   "relevant": true
+  },
+  {
+   "term": "manifesta — manifestation",
+   "seed": "manifest",
+   "position": 5,
+   "relevant": true
+  },
+  {
+   "term": "369sonic",
+   "seed": "369",
+   "position": 5,
+   "relevant": false
+  },
+  {
+   "term": "manifestation bank",
+   "seed": "manifest",
+   "position": 6,
+   "relevant": true
+  },
+  {
+   "term": "369-证件照美颜简单制作软件",
+   "seed": "369",
+   "position": 6,
+   "relevant": false
+  },
+  {
+   "term": "3-6-9 manifestation companion",
+   "seed": "369",
+   "position": 7,
+   "relevant": true
+  },
+  {
+   "term": "vibrations: manifest daily",
+   "seed": "manifest",
+   "position": 7,
+   "relevant": true
+  },
+  {
+   "term": "align manifest",
+   "seed": "manifest",
+   "position": 8,
+   "relevant": true
+  },
+  {
+   "term": "369 reels",
+   "seed": "369",
+   "position": 8,
+   "relevant": false
+  },
+  {
+   "term": "ascended - manifest daily",
+   "seed": "manifest",
+   "position": 9,
+   "relevant": true
+  },
+  {
+   "term": "369 cinemas app",
+   "seed": "369",
+   "position": 9,
+   "relevant": false
+  },
+  {
+   "term": "daily manifestly",
+   "seed": "manifest",
+   "position": 10,
+   "relevant": true
+  },
+  {
+   "term": "369 grand",
+   "seed": "369",
+   "position": 10,
+   "relevant": false
+  }
+ ]
+}

@@ -1,0 +1,326 @@
+{
+ "country": "kr",
+ "storefront_id": 143466,
+ "harvested_at": "2026-07-12T21:28+0300",
+ "seed_errors": [],
+ "terms": [
+  {
+   "term": "끌어당김",
+   "seed": "끌어당",
+   "position": 1,
+   "relevant": true
+  },
+  {
+   "term": "비전보드",
+   "seed": "비전보",
+   "position": 1,
+   "relevant": true
+  },
+  {
+   "term": "감사일기",
+   "seed": "감사일",
+   "position": 1,
+   "relevant": true
+  },
+  {
+   "term": "확언",
+   "seed": "확언",
+   "position": 1,
+   "relevant": true
+  },
+  {
+   "term": "369出行-济南公交",
+   "seed": "369",
+   "position": 1,
+   "relevant": false
+  },
+  {
+   "term": "시크릿오더",
+   "seed": "시크릿",
+   "position": 1,
+   "relevant": false
+  },
+  {
+   "term": "끌어당김: 비전보드 & 369",
+   "seed": "끌어당",
+   "position": 2,
+   "relevant": true
+  },
+  {
+   "term": "비전보드 ㆍ vision board ㆍ 자기계발 확언",
+   "seed": "비전보",
+   "position": 2,
+   "relevant": true
+  },
+  {
+   "term": "데이블룸: 감사일기, 감사의 정원, 감정 일기, 확언",
+   "seed": "감사일",
+   "position": 2,
+   "relevant": true
+  },
+  {
+   "term": "369 manifestation & meditation",
+   "seed": "369",
+   "position": 2,
+   "relevant": true
+  },
+  {
+   "term": "확언 문장 플레이어 - 자기암시, 동기부여",
+   "seed": "확언",
+   "position": 2,
+   "relevant": true
+  },
+  {
+   "term": "시크릿쥬쥬",
+   "seed": "시크릿",
+   "position": 2,
+   "relevant": false
+  },
+  {
+   "term": "manifest - 끌어당김 일기",
+   "seed": "끌어당",
+   "position": 3,
+   "relevant": true
+  },
+  {
+   "term": "비전보드 앱 퍼펙틀리해피 vision board app",
+   "seed": "비전보",
+   "position": 3,
+   "relevant": true
+  },
+  {
+   "term": "감사일기, 감정 일기, 마음 치유 일기장 | 선라이즈",
+   "seed": "감사일",
+   "position": 3,
+   "relevant": true
+  },
+  {
+   "term": "확언-긍정적 사고와 동기 부여 - 긍정",
+   "seed": "확언",
+   "position": 3,
+   "relevant": true
+  },
+  {
+   "term": "3-6-9 mucize teknik",
+   "seed": "369",
+   "position": 3,
+   "relevant": true
+  },
+  {
+   "term": "시크릿산타",
+   "seed": "시크릿",
+   "position": 3,
+   "relevant": false
+  },
+  {
+   "term": "manifest: 끌어당김의 법칙",
+   "seed": "끌어당",
+   "position": 4,
+   "relevant": true
+  },
+  {
+   "term": "비전보드 – lucky widget",
+   "seed": "비전보",
+   "position": 4,
+   "relevant": true
+  },
+  {
+   "term": "감사일기 - 하루 3줄의 행복 습관",
+   "seed": "감사일",
+   "position": 4,
+   "relevant": true
+  },
+  {
+   "term": "확언 — pocket of love",
+   "seed": "확언",
+   "position": 4,
+   "relevant": true
+  },
+  {
+   "term": "369-证件照美颜简单制作软件",
+   "seed": "369",
+   "position": 4,
+   "relevant": false
+  },
+  {
+   "term": "시크릿카메라",
+   "seed": "시크릿",
+   "position": 4,
+   "relevant": false
+  },
+  {
+   "term": "manifestiva: 긍정 확언과 끌어당김",
+   "seed": "끌어당",
+   "position": 5,
+   "relevant": true
+  },
+  {
+   "term": "dreamer: 목표 달성 & 자기계발 비전보드",
+   "seed": "비전보",
+   "position": 5,
+   "relevant": true
+  },
+  {
+   "term": "감사일기 - 데일리일기",
+   "seed": "감사일",
+   "position": 5,
+   "relevant": true
+  },
+  {
+   "term": "3-6-9 manifestation companion",
+   "seed": "369",
+   "position": 5,
+   "relevant": true
+  },
+  {
+   "term": "확언 카운터",
+   "seed": "확언",
+   "position": 5,
+   "relevant": true
+  },
+  {
+   "term": "시크릿엘",
+   "seed": "시크릿",
+   "position": 5,
+   "relevant": false
+  },
+  {
+   "term": "timeattract: 크루와 함께 목표 끌어당김",
+   "seed": "끌어당",
+   "position": 6,
+   "relevant": true
+  },
+  {
+   "term": "i am + 매일하는 자기 확언 ai 확인 비전보드",
+   "seed": "비전보",
+   "position": 6,
+   "relevant": true
+  },
+  {
+   "term": "감사일기 - 세줄일기",
+   "seed": "감사일",
+   "position": 6,
+   "relevant": true
+  },
+  {
+   "term": "369 journal: manifestation",
+   "seed": "369",
+   "position": 6,
+   "relevant": true
+  },
+  {
+   "term": "확언 - 매일 자기 사랑",
+   "seed": "확언",
+   "position": 6,
+   "relevant": true
+  },
+  {
+   "term": "팻 시크릿",
+   "seed": "시크릿",
+   "position": 6,
+   "relevant": false
+  },
+  {
+   "term": "soulboard – 비전보드 확언 위젯",
+   "seed": "비전보",
+   "position": 7,
+   "relevant": true
+  },
+  {
+   "term": "감사일기 - 세 줄로 시작하는 감사 기록",
+   "seed": "감사일",
+   "position": 7,
+   "relevant": true
+  },
+  {
+   "term": "affi - 자기 확언",
+   "seed": "확언",
+   "position": 7,
+   "relevant": true
+  },
+  {
+   "term": "369sonic",
+   "seed": "369",
+   "position": 7,
+   "relevant": false
+  },
+  {
+   "term": "시크릿나잇",
+   "seed": "시크릿",
+   "position": 7,
+   "relevant": false
+  },
+  {
+   "term": "cherish ai 감사일기 다이어리",
+   "seed": "감사일",
+   "position": 8,
+   "relevant": true
+  },
+  {
+   "term": "affirma: 확언 습관 만들기",
+   "seed": "확언",
+   "position": 8,
+   "relevant": true
+  },
+  {
+   "term": "369 cinemas app",
+   "seed": "369",
+   "position": 8,
+   "relevant": false
+  },
+  {
+   "term": "시크릿",
+   "seed": "시크릿",
+   "position": 8,
+   "relevant": false
+  },
+  {
+   "term": "thankly - 하루 30초 감사일기",
+   "seed": "감사일",
+   "position": 9,
+   "relevant": true
+  },
+  {
+   "term": "affirmed: 긍정 확언 & 명상",
+   "seed": "확언",
+   "position": 9,
+   "relevant": true
+  },
+  {
+   "term": "369 grand",
+   "seed": "369",
+   "position": 9,
+   "relevant": false
+  },
+  {
+   "term": "시크릿dns",
+   "seed": "시크릿",
+   "position": 9,
+   "relevant": false
+  },
+  {
+   "term": "감성다이어리 – 잠금, 사진, 감사일기, 감정기록",
+   "seed": "감사일",
+   "position": 10,
+   "relevant": true
+  },
+  {
+   "term": "affirmly: 긍정 확언 & 명상 일기",
+   "seed": "확언",
+   "position": 10,
+   "relevant": true
+  },
+  {
+   "term": "369 wallet",
+   "seed": "369",
+   "position": 10,
+   "relevant": false
+  },
+  {
+   "term": "펫 시크릿",
+   "seed": "시크릿",
+   "position": 10,
+   "relevant": false
+  }
+ ]
+}

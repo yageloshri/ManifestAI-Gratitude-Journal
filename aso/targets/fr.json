@@ -1,0 +1,284 @@
+{
+ "country": "fr",
+ "storefront_id": 143442,
+ "harvested_at": "2026-07-12T21:24+0300",
+ "seed_errors": [],
+ "terms": [
+  {
+   "term": "manifestation",
+   "seed": "manif",
+   "position": 1,
+   "relevant": true
+  },
+  {
+   "term": "gratitude journal",
+   "seed": "gratitude",
+   "position": 1,
+   "relevant": true
+  },
+  {
+   "term": "life 369",
+   "seed": "369",
+   "position": 1,
+   "relevant": true
+  },
+  {
+   "term": "affirmation positive",
+   "seed": "affirm",
+   "position": 1,
+   "relevant": true
+  },
+  {
+   "term": "tableau de vision 2027",
+   "seed": "tableau de v",
+   "position": 1,
+   "relevant": true
+  },
+  {
+   "term": "loi de l’attraction",
+   "seed": "loi de l",
+   "position": 1,
+   "relevant": true
+  },
+  {
+   "term": "nombres anglais",
+   "seed": "nombres ang",
+   "position": 1,
+   "relevant": false
+  },
+  {
+   "term": "manifestation gratuit",
+   "seed": "manif",
+   "position": 2,
+   "relevant": true
+  },
+  {
+   "term": "gratitude",
+   "seed": "gratitude",
+   "position": 2,
+   "relevant": true
+  },
+  {
+   "term": "affirmation positive gratuite",
+   "seed": "affirm",
+   "position": 2,
+   "relevant": true
+  },
+  {
+   "term": "tableau de vision",
+   "seed": "tableau de v",
+   "position": 2,
+   "relevant": true
+  },
+  {
+   "term": "369出行-济南公交",
+   "seed": "369",
+   "position": 2,
+   "relevant": false
+  },
+  {
+   "term": "mani - loi de l'assomption",
+   "seed": "loi de l",
+   "position": 2,
+   "relevant": false
+  },
+  {
+   "term": "manifested: affirmations",
+   "seed": "manif",
+   "position": 3,
+   "relevant": true
+  },
+  {
+   "term": "gratitude: self-care journal",
+   "seed": "gratitude",
+   "position": 3,
+   "relevant": true
+  },
+  {
+   "term": "affirmation",
+   "seed": "affirm",
+   "position": 3,
+   "relevant": true
+  },
+  {
+   "term": "manifest: loi de l'attraction",
+   "seed": "loi de l",
+   "position": 3,
+   "relevant": true
+  },
+  {
+   "term": "tableau de vision ·",
+   "seed": "tableau de v",
+   "position": 3,
+   "relevant": true
+  },
+  {
+   "term": "3-6-9 mucize teknik",
+   "seed": "369",
+   "position": 3,
+   "relevant": true
+  },
+  {
+   "term": "gratitude journal - gratly",
+   "seed": "gratitude",
+   "position": 4,
+   "relevant": true
+  },
+  {
+   "term": "affirm day manifest",
+   "seed": "affirm",
+   "position": 4,
+   "relevant": true
+  },
+  {
+   "term": "369sonic",
+   "seed": "369",
+   "position": 4,
+   "relevant": false
+  },
+  {
+   "term": "manifold markets",
+   "seed": "manif",
+   "position": 4,
+   "relevant": false
+  },
+  {
+   "term": "manifestation journal",
+   "seed": "manif",
+   "position": 5,
+   "relevant": true
+  },
+  {
+   "term": "gratitude journal: daily diary",
+   "seed": "gratitude",
+   "position": 5,
+   "relevant": true
+  },
+  {
+   "term": "369 manifestation journal",
+   "seed": "369",
+   "position": 5,
+   "relevant": true
+  },
+  {
+   "term": "affirmly: speak & manifest",
+   "seed": "affirm",
+   "position": 5,
+   "relevant": true
+  },
+  {
+   "term": "manifest: affirmations & focus",
+   "seed": "affirm",
+   "position": 6,
+   "relevant": true
+  },
+  {
+   "term": "1 good thing: gratitude jar",
+   "seed": "gratitude",
+   "position": 6,
+   "relevant": true
+  },
+  {
+   "term": "369-证件照美颜简单制作软件",
+   "seed": "369",
+   "position": 6,
+   "relevant": false
+  },
+  {
+   "term": "manif emu",
+   "seed": "manif",
+   "position": 6,
+   "relevant": false
+  },
+  {
+   "term": "manifest love",
+   "seed": "manif",
+   "position": 7,
+   "relevant": true
+  },
+  {
+   "term": "journal de gratitude",
+   "seed": "gratitude",
+   "position": 7,
+   "relevant": true
+  },
+  {
+   "term": "mycreation: affirmations",
+   "seed": "affirm",
+   "position": 7,
+   "relevant": true
+  },
+  {
+   "term": "369 grand",
+   "seed": "369",
+   "position": 7,
+   "relevant": false
+  },
+  {
+   "term": "manifest with zara",
+   "seed": "manif",
+   "position": 8,
+   "relevant": true
+  },
+  {
+   "term": "gratitude plus – journal",
+   "seed": "gratitude",
+   "position": 8,
+   "relevant": true
+  },
+  {
+   "term": "sleep affirmations ai",
+   "seed": "affirm",
+   "position": 8,
+   "relevant": true
+  },
+  {
+   "term": "369 wallet: ai crypto wallet",
+   "seed": "369",
+   "position": 8,
+   "relevant": false
+  },
+  {
+   "term": "gratitude by gratefulday",
+   "seed": "gratitude",
+   "position": 9,
+   "relevant": true
+  },
+  {
+   "term": "3-6-9 manifestation companion",
+   "seed": "369",
+   "position": 9,
+   "relevant": true
+  },
+  {
+   "term": "mindvoice : voice affirmations",
+   "seed": "affirm",
+   "position": 9,
+   "relevant": true
+  },
+  {
+   "term": "manifesta — manifestation",
+   "seed": "manif",
+   "position": 10,
+   "relevant": true
+  },
+  {
+   "term": "gratitude personal development",
+   "seed": "gratitude",
+   "position": 10,
+   "relevant": true
+  },
+  {
+   "term": "369 journal: manifestation",
+   "seed": "369",
+   "position": 10,
+   "relevant": true
+  },
+  {
+   "term": "motivation daily affirmations",
+   "seed": "affirm",
+   "position": 10,
+   "relevant": true
+  }
+ ]
+}

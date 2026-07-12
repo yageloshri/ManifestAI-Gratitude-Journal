@@ -1,0 +1,80 @@
+{
+ "country": "il",
+ "storefront_id": 143491,
+ "harvested_at": "2026-07-12T21:24+0300",
+ "seed_errors": [],
+ "terms": [
+  {
+   "term": "369",
+   "seed": "369",
+   "position": 1,
+   "relevant": true
+  },
+  {
+   "term": "תודה",
+   "seed": "תודה",
+   "position": 1,
+   "relevant": true
+  },
+  {
+   "term": "סטודיו מניפיק",
+   "seed": "מניפ",
+   "position": 1,
+   "relevant": false
+  },
+  {
+   "term": "369 manifestation & meditation",
+   "seed": "369",
+   "position": 2,
+   "relevant": true
+  },
+  {
+   "term": "3-6-9 mucize teknik",
+   "seed": "369",
+   "position": 3,
+   "relevant": true
+  },
+  {
+   "term": "369出行-济南公交",
+   "seed": "369",
+   "position": 4,
+   "relevant": false
+  },
+  {
+   "term": "369 grand",
+   "seed": "369",
+   "position": 5,
+   "relevant": false
+  },
+  {
+   "term": "369sonic",
+   "seed": "369",
+   "position": 6,
+   "relevant": false
+  },
+  {
+   "term": "avoid 369",
+   "seed": "369",
+   "position": 7,
+   "relevant": false
+  },
+  {
+   "term": "breathez 369",
+   "seed": "369",
+   "position": 8,
+   "relevant": false
+  },
+  {
+   "term": "manifest anything - 369 app",
+   "seed": "369",
+   "position": 9,
+   "relevant": true
+  },
+  {
+   "term": "manifest: vision board & 369",
+   "seed": "369",
+   "position": 10,
+   "relevant": true
+  }
+ ]
+}

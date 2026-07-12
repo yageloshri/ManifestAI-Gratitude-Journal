@@ -1,0 +1,2243 @@
+{
+ "checked_at": "2026-07-12T22:04+0300",
+ "top_n": 10,
+ "countries": {
+  "us": [
+   {
+    "term": "manifest",
+    "seed": "manif",
+    "position": 1,
+    "rank": 143,
+    "results": 191,
+    "popularity": 44,
+    "difficulty": 54
+   },
+   {
+    "term": "vision board",
+    "seed": "vision",
+    "position": 1,
+    "rank": null,
+    "results": 176,
+    "popularity": 58,
+    "difficulty": 55
+   },
+   {
+    "term": "gratitude plus",
+    "seed": "gratit",
+    "position": 1,
+    "rank": null,
+    "results": 165,
+    "popularity": null,
+    "difficulty": null
+   },
+   {
+    "term": "369",
+    "seed": "369",
+    "position": 1,
+    "rank": 37,
+    "results": 180,
+    "popularity": null,
+    "difficulty": null
+   },
+   {
+    "term": "angel numbers",
+    "seed": "angel nu",
+    "position": 1,
+    "rank": null,
+    "results": 149,
+    "popularity": 14,
+    "difficulty": 15
+   },
+   {
+    "term": "law of attraction toolbox",
+    "seed": "law of at",
+    "position": 1,
+    "rank": null,
+    "results": 156,
+    "popularity": null,
+    "difficulty": null
+   },
+   {
+    "term": "manifested: affirmations",
+    "seed": "manif",
+    "position": 2,
+    "rank": null,
+    "results": 188,
+    "popularity": null,
+    "difficulty": null
+   },
+   {
+    "term": "gratitude journal",
+    "seed": "gratit",
+    "position": 2,
+    "rank": 111,
+    "results": 184,
+    "popularity": 32,
+    "difficulty": 65
+   },
+   {
+    "term": "angel numbers & meanings",
+    "seed": "angel nu",
+    "position": 2,
+    "rank": null,
+    "results": 165,
+    "popularity": null,
+    "difficulty": null
+   },
+   {
+    "term": "law of attraction",
+    "seed": "law of at",
+    "position": 2,
+    "rank": null,
+    "results": 165,
+    "popularity": null,
+    "difficulty": null
+   }
+  ],
+  "gb": [
+   {
+    "term": "manifest: daily affirmation",
+    "seed": "manif",
+    "position": 1,
+    "rank": null,
+    "results": 183,
+    "popularity": null,
+    "difficulty": null
+   },
+   {
+    "term": "gratitude journal",
+    "seed": "gratit",
+    "position": 1,
+    "rank": 72,
+    "results": 187,
+    "popularity": null,
+    "difficulty": null
+   },
+   {
+    "term": "angel numbers",
+    "seed": "angel nu",
+    "position": 1,
+    "rank": null,
+    "results": 161,
+    "popularity": null,
+    "difficulty": null
+   },
+   {
+    "term": "law of attraction toolbox",
+    "seed": "law of at",
+    "position": 1,
+    "rank": null,
+    "results": 150,
+    "popularity": null,
+    "difficulty": null
+   },
+   {
+    "term": "manifest",
+    "seed": "manif",
+    "position": 2,
+    "rank": 139,
+    "results": 197,
+    "popularity": null,
+    "difficulty": null
+   },
+   {
+    "term": "gratitude",
+    "seed": "gratit",
+    "position": 2,
+    "rank": null,
+    "results": 190,
+    "popularity": null,
+    "difficulty": null
+   },
+   {
+    "term": "369",
+    "seed": "369",
+    "position": 2,
+    "rank": null,
+    "results": 176,
+    "popularity": null,
+    "difficulty": null
+   },
+   {
+    "term": "angel numbers numerology",
+    "seed": "angel nu",
+    "position": 2,
+    "rank": null,
+    "results": 160,
+    "popularity": null,
+    "difficulty": null
+   },
+   {
+    "term": "law of attraction",
+    "seed": "law of at",
+    "position": 2,
+    "rank": null,
+    "results": 169,
+    "popularity": null,
+    "difficulty": null
+   },
+   {
+    "term": "manifestation journal",
+    "seed": "manif",
+    "position": 3,
+    "rank": null,
+    "results": 189,
+    "popularity": null,
+    "difficulty": null
+   }
+  ],
+  "au": [
+   {
+    "term": "manifest",
+    "seed": "manif",
+    "position": 1,
+    "rank": null,
+    "results": 192,
+    "popularity": null,
+    "difficulty": null
+   },
+   {
+    "term": "gratitude plus",
+    "seed": "gratit",
+    "position": 1,
+    "rank": null,
+    "results": 176,
+    "popularity": null,
+    "difficulty": null
+   },
+   {
+    "term": "angel numbers",
+    "seed": "angel nu",
+    "position": 1,
+    "rank": null,
+    "results": 149,
+    "popularity": null,
+    "difficulty": null
+   },
+   {
+    "term": "affirmations",
+    "seed": "affirm",
+    "position": 1,
+    "rank": null,
+    "results": 191,
+    "popularity": null,
+    "difficulty": null
+   },
+   {
+    "term": "law of attraction",
+    "seed": "law of at",
+    "position": 1,
+    "rank": null,
+    "results": 165,
+    "popularity": null,
+    "difficulty": null
+   },
+   {
+    "term": "vix manifestation",
+    "seed": "manif",
+    "position": 2,
+    "rank": null,
+    "results": 143,
+    "popularity": null,
+    "difficulty": null
+   },
+   {
+    "term": "gratitude journal",
+    "seed": "gratit",
+    "position": 2,
+    "rank": 40,
+    "results": 187,
+    "popularity": null,
+    "difficulty": null
+   },
+   {
+    "term": "angel numbers numerology",
+    "seed": "angel nu",
+    "position": 2,
+    "rank": null,
+    "results": 154,
+    "popularity": null,
+    "difficulty": null
+   },
+   {
+    "term": "affirmation widget",
+    "seed": "affirm",
+    "position": 2,
+    "rank": null,
+    "results": 183,
+    "popularity": null,
+    "difficulty": null
+   },
+   {
+    "term": "law of attraction toolbox",
+    "seed": "law of at",
+    "position": 2,
+    "rank": null,
+    "results": 154,
+    "popularity": null,
+    "difficulty": null
+   }
+  ],
+  "ca": [
+   {
+    "term": "manifest",
+    "seed": "manif",
+    "position": 1,
+    "rank": null,
+    "results": 195,
+    "popularity": null,
+    "difficulty": null
+   },
+   {
+    "term": "gratitude plus",
+    "seed": "gratit",
+    "position": 1,
+    "rank": null,
+    "results": 166,
+    "popularity": null,
+    "difficulty": null
+   },
+   {
+    "term": "369",
+    "seed": "369",
+    "position": 1,
+    "rank": null,
+    "results": 187,
+    "popularity": null,
+    "difficulty": null
+   },
+   {
+    "term": "angel numbers",
+    "seed": "angel nu",
+    "position": 1,
+    "rank": null,
+    "results": 175,
+    "popularity": null,
+    "difficulty": null
+   },
+   {
+    "term": "law of attraction toolbox",
+    "seed": "law of at",
+    "position": 1,
+    "rank": null,
+    "results": 152,
+    "popularity": null,
+    "difficulty": null
+   },
+   {
+    "term": "manifestation journal",
+    "seed": "manif",
+    "position": 2,
+    "rank": null,
+    "results": 189,
+    "popularity": null,
+    "difficulty": null
+   },
+   {
+    "term": "vision board",
+    "seed": "vision",
+    "position": 2,
+    "rank": null,
+    "results": 184,
+    "popularity": null,
+    "difficulty": null
+   },
+   {
+    "term": "gratitude journal",
+    "seed": "gratit",
+    "position": 2,
+    "rank": 89,
+    "results": 191,
+    "popularity": null,
+    "difficulty": null
+   },
+   {
+    "term": "angel numbers numerology",
+    "seed": "angel nu",
+    "position": 2,
+    "rank": null,
+    "results": 160,
+    "popularity": null,
+    "difficulty": null
+   },
+   {
+    "term": "law of attraction quotes",
+    "seed": "law of at",
+    "position": 2,
+    "rank": null,
+    "results": 158,
+    "popularity": null,
+    "difficulty": null
+   }
+  ],
+  "il": [
+   {
+    "term": "369",
+    "seed": "369",
+    "position": 1,
+    "rank": null,
+    "results": 190,
+    "popularity": null,
+    "difficulty": null
+   },
+   {
+    "term": "תודה",
+    "seed": "תודה",
+    "position": 1,
+    "rank": 55,
+    "results": 82,
+    "popularity": null,
+    "difficulty": null
+   },
+   {
+    "term": "369 manifestation & meditation",
+    "seed": "369",
+    "position": 2,
+    "rank": null,
+    "results": 189,
+    "popularity": null,
+    "difficulty": null
+   },
+   {
+    "term": "3-6-9 mucize teknik",
+    "seed": "369",
+    "position": 3,
+    "rank": null,
+    "results": 1,
+    "popularity": null,
+    "difficulty": null
+   },
+   {
+    "term": "manifest anything - 369 app",
+    "seed": "369",
+    "position": 9,
+    "rank": null,
+    "results": 18,
+    "popularity": null,
+    "difficulty": null
+   },
+   {
+    "term": "manifest: vision board & 369",
+    "seed": "369",
+    "position": 10,
+    "rank": 4,
+    "results": 183,
+    "popularity": null,
+    "difficulty": null
+   }
+  ],
+  "de": [
+   {
+    "term": "manifestieren",
+    "seed": "manif",
+    "position": 1,
+    "rank": null,
+    "results": 62,
+    "popularity": null,
+    "difficulty": null
+   },
+   {
+    "term": "vision board",
+    "seed": "vision",
+    "position": 1,
+    "rank": null,
+    "results": 182,
+    "popularity": null,
+    "difficulty": null
+   },
+   {
+    "term": "dankbarkeitstagebuch",
+    "seed": "dankbar",
+    "position": 1,
+    "rank": null,
+    "results": 24,
+    "popularity": null,
+    "difficulty": null
+   },
+   {
+    "term": "369",
+    "seed": "369",
+    "position": 1,
+    "rank": null,
+    "results": 185,
+    "popularity": null,
+    "difficulty": null
+   },
+   {
+    "term": "affirmationen",
+    "seed": "affirm",
+    "position": 1,
+    "rank": null,
+    "results": 182,
+    "popularity": null,
+    "difficulty": null
+   },
+   {
+    "term": "gesetz der anziehung",
+    "seed": "gesetz der",
+    "position": 1,
+    "rank": 26,
+    "results": 30,
+    "popularity": null,
+    "difficulty": null
+   },
+   {
+    "term": "manifest",
+    "seed": "manif",
+    "position": 2,
+    "rank": 106,
+    "results": 190,
+    "popularity": null,
+    "difficulty": null
+   },
+   {
+    "term": "dankbarkeit",
+    "seed": "dankbar",
+    "position": 2,
+    "rank": null,
+    "results": 183,
+    "popularity": null,
+    "difficulty": null
+   },
+   {
+    "term": "affirmation widget",
+    "seed": "affirm",
+    "position": 2,
+    "rank": null,
+    "results": 177,
+    "popularity": null,
+    "difficulty": null
+   },
+   {
+    "term": "3-6-9 mucize teknik",
+    "seed": "369",
+    "position": 2,
+    "rank": null,
+    "results": 1,
+    "popularity": null,
+    "difficulty": null
+   }
+  ],
+  "fr": [
+   {
+    "term": "manifestation",
+    "seed": "manif",
+    "position": 1,
+    "rank": null,
+    "results": 187,
+    "popularity": null,
+    "difficulty": null
+   },
+   {
+    "term": "gratitude journal",
+    "seed": "gratitude",
+    "position": 1,
+    "rank": 67,
+    "results": 191,
+    "popularity": null,
+    "difficulty": null
+   },
+   {
+    "term": "life 369",
+    "seed": "369",
+    "position": 1,
+    "rank": null,
+    "results": 186,
+    "popularity": null,
+    "difficulty": null
+   },
+   {
+    "term": "affirmation positive",
+    "seed": "affirm",
+    "position": 1,
+    "rank": null,
+    "results": 189,
+    "popularity": null,
+    "difficulty": null
+   },
+   {
+    "term": "tableau de vision 2027",
+    "seed": "tableau de v",
+    "position": 1,
+    "rank": null,
+    "results": 1,
+    "popularity": null,
+    "difficulty": null
+   },
+   {
+    "term": "loi de l’attraction",
+    "seed": "loi de l",
+    "position": 1,
+    "rank": null,
+    "results": 39,
+    "popularity": null,
+    "difficulty": null
+   },
+   {
+    "term": "manifestation gratuit",
+    "seed": "manif",
+    "position": 2,
+    "rank": 114,
+    "results": 191,
+    "popularity": null,
+    "difficulty": null
+   },
+   {
+    "term": "gratitude",
+    "seed": "gratitude",
+    "position": 2,
+    "rank": null,
+    "results": 189,
+    "popularity": null,
+    "difficulty": null
+   },
+   {
+    "term": "affirmation positive gratuite",
+    "seed": "affirm",
+    "position": 2,
+    "rank": null,
+    "results": 194,
+    "popularity": null,
+    "difficulty": null
+   },
+   {
+    "term": "tableau de vision",
+    "seed": "tableau de v",
+    "position": 2,
+    "rank": null,
+    "results": 170,
+    "popularity": null,
+    "difficulty": null
+   }
+  ],
+  "it": [
+   {
+    "term": "manifestazione",
+    "seed": "manifest",
+    "position": 1,
+    "rank": 154,
+    "results": 183,
+    "popularity": null,
+    "difficulty": null
+   },
+   {
+    "term": "gratitude journal",
+    "seed": "gratitud",
+    "position": 1,
+    "rank": 73,
+    "results": 189,
+    "popularity": null,
+    "difficulty": null
+   },
+   {
+    "term": "affermazioni positive",
+    "seed": "affermaz",
+    "position": 1,
+    "rank": null,
+    "results": 96,
+    "popularity": null,
+    "difficulty": null
+   },
+   {
+    "term": "vision board",
+    "seed": "vision",
+    "position": 2,
+    "rank": null,
+    "results": 180,
+    "popularity": null,
+    "difficulty": null
+   },
+   {
+    "term": "gratitude: self-care journal",
+    "seed": "gratitud",
+    "position": 2,
+    "rank": null,
+    "results": 178,
+    "popularity": null,
+    "difficulty": null
+   },
+   {
+    "term": "369 manifestation & meditation",
+    "seed": "369",
+    "position": 2,
+    "rank": null,
+    "results": 181,
+    "popularity": null,
+    "difficulty": null
+   },
+   {
+    "term": "affermazioni",
+    "seed": "affermaz",
+    "position": 2,
+    "rank": 157,
+    "results": 174,
+    "popularity": null,
+    "difficulty": null
+   },
+   {
+    "term": "legge dell'attrazione giornali",
+    "seed": "legge d",
+    "position": 2,
+    "rank": null,
+    "results": 11,
+    "popularity": null,
+    "difficulty": null
+   },
+   {
+    "term": "manifest",
+    "seed": "manifest",
+    "position": 3,
+    "rank": 159,
+    "results": 188,
+    "popularity": null,
+    "difficulty": null
+   },
+   {
+    "term": "diario della gratitudine",
+    "seed": "gratitud",
+    "position": 3,
+    "rank": null,
+    "results": 178,
+    "popularity": null,
+    "difficulty": null
+   }
+  ],
+  "es": [
+   {
+    "term": "manifestacion",
+    "seed": "manifes",
+    "position": 1,
+    "rank": 48,
+    "results": 79,
+    "popularity": null,
+    "difficulty": null
+   },
+   {
+    "term": "tablero de visión 2027",
+    "seed": "tablero de v",
+    "position": 1,
+    "rank": null,
+    "results": 2,
+    "popularity": null,
+    "difficulty": null
+   },
+   {
+    "term": "diario de gratitud",
+    "seed": "gratitud",
+    "position": 1,
+    "rank": null,
+    "results": 181,
+    "popularity": null,
+    "difficulty": null
+   },
+   {
+    "term": "ia 369",
+    "seed": "369",
+    "position": 1,
+    "rank": 6,
+    "results": 8,
+    "popularity": null,
+    "difficulty": null
+   },
+   {
+    "term": "afirmaciones positivas diarias",
+    "seed": "afirmac",
+    "position": 1,
+    "rank": null,
+    "results": 127,
+    "popularity": null,
+    "difficulty": null
+   },
+   {
+    "term": "números angélicos - guía",
+    "seed": "numeros ang",
+    "position": 1,
+    "rank": null,
+    "results": 1,
+    "popularity": null,
+    "difficulty": null
+   },
+   {
+    "term": "astrya: manifestar y afirmar",
+    "seed": "manifes",
+    "position": 2,
+    "rank": null,
+    "results": 1,
+    "popularity": null,
+    "difficulty": null
+   },
+   {
+    "term": "tablero de visión: visus",
+    "seed": "tablero de v",
+    "position": 2,
+    "rank": null,
+    "results": 1,
+    "popularity": null,
+    "difficulty": null
+   },
+   {
+    "term": "gratitude: self-care journal",
+    "seed": "gratitud",
+    "position": 2,
+    "rank": null,
+    "results": 176,
+    "popularity": null,
+    "difficulty": null
+   },
+   {
+    "term": "afirmaciones",
+    "seed": "afirmac",
+    "position": 2,
+    "rank": null,
+    "results": 189,
+    "popularity": null,
+    "difficulty": null
+   }
+  ],
+  "mx": [
+   {
+    "term": "manifestacion",
+    "seed": "manifes",
+    "position": 1,
+    "rank": 71,
+    "results": 115,
+    "popularity": null,
+    "difficulty": null
+   },
+   {
+    "term": "gratitude",
+    "seed": "gratitud",
+    "position": 1,
+    "rank": null,
+    "results": 193,
+    "popularity": null,
+    "difficulty": null
+   },
+   {
+    "term": "369",
+    "seed": "369",
+    "position": 1,
+    "rank": 93,
+    "results": 185,
+    "popularity": null,
+    "difficulty": null
+   },
+   {
+    "term": "tablero de visión",
+    "seed": "tablero de v",
+    "position": 1,
+    "rank": null,
+    "results": 186,
+    "popularity": null,
+    "difficulty": null
+   },
+   {
+    "term": "afirmaciones positivas diarias",
+    "seed": "afirmac",
+    "position": 1,
+    "rank": null,
+    "results": 123,
+    "popularity": null,
+    "difficulty": null
+   },
+   {
+    "term": "manifestar",
+    "seed": "manifes",
+    "position": 2,
+    "rank": null,
+    "results": 193,
+    "popularity": null,
+    "difficulty": null
+   },
+   {
+    "term": "ia 369",
+    "seed": "369",
+    "position": 2,
+    "rank": 4,
+    "results": 8,
+    "popularity": null,
+    "difficulty": null
+   },
+   {
+    "term": "tablero de vision",
+    "seed": "tablero de v",
+    "position": 2,
+    "rank": null,
+    "results": 186,
+    "popularity": null,
+    "difficulty": null
+   },
+   {
+    "term": "diario de gratitud",
+    "seed": "gratitud",
+    "position": 2,
+    "rank": null,
+    "results": 188,
+    "popularity": null,
+    "difficulty": null
+   },
+   {
+    "term": "afirmaciones positivas diarias gratis",
+    "seed": "afirmac",
+    "position": 2,
+    "rank": null,
+    "results": 117,
+    "popularity": null,
+    "difficulty": null
+   }
+  ],
+  "br": [
+   {
+    "term": "manifested",
+    "seed": "manifest",
+    "position": 1,
+    "rank": 192,
+    "results": 192,
+    "popularity": null,
+    "difficulty": null
+   },
+   {
+    "term": "gratidao",
+    "seed": "gratid",
+    "position": 1,
+    "rank": null,
+    "results": 188,
+    "popularity": null,
+    "difficulty": null
+   },
+   {
+    "term": "369",
+    "seed": "369",
+    "position": 1,
+    "rank": 92,
+    "results": 188,
+    "popularity": null,
+    "difficulty": null
+   },
+   {
+    "term": "afirmacoes diarias",
+    "seed": "afirmac",
+    "position": 1,
+    "rank": null,
+    "results": 184,
+    "popularity": null,
+    "difficulty": null
+   },
+   {
+    "term": "lei da atração",
+    "seed": "lei da atra",
+    "position": 1,
+    "rank": 57,
+    "results": 73,
+    "popularity": null,
+    "difficulty": null
+   },
+   {
+    "term": "manifestação",
+    "seed": "manifest",
+    "position": 2,
+    "rank": 41,
+    "results": 75,
+    "popularity": null,
+    "difficulty": null
+   },
+   {
+    "term": "diário de gratidão",
+    "seed": "gratid",
+    "position": 2,
+    "rank": null,
+    "results": 195,
+    "popularity": null,
+    "difficulty": null
+   },
+   {
+    "term": "afirmacoes diarias gratis",
+    "seed": "afirmac",
+    "position": 2,
+    "rank": null,
+    "results": 12,
+    "popularity": null,
+    "difficulty": null
+   },
+   {
+    "term": "lei da atração citações",
+    "seed": "lei da atra",
+    "position": 2,
+    "rank": null,
+    "results": 10,
+    "popularity": null,
+    "difficulty": null
+   },
+   {
+    "term": "manifested: afirmações",
+    "seed": "manifest",
+    "position": 3,
+    "rank": 31,
+    "results": 50,
+    "popularity": null,
+    "difficulty": null
+   }
+  ],
+  "nl": [
+   {
+    "term": "manifest",
+    "seed": "manifest",
+    "position": 1,
+    "rank": null,
+    "results": 193,
+    "popularity": null,
+    "difficulty": null
+   },
+   {
+    "term": "dankbaarheid dagboek",
+    "seed": "dankbaar",
+    "position": 1,
+    "rank": null,
+    "results": 108,
+    "popularity": null,
+    "difficulty": null
+   },
+   {
+    "term": "engelengetallen - gids",
+    "seed": "engelenget",
+    "position": 1,
+    "rank": null,
+    "results": 1,
+    "popularity": null,
+    "difficulty": null
+   },
+   {
+    "term": "affirmations",
+    "seed": "affirmat",
+    "position": 1,
+    "rank": null,
+    "results": 192,
+    "popularity": null,
+    "difficulty": null
+   },
+   {
+    "term": "manifest love",
+    "seed": "manifest",
+    "position": 2,
+    "rank": null,
+    "results": 176,
+    "popularity": null,
+    "difficulty": null
+   },
+   {
+    "term": "dankbaarheid",
+    "seed": "dankbaar",
+    "position": 2,
+    "rank": 167,
+    "results": 187,
+    "popularity": null,
+    "difficulty": null
+   },
+   {
+    "term": "affirmaties",
+    "seed": "affirmat",
+    "position": 2,
+    "rank": null,
+    "results": 187,
+    "popularity": null,
+    "difficulty": null
+   },
+   {
+    "term": "3-6-9 mucize teknik",
+    "seed": "369",
+    "position": 2,
+    "rank": null,
+    "results": 1,
+    "popularity": null,
+    "difficulty": null
+   },
+   {
+    "term": "manifest with zara",
+    "seed": "manifest",
+    "position": 3,
+    "rank": null,
+    "results": 2,
+    "popularity": null,
+    "difficulty": null
+   },
+   {
+    "term": "manifest: affirmations & focus",
+    "seed": "affirmat",
+    "position": 3,
+    "rank": null,
+    "results": 186,
+    "popularity": null,
+    "difficulty": null
+   }
+  ],
+  "pl": [
+   {
+    "term": "manifestation",
+    "seed": "manifest",
+    "position": 1,
+    "rank": null,
+    "results": 188,
+    "popularity": null,
+    "difficulty": null
+   },
+   {
+    "term": "dziennik wdzięczności",
+    "seed": "wdzięcz",
+    "position": 1,
+    "rank": null,
+    "results": 184,
+    "popularity": null,
+    "difficulty": null
+   },
+   {
+    "term": "369 manifestation & meditation",
+    "seed": "369",
+    "position": 1,
+    "rank": null,
+    "results": 181,
+    "popularity": null,
+    "difficulty": null
+   },
+   {
+    "term": "afirmacje+",
+    "seed": "afirmac",
+    "position": 1,
+    "rank": 104,
+    "results": 115,
+    "popularity": null,
+    "difficulty": null
+   },
+   {
+    "term": "manifestacja",
+    "seed": "manifest",
+    "position": 2,
+    "rank": 26,
+    "results": 33,
+    "popularity": null,
+    "difficulty": null
+   },
+   {
+    "term": "codzienne afirmacje",
+    "seed": "afirmac",
+    "position": 2,
+    "rank": null,
+    "results": 27,
+    "popularity": null,
+    "difficulty": null
+   },
+   {
+    "term": "manifest love",
+    "seed": "manifest",
+    "position": 3,
+    "rank": null,
+    "results": 175,
+    "popularity": null,
+    "difficulty": null
+   },
+   {
+    "term": "manifest with zara",
+    "seed": "manifest",
+    "position": 4,
+    "rank": null,
+    "results": 2,
+    "popularity": null,
+    "difficulty": null
+   },
+   {
+    "term": "afirmacja",
+    "seed": "afirmac",
+    "position": 4,
+    "rank": null,
+    "results": 188,
+    "popularity": null,
+    "difficulty": null
+   },
+   {
+    "term": "3-6-9 mucize teknik",
+    "seed": "369",
+    "position": 4,
+    "rank": null,
+    "results": 1,
+    "popularity": null,
+    "difficulty": null
+   }
+  ],
+  "tr": [
+   {
+    "term": "günlük motivasyon & olumlama",
+    "seed": "olumlama",
+    "position": 1,
+    "rank": null,
+    "results": 81,
+    "popularity": null,
+    "difficulty": null
+   },
+   {
+    "term": "çekim yasası",
+    "seed": "çekim yas",
+    "position": 1,
+    "rank": 71,
+    "results": 73,
+    "popularity": null,
+    "difficulty": null
+   },
+   {
+    "term": "3-6-9 mucize teknik",
+    "seed": "369",
+    "position": 1,
+    "rank": null,
+    "results": 1,
+    "popularity": null,
+    "difficulty": null
+   },
+   {
+    "term": "manifest",
+    "seed": "manifest",
+    "position": 2,
+    "rank": null,
+    "results": 196,
+    "popularity": null,
+    "difficulty": null
+   },
+   {
+    "term": "369 selin özdemir",
+    "seed": "369",
+    "position": 2,
+    "rank": null,
+    "results": 1,
+    "popularity": null,
+    "difficulty": null
+   },
+   {
+    "term": "olumlamalar",
+    "seed": "olumlama",
+    "position": 2,
+    "rank": 80,
+    "results": 81,
+    "popularity": null,
+    "difficulty": null
+   },
+   {
+    "term": "olumlama",
+    "seed": "olumlama",
+    "position": 3,
+    "rank": null,
+    "results": 178,
+    "popularity": null,
+    "difficulty": null
+   },
+   {
+    "term": "manifest ücretsiz",
+    "seed": "manifest",
+    "position": 4,
+    "rank": null,
+    "results": 6,
+    "popularity": null,
+    "difficulty": null
+   },
+   {
+    "term": "life 369",
+    "seed": "369",
+    "position": 4,
+    "rank": null,
+    "results": 183,
+    "popularity": null,
+    "difficulty": null
+   },
+   {
+    "term": "günlük olumlama",
+    "seed": "olumlama",
+    "position": 4,
+    "rank": null,
+    "results": 130,
+    "popularity": null,
+    "difficulty": null
+   }
+  ],
+  "ru": [
+   {
+    "term": "манифест: аффирмации",
+    "seed": "манифест",
+    "position": 1,
+    "rank": 8,
+    "results": 9,
+    "popularity": null,
+    "difficulty": null
+   },
+   {
+    "term": "доска визуализации желаний",
+    "seed": "доска в",
+    "position": 1,
+    "rank": null,
+    "results": 8,
+    "popularity": null,
+    "difficulty": null
+   },
+   {
+    "term": "дневник благодарности",
+    "seed": "благодарн",
+    "position": 1,
+    "rank": null,
+    "results": 182,
+    "popularity": null,
+    "difficulty": null
+   },
+   {
+    "term": "369",
+    "seed": "369",
+    "position": 1,
+    "rank": 106,
+    "results": 147,
+    "popularity": null,
+    "difficulty": null
+   },
+   {
+    "term": "ангельское таро - гадание таро",
+    "seed": "ангельск",
+    "position": 1,
+    "rank": null,
+    "results": 2,
+    "popularity": null,
+    "difficulty": null
+   },
+   {
+    "term": "аффирмации на каждый день",
+    "seed": "аффирмац",
+    "position": 1,
+    "rank": null,
+    "results": 65,
+    "popularity": null,
+    "difficulty": null
+   },
+   {
+    "term": "закон привлечения каждый день",
+    "seed": "закон при",
+    "position": 1,
+    "rank": null,
+    "results": 1,
+    "popularity": null,
+    "difficulty": null
+   },
+   {
+    "term": "манифест - ежедневная визия",
+    "seed": "манифест",
+    "position": 2,
+    "rank": null,
+    "results": 1,
+    "popularity": null,
+    "difficulty": null
+   },
+   {
+    "term": "дневник благодарностей",
+    "seed": "благодарн",
+    "position": 2,
+    "rank": 124,
+    "results": 150,
+    "popularity": null,
+    "difficulty": null
+   },
+   {
+    "term": "ангельские числа - гид",
+    "seed": "ангельск",
+    "position": 2,
+    "rank": null,
+    "results": 1,
+    "popularity": null,
+    "difficulty": null
+   }
+  ],
+  "se": [
+   {
+    "term": "manifest",
+    "seed": "manifest",
+    "position": 1,
+    "rank": null,
+    "results": 193,
+    "popularity": null,
+    "difficulty": null
+   },
+   {
+    "term": "tacksamhetsdagbok",
+    "seed": "tacksam",
+    "position": 1,
+    "rank": 10,
+    "results": 10,
+    "popularity": null,
+    "difficulty": null
+   },
+   {
+    "term": "affirmationer",
+    "seed": "affirmation",
+    "position": 1,
+    "rank": null,
+    "results": 184,
+    "popularity": null,
+    "difficulty": null
+   },
+   {
+    "term": "already done: manifestation",
+    "seed": "manifest",
+    "position": 2,
+    "rank": null,
+    "results": 1,
+    "popularity": null,
+    "difficulty": null
+   },
+   {
+    "term": "tacksamhetsdagbok - 3 rader",
+    "seed": "tacksam",
+    "position": 2,
+    "rank": null,
+    "results": 1,
+    "popularity": null,
+    "difficulty": null
+   },
+   {
+    "term": "369 manifestation & meditation",
+    "seed": "369",
+    "position": 2,
+    "rank": null,
+    "results": 180,
+    "popularity": null,
+    "difficulty": null
+   },
+   {
+    "term": "affirmations",
+    "seed": "affirmation",
+    "position": 2,
+    "rank": null,
+    "results": 190,
+    "popularity": null,
+    "difficulty": null
+   },
+   {
+    "term": "manifest love",
+    "seed": "manifest",
+    "position": 3,
+    "rank": null,
+    "results": 175,
+    "popularity": null,
+    "difficulty": null
+   },
+   {
+    "term": "manifest: affirmations & focus",
+    "seed": "affirmation",
+    "position": 3,
+    "rank": null,
+    "results": 187,
+    "popularity": null,
+    "difficulty": null
+   },
+   {
+    "term": "tacksamhets dagbok",
+    "seed": "tacksam",
+    "position": 3,
+    "rank": 34,
+    "results": 86,
+    "popularity": null,
+    "difficulty": null
+   }
+  ],
+  "no": [
+   {
+    "term": "manifest",
+    "seed": "manifest",
+    "position": 1,
+    "rank": null,
+    "results": 193,
+    "popularity": null,
+    "difficulty": null
+   },
+   {
+    "term": "takknemlighetsdagbok",
+    "seed": "takknem",
+    "position": 1,
+    "rank": null,
+    "results": 4,
+    "popularity": null,
+    "difficulty": null
+   },
+   {
+    "term": "3-6-9 mucize teknik",
+    "seed": "369",
+    "position": 1,
+    "rank": null,
+    "results": 1,
+    "popularity": null,
+    "difficulty": null
+   },
+   {
+    "term": "manifest love",
+    "seed": "manifest",
+    "position": 2,
+    "rank": null,
+    "results": 183,
+    "popularity": null,
+    "difficulty": null
+   },
+   {
+    "term": "369 manifestation & meditation",
+    "seed": "369",
+    "position": 2,
+    "rank": null,
+    "results": 189,
+    "popularity": null,
+    "difficulty": null
+   },
+   {
+    "term": "manifest with zara",
+    "seed": "manifest",
+    "position": 3,
+    "rank": null,
+    "results": 2,
+    "popularity": null,
+    "difficulty": null
+   },
+   {
+    "term": "manifest: affirmations & focus",
+    "seed": "manifest",
+    "position": 4,
+    "rank": null,
+    "results": 190,
+    "popularity": null,
+    "difficulty": null
+   },
+   {
+    "term": "manifesta — manifestation",
+    "seed": "manifest",
+    "position": 5,
+    "rank": null,
+    "results": 8,
+    "popularity": null,
+    "difficulty": null
+   },
+   {
+    "term": "manifestation bank",
+    "seed": "manifest",
+    "position": 6,
+    "rank": null,
+    "results": 4,
+    "popularity": null,
+    "difficulty": null
+   },
+   {
+    "term": "vibrations: manifest daily",
+    "seed": "manifest",
+    "position": 7,
+    "rank": null,
+    "results": 2,
+    "popularity": null,
+    "difficulty": null
+   }
+  ],
+  "dk": [
+   {
+    "term": "manifest",
+    "seed": "manifest",
+    "position": 1,
+    "rank": 111,
+    "results": 191,
+    "popularity": null,
+    "difficulty": null
+   },
+   {
+    "term": "369 manifestation & meditation",
+    "seed": "369",
+    "position": 1,
+    "rank": null,
+    "results": 184,
+    "popularity": null,
+    "difficulty": null
+   },
+   {
+    "term": "manifest love",
+    "seed": "manifest",
+    "position": 2,
+    "rank": null,
+    "results": 174,
+    "popularity": null,
+    "difficulty": null
+   },
+   {
+    "term": "vision board",
+    "seed": "vision",
+    "position": 2,
+    "rank": null,
+    "results": 179,
+    "popularity": null,
+    "difficulty": null
+   },
+   {
+    "term": "manifest with zara",
+    "seed": "manifest",
+    "position": 3,
+    "rank": null,
+    "results": 2,
+    "popularity": null,
+    "difficulty": null
+   },
+   {
+    "term": "3-6-9 mucize teknik",
+    "seed": "369",
+    "position": 3,
+    "rank": null,
+    "results": 1,
+    "popularity": null,
+    "difficulty": null
+   },
+   {
+    "term": "manifest: affirmations & focus",
+    "seed": "manifest",
+    "position": 4,
+    "rank": null,
+    "results": 184,
+    "popularity": null,
+    "difficulty": null
+   },
+   {
+    "term": "manifesta — manifestation",
+    "seed": "manifest",
+    "position": 5,
+    "rank": null,
+    "results": 9,
+    "popularity": null,
+    "difficulty": null
+   },
+   {
+    "term": "manifestation bank",
+    "seed": "manifest",
+    "position": 6,
+    "rank": null,
+    "results": 4,
+    "popularity": null,
+    "difficulty": null
+   },
+   {
+    "term": "align manifest",
+    "seed": "manifest",
+    "position": 7,
+    "rank": null,
+    "results": 33,
+    "popularity": null,
+    "difficulty": null
+   }
+  ],
+  "fi": [
+   {
+    "term": "manifest",
+    "seed": "manifest",
+    "position": 1,
+    "rank": null,
+    "results": 192,
+    "popularity": null,
+    "difficulty": null
+   },
+   {
+    "term": "369 manifestation & meditation",
+    "seed": "369",
+    "position": 1,
+    "rank": null,
+    "results": 181,
+    "popularity": null,
+    "difficulty": null
+   },
+   {
+    "term": "manifest love",
+    "seed": "manifest",
+    "position": 2,
+    "rank": null,
+    "results": 175,
+    "popularity": null,
+    "difficulty": null
+   },
+   {
+    "term": "manifest with zara",
+    "seed": "manifest",
+    "position": 3,
+    "rank": null,
+    "results": 2,
+    "popularity": null,
+    "difficulty": null
+   },
+   {
+    "term": "manifest: affirmations & focus",
+    "seed": "manifest",
+    "position": 4,
+    "rank": null,
+    "results": 190,
+    "popularity": null,
+    "difficulty": null
+   },
+   {
+    "term": "3-6-9 mucize teknik",
+    "seed": "369",
+    "position": 4,
+    "rank": null,
+    "results": 1,
+    "popularity": null,
+    "difficulty": null
+   },
+   {
+    "term": "manifesta — manifestation",
+    "seed": "manifest",
+    "position": 5,
+    "rank": null,
+    "results": 8,
+    "popularity": null,
+    "difficulty": null
+   },
+   {
+    "term": "vision board",
+    "seed": "visio",
+    "position": 5,
+    "rank": null,
+    "results": 184,
+    "popularity": null,
+    "difficulty": null
+   },
+   {
+    "term": "3-6-9 manifestation companion",
+    "seed": "369",
+    "position": 5,
+    "rank": null,
+    "results": 1,
+    "popularity": null,
+    "difficulty": null
+   },
+   {
+    "term": "manifestation bank",
+    "seed": "manifest",
+    "position": 6,
+    "rank": null,
+    "results": 4,
+    "popularity": null,
+    "difficulty": null
+   }
+  ],
+  "jp": [
+   {
+    "term": "引き寄せノート",
+    "seed": "引き寄せ",
+    "position": 1,
+    "rank": 56,
+    "results": 108,
+    "popularity": null,
+    "difficulty": null
+   },
+   {
+    "term": "ビジョンボード：夢を叶える引き寄せの法則・dreamer",
+    "seed": "ビジョンボ",
+    "position": 1,
+    "rank": 8,
+    "results": 10,
+    "popularity": null,
+    "difficulty": null
+   },
+   {
+    "term": "感謝日記",
+    "seed": "感謝",
+    "position": 1,
+    "rank": null,
+    "results": 184,
+    "popularity": null,
+    "difficulty": null
+   },
+   {
+    "term": "369",
+    "seed": "369",
+    "position": 1,
+    "rank": null,
+    "results": 174,
+    "popularity": null,
+    "difficulty": null
+   },
+   {
+    "term": "アファメーション",
+    "seed": "アファ",
+    "position": 1,
+    "rank": null,
+    "results": 184,
+    "popularity": null,
+    "difficulty": null
+   },
+   {
+    "term": "潜在意識",
+    "seed": "潜在意識",
+    "position": 1,
+    "rank": 115,
+    "results": 157,
+    "popularity": null,
+    "difficulty": null
+   },
+   {
+    "term": "引き寄せの法則",
+    "seed": "引き寄せ",
+    "position": 2,
+    "rank": 41,
+    "results": 123,
+    "popularity": null,
+    "difficulty": null
+   },
+   {
+    "term": "ビジョンボード",
+    "seed": "ビジョンボ",
+    "position": 2,
+    "rank": null,
+    "results": 187,
+    "popularity": null,
+    "difficulty": null
+   },
+   {
+    "term": "感謝",
+    "seed": "感謝",
+    "position": 2,
+    "rank": null,
+    "results": 181,
+    "popularity": null,
+    "difficulty": null
+   },
+   {
+    "term": "アファメーションで引き寄せる「セルフノート」",
+    "seed": "アファ",
+    "position": 2,
+    "rank": null,
+    "results": 4,
+    "popularity": null,
+    "difficulty": null
+   }
+  ],
+  "kr": [
+   {
+    "term": "끌어당김",
+    "seed": "끌어당",
+    "position": 1,
+    "rank": 11,
+    "results": 39,
+    "popularity": null,
+    "difficulty": null
+   },
+   {
+    "term": "비전보드",
+    "seed": "비전보",
+    "position": 1,
+    "rank": null,
+    "results": 193,
+    "popularity": null,
+    "difficulty": null
+   },
+   {
+    "term": "감사일기",
+    "seed": "감사일",
+    "position": 1,
+    "rank": null,
+    "results": 182,
+    "popularity": null,
+    "difficulty": null
+   },
+   {
+    "term": "확언",
+    "seed": "확언",
+    "position": 1,
+    "rank": 152,
+    "results": 185,
+    "popularity": null,
+    "difficulty": null
+   },
+   {
+    "term": "끌어당김: 비전보드 & 369",
+    "seed": "끌어당",
+    "position": 2,
+    "rank": 1,
+    "results": 7,
+    "popularity": null,
+    "difficulty": null
+   },
+   {
+    "term": "비전보드 ㆍ vision board ㆍ 자기계발 확언",
+    "seed": "비전보",
+    "position": 2,
+    "rank": 6,
+    "results": 13,
+    "popularity": null,
+    "difficulty": null
+   },
+   {
+    "term": "데이블룸: 감사일기, 감사의 정원, 감정 일기, 확언",
+    "seed": "감사일",
+    "position": 2,
+    "rank": null,
+    "results": 1,
+    "popularity": null,
+    "difficulty": null
+   },
+   {
+    "term": "369 manifestation & meditation",
+    "seed": "369",
+    "position": 2,
+    "rank": null,
+    "results": 185,
+    "popularity": null,
+    "difficulty": null
+   },
+   {
+    "term": "확언 문장 플레이어 - 자기암시, 동기부여",
+    "seed": "확언",
+    "position": 2,
+    "rank": null,
+    "results": 9,
+    "popularity": null,
+    "difficulty": null
+   },
+   {
+    "term": "manifest - 끌어당김 일기",
+    "seed": "끌어당",
+    "position": 3,
+    "rank": 6,
+    "results": 24,
+    "popularity": null,
+    "difficulty": null
+   }
+  ],
+  "cn": [
+   {
+    "term": "显化助手",
+    "seed": "显化",
+    "position": 1,
+    "rank": null,
+    "results": 165,
+    "popularity": null,
+    "difficulty": null
+   },
+   {
+    "term": "愿景板",
+    "seed": "愿景",
+    "position": 1,
+    "rank": 116,
+    "results": 158,
+    "popularity": null,
+    "difficulty": null
+   },
+   {
+    "term": "感恩日记",
+    "seed": "感恩",
+    "position": 1,
+    "rank": null,
+    "results": 187,
+    "popularity": null,
+    "difficulty": null
+   },
+   {
+    "term": "吸引力法则",
+    "seed": "吸引力",
+    "position": 1,
+    "rank": 89,
+    "results": 103,
+    "popularity": null,
+    "difficulty": null
+   },
+   {
+    "term": "显化钥匙",
+    "seed": "显化",
+    "position": 2,
+    "rank": null,
+    "results": 5,
+    "popularity": null,
+    "difficulty": null
+   },
+   {
+    "term": "感恩日志",
+    "seed": "感恩",
+    "position": 2,
+    "rank": null,
+    "results": 54,
+    "popularity": null,
+    "difficulty": null
+   },
+   {
+    "term": "吸引力法则每一天",
+    "seed": "吸引力",
+    "position": 2,
+    "rank": null,
+    "results": 3,
+    "popularity": null,
+    "difficulty": null
+   },
+   {
+    "term": "显化日记",
+    "seed": "显化",
+    "position": 3,
+    "rank": null,
+    "results": 171,
+    "popularity": null,
+    "difficulty": null
+   },
+   {
+    "term": "感恩之行",
+    "seed": "感恩",
+    "position": 3,
+    "rank": null,
+    "results": 5,
+    "popularity": null,
+    "difficulty": null
+   },
+   {
+    "term": "369",
+    "seed": "369",
+    "position": 3,
+    "rank": null,
+    "results": 182,
+    "popularity": null,
+    "difficulty": null
+   }
+  ],
+  "sa": [
+   {
+    "term": "369",
+    "seed": "369",
+    "position": 1,
+    "rank": 65,
+    "results": 173,
+    "popularity": null,
+    "difficulty": null
+   },
+   {
+    "term": "توكيدات ايجابية",
+    "seed": "توكيد",
+    "position": 1,
+    "rank": null,
+    "results": 38,
+    "popularity": null,
+    "difficulty": null
+   },
+   {
+    "term": "امتنان",
+    "seed": "امتنان",
+    "position": 2,
+    "rank": 168,
+    "results": 177,
+    "popularity": null,
+    "difficulty": null
+   },
+   {
+    "term": "توكيدات",
+    "seed": "توكيد",
+    "position": 2,
+    "rank": null,
+    "results": 164,
+    "popularity": null,
+    "difficulty": null
+   },
+   {
+    "term": "369 manifestation & meditation",
+    "seed": "369",
+    "position": 3,
+    "rank": null,
+    "results": 185,
+    "popularity": null,
+    "difficulty": null
+   },
+   {
+    "term": "3-6-9 mucize teknik",
+    "seed": "369",
+    "position": 4,
+    "rank": null,
+    "results": 1,
+    "popularity": null,
+    "difficulty": null
+   },
+   {
+    "term": "3-6-9 manifestation companion",
+    "seed": "369",
+    "position": 6,
+    "rank": null,
+    "results": 1,
+    "popularity": null,
+    "difficulty": null
+   }
+  ],
+  "id": [
+   {
+    "term": "manifest",
+    "seed": "manifest",
+    "position": 1,
+    "rank": null,
+    "results": 197,
+    "popularity": null,
+    "difficulty": null
+   },
+   {
+    "term": "369",
+    "seed": "369",
+    "position": 1,
+    "rank": null,
+    "results": 190,
+    "popularity": null,
+    "difficulty": null
+   },
+   {
+    "term": "manifest love",
+    "seed": "manifest",
+    "position": 2,
+    "rank": null,
+    "results": 179,
+    "popularity": null,
+    "difficulty": null
+   },
+   {
+    "term": "manifest with zara",
+    "seed": "manifest",
+    "position": 3,
+    "rank": null,
+    "results": 2,
+    "popularity": null,
+    "difficulty": null
+   },
+   {
+    "term": "369 manifestation & meditation",
+    "seed": "369",
+    "position": 3,
+    "rank": null,
+    "results": 188,
+    "popularity": null,
+    "difficulty": null
+   },
+   {
+    "term": "manifest: affirmations & focus",
+    "seed": "manifest",
+    "position": 4,
+    "rank": null,
+    "results": 190,
+    "popularity": null,
+    "difficulty": null
+   },
+   {
+    "term": "manifesta — manifestation",
+    "seed": "manifest",
+    "position": 5,
+    "rank": null,
+    "results": 8,
+    "popularity": null,
+    "difficulty": null
+   },
+   {
+    "term": "manifestation bank",
+    "seed": "manifest",
+    "position": 6,
+    "rank": null,
+    "results": 4,
+    "popularity": null,
+    "difficulty": null
+   },
+   {
+    "term": "vision board",
+    "seed": "vision",
+    "position": 6,
+    "rank": null,
+    "results": 185,
+    "popularity": null,
+    "difficulty": null
+   },
+   {
+    "term": "vibrations: manifest daily",
+    "seed": "manifest",
+    "position": 7,
+    "rank": null,
+    "results": 3,
+    "popularity": null,
+    "difficulty": null
+   }
+  ],
+  "vn": [
+   {
+    "term": "lời khẳng định",
+    "seed": "khẳng định",
+    "position": 1,
+    "rank": null,
+    "results": 53,
+    "popularity": null,
+    "difficulty": null
+   },
+   {
+    "term": "manifest",
+    "seed": "manifest",
+    "position": 1,
+    "rank": null,
+    "results": 198,
+    "popularity": null,
+    "difficulty": null
+   },
+   {
+    "term": "369",
+    "seed": "369",
+    "position": 2,
+    "rank": null,
+    "results": 181,
+    "popularity": null,
+    "difficulty": null
+   },
+   {
+    "term": "manifest love",
+    "seed": "manifest",
+    "position": 2,
+    "rank": null,
+    "results": 180,
+    "popularity": null,
+    "difficulty": null
+   },
+   {
+    "term": "manifest with zara",
+    "seed": "manifest",
+    "position": 3,
+    "rank": null,
+    "results": 2,
+    "popularity": null,
+    "difficulty": null
+   },
+   {
+    "term": "369 manifestation & meditation",
+    "seed": "369",
+    "position": 4,
+    "rank": null,
+    "results": 183,
+    "popularity": null,
+    "difficulty": null
+   },
+   {
+    "term": "manifest: affirmations & focus",
+    "seed": "manifest",
+    "position": 4,
+    "rank": null,
+    "results": 191,
+    "popularity": null,
+    "difficulty": null
+   },
+   {
+    "term": "manifesta — manifestation",
+    "seed": "manifest",
+    "position": 5,
+    "rank": null,
+    "results": 8,
+    "popularity": null,
+    "difficulty": null
+   },
+   {
+    "term": "manifestation bank",
+    "seed": "manifest",
+    "position": 6,
+    "rank": null,
+    "results": 4,
+    "popularity": null,
+    "difficulty": null
+   },
+   {
+    "term": "3-6-9 manifestation companion",
+    "seed": "369",
+    "position": 7,
+    "rank": null,
+    "results": 1,
+    "popularity": null,
+    "difficulty": null
+   }
+  ]
+ }
+}
