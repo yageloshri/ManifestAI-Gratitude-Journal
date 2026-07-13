@@ -1,0 +1,20 @@
+You are running the WEEKLY CONTENT AUTOPILOT for the app "Manifest: Vision Board & 369" and its site www.ai-manifest.com. This is an unattended headless run — be decisive, finish end-to-end, and stay strictly inside the guardrails.
+
+READ FIRST (for role, standards, recipes): /Users/yageloshri/ManifestAI-Gratitude-Journal/.claude/agents/seo-expert.md and .claude/agents/geo-expert.md, plus website/keywords.md, website/geo-log.md, and website/sitemap.xml.
+
+HARD GUARDRAILS (compliance — never cross):
+- ONLY touch the website under /Users/yageloshri/ManifestAI-Gratitude-Journal/website/ (and aso/reports/ for your summary).
+- NEVER touch App Store Connect / app metadata, NEVER the app source, NEVER post to Reddit/Quora/social, NEVER generate or solicit reviews, NEVER create thin/spun/duplicate pages. Quality only.
+- NEVER modify website/privacy.html or website/terms.html.
+- If anything is ambiguous or a step fails hard, STOP that step, log it, and finish the rest — do not force.
+
+TASK — publish exactly ONE new high-quality guide this run:
+1. Pick ONE target keyword/topic with genuine search intent that is NOT already covered by an existing page in website/guides/ (list them first). Prefer long-tail, download-intent topics from keywords.md or a fresh gap you validate with 1-2 WebSearches (People Also Ask / related). Examples of still-open angles: "manifestation for beginners", "does the 369 method work", "scripting method manifestation", "affirmations for money/love", "how to manifest on paper", "555 / 1111 angel number meaning", "vision board ideas", "lucky girl syndrome". Confirm it isn't already a page.
+2. Write website/guides/<slug>.html — 800-1200 words of genuinely useful, answer-first content (definition/answer in the first 2 sentences under a question H2), real steps/examples/tables, then natural Manifest-app integration + one download CTA to https://apps.apple.com/us/app/manifest-vision-board-369/id6757018484, breadcrumbs, ≥3 internal links to related existing guides. Same dark night-sky design system (reuse the exact <head>/css structure of an existing guide). Full SEO: one H1, <title> ≤60 chars ending "| Manifest App", meta description ≤155, canonical https://www.ai-manifest.com/guides/<slug>.html, OG+twitter, lang="en", alt text on any image, visible "Updated: <Month Year>". JSON-LD: Article + BreadcrumbList (+ HowTo or FAQPage if honestly applicable) — must parse and match visible text.
+3. Wire it in: add a card to the index.html guides grid; add the link to the footer guide list on index.html AND every file in website/guides/ (keep footers consistent); add a <url> to website/sitemap.xml with <lastmod> today; add a line to website/llms.txt.
+4. Link-check: verify every href/src on the new page resolves and the new URL is reachable in the sitemap/footers; fix anything broken.
+5. Deploy + index: `cd website && vercel deploy --prod --yes` ; verify the new URL returns 200 with a normal UA and with a "GPTBot" UA. Then submit the new URL + updated pages to IndexNow (host www.ai-manifest.com, key 0e14305ee36247bab36482037254b3ff, keyLocation https://www.ai-manifest.com/0e14305ee36247bab36482037254b3ff.txt). Then re-submit the sitemap to Google Search Console: PUT https://searchconsole.googleapis.com/webmasters/v3/sites/sc-domain%3Aai-manifest.com/sitemaps/https%3A%2F%2Fwww.ai-manifest.com%2Fsitemap.xml with header Authorization: Bearer $(gcloud auth application-default print-access-token) and X-Goog-User-Project: shmorim-9d315 (expect 204).
+6. Append a dated entry to website/geo-log.md (topic shipped, target query, why) and write a 5-line summary to aso/reports/content-<YYYY-MM-DD>.md.
+7. Commit + push: from repo root, `git add website/ aso/reports/ && git commit -m "Autopilot: new guide <slug>" && git push origin main`.
+
+Finish the whole pipeline. Report what you shipped, the live URL, and any step you skipped and why.
