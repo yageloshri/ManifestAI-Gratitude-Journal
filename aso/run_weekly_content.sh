@@ -12,7 +12,10 @@ PROMPT="$(cat "$REPO/aso/content_autopilot_prompt.txt")"
 
 # Headless run. Scoped to the tools the pipeline needs; the prompt is the
 # guardrail (website-only). Model kept to sonnet for weekly cost control.
-timeout 2400 claude -p "$PROMPT" \
+# macOS has no `timeout`; use gtimeout if present, else run without a cap.
+TIMEOUT_CMD="$(command -v timeout || command -v gtimeout || true)"
+if [ -n "$TIMEOUT_CMD" ]; then RUN="$TIMEOUT_CMD 2400"; else RUN=""; fi
+$RUN claude -p "$PROMPT" \
   --model sonnet \
   --dangerously-skip-permissions \
   --allowedTools "Bash Read Write Edit Glob Grep WebSearch WebFetch" \
