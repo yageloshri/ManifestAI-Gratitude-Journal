@@ -24,12 +24,13 @@ has dedicated intent and viral TikTok demand).
 | angel numbers meaning 111 222 333 444 | Informational, huge volume, top-funnel | `/guides/angel-numbers-meaning.html` |
 | gratitude journal prompts for manifestation | Informational, template-seeking | `/guides/gratitude-journal-prompts-for-manifestation.html` |
 
-## Supporting long-tail (2 bonus pages)
+## Supporting long-tail (3 bonus pages)
 
 | Keyword | Intent | Target page |
 |---|---|---|
 | how to manifest something (for beginners, writing/affirmations) | Informational, beginner top-funnel | `/guides/how-to-manifest-something.html` |
 | manifestation journal (how to start one) | Informational → download (journal-app adjacent) | `/guides/manifestation-journal.html` |
+| scripting method manifestation (how to write it) | Informational how-to, high journal/app intent | `/guides/scripting-method-manifestation.html` |
 
 ## SERP validation notes
 
@@ -45,3 +46,9 @@ has dedicated intent and viral TikTok demand).
   readers to numerology + 369 pages.
 - Gratitude/manifestation prompt SERPs are list posts → page delivers 30+ copy-ready prompts.
 - FAQ section on index mirrors People Also Ask phrasing 1:1 with FAQPage JSON-LD.
+- "Scripting method manifestation" (July 2026 scan): editorial results give a definition (law of
+  assumption / writing as if it already happened), a step list (mindset → focus → present tense →
+  sensory detail → emotion → gratitude close), and frequency guidance (weekly vs daily). No existing
+  guide covered this distinct technique (manifestation-journal.html only mentions it briefly) →
+  dedicated page ships with the 4-step formula, 3 category examples, and a scripting-vs-affirmations-
+  vs-369 comparison table.

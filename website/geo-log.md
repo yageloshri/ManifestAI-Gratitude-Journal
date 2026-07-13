@@ -51,3 +51,17 @@ Highest-leverage: publish an honest "Best Manifestation Apps (2026)" comparison 
 **Deploy/verify:** Vercel prod deploy aliased to www.ai-manifest.com; live page 200 + correct title with normal UA and GPTBot UA. IndexNow: 12 URLs submitted, HTTP 200. GSC: sitemap re-submitted via API, HTTP 204.
 
 **Watch next round:** (1) does the page get indexed / start appearing for "best manifestation app" probes — re-probe ChatGPT/Perplexity-style answers; (2) GSC queries containing "best" or "apps" at position 5–20 → strengthen title/intro; (3) competitor data drift — re-pull iTunes API ratings monthly and bump the visible "Updated" date + lastmod when refreshed; (4) consider a dedicated "best 369 app" section/page if the FAQ answer starts drawing impressions.
+
+---
+
+## 2026-07-13 — Content autopilot round (shipped: Scripting for Manifestation guide)
+
+**Target query:** "scripting method manifestation" / "scripting for manifestation" / "how to write a manifestation script". Confirmed no existing page owned this angle — `manifestation-journal.html` only namechecks scripting as one of four building blocks, no page teaches the technique itself. WebSearch of the query shows editorial winners give: a law-of-assumption definition, a mindset-then-format step list, present/past-tense phrasing rules, sensory-detail emphasis, and frequency guidance (daily vs weekly) — all liftable shapes.
+
+**Shipped:** `guides/scripting-method-manifestation.html` — 1,199 words. Liftable assets: answer-first lead + quick-answer box, a scripting-vs-affirmations-vs-369-method comparison table, a 4-step formula with a labeled example box per step, 3 category example scripts (love/money/career), and a 3-question FAQ. JSON-LD: Article + BreadcrumbList + FAQPage (visible text matches exactly). Visible "Updated: July 2026". App integration ties scripting to the AI-elevated journal (screenshot-4 reused, distinct alt text) plus a 369-method pairing suggestion — no fabricated stats.
+
+**Wiring:** index guides grid (new card) + footer guide list on index.html and all 11 existing guide pages + sitemap.xml (lastmod 2026-07-13) + llms.txt line + keywords.md (new long-tail row + SERP validation note). Link check across the whole site (index + all guides) passed with zero broken hrefs/srcs.
+
+**Deploy/verify:** Vercel prod deploy aliased to www.ai-manifest.com; new page live 200 with normal UA and GPTBot UA; correct `<title>` confirmed on the live HTML. IndexNow: 14 URLs (new guide + index + sitemap + 11 footer-changed guides) submitted, HTTP 200. GSC: sitemap re-submitted via API, HTTP 204.
+
+**Watch next round:** (1) URL Inspection / indexing status for the new guide once Google crawls it; (2) probe "scripting method manifestation" and "how to write a manifestation script" on AI answer engines to see if ai-manifest.com starts appearing; (3) GSC queries containing "scripting" or "script" at position 5–20 once data accrues → strengthen intro/title; (4) next open angle candidates from this round's research: "lucky girl syndrome" (viral, mindset-heavy, weaker natural app tie-in) and "vision board ideas" (distinct from the existing phone-tutorial guide — a themed-ideas list could win a different SERP shape).
