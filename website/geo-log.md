@@ -65,3 +65,17 @@ Highest-leverage: publish an honest "Best Manifestation Apps (2026)" comparison 
 **Deploy/verify:** Vercel prod deploy aliased to www.ai-manifest.com; new page live 200 with normal UA and GPTBot UA; correct `<title>` confirmed on the live HTML. IndexNow: 14 URLs (new guide + index + sitemap + 11 footer-changed guides) submitted, HTTP 200. GSC: sitemap re-submitted via API, HTTP 204.
 
 **Watch next round:** (1) URL Inspection / indexing status for the new guide once Google crawls it; (2) probe "scripting method manifestation" and "how to write a manifestation script" on AI answer engines to see if ai-manifest.com starts appearing; (3) GSC queries containing "scripting" or "script" at position 5–20 once data accrues → strengthen intro/title; (4) next open angle candidates from this round's research: "lucky girl syndrome" (viral, mindset-heavy, weaker natural app tie-in) and "vision board ideas" (distinct from the existing phone-tutorial guide — a themed-ideas list could win a different SERP shape).
+
+---
+
+## 2026-07-16 — Content autopilot round (shipped: Vision Board Ideas guide)
+
+**Target query:** "vision board ideas" / "what to put on a vision board" / "vision board categories". Flagged as an open angle in the 2026-07-13 round. Confirmed no existing page owned it — `how-to-make-a-vision-board-on-your-phone.html` teaches the phone-assembly mechanics but never lists what to put on the board itself. WebSearch of the query (2 scans: category breakdown, PAA/themes) shows editorial winners are categorized listicles (career, love, health, money, home, travel, personal growth, self-care, spirituality) with concrete image/word suggestions per category, plus guidance to keep the total image count small (10-15) — a distinct SERP shape from the "make one on your phone" tutorial format.
+
+**Shipped:** `guides/vision-board-ideas.html` — ~1,230 words. Liftable assets: answer-first lead + quick-answer box, 9 category H2s each with 3-4 concrete image/word ideas, a "structure" comparison table (life-areas board vs. single-goal board vs. feeling board), and a 3-question FAQ on category count, image count, and words-vs-images. JSON-LD: Article + BreadcrumbList + FAQPage (visible text matches exactly). Visible "Updated: July 2026". App integration ties the category list directly to Manifest's grid templates (2×2/3×3/mosaic) — no fabricated stats.
+
+**Wiring:** index guides grid (new card) + footer guide list on index.html and all 12 existing guide pages + sitemap.xml (lastmod 2026-07-16) + llms.txt line + keywords.md (new long-tail row + SERP validation note). Link check across index + all 13 guides passed with zero broken hrefs/srcs; all 3 JSON-LD blocks parse.
+
+**Deploy/verify:** Vercel prod deploy aliased to www.ai-manifest.com; new page live 200 with normal UA and GPTBot UA; correct `<title>` confirmed on the live HTML. IndexNow: 15 URLs (new guide + index + sitemap + 12 footer-changed guides) submitted, HTTP 200. GSC: sitemap re-submitted via API, HTTP 204.
+
+**Watch next round:** (1) URL Inspection / indexing status for the new guide; (2) probe "vision board ideas" and "what to put on a vision board" on AI answer engines to see if ai-manifest.com starts appearing; (3) GSC queries containing "vision board ideas" or "vision board categories" at position 5–20 once data accrues → strengthen intro/title; (4) remaining open angle from prior rounds: "lucky girl syndrome" (viral, mindset-heavy, weaker natural app tie-in — still unshipped).

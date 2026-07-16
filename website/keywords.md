@@ -31,6 +31,7 @@ has dedicated intent and viral TikTok demand).
 | how to manifest something (for beginners, writing/affirmations) | Informational, beginner top-funnel | `/guides/how-to-manifest-something.html` |
 | manifestation journal (how to start one) | Informational → download (journal-app adjacent) | `/guides/manifestation-journal.html` |
 | scripting method manifestation (how to write it) | Informational how-to, high journal/app intent | `/guides/scripting-method-manifestation.html` |
+| vision board ideas (categories, what to put on it) | Informational, template-seeking, direct app tie-in | `/guides/vision-board-ideas.html` |
 
 ## SERP validation notes
 
@@ -46,6 +47,11 @@ has dedicated intent and viral TikTok demand).
   readers to numerology + 369 pages.
 - Gratitude/manifestation prompt SERPs are list posts → page delivers 30+ copy-ready prompts.
 - FAQ section on index mirrors People Also Ask phrasing 1:1 with FAQPage JSON-LD.
+- "Vision board ideas" (July 2026 scan): editorial winners are categorized listicles (career, love,
+  health, money, home, travel, growth, self-care, spirituality) with concrete image/word suggestions
+  per category — distinct SERP shape from "how to make one on your phone" (a mechanics tutorial).
+  No existing guide covered the ideas/categories angle → dedicated page ships with 9 categories,
+  a category-count comparison table, and direct tie-in to the app's grid templates.
 - "Scripting method manifestation" (July 2026 scan): editorial results give a definition (law of
   assumption / writing as if it already happened), a step list (mindset → focus → present tense →
   sensory detail → emotion → gratitude close), and frequency guidance (weekly vs daily). No existing
