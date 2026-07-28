@@ -8,12 +8,10 @@
     <string>/bin/bash</string>
     <string>/Users/yageloshri/ManifestAI-Gratitude-Journal/aso/run_weekly_growth.sh</string>
   </array>
-  <key>StartCalendarInterval</key>
-  <dict>
-    <key>Weekday</key><integer>1</integer>
-    <key>Hour</key><integer>9</integer>
-    <key>Minute</key><integer>17</integer>
-  </dict>
+  <!-- Every 3 days (259200s). ASO ranks move fast; weekly misses swings.
+       StartInterval fires ~3 days after load and every 3 days after; if the
+       Mac is asleep at fire time, launchd runs it on next wake. -->
+  <key>StartInterval</key><integer>259200</integer>
   <key>StandardOutPath</key><string>/Users/yageloshri/ManifestAI-Gratitude-Journal/aso/logs/launchd.out</string>
   <key>StandardErrorPath</key><string>/Users/yageloshri/ManifestAI-Gratitude-Journal/aso/logs/launchd.err</string>
   <key>RunAtLoad</key><false/>
