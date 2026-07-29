@@ -5,7 +5,14 @@
     "first_email": "gifting-first: offer 1-year premium code + ask their rates. No payment commitments in any draft.",
     "deal_approval": "any money/terms commitment requires Yagel's explicit OK in chat",
     "language": "write in creator's language per marketing/community-field-guide.md registers",
-    "voice": "personal, specific to their content (reference a real post/video), no marketing-speak, per content-playbook.md blocklist"
+    "voice": "personal, specific to their content (reference a real post/video), no marketing-speak, per content-playbook.md blocklist",
+    "tiers": {
+      "nano": "1K-20K followers: gift-only offer (1yr premium + audience code). Highest reply rates; volume tier.",
+      "micro": "20K-150K: gift + ask rates for a short video/story. Sweet spot for cost-per-install.",
+      "mid": "150K-700K: gift + rates; expect paid. Yagel approves any spend.",
+      "macro": "700K+: contact but expect agency/high rates; long game."
+    },
+    "daily_volume": "Up to 12 personalized drafts/day from personal Gmail (safe ceiling). Raise to 30-40/day only after dedicated outreach mailbox (hello@ai-manifest.com) is warmed."
   },
   "contacts": [
     {
