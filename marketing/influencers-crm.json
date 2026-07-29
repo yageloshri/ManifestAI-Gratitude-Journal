@@ -17,9 +17,11 @@
       "email": "lavendaire@select.co",
       "email_type": "business",
       "language": "en",
-      "status": "to_contact",
+      "status": "drafted",
       "priority": 1,
-      "notes": "Best brand fit - sells her own artist-of-life journals; gratitude/manifestation core audience. Approach as fellow journaling-tool builder, not generic sponsor ask."
+      "drafted_date": "2026-07-29",
+      "draft_subject": "your video on sitting with uncertainty",
+      "notes": "Best brand fit - sells her own artist-of-life journals; gratitude/manifestation core audience. Approach as fellow journaling-tool builder, not generic sponsor ask. Draft references her Diary of Becoming video on uncertainty + 2026 Artist of Life workbook."
     },
     {
       "name": "Simran",
@@ -30,9 +32,11 @@
       "email": "simranexplores@gmail.com",
       "email_type": "personal",
       "language": "en",
-      "status": "to_contact",
+      "status": "drafted",
       "priority": 2,
-      "notes": "Top engagement tier. Personal email - keep tone extra human."
+      "drafted_date": "2026-07-29",
+      "draft_subject": "your journal prompts over those australia clips",
+      "notes": "Top engagement tier. Personal email - keep tone extra human. Draft references her signature style: journal prompts overlaid on Australian nature clips."
     },
     {
       "name": "Olivia Rose Thomas",
@@ -43,9 +47,11 @@
       "email": "contact@inspireddelusions.com",
       "email_type": "business",
       "language": "en",
-      "status": "to_contact",
+      "status": "drafted",
       "priority": 2,
-      "notes": "Highest engagement of enriched set. Brand name 'inspired delusions' = manifestation-native."
+      "drafted_date": "2026-07-29",
+      "draft_subject": "your episode on manifesting when life feels hard",
+      "notes": "Highest engagement of enriched set. Brand name 'inspired delusions' = manifestation-native. Draft references Jul 21 podcast episode 'How to Manifest When Life Feels Hard' (co-host Kayma Wolday)."
     },
     {
       "name": "Matt Cooke",
