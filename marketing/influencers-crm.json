@@ -1,0 +1,90 @@
+{
+  "_schema": "Influencer outreach CRM. Statuses: to_enrich > to_contact > drafted (Gmail draft ready, awaiting Yagel send) > sent > replied > negotiating > deal | passed | no_reply. Routines update this file and commit.",
+  "_policy": {
+    "sending": "NEVER auto-send. Routines create Gmail DRAFTS only; Yagel reviews and sends.",
+    "first_email": "gifting-first: offer 1-year premium code + ask their rates. No payment commitments in any draft.",
+    "deal_approval": "any money/terms commitment requires Yagel's explicit OK in chat",
+    "language": "write in creator's language per marketing/community-field-guide.md registers",
+    "voice": "personal, specific to their content (reference a real post/video), no marketing-speak, per content-playbook.md blocklist"
+  },
+  "contacts": [
+    {
+      "name": "Aileen Xu (Lavendaire)",
+      "handle": "lavendaire",
+      "platform": "instagram+tiktok+youtube",
+      "followers": "2.66M YT / cross-platform",
+      "engagement": null,
+      "email": "lavendaire@select.co",
+      "email_type": "business",
+      "language": "en",
+      "status": "to_contact",
+      "priority": 1,
+      "notes": "Best brand fit - sells her own artist-of-life journals; gratitude/manifestation core audience. Approach as fellow journaling-tool builder, not generic sponsor ask."
+    },
+    {
+      "name": "Simran",
+      "handle": "simranexplores",
+      "platform": "tiktok",
+      "followers": "103K",
+      "engagement": "11.0%",
+      "email": "simranexplores@gmail.com",
+      "email_type": "personal",
+      "language": "en",
+      "status": "to_contact",
+      "priority": 2,
+      "notes": "Top engagement tier. Personal email - keep tone extra human."
+    },
+    {
+      "name": "Olivia Rose Thomas",
+      "handle": "inspireddelusions",
+      "platform": "tiktok",
+      "followers": "110K",
+      "engagement": "14.0%",
+      "email": "contact@inspireddelusions.com",
+      "email_type": "business",
+      "language": "en",
+      "status": "to_contact",
+      "priority": 2,
+      "notes": "Highest engagement of enriched set. Brand name 'inspired delusions' = manifestation-native."
+    },
+    {
+      "name": "Matt Cooke",
+      "handle": "mattcooke",
+      "platform": "tiktok",
+      "followers": "260K",
+      "engagement": "8.6%",
+      "email": "matt@mattcooke.me",
+      "email_type": "business",
+      "language": "en",
+      "status": "to_contact",
+      "priority": 3,
+      "notes": "Largest TikTok reach of enriched set."
+    },
+    {
+      "name": "Jessica Heslop (Manifest by Jess)",
+      "handle": "manifestbyjess",
+      "platform": "instagram+tiktok",
+      "followers": "641K",
+      "engagement": null,
+      "email": "team@jessicaheslop.com",
+      "email_type": "team",
+      "language": "en",
+      "status": "to_contact",
+      "priority": 3,
+      "notes": "Team inbox - slightly more professional register, still human."
+    },
+    {
+      "name": "Amber Ricquel (The Love Gal)",
+      "handle": "thelovegal",
+      "platform": "tiktok+instagram",
+      "followers": "83K",
+      "engagement": null,
+      "email": "luckylivemusic@gmail.com",
+      "email_type": "personal",
+      "language": "en",
+      "status": "to_contact",
+      "priority": 4,
+      "notes": "Love/relationships manifestation angle."
+    }
+  ]
+}
