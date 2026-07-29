@@ -24,6 +24,11 @@
 | Product Hunt | ⏳ not tested | Add producthunt.com in extension site permissions |
 | AlternativeTo | ⏳ not tested | Add alternativeto.net in extension site permissions |
 
+## Paused state (2026-07-29 — resume when Yagel returns)
+- ✅ EN Quora answer #2 posted (approved). Quora total: 2 answers, 2 links. **Quora weekly link budget used — next Quora links no earlier than ~Aug 5** (self-imposed, mirrors Reddit domain-protection spirit).
+- **APPROVED, pending execution:** convert Pinterest personal → business (Yagel approved 2026-07-29). Blocked mid-attempt: pinterest.com stuck on loading spinner. On resume: Settings → Account management → Convert to business, then claim ai-manifest.com (verification tag deploy is on us).
+- **Next on resume:** pt.quora.com "método 369" question hunt + pt-BR draft (→ /pt/guides/, present for approval); Reddit warm-up comments continue (no links, phase 1).
+
 ## Target queue
 | # | Where | Thread/Action | Status |
 |---|---|---|---|
@@ -39,3 +44,4 @@
 |---|---|---|---|---|
 | 2026-07-29 | Quora | quora.com/How-do-you-do-the-369-manifestation-method-example (answer by אושרי יגל) | /guides/how-to-do-the-369-method.html | Full example answer w/ disclosure; credential "Practice the 369 method daily; built an app around it"; question had only weak 4y-old answers |
 | 2026-07-29 | Reddit r/lawofattraction | comments/1urzcaj (369 two manifestations) — comment by EntrepreneurAny4923 | (no link — warm-up phase) | Pure-value comment per field guide phase 1; reddit register |
+| 2026-07-29 | Quora | quora.com/I-am-doing-the-369-manifestation-technique-but-nothing-is-happening... (answer #2) | /guides/369-method-examples.html | Troubleshooting answer, approved by Yagel; same credential |
