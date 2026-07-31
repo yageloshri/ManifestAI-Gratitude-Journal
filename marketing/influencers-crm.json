@@ -12,7 +12,9 @@
       "mid": "150K-700K: gift + rates; expect paid. Yagel approves any spend.",
       "macro": "700K+: contact but expect agency/high rates; long game."
     },
-    "daily_volume": "Up to 12 personalized drafts/day from personal Gmail (safe ceiling). Raise to 30-40/day only after dedicated outreach mailbox (hello@ai-manifest.com) is warmed."
+    "daily_volume": "Up to 12 personalized drafts/day from personal Gmail (safe ceiling). Raise to 30-40/day only after dedicated outreach mailbox (hello@ai-manifest.com) is warmed.",
+    "outreach_mailbox_ready": false,
+    "outreach_mailbox_note": "Migrating to info@ai-manifest.com; no outreach drafts in personal Gmail until this flag is true"
   },
   "contacts": [
     {
