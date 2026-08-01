@@ -79,3 +79,11 @@ Highest-leverage: publish an honest "Best Manifestation Apps (2026)" comparison 
 **Deploy/verify:** Vercel prod deploy aliased to www.ai-manifest.com; new page live 200 with normal UA and GPTBot UA; correct `<title>` confirmed on the live HTML. IndexNow: 15 URLs (new guide + index + sitemap + 12 footer-changed guides) submitted, HTTP 200. GSC: sitemap re-submitted via API, HTTP 204.
 
 **Watch next round:** (1) URL Inspection / indexing status for the new guide; (2) probe "vision board ideas" and "what to put on a vision board" on AI answer engines to see if ai-manifest.com starts appearing; (3) GSC queries containing "vision board ideas" or "vision board categories" at position 5–20 once data accrues → strengthen intro/title; (4) remaining open angle from prior rounds: "lucky girl syndrome" (viral, mindset-heavy, weaker natural app tie-in — still unshipped).
+
+---
+
+## 2026-08-01 — Maintenance: llms.txt catch-up for the 1111 guide
+
+The 2026-07-31 cloud content round shipped `guides/angel-number-1111-meaning.html` (en + pt/es/de/fr, wired into sitemap + hreflang + footers) but skipped the llms.txt line and this log entry. Fixed today: llms.txt line added and deployed via git push (Vercel).
+
+**GEO scan snapshot (2026-08-01):** infrastructure healthy (llms.txt 200, robots allows all AI bots, Bing/DDG shows 10 guides indexed). Zero third-party mentions/backlinks of ai-manifest.com in six probes; every "best manifestation apps 2026" citation is a competitor self-published listicle. Branded search for the exact app name surfaces Myla and copycat "Manifest: Affirmations & 369" (id 6761632544) instead of our listing — monitor the copycat. Binding constraint is off-site gravity: unposted Quora/Reddit drafts in docs/geo-outreach/ and no listicle inclusions.
