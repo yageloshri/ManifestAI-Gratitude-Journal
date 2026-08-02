@@ -2,6 +2,14 @@
 
 Maintained by the daily reply-management routine. Newest first.
 
+## 2026-08-02
+
+**New replies:** none. No CRM contacts are in `sent`/`replied`/`negotiating` status, and Gmail shows no inbound threads from any of the three previously drafted contacts (Lavendaire, Simran, Olivia Rose Thomas).
+
+**Draft status (outreach paused since 2026-07-31):** the 3 first-touch drafts recreated on 07-30 are no longer in Gmail drafts. Per the pause policy this is treated as Yagel's intentional cleanup during the migration to info@ai-manifest.com — NOT as sent (skipping the sent-detection heuristic while paused). No drafts recreated. CRM notes updated with `draft_removed_pending_branded_mailbox`; all three contacts stay at status `drafted`. Outreach drafting resumes once `_policy.outreach_mailbox_ready` is set to true.
+
+**No drafts prepared this run. No rate quotes received; nothing money-related pending. DECISION NEEDED: none.**
+
 ## 2026-07-30
 
 **New replies:** none. No CRM contacts are in `sent`/`replied`/`negotiating` status yet, and Gmail shows no threads with any influencer contact.
