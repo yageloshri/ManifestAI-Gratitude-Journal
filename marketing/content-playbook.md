@@ -192,6 +192,7 @@ Rule: ship English → pt-BR → es first. Translate a piece only after it prove
 - [ ] Refresh any article >6 months old targeting a commercial term
 - [ ] Prune or merge thin pages
 - [ ] One off-site action noted per run (Reddit/Quora/YouTube idea for Yagel)
+- [ ] Every new guide added to `website/llms.txt` (one line, en URL) + a run entry appended to `website/geo-log.md` — we maintain both even though llms.txt is a hedge; skipped twice (1111, 444), don't repeat
 
 **Multilingual (per translated page):**
 - [ ] Subdirectory URL (`/pt/...`); full main-content translation; localized keywords + examples + CTAs
