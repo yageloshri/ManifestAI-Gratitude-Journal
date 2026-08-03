@@ -1,5 +1,5 @@
 {
- "date": "2026-08-01T07:08Z",
+ "date": "2026-08-03T02:21Z",
  "app_id": "6757018484",
  "rows": [
   {
@@ -267,7 +267,7 @@
    "locale": "de-DE",
    "country": "de",
    "keyword": "manifestieren",
-   "rank": 56,
+   "rank": 62,
    "results": 78,
    "popularity": null,
    "difficulty": null
@@ -366,8 +366,8 @@
    "locale": "de-DE",
    "country": "de",
    "keyword": "dankbarkeitstagebuch",
-   "rank": 23,
-   "results": 29,
+   "rank": 20,
+   "results": 28,
    "popularity": null,
    "difficulty": null
   },
@@ -618,8 +618,8 @@
    "locale": "en-GB",
    "country": "gb",
    "keyword": "manifestation",
-   "rank": 68,
-   "results": 197,
+   "rank": 159,
+   "results": 193,
    "popularity": null,
    "difficulty": null
   },
@@ -744,8 +744,8 @@
    "locale": "en-GB",
    "country": "gb",
    "keyword": "gratitude journal",
-   "rank": 27,
-   "results": 187,
+   "rank": 38,
+   "results": 186,
    "popularity": null,
    "difficulty": null
   },
@@ -781,7 +781,7 @@
    "country": "us",
    "keyword": "manifestation",
    "rank": null,
-   "results": 195,
+   "results": 194,
    "popularity": 6,
    "difficulty": 53
   },
@@ -898,7 +898,7 @@
    "country": "us",
    "keyword": "369 method",
    "rank": 6,
-   "results": 36,
+   "results": 37,
    "popularity": 5,
    "difficulty": 23
   },
@@ -925,7 +925,7 @@
    "country": "us",
    "keyword": "angel numbers",
    "rank": null,
-   "results": 141,
+   "results": 152,
    "popularity": 14,
    "difficulty": 15
   },
@@ -952,7 +952,7 @@
    "country": "us",
    "keyword": "gratitude jar",
    "rank": null,
-   "results": 168,
+   "results": 169,
    "popularity": 17,
    "difficulty": 21
   },
@@ -1491,7 +1491,7 @@
    "locale": "fr-FR",
    "country": "fr",
    "keyword": "journal de gratitude",
-   "rank": 145,
+   "rank": 147,
    "results": 192,
    "popularity": null,
    "difficulty": null
@@ -1968,7 +1968,7 @@
    "locale": "it",
    "country": "it",
    "keyword": "metodo 369",
-   "rank": 4,
+   "rank": 2,
    "results": 5,
    "popularity": null,
    "difficulty": null
@@ -3491,6 +3491,69 @@
    "keyword": "吸引力法则",
    "rank": 46,
    "results": 113,
+   "popularity": null,
+   "difficulty": null
+  },
+  {
+   "locale": "en-US",
+   "country": "us",
+   "keyword": "369 manifestation",
+   "rank": 38,
+   "results": 180,
+   "popularity": null,
+   "difficulty": null
+  },
+  {
+   "locale": "en-US",
+   "country": "us",
+   "keyword": "555 manifest",
+   "rank": 8,
+   "results": 100,
+   "popularity": null,
+   "difficulty": null
+  },
+  {
+   "locale": "en-US",
+   "country": "us",
+   "keyword": "manifest",
+   "rank": 85,
+   "results": 191,
+   "popularity": null,
+   "difficulty": null
+  },
+  {
+   "locale": "en-US",
+   "country": "us",
+   "keyword": "vision board",
+   "rank": null,
+   "results": 178,
+   "popularity": null,
+   "difficulty": null
+  },
+  {
+   "locale": "fr-FR",
+   "country": "fr",
+   "keyword": "methode 369",
+   "rank": 7,
+   "results": 20,
+   "popularity": null,
+   "difficulty": null
+  },
+  {
+   "locale": "en-AU",
+   "country": "au",
+   "keyword": "gratitude journal",
+   "rank": 147,
+   "results": 191,
+   "popularity": null,
+   "difficulty": null
+  },
+  {
+   "locale": "en-CA",
+   "country": "ca",
+   "keyword": "gratitude journal",
+   "rank": 29,
+   "results": 191,
    "popularity": null,
    "difficulty": null
   }
