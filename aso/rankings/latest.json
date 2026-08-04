@@ -1,5 +1,5 @@
 {
- "date": "2026-08-04T01:02Z",
+ "date": "2026-08-04T01:27Z",
  "app_id": "6757018484",
  "rows": [
   {
@@ -267,7 +267,7 @@
    "locale": "de-DE",
    "country": "de",
    "keyword": "manifestieren",
-   "rank": 62,
+   "rank": 61,
    "results": 78,
    "popularity": null,
    "difficulty": null
@@ -321,7 +321,7 @@
    "locale": "de-DE",
    "country": "de",
    "keyword": "dankbarkeitstagebuch",
-   "rank": 20,
+   "rank": 22,
    "results": 28,
    "popularity": null,
    "difficulty": null
@@ -3625,7 +3625,7 @@
    "country": "us",
    "keyword": "vision board",
    "rank": null,
-   "results": 178,
+   "results": 180,
    "popularity": null,
    "difficulty": null
   },
@@ -3644,6 +3644,780 @@
    "keyword": "gratitude journal",
    "rank": 147,
    "results": 191,
+   "popularity": null,
+   "difficulty": null
+  },
+  {
+   "locale": "en-AU",
+   "country": "au",
+   "keyword": "manifest",
+   "rank": 100,
+   "results": 194,
+   "popularity": null,
+   "difficulty": null
+  },
+  {
+   "locale": "en-AU",
+   "country": "au",
+   "keyword": "gratitude plus",
+   "rank": null,
+   "results": 162,
+   "popularity": null,
+   "difficulty": null
+  },
+  {
+   "locale": "en-AU",
+   "country": "au",
+   "keyword": "angel numbers",
+   "rank": null,
+   "results": 168,
+   "popularity": null,
+   "difficulty": null
+  },
+  {
+   "locale": "en-AU",
+   "country": "au",
+   "keyword": "law of attraction",
+   "rank": null,
+   "results": 166,
+   "popularity": null,
+   "difficulty": null
+  },
+  {
+   "locale": "pt-BR",
+   "country": "br",
+   "keyword": "manifested",
+   "rank": null,
+   "results": 189,
+   "popularity": null,
+   "difficulty": null
+  },
+  {
+   "locale": "pt-BR",
+   "country": "br",
+   "keyword": "gratidao",
+   "rank": null,
+   "results": 188,
+   "popularity": null,
+   "difficulty": null
+  },
+  {
+   "locale": "pt-BR",
+   "country": "br",
+   "keyword": "369",
+   "rank": 90,
+   "results": 190,
+   "popularity": null,
+   "difficulty": null
+  },
+  {
+   "locale": "en-CA",
+   "country": "ca",
+   "keyword": "manifest",
+   "rank": 88,
+   "results": 195,
+   "popularity": null,
+   "difficulty": null
+  },
+  {
+   "locale": "en-CA",
+   "country": "ca",
+   "keyword": "gratitude plus",
+   "rank": null,
+   "results": 178,
+   "popularity": null,
+   "difficulty": null
+  },
+  {
+   "locale": "en-CA",
+   "country": "ca",
+   "keyword": "369",
+   "rank": 17,
+   "results": 182,
+   "popularity": null,
+   "difficulty": null
+  },
+  {
+   "locale": "en-CA",
+   "country": "ca",
+   "keyword": "angel numbers",
+   "rank": null,
+   "results": 165,
+   "popularity": null,
+   "difficulty": null
+  },
+  {
+   "locale": "en-CA",
+   "country": "ca",
+   "keyword": "law of attraction toolbox",
+   "rank": null,
+   "results": 153,
+   "popularity": null,
+   "difficulty": null
+  },
+  {
+   "locale": "zh-Hans",
+   "country": "cn",
+   "keyword": "显化助手",
+   "rank": null,
+   "results": 160,
+   "popularity": null,
+   "difficulty": null
+  },
+  {
+   "locale": "zh-Hans",
+   "country": "cn",
+   "keyword": "显化钥匙",
+   "rank": null,
+   "results": 5,
+   "popularity": null,
+   "difficulty": null
+  },
+  {
+   "locale": "de-DE",
+   "country": "de",
+   "keyword": "369",
+   "rank": null,
+   "results": 179,
+   "popularity": null,
+   "difficulty": null
+  },
+  {
+   "locale": "da",
+   "country": "dk",
+   "keyword": "manifest",
+   "rank": 186,
+   "results": 191,
+   "popularity": null,
+   "difficulty": null
+  },
+  {
+   "locale": "da",
+   "country": "dk",
+   "keyword": "369 manifestation & meditation",
+   "rank": null,
+   "results": 183,
+   "popularity": null,
+   "difficulty": null
+  },
+  {
+   "locale": "da",
+   "country": "dk",
+   "keyword": "manifest love",
+   "rank": null,
+   "results": 174,
+   "popularity": null,
+   "difficulty": null
+  },
+  {
+   "locale": "da",
+   "country": "dk",
+   "keyword": "vision board",
+   "rank": null,
+   "results": 182,
+   "popularity": null,
+   "difficulty": null
+  },
+  {
+   "locale": "da",
+   "country": "dk",
+   "keyword": "manifest with zara",
+   "rank": null,
+   "results": 2,
+   "popularity": null,
+   "difficulty": null
+  },
+  {
+   "locale": "es-ES",
+   "country": "es",
+   "keyword": "tablero de visión 2027",
+   "rank": null,
+   "results": 2,
+   "popularity": null,
+   "difficulty": null
+  },
+  {
+   "locale": "es-ES",
+   "country": "es",
+   "keyword": "ia 369",
+   "rank": null,
+   "results": 8,
+   "popularity": null,
+   "difficulty": null
+  },
+  {
+   "locale": "fi",
+   "country": "fi",
+   "keyword": "manifest",
+   "rank": 86,
+   "results": 195,
+   "popularity": null,
+   "difficulty": null
+  },
+  {
+   "locale": "fi",
+   "country": "fi",
+   "keyword": "369 manifestation & meditation",
+   "rank": null,
+   "results": 184,
+   "popularity": null,
+   "difficulty": null
+  },
+  {
+   "locale": "fi",
+   "country": "fi",
+   "keyword": "manifest love",
+   "rank": null,
+   "results": 180,
+   "popularity": null,
+   "difficulty": null
+  },
+  {
+   "locale": "fi",
+   "country": "fi",
+   "keyword": "manifest with zara",
+   "rank": null,
+   "results": 2,
+   "popularity": null,
+   "difficulty": null
+  },
+  {
+   "locale": "fi",
+   "country": "fi",
+   "keyword": "manifest: affirmations & focus",
+   "rank": 91,
+   "results": 192,
+   "popularity": null,
+   "difficulty": null
+  },
+  {
+   "locale": "fr-FR",
+   "country": "fr",
+   "keyword": "gratitude journal",
+   "rank": null,
+   "results": 191,
+   "popularity": null,
+   "difficulty": null
+  },
+  {
+   "locale": "fr-FR",
+   "country": "fr",
+   "keyword": "life 369",
+   "rank": null,
+   "results": 184,
+   "popularity": null,
+   "difficulty": null
+  },
+  {
+   "locale": "fr-FR",
+   "country": "fr",
+   "keyword": "tableau de vision 2027",
+   "rank": null,
+   "results": 1,
+   "popularity": null,
+   "difficulty": null
+  },
+  {
+   "locale": "en-GB",
+   "country": "gb",
+   "keyword": "manifest: daily affirmation",
+   "rank": null,
+   "results": 183,
+   "popularity": null,
+   "difficulty": null
+  },
+  {
+   "locale": "en-GB",
+   "country": "gb",
+   "keyword": "law of attraction toolbox",
+   "rank": null,
+   "results": 152,
+   "popularity": null,
+   "difficulty": null
+  },
+  {
+   "locale": "en-GB",
+   "country": "gb",
+   "keyword": "manifest",
+   "rank": 191,
+   "results": 196,
+   "popularity": null,
+   "difficulty": null
+  },
+  {
+   "locale": "id",
+   "country": "id",
+   "keyword": "manifest",
+   "rank": null,
+   "results": 192,
+   "popularity": null,
+   "difficulty": null
+  },
+  {
+   "locale": "id",
+   "country": "id",
+   "keyword": "369",
+   "rank": null,
+   "results": 190,
+   "popularity": null,
+   "difficulty": null
+  },
+  {
+   "locale": "id",
+   "country": "id",
+   "keyword": "manifest love",
+   "rank": null,
+   "results": 176,
+   "popularity": null,
+   "difficulty": null
+  },
+  {
+   "locale": "id",
+   "country": "id",
+   "keyword": "manifest with zara",
+   "rank": null,
+   "results": 2,
+   "popularity": null,
+   "difficulty": null
+  },
+  {
+   "locale": "id",
+   "country": "id",
+   "keyword": "369 manifestation & meditation",
+   "rank": null,
+   "results": 190,
+   "popularity": null,
+   "difficulty": null
+  },
+  {
+   "locale": "he",
+   "country": "il",
+   "keyword": "369",
+   "rank": 59,
+   "results": 188,
+   "popularity": null,
+   "difficulty": null
+  },
+  {
+   "locale": "he",
+   "country": "il",
+   "keyword": "תודה",
+   "rank": 34,
+   "results": 90,
+   "popularity": null,
+   "difficulty": null
+  },
+  {
+   "locale": "he",
+   "country": "il",
+   "keyword": "369 manifestation & meditation",
+   "rank": null,
+   "results": 192,
+   "popularity": null,
+   "difficulty": null
+  },
+  {
+   "locale": "he",
+   "country": "il",
+   "keyword": "3-6-9 mucize teknik",
+   "rank": null,
+   "results": 1,
+   "popularity": null,
+   "difficulty": null
+  },
+  {
+   "locale": "he",
+   "country": "il",
+   "keyword": "manifest anything - 369 app",
+   "rank": null,
+   "results": 18,
+   "popularity": null,
+   "difficulty": null
+  },
+  {
+   "locale": "it",
+   "country": "it",
+   "keyword": "gratitude journal",
+   "rank": 77,
+   "results": 189,
+   "popularity": null,
+   "difficulty": null
+  },
+  {
+   "locale": "it",
+   "country": "it",
+   "keyword": "affermazioni positive",
+   "rank": 93,
+   "results": 103,
+   "popularity": null,
+   "difficulty": null
+  },
+  {
+   "locale": "it",
+   "country": "it",
+   "keyword": "gratitude: self-care journal",
+   "rank": null,
+   "results": 179,
+   "popularity": null,
+   "difficulty": null
+  },
+  {
+   "locale": "ja",
+   "country": "jp",
+   "keyword": "ビジョンボード：夢を叶える引き寄せの法則・dreamer",
+   "rank": 9,
+   "results": 14,
+   "popularity": null,
+   "difficulty": null
+  },
+  {
+   "locale": "ja",
+   "country": "jp",
+   "keyword": "369",
+   "rank": null,
+   "results": 168,
+   "popularity": null,
+   "difficulty": null
+  },
+  {
+   "locale": "ko",
+   "country": "kr",
+   "keyword": "끌어당김: 비전보드 & 369",
+   "rank": 1,
+   "results": 12,
+   "popularity": null,
+   "difficulty": null
+  },
+  {
+   "locale": "es-MX",
+   "country": "mx",
+   "keyword": "gratitude",
+   "rank": null,
+   "results": 194,
+   "popularity": null,
+   "difficulty": null
+  },
+  {
+   "locale": "es-MX",
+   "country": "mx",
+   "keyword": "369",
+   "rank": 144,
+   "results": 187,
+   "popularity": null,
+   "difficulty": null
+  },
+  {
+   "locale": "es-MX",
+   "country": "mx",
+   "keyword": "afirmaciones positivas diarias",
+   "rank": 97,
+   "results": 135,
+   "popularity": null,
+   "difficulty": null
+  },
+  {
+   "locale": "nl-NL",
+   "country": "nl",
+   "keyword": "manifest",
+   "rank": null,
+   "results": 194,
+   "popularity": null,
+   "difficulty": null
+  },
+  {
+   "locale": "nl-NL",
+   "country": "nl",
+   "keyword": "dankbaarheid dagboek",
+   "rank": 108,
+   "results": 129,
+   "popularity": null,
+   "difficulty": null
+  },
+  {
+   "locale": "nl-NL",
+   "country": "nl",
+   "keyword": "engelengetallen - gids",
+   "rank": null,
+   "results": 1,
+   "popularity": null,
+   "difficulty": null
+  },
+  {
+   "locale": "nl-NL",
+   "country": "nl",
+   "keyword": "affirmations",
+   "rank": null,
+   "results": 178,
+   "popularity": null,
+   "difficulty": null
+  },
+  {
+   "locale": "nl-NL",
+   "country": "nl",
+   "keyword": "manifest love",
+   "rank": null,
+   "results": 175,
+   "popularity": null,
+   "difficulty": null
+  },
+  {
+   "locale": "no",
+   "country": "no",
+   "keyword": "manifest",
+   "rank": null,
+   "results": 194,
+   "popularity": null,
+   "difficulty": null
+  },
+  {
+   "locale": "no",
+   "country": "no",
+   "keyword": "3-6-9 mucize teknik",
+   "rank": null,
+   "results": 1,
+   "popularity": null,
+   "difficulty": null
+  },
+  {
+   "locale": "no",
+   "country": "no",
+   "keyword": "manifest love",
+   "rank": null,
+   "results": 178,
+   "popularity": null,
+   "difficulty": null
+  },
+  {
+   "locale": "no",
+   "country": "no",
+   "keyword": "369 manifestation & meditation",
+   "rank": null,
+   "results": 191,
+   "popularity": null,
+   "difficulty": null
+  },
+  {
+   "locale": "pl",
+   "country": "pl",
+   "keyword": "manifestation",
+   "rank": null,
+   "results": 191,
+   "popularity": null,
+   "difficulty": null
+  },
+  {
+   "locale": "pl",
+   "country": "pl",
+   "keyword": "369 manifestation & meditation",
+   "rank": null,
+   "results": 183,
+   "popularity": null,
+   "difficulty": null
+  },
+  {
+   "locale": "pl",
+   "country": "pl",
+   "keyword": "afirmacje+",
+   "rank": 111,
+   "results": 120,
+   "popularity": null,
+   "difficulty": null
+  },
+  {
+   "locale": "ru",
+   "country": "ru",
+   "keyword": "манифест: аффирмации",
+   "rank": 3,
+   "results": 9,
+   "popularity": null,
+   "difficulty": null
+  },
+  {
+   "locale": "ru",
+   "country": "ru",
+   "keyword": "доска визуализации желаний",
+   "rank": null,
+   "results": 12,
+   "popularity": null,
+   "difficulty": null
+  },
+  {
+   "locale": "ru",
+   "country": "ru",
+   "keyword": "369",
+   "rank": 16,
+   "results": 161,
+   "popularity": null,
+   "difficulty": null
+  },
+  {
+   "locale": "ru",
+   "country": "ru",
+   "keyword": "ангельское таро - гадание таро",
+   "rank": null,
+   "results": 2,
+   "popularity": null,
+   "difficulty": null
+  },
+  {
+   "locale": "ar-SA",
+   "country": "sa",
+   "keyword": "369",
+   "rank": null,
+   "results": 182,
+   "popularity": null,
+   "difficulty": null
+  },
+  {
+   "locale": "ar-SA",
+   "country": "sa",
+   "keyword": "توكيدات ايجابية",
+   "rank": null,
+   "results": 43,
+   "popularity": null,
+   "difficulty": null
+  },
+  {
+   "locale": "ar-SA",
+   "country": "sa",
+   "keyword": "امتنان",
+   "rank": null,
+   "results": 173,
+   "popularity": null,
+   "difficulty": null
+  },
+  {
+   "locale": "ar-SA",
+   "country": "sa",
+   "keyword": "توكيدات",
+   "rank": null,
+   "results": 163,
+   "popularity": null,
+   "difficulty": null
+  },
+  {
+   "locale": "ar-SA",
+   "country": "sa",
+   "keyword": "369 manifestation & meditation",
+   "rank": null,
+   "results": 187,
+   "popularity": null,
+   "difficulty": null
+  },
+  {
+   "locale": "sv",
+   "country": "se",
+   "keyword": "manifest",
+   "rank": null,
+   "results": 193,
+   "popularity": null,
+   "difficulty": null
+  },
+  {
+   "locale": "sv",
+   "country": "se",
+   "keyword": "already done: manifestation",
+   "rank": null,
+   "results": 1,
+   "popularity": null,
+   "difficulty": null
+  },
+  {
+   "locale": "sv",
+   "country": "se",
+   "keyword": "tacksamhetsdagbok - 3 rader",
+   "rank": null,
+   "results": 1,
+   "popularity": null,
+   "difficulty": null
+  },
+  {
+   "locale": "tr",
+   "country": "tr",
+   "keyword": "günlük motivasyon & olumlama",
+   "rank": null,
+   "results": 87,
+   "popularity": null,
+   "difficulty": null
+  },
+  {
+   "locale": "tr",
+   "country": "tr",
+   "keyword": "çekim yasası",
+   "rank": 57,
+   "results": 89,
+   "popularity": null,
+   "difficulty": null
+  },
+  {
+   "locale": "tr",
+   "country": "tr",
+   "keyword": "3-6-9 mucize teknik",
+   "rank": null,
+   "results": 1,
+   "popularity": null,
+   "difficulty": null
+  },
+  {
+   "locale": "tr",
+   "country": "tr",
+   "keyword": "369 selin özdemir",
+   "rank": null,
+   "results": 1,
+   "popularity": null,
+   "difficulty": null
+  },
+  {
+   "locale": "en-US",
+   "country": "us",
+   "keyword": "gratitude journal free",
+   "rank": null,
+   "results": 193,
+   "popularity": 17,
+   "difficulty": null
+  },
+  {
+   "locale": "vi",
+   "country": "vn",
+   "keyword": "lời khẳng định",
+   "rank": null,
+   "results": 57,
+   "popularity": null,
+   "difficulty": null
+  },
+  {
+   "locale": "vi",
+   "country": "vn",
+   "keyword": "manifest",
+   "rank": null,
+   "results": 198,
+   "popularity": null,
+   "difficulty": null
+  },
+  {
+   "locale": "vi",
+   "country": "vn",
+   "keyword": "369",
+   "rank": null,
+   "results": 174,
+   "popularity": null,
+   "difficulty": null
+  },
+  {
+   "locale": "vi",
+   "country": "vn",
+   "keyword": "manifest love",
+   "rank": null,
+   "results": 182,
+   "popularity": null,
+   "difficulty": null
+  },
+  {
+   "locale": "vi",
+   "country": "vn",
+   "keyword": "manifest with zara",
+   "rank": null,
+   "results": 2,
    "popularity": null,
    "difficulty": null
   }
