@@ -1,5 +1,5 @@
 {
- "date": "2026-08-04T07:14Z",
+ "date": "2026-08-05T02:28Z",
  "app_id": "6757018484",
  "rows": [
   {
@@ -294,8 +294,8 @@
    "locale": "de-DE",
    "country": "de",
    "keyword": "engelszahlen",
-   "rank": 7,
-   "results": 8,
+   "rank": 6,
+   "results": 9,
    "popularity": null,
    "difficulty": null
   },
@@ -321,8 +321,8 @@
    "locale": "de-DE",
    "country": "de",
    "keyword": "dankbarkeitstagebuch",
-   "rank": 22,
-   "results": 28,
+   "rank": 23,
+   "results": 29,
    "popularity": null,
    "difficulty": null
   },
@@ -654,8 +654,8 @@
    "locale": "en-GB",
    "country": "gb",
    "keyword": "manifestation",
-   "rank": 159,
-   "results": 194,
+   "rank": 149,
+   "results": 192,
    "popularity": null,
    "difficulty": null
   },
@@ -789,7 +789,7 @@
    "locale": "en-GB",
    "country": "gb",
    "keyword": "gratitude journal",
-   "rank": 40,
+   "rank": 44,
    "results": 187,
    "popularity": null,
    "difficulty": null
@@ -826,7 +826,7 @@
    "country": "us",
    "keyword": "manifestation",
    "rank": null,
-   "results": 196,
+   "results": 195,
    "popularity": 26,
    "difficulty": 53
   },
@@ -951,8 +951,8 @@
    "locale": "en-US",
    "country": "us",
    "keyword": "369 method",
-   "rank": 7,
-   "results": 37,
+   "rank": 8,
+   "results": 36,
    "popularity": 5,
    "difficulty": 23
   },
@@ -979,7 +979,7 @@
    "country": "us",
    "keyword": "angel numbers",
    "rank": null,
-   "results": 149,
+   "results": 152,
    "popularity": 14,
    "difficulty": 15
   },
@@ -1006,7 +1006,7 @@
    "country": "us",
    "keyword": "gratitude jar",
    "rank": null,
-   "results": 173,
+   "results": 174,
    "popularity": 17,
    "difficulty": 7
   },
@@ -1555,7 +1555,7 @@
    "country": "fr",
    "keyword": "méthode 369",
    "rank": 7,
-   "results": 20,
+   "results": 21,
    "popularity": null,
    "difficulty": null
   },
@@ -2040,7 +2040,7 @@
    "locale": "it",
    "country": "it",
    "keyword": "metodo 369",
-   "rank": 2,
+   "rank": 4,
    "results": 5,
    "popularity": null,
    "difficulty": null
@@ -2364,7 +2364,7 @@
    "locale": "ko",
    "country": "kr",
    "keyword": "끌어당김",
-   "rank": 12,
+   "rank": 14,
    "results": 53,
    "popularity": null,
    "difficulty": null
@@ -3634,7 +3634,7 @@
    "country": "ca",
    "keyword": "gratitude journal",
    "rank": null,
-   "results": 189,
+   "results": 190,
    "popularity": null,
    "difficulty": null
   },
@@ -4245,8 +4245,8 @@
    "locale": "ru",
    "country": "ru",
    "keyword": "369",
-   "rank": 12,
-   "results": 150,
+   "rank": 11,
+   "results": 153,
    "popularity": null,
    "difficulty": null
   },
@@ -4425,8 +4425,8 @@
    "locale": "en-GB",
    "country": "ie",
    "keyword": "369 method",
-   "rank": 4,
-   "results": 27,
+   "rank": 5,
+   "results": 28,
    "popularity": null,
    "difficulty": null
   },
@@ -6099,8 +6099,8 @@
    "locale": "en-US",
    "country": "us",
    "keyword": "gratitude app",
-   "rank": null,
-   "results": 185,
+   "rank": 187,
+   "results": 187,
    "popularity": null,
    "difficulty": null
   },
