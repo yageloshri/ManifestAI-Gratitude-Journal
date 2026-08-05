@@ -58,3 +58,11 @@ has dedicated intent and viral TikTok demand).
   guide covered this distinct technique (manifestation-journal.html only mentions it briefly) →
   dedicated page ships with the 4-step formula, 3 category examples, and a scripting-vs-affirmations-
   vs-369 comparison table.
+- **"Scripting manifestation" multilingual cluster (GSC, 2026-08-06 scan): PRIORITY for next rounds.**
+  The existing scripting-method page rode to pos 6.9 on "scripting manifestation" (45 imp/3 days, new
+  top-impression query) with converting siblings in ES ("como hacer scripting para manifestar", click
+  at pos 9; "método scripting para manifestar" 9.4) and FR ("manifestation ecrite" click at pos 4.5,
+  "comment manifester à l'écrit" 6.7). Written-manifestation intent is forming its own SERP cluster
+  across languages → next content rounds: scripting templates/examples page (EN) + make the es/fr
+  localizations of scripting-method first-class (localized examples, local keyword phrasing), and
+  intercept "manifestation écrite" / "manifestar por escrito" phrasings directly.
