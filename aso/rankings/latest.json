@@ -1,5 +1,5 @@
 {
- "date": "2026-08-05T02:28Z",
+ "date": "2026-08-06T09:12Z",
  "app_id": "6757018484",
  "rows": [
   {
@@ -123,8 +123,8 @@
    "locale": "ar-SA",
    "country": "sa",
    "keyword": "قانون الجذب",
-   "rank": null,
-   "results": 20,
+   "rank": 19,
+   "results": 21,
    "popularity": null,
    "difficulty": null
   },
@@ -132,8 +132,8 @@
    "locale": "ar-SA",
    "country": "sa",
    "keyword": "لوحة الرؤية",
-   "rank": 7,
-   "results": 37,
+   "rank": 8,
+   "results": 38,
    "popularity": null,
    "difficulty": null
   },
@@ -357,7 +357,7 @@
    "locale": "de-DE",
    "country": "de",
    "keyword": "369 methode",
-   "rank": 9,
+   "rank": 8,
    "results": 21,
    "popularity": null,
    "difficulty": null
@@ -1005,8 +1005,8 @@
    "locale": "en-US",
    "country": "us",
    "keyword": "gratitude jar",
-   "rank": null,
-   "results": 174,
+   "rank": 127,
+   "results": 172,
    "popularity": 17,
    "difficulty": 7
   },
@@ -1167,8 +1167,8 @@
    "locale": "es-ES",
    "country": "es",
    "keyword": "numeros angelicos",
-   "rank": 2,
-   "results": 2,
+   "rank": 3,
+   "results": 3,
    "popularity": null,
    "difficulty": null
   },
@@ -1267,7 +1267,7 @@
    "country": "mx",
    "keyword": "numerologia",
    "rank": null,
-   "results": 168,
+   "results": 160,
    "popularity": null,
    "difficulty": null
   },
@@ -1329,8 +1329,8 @@
    "locale": "es-MX",
    "country": "mx",
    "keyword": "numeros angelicos",
-   "rank": 2,
-   "results": 2,
+   "rank": 3,
+   "results": 3,
    "popularity": null,
    "difficulty": null
   },
@@ -1743,8 +1743,8 @@
    "locale": "he",
    "country": "il",
    "keyword": "יומן תודה",
-   "rank": 19,
-   "results": 64,
+   "rank": 20,
+   "results": 66,
    "popularity": null,
    "difficulty": null
   },
@@ -1752,8 +1752,8 @@
    "locale": "he",
    "country": "il",
    "keyword": "שיטת 369",
-   "rank": null,
-   "results": 0,
+   "rank": 1,
+   "results": 1,
    "popularity": null,
    "difficulty": null
   },
@@ -1779,8 +1779,8 @@
    "locale": "he",
    "country": "il",
    "keyword": "מספרי מלאכים",
-   "rank": null,
-   "results": 1,
+   "rank": 1,
+   "results": 2,
    "popularity": null,
    "difficulty": null
   },
@@ -2148,8 +2148,8 @@
    "locale": "ja",
    "country": "jp",
    "keyword": "引き寄せ",
-   "rank": 46,
-   "results": 127,
+   "rank": 41,
+   "results": 130,
    "popularity": null,
    "difficulty": null
   },
@@ -2158,7 +2158,7 @@
    "country": "jp",
    "keyword": "ビジョンボード",
    "rank": null,
-   "results": 178,
+   "results": 188,
    "popularity": null,
    "difficulty": null
   },
@@ -2167,7 +2167,7 @@
    "country": "jp",
    "keyword": "感謝日記",
    "rank": null,
-   "results": 188,
+   "results": 179,
    "popularity": null,
    "difficulty": null
   },
@@ -2202,8 +2202,8 @@
    "locale": "ko",
    "country": "kr",
    "keyword": "확언",
-   "rank": 172,
-   "results": 188,
+   "rank": 174,
+   "results": 191,
    "popularity": null,
    "difficulty": null
   },
@@ -2374,7 +2374,7 @@
    "country": "kr",
    "keyword": "비전보드",
    "rank": null,
-   "results": 191,
+   "results": 192,
    "popularity": null,
    "difficulty": null
   },
@@ -2383,7 +2383,7 @@
    "country": "kr",
    "keyword": "감사일기",
    "rank": null,
-   "results": 186,
+   "results": 184,
    "popularity": null,
    "difficulty": null
   },
@@ -2391,8 +2391,8 @@
    "locale": "ko",
    "country": "kr",
    "keyword": "369 기법",
-   "rank": null,
-   "results": 1,
+   "rank": 1,
+   "results": 2,
    "popularity": null,
    "difficulty": null
   },
@@ -2706,8 +2706,8 @@
    "locale": "pt-BR",
    "country": "br",
    "keyword": "manifestar",
-   "rank": 69,
-   "results": 196,
+   "rank": 66,
+   "results": 197,
    "popularity": null,
    "difficulty": null
   },
@@ -3003,8 +3003,8 @@
    "locale": "ru",
    "country": "ru",
    "keyword": "метод 369",
-   "rank": 1,
-   "results": 22,
+   "rank": 2,
+   "results": 21,
    "popularity": null,
    "difficulty": null
   },
@@ -3237,7 +3237,7 @@
    "locale": "tr",
    "country": "tr",
    "keyword": "manifest",
-   "rank": 45,
+   "rank": 53,
    "results": 197,
    "popularity": null,
    "difficulty": null
@@ -3256,7 +3256,7 @@
    "country": "tr",
    "keyword": "şükür günlüğü",
    "rank": 6,
-   "results": 6,
+   "results": 7,
    "popularity": null,
    "difficulty": null
   },
@@ -3840,8 +3840,8 @@
    "locale": "es-ES",
    "country": "es",
    "keyword": "ia 369",
-   "rank": null,
-   "results": 8,
+   "rank": 5,
+   "results": 9,
    "popularity": null,
    "difficulty": null
   },
@@ -4074,8 +4074,8 @@
    "locale": "ja",
    "country": "jp",
    "keyword": "369",
-   "rank": null,
-   "results": 167,
+   "rank": 24,
+   "results": 169,
    "popularity": null,
    "difficulty": null
   },
@@ -4344,8 +4344,8 @@
    "locale": "tr",
    "country": "tr",
    "keyword": "çekim yasası",
-   "rank": 58,
-   "results": 90,
+   "rank": 65,
+   "results": 87,
    "popularity": null,
    "difficulty": null
   },
@@ -5214,16 +5214,16 @@
    "difficulty": null
   },
   {
-   "locale": "pt-BR",
+   "locale": "pt-PT",
    "country": "pt",
    "keyword": "metodo 369",
-   "rank": null,
-   "results": 2,
+   "rank": 3,
+   "results": 3,
    "popularity": null,
    "difficulty": null
   },
   {
-   "locale": "pt-BR",
+   "locale": "pt-PT",
    "country": "pt",
    "keyword": "quadro de visualizacao",
    "rank": null,
@@ -5232,7 +5232,7 @@
    "difficulty": null
   },
   {
-   "locale": "pt-BR",
+   "locale": "pt-PT",
    "country": "pt",
    "keyword": "gratidao",
    "rank": null,
@@ -5241,7 +5241,7 @@
    "difficulty": null
   },
   {
-   "locale": "pt-BR",
+   "locale": "pt-PT",
    "country": "pt",
    "keyword": "manifestacao",
    "rank": null,
@@ -5250,7 +5250,7 @@
    "difficulty": null
   },
   {
-   "locale": "pt-BR",
+   "locale": "pt-PT",
    "country": "pt",
    "keyword": "369",
    "rank": null,
@@ -5259,7 +5259,7 @@
    "difficulty": null
   },
   {
-   "locale": "pt-BR",
+   "locale": "pt-PT",
    "country": "pt",
    "keyword": "numeros dos anjos",
    "rank": null,
@@ -5268,7 +5268,7 @@
    "difficulty": null
   },
   {
-   "locale": "pt-BR",
+   "locale": "pt-PT",
    "country": "pt",
    "keyword": "afirmacoes",
    "rank": null,
@@ -5277,7 +5277,7 @@
    "difficulty": null
   },
   {
-   "locale": "pt-BR",
+   "locale": "pt-PT",
    "country": "pt",
    "keyword": "lei da atracao",
    "rank": null,
@@ -5289,8 +5289,8 @@
    "locale": "ar-SA",
    "country": "ae",
    "keyword": "قانون الجذب",
-   "rank": null,
-   "results": 20,
+   "rank": 16,
+   "results": 21,
    "popularity": null,
    "difficulty": null
   },
@@ -5997,16 +5997,16 @@
    "difficulty": null
   },
   {
-   "locale": "zh-Hans",
+   "locale": "zh-Hant",
    "country": "hk",
    "keyword": "顯化",
-   "rank": null,
-   "results": 186,
+   "rank": 89,
+   "results": 188,
    "popularity": null,
    "difficulty": null
   },
   {
-   "locale": "zh-Hans",
+   "locale": "zh-Hant",
    "country": "hk",
    "keyword": "願景板",
    "rank": null,
@@ -6015,7 +6015,7 @@
    "difficulty": null
   },
   {
-   "locale": "zh-Hans",
+   "locale": "zh-Hant",
    "country": "hk",
    "keyword": "369",
    "rank": null,
@@ -6024,25 +6024,25 @@
    "difficulty": null
   },
   {
-   "locale": "zh-Hans",
+   "locale": "zh-Hant",
    "country": "hk",
    "keyword": "天使數字",
-   "rank": null,
-   "results": 10,
+   "rank": 8,
+   "results": 11,
    "popularity": null,
    "difficulty": null
   },
   {
-   "locale": "zh-Hans",
+   "locale": "zh-Hant",
    "country": "tw",
    "keyword": "顯化",
    "rank": null,
-   "results": 186,
+   "results": 181,
    "popularity": null,
    "difficulty": null
   },
   {
-   "locale": "zh-Hans",
+   "locale": "zh-Hant",
    "country": "tw",
    "keyword": "願景板",
    "rank": null,
@@ -6051,7 +6051,7 @@
    "difficulty": null
   },
   {
-   "locale": "zh-Hans",
+   "locale": "zh-Hant",
    "country": "tw",
    "keyword": "369",
    "rank": null,
@@ -6060,11 +6060,11 @@
    "difficulty": null
   },
   {
-   "locale": "zh-Hans",
+   "locale": "zh-Hant",
    "country": "tw",
    "keyword": "天使數字",
-   "rank": null,
-   "results": 12,
+   "rank": 12,
+   "results": 13,
    "popularity": null,
    "difficulty": null
   },
@@ -6099,7 +6099,7 @@
    "locale": "en-US",
    "country": "us",
    "keyword": "gratitude app",
-   "rank": 187,
+   "rank": 107,
    "results": 187,
    "popularity": null,
    "difficulty": null
@@ -6153,7 +6153,7 @@
    "locale": "he",
    "country": "il",
    "keyword": "נומרולוגיה",
-   "rank": null,
+   "rank": 12,
    "results": 20,
    "popularity": null,
    "difficulty": null
@@ -6198,8 +6198,8 @@
    "locale": "tr",
    "country": "tr",
    "keyword": "369 yöntemi",
-   "rank": null,
-   "results": 1,
+   "rank": 1,
+   "results": 2,
    "popularity": null,
    "difficulty": null
   },
@@ -6225,8 +6225,8 @@
    "locale": "ru",
    "country": "ru",
    "keyword": "ангельские числа",
-   "rank": null,
-   "results": 2,
+   "rank": 3,
+   "results": 3,
    "popularity": null,
    "difficulty": null
   },
@@ -6279,7 +6279,7 @@
    "locale": "nl-NL",
    "country": "nl",
    "keyword": "369 methode",
-   "rank": 11,
+   "rank": 7,
    "results": 22,
    "popularity": null,
    "difficulty": null
@@ -6362,6 +6362,87 @@
    "keyword": "metodo 369",
    "rank": 4,
    "results": 5,
+   "popularity": null,
+   "difficulty": null
+  },
+  {
+   "locale": "ar-SA",
+   "country": "sa",
+   "keyword": "ارقام الملائكة",
+   "rank": 3,
+   "results": 4,
+   "popularity": null,
+   "difficulty": null
+  },
+  {
+   "locale": "ru",
+   "country": "ru",
+   "keyword": "закон притяжения",
+   "rank": null,
+   "results": 18,
+   "popularity": null,
+   "difficulty": null
+  },
+  {
+   "locale": "es-ES",
+   "country": "es",
+   "keyword": "metodo 369",
+   "rank": 6,
+   "results": 7,
+   "popularity": null,
+   "difficulty": null
+  },
+  {
+   "locale": "es-MX",
+   "country": "mx",
+   "keyword": "metodo 369",
+   "rank": 6,
+   "results": 8,
+   "popularity": null,
+   "difficulty": null
+  },
+  {
+   "locale": "pt-BR",
+   "country": "br",
+   "keyword": "diario de gratidao",
+   "rank": 195,
+   "results": 196,
+   "popularity": null,
+   "difficulty": null
+  },
+  {
+   "locale": "pt-PT",
+   "country": "pt",
+   "keyword": "diario de gratidao",
+   "rank": 113,
+   "results": 171,
+   "popularity": null,
+   "difficulty": null
+  },
+  {
+   "locale": "pt-PT",
+   "country": "pt",
+   "keyword": "manifestar",
+   "rank": 75,
+   "results": 188,
+   "popularity": null,
+   "difficulty": null
+  },
+  {
+   "locale": "zh-Hant",
+   "country": "hk",
+   "keyword": "感恩日記",
+   "rank": 111,
+   "results": 187,
+   "popularity": null,
+   "difficulty": null
+  },
+  {
+   "locale": "zh-Hant",
+   "country": "tw",
+   "keyword": "感恩日記",
+   "rank": 153,
+   "results": 189,
    "popularity": null,
    "difficulty": null
   }
