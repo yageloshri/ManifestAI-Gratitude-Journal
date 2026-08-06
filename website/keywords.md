@@ -32,6 +32,7 @@ has dedicated intent and viral TikTok demand).
 | manifestation journal (how to start one) | Informational → download (journal-app adjacent) | `/guides/manifestation-journal.html` |
 | scripting method manifestation (how to write it) | Informational how-to, high journal/app intent | `/guides/scripting-method-manifestation.html` |
 | vision board ideas (categories, what to put on it) | Informational, template-seeking, direct app tie-in | `/guides/vision-board-ideas.html` |
+| lucky girl syndrome (does it work, how to practice) | Informational, viral/investigational, mindset-adjacent | `/guides/lucky-girl-syndrome.html` |
 
 ## SERP validation notes
 
@@ -66,3 +67,11 @@ has dedicated intent and viral TikTok demand).
   across languages → next content rounds: scripting templates/examples page (EN) + make the es/fr
   localizations of scripting-method first-class (localized examples, local keyword phrasing), and
   intercept "manifestation écrite" / "manifestar por escrito" phrasings directly.
+- "Lucky girl syndrome" (August 2026 scan): flagged as an open, unshipped angle in three prior
+  geo-log rounds (viral TikTok mindset, weaker natural app tie-in than the 369/scripting pages).
+  Editorial winners (Cleveland Clinic, Today, Philly Mag) give a definition (law of assumption /
+  Neville Goddard), a mechanism explanation (RAS, confirmation bias, self-fulfilling prophecy), an
+  honest "does it work" verdict, and a toxic-positivity/privilege criticism section. No existing
+  guide covered this angle → dedicated page ships with the mechanism table, a lucky-girl-vs-369-vs-
+  scripting comparison table, a 5-step practice guide, and 3 affirmation examples. English only this
+  round — pt/es/de/fr localization not yet done, candidate for a future round if it gains impressions.
