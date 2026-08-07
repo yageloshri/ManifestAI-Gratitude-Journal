@@ -1,5 +1,5 @@
 {
- "date": "2026-08-06T09:12Z",
+ "date": "2026-08-07T03:22Z",
  "app_id": "6757018484",
  "rows": [
   {
@@ -357,8 +357,8 @@
    "locale": "de-DE",
    "country": "de",
    "keyword": "369 methode",
-   "rank": 8,
-   "results": 21,
+   "rank": 7,
+   "results": 20,
    "popularity": null,
    "difficulty": null
   },
@@ -780,8 +780,8 @@
    "locale": "en-GB",
    "country": "gb",
    "keyword": "369 method",
-   "rank": 3,
-   "results": 31,
+   "rank": 5,
+   "results": 30,
    "popularity": null,
    "difficulty": null
   },
@@ -951,8 +951,8 @@
    "locale": "en-US",
    "country": "us",
    "keyword": "369 method",
-   "rank": 8,
-   "results": 36,
+   "rank": 6,
+   "results": 37,
    "popularity": 5,
    "difficulty": 23
   },
@@ -987,8 +987,8 @@
    "locale": "en-US",
    "country": "us",
    "keyword": "manifestation journal",
-   "rank": 136,
-   "results": 191,
+   "rank": 66,
+   "results": 194,
    "popularity": 7,
    "difficulty": 47
   },
@@ -1005,8 +1005,8 @@
    "locale": "en-US",
    "country": "us",
    "keyword": "gratitude jar",
-   "rank": 127,
-   "results": 172,
+   "rank": 126,
+   "results": 173,
    "popularity": 17,
    "difficulty": 7
   },
@@ -1743,7 +1743,7 @@
    "locale": "he",
    "country": "il",
    "keyword": "יומן תודה",
-   "rank": 20,
+   "rank": 21,
    "results": 66,
    "popularity": null,
    "difficulty": null
@@ -1761,7 +1761,7 @@
    "locale": "he",
    "country": "il",
    "keyword": "חוק המשיכה",
-   "rank": 2,
+   "rank": 3,
    "results": 5,
    "popularity": null,
    "difficulty": null
@@ -2148,7 +2148,7 @@
    "locale": "ja",
    "country": "jp",
    "keyword": "引き寄せ",
-   "rank": 41,
+   "rank": 42,
    "results": 130,
    "popularity": null,
    "difficulty": null
@@ -2167,7 +2167,7 @@
    "country": "jp",
    "keyword": "感謝日記",
    "rank": null,
-   "results": 179,
+   "results": 187,
    "popularity": null,
    "difficulty": null
   },
@@ -2202,7 +2202,7 @@
    "locale": "ko",
    "country": "kr",
    "keyword": "확언",
-   "rank": 174,
+   "rank": 173,
    "results": 191,
    "popularity": null,
    "difficulty": null
@@ -2364,8 +2364,8 @@
    "locale": "ko",
    "country": "kr",
    "keyword": "끌어당김",
-   "rank": 14,
-   "results": 53,
+   "rank": 13,
+   "results": 55,
    "popularity": null,
    "difficulty": null
   },
@@ -2374,7 +2374,7 @@
    "country": "kr",
    "keyword": "비전보드",
    "rank": null,
-   "results": 192,
+   "results": 189,
    "popularity": null,
    "difficulty": null
   },
@@ -2383,7 +2383,7 @@
    "country": "kr",
    "keyword": "감사일기",
    "rank": null,
-   "results": 184,
+   "results": 185,
    "popularity": null,
    "difficulty": null
   },
@@ -3237,7 +3237,7 @@
    "locale": "tr",
    "country": "tr",
    "keyword": "manifest",
-   "rank": 53,
+   "rank": 54,
    "results": 197,
    "popularity": null,
    "difficulty": null
@@ -3624,7 +3624,7 @@
    "locale": "en-US",
    "country": "us",
    "keyword": "vision board",
-   "rank": null,
+   "rank": 123,
    "results": 179,
    "popularity": null,
    "difficulty": null
@@ -4074,8 +4074,8 @@
    "locale": "ja",
    "country": "jp",
    "keyword": "369",
-   "rank": 24,
-   "results": 169,
+   "rank": null,
+   "results": 166,
    "popularity": null,
    "difficulty": null
   },
@@ -4344,8 +4344,8 @@
    "locale": "tr",
    "country": "tr",
    "keyword": "çekim yasası",
-   "rank": 65,
-   "results": 87,
+   "rank": 64,
+   "results": 84,
    "popularity": null,
    "difficulty": null
   },
@@ -6000,8 +6000,8 @@
    "locale": "zh-Hant",
    "country": "hk",
    "keyword": "顯化",
-   "rank": 89,
-   "results": 188,
+   "rank": 87,
+   "results": 187,
    "popularity": null,
    "difficulty": null
   },
@@ -6037,7 +6037,7 @@
    "country": "tw",
    "keyword": "顯化",
    "rank": null,
-   "results": 181,
+   "results": 179,
    "popularity": null,
    "difficulty": null
   },
@@ -6099,8 +6099,8 @@
    "locale": "en-US",
    "country": "us",
    "keyword": "gratitude app",
-   "rank": 107,
-   "results": 187,
+   "rank": 139,
+   "results": 185,
    "popularity": null,
    "difficulty": null
   },
@@ -6279,8 +6279,8 @@
    "locale": "nl-NL",
    "country": "nl",
    "keyword": "369 methode",
-   "rank": 7,
-   "results": 22,
+   "rank": 6,
+   "results": 21,
    "popularity": null,
    "difficulty": null
   },
@@ -6414,8 +6414,8 @@
    "locale": "pt-PT",
    "country": "pt",
    "keyword": "diario de gratidao",
-   "rank": 113,
-   "results": 171,
+   "rank": 112,
+   "results": 173,
    "popularity": null,
    "difficulty": null
   },
@@ -6423,7 +6423,7 @@
    "locale": "pt-PT",
    "country": "pt",
    "keyword": "manifestar",
-   "rank": 75,
+   "rank": 74,
    "results": 188,
    "popularity": null,
    "difficulty": null
@@ -6443,6 +6443,15 @@
    "keyword": "感恩日記",
    "rank": 153,
    "results": 189,
+   "popularity": null,
+   "difficulty": null
+  },
+  {
+   "locale": null,
+   "country": "ru",
+   "keyword": "манифест",
+   "rank": 3,
+   "results": 16,
    "popularity": null,
    "difficulty": null
   }
