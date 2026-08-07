@@ -193,6 +193,7 @@ Rule: ship English → pt-BR → es first. Translate a piece only after it prove
 - [ ] Prune or merge thin pages
 - [ ] One off-site action noted per run (Reddit/Quora/YouTube idea for Yagel)
 - [ ] Every new guide added to `website/llms.txt` (one line, en URL) + a run entry appended to `website/geo-log.md` — we maintain both even though llms.txt is a hedge; skipped twice (1111, 444), don't repeat
+- [ ] **Early CTA: every guide (and every localized version) carries a `<div class="cta-inline">` block immediately before its first `<h2>`** — copy the markup from any existing guide and translate the sentence + link text into that page's language. Rationale: before 2026-08-07 the first in-content CTA sat at ~62% of the body, after the FAQ, so a reader who landed from search, got their answer and left never passed an install prompt. The strip puts one at ~17%. The end-of-article `.cta-box` stays as well — this is in addition, not a replacement.
 
 **Multilingual (per translated page):**
 - [ ] Subdirectory URL (`/pt/...`); full main-content translation; localized keywords + examples + CTAs
