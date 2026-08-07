@@ -27,7 +27,7 @@ The whole method: write one present-tense affirmation 3 times in the morning, 6 
 https://www.ai-manifest.com/guides/how-to-do-the-369-method.html
 
 📱 I built an iOS app that schedules your three sessions, counts every rep, and tracks the 33-day streak — Manifest: Vision Board & 369 (3-day free trial):
-https://apps.apple.com/us/app/manifest-vision-board-369/id6757018484
+https://apps.apple.com/us/app/manifest-vision-board-369/id6757018484?ct=off-youtube
 
 No magic promises here — just the clearest version of the ritual and the psychology of why consistent people get results.
 
