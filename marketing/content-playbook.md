@@ -203,3 +203,33 @@ Rule: ship English → pt-BR → es first. Translate a piece only after it prove
 ---
 
 **Bottom lines:** (1) Don't chase AI-detector scores — chase specificity, stance, and first-hand experience. (2) Pillar-cluster + answer-first + cited-stats is the one play that compounds classic SEO and AI-engine citations. (3) Spend energy on pt-BR/es localization and off-site Reddit/YouTube mentions, not llms.txt.
+
+---
+
+## 3. Measurement (added 2026-08-07)
+
+Two independent instruments; neither replaces the other.
+
+**Apple campaign tokens (`?ct=`) — measures INSTALLS.** Every App Store link carries a token naming
+where on the page it was clicked. Apple reports these in App Store Connect → App Analytics →
+Acquisition → Campaigns, against real downloads:
+
+| token | position |
+|---|---|
+| `web-nav` | header nav button |
+| `web-intro` | early in-article strip (before the first H2) |
+| `web-ctabox` | the big card at the end of the article |
+| `web-footer` | site footer |
+| `web-body` | homepage hero / other in-page links |
+
+Rules: put the token on the link's own storefront URL (localized pages use `/de/`, `/fr/`, `/br/`,
+`/mx/`, not `/us/`). **Never tag a URL inside a JSON-LD block** — structured-data URLs must stay
+canonical or Google may read the tagged URL as a different entity. Keep tokens position-based, not
+per-language; traffic is still too thin to split five ways, and Vercel already gives us the language
+dimension via the page path.
+
+**Vercel Web Analytics — measures CLICKS and pages.** `<script defer src="/_vercel/insights/script.js">`
+sits before `</body>` on every page. Cookieless. Disclosed in `privacy.html` under "Website Analytics";
+if the analytics setup changes, that section has to change with it.
+
+New pages inherit both automatically only if you copy an existing guide's markup — verify before shipping.
