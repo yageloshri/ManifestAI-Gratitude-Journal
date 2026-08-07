@@ -26,9 +26,10 @@ import urllib.parse
 import urllib.request
 
 ORG = "8939860"
-# The live Discovery campaign. The old Exact campaign 2144404347 is paused and
-# must stay that way — it proved EXACT match produces no auctions for this app.
-CAMPAIGN = 2144414959
+# The live campaign. Two predecessors are paused and must stay that way:
+#   2144404347 exact/US      — 0 impressions in 44h; EXACT produces no auctions for us
+#   2144414959 discovery/US  — 657 impr, 9 taps, 0 installs, $15.35 at $1.71/tap
+CAMPAIGN = 2144421268
 API = "https://api.searchads.apple.com/api/v5"
 
 
