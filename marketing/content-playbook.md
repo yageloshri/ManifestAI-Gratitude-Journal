@@ -233,3 +233,45 @@ sits before `</body>` on every page. Cookieless. Disclosed in `privacy.html` und
 if the analytics setup changes, that section has to change with it.
 
 New pages inherit both automatically only if you copy an existing guide's markup — verify before shipping.
+
+---
+
+## 4. Languages (updated 2026-08-08)
+
+The site ships in **seven**: English (root) + `pt` `es` `de` `fr` `it` `nl`.
+
+**Why localization is the priority, not more English.** Site clicks went 4 → 8 → 44 across
+three weeks and essentially all of the growth is non-English. Localized pages rank p5-7
+while the English originals sit at p16+. Last week: Brazil 7 clicks, France 7, Spain 5,
+Germany 3 — against the US at **3 clicks on 725 impressions**. English earns the
+impressions; the translations earn the clicks.
+
+**And it feeds ASO.** France's App Store gratitude cluster moved 50-104 places on an
+*unchanged* keyword field, driven purely by the FR guide pages (`journal de gratitude`
+#136 → #32). Localized web content lifts App Store rank, which the 100-character keyword
+field cannot do on its own. That makes a new language a double lever.
+
+**Why `it` and `nl` were chosen.** We hold #1 App Store positions in Italy and the
+Netherlands (nl `369 methode` #6) and had zero web presence in either. High-ARPU markets,
+no incumbent competing with us, and the FR result says the lift is real.
+
+Deliberately not chosen yet: `ru` (App Store payment restrictions make installs hard to
+monetise), `tr` (huge but low ARPU — next round), `he` (our strongest App Store market in
+the world and still a real gap; revisit).
+
+Search terms that matter per language — use these, not literal translations:
+
+| lang | terms |
+|---|---|
+| pt-BR | método 369, lei da atração, números dos anjos, diário de gratidão, quadro de visualização |
+| es | ley de la atracción, números de ángeles, método 369, diario de gratitud, tablero de visión |
+| de | Bestellung beim Universum, Engelszahlen, 369 Methode, Dankbarkeitstagebuch, Visionboard |
+| fr | loi de l'attraction, nombres angéliques, méthode 369, journal de gratitude, tableau de visualisation |
+| it | metodo 369, legge dell'attrazione, numeri angelici, diario della gratitudine, vision board |
+| nl | 369 methode, wet van aantrekking, engelengetallen, dankbaarheidsdagboek, visiebord |
+
+**Sitemap rules learned the hard way (2026-08-08):** `<lastmod>` must be the real change
+date — 70 entries were found advertising a date nine days stale, which tells Google there
+is nothing to re-crawl. And never list a `noindex` page: `privacy.html` and `terms.html`
+were in the sitemap while carrying noindex, and Search Console reported the contradiction
+as an exclusion.
