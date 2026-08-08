@@ -17,9 +17,12 @@ US one. That makes this a controlled experiment with price as the only variable:
   TTR ~1.4% here -> the creative is the problem, and no budget fixes that
 
 Keywords are the three that showed life in the US, plus the two the US never gave
-enough impressions to judge. Bid $1.20 vs the US $2.00 — tier-2 auctions clear
-lower, and if that proves too low the report will show it as missing impressions
-rather than as wasted spend.
+enough impressions to judge. Bid: launched at $1.20 on the assumption that tier-2 auctions clear lower than the
+US. That was wrong — 4 impressions in 10 hours on $0.00 spend, i.e. we lost
+essentially every auction. Raised to $2.00 (the US level) on 2026-08-08. Note this
+does not make us more expensive: the bid is a ceiling, not a price. If GB/CA/AU
+really are cheaper — the whole thesis — the realised CPT settles below the US
+$1.71 on its own. The low bid saved nothing; it only kept us out of the auction.
 
 No pip deps (openssl + urllib), same as asa_guard.py.
 """
@@ -33,7 +36,7 @@ from asa_guard import call, CAMPAIGN as US_CAMPAIGN, ORG  # noqa: E402
 
 ADAM_ID = 6757018484
 DAILY = "20"
-BID = "1.20"
+BID = "2.00"  # was 1.20 at launch: 4 impressions in 10h, we lost every auction
 COUNTRIES = ["GB", "CA", "AU"]
 
 # Carried over from the US run. `gratitude journal` was the only proven winner
