@@ -4,6 +4,31 @@ Recurring SEO/GEO content agent run log. One entry per publish cycle.
 
 ---
 
+## 2026-08-08 — it/nl localization backfill, run 1: 369 method + gratitude prompts (+ new it/nl homepages)
+
+**What shipped (localization backfill agent, first run):**
+- https://www.ai-manifest.com/it/ and https://www.ai-manifest.com/nl/ — new localized homepages, modelled 1:1 on `/fr/index.html` (hero, download band, screenshots, how-it-works, all 15 guide cards, 10-item FAQ + FAQPage/SoftwareApplication schema, final CTA, footer), fully translated.
+- https://www.ai-manifest.com/it/guides/369-manifestation-method.html ("metodo 369", "legge dell'attrazione", tu-form, feminine examples, 2.000 € income example)
+- https://www.ai-manifest.com/nl/guides/369-manifestation-method.html ("369 methode", "wet van aantrekking", je-form, € 2.000 example, NRC-style single quotes)
+- https://www.ai-manifest.com/it/guides/gratitude-journal-prompts-for-manifestation.html ("diario della gratitudine", "spunti" for prompts — the natural IT term, not "domande")
+- https://www.ai-manifest.com/nl/guides/gratitude-journal-prompts-for-manifestation.html ("dankbaarheidsdagboek", "vragen" for prompts)
+
+**Why these two guides first:** 369 pillar because nl `369 methode` sits at #6 in the App Store and the guide is the cluster hub; gratitude prompts because it targets exactly the keyword cluster (`diario della gratitudine` / `dankbaarheidsdagboek`) that moved FR App Store rank 50–104 places. Both are also among the oldest (2026-07-11).
+
+**Quality/consistency notes:** localized from the FR versions' register (informal address, local idiom) rather than word-for-word from EN; playbook keyword tables (§4) used for all head terms, so no WebSearch verification was needed. Per-language read-back done; blocklist logic applied in-language (no calques like "cruciale/cruciaal", no empty transitions, sentence-length variance preserved from the source structure). Every page carries: cta-inline before the first H2 (translated), end-of-article cta-box, self-canonical, translated Article + BreadcrumbList schema (guides) / SoftwareApplication + FAQPage (homepages), position-based ct tokens on `/it/` / `/nl/` storefront URLs, canonical untagged URLs inside all JSON-LD, Vercel insights script. Verified mechanically (script): canonicals, storefronts, token positions, JSON-LD untagged, zero dead links.
+
+**Cross-link policy (important for future runs):** links to guides that do not yet exist in it/nl point at the English originals via absolute paths (`/guides/...`). When a later run localizes a guide, it must also flip those absolute links to relative ones in the existing it/nl pages (grep for `"/guides/<slug>.html"` under `website/it/` and `website/nl/`) and add the new guide's card link on the it/nl homepages (cards already exist, only hrefs need flipping).
+
+**Sitemap:** added 6 URLs (2 homepages + 4 guides) with full 8-way hreflang (en, pt-BR, es, de, fr, it, nl, x-default); updated the 15 existing entries for the 5 homepages and the 5 language versions of both guides to include it/nl return links (bidirectional). lastmod 2026-08-08 on all 21 touched entries. XML re-validated; 92 entries total, all resolve; privacy/terms still excluded.
+
+**Deploy:** push to main → Vercel Git integration. IndexNow submission of the 6 new URLs (result noted in commit/run output).
+
+**Skipped:** llms.txt and geo-log.md untouched — those track new English guides only, and this run added translations. No author bio page (site-wide org byline kept, same as every prior run).
+
+**Backlog remaining:** 15 of 17 English guides still lack it+nl versions (next by the same priority logic: how-to-do-the-369-method + 369-method-examples, then 33-day-manifestation-challenge, manifestation-journal, how-to-manifest-something…). At 2 guides/run: ~8 more runs.
+
+---
+
 ## 2026-08-04 — Angel Number 222 Meaning (en + pt/es/de/fr)
 
 **Topic:** Angel number 222 meaning (playbook §2.6 topic #4; third page of the angel-number cluster under Pillar B, continuing the 1111 → 444 → 222 → 555 → 369 sequence).
