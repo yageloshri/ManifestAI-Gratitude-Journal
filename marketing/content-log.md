@@ -4,6 +4,30 @@ Recurring SEO/GEO content agent run log. One entry per publish cycle.
 
 ---
 
+## 2026-08-09 — it/nl localization backfill, run 2: how-to-do-the-369-method + 369-method-examples
+
+**What shipped (localization backfill agent, run 2):**
+- https://www.ai-manifest.com/it/guides/how-to-do-the-369-method.html ("come fare il metodo 369", tu-form, feminine register matching run 1, "prima delle 17", 2.000 € example, translated HowTo schema)
+- https://www.ai-manifest.com/nl/guides/how-to-do-the-369-method.html ("hoe doe je de 369 methode", je-form, "vóór 17:00", NRC-style single quotes, translated HowTo schema)
+- https://www.ai-manifest.com/it/guides/369-method-examples.html ("esempi per il metodo 369", all 24 affirmations rewritten in natural Italian — feminine first person, "[azienda]/[nome]/[cifra]" placeholders, 2.000 € money example)
+- https://www.ai-manifest.com/nl/guides/369-method-examples.html ("369 methode voorbeelden", affirmations rewritten in natural Dutch, "[bedrijf]/[naam]/[bedrag]" placeholders, € 2.000 example)
+
+**Why these two:** exactly the "next up" pair named in run 1 — they complete the it/nl 369 cluster core around the pillar (pillar + how-to + examples), which matters most where we hold the App Store positions (nl `369 methode` #6, it #1 overall).
+
+**Quality/consistency notes:** localized against run 1's register and terminology (serie/congelamento della serie for streaks in it; streak/streak freeze kept as loanwords in nl, matching run 1). Structure, tables, HowTo/Article/BreadcrumbList schema and internal-link topology preserved from EN; schema URLs canonical and untagged. Mechanical scan on all 4 pages: 0 blocklist-equivalent hits (it/nl calque lists), 0 "not X — it's Y" constructions after 3 rewrites (two leads + one bullet), em-dash counts 14/16 matching the EN sources exactly (below run 1's shipped 18–19), position-based ct tokens on /it/ and /nl/ storefronts, cta-inline before first H2 + cta-box on every page, self-canonicals verified, zero broken internal links across all 10 touched pages.
+
+**Cross-links flipped per run-1 policy:** `"/guides/how-to-do-the-369-method.html"` and `"/guides/369-method-examples.html"` switched from English absolute to local paths in it/nl index.html (guide cards, FAQ answer, footer) and in the 4 existing it/nl guide pages (body links, related lists, footers). New pages link relatively to existing it/nl siblings and absolutely (`/guides/...`) to not-yet-localized ones (33-day-challenge etc.).
+
+**Sitemap:** 4 new URLs added with full 8-way hreflang; the 10 existing en/pt/es/de/fr entries for both slugs updated with it+nl return links (bidirectional); lastmod 2026-08-09 on all touched entries including the 6 edited it/nl pages. XML validated; 96 entries total, all resolve to files; privacy/terms still excluded.
+
+**Deploy:** push to main → Vercel Git integration. IndexNow submission of the 4 new URLs (result in run output).
+
+**Skipped:** llms.txt/geo-log.md untouched (translations, not new English guides — same as run 1). No author bio page (site-wide org byline kept).
+
+**Backlog remaining:** 13 of 17 English guides still lack it+nl versions (next by run-1 priority: 33-day-manifestation-challenge + manifestation-journal, then how-to-manifest-something, angel-numbers-meaning…). At 2 guides/run: ~7 more runs.
+
+---
+
 ## 2026-08-08 — it/nl localization backfill, run 1: 369 method + gratitude prompts (+ new it/nl homepages)
 
 **What shipped (localization backfill agent, first run):**
