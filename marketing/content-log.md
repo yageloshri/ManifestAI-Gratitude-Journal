@@ -4,6 +4,30 @@ Recurring SEO/GEO content agent run log. One entry per publish cycle.
 
 ---
 
+## 2026-08-10 — it/nl localization backfill, run 3: 33-day-manifestation-challenge + manifestation-journal
+
+**What shipped (localization backfill agent, run 3):**
+- https://www.ai-manifest.com/it/guides/33-day-manifestation-challenge.html ("sfida di manifestazione di 33 giorni", tu-form + feminine register matching runs 1-2 — "le puriste/le pragmatiche", « » quotes, serie/congelamento della serie)
+- https://www.ai-manifest.com/nl/guides/33-day-manifestation-challenge.html ("33-dagen manifestatie-challenge", je-form, NRC-style single quotes, streak/streak freeze kept as loanwords matching run 1, "cycli sneuvelen" echoing the nl pillar's day-14 line)
+- https://www.ai-manifest.com/it/guides/manifestation-journal.html ("diario di manifestazione", "registro delle prove" for the evidence log, "prova generale" for rehearsal, Eleva IA feature naming from the it homepage, "spunti" for prompts per run 1)
+- https://www.ai-manifest.com/nl/guides/manifestation-journal.html ("manifestatiedagboek", "bewijslogboek", "generale repetitie", AI-verrijking phrasing matching the nl homepage, "vragen" for prompts per run 1)
+
+**Why these two:** exactly the "next up" pair named in run 2. They close the loop around the it/nl 369 cluster (the 33-day challenge is the pillar's third leg and both new pillar/how-to/examples pages already linked to it in English) and the manifestation-journal page targets the journaling cluster that produced the FR App Store lift (nl `dankbaarheidsdagboek` / it `diario della gratitudine` adjacency).
+
+**Quality/consistency notes:** localized per-language from the EN structure with the FR version as register reference, not sentence-by-sentence MT. Mechanical scan on all 4 pages: 0 blocklist-calque hits (it/nl lists), one "non è mai X: è Y" / "is nooit X: het is Y" construction caught by regex in each 33-day draft and rewritten, em-dash counts 13/19 per page tracking the EN sources' structural dashes (h3 titles + bullet leads), position-based ct tokens (web-nav/web-intro/web-ctabox/web-footer) all on /it/ and /nl/ storefronts, cta-inline before first H2 + end cta-box on all 4, self-canonicals verified, both JSON-LD blocks parse on every page with zero ct tokens inside, zero dead internal links across all 16 touched pages.
+
+**Cross-links flipped per run-1 policy:** `"/guides/33-day-manifestation-challenge.html"` and `"/guides/manifestation-journal.html"` switched from English absolute to local paths in it/nl index.html (guide cards, FAQ answer, footer) and in the 10 existing it/nl guide pages; JSON-LD dateModified bumped to 2026-08-10 on the 10 edited guides. New pages link relatively to localized siblings (both new slugs cross-link each other) and absolutely (`/guides/...`) to not-yet-localized ones (vision-board pages etc.).
+
+**Sitemap:** 4 new URLs added with full 8-way hreflang; the 10 existing en/pt/es/de/fr entries for both slugs rebuilt with it+nl return links (bidirectional); lastmod 2026-08-10 on all touched entries including the 12 edited it/nl pages. XML validated; 107 entries total, all resolve to files; privacy/terms still excluded.
+
+**Deploy:** push to main → Vercel Git integration. IndexNow submission of the 4 new URLs (result in run output).
+
+**Skipped:** llms.txt/geo-log.md untouched (translations, not new English guides — same as runs 1-2). No author bio page (site-wide org byline kept).
+
+**Backlog remaining:** 11 of 18 English guides still lack it+nl versions (18 now includes angel-number-555, which shipped 7-language on 2026-08-10). Next by run-1 priority: how-to-manifest-something + angel-numbers-meaning, then the remaining angel-number pages, vision-board pair, scripting, personal-day-number, lucky-girl-syndrome, best-manifestation-apps. At 2 guides/run: ~6 more runs.
+
+---
+
 ## 2026-08-10 — Angel Number 555 Meaning (en + pt/es/de/fr/it/nl — first seven-language ship)
 
 **Topic:** Angel number 555 meaning (playbook §2.6 topic #5; fourth page of the angel-number cluster under Pillar B, continuing the queued 1111 → 444 → 222 → 555 → 369 sequence). First run where a new article ships in all seven site languages simultaneously, per the localization-first mandate (it/nl hold #1 App Store positions with previously zero angel-number web presence in either language).
