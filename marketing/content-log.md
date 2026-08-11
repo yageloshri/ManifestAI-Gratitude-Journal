@@ -4,6 +4,30 @@ Recurring SEO/GEO content agent run log. One entry per publish cycle.
 
 ---
 
+## 2026-08-11 — it/nl localization backfill, run 4: how-to-manifest-something + angel-numbers-meaning
+
+**What shipped (localization backfill agent, run 4):**
+- https://www.ai-manifest.com/it/guides/how-to-manifest-something.html ("come manifestare qualcosa", tu-form + feminine register matching runs 1-3 — "da spettatrice", "l'amica di un'amica", « » quotes, "prova generale" echoing the it manifestation-journal page, serie/congelamento della serie)
+- https://www.ai-manifest.com/nl/guides/how-to-manifest-something.html ("hoe manifesteer je iets", je-form, NRC-style single quotes, streak/streak freeze kept as loanwords, "bewijslogboek" matching the nl manifestation-journal page, "kansen die kloppen" for aligned opportunities)
+- https://www.ai-manifest.com/it/guides/angel-numbers-meaning.html ("numeri angelici", the Pillar-B hub — full 10-row table rewritten in natural Italian, 4,44 € coffee, "correzione di rotta", anchors matching the it 555 page's established terminology)
+- https://www.ai-manifest.com/nl/guides/angel-numbers-meaning.html ("engelengetallen", 10-row table in natural Dutch, € 4,44, "bijsturen" for course-correction, "leiding en afstemming" rather than calqued "alignment")
+
+**Why these two:** exactly the "next up" pair named in run 3. how-to-manifest-something is the broadest TOFU entry point and both new pages' related lists funnel into the localized 369 cluster; angel-numbers-meaning is Pillar B's hub and the return-link target for the it/nl 555 page that shipped 2026-08-10 (its hub links pointed at the English original until today).
+
+**Quality/consistency notes:** localized per-language from the EN structure with the FR versions read side by side as the register reference, not sentence-by-sentence MT. H1s match the anchor texts already established by existing it/nl cross-links (it "Come manifestare qualcosa: la guida per chi inizia" / "Numeri angelici: il significato di 111, 222, 333, 444 e oltre"; nl "Hoe manifesteer je iets: de beginnersgids" / "Engelengetallen: de betekenis van 111, 222, 333, 444 en meer"), so no anchor drift. Mechanical scan on all 4 pages: 0 blocklist-calque hits (it/nl lists), four "non è X: è Y" / "is geen X; het is Y" constructions caught in draft (2 per language, both inherited from the EN source's step-2 and step-7 sentences) and rewritten, body em-dash counts 10/11/22/22 tracking the EN sources (the 22s are mostly the 10-row table), position-based ct tokens (web-nav/web-intro/web-ctabox/web-footer) all on /it/ and /nl/ storefronts, cta-inline before first H2 + end cta-box on all 4, self-canonicals verified, both JSON-LD blocks parse on every page with zero ct tokens inside, zero dead internal links across all 20 touched it/nl pages, all 111 sitemap URLs resolve to files.
+
+**Cross-links flipped per run-1 policy:** `"/guides/how-to-manifest-something.html"` and `"/guides/angel-numbers-meaning.html"` switched from English absolute to local paths in it/nl index.html (guide cards, footer) and in the 14 existing it/nl guide pages; JSON-LD dateModified bumped to 2026-08-11 on the edited guides. New pages link relatively to localized siblings (each new pair cross-links the other; angel hub links the localized 555 page) and absolutely (`/guides/...`) to not-yet-localized ones (1111/222/444, personal-day-number, vision-board pair, scripting, best-apps).
+
+**Sitemap:** 4 new URLs added with full 8-way hreflang (en/pt-BR/es/de/fr/it/nl/x-default, self-referencing); the 10 existing en/pt/es/de/fr entries for both slugs rebuilt with it+nl return links (bidirectional); lastmod 2026-08-11 on all touched entries including the edited it/nl pages and homepages. XML validated; 111 entries total, all resolve to files; privacy/terms still excluded.
+
+**Deploy:** push to main → Vercel Git integration. IndexNow submission of the 4 new URLs (result in run output).
+
+**Skipped:** llms.txt/geo-log.md untouched (translations, not new English guides — same as runs 1-3). No author bio page (site-wide org byline kept).
+
+**Backlog remaining:** 9 of 18 English guides still lack it+nl versions: angel-number-1111, angel-number-222, angel-number-444, best-manifestation-apps, how-to-make-a-vision-board-on-your-phone, lucky-girl-syndrome, personal-day-number-numerology, scripting-method-manifestation, vision-board-ideas. Next by run-1 priority: the vision-board pair (how-to-make-a-vision-board-on-your-phone + vision-board-ideas — app-name affinity "Vision Board & 369", and today's new pages link to them) or angel-number-1111 + 444 to keep filling Pillar B behind the localized hub. At 2 guides/run: ~5 more runs.
+
+---
+
 ## 2026-08-10 — it/nl localization backfill, run 3: 33-day-manifestation-challenge + manifestation-journal
 
 **What shipped (localization backfill agent, run 3):**
