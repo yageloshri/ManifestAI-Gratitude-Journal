@@ -4,6 +4,30 @@ Recurring SEO/GEO content agent run log. One entry per publish cycle.
 
 ---
 
+## 2026-08-12 — it/nl localization backfill, run 5: how-to-make-a-vision-board-on-your-phone + vision-board-ideas
+
+**What shipped (localization backfill agent, run 5):**
+- https://www.ai-manifest.com/it/guides/how-to-make-a-vision-board-on-your-phone.html ("vision board" kept as the head term per playbook §4, tu-form + feminine register matching runs 1-4 — "te stessa", « » quotes, "la bacheca" as the natural running synonym, "schermata di blocco"/"schermata Home" iOS terms)
+- https://www.ai-manifest.com/nl/guides/how-to-make-a-vision-board-on-your-phone.html ("visiebord" per playbook §4, je-form, NRC-style single quotes, "vergrendelscherm"/"beginscherm", "rasterindeling" for grid layout)
+- https://www.ai-manifest.com/it/guides/vision-board-ideas.html ("idee per il vision board", 9 category sections + 3-row structure table + FAQ all rewritten in natural Italian; Immobiliare.it as the locally-real listing example in the home category)
+- https://www.ai-manifest.com/nl/guides/vision-board-ideas.html ("visiebord-ideeën", Funda as the home-category example matching the nl 555 page's established local flavor, 'kroonjaar' for milestone birthday, translated FAQPage schema)
+
+**Why these two:** the first of the two "next up" options named in run 4 — the vision-board pair has the highest app-name affinity ("Manifest: Vision Board & 369", it #1 App Store overall / nl `369 methode` #6), and all four pages shipped in runs 1-4 already linked to these two slugs in English. The pair also cross-links itself, so both pages land with live localized siblings.
+
+**Quality/consistency notes:** localized per-language from the EN structure with the FR versions read side by side as register reference, not sentence-by-sentence MT. H1s match the anchor texts already established by existing it/nl cross-links (it "Come creare un vision board sul telefono" / "Idee per il vision board: 9 categorie + esempi"; nl "Hoe maak je een visiebord op je telefoon" / "Visiebord-ideeën: 9 categorieën + voorbeelden"), so no anchor drift. EN negative-parallelism sentences rewritten rather than calqued (the "isn't pretty — it's visceral" filter line, "isn't a mood board — it's a visual shortlist" definition, "Not just the paycheck" category lead — 3 per language). Mechanical scan on all 4 pages: 0 blocklist-calque hits (it/nl lists), 0 "non è X: è Y" / "is geen X: het is Y" constructions, body em-dash counts 23/23/22/22 tracking the EN sources' structural per-bullet dashes, position-based ct tokens (web-nav/web-intro/web-ctabox/web-footer) all on /it/ and /nl/ storefronts with zero /us/ links, cta-inline before first H2 + end cta-box on all 4, self-canonicals verified, all JSON-LD blocks parse on every page with zero ct tokens inside (vision-board-ideas carries translated Article + BreadcrumbList + FAQPage; the how-to page has no FAQPage, matching its EN source), zero dead internal links across all 24 it/nl pages.
+
+**Cross-links flipped per run-1 policy:** `"/guides/how-to-make-a-vision-board-on-your-phone.html"` and `"/guides/vision-board-ideas.html"` switched from English absolute to local paths in it/nl index.html (guide cards, footer) and in all 18 existing it/nl guide pages; JSON-LD dateModified bumped to 2026-08-12 on the edited guides. New pages link relatively to localized siblings (the pair cross-links each other; ideas page links the localized angel hub + 369 pillar + gratitude prompts) and absolutely (`/guides/...`) to not-yet-localized ones (best-apps, personal-day-number, scripting in the footer).
+
+**Sitemap:** 4 new URLs added with full 8-way hreflang (en/pt-BR/es/de/fr/it/nl/x-default, self-referencing); the 10 existing en/pt/es/de/fr entries for both slugs rebuilt with it+nl return links (bidirectional); lastmod 2026-08-12 on all touched entries including the 20 edited it/nl pages and homepages. XML validated; 115 entries total, all resolve to files; privacy/terms still excluded.
+
+**Deploy:** push to main → Vercel Git integration. IndexNow submission of the 4 new URLs (result in run output).
+
+**Skipped:** llms.txt/geo-log.md untouched (translations, not new English guides — same as runs 1-4). No author bio page (site-wide org byline kept).
+
+**Backlog remaining:** 7 of 18 English guides still lack it+nl versions: angel-number-1111, angel-number-222, angel-number-444, best-manifestation-apps, lucky-girl-syndrome, personal-day-number-numerology, scripting-method-manifestation. Next by run-4 priority: angel-number-1111 + 444 to fill Pillar B behind the localized hub (the it/nl angel-numbers hub currently links their EN originals), then 222 + scripting, then personal-day-number + lucky-girl, then best-manifestation-apps. At 2 guides/run: ~4 more runs.
+
+---
+
 ## 2026-08-11 — it/nl localization backfill, run 4: how-to-manifest-something + angel-numbers-meaning
 
 **What shipped (localization backfill agent, run 4):**
