@@ -4,6 +4,30 @@ Recurring SEO/GEO content agent run log. One entry per publish cycle.
 
 ---
 
+## 2026-08-14 — it/nl localization backfill, run 6: best-manifestation-apps + angel-number-1111-meaning
+
+**What shipped (localization backfill agent, run 6):**
+- https://www.ai-manifest.com/it/guides/best-manifestation-apps.html ("migliori app di manifestazione", tu-form; euro prices "24,99 €/anno o 3,99 €/sett.", Italian number format 721.007 / 4,8; translated ItemList + FAQPage schema with /it/ storefront URLs, untagged)
+- https://www.ai-manifest.com/nl/guides/best-manifestation-apps.html ("beste manifestatie-apps", je-form; "€ 24,99/jaar of € 3,99/week", nl number format; translated ItemList + FAQPage schema with /nl/ storefront URLs, untagged)
+- https://www.ai-manifest.com/it/guides/angel-number-1111-meaning.html ("numero angelico 1111" + "ora doppia 11:11" — the ore-doppie framing is what Italians actually search; receipt example 11,11 €, 24h-clock adaptations, tu-form + feminine register matching runs 1-5)
+- https://www.ai-manifest.com/nl/guides/angel-number-1111-meaning.html ("engelengetal 1111" + "dubbele getallen" framing; € 11,11 bon, kilometerteller 1.111, je-form)
+
+**Why these two:** deviates from run 5's suggested 1111+444 pairing on one slot. angel-number-1111 kept (run 5's #1 pick: highest-volume angel-number query, and the localized it/nl angel hub + 555 pages already link its EN original from body text). 444 swapped for best-manifestation-apps because the task rule is oldest-published-first unless obviously higher value: best-apps is the oldest unlocalized guide (2026-07-11) AND the only BOFU/commercial money page in the backlog — every it/nl page's footer links it first, and we hold #1 App Store positions in both countries with zero local-language comparison page. 444 moves to next run.
+
+**Quality/consistency notes:** localized from the EN structure with the FR versions read side by side as register reference (FR best-apps supplied the precedent for localized ItemList storefront URLs and euro price rows). All ratings/counts/dates kept verbatim from the EN source (US App Store data, July 11 2026 pull — stated as such in the asterisk note in both languages; no numbers invented). Doreen Virtue quote, Zwicky frequency illusion, Pew 2018 stat, and Gollwitzer 94-study citation all preserved with source links; first-person 30-day log anecdote and the anti-twin-flame stance carried over. One FR-page bug not replicated: FR's cta-inline points at the /us/ storefront; both new pairs use /it/ and /nl/ on every ct-tagged link (web-nav/web-intro/web-ctabox/web-footer), zero /us/ links. Mechanical scan on all 4 pages: 0 blocklist-calque hits (it/nl lists), 0 negative-parallelism calques, JSON-LD parses on every page with zero ct tokens inside, cta-inline before first H2 + end cta-box on all 4, self-canonicals verified, em-dash counts track the EN sources (best-apps is structurally dash-heavy at 39; 1111 pages at 5/7 body dashes ≈ 1 per 300 words).
+
+**Cross-links flipped per run-1 policy:** `"/guides/best-manifestation-apps.html"` and `"/guides/angel-number-1111-meaning.html"` switched from English absolute to local paths in it/nl index.html (guide cards, footer) and in all 22 existing it/nl guide pages; JSON-LD dateModified bumped to 2026-08-14 on the edited guides. New pages link relatively to localized siblings (1111 → hub, 555, 369 pillar, manifestation journal; best-apps → 369 pillar, how-to-369, vision-board how-to, manifestation journal) and absolutely (`/guides/...`) to not-yet-localized ones (222, 444, personal-day-number, scripting).
+
+**Sitemap:** 4 new URLs added with full 8-way hreflang (en/pt-BR/es/de/fr/it/nl/x-default, self-referencing); the 10 existing en/pt/es/de/fr entries for both slugs got it+nl return links (bidirectional); lastmod 2026-08-14 on all touched entries including the edited it/nl pages and homepages. XML validated; 119 entries total, all resolve to files (dead-link check across all 26 it/nl pages: none); privacy/terms still excluded.
+
+**Deploy:** push to main → Vercel Git integration. IndexNow submission of the 4 new URLs (result in run output).
+
+**Skipped:** llms.txt/geo-log.md untouched (translations, not new English guides — same as runs 1-5). No author bio page (site-wide org byline kept).
+
+**Backlog remaining:** 5 of 18 English guides still lack it+nl versions: angel-number-222, angel-number-444, lucky-girl-syndrome, personal-day-number-numerology, scripting-method-manifestation. Next: angel-number-444 + 222 to finish Pillar B behind the localized hub, then scripting + personal-day-number, then lucky-girl. At 2 guides/run: ~3 more runs.
+
+---
+
 ## 2026-08-12 — it/nl localization backfill, run 5: how-to-make-a-vision-board-on-your-phone + vision-board-ideas
 
 **What shipped (localization backfill agent, run 5):**
