@@ -4,6 +4,30 @@ Recurring SEO/GEO content agent run log. One entry per publish cycle.
 
 ---
 
+## 2026-08-15 — it/nl localization backfill, run 7: angel-number-444-meaning + angel-number-222-meaning
+
+**What shipped (localization backfill agent, run 7):**
+- https://www.ai-manifest.com/it/guides/angel-number-444-meaning.html ("numero angelico 444", tu-form + feminine register matching runs 1-6; bonifico da 25 €, «...» quotes for the Virtue 444 entry)
+- https://www.ai-manifest.com/nl/guides/angel-number-444-meaning.html ("engelengetal 444", je-form, single quotes for the Virtue entry; € 25 automatische overboeking, verhuisdozen/borg anecdote adaptation)
+- https://www.ai-manifest.com/it/guides/angel-number-222-meaning.html ("numero angelico 222", conto da 2,22 € al POS; Twosday re-anchored as the Italian "data palindroma" 22/02/2022 — the palindrome only exists in dd/mm format, so this is a genuinely local hook the EN original can't use)
+- https://www.ai-manifest.com/nl/guides/angel-number-222-meaning.html ("engelengetal 222", € 2,22 op het pinapparaat; same 22-02-2022 palindroom framing with the Twosday name kept as the English coinage it is)
+
+**Why these two:** exactly the pair run 6 named next. Finishes Pillar B behind the localized it/nl angel-numbers hub — the hub, 555 and 1111 pages shipped in runs 2-6 all linked the EN 222/444 originals from body text and related lists until today. With these two, every angel-number page exists in all seven languages.
+
+**Quality/consistency notes:** localized per-language from the EN structure with the existing it/nl 1111/555 pages as register reference (they now carry six runs of established terminology). H1s match the anchor texts already live on sibling pages (it "Numero angelico 444: perché continui a vedere le 4:44" / "Numero angelico 222: perché continui a vedere le 2:22"; nl "Engelengetal 444: waarom je steeds 4:44 ziet" / "Engelengetal 222: waarom je steeds 2:22 ziet"), so no anchor drift. All citations preserved with source links: Virtue quotes (444 + 222 entries, translated in-register), Kyle Gray/Glasgow, AP-NORC May 2023 (69% angels vs 56% devil, framed as US data), Cohen & Wills 1985 stress-buffering, Gottman/Levenson 5:1 ratio with the 90%-accuracy claim, East Asian tetraphobia detail (sì/sǐ, Korean "F" elevators). First-person anecdotes carried over and localized (March move with eleven boxes; November interview wait with the 28-Nov give-up date); both disagreeable stances kept per article (444-as-warning debunk + "444 is useful because its advice is boring"; anti-twin-flame + "patience without a deadline is a nap"). Mechanical scan on all 4 pages: 0 blocklist-calque hits (it/nl lists), 0 negative-parallelism calques, 0 empty-transition paragraph openers, body em-dashes 0/0/0/1 (EN sources have 0), position-based ct tokens (web-nav/web-intro/web-ctabox/web-footer) all on /it/ and /nl/ storefronts with zero /us/ links, cta-inline before first H2 + end cta-box on all 4, self-canonicals verified, translated Article + BreadcrumbList + FAQPage JSON-LD parses on every page with zero ct tokens inside.
+
+**Cross-links flipped per run-1 policy:** `/guides/angel-number-222-meaning.html` and `/guides/angel-number-444-meaning.html` switched from English absolute to local paths in it/nl index.html (guide cards ⚖️/🧱 + footer) and in the 6 existing it/nl guide pages that referenced them (555, 1111, angel-numbers hub × both languages); JSON-LD dateModified bumped to 2026-08-15 on the edited guides. New pages link relatively to localized siblings (each pair cross-links the other; both link hub, 1111, 369 pillar, manifestation journal, gratitude prompts; 222 also links 555) and absolutely (`/guides/...`) to not-yet-localized ones (personal-day-number, scripting in the footer).
+
+**Sitemap:** 4 new URLs added with full 8-way hreflang (en/pt-BR/es/de/fr/it/nl/x-default, self-referencing); the 10 existing en/pt/es/de/fr entries for both slugs got it+nl return links (bidirectional); lastmod 2026-08-15 on all touched entries. XML validated; 123 entries total, all resolve to files; dead-link check across all it/nl pages: none; privacy/terms still excluded.
+
+**Deploy:** push to main → Vercel Git integration. IndexNow submission of the 4 new URLs (result in run output).
+
+**Skipped:** llms.txt/geo-log.md untouched (translations, not new English guides — same as runs 1-6). No author bio page (site-wide org byline kept).
+
+**Backlog remaining:** 3 of 18 English guides still lack it+nl versions: lucky-girl-syndrome, personal-day-number-numerology, scripting-method-manifestation. Next per run-6 priority: scripting + personal-day-number (both are footer-linked from every it/nl page and personal-day is body-linked from the whole angel cluster), then lucky-girl as the final singleton. At 2 guides/run: ~2 more runs.
+
+---
+
 ## 2026-08-14 — it/nl localization backfill, run 6: best-manifestation-apps + angel-number-1111-meaning
 
 **What shipped (localization backfill agent, run 6):**
