@@ -4,6 +4,30 @@ Recurring SEO/GEO content agent run log. One entry per publish cycle.
 
 ---
 
+## 2026-08-16 — it/nl localization backfill, run 8: scripting-method-manifestation + lucky-girl-syndrome
+
+**What shipped (localization backfill agent, run 8):**
+- https://www.ai-manifest.com/it/guides/scripting-method-manifestation.html ("lo scripting" kept as the Italian community's own term, «legge dell'assunzione», tu-form + feminine register in the example scripts matching runs 1-7; app-della-banca / colloquio scenes, «...» quotes)
+- https://www.ai-manifest.com/nl/guides/scripting-method-manifestation.html ("scripten/scripting" as Dutch usage has it, 'wet van aanname' — verified via goodfeeling.nl's Neville Goddard pages, the term Dutch searchers actually use; je-form, bank-app / sollicitatiegesprek / nieuwe-woning scenes, single quotes)
+- https://www.ai-manifest.com/it/guides/lucky-girl-syndrome.html (trend name kept in English as Italian media does, glossed once as «sindrome della ragazza fortunata» in the lead for the secondary query; bias di conferma / SRA / profezia che si autoavvera mechanism table)
+- https://www.ai-manifest.com/nl/guides/lucky-girl-syndrome.html (English trend name kept per Dutch media usage; bevestigingsbias / reticulair activatiesysteem / zelfvervullende voorspelling; file-vs-goede-vertrektijd reframe example)
+
+**Why these two:** scripting is the older of the three remaining unlocalized guides (2026-07-13) and the most-linked — every one of the 32 existing it/nl guide pages plus both homepages linked its EN original until today, and keywords.md flagged a multilingual "scripting manifestation" GSC cluster. Lucky-girl taken over personal-day-number as the second slot on the obviously-higher-value rule: it's playbook §2.6 topic #7 with a live trend query in both markets, while personal-day-number is the niche numerology singleton (now last in the backlog, as run 7 projected).
+
+**Quality/consistency notes:** localized from the EN structure with the FR scripting page read side by side as register reference. Laura Galebe, Mel Robbins, Neville Goddard, TikTok-late-2022 origin all kept; both lucky-girl FAQ stances (not-a-scientific-concept, toxic-positivity caveat) and the honest "no evidence belief alone changes outcomes" framing preserved in both languages — no outcome promises added. Scripting keeps the 4-step formula, the 3 example scripts (localized scenes, not re-invented claims) and the honest-FAQ answer on evidence. FR-page cta-inline /us/ bug again not replicated: all ct-tagged links (web-nav/web-intro/web-ctabox/web-footer) point at /it/ and /nl/ storefronts, zero /us/ links on all 4 pages. Mechanical scan on all 4: 0 blocklist-calque hits (it/nl tell lists), 0 negative-parallelism calques, 0 empty-transition paragraph openers, sentence stdev 13.5-16.3 with short/long mix on every page, em-dash counts at or below the EN sources (12/14 vs EN 14 on scripting; 21/24 vs EN 24 on lucky-girl), JSON-LD (Article + BreadcrumbList + FAQPage, translated, inLanguage set) parses on every page with zero ct tokens inside, cta-inline before first H2 + end cta-box on all 4, self-canonicals verified, one H1 each, Vercel insights on all 4.
+
+**Cross-links flipped per run-1 policy:** `/guides/scripting-method-manifestation.html` switched from English absolute to local relative paths in all 32 existing it/nl guide pages (footer) and both index.html files (guide card ✍️ + footer); JSON-LD dateModified bumped to 2026-08-16 on the edited guides. Lucky-girl had zero existing it/nl references (it postdates the localized sites), so it was added instead: new 🍀 guide card + footer link on both homepages, and both new pages' footers now carry the full 14-item guide list matching the EN footer. New pages link relatively to localized siblings (scripting ↔ lucky-girl cross-link; both link 369 pillar, 369 examples, manifestation journal, how-to-manifest, gratitude prompts) and absolutely only to the one not-yet-localized guide (personal-day-number, footer).
+
+**Sitemap:** 4 new URLs with full hreflang clusters (scripting: 8-way en/pt-BR/es/de/fr/it/nl/x-default; lucky-girl: 4-way en/it/nl/x-default since it exists in no other language); the 5 existing en/pt/es/de/fr scripting entries and the EN lucky-girl entry (previously no hreflang at all) got matching bidirectional clusters; lastmod 2026-08-16 on all touched entries including the 32 edited it/nl guides and both homepages. XML validated; 134 entries total, every URL resolves to a file; dead-link check on all 4 new pages: none; privacy/terms still excluded.
+
+**Deploy:** push to main → Vercel Git integration. IndexNow submission of the 4 new URLs (result in run output).
+
+**Skipped:** llms.txt/geo-log.md untouched (translations, not new English guides — same as runs 1-7). No author bio page (site-wide org byline kept).
+
+**Backlog remaining:** 1 of 19 English guides still lacks it+nl versions: personal-day-number-numerology. One more run finishes the backfill; after that this agent goes quiet per its charter. Note for that run: every it/nl page footer-links `/guides/personal-day-number-numerology.html` and the angel cluster body-links it, so the final run repeats today's flip across all 34 it/nl pages.
+
+---
+
 ## 2026-08-16 — Angel Number 369 Meaning (en + pt/es/de/fr/it/nl — Pillar B core complete)
 
 **Topic:** Angel number 369 meaning (playbook §2.6 topic #6; final page of the angel-number core cluster under Pillar B, closing the 1111 → 444 → 222 → 555 → 369 sequence). Exactly the "next up" pick named by the 2026-08-10 run: highest app-affinity angel page (same digits as the app's 369 method) and shipped 7-language like the 555 run, per the localization-first mandate.
