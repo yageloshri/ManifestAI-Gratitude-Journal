@@ -4,6 +4,30 @@ Recurring SEO/GEO content agent run log. One entry per publish cycle.
 
 ---
 
+## 2026-08-17 — it/nl localization backfill, run 9 (FINAL): personal-day-number-numerology — backlog empty
+
+**What shipped (localization backfill agent, run 9):**
+- https://www.ai-manifest.com/it/guides/personal-day-number-numerology.html («giorno personale» — verified via WebSearch as the term Italian numerology sites (astrologiainlinea.it, massimoumax.com, oroscopodioggiedomani.it) actually use, kept alongside the site's established label "numero personale del giorno"; «sentiero di vita» for life path, «numeri maestri», tu-form + feminine example register matching runs 1-8, «...» quotes)
+- https://www.ai-manifest.com/nl/guides/personal-day-number-numerology.html ("persoonlijk daggetal" — verified via WebSearch against happinez.nl / mediumgids.nl usage ("daggetal", "daggetal berekenen"); "levenspadgetal" per calcforlife.com, "meestergetallen" per happinez, "persoonlijk jaargetal" for the alternate method; je-form, single quotes)
+
+**Why one guide, not two:** the charter is two per run, but personal-day-number was the last guide in the backlog — every other of the 19 English guides already had both languages after run 8. This closes the backfill.
+
+**Quality/consistency notes:** localized from the EN structure with the FR personal-day page read side by side as register reference. Same worked example (born 14 March, 11 July 2026 → personal day 9), same 1–9 table semantics, master-numbers 11/22 section, personal-day-vs-angel-numbers distinction, no outcome promises ("planningsinstinct" / "istinto di pianificazione" framing kept, "non è divinazione" / "geen waarzeggerij"). EN page has no FAQ section, so Article + BreadcrumbList schema only, matching the en/pt/es/de/fr versions (translated, inLanguage set, JSON-LD parses, zero ct tokens inside). FR-page cta-inline /us/ bug not replicated: all four ct-tagged links per page (web-nav/web-intro/web-ctabox/web-footer) point at /it/ and /nl/ storefronts. Mechanical scan on both: 0 blocklist-calque hits, 0 negative-parallelism calques, 0 empty-transition paragraph openers (inoltre/bovendien/daarnaast list checked), cta-inline before first H2 + end cta-box, self-canonicals, one H1 each, Vercel insights present. Em-dash counts below the EN source.
+
+**Cross-links flipped per run-1 policy (the flip run 8 predicted):** `/guides/personal-day-number-numerology.html` switched from English absolute to local relative paths in all 38 existing it/nl pages — 36 guide footers/bodies (incl. angel-cluster body links) + both index.html files (guide card 🔮, FAQ answer, footer). JSON-LD dateModified bumped to 2026-08-17 on the 36 edited guides.
+
+**Sitemap:** 2 new URLs with the full 8-way hreflang cluster (en/pt-BR/es/de/fr/it/nl/x-default); the 5 existing en/pt/es/de/fr personal-day entries got matching bidirectional it+nl links; lastmod 2026-08-17 on all touched entries (7 personal-day entries + 38 edited it/nl pages). XML validated; 136 entries total, every URL resolves to a file; zero broken internal links on both new pages; privacy/terms still excluded.
+
+**Deploy:** push to main → Vercel Git integration. IndexNow submission of the 2 new URLs (result in run output).
+
+**Skipped:** llms.txt/geo-log.md untouched (translations, not new English guides — same as runs 1-8). No author bio page (site-wide org byline kept).
+
+**Observation for the content agent (not this agent's scope):** fr/guides is missing lucky-girl-syndrome.html — the guide exists in en/it/nl only. If FR coverage is meant to be complete, a future content run should localize it.
+
+**Backlog remaining: 0 of 19.** Every English guide now has it + nl versions. Per the charter, this agent goes quiet — future runs will verify the backlog is empty and stop without committing.
+
+---
+
 ## 2026-08-16 — it/nl localization backfill, run 8: scripting-method-manifestation + lucky-girl-syndrome
 
 **What shipped (localization backfill agent, run 8):**
