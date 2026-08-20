@@ -33,6 +33,7 @@ has dedicated intent and viral TikTok demand).
 | scripting method manifestation (how to write it) | Informational how-to, high journal/app intent | `/guides/scripting-method-manifestation.html` |
 | vision board ideas (categories, what to put on it) | Informational, template-seeking, direct app tie-in | `/guides/vision-board-ideas.html` |
 | lucky girl syndrome (does it work, how to practice) | Informational, viral/investigational, mindset-adjacent | `/guides/lucky-girl-syndrome.html` |
+| 55x5 manifestation method (555 method, how to do it) | Informational how-to, high journal/streak-app intent | `/guides/55x5-manifestation-method.html` |
 
 ## SERP validation notes
 
@@ -75,3 +76,15 @@ has dedicated intent and viral TikTok demand).
   guide covered this angle → dedicated page ships with the mechanism table, a lucky-girl-vs-369-vs-
   scripting comparison table, a 5-step practice guide, and 3 affirmation examples. English only this
   round — pt/es/de/fr localization not yet done, candidate for a future round if it gains impressions.
+- "55x5 manifestation method" (August 2026 scan): playbook §2.6 topic #10, the last unshipped
+  informational (TOFU) topic besides "Law of Attraction for beginners" (#9) per the 2026-08-19
+  geo-log round. WebSearch confirmed genuine, well-covered editorial demand (The Everygirl,
+  ManifestingMindfully, TheJoyWithin, SelfMadeLadies) with a consistent shape: write one present-tense
+  affirmation 55 times a day for 5 consecutive days, sometimes called "555 method" or "5x55." No
+  verified single origin for the numbers — one source's "ancient/Sri Bhai Sahib" origin claim is
+  unsourced, treated with the same honest caveat as the 369 method's unsourced Tesla quote. No
+  existing guide covered this angle (distinct from the 369-method and scripting rituals already on
+  site) → dedicated page ships with a HowTo-schema 5-step guide, a 55x5-vs-369-vs-scripting comparison
+  table, 3 affirmation examples, and a does-it-work section that cross-links `does-manifestation-work.html`.
+  English only this round — candidate for pt/es/de/fr/it/nl localization if it gains impressions,
+  matching the established pattern for new single-language pages.
