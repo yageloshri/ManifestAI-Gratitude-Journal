@@ -4,6 +4,24 @@ Recurring SEO/GEO content agent run log. One entry per publish cycle.
 
 ---
 
+## 2026-08-20 — Localization backfill: 55x5-manifestation-method (it + nl) — BACKLOG COMPLETE
+
+**Run scope:** the it/nl backfill queue held only ONE guide, not two — `55x5-manifestation-method` (en published 2026-08-19). Every other English guide already had both languages (the 2026-08-19 does-manifestation-work run shipped 7-language natively, and earlier backfill runs covered the rest), so this run localized the one remaining guide into both languages. **Backlog remaining: 0 — the it/nl backfill is complete.** Future runs of this schedule will verify and stop.
+
+**URLs published:**
+- https://www.ai-manifest.com/it/guides/55x5-manifestation-method.html (it — "metodo 55x5", verified via search as the term Italians actually use, incl. Amazon.it book titles and gufosaggio.net Q&A; «...» quotes, tu-form + feminine register matching prior it pages, 2.000 € examples, "risposta al citofono" localism)
+- https://www.ai-manifest.com/nl/guides/55x5-manifestation-method.html (nl — "55x5 methode" following the site's proven "369 methode" spacing pattern (nl web content on this method is thin = low competition), je-form, single quotes, € 2.000 format, 'appje terug' localism)
+
+**Localization notes:** structure, HowTo steps, comparison table, FAQ and all internal links kept 1:1 with the English original; substance rewritten per language rather than translated word-for-word (e.g. it "la mano vada avanti da sola e la testa inizi davvero ad ascoltare", nl "je uit de automatische piloot te halen"). All 6 internal-link targets (369 method, scripting, manifestation journal, 369 examples, gratitude prompts, does-manifestation-work) exist in both language folders — zero broken links (mechanical scan). Blocklist-analogue scan clean in both languages (no inoltre/in conclusione/bovendien/daarnaast paragraph openers, no negative-parallelism calques); body em-dashes within the ~1/300-words budget on both pages.
+
+**Per-page requirements:** cta-inline before the first H2 (established it/nl wording reused) + end cta-box on both; position-based ct tokens (web-nav/web-intro/web-ctabox/web-footer) all on the local storefront (/it/, /nl/); zero ct tokens inside JSON-LD (verified mechanically); self-referencing canonicals; Article + BreadcrumbList + HowTo + FAQPage schema translated, all JSON-LD parses; Vercel insights script present; footers mirror the newest per-language footer (15 entries) + a 55x5 self-entry.
+
+**Sitemap:** en 55x5 entry upgraded from no-hreflang to a bidirectional 3-way cluster (en/it/nl/x-default — pt/es/de/fr versions of this guide DO NOT exist yet, so they are correctly absent from the cluster); 2 new URL entries with the same cluster; lastmod 2026-08-20 on all three; XML validated, 146 entries, every URL and every hreflang alternate resolves to a file; privacy/terms still excluded.
+
+**Deploy:** push to main → Vercel Git integration. IndexNow: 3 URLs (2 new + updated en) submitted with key 0e14305ee36247bab36482037254b3ff — result in run output.
+
+**Failed/skipped:** nothing failed. Flag for the content agent (out of this routine's scope): 55x5 has NO pt/es/de/fr versions — it broke the "every guide in all site languages" pattern the day it shipped; fr also still lacks lucky-girl-syndrome (flagged 2026-08-17), and pt/es/de lack it too. A pt/es/de/fr localization round would close both gaps.
+
 ## 2026-08-19 — Does Manifestation Work? What Psychology Says (en + pt/es/de/fr/it/nl — E-E-A-T anchor)
 
 **Topic:** Does manifestation work / what psychology says (playbook §2.6 topic #12, the E-E-A-T anchor piece) — exactly the "next up" named by the 2026-08-16 run, shipped 7-language per the localization-first mandate.
