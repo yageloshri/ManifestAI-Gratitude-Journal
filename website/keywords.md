@@ -88,3 +88,12 @@ has dedicated intent and viral TikTok demand).
   table, 3 affirmation examples, and a does-it-work section that cross-links `does-manifestation-work.html`.
   English only this round — candidate for pt/es/de/fr/it/nl localization if it gains impressions,
   matching the established pattern for new single-language pages.
+- "Scripting manifestation examples" (2026-08-25 round): ships the templates/examples page the
+  2026-08-06 GSC note called for — `/guides/scripting-manifestation-examples.html` in all 7 languages.
+  Targets "scripting manifestation examples" / "manifestation script example" behind the pos-6.9
+  "scripting manifestation" cluster; the FR version leads with "manifestation écrite" (GSC click at
+  pos 4.5) and the ES version with "como hacer scripting para manifestar" (GSC click at pos 9).
+  SERP shape (checked against the existing scripting-method page): example-seeking intent wants
+  complete copy-ready scripts, not method steps — page delivers 7 full scripts by life area, a
+  4-building-blocks table, a fill-in template, and the tense answer, citing King 2001 (best-possible-
+  self writing) and Goddard's *Feeling Is the Secret*.
