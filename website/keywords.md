@@ -97,3 +97,12 @@ has dedicated intent and viral TikTok demand).
   complete copy-ready scripts, not method steps — page delivers 7 full scripts by life area, a
   4-building-blocks table, a fill-in template, and the tense answer, citing King 2001 (best-possible-
   self writing) and Goddard's *Feeling Is the Secret*.
+- "Gratitude journal benefits / how to start a gratitude journal" (2026-08-28 round): first MOFU
+  piece (playbook §2.6 topic #14) — `/guides/gratitude-journal-benefits.html` in all 7 languages.
+  Chosen because the localized head terms (diário de gratidão, diario de gratitud,
+  Dankbarkeitstagebuch, journal de gratitude, diario della gratitudine, dankbaarheidsdagboek)
+  double as the proven App Store keyword cluster (FR "journal de gratitude" #136 → #32 driven by
+  FR guide pages). Differentiators vs the SERP's listicles: study numbers quoted from the
+  Emmons & McCullough 2003 paper itself (10-week weekly protocol, spouse-rated Study 3), the
+  Lyubomirsky 2005 once-a-week-beats-3x frequency answer, and a weak-vs-strong entries table.
+  Distinct intent from the prompts page (template-seeking) and manifestation-journal (system).
