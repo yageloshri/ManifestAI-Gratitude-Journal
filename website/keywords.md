@@ -106,3 +106,13 @@ has dedicated intent and viral TikTok demand).
   Emmons & McCullough 2003 paper itself (10-week weekly protocol, spouse-rated Study 3), the
   Lyubomirsky 2005 once-a-week-beats-3x frequency answer, and a weak-vs-strong entries table.
   Distinct intent from the prompts page (template-seeking) and manifestation-journal (system).
+- "Manifestation affirmations" (2026-08-31 round): second MOFU piece (playbook §2.6 topic #16) —
+  `/guides/manifestation-affirmations.html` in all 7 languages. Rides the proven writing-intent
+  cluster (369-method-examples "what to write" + the scripting pair, both GSC earners) and each
+  language's high-volume standalone head term: afirmações poderosas / afirmaciones positivas /
+  Affirmationen / affirmations positives / affermazioni positive / positieve affirmaties.
+  Differentiators vs the SERP's 100-affirmation listicles: the Wood 2009 backfire finding
+  (low-self-esteem participants felt worse after repeating "I'm a lovable person"), the Cascio
+  2016 values-affirmation fMRI result, and a believability-first rewrite table ("poster version"
+  vs "survives a bad day"). Intent split kept clean: 369-method-examples owns 369-formatted
+  lines; this page owns the generic "affirmations for money/love/confidence" queries.
