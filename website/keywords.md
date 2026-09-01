@@ -116,3 +116,12 @@ has dedicated intent and viral TikTok demand).
   2016 values-affirmation fMRI result, and a believability-first rewrite table ("poster version"
   vs "survives a bad day"). Intent split kept clean: 369-method-examples owns 369-formatted
   lines; this page owns the generic "affirmations for money/love/confidence" queries.
+- "Morning manifestation routine" (2026-09-01 round): third MOFU piece (playbook §2.6 topic #15, closing
+  the MOFU set) — `/guides/morning-manifestation-routine.html` in all 7 languages. The routine page is
+  the habit-loop hub: it funnels "rutina matutina / Morgenroutine / routine matinale / routine mattutina /
+  ochtendroutine / rotina matinal + manifestação" queries into the converting writing-intent cluster
+  (affirmations, 369, gratitude). Differentiators vs the SERP's hour-long SAVERS clones: the Lally 2010
+  habit data (median 66 days, range 18–254, single missed days don't matter — the 21-day myth debunk),
+  the 5-minute minute-by-minute table, the no-5am-start stance, and the flexible 5/10-minute shape.
+  Intent split kept clean: 33-day-challenge owns duration/commitment queries; this page owns the
+  daily-sequence "morning routine" queries.
