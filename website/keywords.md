@@ -125,3 +125,13 @@ has dedicated intent and viral TikTok demand).
   the 5-minute minute-by-minute table, the no-5am-start stance, and the flexible 5/10-minute shape.
   Intent split kept clean: 33-day-challenge owns duration/commitment queries; this page owns the
   daily-sequence "morning routine" queries.
+- "Best gratitude journal apps" (2026-09-07 round): first BOFU piece after the manifestation roundup
+  (playbook §2.6 topic #18) — `/guides/best-gratitude-journal-apps.html` in all 7 languages. Chosen
+  over #19 (angel-number apps) because the localized gratitude head terms double as the proven App
+  Store keyword cluster (FR "journal de gratitude" #136 → #32 driven by FR guide pages; the app IS a
+  gratitude journal). Differentiators vs the SERP's affiliate listicles: real iTunes-API ratings with
+  a retrieval date, Apple's free built-in Journal ranked up front, per-app honest limitations, and the
+  one RCT of a gratitude app (Fuller 2025, JMIR mHealth: significant only for moderate+ baseline
+  distress, d=0.68; app-open count uncorrelated with outcomes, r=0.01) plus Cregg & Cheavens 2021
+  (27 studies, small effects). Intent split kept clean: gratitude-journal-benefits owns "does it
+  work / how to start"; this page owns "which app" commercial intent.
