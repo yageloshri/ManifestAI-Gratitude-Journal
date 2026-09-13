@@ -135,3 +135,13 @@ has dedicated intent and viral TikTok demand).
   distress, d=0.68; app-open count uncorrelated with outcomes, r=0.01) plus Cregg & Cheavens 2021
   (27 studies, small effects). Intent split kept clean: gratitude-journal-benefits owns "does it
   work / how to start"; this page owns "which app" commercial intent.
+- "Best angel number apps" (2026-09-13 round): final BOFU piece, closing the playbook §2.6 topic map
+  (#19) — `/guides/best-angel-number-apps.html` in all 7 languages. Rides the site's highest-volume
+  cluster (Pillar B angel numbers: 7 existing pages) and each language's head term (números dos anjos /
+  números de ángeles / Engelszahlen / nombres angéliques + heures miroirs / numeri angelici + ore
+  doppie / engelengetallen). iTunes API scan (Sept 13, 2026) showed the niche is tiny — biggest
+  dedicated app 1,479 US ratings — so the page's differentiator IS that honesty: real ratings for 7
+  apps, the Gallup 2023 69%-believe-in-angels stat, Shermer's patternicity quote, the Doreen Virtue
+  2017 renunciation fact no competitor prints, and a "you don't need an app for the lookup" stance on
+  our own money page. Intent split kept clean: angel-numbers-meaning owns meanings; the /guides/
+  number pages own each sequence; this page owns "which app" commercial intent.
