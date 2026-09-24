@@ -164,3 +164,16 @@ has dedicated intent and viral TikTok demand).
   noticing audit. Localized head terms: número 777 / número de ángel 777 / Engelszahl 777 /
   nombre angélique 777 / numero angelico 777 / engelengetal 777. Remaining Pillar B gaps:
   888, 666, 000.
+- "How to manifest on paper" (2026-09-24 round): with the angel-number and best-apps queues both
+  mid-cluster (not fully exhausted, but no single "next up" item was named by the prior round), this
+  round validated a fresh gap from scratch via two WebSearches (general query + People Also Ask):
+  "how to manifest on paper" / "manifest by writing it down" returns a distinct roundup SERP shape
+  (369, 33x3, 44x4, 55x5, scripting, the pillow method, the placemat process, plus handwriting-specific
+  advice) that no existing page owns — every current guide teaches exactly one method in depth, and
+  `manifestation-journal.html`'s "Paper or app?" section is one short paragraph, not a comparison.
+  Ships as `/guides/how-to-manifest-on-paper.html`, English only this round. Differentiator: an
+  honestly-caveated citation of the handwriting-vs-typing research (Mueller & Oppenheimer 2014
+  longhand-vs-laptop note-taking study, paired with the 2019 Morehead/Dunlosky/Rawson replication
+  that found the effect shrinks after review — framed as plausible, not proven) plus a 7-method
+  comparison table that cross-links every sibling method guide (369, scripting, 55x5, affirmations,
+  gratitude prompts).
