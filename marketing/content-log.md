@@ -4,6 +4,24 @@ Recurring SEO/GEO content agent run log. One entry per publish cycle.
 
 ---
 
+## 2026-09-26 — it/nl localization backfill: how-to-manifest-on-paper (BACKLOG NOW EMPTY)
+
+**Run scope:** the daily it/nl backfill agent. The mandate is two guides per run, but only ONE guide in the whole site still lacked it/nl versions — `how-to-manifest-on-paper` (published by the content autopilot on 2026-09-24). This run localized it into both languages, which empties the it/nl backlog: all 31 English guides now have Italian and Dutch versions.
+
+**URLs published:**
+- https://www.ai-manifest.com/it/guides/how-to-manifest-on-paper.html ("Manifestare scrivendo su carta: 7 metodi a confronto", ~1,690 words)
+- https://www.ai-manifest.com/nl/guides/how-to-manifest-on-paper.html ("Manifesteren op papier: 7 schrijfmethodes vergeleken", ~1,620 words)
+
+**Localization notes:** search phrasing verified via web search before writing — Italians say "manifestare scrivendo (su carta)" with "scrittura a mano" (Grazia, leggidellamagia.com, barbaramenegazzo.it all phrase it this way), not a literal "manifestare sulla carta"; Dutch usage is "manifesteren op papier / door te schrijven" with "brief aan jezelf" as the established name for the future-self letter (bedrock.nl, happinez.nl, contentmentmag.nl). Pillow method → "metodo del cuscino" / "kussenmethode". Examples localized (€500/month freelance, client-contract deadlines in Bologna/Utrecht); "streak" → "serie" in it, kept as "streak" in nl, per the site's existing convention. Mueller & Oppenheimer 2014 + Morehead/Dunlosky/Rawson 2019 citations, Neville Goddard reference, 14.6%/8.8% figures, table structure and all internal links kept intact from the English source.
+
+**Checklists:** §1.6 blocklist-equivalent scan clean in both languages; em-dashes 2 (it) and 3 (nl, two of which are site-template strings) — the nl draft had 13 and was rewritten down; one H1 each; FAQ body text identical to FAQPage JSON-LD; cta-inline before first H2 + end cta-box with `?ct=web-nav/intro/ctabox/footer` on the /it/ and /nl/ storefronts; JSON-LD verified token-free; Article (inLanguage, datePublished 2026-09-24, dateModified 2026-09-26) + BreadcrumbList + FAQPage schema; self-referencing canonicals.
+
+**Linking/sitemap:** guide card + footer link added to it/index.html and nl/index.html (page was otherwise an orphan). Sitemap: en entry for the slug upgraded from bare (no hreflang) to a bidirectional en+it+nl+x-default cluster; two new entries with the same cluster; pt/es/de/fr deliberately NOT referenced because those versions do not exist for this slug. it/nl homepage lastmod bumped to 2026-09-26 (real change date). XML validated (212 url entries). llms.txt already carries the en URL.
+
+**Remaining backlog:** 0 guides missing it or nl. Future runs will report "backfill complete" and stop unless the autopilot publishes new English guides (each new guide re-opens a 1-guide backlog for this agent). Note for the pt/es/de/fr pipeline: how-to-manifest-on-paper has no pt/es/de/fr versions either — that's outside this agent's mandate but is now the only gap in those languages too.
+
+**Failed/skipped:** nothing skipped. Same standing note as prior runs: organization byline ("Guide Manifest" / "Manifest-gidsen") per site convention instead of §1.7's named-author requirement.
+
 ## 2026-09-22 — Angel Number 777 Meaning (en + pt/es/de/fr/it/nl)
 
 **Topic:** angel number 777 meaning — first of the remaining Pillar B gaps named by the 2026-09-19 round (777, 888, 666, 000). Picked over the 55x5/lucky-girl localization backfill because the prompt mandates one new article per run (2026-09-01 precedent) and the angel cluster is the site's highest-volume, impression-earning cluster. Shipped 7-language natively per the localization-first mandate.
