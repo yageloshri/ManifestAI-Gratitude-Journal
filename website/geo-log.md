@@ -237,3 +237,15 @@ Watch next round: (1) whether the angel cluster keeps earning — if yes, 888 is
 **Wiring:** 7 pages, self-canonicals, full 8-way bidirectional hreflang in sitemap (226 entries, XML valid, every loc + alternate resolves to a file), lastmod 2026-10-04 on all 28 touched entries (7 new + 7 homepages + 7 hubs + 7 888s), llms.txt line added, backlinks from hub + 888 sibling + homepage in all 7 languages, robots.txt re-verified open to GPTBot/PerplexityBot/ClaudeBot/Google-Extended (and more).
 
 **Watch next round:** probe AI engines with "is 666 a bad sign" — the 616-manuscript claim and the Wegner suppression-rebound mechanism are the most citable units; Pillar B head terms now fully covered 111–999 (only 000 remains, low volume); 55x5 + lucky-girl + how-to-manifest-on-paper still lack pt/es/de/fr (12-page backfill restores the every-guide-every-language invariant).
+
+## 2026-10-08 — Content autopilot round (shipped: Manifestation Not Working? 7 Real Reasons)
+
+**Target query:** "why is my manifestation not working" / "manifestation not working" / "why manifestation fails". Validated by one WebSearch: SERP is spiritual-blog listicles ("low vibration", "hidden resistance") with no evidence-based treatment; no existing guide owns the troubleshooting intent (does-manifestation-work is the skeptic overview, not a fix-it guide).
+
+**Shipped:** `guides/why-manifestation-is-not-working.html` — English only. Answer-first lead, quick-answer box, 7-reason table (reason / sign / fix), per-reason sections, 7-day reset, FAQ (3 Qs, matches FAQPage JSON-LD). Liftable units: Oettingen & Mayer 2002 (JPSP) positive fantasies vs achievement + mental contrasting; Gollwitzer & Sheeran 2006 meta-analysis (94 studies) on implementation intentions. Both cited from memory without a fetch this run — worth verifying wording next round.
+
+**Wiring:** index card + footer, footer link on all 33 English guides, sitemap (single-language entry, lastmod 2026-10-08), llms.txt line.
+
+**Process notes:** local checkout was 25 commits behind origin/main with a dirty tree, so work was done in a clean worktree off origin/main (/tmp/ap-wt) and the local tree left untouched. `vercel deploy --prod --yes` hung again at "Building..." (3rd time); fell back to Git-integration deploy via push.
+
+**Watch next round:** localize this page + how-to-manifest-on-paper, 55x5, lucky-girl (pt/es/de/fr…); fix or drop the CLI deploy step.
