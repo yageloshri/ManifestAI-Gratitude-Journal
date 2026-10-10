@@ -20,7 +20,7 @@ Recurring SEO/GEO content agent run log. One entry per publish cycle.
 
 **Sitemap:** en entry upgraded from hreflang-less to a 4-way bidirectional block (en + it + nl + x-default, lastmod 2026-10-10 since the entry changed), matching new it/nl entries added, lastmod 2026-10-10 on the 4 edited pages' entries (it/ + nl/ homepages, it/nl does-manifestation-work). 236 entries total, XML validated, privacy/terms still excluded. llms.txt: en line already present (added 10-08), no change needed.
 
-**IndexNow:** result noted at commit time below.
+**IndexNow + deploy:** 7 URLs (2 new + en original + 4 edited) submitted with key 0e14305ee36247bab36482037254b3ff — HTTP 200. Vercel Git integration on push to main; VERIFIED post-push: both new URLs serving HTTP 200 on production, production sitemap carries the full 3-entry why-manifestation hreflang cluster.
 
 **Remaining backlog: 0 it/nl pages.** This agent's job is done — future runs should reply one line and stop. Still open for OTHER workstreams (not this agent's mandate): why-manifestation needs pt/es/de/fr; 55x5, lucky-girl-syndrome and how-to-manifest-on-paper need pt/es/de/fr (18 pages); en "Thorsten→Doris Mayer" fix on guides/why-manifestation-is-not-working.html.
 
