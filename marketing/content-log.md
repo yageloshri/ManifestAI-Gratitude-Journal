@@ -4,6 +4,30 @@ Recurring SEO/GEO content agent run log. One entry per publish cycle.
 
 ---
 
+## 2026-10-10 — Localization backfill: why-manifestation-is-not-working (it + nl) — IT/NL BACKFILL COMPLETE
+
+**Run type:** daily it/nl localization backfill agent. Only ONE guide still lacked an it or nl version (the mandate allows two per run): `why-manifestation-is-not-working.html`, published en-only on 2026-10-08 by the autopilot round. This run closes it in both languages, which empties the it/nl backlog entirely — all 35 English guides now have Italian and Dutch versions.
+
+**URLs published:**
+- https://www.ai-manifest.com/it/guides/why-manifestation-is-not-working.html (it — "Manifestare non funziona? 7 motivi reali e rimedi" 49ch, tu-form, ~1,460 words)
+- https://www.ai-manifest.com/nl/guides/why-manifestation-is-not-working.html (nl — "Manifesteren werkt niet? 7 echte redenen en oplossingen" 55ch, je-form, ~1,450 words)
+
+**Localization notes (not literal translation):** WebSearch check surfaced a real it-specific trap: bare "manifestazione" in Italian reads as *street protest* (the query returned only protest coverage) — so the title and H1 lead with the verb form "manifestare non funziona", which is what practitioners type, while the body keeps "manifestazione" only in disambiguated spiritual context, consistent with the site's existing it pages. nl phrasing "manifesteren werkt niet" verified as the natural search form. Localized examples: "giovedì alle 20" / "donderdag 20:00", freelance-pitch goal rendered idiomatically per language. One factual correction carried into both localizations: the Oettingen 2002 JPSP co-author is **Doris** Mayer (the en page says "Thorsten Mayer" — recommend a future en fix; existing it/nl does-manifestation-work pages already say Doris). Structure, statistics and citations (Oettingen 2002, Gollwitzer & Sheeran 2006 meta-analysis of 94 studies) kept intact.
+
+**Checklists:** §1.6 blocklist scan clean in both target languages (one mid-sentence nl "bovendien" caught and rewritten); 1 em-dash per ~1,450-word body (the footer-note dash); no negative-parallelism beyond the one construction inherited from the en source lead; fragments + long sentences mixed deliberately. §2.7: titles 49/55ch keyword-front-loaded, metas 127–133ch, one H1, question H2s answered in the first sentences, quick-answer example-box up top, 7-row comparison table, cta-inline before first H2 (en source has it mid-article; localized pages follow the playbook position) + end cta-box, 6 body internal links + 4 related per page (all targets verified on disk), Article (inLanguage) + BreadcrumbList + FAQPage JSON-LD parse clean with zero ct tokens inside, FAQ body text = FAQPage JSON-LD, self-canonicals, position ct tokens (web-nav/web-intro/web-ctabox/web-footer) all on the local storefront (/it/, /nl/), Vercel insights on both.
+
+**Backlinks added:** it + nl homepages (🔧 guide card before the law-of-attraction card + footer li) and it + nl does-manifestation-work related sections. New pages carry the full current footer nav (28+ entries incl. themselves).
+
+**Sitemap:** en entry upgraded from hreflang-less to a 4-way bidirectional block (en + it + nl + x-default, lastmod 2026-10-10 since the entry changed), matching new it/nl entries added, lastmod 2026-10-10 on the 4 edited pages' entries (it/ + nl/ homepages, it/nl does-manifestation-work). 236 entries total, XML validated, privacy/terms still excluded. llms.txt: en line already present (added 10-08), no change needed.
+
+**IndexNow:** result noted at commit time below.
+
+**Remaining backlog: 0 it/nl pages.** This agent's job is done — future runs should reply one line and stop. Still open for OTHER workstreams (not this agent's mandate): why-manifestation needs pt/es/de/fr; 55x5, lucky-girl-syndrome and how-to-manifest-on-paper need pt/es/de/fr (18 pages); en "Thorsten→Doris Mayer" fix on guides/why-manifestation-is-not-working.html.
+
+**Failed/skipped:** nothing failed.
+
+---
+
 ## 2026-10-10 — Angel Number 000 Meaning (en + pt/es/de/fr/it/nl) — PILLAR B COMPLETE
 
 **Topic:** angel number 000 meaning — the last Pillar B gap (flagged low-volume 2026-09-19, head terms 111–999 covered by 10-04). Picked by the stated rule "prefer completing the current pillar's cluster": the angel cluster is the site's highest-volume impression earner, and 000 closes it permanently in all seven languages. Noted in passing: a 2026-10-08 autopilot round (logged in geo-log, not here) shipped `why-manifestation-is-not-working.html` English-only — that page is now the newest localization gap.
