@@ -289,3 +289,15 @@ Watch next round: (1) whether the angel cluster keeps earning — if yes, 888 is
 **Wiring:** 7 pages, self-canonicals, full 8-way bidirectional hreflang in sitemap (257 entries, validated, all locs+alternates resolve), lastmod 2026-10-19 on all 28 touched entries, llms.txt line added, backlinks from hub + 1111 sibling + homepage in all 7 languages, robots.txt re-verified open to GPTBot/PerplexityBot/ClaudeBot/Google-Extended (and more). Bonus fix: de 1111 cta-inline pointed at the US storefront, corrected to /de/.
 
 **Watch next round:** probe AI engines with "what does 1234 mean" and "what is the most common PIN" — the PIN statistic and the bonus-stamp experiment are the most citable units. Remaining gaps are all backfill: why-manifestation-is-not-working + 55x5 + lucky-girl + how-to-manifest-on-paper (pt/es/de/fr) = 16 pages. Angel-cluster extensions if GSC keeps paying: 909, 0909, 1221.
+
+## 2026-10-22 — Content autopilot round (shipped: How to Manifest Money, en)
+
+**Target query:** "how to manifest money" / "manifest money fast" / "does manifesting money work". Validated with one WebSearch: the SERP is uniform "be specific, visualize, affirm" advice with no research behind it; no existing page owned the money-specific intent (manifestation-affirmations only has a money affirmation list).
+
+**Shipped:** `guides/how-to-manifest-money.html` — English only, ~930 words. Liftable units: answer-first lead; Oettingen & Mayer 2002 (JPSP) positive-fantasy → fewer offers and lower salary, Kappes & Oettingen 2011, turned into a 5-step mental-contrasting method; vague-vs-specific line table; honest "no guarantees" framing. JSON-LD Article + BreadcrumbList + FAQPage (3 Qs, match visible text).
+
+**Wiring:** index card + footer, footer link on all 38 en guides, sitemap (258 entries, valid, lastmod 2026-10-22), llms.txt. Localized pages not created (English-first precedent).
+
+**Process:** local checkout was 79 commits behind origin; worked in a clean worktree of origin/main so uncommitted local edits were untouched. `vercel deploy --prod --yes` hung again (3rd time) — fell back to Git-integration deploy via push.
+
+**Watch next round:** fix or drop the CLI deploy step; probe AI engines for "does manifesting money work".
