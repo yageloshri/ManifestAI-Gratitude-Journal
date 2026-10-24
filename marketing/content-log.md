@@ -4,6 +4,30 @@ Recurring SEO/GEO content agent run log. One entry per publish cycle.
 
 ---
 
+## 2026-10-24 — Localization backfill: how-to-manifest-money (it + nl) — IT/NL BACKFILL COMPLETE
+
+**Run type:** daily it/nl localization backfill agent. Pick scan found exactly ONE English guide missing an it or nl version: `how-to-manifest-money.html` (published en-only 2026-10-22 by the autopilot). Localized it into both languages this run; with it shipped, **every one of the 39 English guides now has an Italian and a Dutch version — the it/nl backlog is empty** and this routine goes quiet unless new en-only guides appear.
+
+**URLs published:**
+- https://www.ai-manifest.com/it/guides/how-to-manifest-money.html (it — "Come manifestare denaro: un metodo realistico in 5 passi", title 44ch+suffix, meta 155ch, tu-form feminine-leaning per house voice, € amounts: 500 €/mese, 2.000 € risparmi, 300 € sulla carta, 4.000 € freelance entro il 31 marzo; «contrasto mentale» for mental contrasting; "attirare denaro" woven in per keyword check, /it/ storefront)
+- https://www.ai-manifest.com/nl/guides/how-to-manifest-money.html (nl — "Geld manifesteren: een realistische methode in 5 stappen", meta 150ch, je-form nuchter register, €500/maand, €2.000 spaargeld, €300 aflossen, €4.000 vóór 31 maart; "mentaal contrasteren"; 'zonder buikpijn' / 'knarsetanden' for natural register, /nl/ storefront)
+
+**Keyword verification (WebSearch this run):** it SERP is dominated by "attirare/attrarre denaro" (Joe Vitale's *Attrai denaro*, "Come attirare i soldi") alongside "manifestare denaro/soldi" — both carried (title on "manifestare denaro", "attirare denaro" in the research-caveat line). nl is "geld manifesteren" + affirmaties, as used. Substance kept intact from en: Oettingen & Mayer 2002 (JPSP) fewer-applications/lower-salary finding, Kappes & Oettingen 2011 energy finding, mental contrasting as the method's spine, all 5 body internal links (scripting, gratitude prompts, affirmations guide, 369 method ×2) and the 4 related links — every target verified on disk in both languages.
+
+**Checklists:** §1.7 — 0 blocklist-calque hits per language (mechanical scan incl. it/nl equivalents), 0 body em-dashes on both pages, 0 negative-parallelism constructions, FAQ body text identical to FAQPage JSON-LD (verified mechanically). §2.7 — cta-inline before first H2 + end cta-box on both; self-canonicals; Article (inLanguage) + BreadcrumbList + FAQPage JSON-LD all parse, zero ct tokens inside; position ct tokens (web-nav/web-intro/web-ctabox/web-footer) all on the local storefront; Vercel insights on both pages.
+
+**Backlinks:** it/nl homepages (💰 guide card after the on-paper card + footer li) and it/nl why-manifestation-is-not-working related list (mirroring the en backlink; dateModified bumped to 2026-10-24).
+
+**Sitemap:** +2 URLs; en money entry (previously bare) now carries the bidirectional en/it/nl/x-default hreflang block, matching the four other en+it+nl-only guides; lastmod 2026-10-24 on all 7 touched entries (en/it/nl money, it+nl homepages, it+nl why-not). 260 entries, XML validated, every loc and alternate resolves to a file, privacy/terms still excluded.
+
+**Deploy:** push to main → Vercel Git integration. IndexNow submission recorded below after push.
+
+**Failed/skipped:** nothing failed. Note for the pt/es/de/fr backfill routine: how-to-manifest-money now also lacks pt/es/de/fr, joining why-manifestation-is-not-working, 55x5, lucky-girl-syndrome and how-to-manifest-on-paper (5 guides × 4 languages = 20 pages).
+
+**Backlog remaining (it/nl):** 0 guides. Backfill complete.
+
+---
+
 ## 2026-10-19 — Angel Number 1234 Meaning (en + pt/es/de/fr/it/nl)
 
 **Topic:** angel number 1234 meaning — third post-Pillar-B extension, the biggest 4-digit angel head term still uncovered after 1111/1212/1010, named "next up" by both prior rounds. WebSearch validated the SERP: uniform "steps / order / keep going" filler, partly visibly AI-generated ("Unlocking the Profound Mysteries..."), zero sources. Picked over the pt/es/de/fr backfill per the standing one-new-article-per-run precedent. Shipped 7-language natively per the localization-first mandate.
