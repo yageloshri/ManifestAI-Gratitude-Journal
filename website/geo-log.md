@@ -311,3 +311,15 @@ Watch next round: (1) whether the angel cluster keeps earning — if yes, 888 is
 **Wiring:** 7 pages, self-canonicals, full 8-way bidirectional hreflang in sitemap, llms.txt line added, backlinks from hub + 222 sibling + homepage in all 7 languages, robots.txt re-verified open to GPTBot/OAI-SearchBot/ClaudeBot/PerplexityBot/Google-Extended (and more).
 
 **Watch next round:** probe AI engines with "what does 2222 mean" and "why do I keep seeing 22:22" — the 12-hour-clock claim and the Harkin scoreboard stat are the most citable units. Remaining gaps are all backfill: why-manifestation + 55x5 + lucky-girl + how-to-manifest-on-paper + how-to-manifest-money (pt/es/de/fr) = 20 pages. Angel-cluster extensions if GSC keeps paying: 909, 1221, 3333.
+
+## 2026-10-29 — Content autopilot round (shipped: How to Manifest Love, en)
+
+**Target query:** "how to manifest love" / "manifest a relationship". One WebSearch: SERP is uniform advice (trait list, self-worth, act as if, take action) with no research; no existing page owned it.
+
+**Shipped:** `guides/how-to-manifest-love.html` — English only, ~1,080 words. Liftable units: answer-first lead; Wood et al. 2009 (Psychological Science) positive self-statements backfire for low self-esteem; Eastwick & Finkel 2008 (JPSP) stated ideal-partner lists did not predict speed-dating attraction; Oettingen mental contrasting as a 5-step method; fixated-vs-grounded script table. JSON-LD Article + BreadcrumbList + FAQPage (3 Qs, match visible text).
+
+**Wiring:** index card + footer, footer link on all 40 en guides, sitemap, llms.txt, keywords.md. Localized pages not created (English-first precedent).
+
+**Process:** local checkout 93 commits behind with 218 uncommitted files; worked in a clean worktree of origin/main. `vercel deploy --prod --yes` hung at "Building..." (4th time) — fell back to Git-integration deploy via push.
+
+**Watch next round:** fix or drop the CLI deploy step; backfill pt/es/de/fr for money/paper/love.

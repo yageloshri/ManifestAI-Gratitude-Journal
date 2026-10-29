@@ -287,3 +287,4 @@ has dedicated intent and viral TikTok demand).
   2222 + heure miroir 22h22 / numero angelico 2222 + ora doppia / engelengetal 2222. Natural
   follow-ons: 909, 1221, 3333. Open backfill unchanged: why-manifestation + 55x5 + lucky-girl +
   how-to-manifest-on-paper + how-to-manifest-money (pt/es/de/fr) = 20 pages.
+- "How to manifest love" (October 2026 scan): SERP is uniform advice (partner-trait list, self-worth, act as if, take real action) with no research. No existing guide owned it → `/guides/how-to-manifest-love.html` ships with Wood 2009 + Eastwick & Finkel 2008 + mental contrasting, a fixated-vs-grounded table. English only.
