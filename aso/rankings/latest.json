@@ -1,5 +1,5 @@
 {
- "date": "2026-10-28T08:01Z",
+ "date": "2026-10-31T07:45Z",
  "app_id": "6757018484",
  "rows": [
   {
@@ -7,7 +7,7 @@
    "country": "sa",
    "keyword": "تاروت",
    "rank": null,
-   "results": 182,
+   "results": 187,
    "popularity": null,
    "difficulty": null
   },
@@ -25,7 +25,7 @@
    "country": "sa",
    "keyword": "الروحانية",
    "rank": null,
-   "results": 138,
+   "results": 137,
    "popularity": null,
    "difficulty": null
   },
@@ -34,7 +34,7 @@
    "country": "sa",
    "keyword": "تطوير",
    "rank": null,
-   "results": 186,
+   "results": 183,
    "popularity": null,
    "difficulty": null
   },
@@ -43,7 +43,7 @@
    "country": "sa",
    "keyword": "الذات",
    "rank": null,
-   "results": 184,
+   "results": 187,
    "popularity": null,
    "difficulty": null
   },
@@ -52,7 +52,7 @@
    "country": "sa",
    "keyword": "تأمل",
    "rank": null,
-   "results": 197,
+   "results": 196,
    "popularity": null,
    "difficulty": null
   },
@@ -61,7 +61,7 @@
    "country": "sa",
    "keyword": "الطاقة",
    "rank": null,
-   "results": 168,
+   "results": 171,
    "popularity": null,
    "difficulty": null
   },
@@ -70,7 +70,7 @@
    "country": "sa",
    "keyword": "الكون",
    "rank": null,
-   "results": 190,
+   "results": 191,
    "popularity": null,
    "difficulty": null
   },
@@ -79,7 +79,7 @@
    "country": "sa",
    "keyword": "الملائكة",
    "rank": null,
-   "results": 67,
+   "results": 66,
    "popularity": null,
    "difficulty": null
   },
@@ -87,7 +87,7 @@
    "locale": "ar-SA",
    "country": "sa",
    "keyword": "الجذب",
-   "rank": 35,
+   "rank": 38,
    "results": 78,
    "popularity": null,
    "difficulty": null
@@ -106,7 +106,7 @@
    "country": "sa",
    "keyword": "تدوين",
    "rank": null,
-   "results": 185,
+   "results": 184,
    "popularity": null,
    "difficulty": null
   },
@@ -115,7 +115,7 @@
    "country": "sa",
    "keyword": "تحفيز",
    "rank": null,
-   "results": 189,
+   "results": 188,
    "popularity": null,
    "difficulty": null
   },
@@ -124,7 +124,7 @@
    "country": "sa",
    "keyword": "قانون الجذب",
    "rank": 30,
-   "results": 46,
+   "results": 45,
    "popularity": null,
    "difficulty": null
   },
@@ -133,7 +133,7 @@
    "country": "sa",
    "keyword": "لوحة الرؤية",
    "rank": 7,
-   "results": 66,
+   "results": 64,
    "popularity": null,
    "difficulty": null
   },
@@ -141,8 +141,8 @@
    "locale": "ar-SA",
    "country": "sa",
    "keyword": "يوميات الامتنان",
-   "rank": 116,
-   "results": 187,
+   "rank": 117,
+   "results": 185,
    "popularity": null,
    "difficulty": null
   },
@@ -160,7 +160,7 @@
    "country": "dk",
    "keyword": "dagbog",
    "rank": null,
-   "results": 152,
+   "results": 179,
    "popularity": null,
    "difficulty": null
   },
@@ -187,7 +187,7 @@
    "country": "dk",
    "keyword": "spiritualitet",
    "rank": null,
-   "results": 9,
+   "results": 8,
    "popularity": null,
    "difficulty": null
   },
@@ -196,7 +196,7 @@
    "country": "dk",
    "keyword": "tarot",
    "rank": null,
-   "results": 177,
+   "results": 182,
    "popularity": null,
    "difficulty": null
   },
@@ -205,7 +205,7 @@
    "country": "dk",
    "keyword": "selvudvikling",
    "rank": null,
-   "results": 67,
+   "results": 68,
    "popularity": null,
    "difficulty": null
   },
@@ -213,7 +213,7 @@
    "locale": "da",
    "country": "dk",
    "keyword": "manifestation",
-   "rank": 139,
+   "rank": 155,
    "results": 191,
    "popularity": null,
    "difficulty": null
@@ -232,7 +232,7 @@
    "country": "dk",
    "keyword": "universet",
    "rank": null,
-   "results": 185,
+   "results": 189,
    "popularity": null,
    "difficulty": null
   },
@@ -240,8 +240,8 @@
    "locale": "da",
    "country": "dk",
    "keyword": "manifestere",
-   "rank": 6,
-   "results": 19,
+   "rank": 3,
+   "results": 18,
    "popularity": null,
    "difficulty": null
   },
@@ -267,8 +267,8 @@
    "locale": "de-DE",
    "country": "de",
    "keyword": "manifestieren",
-   "rank": 97,
-   "results": 134,
+   "rank": 88,
+   "results": 138,
    "popularity": null,
    "difficulty": null
   },
@@ -277,7 +277,7 @@
    "country": "de",
    "keyword": "gesetz",
    "rank": null,
-   "results": 130,
+   "results": 126,
    "popularity": null,
    "difficulty": null
   },
@@ -286,7 +286,7 @@
    "country": "de",
    "keyword": "anziehung",
    "rank": null,
-   "results": 87,
+   "results": 88,
    "popularity": null,
    "difficulty": null
   },
@@ -313,7 +313,7 @@
    "country": "de",
    "keyword": "tagebuch",
    "rank": null,
-   "results": 175,
+   "results": 178,
    "popularity": null,
    "difficulty": null
   },
@@ -321,8 +321,8 @@
    "locale": "de-DE",
    "country": "de",
    "keyword": "dankbarkeitstagebuch",
-   "rank": 46,
-   "results": 74,
+   "rank": 36,
+   "results": 72,
    "popularity": null,
    "difficulty": null
   },
@@ -331,7 +331,7 @@
    "country": "de",
    "keyword": "wünsche",
    "rank": null,
-   "results": 172,
+   "results": 171,
    "popularity": null,
    "difficulty": null
   },
@@ -339,8 +339,8 @@
    "locale": "de-DE",
    "country": "de",
    "keyword": "manifestieren app",
-   "rank": 108,
-   "results": 159,
+   "rank": 104,
+   "results": 162,
    "popularity": null,
    "difficulty": null
   },
@@ -358,7 +358,7 @@
    "country": "de",
    "keyword": "369 methode",
    "rank": 11,
-   "results": 27,
+   "results": 29,
    "popularity": null,
    "difficulty": null
   },
@@ -367,7 +367,7 @@
    "country": "de",
    "keyword": "dankbarkeit tagebuch",
    "rank": null,
-   "results": 196,
+   "results": 192,
    "popularity": null,
    "difficulty": null
   },
@@ -376,7 +376,7 @@
    "country": "de",
    "keyword": "gesetz der anziehung",
    "rank": null,
-   "results": 68,
+   "results": 70,
    "popularity": null,
    "difficulty": null
   },
@@ -394,7 +394,7 @@
    "country": "au",
    "keyword": "affirmations",
    "rank": null,
-   "results": 181,
+   "results": 183,
    "popularity": null,
    "difficulty": null
   },
@@ -403,7 +403,7 @@
    "country": "au",
    "keyword": "angel",
    "rank": null,
-   "results": 179,
+   "results": 175,
    "popularity": null,
    "difficulty": null
   },
@@ -412,7 +412,7 @@
    "country": "au",
    "keyword": "numbers",
    "rank": null,
-   "results": 170,
+   "results": 172,
    "popularity": null,
    "difficulty": null
   },
@@ -421,7 +421,7 @@
    "country": "au",
    "keyword": "law",
    "rank": null,
-   "results": 182,
+   "results": 183,
    "popularity": null,
    "difficulty": null
   },
@@ -430,7 +430,7 @@
    "country": "au",
    "keyword": "attraction",
    "rank": null,
-   "results": 153,
+   "results": 162,
    "popularity": null,
    "difficulty": null
   },
@@ -439,7 +439,7 @@
    "country": "au",
    "keyword": "method",
    "rank": null,
-   "results": 176,
+   "results": 190,
    "popularity": null,
    "difficulty": null
   },
@@ -448,7 +448,7 @@
    "country": "au",
    "keyword": "scripting",
    "rank": null,
-   "results": 166,
+   "results": 169,
    "popularity": null,
    "difficulty": null
   },
@@ -457,7 +457,7 @@
    "country": "au",
    "keyword": "daily",
    "rank": null,
-   "results": 190,
+   "results": 191,
    "popularity": null,
    "difficulty": null
   },
@@ -466,7 +466,7 @@
    "country": "au",
    "keyword": "jar",
    "rank": null,
-   "results": 182,
+   "results": 183,
    "popularity": null,
    "difficulty": null
   },
@@ -502,7 +502,7 @@
    "country": "au",
    "keyword": "vision board app",
    "rank": null,
-   "results": 191,
+   "results": 190,
    "popularity": null,
    "difficulty": null
   },
@@ -510,8 +510,8 @@
    "locale": "en-AU",
    "country": "au",
    "keyword": "369 method",
-   "rank": 6,
-   "results": 30,
+   "rank": 7,
+   "results": 33,
    "popularity": null,
    "difficulty": null
   },
@@ -547,7 +547,7 @@
    "country": "ca",
    "keyword": "numbers",
    "rank": null,
-   "results": 169,
+   "results": 176,
    "popularity": null,
    "difficulty": null
   },
@@ -556,7 +556,7 @@
    "country": "ca",
    "keyword": "law",
    "rank": null,
-   "results": 185,
+   "results": 186,
    "popularity": null,
    "difficulty": null
   },
@@ -565,7 +565,7 @@
    "country": "ca",
    "keyword": "attraction",
    "rank": null,
-   "results": 173,
+   "results": 174,
    "popularity": null,
    "difficulty": null
   },
@@ -574,7 +574,7 @@
    "country": "ca",
    "keyword": "method",
    "rank": null,
-   "results": 190,
+   "results": 191,
    "popularity": null,
    "difficulty": null
   },
@@ -583,7 +583,7 @@
    "country": "ca",
    "keyword": "scripting",
    "rank": null,
-   "results": 170,
+   "results": 168,
    "popularity": null,
    "difficulty": null
   },
@@ -592,7 +592,7 @@
    "country": "ca",
    "keyword": "daily",
    "rank": null,
-   "results": 190,
+   "results": 189,
    "popularity": null,
    "difficulty": null
   },
@@ -601,7 +601,7 @@
    "country": "ca",
    "keyword": "jar",
    "rank": null,
-   "results": 178,
+   "results": 181,
    "popularity": null,
    "difficulty": null
   },
@@ -610,7 +610,7 @@
    "country": "ca",
    "keyword": "abundance",
    "rank": null,
-   "results": 165,
+   "results": 166,
    "popularity": null,
    "difficulty": null
   },
@@ -619,7 +619,7 @@
    "country": "ca",
    "keyword": "dream",
    "rank": null,
-   "results": 193,
+   "results": 194,
    "popularity": null,
    "difficulty": null
   },
@@ -637,7 +637,7 @@
    "country": "ca",
    "keyword": "vision board app",
    "rank": null,
-   "results": 191,
+   "results": 192,
    "popularity": null,
    "difficulty": null
   },
@@ -646,7 +646,7 @@
    "country": "ca",
    "keyword": "369 method",
    "rank": 6,
-   "results": 31,
+   "results": 33,
    "popularity": null,
    "difficulty": null
   },
@@ -655,7 +655,7 @@
    "country": "gb",
    "keyword": "manifestation",
    "rank": null,
-   "results": 198,
+   "results": 196,
    "popularity": null,
    "difficulty": null
   },
@@ -664,7 +664,7 @@
    "country": "gb",
    "keyword": "affirmations",
    "rank": null,
-   "results": 191,
+   "results": 192,
    "popularity": null,
    "difficulty": null
   },
@@ -673,7 +673,7 @@
    "country": "gb",
    "keyword": "angel",
    "rank": null,
-   "results": 180,
+   "results": 181,
    "popularity": null,
    "difficulty": null
   },
@@ -682,7 +682,7 @@
    "country": "gb",
    "keyword": "numbers",
    "rank": null,
-   "results": 169,
+   "results": 175,
    "popularity": null,
    "difficulty": null
   },
@@ -700,7 +700,7 @@
    "country": "gb",
    "keyword": "attraction",
    "rank": null,
-   "results": 160,
+   "results": 175,
    "popularity": null,
    "difficulty": null
   },
@@ -709,7 +709,7 @@
    "country": "gb",
    "keyword": "method",
    "rank": null,
-   "results": 194,
+   "results": 195,
    "popularity": null,
    "difficulty": null
   },
@@ -718,7 +718,7 @@
    "country": "gb",
    "keyword": "scripting",
    "rank": null,
-   "results": 171,
+   "results": 168,
    "popularity": null,
    "difficulty": null
   },
@@ -736,7 +736,7 @@
    "country": "gb",
    "keyword": "jar",
    "rank": null,
-   "results": 176,
+   "results": 178,
    "popularity": null,
    "difficulty": null
   },
@@ -745,7 +745,7 @@
    "country": "gb",
    "keyword": "abundance",
    "rank": null,
-   "results": 165,
+   "results": 139,
    "popularity": null,
    "difficulty": null
   },
@@ -754,7 +754,7 @@
    "country": "gb",
    "keyword": "dream",
    "rank": null,
-   "results": 189,
+   "results": 190,
    "popularity": null,
    "difficulty": null
   },
@@ -763,7 +763,7 @@
    "country": "gb",
    "keyword": "manifestation app",
    "rank": null,
-   "results": 195,
+   "results": 196,
    "popularity": null,
    "difficulty": null
   },
@@ -780,8 +780,8 @@
    "locale": "en-GB",
    "country": "gb",
    "keyword": "369 method",
-   "rank": 7,
-   "results": 30,
+   "rank": 8,
+   "results": 33,
    "popularity": null,
    "difficulty": null
   },
@@ -790,7 +790,7 @@
    "country": "gb",
    "keyword": "gratitude journal",
    "rank": null,
-   "results": 187,
+   "results": 186,
    "popularity": null,
    "difficulty": null
   },
@@ -799,7 +799,7 @@
    "country": "gb",
    "keyword": "angel numbers",
    "rank": null,
-   "results": 161,
+   "results": 162,
    "popularity": null,
    "difficulty": null
   },
@@ -808,7 +808,7 @@
    "country": "gb",
    "keyword": "law of attraction",
    "rank": null,
-   "results": 176,
+   "results": 174,
    "popularity": null,
    "difficulty": null
   },
@@ -817,7 +817,7 @@
    "country": "gb",
    "keyword": "manifestation journal",
    "rank": null,
-   "results": 191,
+   "results": 190,
    "popularity": null,
    "difficulty": null
   },
@@ -835,7 +835,7 @@
    "country": "us",
    "keyword": "affirmations",
    "rank": null,
-   "results": 194,
+   "results": 195,
    "popularity": null,
    "difficulty": null
   },
@@ -853,7 +853,7 @@
    "country": "us",
    "keyword": "attraction",
    "rank": null,
-   "results": 159,
+   "results": 160,
    "popularity": null,
    "difficulty": null
   },
@@ -862,7 +862,7 @@
    "country": "us",
    "keyword": "method",
    "rank": null,
-   "results": 191,
+   "results": 192,
    "popularity": null,
    "difficulty": null
   },
@@ -871,7 +871,7 @@
    "country": "us",
    "keyword": "scripting",
    "rank": null,
-   "results": 165,
+   "results": 168,
    "popularity": null,
    "difficulty": null
   },
@@ -880,7 +880,7 @@
    "country": "us",
    "keyword": "daily",
    "rank": null,
-   "results": 187,
+   "results": 188,
    "popularity": null,
    "difficulty": null
   },
@@ -889,7 +889,7 @@
    "country": "us",
    "keyword": "jar",
    "rank": null,
-   "results": 181,
+   "results": 188,
    "popularity": null,
    "difficulty": null
   },
@@ -898,7 +898,7 @@
    "country": "us",
    "keyword": "journal",
    "rank": null,
-   "results": 188,
+   "results": 192,
    "popularity": null,
    "difficulty": null
   },
@@ -907,7 +907,7 @@
    "country": "us",
    "keyword": "555",
    "rank": null,
-   "results": 181,
+   "results": 189,
    "popularity": null,
    "difficulty": null
   },
@@ -925,7 +925,7 @@
    "country": "us",
    "keyword": "dream",
    "rank": null,
-   "results": 188,
+   "results": 191,
    "popularity": null,
    "difficulty": null
   },
@@ -943,7 +943,7 @@
    "country": "us",
    "keyword": "vision board app",
    "rank": null,
-   "results": 185,
+   "results": 187,
    "popularity": null,
    "difficulty": null
   },
@@ -951,8 +951,8 @@
    "locale": "en-US",
    "country": "us",
    "keyword": "369 method",
-   "rank": 9,
-   "results": 34,
+   "rank": 11,
+   "results": 36,
    "popularity": null,
    "difficulty": null
   },
@@ -961,7 +961,7 @@
    "country": "us",
    "keyword": "gratitude journal",
    "rank": null,
-   "results": 181,
+   "results": 182,
    "popularity": null,
    "difficulty": null
   },
@@ -970,7 +970,7 @@
    "country": "us",
    "keyword": "law of attraction",
    "rank": null,
-   "results": 171,
+   "results": 172,
    "popularity": null,
    "difficulty": null
   },
@@ -979,7 +979,7 @@
    "country": "us",
    "keyword": "angel numbers",
    "rank": null,
-   "results": 148,
+   "results": 146,
    "popularity": null,
    "difficulty": null
   },
@@ -997,7 +997,7 @@
    "country": "us",
    "keyword": "daily affirmations",
    "rank": null,
-   "results": 185,
+   "results": 186,
    "popularity": null,
    "difficulty": null
   },
@@ -1006,7 +1006,7 @@
    "country": "us",
    "keyword": "gratitude jar",
    "rank": null,
-   "results": 175,
+   "results": 172,
    "popularity": null,
    "difficulty": null
   },
@@ -1014,8 +1014,8 @@
    "locale": "en-US",
    "country": "us",
    "keyword": "scripting manifestation",
-   "rank": 164,
-   "results": 190,
+   "rank": 181,
+   "results": 194,
    "popularity": null,
    "difficulty": null
   },
@@ -1023,8 +1023,8 @@
    "locale": "es-ES",
    "country": "es",
    "keyword": "manifestacion",
-   "rank": 90,
-   "results": 154,
+   "rank": 84,
+   "results": 156,
    "popularity": null,
    "difficulty": null
   },
@@ -1033,7 +1033,7 @@
    "country": "es",
    "keyword": "manifestar",
    "rank": null,
-   "results": 193,
+   "results": 192,
    "popularity": null,
    "difficulty": null
   },
@@ -1042,7 +1042,7 @@
    "country": "es",
    "keyword": "afirmaciones",
    "rank": null,
-   "results": 182,
+   "results": 184,
    "popularity": null,
    "difficulty": null
   },
@@ -1051,7 +1051,7 @@
    "country": "es",
    "keyword": "positivas",
    "rank": null,
-   "results": 184,
+   "results": 170,
    "popularity": null,
    "difficulty": null
   },
@@ -1060,7 +1060,7 @@
    "country": "es",
    "keyword": "diarias",
    "rank": null,
-   "results": 187,
+   "results": 184,
    "popularity": null,
    "difficulty": null
   },
@@ -1069,7 +1069,7 @@
    "country": "es",
    "keyword": "ley",
    "rank": null,
-   "results": 144,
+   "results": 150,
    "popularity": null,
    "difficulty": null
   },
@@ -1087,7 +1087,7 @@
    "country": "es",
    "keyword": "numeros",
    "rank": null,
-   "results": 163,
+   "results": 165,
    "popularity": null,
    "difficulty": null
   },
@@ -1105,7 +1105,7 @@
    "country": "es",
    "keyword": "numerologia",
    "rank": null,
-   "results": 179,
+   "results": 182,
    "popularity": null,
    "difficulty": null
   },
@@ -1123,7 +1123,7 @@
    "country": "es",
    "keyword": "diario de gratitud",
    "rank": null,
-   "results": 191,
+   "results": 188,
    "popularity": null,
    "difficulty": null
   },
@@ -1131,8 +1131,8 @@
    "locale": "es-ES",
    "country": "es",
    "keyword": "método 369",
-   "rank": 5,
-   "results": 8,
+   "rank": 4,
+   "results": 7,
    "popularity": null,
    "difficulty": null
   },
@@ -1141,7 +1141,7 @@
    "country": "es",
    "keyword": "afirmaciones positivas",
    "rank": null,
-   "results": 187,
+   "results": 188,
    "popularity": null,
    "difficulty": null
   },
@@ -1158,8 +1158,8 @@
    "locale": "es-ES",
    "country": "es",
    "keyword": "ley de atracción",
-   "rank": 68,
-   "results": 98,
+   "rank": 87,
+   "results": 100,
    "popularity": null,
    "difficulty": null
   },
@@ -1177,7 +1177,7 @@
    "country": "es",
    "keyword": "afirmaciones positivas diarias",
    "rank": null,
-   "results": 186,
+   "results": 185,
    "popularity": null,
    "difficulty": null
   },
@@ -1185,8 +1185,8 @@
    "locale": "es-MX",
    "country": "mx",
    "keyword": "manifestacion",
-   "rank": 118,
-   "results": 186,
+   "rank": 116,
+   "results": 191,
    "popularity": null,
    "difficulty": null
   },
@@ -1204,7 +1204,7 @@
    "country": "mx",
    "keyword": "afirmaciones",
    "rank": null,
-   "results": 190,
+   "results": 192,
    "popularity": null,
    "difficulty": null
   },
@@ -1213,7 +1213,7 @@
    "country": "mx",
    "keyword": "positivas",
    "rank": null,
-   "results": 176,
+   "results": 177,
    "popularity": null,
    "difficulty": null
   },
@@ -1222,7 +1222,7 @@
    "country": "mx",
    "keyword": "diarias",
    "rank": null,
-   "results": 199,
+   "results": 198,
    "popularity": null,
    "difficulty": null
   },
@@ -1231,7 +1231,7 @@
    "country": "mx",
    "keyword": "ley",
    "rank": null,
-   "results": 161,
+   "results": 157,
    "popularity": null,
    "difficulty": null
   },
@@ -1240,7 +1240,7 @@
    "country": "mx",
    "keyword": "atraccion",
    "rank": null,
-   "results": 156,
+   "results": 168,
    "popularity": null,
    "difficulty": null
   },
@@ -1249,7 +1249,7 @@
    "country": "mx",
    "keyword": "numeros",
    "rank": null,
-   "results": 174,
+   "results": 172,
    "popularity": null,
    "difficulty": null
   },
@@ -1267,7 +1267,7 @@
    "country": "mx",
    "keyword": "numerologia",
    "rank": null,
-   "results": 171,
+   "results": 163,
    "popularity": null,
    "difficulty": null
   },
@@ -1276,7 +1276,7 @@
    "country": "mx",
    "keyword": "tablero de visión",
    "rank": null,
-   "results": 188,
+   "results": 189,
    "popularity": null,
    "difficulty": null
   },
@@ -1294,7 +1294,7 @@
    "country": "mx",
    "keyword": "método 369",
    "rank": 5,
-   "results": 9,
+   "results": 8,
    "popularity": null,
    "difficulty": null
   },
@@ -1303,7 +1303,7 @@
    "country": "mx",
    "keyword": "afirmaciones positivas",
    "rank": null,
-   "results": 186,
+   "results": 188,
    "popularity": null,
    "difficulty": null
   },
@@ -1321,7 +1321,7 @@
    "country": "mx",
    "keyword": "ley de atracción",
    "rank": 78,
-   "results": 108,
+   "results": 111,
    "popularity": null,
    "difficulty": null
   },
@@ -1348,7 +1348,7 @@
    "country": "fi",
    "keyword": "päiväkirja",
    "rank": null,
-   "results": 178,
+   "results": 182,
    "popularity": null,
    "difficulty": null
   },
@@ -1366,7 +1366,7 @@
    "country": "fi",
    "keyword": "affirmaatiot",
    "rank": 26,
-   "results": 49,
+   "results": 48,
    "popularity": null,
    "difficulty": null
   },
@@ -1393,7 +1393,7 @@
    "country": "fi",
    "keyword": "tarot",
    "rank": null,
-   "results": 180,
+   "results": 182,
    "popularity": null,
    "difficulty": null
   },
@@ -1411,7 +1411,7 @@
    "country": "fi",
    "keyword": "horoskooppi",
    "rank": null,
-   "results": 178,
+   "results": 176,
    "popularity": null,
    "difficulty": null
   },
@@ -1438,7 +1438,7 @@
    "country": "fr",
    "keyword": "manifestation",
    "rank": null,
-   "results": 195,
+   "results": 196,
    "popularity": null,
    "difficulty": null
   },
@@ -1447,7 +1447,7 @@
    "country": "fr",
    "keyword": "affirmations",
    "rank": null,
-   "results": 189,
+   "results": 188,
    "popularity": null,
    "difficulty": null
   },
@@ -1456,7 +1456,7 @@
    "country": "fr",
    "keyword": "positives",
    "rank": null,
-   "results": 191,
+   "results": 190,
    "popularity": null,
    "difficulty": null
   },
@@ -1465,7 +1465,7 @@
    "country": "fr",
    "keyword": "loi",
    "rank": null,
-   "results": 173,
+   "results": 156,
    "popularity": null,
    "difficulty": null
   },
@@ -1474,7 +1474,7 @@
    "country": "fr",
    "keyword": "attraction",
    "rank": null,
-   "results": 175,
+   "results": 176,
    "popularity": null,
    "difficulty": null
   },
@@ -1483,7 +1483,7 @@
    "country": "fr",
    "keyword": "nombres",
    "rank": null,
-   "results": 171,
+   "results": 175,
    "popularity": null,
    "difficulty": null
   },
@@ -1501,7 +1501,7 @@
    "country": "fr",
    "keyword": "methode",
    "rank": null,
-   "results": 183,
+   "results": 182,
    "popularity": null,
    "difficulty": null
   },
@@ -1510,7 +1510,7 @@
    "country": "fr",
    "keyword": "journal",
    "rank": null,
-   "results": 178,
+   "results": 174,
    "popularity": null,
    "difficulty": null
   },
@@ -1519,7 +1519,7 @@
    "country": "fr",
    "keyword": "tableau",
    "rank": null,
-   "results": 179,
+   "results": 180,
    "popularity": null,
    "difficulty": null
   },
@@ -1546,7 +1546,7 @@
    "country": "fr",
    "keyword": "journal de gratitude",
    "rank": null,
-   "results": 193,
+   "results": 194,
    "popularity": null,
    "difficulty": null
   },
@@ -1554,8 +1554,8 @@
    "locale": "fr-FR",
    "country": "fr",
    "keyword": "méthode 369",
-   "rank": 10,
-   "results": 26,
+   "rank": 7,
+   "results": 28,
    "popularity": null,
    "difficulty": null
   },
@@ -1564,7 +1564,7 @@
    "country": "fr",
    "keyword": "tableau de vision",
    "rank": null,
-   "results": 182,
+   "results": 179,
    "popularity": null,
    "difficulty": null
   },
@@ -1573,7 +1573,7 @@
    "country": "fr",
    "keyword": "affirmation positive",
    "rank": null,
-   "results": 191,
+   "results": 185,
    "popularity": null,
    "difficulty": null
   },
@@ -1582,7 +1582,7 @@
    "country": "fr",
    "keyword": "loi de l'attraction",
    "rank": null,
-   "results": 51,
+   "results": 50,
    "popularity": null,
    "difficulty": null
   },
@@ -1600,7 +1600,7 @@
    "country": "il",
    "keyword": "אפירמציות",
    "rank": null,
-   "results": 28,
+   "results": 29,
    "popularity": null,
    "difficulty": null
   },
@@ -1609,7 +1609,7 @@
    "country": "il",
    "keyword": "חוק",
    "rank": null,
-   "results": 174,
+   "results": 175,
    "popularity": null,
    "difficulty": null
   },
@@ -1626,8 +1626,8 @@
    "locale": "he",
    "country": "il",
    "keyword": "משיכה",
-   "rank": 48,
-   "results": 68,
+   "rank": 45,
+   "results": 66,
    "popularity": null,
    "difficulty": null
   },
@@ -1636,7 +1636,7 @@
    "country": "il",
    "keyword": "רוחניות",
    "rank": null,
-   "results": 57,
+   "results": 56,
    "popularity": null,
    "difficulty": null
   },
@@ -1663,7 +1663,7 @@
    "country": "il",
    "keyword": "התעוררות",
    "rank": null,
-   "results": 56,
+   "results": 57,
    "popularity": null,
    "difficulty": null
   },
@@ -1699,7 +1699,7 @@
    "country": "il",
    "keyword": "טארוט",
    "rank": null,
-   "results": 63,
+   "results": 64,
    "popularity": null,
    "difficulty": null
   },
@@ -1708,7 +1708,7 @@
    "country": "il",
    "keyword": "מדיטציה",
    "rank": null,
-   "results": 191,
+   "results": 193,
    "popularity": null,
    "difficulty": null
   },
@@ -1717,7 +1717,7 @@
    "country": "il",
    "keyword": "מניפסטציה",
    "rank": 1,
-   "results": 15,
+   "results": 14,
    "popularity": null,
    "difficulty": null
   },
@@ -1725,8 +1725,8 @@
    "locale": "he",
    "country": "il",
    "keyword": "לוח חזון",
-   "rank": 5,
-   "results": 26,
+   "rank": 6,
+   "results": 25,
    "popularity": null,
    "difficulty": null
   },
@@ -1734,8 +1734,8 @@
    "locale": "he",
    "country": "il",
    "keyword": "הכרת תודה",
-   "rank": 22,
-   "results": 124,
+   "rank": 25,
+   "results": 127,
    "popularity": null,
    "difficulty": null
   },
@@ -1743,8 +1743,8 @@
    "locale": "he",
    "country": "il",
    "keyword": "יומן תודה",
-   "rank": 48,
-   "results": 100,
+   "rank": 45,
+   "results": 99,
    "popularity": null,
    "difficulty": null
   },
@@ -1770,8 +1770,8 @@
    "locale": "he",
    "country": "il",
    "keyword": "יומן הכרת תודה",
-   "rank": 23,
-   "results": 84,
+   "rank": 22,
+   "results": 83,
    "popularity": null,
    "difficulty": null
   },
@@ -1797,8 +1797,8 @@
    "locale": "id",
    "country": "id",
    "keyword": "afirmasi",
-   "rank": 150,
-   "results": 155,
+   "rank": 154,
+   "results": 156,
    "popularity": null,
    "difficulty": null
   },
@@ -1816,7 +1816,7 @@
    "country": "id",
    "keyword": "zodiak",
    "rank": null,
-   "results": 178,
+   "results": 176,
    "popularity": null,
    "difficulty": null
   },
@@ -1825,7 +1825,7 @@
    "country": "id",
    "keyword": "horoskop",
    "rank": null,
-   "results": 185,
+   "results": 186,
    "popularity": null,
    "difficulty": null
   },
@@ -1834,7 +1834,7 @@
    "country": "id",
    "keyword": "angka",
    "rank": null,
-   "results": 179,
+   "results": 176,
    "popularity": null,
    "difficulty": null
   },
@@ -1843,7 +1843,7 @@
    "country": "id",
    "keyword": "malaikat",
    "rank": null,
-   "results": 40,
+   "results": 39,
    "popularity": null,
    "difficulty": null
   },
@@ -1852,7 +1852,7 @@
    "country": "id",
    "keyword": "semesta",
    "rank": null,
-   "results": 151,
+   "results": 150,
    "popularity": null,
    "difficulty": null
   },
@@ -1861,7 +1861,7 @@
    "country": "id",
    "keyword": "energi",
    "rank": null,
-   "results": 180,
+   "results": 173,
    "popularity": null,
    "difficulty": null
   },
@@ -1870,7 +1870,7 @@
    "country": "id",
    "keyword": "rejeki",
    "rank": null,
-   "results": 10,
+   "results": 9,
    "popularity": null,
    "difficulty": null
   },
@@ -1879,7 +1879,7 @@
    "country": "id",
    "keyword": "mantra",
    "rank": null,
-   "results": 182,
+   "results": 185,
    "popularity": null,
    "difficulty": null
   },
@@ -1888,7 +1888,7 @@
    "country": "id",
    "keyword": "meditasi",
    "rank": null,
-   "results": 190,
+   "results": 191,
    "popularity": null,
    "difficulty": null
   },
@@ -1897,7 +1897,7 @@
    "country": "id",
    "keyword": "ritual",
    "rank": null,
-   "results": 174,
+   "results": 175,
    "popularity": null,
    "difficulty": null
   },
@@ -1905,8 +1905,8 @@
    "locale": "id",
    "country": "id",
    "keyword": "manifestasi",
-   "rank": 11,
-   "results": 65,
+   "rank": 10,
+   "results": 64,
    "popularity": null,
    "difficulty": null
   },
@@ -1915,7 +1915,7 @@
    "country": "id",
    "keyword": "vision board",
    "rank": null,
-   "results": 184,
+   "results": 183,
    "popularity": null,
    "difficulty": null
   },
@@ -1932,7 +1932,7 @@
    "locale": "it",
    "country": "it",
    "keyword": "manifestazione",
-   "rank": 170,
+   "rank": 165,
    "results": 183,
    "popularity": null,
    "difficulty": null
@@ -1942,7 +1942,7 @@
    "country": "it",
    "keyword": "legge",
    "rank": null,
-   "results": 188,
+   "results": 192,
    "popularity": null,
    "difficulty": null
   },
@@ -1951,7 +1951,7 @@
    "country": "it",
    "keyword": "attrazione",
    "rank": null,
-   "results": 132,
+   "results": 130,
    "popularity": null,
    "difficulty": null
   },
@@ -1960,7 +1960,7 @@
    "country": "it",
    "keyword": "numeri",
    "rank": null,
-   "results": 177,
+   "results": 182,
    "popularity": null,
    "difficulty": null
   },
@@ -1987,7 +1987,7 @@
    "country": "it",
    "keyword": "positive",
    "rank": null,
-   "results": 184,
+   "results": 180,
    "popularity": null,
    "difficulty": null
   },
@@ -1996,7 +1996,7 @@
    "country": "it",
    "keyword": "metodo",
    "rank": null,
-   "results": 174,
+   "results": 173,
    "popularity": null,
    "difficulty": null
   },
@@ -2005,7 +2005,7 @@
    "country": "it",
    "keyword": "diario",
    "rank": null,
-   "results": 171,
+   "results": 165,
    "popularity": null,
    "difficulty": null
   },
@@ -2014,7 +2014,7 @@
    "country": "it",
    "keyword": "risveglio",
    "rank": null,
-   "results": 166,
+   "results": 165,
    "popularity": null,
    "difficulty": null
   },
@@ -2023,7 +2023,7 @@
    "country": "it",
    "keyword": "vision board",
    "rank": null,
-   "results": 183,
+   "results": 182,
    "popularity": null,
    "difficulty": null
   },
@@ -2058,8 +2058,8 @@
    "locale": "ja",
    "country": "jp",
    "keyword": "エンジェルナンバー",
-   "rank": 83,
-   "results": 126,
+   "rank": 82,
+   "results": 125,
    "popularity": null,
    "difficulty": null
   },
@@ -2068,7 +2068,7 @@
    "country": "jp",
    "keyword": "潜在意識",
    "rank": null,
-   "results": 173,
+   "results": 174,
    "popularity": null,
    "difficulty": null
   },
@@ -2077,7 +2077,7 @@
    "country": "jp",
    "keyword": "願望実現",
    "rank": null,
-   "results": 67,
+   "results": 66,
    "popularity": null,
    "difficulty": null
   },
@@ -2086,7 +2086,7 @@
    "country": "jp",
    "keyword": "ノート",
    "rank": null,
-   "results": 166,
+   "results": 165,
    "popularity": null,
    "difficulty": null
   },
@@ -2095,7 +2095,7 @@
    "country": "jp",
    "keyword": "スピリチュアル",
    "rank": null,
-   "results": 174,
+   "results": 171,
    "popularity": null,
    "difficulty": null
   },
@@ -2104,7 +2104,7 @@
    "country": "jp",
    "keyword": "開運",
    "rank": null,
-   "results": 165,
+   "results": 164,
    "popularity": null,
    "difficulty": null
   },
@@ -2122,7 +2122,7 @@
    "country": "jp",
    "keyword": "自己肯定感",
    "rank": null,
-   "results": 193,
+   "results": 194,
    "popularity": null,
    "difficulty": null
   },
@@ -2140,7 +2140,7 @@
    "country": "jp",
    "keyword": "自己啓発",
    "rank": null,
-   "results": 192,
+   "results": 184,
    "popularity": null,
    "difficulty": null
   },
@@ -2148,8 +2148,8 @@
    "locale": "ja",
    "country": "jp",
    "keyword": "引き寄せ",
-   "rank": 97,
-   "results": 172,
+   "rank": 70,
+   "results": 170,
    "popularity": null,
    "difficulty": null
   },
@@ -2158,7 +2158,7 @@
    "country": "jp",
    "keyword": "ビジョンボード",
    "rank": null,
-   "results": 187,
+   "results": 188,
    "popularity": null,
    "difficulty": null
   },
@@ -2167,7 +2167,7 @@
    "country": "jp",
    "keyword": "感謝日記",
    "rank": null,
-   "results": 184,
+   "results": 182,
    "popularity": null,
    "difficulty": null
   },
@@ -2175,8 +2175,8 @@
    "locale": "ja",
    "country": "jp",
    "keyword": "369メソッド",
-   "rank": 8,
-   "results": 29,
+   "rank": 9,
+   "results": 31,
    "popularity": null,
    "difficulty": null
   },
@@ -2184,8 +2184,8 @@
    "locale": "ja",
    "country": "jp",
    "keyword": "引き寄せノート",
-   "rank": 85,
-   "results": 172,
+   "rank": 79,
+   "results": 170,
    "popularity": null,
    "difficulty": null
   },
@@ -2193,7 +2193,7 @@
    "locale": "ja",
    "country": "jp",
    "keyword": "引き寄せの法則",
-   "rank": 99,
+   "rank": 93,
    "results": 172,
    "popularity": null,
    "difficulty": null
@@ -2212,7 +2212,7 @@
    "country": "kr",
    "keyword": "시크릿",
    "rank": null,
-   "results": 182,
+   "results": 183,
    "popularity": null,
    "difficulty": null
   },
@@ -2221,7 +2221,7 @@
    "country": "kr",
    "keyword": "타로",
    "rank": null,
-   "results": 186,
+   "results": 185,
    "popularity": null,
    "difficulty": null
   },
@@ -2230,7 +2230,7 @@
    "country": "kr",
    "keyword": "엔젤넘버",
    "rank": null,
-   "results": 77,
+   "results": 75,
    "popularity": null,
    "difficulty": null
   },
@@ -2239,7 +2239,7 @@
    "country": "kr",
    "keyword": "잠재의식",
    "rank": null,
-   "results": 84,
+   "results": 87,
    "popularity": null,
    "difficulty": null
   },
@@ -2248,7 +2248,7 @@
    "country": "kr",
    "keyword": "셀프케어",
    "rank": null,
-   "results": 191,
+   "results": 190,
    "popularity": null,
    "difficulty": null
   },
@@ -2257,7 +2257,7 @@
    "country": "kr",
    "keyword": "영성",
    "rank": null,
-   "results": 113,
+   "results": 114,
    "popularity": null,
    "difficulty": null
   },
@@ -2266,7 +2266,7 @@
    "country": "kr",
    "keyword": "다이어리",
    "rank": null,
-   "results": 180,
+   "results": 182,
    "popularity": null,
    "difficulty": null
   },
@@ -2275,7 +2275,7 @@
    "country": "kr",
    "keyword": "사주",
    "rank": null,
-   "results": 176,
+   "results": 177,
    "popularity": null,
    "difficulty": null
   },
@@ -2284,7 +2284,7 @@
    "country": "kr",
    "keyword": "명상",
    "rank": null,
-   "results": 185,
+   "results": 186,
    "popularity": null,
    "difficulty": null
   },
@@ -2302,7 +2302,7 @@
    "country": "kr",
    "keyword": "긍정",
    "rank": null,
-   "results": 175,
+   "results": 176,
    "popularity": null,
    "difficulty": null
   },
@@ -2320,7 +2320,7 @@
    "country": "kr",
    "keyword": "자기계발",
    "rank": null,
-   "results": 181,
+   "results": 186,
    "popularity": null,
    "difficulty": null
   },
@@ -2338,7 +2338,7 @@
    "country": "kr",
    "keyword": "운세",
    "rank": null,
-   "results": 164,
+   "results": 166,
    "popularity": null,
    "difficulty": null
   },
@@ -2347,7 +2347,7 @@
    "country": "kr",
    "keyword": "점성술",
    "rank": null,
-   "results": 172,
+   "results": 168,
    "popularity": null,
    "difficulty": null
   },
@@ -2356,7 +2356,7 @@
    "country": "kr",
    "keyword": "차크라",
    "rank": null,
-   "results": 136,
+   "results": 137,
    "popularity": null,
    "difficulty": null
   },
@@ -2364,8 +2364,8 @@
    "locale": "ko",
    "country": "kr",
    "keyword": "끌어당김",
-   "rank": 72,
-   "results": 105,
+   "rank": 74,
+   "results": 109,
    "popularity": null,
    "difficulty": null
   },
@@ -2374,7 +2374,7 @@
    "country": "kr",
    "keyword": "비전보드",
    "rank": null,
-   "results": 191,
+   "results": 193,
    "popularity": null,
    "difficulty": null
   },
@@ -2383,7 +2383,7 @@
    "country": "kr",
    "keyword": "감사일기",
    "rank": null,
-   "results": 185,
+   "results": 183,
    "popularity": null,
    "difficulty": null
   },
@@ -2401,7 +2401,7 @@
    "country": "nl",
    "keyword": "manifesteren",
    "rank": 29,
-   "results": 40,
+   "results": 41,
    "popularity": null,
    "difficulty": null
   },
@@ -2419,7 +2419,7 @@
    "country": "nl",
    "keyword": "wet",
    "rank": null,
-   "results": 171,
+   "results": 170,
    "popularity": null,
    "difficulty": null
   },
@@ -2446,7 +2446,7 @@
    "country": "nl",
    "keyword": "dagboek",
    "rank": null,
-   "results": 191,
+   "results": 186,
    "popularity": null,
    "difficulty": null
   },
@@ -2482,7 +2482,7 @@
    "country": "no",
    "keyword": "dagbok",
    "rank": null,
-   "results": 179,
+   "results": 177,
    "popularity": null,
    "difficulty": null
   },
@@ -2491,7 +2491,7 @@
    "country": "no",
    "keyword": "tarot",
    "rank": null,
-   "results": 187,
+   "results": 189,
    "popularity": null,
    "difficulty": null
   },
@@ -2545,7 +2545,7 @@
    "country": "no",
    "keyword": "widget",
    "rank": null,
-   "results": 176,
+   "results": 174,
    "popularity": null,
    "difficulty": null
   },
@@ -2554,7 +2554,7 @@
    "country": "no",
    "keyword": "spirituell",
    "rank": null,
-   "results": 108,
+   "results": 109,
    "popularity": null,
    "difficulty": null
   },
@@ -2571,7 +2571,7 @@
    "locale": "no",
    "country": "no",
    "keyword": "visjonstavle",
-   "rank": 5,
+   "rank": 8,
    "results": 12,
    "popularity": null,
    "difficulty": null
@@ -2589,8 +2589,8 @@
    "locale": "pl",
    "country": "pl",
    "keyword": "manifestacja",
-   "rank": 46,
-   "results": 63,
+   "rank": 50,
+   "results": 65,
    "popularity": null,
    "difficulty": null
   },
@@ -2607,8 +2607,8 @@
    "locale": "pl",
    "country": "pl",
    "keyword": "przyciagania",
-   "rank": 17,
-   "results": 31,
+   "rank": 19,
+   "results": 32,
    "popularity": null,
    "difficulty": null
   },
@@ -2635,7 +2635,7 @@
    "country": "pl",
    "keyword": "afirmacje",
    "rank": null,
-   "results": 191,
+   "results": 188,
    "popularity": null,
    "difficulty": null
   },
@@ -2644,7 +2644,7 @@
    "country": "pl",
    "keyword": "tablica",
    "rank": null,
-   "results": 191,
+   "results": 193,
    "popularity": null,
    "difficulty": null
   },
@@ -2689,7 +2689,7 @@
    "country": "pl",
    "keyword": "dziennik wdzięczności",
    "rank": null,
-   "results": 187,
+   "results": 188,
    "popularity": null,
    "difficulty": null
   },
@@ -2697,8 +2697,8 @@
    "locale": "pt-BR",
    "country": "br",
    "keyword": "manifestacao",
-   "rank": 75,
-   "results": 156,
+   "rank": 105,
+   "results": 159,
    "popularity": null,
    "difficulty": null
   },
@@ -2706,8 +2706,8 @@
    "locale": "pt-BR",
    "country": "br",
    "keyword": "manifestar",
-   "rank": 77,
-   "results": 198,
+   "rank": 103,
+   "results": 194,
    "popularity": null,
    "difficulty": null
   },
@@ -2716,7 +2716,7 @@
    "country": "br",
    "keyword": "lei",
    "rank": null,
-   "results": 190,
+   "results": 187,
    "popularity": null,
    "difficulty": null
   },
@@ -2724,8 +2724,8 @@
    "locale": "pt-BR",
    "country": "br",
    "keyword": "atracao",
-   "rank": 86,
-   "results": 153,
+   "rank": 106,
+   "results": 156,
    "popularity": null,
    "difficulty": null
   },
@@ -2734,7 +2734,7 @@
    "country": "br",
    "keyword": "diarias",
    "rank": null,
-   "results": 191,
+   "results": 192,
    "popularity": null,
    "difficulty": null
   },
@@ -2761,7 +2761,7 @@
    "country": "br",
    "keyword": "quadro",
    "rank": null,
-   "results": 194,
+   "results": 190,
    "popularity": null,
    "difficulty": null
   },
@@ -2779,7 +2779,7 @@
    "country": "br",
    "keyword": "numerologia",
    "rank": null,
-   "results": 185,
+   "results": 184,
    "popularity": null,
    "difficulty": null
   },
@@ -2788,7 +2788,7 @@
    "country": "br",
    "keyword": "metodo",
    "rank": null,
-   "results": 178,
+   "results": 168,
    "popularity": null,
    "difficulty": null
   },
@@ -2796,8 +2796,8 @@
    "locale": "pt-BR",
    "country": "br",
    "keyword": "manifestação",
-   "rank": 95,
-   "results": 153,
+   "rank": 113,
+   "results": 159,
    "popularity": null,
    "difficulty": null
   },
@@ -2806,7 +2806,7 @@
    "country": "br",
    "keyword": "quadro de visualização",
    "rank": null,
-   "results": 12,
+   "results": 13,
    "popularity": null,
    "difficulty": null
   },
@@ -2833,7 +2833,7 @@
    "country": "br",
    "keyword": "afirmações diárias",
    "rank": null,
-   "results": 188,
+   "results": 189,
    "popularity": null,
    "difficulty": null
   },
@@ -2841,8 +2841,8 @@
    "locale": "pt-BR",
    "country": "br",
    "keyword": "lei da atração",
-   "rank": 63,
-   "results": 124,
+   "rank": 79,
+   "results": 125,
    "popularity": null,
    "difficulty": null
   },
@@ -2850,8 +2850,8 @@
    "locale": "pt-BR",
    "country": "br",
    "keyword": "afirmacoes diarias",
-   "rank": 175,
-   "results": 187,
+   "rank": null,
+   "results": 189,
    "popularity": null,
    "difficulty": null
   },
@@ -2860,7 +2860,7 @@
    "country": "br",
    "keyword": "quadro de visualizacao",
    "rank": null,
-   "results": 12,
+   "results": 13,
    "popularity": null,
    "difficulty": null
   },
@@ -2868,8 +2868,8 @@
    "locale": "pt-BR",
    "country": "br",
    "keyword": "lei da atracao",
-   "rank": 71,
-   "results": 124,
+   "rank": 84,
+   "results": 125,
    "popularity": null,
    "difficulty": null
   },
@@ -2878,7 +2878,7 @@
    "country": "ru",
    "keyword": "дневник",
    "rank": null,
-   "results": 184,
+   "results": 183,
    "popularity": null,
    "difficulty": null
   },
@@ -2887,7 +2887,7 @@
    "country": "ru",
    "keyword": "аффирмации",
    "rank": null,
-   "results": 179,
+   "results": 178,
    "popularity": null,
    "difficulty": null
   },
@@ -2905,7 +2905,7 @@
    "country": "ru",
    "keyword": "духовность",
    "rank": null,
-   "results": 164,
+   "results": 166,
    "popularity": null,
    "difficulty": null
   },
@@ -2914,7 +2914,7 @@
    "country": "ru",
    "keyword": "таро",
    "rank": null,
-   "results": 190,
+   "results": 189,
    "popularity": null,
    "difficulty": null
   },
@@ -2923,7 +2923,7 @@
    "country": "ru",
    "keyword": "саморазвитие",
    "rank": null,
-   "results": 156,
+   "results": 160,
    "popularity": null,
    "difficulty": null
   },
@@ -2932,7 +2932,7 @@
    "country": "ru",
    "keyword": "вселенная",
    "rank": null,
-   "results": 121,
+   "results": 123,
    "popularity": null,
    "difficulty": null
   },
@@ -2941,7 +2941,7 @@
    "country": "ru",
    "keyword": "ритуал",
    "rank": null,
-   "results": 192,
+   "results": 188,
    "popularity": null,
    "difficulty": null
   },
@@ -2959,7 +2959,7 @@
    "country": "ru",
    "keyword": "энергия",
    "rank": null,
-   "results": 168,
+   "results": 167,
    "popularity": null,
    "difficulty": null
   },
@@ -2986,7 +2986,7 @@
    "country": "ru",
    "keyword": "доска визуализации",
    "rank": null,
-   "results": 167,
+   "results": 164,
    "popularity": null,
    "difficulty": null
   },
@@ -2995,7 +2995,7 @@
    "country": "ru",
    "keyword": "дневник благодарности",
    "rank": null,
-   "results": 180,
+   "results": 179,
    "popularity": null,
    "difficulty": null
   },
@@ -3003,8 +3003,8 @@
    "locale": "ru",
    "country": "ru",
    "keyword": "метод 369",
-   "rank": 6,
-   "results": 26,
+   "rank": 7,
+   "results": 28,
    "popularity": null,
    "difficulty": null
   },
@@ -3049,7 +3049,7 @@
    "country": "se",
    "keyword": "andlighet",
    "rank": null,
-   "results": 24,
+   "results": 23,
    "popularity": null,
    "difficulty": null
   },
@@ -3058,7 +3058,7 @@
    "country": "se",
    "keyword": "tarot",
    "rank": null,
-   "results": 184,
+   "results": 185,
    "popularity": null,
    "difficulty": null
   },
@@ -3076,7 +3076,7 @@
    "country": "se",
    "keyword": "horoskop",
    "rank": null,
-   "results": 158,
+   "results": 157,
    "popularity": null,
    "difficulty": null
   },
@@ -3093,7 +3093,7 @@
    "locale": "sv",
    "country": "se",
    "keyword": "manifestera",
-   "rank": 4,
+   "rank": 5,
    "results": 34,
    "popularity": null,
    "difficulty": null
@@ -3130,7 +3130,7 @@
    "country": "tr",
    "keyword": "çekim",
    "rank": null,
-   "results": 185,
+   "results": 182,
    "popularity": null,
    "difficulty": null
   },
@@ -3139,7 +3139,7 @@
    "country": "tr",
    "keyword": "yasası",
    "rank": null,
-   "results": 192,
+   "results": 193,
    "popularity": null,
    "difficulty": null
   },
@@ -3157,7 +3157,7 @@
    "country": "tr",
    "keyword": "sayıları",
    "rank": null,
-   "results": 185,
+   "results": 186,
    "popularity": null,
    "difficulty": null
   },
@@ -3165,8 +3165,8 @@
    "locale": "tr",
    "country": "tr",
    "keyword": "olumlamalar",
-   "rank": 93,
-   "results": 115,
+   "rank": 95,
+   "results": 117,
    "popularity": null,
    "difficulty": null
   },
@@ -3174,8 +3174,8 @@
    "locale": "tr",
    "country": "tr",
    "keyword": "vizyon",
-   "rank": 37,
-   "results": 139,
+   "rank": 42,
+   "results": 138,
    "popularity": null,
    "difficulty": null
   },
@@ -3184,7 +3184,7 @@
    "country": "tr",
    "keyword": "panosu",
    "rank": 23,
-   "results": 122,
+   "results": 126,
    "popularity": null,
    "difficulty": null
   },
@@ -3192,8 +3192,8 @@
    "locale": "tr",
    "country": "tr",
    "keyword": "şükür",
-   "rank": 84,
-   "results": 99,
+   "rank": 86,
+   "results": 104,
    "popularity": null,
    "difficulty": null
   },
@@ -3220,7 +3220,7 @@
    "country": "tr",
    "keyword": "bolluk",
    "rank": null,
-   "results": 44,
+   "results": 47,
    "popularity": null,
    "difficulty": null
   },
@@ -3229,7 +3229,7 @@
    "country": "tr",
    "keyword": "niyet",
    "rank": 118,
-   "results": 145,
+   "results": 151,
    "popularity": null,
    "difficulty": null
   },
@@ -3237,7 +3237,7 @@
    "locale": "tr",
    "country": "tr",
    "keyword": "manifest",
-   "rank": 146,
+   "rank": 110,
    "results": 196,
    "popularity": null,
    "difficulty": null
@@ -3264,7 +3264,7 @@
    "locale": "tr",
    "country": "tr",
    "keyword": "369 tekniği",
-   "rank": 2,
+   "rank": 1,
    "results": 2,
    "popularity": null,
    "difficulty": null
@@ -3274,7 +3274,7 @@
    "country": "vn",
    "keyword": "tarot",
    "rank": null,
-   "results": 186,
+   "results": 188,
    "popularity": null,
    "difficulty": null
   },
@@ -3328,7 +3328,7 @@
    "country": "vn",
    "keyword": "tuvi",
    "rank": null,
-   "results": 171,
+   "results": 174,
    "popularity": null,
    "difficulty": null
   },
@@ -3346,7 +3346,7 @@
    "country": "vn",
    "keyword": "chualanh",
    "rank": null,
-   "results": 18,
+   "results": 17,
    "popularity": null,
    "difficulty": null
   },
@@ -3355,7 +3355,7 @@
    "country": "vn",
    "keyword": "mantra",
    "rank": null,
-   "results": 189,
+   "results": 190,
    "popularity": null,
    "difficulty": null
   },
@@ -3363,8 +3363,8 @@
    "locale": "vi",
    "country": "vn",
    "keyword": "luật hấp dẫn",
-   "rank": 13,
-   "results": 43,
+   "rank": 15,
+   "results": 41,
    "popularity": null,
    "difficulty": null
   },
@@ -3381,8 +3381,8 @@
    "locale": "vi",
    "country": "vn",
    "keyword": "nhật ký biết ơn",
-   "rank": 39,
-   "results": 182,
+   "rank": 52,
+   "results": 181,
    "popularity": null,
    "difficulty": null
   },
@@ -3391,7 +3391,7 @@
    "country": "cn",
    "keyword": "塔罗",
    "rank": null,
-   "results": 168,
+   "results": 164,
    "popularity": null,
    "difficulty": null
   },
@@ -3409,7 +3409,7 @@
    "country": "cn",
    "keyword": "潜意识",
    "rank": null,
-   "results": 166,
+   "results": 170,
    "popularity": null,
    "difficulty": null
   },
@@ -3436,7 +3436,7 @@
    "country": "cn",
    "keyword": "冥想",
    "rank": null,
-   "results": 185,
+   "results": 184,
    "popularity": null,
    "difficulty": null
   },
@@ -3445,7 +3445,7 @@
    "country": "cn",
    "keyword": "能量",
    "rank": null,
-   "results": 167,
+   "results": 163,
    "popularity": null,
    "difficulty": null
   },
@@ -3454,7 +3454,7 @@
    "country": "cn",
    "keyword": "水晶",
    "rank": null,
-   "results": 147,
+   "results": 137,
    "popularity": null,
    "difficulty": null
   },
@@ -3463,7 +3463,7 @@
    "country": "cn",
    "keyword": "自我提升",
    "rank": null,
-   "results": 179,
+   "results": 183,
    "popularity": null,
    "difficulty": null
   },
@@ -3471,8 +3471,8 @@
    "locale": "zh-Hans",
    "country": "cn",
    "keyword": "吸引力",
-   "rank": 53,
-   "results": 141,
+   "rank": 58,
+   "results": 143,
    "popularity": null,
    "difficulty": null
   },
@@ -3490,7 +3490,7 @@
    "country": "cn",
    "keyword": "疗愈",
    "rank": null,
-   "results": 190,
+   "results": 189,
    "popularity": null,
    "difficulty": null
   },
@@ -3499,7 +3499,7 @@
    "country": "cn",
    "keyword": "生日",
    "rank": null,
-   "results": 169,
+   "results": 168,
    "popularity": null,
    "difficulty": null
   },
@@ -3508,7 +3508,7 @@
    "country": "cn",
    "keyword": "愿望清单",
    "rank": null,
-   "results": 188,
+   "results": 190,
    "popularity": null,
    "difficulty": null
   },
@@ -3517,7 +3517,7 @@
    "country": "cn",
    "keyword": "星座",
    "rank": null,
-   "results": 157,
+   "results": 160,
    "popularity": null,
    "difficulty": null
   },
@@ -3526,7 +3526,7 @@
    "country": "cn",
    "keyword": "宇宙",
    "rank": null,
-   "results": 149,
+   "results": 140,
    "popularity": null,
    "difficulty": null
   },
@@ -3561,8 +3561,8 @@
    "locale": "zh-Hans",
    "country": "cn",
    "keyword": "显化",
-   "rank": null,
-   "results": 187,
+   "rank": 161,
+   "results": 186,
    "popularity": null,
    "difficulty": null
   },
@@ -3570,8 +3570,8 @@
    "locale": "zh-Hans",
    "country": "cn",
    "keyword": "愿景板",
-   "rank": 19,
-   "results": 164,
+   "rank": 20,
+   "results": 161,
    "popularity": null,
    "difficulty": null
   },
@@ -3580,7 +3580,7 @@
    "country": "cn",
    "keyword": "感恩日记",
    "rank": null,
-   "results": 184,
+   "results": 185,
    "popularity": null,
    "difficulty": null
   },
@@ -3589,7 +3589,7 @@
    "country": "cn",
    "keyword": "吸引力法则",
    "rank": 27,
-   "results": 146,
+   "results": 148,
    "popularity": null,
    "difficulty": null
   },
@@ -3597,7 +3597,7 @@
    "locale": "en-US",
    "country": "us",
    "keyword": "manifest",
-   "rank": 190,
+   "rank": 186,
    "results": 199,
    "popularity": null,
    "difficulty": null
@@ -3606,8 +3606,8 @@
    "locale": "en-US",
    "country": "us",
    "keyword": "369 manifestation",
-   "rank": 139,
-   "results": 192,
+   "rank": 131,
+   "results": 188,
    "popularity": null,
    "difficulty": null
   },
@@ -3616,7 +3616,7 @@
    "country": "us",
    "keyword": "555 manifest",
    "rank": null,
-   "results": 106,
+   "results": 81,
    "popularity": null,
    "difficulty": null
   },
@@ -3625,7 +3625,7 @@
    "country": "us",
    "keyword": "vision board",
    "rank": null,
-   "results": 185,
+   "results": 186,
    "popularity": null,
    "difficulty": null
   },
@@ -3634,7 +3634,7 @@
    "country": "ca",
    "keyword": "gratitude journal",
    "rank": null,
-   "results": 190,
+   "results": 188,
    "popularity": null,
    "difficulty": null
   },
@@ -3643,7 +3643,7 @@
    "country": "au",
    "keyword": "gratitude journal",
    "rank": null,
-   "results": 191,
+   "results": 189,
    "popularity": null,
    "difficulty": null
   },
@@ -3651,8 +3651,8 @@
    "locale": "en-AU",
    "country": "au",
    "keyword": "manifest",
-   "rank": 118,
-   "results": 192,
+   "rank": 148,
+   "results": 193,
    "popularity": null,
    "difficulty": null
   },
@@ -3661,7 +3661,7 @@
    "country": "au",
    "keyword": "gratitude plus",
    "rank": null,
-   "results": 166,
+   "results": 163,
    "popularity": null,
    "difficulty": null
   },
@@ -3679,7 +3679,7 @@
    "country": "au",
    "keyword": "law of attraction",
    "rank": null,
-   "results": 170,
+   "results": 167,
    "popularity": null,
    "difficulty": null
   },
@@ -3687,8 +3687,8 @@
    "locale": "pt-BR",
    "country": "br",
    "keyword": "manifested",
-   "rank": 107,
-   "results": 191,
+   "rank": 163,
+   "results": 193,
    "popularity": null,
    "difficulty": null
   },
@@ -3705,8 +3705,8 @@
    "locale": "pt-BR",
    "country": "br",
    "keyword": "369",
-   "rank": 23,
-   "results": 189,
+   "rank": 88,
+   "results": 190,
    "popularity": null,
    "difficulty": null
   },
@@ -3715,7 +3715,7 @@
    "country": "ca",
    "keyword": "manifest",
    "rank": null,
-   "results": 195,
+   "results": 196,
    "popularity": null,
    "difficulty": null
   },
@@ -3724,7 +3724,7 @@
    "country": "ca",
    "keyword": "gratitude plus",
    "rank": null,
-   "results": 161,
+   "results": 174,
    "popularity": null,
    "difficulty": null
   },
@@ -3733,7 +3733,7 @@
    "country": "ca",
    "keyword": "369",
    "rank": null,
-   "results": 183,
+   "results": 185,
    "popularity": null,
    "difficulty": null
   },
@@ -3778,7 +3778,7 @@
    "country": "de",
    "keyword": "369",
    "rank": null,
-   "results": 182,
+   "results": 186,
    "popularity": null,
    "difficulty": null
   },
@@ -3786,8 +3786,8 @@
    "locale": "da",
    "country": "dk",
    "keyword": "manifest",
-   "rank": 65,
-   "results": 193,
+   "rank": 64,
+   "results": 194,
    "popularity": null,
    "difficulty": null
   },
@@ -3796,7 +3796,7 @@
    "country": "dk",
    "keyword": "369 manifestation & meditation",
    "rank": null,
-   "results": 188,
+   "results": 190,
    "popularity": null,
    "difficulty": null
   },
@@ -3805,7 +3805,7 @@
    "country": "dk",
    "keyword": "manifest love",
    "rank": null,
-   "results": 177,
+   "results": 180,
    "popularity": null,
    "difficulty": null
   },
@@ -3841,7 +3841,7 @@
    "country": "es",
    "keyword": "ia 369",
    "rank": null,
-   "results": 12,
+   "results": 13,
    "popularity": null,
    "difficulty": null
   },
@@ -3849,7 +3849,7 @@
    "locale": "fi",
    "country": "fi",
    "keyword": "manifest",
-   "rank": 52,
+   "rank": 48,
    "results": 193,
    "popularity": null,
    "difficulty": null
@@ -3859,7 +3859,7 @@
    "country": "fi",
    "keyword": "369 manifestation & meditation",
    "rank": null,
-   "results": 188,
+   "results": 186,
    "popularity": null,
    "difficulty": null
   },
@@ -3868,7 +3868,7 @@
    "country": "fi",
    "keyword": "manifest love",
    "rank": null,
-   "results": 181,
+   "results": 180,
    "popularity": null,
    "difficulty": null
   },
@@ -3885,8 +3885,8 @@
    "locale": "fi",
    "country": "fi",
    "keyword": "manifest: affirmations & focus",
-   "rank": 127,
-   "results": 189,
+   "rank": 137,
+   "results": 190,
    "popularity": null,
    "difficulty": null
   },
@@ -3895,7 +3895,7 @@
    "country": "fr",
    "keyword": "gratitude journal",
    "rank": null,
-   "results": 191,
+   "results": 189,
    "popularity": null,
    "difficulty": null
   },
@@ -3904,7 +3904,7 @@
    "country": "fr",
    "keyword": "life 369",
    "rank": null,
-   "results": 183,
+   "results": 179,
    "popularity": null,
    "difficulty": null
   },
@@ -3922,7 +3922,7 @@
    "country": "gb",
    "keyword": "manifest: daily affirmation",
    "rank": null,
-   "results": 182,
+   "results": 183,
    "popularity": null,
    "difficulty": null
   },
@@ -3931,7 +3931,7 @@
    "country": "gb",
    "keyword": "law of attraction toolbox",
    "rank": null,
-   "results": 154,
+   "results": 153,
    "popularity": null,
    "difficulty": null
   },
@@ -3939,8 +3939,8 @@
    "locale": "en-GB",
    "country": "gb",
    "keyword": "manifest",
-   "rank": null,
-   "results": 196,
+   "rank": 167,
+   "results": 197,
    "popularity": null,
    "difficulty": null
   },
@@ -3948,7 +3948,7 @@
    "locale": "id",
    "country": "id",
    "keyword": "manifest",
-   "rank": 172,
+   "rank": 176,
    "results": 196,
    "popularity": null,
    "difficulty": null
@@ -3958,7 +3958,7 @@
    "country": "id",
    "keyword": "369",
    "rank": null,
-   "results": 191,
+   "results": 193,
    "popularity": null,
    "difficulty": null
   },
@@ -3967,7 +3967,7 @@
    "country": "id",
    "keyword": "manifest love",
    "rank": null,
-   "results": 187,
+   "results": 188,
    "popularity": null,
    "difficulty": null
   },
@@ -3993,8 +3993,8 @@
    "locale": "he",
    "country": "il",
    "keyword": "369",
-   "rank": 141,
-   "results": 190,
+   "rank": 118,
+   "results": 188,
    "popularity": null,
    "difficulty": null
   },
@@ -4002,8 +4002,8 @@
    "locale": "he",
    "country": "il",
    "keyword": "תודה",
-   "rank": 61,
-   "results": 158,
+   "rank": 53,
+   "results": 162,
    "popularity": null,
    "difficulty": null
   },
@@ -4030,7 +4030,7 @@
    "country": "il",
    "keyword": "manifest anything - 369 app",
    "rank": null,
-   "results": 25,
+   "results": 26,
    "popularity": null,
    "difficulty": null
   },
@@ -4039,7 +4039,7 @@
    "country": "it",
    "keyword": "gratitude journal",
    "rank": null,
-   "results": 193,
+   "results": 192,
    "popularity": null,
    "difficulty": null
   },
@@ -4048,7 +4048,7 @@
    "country": "it",
    "keyword": "affermazioni positive",
    "rank": null,
-   "results": 146,
+   "results": 150,
    "popularity": null,
    "difficulty": null
   },
@@ -4057,7 +4057,7 @@
    "country": "it",
    "keyword": "gratitude: self-care journal",
    "rank": null,
-   "results": 187,
+   "results": 185,
    "popularity": null,
    "difficulty": null
   },
@@ -4065,8 +4065,8 @@
    "locale": "ja",
    "country": "jp",
    "keyword": "ビジョンボード：夢を叶える引き寄せの法則・dreamer",
-   "rank": 12,
-   "results": 26,
+   "rank": 10,
+   "results": 27,
    "popularity": null,
    "difficulty": null
   },
@@ -4075,7 +4075,7 @@
    "country": "jp",
    "keyword": "369",
    "rank": null,
-   "results": 168,
+   "results": 170,
    "popularity": null,
    "difficulty": null
   },
@@ -4083,8 +4083,8 @@
    "locale": "ko",
    "country": "kr",
    "keyword": "끌어당김: 비전보드 & 369",
-   "rank": 6,
-   "results": 28,
+   "rank": 5,
+   "results": 27,
    "popularity": null,
    "difficulty": null
   },
@@ -4093,7 +4093,7 @@
    "country": "mx",
    "keyword": "gratitude",
    "rank": null,
-   "results": 197,
+   "results": 196,
    "popularity": null,
    "difficulty": null
   },
@@ -4101,8 +4101,8 @@
    "locale": "es-MX",
    "country": "mx",
    "keyword": "369",
-   "rank": 87,
-   "results": 189,
+   "rank": 90,
+   "results": 191,
    "popularity": null,
    "difficulty": null
   },
@@ -4111,7 +4111,7 @@
    "country": "mx",
    "keyword": "afirmaciones positivas diarias",
    "rank": null,
-   "results": 189,
+   "results": 191,
    "popularity": null,
    "difficulty": null
   },
@@ -4119,8 +4119,8 @@
    "locale": "nl-NL",
    "country": "nl",
    "keyword": "manifest",
-   "rank": 120,
-   "results": 193,
+   "rank": 113,
+   "results": 191,
    "popularity": null,
    "difficulty": null
   },
@@ -4128,7 +4128,7 @@
    "locale": "nl-NL",
    "country": "nl",
    "keyword": "dankbaarheid dagboek",
-   "rank": 190,
+   "rank": null,
    "results": 192,
    "popularity": null,
    "difficulty": null
@@ -4147,7 +4147,7 @@
    "country": "nl",
    "keyword": "affirmations",
    "rank": null,
-   "results": 191,
+   "results": 181,
    "popularity": null,
    "difficulty": null
   },
@@ -4156,7 +4156,7 @@
    "country": "nl",
    "keyword": "manifest love",
    "rank": null,
-   "results": 177,
+   "results": 179,
    "popularity": null,
    "difficulty": null
   },
@@ -4164,8 +4164,8 @@
    "locale": "no",
    "country": "no",
    "keyword": "manifest",
-   "rank": 104,
-   "results": 195,
+   "rank": 90,
+   "results": 194,
    "popularity": null,
    "difficulty": null
   },
@@ -4183,7 +4183,7 @@
    "country": "no",
    "keyword": "manifest love",
    "rank": null,
-   "results": 180,
+   "results": 181,
    "popularity": null,
    "difficulty": null
   },
@@ -4192,7 +4192,7 @@
    "country": "no",
    "keyword": "369 manifestation & meditation",
    "rank": null,
-   "results": 195,
+   "results": 194,
    "popularity": null,
    "difficulty": null
   },
@@ -4210,7 +4210,7 @@
    "country": "pl",
    "keyword": "369 manifestation & meditation",
    "rank": null,
-   "results": 192,
+   "results": 193,
    "popularity": null,
    "difficulty": null
   },
@@ -4218,8 +4218,8 @@
    "locale": "pl",
    "country": "pl",
    "keyword": "afirmacje+",
-   "rank": 157,
-   "results": 176,
+   "rank": 161,
+   "results": 177,
    "popularity": null,
    "difficulty": null
   },
@@ -4245,8 +4245,8 @@
    "locale": "ru",
    "country": "ru",
    "keyword": "369",
-   "rank": 23,
-   "results": 156,
+   "rank": 19,
+   "results": 159,
    "popularity": null,
    "difficulty": null
   },
@@ -4264,7 +4264,7 @@
    "country": "sa",
    "keyword": "369",
    "rank": null,
-   "results": 182,
+   "results": 172,
    "popularity": null,
    "difficulty": null
   },
@@ -4282,7 +4282,7 @@
    "country": "sa",
    "keyword": "امتنان",
    "rank": null,
-   "results": 183,
+   "results": 184,
    "popularity": null,
    "difficulty": null
   },
@@ -4290,8 +4290,8 @@
    "locale": "ar-SA",
    "country": "sa",
    "keyword": "توكيدات",
-   "rank": 126,
-   "results": 169,
+   "rank": 131,
+   "results": 165,
    "popularity": null,
    "difficulty": null
   },
@@ -4308,8 +4308,8 @@
    "locale": "sv",
    "country": "se",
    "keyword": "manifest",
-   "rank": null,
-   "results": 192,
+   "rank": 99,
+   "results": 188,
    "popularity": null,
    "difficulty": null
   },
@@ -4344,7 +4344,7 @@
    "locale": "tr",
    "country": "tr",
    "keyword": "çekim yasası",
-   "rank": 113,
+   "rank": 112,
    "results": 132,
    "popularity": null,
    "difficulty": null
@@ -4381,7 +4381,7 @@
    "country": "vn",
    "keyword": "lời khẳng định",
    "rank": 29,
-   "results": 104,
+   "results": 103,
    "popularity": null,
    "difficulty": null
   },
@@ -4398,8 +4398,8 @@
    "locale": "vi",
    "country": "vn",
    "keyword": "369",
-   "rank": 22,
-   "results": 183,
+   "rank": 23,
+   "results": 184,
    "popularity": null,
    "difficulty": null
   },
@@ -4408,7 +4408,7 @@
    "country": "vn",
    "keyword": "manifest love",
    "rank": null,
-   "results": 190,
+   "results": 191,
    "popularity": null,
    "difficulty": null
   },
@@ -4425,8 +4425,8 @@
    "locale": "en-GB",
    "country": "ie",
    "keyword": "369 method",
-   "rank": 6,
-   "results": 28,
+   "rank": 7,
+   "results": 30,
    "popularity": null,
    "difficulty": null
   },
@@ -4435,7 +4435,7 @@
    "country": "ie",
    "keyword": "vision board",
    "rank": null,
-   "results": 180,
+   "results": 177,
    "popularity": null,
    "difficulty": null
   },
@@ -4444,7 +4444,7 @@
    "country": "ie",
    "keyword": "gratitude journal",
    "rank": null,
-   "results": 183,
+   "results": 181,
    "popularity": null,
    "difficulty": null
   },
@@ -4461,8 +4461,8 @@
    "locale": "en-GB",
    "country": "ie",
    "keyword": "manifest",
-   "rank": 72,
-   "results": 192,
+   "rank": 79,
+   "results": 193,
    "popularity": null,
    "difficulty": null
   },
@@ -4470,8 +4470,8 @@
    "locale": "en-GB",
    "country": "ie",
    "keyword": "369",
-   "rank": 136,
-   "results": 181,
+   "rank": 143,
+   "results": 192,
    "popularity": null,
    "difficulty": null
   },
@@ -4489,7 +4489,7 @@
    "country": "ie",
    "keyword": "law of attraction",
    "rank": null,
-   "results": 153,
+   "results": 154,
    "popularity": null,
    "difficulty": null
   },
@@ -4497,8 +4497,8 @@
    "locale": "en-GB",
    "country": "nz",
    "keyword": "369 method",
-   "rank": 6,
-   "results": 30,
+   "rank": 7,
+   "results": 32,
    "popularity": null,
    "difficulty": null
   },
@@ -4516,7 +4516,7 @@
    "country": "nz",
    "keyword": "gratitude journal",
    "rank": null,
-   "results": 193,
+   "results": 191,
    "popularity": null,
    "difficulty": null
   },
@@ -4525,7 +4525,7 @@
    "country": "nz",
    "keyword": "angel numbers",
    "rank": null,
-   "results": 148,
+   "results": 149,
    "popularity": null,
    "difficulty": null
   },
@@ -4533,7 +4533,7 @@
    "locale": "en-GB",
    "country": "nz",
    "keyword": "manifest",
-   "rank": 77,
+   "rank": 79,
    "results": 194,
    "popularity": null,
    "difficulty": null
@@ -4543,7 +4543,7 @@
    "country": "nz",
    "keyword": "369",
    "rank": null,
-   "results": 186,
+   "results": 189,
    "popularity": null,
    "difficulty": null
   },
@@ -4569,8 +4569,8 @@
    "locale": "en-GB",
    "country": "in",
    "keyword": "369 method",
-   "rank": 9,
-   "results": 28,
+   "rank": 10,
+   "results": 30,
    "popularity": null,
    "difficulty": null
   },
@@ -4579,7 +4579,7 @@
    "country": "in",
    "keyword": "vision board",
    "rank": null,
-   "results": 192,
+   "results": 191,
    "popularity": null,
    "difficulty": null
   },
@@ -4588,7 +4588,7 @@
    "country": "in",
    "keyword": "gratitude journal",
    "rank": null,
-   "results": 191,
+   "results": 188,
    "popularity": null,
    "difficulty": null
   },
@@ -4605,7 +4605,7 @@
    "locale": "en-GB",
    "country": "in",
    "keyword": "manifest",
-   "rank": 172,
+   "rank": 140,
    "results": 191,
    "popularity": null,
    "difficulty": null
@@ -4614,6 +4614,42 @@
    "locale": "en-GB",
    "country": "in",
    "keyword": "369",
+   "rank": null,
+   "results": 182,
+   "popularity": null,
+   "difficulty": null
+  },
+  {
+   "locale": "en-GB",
+   "country": "in",
+   "keyword": "manifestation journal",
+   "rank": null,
+   "results": 191,
+   "popularity": null,
+   "difficulty": null
+  },
+  {
+   "locale": "en-GB",
+   "country": "in",
+   "keyword": "law of attraction",
+   "rank": null,
+   "results": 158,
+   "popularity": null,
+   "difficulty": null
+  },
+  {
+   "locale": "en-GB",
+   "country": "ph",
+   "keyword": "369 method",
+   "rank": 16,
+   "results": 31,
+   "popularity": null,
+   "difficulty": null
+  },
+  {
+   "locale": "en-GB",
+   "country": "ph",
+   "keyword": "vision board",
    "rank": null,
    "results": 184,
    "popularity": null,
@@ -4621,124 +4657,16 @@
   },
   {
    "locale": "en-GB",
-   "country": "in",
-   "keyword": "manifestation journal",
-   "rank": null,
-   "results": 189,
-   "popularity": null,
-   "difficulty": null
-  },
-  {
-   "locale": "en-GB",
-   "country": "in",
-   "keyword": "law of attraction",
-   "rank": null,
-   "results": 173,
-   "popularity": null,
-   "difficulty": null
-  },
-  {
-   "locale": "en-GB",
-   "country": "ph",
-   "keyword": "369 method",
-   "rank": 14,
-   "results": 29,
-   "popularity": null,
-   "difficulty": null
-  },
-  {
-   "locale": "en-GB",
-   "country": "ph",
-   "keyword": "vision board",
-   "rank": null,
-   "results": 186,
-   "popularity": null,
-   "difficulty": null
-  },
-  {
-   "locale": "en-GB",
    "country": "ph",
    "keyword": "gratitude journal",
    "rank": null,
-   "results": 196,
+   "results": 192,
    "popularity": null,
    "difficulty": null
   },
   {
    "locale": "en-GB",
    "country": "ph",
-   "keyword": "angel numbers",
-   "rank": null,
-   "results": 159,
-   "popularity": null,
-   "difficulty": null
-  },
-  {
-   "locale": "en-GB",
-   "country": "ph",
-   "keyword": "manifest",
-   "rank": null,
-   "results": 196,
-   "popularity": null,
-   "difficulty": null
-  },
-  {
-   "locale": "en-GB",
-   "country": "ph",
-   "keyword": "369",
-   "rank": null,
-   "results": 188,
-   "popularity": null,
-   "difficulty": null
-  },
-  {
-   "locale": "en-GB",
-   "country": "ph",
-   "keyword": "manifestation journal",
-   "rank": null,
-   "results": 183,
-   "popularity": null,
-   "difficulty": null
-  },
-  {
-   "locale": "en-GB",
-   "country": "ph",
-   "keyword": "law of attraction",
-   "rank": null,
-   "results": 162,
-   "popularity": null,
-   "difficulty": null
-  },
-  {
-   "locale": "en-GB",
-   "country": "sg",
-   "keyword": "369 method",
-   "rank": 6,
-   "results": 30,
-   "popularity": null,
-   "difficulty": null
-  },
-  {
-   "locale": "en-GB",
-   "country": "sg",
-   "keyword": "vision board",
-   "rank": null,
-   "results": 186,
-   "popularity": null,
-   "difficulty": null
-  },
-  {
-   "locale": "en-GB",
-   "country": "sg",
-   "keyword": "gratitude journal",
-   "rank": null,
-   "results": 191,
-   "popularity": null,
-   "difficulty": null
-  },
-  {
-   "locale": "en-GB",
-   "country": "sg",
    "keyword": "angel numbers",
    "rank": null,
    "results": 156,
@@ -4747,52 +4675,52 @@
   },
   {
    "locale": "en-GB",
-   "country": "sg",
+   "country": "ph",
    "keyword": "manifest",
-   "rank": 100,
-   "results": 192,
+   "rank": null,
+   "results": 195,
    "popularity": null,
    "difficulty": null
   },
   {
    "locale": "en-GB",
-   "country": "sg",
+   "country": "ph",
    "keyword": "369",
    "rank": null,
-   "results": 189,
+   "results": 191,
    "popularity": null,
    "difficulty": null
   },
   {
    "locale": "en-GB",
-   "country": "sg",
+   "country": "ph",
    "keyword": "manifestation journal",
-   "rank": 137,
-   "results": 187,
+   "rank": null,
+   "results": 186,
    "popularity": null,
    "difficulty": null
   },
   {
    "locale": "en-GB",
-   "country": "sg",
+   "country": "ph",
    "keyword": "law of attraction",
    "rank": null,
-   "results": 157,
+   "results": 165,
    "popularity": null,
    "difficulty": null
   },
   {
    "locale": "en-GB",
-   "country": "za",
+   "country": "sg",
    "keyword": "369 method",
    "rank": 7,
-   "results": 30,
+   "results": 32,
    "popularity": null,
    "difficulty": null
   },
   {
    "locale": "en-GB",
-   "country": "za",
+   "country": "sg",
    "keyword": "vision board",
    "rank": null,
    "results": 186,
@@ -4801,7 +4729,7 @@
   },
   {
    "locale": "en-GB",
-   "country": "za",
+   "country": "sg",
    "keyword": "gratitude journal",
    "rank": null,
    "results": 191,
@@ -4810,8 +4738,44 @@
   },
   {
    "locale": "en-GB",
-   "country": "za",
+   "country": "sg",
    "keyword": "angel numbers",
+   "rank": null,
+   "results": 157,
+   "popularity": null,
+   "difficulty": null
+  },
+  {
+   "locale": "en-GB",
+   "country": "sg",
+   "keyword": "manifest",
+   "rank": 61,
+   "results": 194,
+   "popularity": null,
+   "difficulty": null
+  },
+  {
+   "locale": "en-GB",
+   "country": "sg",
+   "keyword": "369",
+   "rank": null,
+   "results": 190,
+   "popularity": null,
+   "difficulty": null
+  },
+  {
+   "locale": "en-GB",
+   "country": "sg",
+   "keyword": "manifestation journal",
+   "rank": 132,
+   "results": 181,
+   "popularity": null,
+   "difficulty": null
+  },
+  {
+   "locale": "en-GB",
+   "country": "sg",
+   "keyword": "law of attraction",
    "rank": null,
    "results": 158,
    "popularity": null,
@@ -4820,9 +4784,45 @@
   {
    "locale": "en-GB",
    "country": "za",
+   "keyword": "369 method",
+   "rank": 9,
+   "results": 32,
+   "popularity": null,
+   "difficulty": null
+  },
+  {
+   "locale": "en-GB",
+   "country": "za",
+   "keyword": "vision board",
+   "rank": null,
+   "results": 183,
+   "popularity": null,
+   "difficulty": null
+  },
+  {
+   "locale": "en-GB",
+   "country": "za",
+   "keyword": "gratitude journal",
+   "rank": null,
+   "results": 192,
+   "popularity": null,
+   "difficulty": null
+  },
+  {
+   "locale": "en-GB",
+   "country": "za",
+   "keyword": "angel numbers",
+   "rank": null,
+   "results": 157,
+   "popularity": null,
+   "difficulty": null
+  },
+  {
+   "locale": "en-GB",
+   "country": "za",
    "keyword": "manifest",
-   "rank": 151,
-   "results": 194,
+   "rank": 153,
+   "results": 193,
    "popularity": null,
    "difficulty": null
   },
@@ -4831,7 +4831,7 @@
    "country": "za",
    "keyword": "369",
    "rank": null,
-   "results": 190,
+   "results": 191,
    "popularity": null,
    "difficulty": null
   },
@@ -4857,8 +4857,8 @@
    "locale": "en-GB",
    "country": "ng",
    "keyword": "369 method",
-   "rank": 5,
-   "results": 28,
+   "rank": 6,
+   "results": 30,
    "popularity": null,
    "difficulty": null
   },
@@ -4867,7 +4867,7 @@
    "country": "ng",
    "keyword": "vision board",
    "rank": null,
-   "results": 191,
+   "results": 190,
    "popularity": null,
    "difficulty": null
   },
@@ -4876,7 +4876,7 @@
    "country": "ng",
    "keyword": "gratitude journal",
    "rank": null,
-   "results": 194,
+   "results": 193,
    "popularity": null,
    "difficulty": null
   },
@@ -4885,7 +4885,7 @@
    "country": "ng",
    "keyword": "angel numbers",
    "rank": null,
-   "results": 188,
+   "results": 187,
    "popularity": null,
    "difficulty": null
   },
@@ -4893,7 +4893,7 @@
    "locale": "en-GB",
    "country": "ng",
    "keyword": "manifest",
-   "rank": 61,
+   "rank": 56,
    "results": 192,
    "popularity": null,
    "difficulty": null
@@ -4903,7 +4903,7 @@
    "country": "ng",
    "keyword": "369",
    "rank": 176,
-   "results": 195,
+   "results": 196,
    "popularity": null,
    "difficulty": null
   },
@@ -4911,7 +4911,7 @@
    "locale": "en-GB",
    "country": "ng",
    "keyword": "manifestation journal",
-   "rank": 139,
+   "rank": 141,
    "results": 182,
    "popularity": null,
    "difficulty": null
@@ -4921,7 +4921,7 @@
    "country": "ng",
    "keyword": "law of attraction",
    "rank": null,
-   "results": 169,
+   "results": 171,
    "popularity": null,
    "difficulty": null
   },
@@ -4938,8 +4938,8 @@
    "locale": "es-MX",
    "country": "ar",
    "keyword": "metodo 369",
-   "rank": 6,
-   "results": 9,
+   "rank": 5,
+   "results": 8,
    "popularity": null,
    "difficulty": null
   },
@@ -4947,8 +4947,8 @@
    "locale": "es-MX",
    "country": "ar",
    "keyword": "manifestacion",
-   "rank": 81,
-   "results": 167,
+   "rank": 82,
+   "results": 171,
    "popularity": null,
    "difficulty": null
   },
@@ -4966,232 +4966,232 @@
    "country": "ar",
    "keyword": "369",
    "rank": null,
-   "results": 173,
-   "popularity": null,
-   "difficulty": null
-  },
-  {
-   "locale": "es-MX",
-   "country": "ar",
-   "keyword": "diario de gratitud",
-   "rank": null,
-   "results": 192,
-   "popularity": null,
-   "difficulty": null
-  },
-  {
-   "locale": "es-MX",
-   "country": "ar",
-   "keyword": "afirmaciones",
-   "rank": null,
-   "results": 194,
-   "popularity": null,
-   "difficulty": null
-  },
-  {
-   "locale": "es-MX",
-   "country": "ar",
-   "keyword": "ley de atraccion",
-   "rank": 89,
-   "results": 108,
-   "popularity": null,
-   "difficulty": null
-  },
-  {
-   "locale": "es-MX",
-   "country": "cl",
-   "keyword": "numeros angelicos",
-   "rank": null,
-   "results": 1,
-   "popularity": null,
-   "difficulty": null
-  },
-  {
-   "locale": "es-MX",
-   "country": "cl",
-   "keyword": "metodo 369",
-   "rank": 6,
-   "results": 9,
-   "popularity": null,
-   "difficulty": null
-  },
-  {
-   "locale": "es-MX",
-   "country": "cl",
-   "keyword": "manifestacion",
-   "rank": 118,
-   "results": 167,
-   "popularity": null,
-   "difficulty": null
-  },
-  {
-   "locale": "es-MX",
-   "country": "cl",
-   "keyword": "tablero de vision",
-   "rank": null,
-   "results": 189,
-   "popularity": null,
-   "difficulty": null
-  },
-  {
-   "locale": "es-MX",
-   "country": "cl",
-   "keyword": "369",
-   "rank": null,
-   "results": 189,
-   "popularity": null,
-   "difficulty": null
-  },
-  {
-   "locale": "es-MX",
-   "country": "cl",
-   "keyword": "diario de gratitud",
-   "rank": null,
-   "results": 188,
-   "popularity": null,
-   "difficulty": null
-  },
-  {
-   "locale": "es-MX",
-   "country": "cl",
-   "keyword": "afirmaciones",
-   "rank": null,
-   "results": 196,
-   "popularity": null,
-   "difficulty": null
-  },
-  {
-   "locale": "es-MX",
-   "country": "cl",
-   "keyword": "ley de atraccion",
-   "rank": 103,
-   "results": 108,
-   "popularity": null,
-   "difficulty": null
-  },
-  {
-   "locale": "es-MX",
-   "country": "co",
-   "keyword": "numeros angelicos",
-   "rank": null,
-   "results": 1,
-   "popularity": null,
-   "difficulty": null
-  },
-  {
-   "locale": "es-MX",
-   "country": "co",
-   "keyword": "metodo 369",
-   "rank": 6,
-   "results": 9,
-   "popularity": null,
-   "difficulty": null
-  },
-  {
-   "locale": "es-MX",
-   "country": "co",
-   "keyword": "manifestacion",
-   "rank": 85,
-   "results": 167,
-   "popularity": null,
-   "difficulty": null
-  },
-  {
-   "locale": "es-MX",
-   "country": "co",
-   "keyword": "tablero de vision",
-   "rank": null,
-   "results": 191,
-   "popularity": null,
-   "difficulty": null
-  },
-  {
-   "locale": "es-MX",
-   "country": "co",
-   "keyword": "369",
-   "rank": null,
-   "results": 177,
-   "popularity": null,
-   "difficulty": null
-  },
-  {
-   "locale": "es-MX",
-   "country": "co",
-   "keyword": "diario de gratitud",
-   "rank": null,
-   "results": 191,
-   "popularity": null,
-   "difficulty": null
-  },
-  {
-   "locale": "es-MX",
-   "country": "co",
-   "keyword": "afirmaciones",
-   "rank": null,
-   "results": 188,
-   "popularity": null,
-   "difficulty": null
-  },
-  {
-   "locale": "es-MX",
-   "country": "co",
-   "keyword": "ley de atraccion",
-   "rank": 65,
-   "results": 108,
-   "popularity": null,
-   "difficulty": null
-  },
-  {
-   "locale": "es-MX",
-   "country": "pe",
-   "keyword": "numeros angelicos",
-   "rank": null,
-   "results": 1,
-   "popularity": null,
-   "difficulty": null
-  },
-  {
-   "locale": "es-MX",
-   "country": "pe",
-   "keyword": "metodo 369",
-   "rank": 4,
-   "results": 9,
-   "popularity": null,
-   "difficulty": null
-  },
-  {
-   "locale": "es-MX",
-   "country": "pe",
-   "keyword": "manifestacion",
-   "rank": 41,
-   "results": 167,
-   "popularity": null,
-   "difficulty": null
-  },
-  {
-   "locale": "es-MX",
-   "country": "pe",
-   "keyword": "tablero de vision",
-   "rank": null,
-   "results": 191,
-   "popularity": null,
-   "difficulty": null
-  },
-  {
-   "locale": "es-MX",
-   "country": "pe",
-   "keyword": "369",
-   "rank": 19,
    "results": 176,
    "popularity": null,
    "difficulty": null
   },
   {
    "locale": "es-MX",
+   "country": "ar",
+   "keyword": "diario de gratitud",
+   "rank": null,
+   "results": 191,
+   "popularity": null,
+   "difficulty": null
+  },
+  {
+   "locale": "es-MX",
+   "country": "ar",
+   "keyword": "afirmaciones",
+   "rank": null,
+   "results": 184,
+   "popularity": null,
+   "difficulty": null
+  },
+  {
+   "locale": "es-MX",
+   "country": "ar",
+   "keyword": "ley de atraccion",
+   "rank": 90,
+   "results": 111,
+   "popularity": null,
+   "difficulty": null
+  },
+  {
+   "locale": "es-MX",
+   "country": "cl",
+   "keyword": "numeros angelicos",
+   "rank": null,
+   "results": 1,
+   "popularity": null,
+   "difficulty": null
+  },
+  {
+   "locale": "es-MX",
+   "country": "cl",
+   "keyword": "metodo 369",
+   "rank": 5,
+   "results": 8,
+   "popularity": null,
+   "difficulty": null
+  },
+  {
+   "locale": "es-MX",
+   "country": "cl",
+   "keyword": "manifestacion",
+   "rank": 123,
+   "results": 171,
+   "popularity": null,
+   "difficulty": null
+  },
+  {
+   "locale": "es-MX",
+   "country": "cl",
+   "keyword": "tablero de vision",
+   "rank": null,
+   "results": 190,
+   "popularity": null,
+   "difficulty": null
+  },
+  {
+   "locale": "es-MX",
+   "country": "cl",
+   "keyword": "369",
+   "rank": null,
+   "results": 191,
+   "popularity": null,
+   "difficulty": null
+  },
+  {
+   "locale": "es-MX",
+   "country": "cl",
+   "keyword": "diario de gratitud",
+   "rank": null,
+   "results": 187,
+   "popularity": null,
+   "difficulty": null
+  },
+  {
+   "locale": "es-MX",
+   "country": "cl",
+   "keyword": "afirmaciones",
+   "rank": null,
+   "results": 197,
+   "popularity": null,
+   "difficulty": null
+  },
+  {
+   "locale": "es-MX",
+   "country": "cl",
+   "keyword": "ley de atraccion",
+   "rank": 104,
+   "results": 111,
+   "popularity": null,
+   "difficulty": null
+  },
+  {
+   "locale": "es-MX",
+   "country": "co",
+   "keyword": "numeros angelicos",
+   "rank": null,
+   "results": 1,
+   "popularity": null,
+   "difficulty": null
+  },
+  {
+   "locale": "es-MX",
+   "country": "co",
+   "keyword": "metodo 369",
+   "rank": 5,
+   "results": 8,
+   "popularity": null,
+   "difficulty": null
+  },
+  {
+   "locale": "es-MX",
+   "country": "co",
+   "keyword": "manifestacion",
+   "rank": 82,
+   "results": 171,
+   "popularity": null,
+   "difficulty": null
+  },
+  {
+   "locale": "es-MX",
+   "country": "co",
+   "keyword": "tablero de vision",
+   "rank": null,
+   "results": 191,
+   "popularity": null,
+   "difficulty": null
+  },
+  {
+   "locale": "es-MX",
+   "country": "co",
+   "keyword": "369",
+   "rank": 145,
+   "results": 178,
+   "popularity": null,
+   "difficulty": null
+  },
+  {
+   "locale": "es-MX",
+   "country": "co",
+   "keyword": "diario de gratitud",
+   "rank": null,
+   "results": 191,
+   "popularity": null,
+   "difficulty": null
+  },
+  {
+   "locale": "es-MX",
+   "country": "co",
+   "keyword": "afirmaciones",
+   "rank": null,
+   "results": 191,
+   "popularity": null,
+   "difficulty": null
+  },
+  {
+   "locale": "es-MX",
+   "country": "co",
+   "keyword": "ley de atraccion",
+   "rank": 66,
+   "results": 111,
+   "popularity": null,
+   "difficulty": null
+  },
+  {
+   "locale": "es-MX",
+   "country": "pe",
+   "keyword": "numeros angelicos",
+   "rank": null,
+   "results": 1,
+   "popularity": null,
+   "difficulty": null
+  },
+  {
+   "locale": "es-MX",
+   "country": "pe",
+   "keyword": "metodo 369",
+   "rank": 3,
+   "results": 8,
+   "popularity": null,
+   "difficulty": null
+  },
+  {
+   "locale": "es-MX",
+   "country": "pe",
+   "keyword": "manifestacion",
+   "rank": 54,
+   "results": 171,
+   "popularity": null,
+   "difficulty": null
+  },
+  {
+   "locale": "es-MX",
+   "country": "pe",
+   "keyword": "tablero de vision",
+   "rank": null,
+   "results": 190,
+   "popularity": null,
+   "difficulty": null
+  },
+  {
+   "locale": "es-MX",
+   "country": "pe",
+   "keyword": "369",
+   "rank": 128,
+   "results": 177,
+   "popularity": null,
+   "difficulty": null
+  },
+  {
+   "locale": "es-MX",
    "country": "pe",
    "keyword": "diario de gratitud",
-   "rank": 61,
-   "results": 189,
+   "rank": 77,
+   "results": 188,
    "popularity": null,
    "difficulty": null
   },
@@ -5199,8 +5199,8 @@
    "locale": "es-MX",
    "country": "pe",
    "keyword": "afirmaciones",
-   "rank": 165,
-   "results": 197,
+   "rank": null,
+   "results": 198,
    "popularity": null,
    "difficulty": null
   },
@@ -5208,8 +5208,8 @@
    "locale": "es-MX",
    "country": "pe",
    "keyword": "ley de atraccion",
-   "rank": 15,
-   "results": 108,
+   "rank": 23,
+   "results": 111,
    "popularity": null,
    "difficulty": null
   },
@@ -5244,8 +5244,8 @@
    "locale": "pt-PT",
    "country": "pt",
    "keyword": "manifestacao",
-   "rank": 43,
-   "results": 87,
+   "rank": 41,
+   "results": 82,
    "popularity": null,
    "difficulty": null
   },
@@ -5254,7 +5254,7 @@
    "country": "pt",
    "keyword": "369",
    "rank": null,
-   "results": 188,
+   "results": 190,
    "popularity": null,
    "difficulty": null
   },
@@ -5263,7 +5263,7 @@
    "country": "pt",
    "keyword": "numeros dos anjos",
    "rank": null,
-   "results": 5,
+   "results": 4,
    "popularity": null,
    "difficulty": null
   },
@@ -5280,8 +5280,8 @@
    "locale": "pt-PT",
    "country": "pt",
    "keyword": "lei da atracao",
-   "rank": 47,
-   "results": 65,
+   "rank": 46,
+   "results": 64,
    "popularity": null,
    "difficulty": null
   },
@@ -5289,8 +5289,8 @@
    "locale": "ar-SA",
    "country": "ae",
    "keyword": "قانون الجذب",
-   "rank": 26,
-   "results": 46,
+   "rank": 25,
+   "results": 45,
    "popularity": null,
    "difficulty": null
   },
@@ -5298,8 +5298,8 @@
    "locale": "ar-SA",
    "country": "ae",
    "keyword": "امتنان",
-   "rank": 152,
-   "results": 169,
+   "rank": null,
+   "results": 174,
    "popularity": null,
    "difficulty": null
   },
@@ -5307,7 +5307,7 @@
    "locale": "ar-SA",
    "country": "ae",
    "keyword": "توكيدات",
-   "rank": 119,
+   "rank": 122,
    "results": 161,
    "popularity": null,
    "difficulty": null
@@ -5325,8 +5325,8 @@
    "locale": "ar-SA",
    "country": "ae",
    "keyword": "لوحة الرؤية",
-   "rank": 21,
-   "results": 65,
+   "rank": 22,
+   "results": 63,
    "popularity": null,
    "difficulty": null
   },
@@ -5344,7 +5344,7 @@
    "country": "ae",
    "keyword": "تجلي",
    "rank": null,
-   "results": 158,
+   "results": 160,
    "popularity": null,
    "difficulty": null
   },
@@ -5352,8 +5352,8 @@
    "locale": "ar-SA",
    "country": "eg",
    "keyword": "قانون الجذب",
-   "rank": 35,
-   "results": 46,
+   "rank": 36,
+   "results": 45,
    "popularity": null,
    "difficulty": null
   },
@@ -5370,8 +5370,8 @@
    "locale": "ar-SA",
    "country": "eg",
    "keyword": "توكيدات",
-   "rank": 131,
-   "results": 165,
+   "rank": null,
+   "results": 166,
    "popularity": null,
    "difficulty": null
   },
@@ -5380,7 +5380,7 @@
    "country": "eg",
    "keyword": "369",
    "rank": null,
-   "results": 176,
+   "results": 178,
    "popularity": null,
    "difficulty": null
   },
@@ -5388,8 +5388,8 @@
    "locale": "ar-SA",
    "country": "eg",
    "keyword": "لوحة الرؤية",
-   "rank": 9,
-   "results": 66,
+   "rank": 10,
+   "results": 64,
    "popularity": null,
    "difficulty": null
   },
@@ -5407,7 +5407,7 @@
    "country": "eg",
    "keyword": "تجلي",
    "rank": null,
-   "results": 155,
+   "results": 163,
    "popularity": null,
    "difficulty": null
   },
@@ -5416,7 +5416,7 @@
    "country": "kw",
    "keyword": "قانون الجذب",
    "rank": 31,
-   "results": 46,
+   "results": 45,
    "popularity": null,
    "difficulty": null
   },
@@ -5425,7 +5425,7 @@
    "country": "kw",
    "keyword": "امتنان",
    "rank": null,
-   "results": 174,
+   "results": 178,
    "popularity": null,
    "difficulty": null
   },
@@ -5433,8 +5433,8 @@
    "locale": "ar-SA",
    "country": "kw",
    "keyword": "توكيدات",
-   "rank": 110,
-   "results": 160,
+   "rank": 113,
+   "results": 159,
    "popularity": null,
    "difficulty": null
   },
@@ -5442,8 +5442,8 @@
    "locale": "ar-SA",
    "country": "kw",
    "keyword": "369",
-   "rank": 159,
-   "results": 180,
+   "rank": 168,
+   "results": 179,
    "popularity": null,
    "difficulty": null
   },
@@ -5452,7 +5452,7 @@
    "country": "kw",
    "keyword": "لوحة الرؤية",
    "rank": 7,
-   "results": 66,
+   "results": 64,
    "popularity": null,
    "difficulty": null
   },
@@ -5479,7 +5479,7 @@
    "country": "qa",
    "keyword": "قانون الجذب",
    "rank": 15,
-   "results": 46,
+   "results": 45,
    "popularity": null,
    "difficulty": null
   },
@@ -5487,8 +5487,8 @@
    "locale": "ar-SA",
    "country": "qa",
    "keyword": "امتنان",
-   "rank": 91,
-   "results": 173,
+   "rank": 104,
+   "results": 180,
    "popularity": null,
    "difficulty": null
   },
@@ -5496,8 +5496,8 @@
    "locale": "ar-SA",
    "country": "qa",
    "keyword": "توكيدات",
-   "rank": 94,
-   "results": 169,
+   "rank": 97,
+   "results": 168,
    "popularity": null,
    "difficulty": null
   },
@@ -5505,8 +5505,8 @@
    "locale": "ar-SA",
    "country": "qa",
    "keyword": "369",
-   "rank": 66,
-   "results": 188,
+   "rank": 69,
+   "results": 189,
    "popularity": null,
    "difficulty": null
   },
@@ -5514,8 +5514,8 @@
    "locale": "ar-SA",
    "country": "qa",
    "keyword": "لوحة الرؤية",
-   "rank": 16,
-   "results": 66,
+   "rank": 17,
+   "results": 64,
    "popularity": null,
    "difficulty": null
   },
@@ -5533,7 +5533,7 @@
    "country": "qa",
    "keyword": "تجلي",
    "rank": null,
-   "results": 154,
+   "results": 156,
    "popularity": null,
    "difficulty": null
   },
@@ -5541,8 +5541,8 @@
    "locale": "de-DE",
    "country": "at",
    "keyword": "369 methode",
-   "rank": 6,
-   "results": 27,
+   "rank": 7,
+   "results": 29,
    "popularity": null,
    "difficulty": null
   },
@@ -5560,7 +5560,7 @@
    "country": "at",
    "keyword": "dankbarkeitstagebuch",
    "rank": 40,
-   "results": 67,
+   "results": 69,
    "popularity": null,
    "difficulty": null
   },
@@ -5568,8 +5568,8 @@
    "locale": "de-DE",
    "country": "at",
    "keyword": "manifestieren",
-   "rank": 68,
-   "results": 128,
+   "rank": 72,
+   "results": 131,
    "popularity": null,
    "difficulty": null
   },
@@ -5578,7 +5578,7 @@
    "country": "at",
    "keyword": "vision board",
    "rank": null,
-   "results": 181,
+   "results": 180,
    "popularity": null,
    "difficulty": null
   },
@@ -5595,8 +5595,8 @@
    "locale": "de-DE",
    "country": "at",
    "keyword": "manifest",
-   "rank": 68,
-   "results": 191,
+   "rank": 79,
+   "results": 192,
    "popularity": null,
    "difficulty": null
   },
@@ -5605,7 +5605,7 @@
    "country": "at",
    "keyword": "dankbarkeit",
    "rank": null,
-   "results": 182,
+   "results": 175,
    "popularity": null,
    "difficulty": null
   },
@@ -5614,7 +5614,7 @@
    "country": "ch",
    "keyword": "369 methode",
    "rank": 4,
-   "results": 28,
+   "results": 30,
    "popularity": null,
    "difficulty": null
   },
@@ -5631,8 +5631,8 @@
    "locale": "de-DE",
    "country": "ch",
    "keyword": "dankbarkeitstagebuch",
-   "rank": 20,
-   "results": 67,
+   "rank": 34,
+   "results": 69,
    "popularity": null,
    "difficulty": null
   },
@@ -5640,8 +5640,8 @@
    "locale": "de-DE",
    "country": "ch",
    "keyword": "manifestieren",
-   "rank": 45,
-   "results": 129,
+   "rank": 57,
+   "results": 132,
    "popularity": null,
    "difficulty": null
   },
@@ -5650,7 +5650,7 @@
    "country": "ch",
    "keyword": "vision board",
    "rank": null,
-   "results": 182,
+   "results": 183,
    "popularity": null,
    "difficulty": null
   },
@@ -5658,8 +5658,8 @@
    "locale": "de-DE",
    "country": "ch",
    "keyword": "affirmationen",
-   "rank": 120,
-   "results": 188,
+   "rank": null,
+   "results": 189,
    "popularity": null,
    "difficulty": null
   },
@@ -5667,8 +5667,8 @@
    "locale": "de-DE",
    "country": "ch",
    "keyword": "manifest",
-   "rank": 102,
-   "results": 193,
+   "rank": 50,
+   "results": 190,
    "popularity": null,
    "difficulty": null
   },
@@ -5676,8 +5676,8 @@
    "locale": "de-DE",
    "country": "ch",
    "keyword": "dankbarkeit",
-   "rank": 89,
-   "results": 184,
+   "rank": 157,
+   "results": 185,
    "popularity": null,
    "difficulty": null
   },
@@ -5686,7 +5686,7 @@
    "country": "ch",
    "keyword": "méthode 369",
    "rank": 4,
-   "results": 28,
+   "results": 30,
    "popularity": null,
    "difficulty": null
   },
@@ -5703,8 +5703,8 @@
    "locale": "fr-FR",
    "country": "be",
    "keyword": "méthode 369",
-   "rank": 7,
-   "results": 29,
+   "rank": 8,
+   "results": 31,
    "popularity": null,
    "difficulty": null
   },
@@ -5749,7 +5749,7 @@
    "country": "be",
    "keyword": "affirmation positive",
    "rank": null,
-   "results": 175,
+   "results": 173,
    "popularity": null,
    "difficulty": null
   },
@@ -5758,7 +5758,7 @@
    "country": "be",
    "keyword": "gratitude",
    "rank": null,
-   "results": 188,
+   "results": 190,
    "popularity": null,
    "difficulty": null
   },
@@ -5775,8 +5775,8 @@
    "locale": "nl-NL",
    "country": "be",
    "keyword": "manifesteren",
-   "rank": 23,
-   "results": 40,
+   "rank": 24,
+   "results": 41,
    "popularity": null,
    "difficulty": null
   },
@@ -5803,7 +5803,7 @@
    "country": "be",
    "keyword": "affirmaties",
    "rank": null,
-   "results": 190,
+   "results": 188,
    "popularity": null,
    "difficulty": null
   },
@@ -5829,7 +5829,7 @@
    "locale": "ru",
    "country": "ua",
    "keyword": "доска желаний",
-   "rank": 89,
+   "rank": 91,
    "results": 173,
    "popularity": null,
    "difficulty": null
@@ -5839,7 +5839,7 @@
    "country": "ua",
    "keyword": "аффирмации",
    "rank": null,
-   "results": 184,
+   "results": 185,
    "popularity": null,
    "difficulty": null
   },
@@ -5848,7 +5848,7 @@
    "country": "ua",
    "keyword": "дневник благодарности",
    "rank": null,
-   "results": 185,
+   "results": 183,
    "popularity": null,
    "difficulty": null
   },
@@ -5866,7 +5866,7 @@
    "country": "ua",
    "keyword": "закон притяжения",
    "rank": null,
-   "results": 39,
+   "results": 41,
    "popularity": null,
    "difficulty": null
   },
@@ -5891,69 +5891,6 @@
   {
    "locale": "ru",
    "country": "kz",
-   "keyword": "доска желаний",
-   "rank": null,
-   "results": 57,
-   "popularity": null,
-   "difficulty": null
-  },
-  {
-   "locale": "ru",
-   "country": "kz",
-   "keyword": "аффирмации",
-   "rank": null,
-   "results": 50,
-   "popularity": null,
-   "difficulty": null
-  },
-  {
-   "locale": "ru",
-   "country": "kz",
-   "keyword": "дневник благодарности",
-   "rank": null,
-   "results": 184,
-   "popularity": null,
-   "difficulty": null
-  },
-  {
-   "locale": "ru",
-   "country": "kz",
-   "keyword": "369",
-   "rank": 34,
-   "results": 195,
-   "popularity": null,
-   "difficulty": null
-  },
-  {
-   "locale": "ru",
-   "country": "kz",
-   "keyword": "закон притяжения",
-   "rank": null,
-   "results": 0,
-   "popularity": null,
-   "difficulty": null
-  },
-  {
-   "locale": "ru",
-   "country": "by",
-   "keyword": "метод 369",
-   "rank": null,
-   "results": 0,
-   "popularity": null,
-   "difficulty": null
-  },
-  {
-   "locale": "ru",
-   "country": "by",
-   "keyword": "манифест",
-   "rank": null,
-   "results": 4,
-   "popularity": null,
-   "difficulty": null
-  },
-  {
-   "locale": "ru",
-   "country": "by",
    "keyword": "доска желаний",
    "rank": null,
    "results": 58,
@@ -5962,10 +5899,73 @@
   },
   {
    "locale": "ru",
+   "country": "kz",
+   "keyword": "аффирмации",
+   "rank": null,
+   "results": 51,
+   "popularity": null,
+   "difficulty": null
+  },
+  {
+   "locale": "ru",
+   "country": "kz",
+   "keyword": "дневник благодарности",
+   "rank": null,
+   "results": 183,
+   "popularity": null,
+   "difficulty": null
+  },
+  {
+   "locale": "ru",
+   "country": "kz",
+   "keyword": "369",
+   "rank": 38,
+   "results": 196,
+   "popularity": null,
+   "difficulty": null
+  },
+  {
+   "locale": "ru",
+   "country": "kz",
+   "keyword": "закон притяжения",
+   "rank": null,
+   "results": 0,
+   "popularity": null,
+   "difficulty": null
+  },
+  {
+   "locale": "ru",
+   "country": "by",
+   "keyword": "метод 369",
+   "rank": null,
+   "results": 0,
+   "popularity": null,
+   "difficulty": null
+  },
+  {
+   "locale": "ru",
+   "country": "by",
+   "keyword": "манифест",
+   "rank": null,
+   "results": 4,
+   "popularity": null,
+   "difficulty": null
+  },
+  {
+   "locale": "ru",
+   "country": "by",
+   "keyword": "доска желаний",
+   "rank": null,
+   "results": 59,
+   "popularity": null,
+   "difficulty": null
+  },
+  {
+   "locale": "ru",
    "country": "by",
    "keyword": "аффирмации",
    "rank": null,
-   "results": 50,
+   "results": 51,
    "popularity": null,
    "difficulty": null
   },
@@ -5974,7 +5974,7 @@
    "country": "by",
    "keyword": "дневник благодарности",
    "rank": null,
-   "results": 12,
+   "results": 14,
    "popularity": null,
    "difficulty": null
   },
@@ -5983,7 +5983,7 @@
    "country": "by",
    "keyword": "369",
    "rank": null,
-   "results": 195,
+   "results": 197,
    "popularity": null,
    "difficulty": null
   },
@@ -6000,7 +6000,7 @@
    "locale": "zh-Hant",
    "country": "hk",
    "keyword": "顯化",
-   "rank": 100,
+   "rank": 98,
    "results": 186,
    "popularity": null,
    "difficulty": null
@@ -6009,8 +6009,8 @@
    "locale": "zh-Hant",
    "country": "hk",
    "keyword": "願景板",
-   "rank": 17,
-   "results": 60,
+   "rank": 15,
+   "results": 61,
    "popularity": null,
    "difficulty": null
   },
@@ -6019,7 +6019,7 @@
    "country": "hk",
    "keyword": "369",
    "rank": null,
-   "results": 184,
+   "results": 182,
    "popularity": null,
    "difficulty": null
   },
@@ -6028,7 +6028,7 @@
    "country": "hk",
    "keyword": "天使數字",
    "rank": null,
-   "results": 15,
+   "results": 14,
    "popularity": null,
    "difficulty": null
   },
@@ -6045,8 +6045,8 @@
    "locale": "zh-Hant",
    "country": "tw",
    "keyword": "願景板",
-   "rank": 24,
-   "results": 178,
+   "rank": 21,
+   "results": 173,
    "popularity": null,
    "difficulty": null
   },
@@ -6055,7 +6055,7 @@
    "country": "tw",
    "keyword": "369",
    "rank": null,
-   "results": 182,
+   "results": 184,
    "popularity": null,
    "difficulty": null
   },
@@ -6064,7 +6064,7 @@
    "country": "tw",
    "keyword": "天使數字",
    "rank": null,
-   "results": 19,
+   "results": 18,
    "popularity": null,
    "difficulty": null
   },
@@ -6073,7 +6073,7 @@
    "country": "ca",
    "keyword": "méthode 369",
    "rank": 11,
-   "results": 71,
+   "results": 70,
    "popularity": null,
    "difficulty": null
   },
@@ -6082,7 +6082,7 @@
    "country": "ca",
    "keyword": "nombres angeliques",
    "rank": null,
-   "results": 115,
+   "results": 114,
    "popularity": null,
    "difficulty": null
   },
@@ -6091,7 +6091,7 @@
    "country": "ca",
    "keyword": "tableau de vision",
    "rank": null,
-   "results": 181,
+   "results": 182,
    "popularity": null,
    "difficulty": null
   },
@@ -6100,7 +6100,7 @@
    "country": "us",
    "keyword": "gratitude app",
    "rank": null,
-   "results": 187,
+   "results": 185,
    "popularity": null,
    "difficulty": null
   },
@@ -6109,7 +6109,7 @@
    "country": "us",
    "keyword": "spiritual awakening",
    "rank": null,
-   "results": 185,
+   "results": 187,
    "popularity": null,
    "difficulty": null
   },
@@ -6118,7 +6118,7 @@
    "country": "us",
    "keyword": "manifest affirmations",
    "rank": null,
-   "results": 189,
+   "results": 191,
    "popularity": null,
    "difficulty": null
   },
@@ -6126,8 +6126,8 @@
    "locale": "en-US",
    "country": "us",
    "keyword": "369 journal",
-   "rank": 132,
-   "results": 180,
+   "rank": 130,
+   "results": 183,
    "popularity": null,
    "difficulty": null
   },
@@ -6136,7 +6136,7 @@
    "country": "us",
    "keyword": "angel number meanings",
    "rank": null,
-   "results": 171,
+   "results": 174,
    "popularity": null,
    "difficulty": null
   },
@@ -6145,7 +6145,7 @@
    "country": "us",
    "keyword": "journal prompts",
    "rank": null,
-   "results": 180,
+   "results": 181,
    "popularity": null,
    "difficulty": null
   },
@@ -6154,7 +6154,7 @@
    "country": "il",
    "keyword": "נומרולוגיה",
    "rank": null,
-   "results": 26,
+   "results": 27,
    "popularity": null,
    "difficulty": null
   },
@@ -6163,7 +6163,7 @@
    "country": "it",
    "keyword": "numeri angelici",
    "rank": null,
-   "results": 14,
+   "results": 13,
    "popularity": null,
    "difficulty": null
   },
@@ -6172,7 +6172,7 @@
    "country": "de",
    "keyword": "visionboard",
    "rank": null,
-   "results": 191,
+   "results": 192,
    "popularity": null,
    "difficulty": null
   },
@@ -6198,8 +6198,8 @@
    "locale": "tr",
    "country": "tr",
    "keyword": "369 yöntemi",
-   "rank": 2,
-   "results": 3,
+   "rank": 3,
+   "results": 4,
    "popularity": null,
    "difficulty": null
   },
@@ -6208,7 +6208,7 @@
    "country": "tr",
    "keyword": "melek sayıları",
    "rank": null,
-   "results": 11,
+   "results": 10,
    "popularity": null,
    "difficulty": null
   },
@@ -6217,7 +6217,7 @@
    "country": "tr",
    "keyword": "şükran günlüğü",
    "rank": null,
-   "results": 63,
+   "results": 61,
    "popularity": null,
    "difficulty": null
   },
@@ -6235,7 +6235,7 @@
    "country": "jp",
    "keyword": "369の法則",
    "rank": null,
-   "results": 13,
+   "results": 14,
    "popularity": null,
    "difficulty": null
   },
@@ -6244,7 +6244,7 @@
    "country": "cn",
    "keyword": "369法则",
    "rank": 2,
-   "results": 14,
+   "results": 15,
    "popularity": null,
    "difficulty": null
   },
@@ -6253,7 +6253,7 @@
    "country": "cn",
    "keyword": "显化法则",
    "rank": 9,
-   "results": 93,
+   "results": 97,
    "popularity": null,
    "difficulty": null
   },
@@ -6279,8 +6279,8 @@
    "locale": "nl-NL",
    "country": "nl",
    "keyword": "369 methode",
-   "rank": 9,
-   "results": 29,
+   "rank": 11,
+   "results": 31,
    "popularity": null,
    "difficulty": null
   },
@@ -6352,7 +6352,7 @@
    "country": "br",
    "keyword": "numeros dos anjos",
    "rank": null,
-   "results": 8,
+   "results": 7,
    "popularity": null,
    "difficulty": null
   },
@@ -6379,7 +6379,7 @@
    "country": "ru",
    "keyword": "закон притяжения",
    "rank": null,
-   "results": 36,
+   "results": 38,
    "popularity": null,
    "difficulty": null
   },
@@ -6387,8 +6387,8 @@
    "locale": "es-ES",
    "country": "es",
    "keyword": "metodo 369",
-   "rank": 6,
-   "results": 8,
+   "rank": 4,
+   "results": 7,
    "popularity": null,
    "difficulty": null
   },
@@ -6396,8 +6396,8 @@
    "locale": "es-MX",
    "country": "mx",
    "keyword": "metodo 369",
-   "rank": 6,
-   "results": 9,
+   "rank": 5,
+   "results": 8,
    "popularity": null,
    "difficulty": null
   },
@@ -6406,7 +6406,7 @@
    "country": "br",
    "keyword": "diario de gratidao",
    "rank": null,
-   "results": 197,
+   "results": 194,
    "popularity": null,
    "difficulty": null
   },
@@ -6424,7 +6424,7 @@
    "country": "pt",
    "keyword": "manifestar",
    "rank": null,
-   "results": 191,
+   "results": 190,
    "popularity": null,
    "difficulty": null
   },
@@ -6433,7 +6433,7 @@
    "country": "hk",
    "keyword": "感恩日記",
    "rank": null,
-   "results": 186,
+   "results": 188,
    "popularity": null,
    "difficulty": null
   },
@@ -6441,8 +6441,8 @@
    "locale": "zh-Hant",
    "country": "tw",
    "keyword": "感恩日記",
-   "rank": 146,
-   "results": 189,
+   "rank": null,
+   "results": 194,
    "popularity": null,
    "difficulty": null
   },
