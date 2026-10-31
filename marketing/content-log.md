@@ -4,6 +4,28 @@ Recurring SEO/GEO content agent run log. One entry per publish cycle.
 
 ---
 
+## 2026-10-31 — Localize: how-to-manifest-love (it + nl)
+
+**Run type:** it/nl localization backfill (daily). Backlog scan found exactly one English guide without it/nl versions: `how-to-manifest-love.html` (en published 2026-10-29, after the backfill was last declared complete on 2026-10-24). The run brief calls for two guides per run; only one remained, so this run localizes it into both languages and **the it/nl backlog is now empty — every one of the 42 English guides has an Italian and a Dutch version.**
+
+**URLs published:**
+- https://www.ai-manifest.com/it/guides/how-to-manifest-love.html (it — "Come Manifestare l'Amore: 5 Passi Concreti" 57ch title, 150ch meta, feminine register matching the it money sibling, Luca in the fixation table, «» quotes)
+- https://www.ai-manifest.com/nl/guides/how-to-manifest-love.html (nl — "Liefde Manifesteren: 5 Nuchtere Stappen" 54ch title, 146ch meta, nuchter je-form, Daan in the fixation table, "appt me terug")
+
+**Localization notes:** search phrasing verified via WebSearch — it audiences type "manifestare una persona specifica" / "come manifestare l'amore", nl audiences "liefde manifesteren" / "specifiek persoon manifesteren" (law-of-assumption imports); the FAQ H3s and FAQPage names use those phrasings. Structure, studies (Wood 2009, Oettingen mental contrasting, Eastwick & Finkel 2008 speed-dating) and all 5 body internal links kept from the en source; examples localized (mezz'ora/halfuur, corso o associazione / cursus of vereniging). nl keeps "soulmate" (common usage) where it has "anima gemella".
+
+**Checks:** 0 blocklist/calque hits per language, 0 body em-dashes, 0 negative-parallelism constructions, FAQ body text identical to FAQPage JSON-LD on both pages (parse-verified), all 3 JSON-LD blocks parse per page, zero ct tokens inside JSON-LD, canonicals self-referencing, cta-inline before first H2 + end cta-box, position tokens (web-nav/web-intro/web-ctabox/web-footer) all on the local storefront (/it/, /nl/), zero /us/ links, all relative links resolve on disk, Vercel insights present.
+
+**Linking:** it/nl homepages got the 💗 guide card (after the money card, matching en order) + footer li; it/nl how-to-manifest-money got a related-list backlink (the en love page already links money, so the pair is now lateral in all three languages); new pages' footers carry the love self-entry.
+
+**Sitemap:** en love entry upgraded from bare to a bidirectional en/it/nl/x-default hreflang cluster (it was published without one on 10-29); two new URLs added with the same cluster; lastmod 2026-10-31 on all 7 touched entries (3 love cluster + it/nl homepages + it/nl money guides). 277 entries, XML parses, every loc resolves to a file, privacy/terms still excluded. Note for a future en/pt/es/de/fr run: the love guide has no pt/es/de/fr versions yet, so its hreflang cluster is en+it+nl only — extend it when those are localized.
+
+**Deploy:** push to main → Vercel Git integration. IndexNow submission of the new + edited URLs recorded below.
+
+**Failed/skipped:** nothing failed. Author bio page still pending (org byline kept, consistent site-wide). This routine's backlog is empty: future runs should reply one line and stop, unless a new English guide appears without it/nl versions — the routine's PICK step will catch that, as it caught this page.
+
+---
+
 ## 2026-10-31 — Angel Number 3333 Meaning (en + pt/es/de/fr/it/nl)
 
 **Topic:** angel number 3333 meaning — fifth post-Pillar-B extension, the biggest 4-digit quad still uncovered after 1111/2222 (named in the 10-25 round's follow-on list with 909/1221). WebSearch validated the SERP: uniform "amplified creativity / growth / abundance" filler, partly visibly AI-generated ("Unlocking The Mystical Meaning... A Divine Message Of Growth And Abundance"), zero sources. Picked over the pt/es/de/fr backfill per the standing one-new-article-per-run precedent. Shipped 7-language natively per the localization-first mandate.
