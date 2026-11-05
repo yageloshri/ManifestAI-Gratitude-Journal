@@ -4,6 +4,28 @@ Recurring SEO/GEO content agent run log. One entry per publish cycle.
 
 ---
 
+## 2026-11-05 — Localize: angel-number-999-meaning (it + nl)
+
+**Run type:** daily it/nl localization backfill. Pick scan found exactly ONE English guide missing an it or nl version: `angel-number-999-meaning.html` (published en-only 2026-11-05 by the autopilot, which shipped it without the usual 7-language set). Localized into both languages this run; with it shipped, **every one of the 45 English guides again has an Italian and a Dutch version — the it/nl backlog is empty** and this routine goes quiet unless new en-only guides appear.
+
+**URLs published:**
+- https://www.ai-manifest.com/it/guides/angel-number-999-meaning.html (it — "Numero angelico 999: significato, fine e chiusura", title 48ch, meta 158ch, tu-form feminine-leaning per house voice, «» quotes, it decimal/thousand formats: 17,88%, 8.077.820, 3,28 contro 3,25)
+- https://www.ai-manifest.com/nl/guides/angel-number-999-meaning.html (nl — "Engelengetal 999: betekenis, afronding en loslaten", title 50ch, meta 151ch, nuchter je-form, nl number formats, "afsluitlijst" as the practical unit)
+
+**Localization notes:** search phrasing verified via WebSearch — it audiences use "numero angelico 999" with "chiusura di un ciclo / lasciar andare", nl audiences "engelengetal 999" with "afsluiting / loslaten / einde van een cyclus"; FAQ H3s and FAQPage names use those phrasings (fiamme gemelle / tweelingzielen kept per sibling convention). Structure, studies and all body internal links kept from the en source: Alter & Hershfield PNAS 2014 9-enders (74/500, 48% excess, 17.88% of 8,077,820, 42,063-adult survey 3.28 vs 3.25) with the Larsen 2015 + Kühne/Schneider/Richter counter-evidence paragraph intact, Masicampo & Baumeister 2011 (JPSP 101: 667-683), the no-clock-shows-9:99 supply argument, the digits-of-multiples-of-9 arithmetic, and the en page's closing stance ("trust something better is coming" skips the work). 6-row life-area table and 4-step closure checklist localized with locally natural actions, not word-for-word.
+
+**Checks (mechanical harness, both pages):** 0 blocklist/calque hits per language, 0 body em-dashes, 0 negative-parallelism constructions, no Moreover-class paragraph openers (Inoltre/Bovendien etc.), sentence stdev it 11.3 / nl 10.6 (min 8) with 13/14 sentences ≤6 words and 12/8 ≥30, FAQ body text identical to FAQPage JSON-LD, all 3 JSON-LD blocks parse per page, zero ct tokens inside JSON-LD, canonicals self-referencing, cta-inline before first H2 + end cta-box, position tokens (web-nav/web-intro/web-ctabox/web-footer) all on the local storefront (/it/, /nl/), zero /us/ links, all internal links resolve on disk, Vercel insights present.
+
+**Linking:** it/nl homepages got the 🌕 guide card (after the 888 card, matching en order) + footer li; it/nl 888 siblings got the 999 footer li (matching the en autopilot's footer-only linking for 999); new pages' footers carry the full current guide list incl. the 999 self-entry.
+
+**Sitemap:** en 999 entry upgraded from bare (autopilot published it without a cluster) to a bidirectional en/it/nl/x-default hreflang cluster; two new URLs added with the same cluster; lastmod 2026-11-05 on all touched entries (3× 999 cluster + it/nl homepages + it/nl 888 guides). 294 entries, XML parses, every loc and every alternate resolves to a file, privacy/terms still excluded. Note for a future en/pt/es/de/fr run: 999 has no pt/es/de/fr versions yet, so its cluster is en+it+nl only — extend it when those are localized (same situation as how-to-manifest-love, why-manifestation-is-not-working, 55x5, lucky-girl-syndrome, how-to-manifest-on-paper, how-to-manifest-money: the pt/es/de/fr backfill flagged 2026-10-31 still stands, now 28 pages).
+
+**Deploy:** push to main → Vercel Git integration. IndexNow submission of the 2 new + 5 edited URLs recorded in the run output.
+
+**Failed/skipped:** nothing failed. llms.txt and geo-log.md untouched (they track en guides; the autopilot already logged 999). Author bio page still pending (org byline kept, consistent site-wide). This routine's backlog is empty again: future runs should reply one line and stop unless a new en-only guide appears.
+
+---
+
 ## 2026-11-04 — Angel Number 5555 Meaning (en + pt/es/de/fr/it/nl)
 
 **Topic:** angel number 5555 meaning — seventh post-Pillar-B extension, extending the quad run after 1111/2222/3333/4444 (named in the 11-01 round's follow-on list with 909/1221). WebSearch validated the SERP: uniform "massive change / step out of your comfort zone" filler, duplicated verbatim across tag-page spam domains ("Unlock Your Destiny: A Guide to the 5555 Angel Number Meaning" on 4+ hosts), zero sources. Picked over the pt/es/de/fr backfill per the standing one-new-article-per-run precedent. Shipped 7-language natively per the localization-first mandate.
