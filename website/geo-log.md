@@ -397,3 +397,17 @@ Watch next round: (1) whether the angel cluster keeps earning — if yes, 888 is
 **Maintenance flag for next round:** the 6666 pages (all 7 langs) claim the sixes are "the only repeating family with no clock moment at all" — the sevens, eights and nines also lack one (7:77/8:88/9:99 impossible, and the 777 and 999 pages say so). One-phrase fix ("one of only four repeating families") in body + FAQ + FAQ JSON-LD × 7 languages; left untouched this run to keep scope on the new cluster.
 
 **Watch next round:** probe AI engines with "is 7777 lucky" and "what does 7777 mean" — the hot-hand reversal (+13pp) and the 5th-most-common-PIN stat are the most citable units; "7777 PIN" doubles as a non-spiritual entry point. Remaining gaps all backfill: why-manifestation + 55x5 + lucky-girl + on-paper + money + love + 999 (pt/es/de/fr) = 28 pages. Angel-cluster extensions if GSC keeps paying: 909, 1221, 8888 (completes the quad run 1111-9999 with 9999 after).
+
+---
+
+## 2026-11-12 — Content autopilot round (shipped: Law of Assumption)
+
+**Target query:** "law of assumption" / "Neville Goddard law of assumption" / "SATS manifestation" / "law of assumption vs law of attraction". Validated with one WebSearch: SERP is uniform blog explainers built on secondary interpretations, none citing research. Existing pages mention the law of assumption in passing (3 files) but none owns the topic.
+
+**Shipped:** `guides/law-of-assumption-neville-goddard.html` (English only). Answer-first lead + quick-answer box, law-of-attraction vs law-of-assumption table, SATS/revision/mental-diet definitions, 5-step practice, and an honest evidence section (Kappes & Oettingen 2011, JESP: positive fantasies reduced effort; mental contrasting + if-then plans help). JSON-LD Article + BreadcrumbList + FAQPage (3 Qs, text matches visible). Citable unit: the page says plainly the practice is unproven for external outcomes and that popular explainers are interpretations, not Neville's own words.
+
+**Wiring:** index card + footer links on index and all existing English guides, sitemap (lastmod 2026-11-12), llms.txt. Localized versions not made (English-first precedent).
+
+**Deploy/index:** `vercel deploy --prod --yes` worked (aliased to www). 200 for normal UA and GPTBot. IndexNow 200. **GSC sitemap PUT failed 403 insufficient scopes** (ADC lacks webmasters scope; needs interactive `gcloud auth application-default login` with webmasters scope). Skipped.
+
+**Process:** local checkout was 147 commits behind origin/main with 259 uncommitted files (incl. privacy/terms edits); worked in a clean worktree of origin/main (/tmp/autopilot-wt) and left the dirty tree untouched, so only this round's changes were committed.
