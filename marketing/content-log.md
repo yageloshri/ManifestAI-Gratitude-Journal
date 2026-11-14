@@ -4,6 +4,28 @@ Recurring SEO/GEO content agent run log. One entry per publish cycle.
 
 ---
 
+## 2026-11-14 — Localization backfill: law-of-assumption-neville-goddard (it + nl) — BACKLOG COMPLETE
+
+**Run type:** daily it/nl localization backfill agent. Backlog scan found exactly one English guide missing from both `it/` and `nl/`: `law-of-assumption-neville-goddard.html` (published en-only 2026-11-12 by the autopilot run, commit caa1701). The mandate is two guides per run, but one was all that remained — **after this run, all 48 English guides have both an Italian and a Dutch version, and the it/nl backfill backlog is empty.** This recurring task has nothing left to do; future runs will no-op per the stop rule.
+
+**URLs published:**
+- https://www.ai-manifest.com/it/guides/law-of-assumption-neville-goddard.html ("legge dell'assunzione" — term verified in use via WebSearch against Italian book listings (Macrolibrarsi's Goddard title uses it); feminine address matching the it house voice; "stato simile al sonno" gloss for SATS, "dieta mentale", "revisione"; /it/ storefront on all 4 tokenized links)
+- https://www.ai-manifest.com/nl/guides/law-of-assumption-neville-goddard.html (Dutch searchers overwhelmingly keep the English term — WebSearch for "wet van assumptie" surfaced almost no Dutch-language results — so the page leads with "law of assumption" and mentions "wet van assumptie" once as the Dutch rendering, same pattern as the nl "Lucky girl syndrome" page; je-form; /nl/ storefront on all 4 tokenized links)
+
+**Localization notes:** structure, the Kappes & Oettingen 2011 fantasy-vs-effort finding, Oettingen's mental-contrasting follow-up, the Goddard bibliography (Feeling Is the Secret 1944, The Power of Awareness 1952) and all six body internal links kept from the English original; examples re-voiced per language (collega che chiede il file di progetto / je pas die piept bij de ingang), not word-for-word. All six internal body links + 4 related links resolve inside each language folder (scripted check).
+
+**Checklists:** §1.7 — 0 blocklist-analog hits per language (scanned it: inoltre/infine/in conclusione/cruciale/fondamentale/rivoluzion-; nl: bovendien/daarnaast/cruciaal/essentieel/naadloos), 0 body em-dashes outside boilerplate (alt text + footer note, same as every sibling), 0 negative-parallelism constructions, forward-action content preserved. §2.7 — titles 52ch (it) / 51ch (nl) keyword-front-loaded; metas 149/154ch; cta-inline before first H2 with language-correct copy; end cta-box; ct= tokens by position (web-nav/web-intro/web-ctabox/web-footer) on local storefronts; JSON-LD (Article + BreadcrumbList + FAQPage, inLanguage set) parses on both pages and carries zero ct= tokens; self-referencing canonicals; og:locale it_IT/nl_NL. New guide added to each page's own footer guide list (it/nl site-wide footer backfill not attempted — matches existing sibling convention). robots.txt re-verified: GPTBot, ClaudeBot, PerplexityBot, Google-Extended all present/allowed.
+
+**Sitemap:** en entry for the guide had no hreflang block (it was en-only); replaced with a bidirectional en+it+nl+x-default cluster and added the two new URLs with the same 4-way block (pt/es/de/fr versions of this guide do not exist yet, so they are correctly absent — whichever run backfills those must extend this cluster). lastmod 2026-11-14 on all three entries. XML validated post-edit.
+
+**Deploy:** push to main → Vercel Git integration. IndexNow: 2 new URLs + sitemap'd en sibling submitted with key 0e14305ee36247bab36482037254b3ff — result in commit/run notes.
+
+**Failed/skipped:** nothing skipped. Note for the general content agent: this guide still owes pt/es/de/fr versions (it is outside the it/nl backfill scope), on top of the standing 28-page pt/es/de/fr backfill debt.
+
+**Backlog remaining: 0.** This scheduled task can be disabled.
+
+---
+
 ## 2026-11-10 — Angel Number 7777 Meaning (en + pt/es/de/fr/it/nl)
 
 **Topic:** angel number 7777 meaning — ninth post-Pillar-B extension, continuing the quad run after 1111/2222/3333/4444/5555/6666 (named in the 11-07 round's follow-on list with 909/1221). WebSearch validated the SERP: uniform "spiritual growth / right path / comfort zone" filler, much of it on visibly spammy or hijacked hosts, zero sources. Picked over the pt/es/de/fr backfill per the standing one-new-article-per-run precedent. Shipped 7-language natively per the localization-first mandate.
