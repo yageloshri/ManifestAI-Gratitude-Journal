@@ -411,3 +411,17 @@ Watch next round: (1) whether the angel cluster keeps earning — if yes, 888 is
 **Deploy/index:** `vercel deploy --prod --yes` worked (aliased to www). 200 for normal UA and GPTBot. IndexNow 200. **GSC sitemap PUT failed 403 insufficient scopes** (ADC lacks webmasters scope; needs interactive `gcloud auth application-default login` with webmasters scope). Skipped.
 
 **Process:** local checkout was 147 commits behind origin/main with 259 uncommitted files (incl. privacy/terms edits); worked in a clean worktree of origin/main (/tmp/autopilot-wt) and left the dirty tree untouched, so only this round's changes were committed.
+
+---
+
+## 2026-11-19 — Content autopilot round (shipped: New Moon Manifestation Ritual)
+
+**Target query:** "new moon manifestation ritual" / "new moon intentions" / "how to set intentions on the new moon". One WebSearch validated a SERP of ritual how-tos (candles, journaling, cleansing baths) with no evidence framing; no existing guide covered lunar-cycle manifestation.
+
+**Shipped:** `guides/new-moon-manifestation-ritual.html` (English only). Answer-first lead + quick-answer box, 6-step ritual, lunar-phase table with a practical column, honest evidence section (Rotton & Kelly 1985 lunar-effect meta-analysis; Cajochen et al. 2013 sleep study, small sample), common mistakes, app section. JSON-LD Article + BreadcrumbList + FAQPage (3 Qs, match visible text).
+
+**Wiring:** index card + footer links on index and all 49 existing English guides, sitemap (lastmod 2026-11-19, 309 URLs), llms.txt line. Localized versions not made (English-first precedent).
+
+**Deploy/index:** `vercel deploy --prod --yes` worked (aliased to www). 200 for normal UA and GPTBot. IndexNow 200. **GSC sitemap PUT failed 403 ACCESS_TOKEN_SCOPE_INSUFFICIENT** (same as 2026-11-12; needs `gcloud auth application-default login` with webmasters scope). Skipped.
+
+**Process:** local checkout 152 commits behind origin/main with dirty tree; worked in clean worktree of origin/main (/Users/yageloshri/autopilot-wt) and left the dirty tree untouched. Citations (Rotton & Kelly; Cajochen) are from memory, not re-fetched this run — worth a verification pass.
