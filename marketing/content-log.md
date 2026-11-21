@@ -4,6 +4,30 @@ Recurring SEO/GEO content agent run log. One entry per publish cycle.
 
 ---
 
+## 2026-11-21 — Localization backfill: angel-number-8888-meaning + new-moon-manifestation-ritual (it + nl) — BACKLOG COMPLETE AGAIN
+
+**Run type:** daily it/nl localization backfill agent. The 2026-11-14 run closed the backlog at 48 guides, but two English guides shipped after it (`angel-number-8888-meaning.html` on 11-16, `new-moon-manifestation-ritual.html` on 11-19 via autopilot), reopening a backlog of exactly two. This run localizes both into both languages — the full two-guides-per-run quota — and closes the backlog again at 50/50.
+
+**URLs published:**
+- https://www.ai-manifest.com/it/guides/angel-number-8888-meaning.html ("numero angelico 8888" per the established it cluster term; Kahneman/Deaton 2010, Killingsworth 2021 and the 2023 PNAS adversarial collaboration kept with Italian number formatting (450.000, 1.725.994, 0,303%, 2,5 per cento); Killingsworth and Virtue quotes rendered in Italian with «» quotes; "numero dell'abbastanza" as the enough-number coinage; /it/ storefront on all 4 tokenized links)
+- https://www.ai-manifest.com/nl/guides/angel-number-8888-meaning.html ("engelengetal 8888"; "genoeg-getal" coinage; je-form throughout; Dutch decimal commas; the one deliberate currency touch — "elke volgende euro koopt stilletjes minder" / "niet in euro's genoteerd" — localizes the reader-facing aside while the study figures stay in dollars; /nl/ storefront on all 4 tokenized links)
+- https://www.ai-manifest.com/it/guides/new-moon-manifestation-ritual.html ("rituale di luna nuova"; luna crescente/piena/calante phase terms; Rotton & Kelly 1985 and Cajochen 2013 citations kept; example-box "Risposta rapida"; /it/ storefront)
+- https://www.ai-manifest.com/nl/guides/new-moon-manifestation-ritual.html ("nieuwe maan ritueel", the term nl searchers use untranslated-adjacent; wassende/volle/afnemende maan; "Kort antwoord" box; /nl/ storefront)
+
+**Localization notes:** all statistics, named studies, book references and internal links carried over 1:1 from the English originals; phrasing re-voiced per language, not word-for-word (scripted link check: every body/related/footer link on all 4 pages resolves inside its language folder; the two root-absolute paths `/assets/app-icon.png` and `/css/styles.css` match the existing it/nl sibling convention). First-person enough-number anecdote and the disagreeable stance kept in both 8888 versions.
+
+**Checklists:** §1.7 — 0 blocklist-analog hits per language (it: inoltre/in conclusione/cruciale/fondamentale/sfruttare/non è solo; nl: bovendien/daarnaast/cruciaal/essentieel/naadloos/duik in — all clean), 1 em-dash per page and only in image alt-text boilerplate, 0 negative-parallelism constructions, forward-action endings preserved. §2.7 — titles 46–51ch keyword-front-loaded; metas 138–152ch; cta-inline before first H2 in-language; end cta-box; ct= tokens by position on local storefronts; JSON-LD (Article + BreadcrumbList + FAQPage, inLanguage it/nl, og:locale it_IT/nl_NL) translated and carries zero ct= tokens; self-referencing canonicals.
+
+**Sitemap:** found the en `angel-number-8888-meaning.html` entry entirely missing (oversight from the 11-16 publish run) — added it. Replaced the hreflang-less en new-moon entry and added the 4 new URLs, all as bidirectional en+it+nl+x-default clusters (pt/es/de/fr versions of these two guides do not exist, so those hreflangs are correctly absent; whichever run backfills them must extend these clusters). lastmod 2026-11-21 on all 6 touched entries. XML validated post-edit: 317 entries, 0 duplicates, every URL resolves to a file on disk; privacy/terms still excluded.
+
+**Deploy:** push to main → Vercel Git integration. IndexNow: the 4 new URLs + the 2 updated en siblings submitted with key 0e14305ee36247bab36482037254b3ff — result noted in run.
+
+**Failed/skipped:** nothing skipped. Standing notes unchanged: these two guides (plus law-of-assumption, lucky-girl, 55x5, 999, 5555, 6666, 7777, money, love, on-paper, why-not-working) still owe pt/es/de/fr versions — outside this task's scope.
+
+**Backlog remaining: 0 (50/50 guides have both it and nl).** This task stays armed only to catch future English publishes; it will no-op until one lands.
+
+---
+
 ## 2026-11-14 — Localization backfill: law-of-assumption-neville-goddard (it + nl) — BACKLOG COMPLETE
 
 **Run type:** daily it/nl localization backfill agent. Backlog scan found exactly one English guide missing from both `it/` and `nl/`: `law-of-assumption-neville-goddard.html` (published en-only 2026-11-12 by the autopilot run, commit caa1701). The mandate is two guides per run, but one was all that remained — **after this run, all 48 English guides have both an Italian and a Dutch version, and the it/nl backfill backlog is empty.** This recurring task has nothing left to do; future runs will no-op per the stop rule.
