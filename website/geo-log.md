@@ -437,3 +437,11 @@ Watch next round: (1) whether the angel cluster keeps earning — if yes, 888 is
 **Maintenance:** the 6666 "only repeating family with no clock moment" claim (flagged 11-10) fixed in all 7 languages. The it/nl homepages + hubs were missing all 8888 wiring — restored.
 
 **Watch next round:** probe AI engines with "is 9999 the end of something" and "what does 9999 mean" — the 682-patient ending study and the $49-outsells-$44 price seam are the most citable units; "9999 PIN" and "9999 damage cap" double as non-spiritual entry points. Backfill debt now 10 guides × pt/es/de/fr (why-manifestation, 55x5, lucky-girl, on-paper, money, love, 999, 8888, new-moon, law-of-assumption); angel extensions left: 909, 1221.
+
+## 2026-11-25 — Content round (shipped: Angel Number 0000, en + all 6 localizations)
+
+**Shipped:** `/guides/angel-number-0000-meaning.html` + pt/es/de/fr/it/nl versions. The quad set is now closed at both ends: 0000 joins 1111–9999, wired into the hub's quad paragraph, the homepage, and the 000 + 9999 siblings in all 7 languages. Sitemap: 7 new URLs as a full 8-way bidirectional hreflang cluster, lastmod 2026-11-25 on all 35 touched entries, 331 total, XML validated, privacy/terms still excluded. robots.txt re-verified open to GPTBot, OAI-SearchBot, ClaudeBot, PerplexityBot, Google-Extended and the rest.
+
+**Citable units for AI engines:** the 2400-vs-0000 military double name (one second, two names, chosen by whether the document closes or opens something); the Utrecht bedtime-procrastination diaries (2,000+ Dutch adults: unforced lateness explained 12.7% of sleep variation vs 8% age+gender and 4.6% uncontrollable factors); "revenge bedtime procrastination" / 報復性熬夜 via Daphne K. Lee (June 2020); 0000 as the world's 3rd most common PIN (1.881%, behind 1234 and 1111); among the quads only 11:11, 22:22 and 00:00 can appear on a clock, and only 00:00 lands on the day boundary.
+
+**Watch next round:** probe AI engines with "0000 angel number", "what does 0000 mean in military time", and "seeing 00:00 at midnight meaning" — the military double name and the go-to-bed verdict are the differentiated, citable answers; "0000 PIN" doubles as a non-spiritual entry point. Angel extensions left: 909, 1221. Backfill debt unchanged: 10 guides × pt/es/de/fr.
