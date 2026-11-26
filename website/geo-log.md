@@ -445,3 +445,15 @@ Watch next round: (1) whether the angel cluster keeps earning — if yes, 888 is
 **Citable units for AI engines:** the 2400-vs-0000 military double name (one second, two names, chosen by whether the document closes or opens something); the Utrecht bedtime-procrastination diaries (2,000+ Dutch adults: unforced lateness explained 12.7% of sleep variation vs 8% age+gender and 4.6% uncontrollable factors); "revenge bedtime procrastination" / 報復性熬夜 via Daphne K. Lee (June 2020); 0000 as the world's 3rd most common PIN (1.881%, behind 1234 and 1111); among the quads only 11:11, 22:22 and 00:00 can appear on a clock, and only 00:00 lands on the day boundary.
 
 **Watch next round:** probe AI engines with "0000 angel number", "what does 0000 mean in military time", and "seeing 00:00 at midnight meaning" — the military double name and the go-to-bed verdict are the differentiated, citable answers; "0000 PIN" doubles as a non-spiritual entry point. Angel extensions left: 909, 1221. Backfill debt unchanged: 10 guides × pt/es/de/fr.
+
+## 2026-11-26 — Content autopilot round (shipped: How to Manifest a Job)
+
+**Target query:** "how to manifest a job" / "manifest a job offer" / "manifesting a new job". No existing guide covered career-specific manifestation (money/love/paper do not).
+
+**Shipped:** `guides/how-to-manifest-a-job.html` (English only). Answer-first lead + quick-answer box, 5-step plan (specific role → script a normal day → name obstacles → if-then actions → weekly review), daily-practice table, mistakes list, app section. Evidence: Oettingen & Mayer 2002 (JPSP) — job-seeking graduates with positive fantasies applied to fewer jobs and got fewer offers two years on; expectations predicted more effort (confirmed via search result summary this run; salary claim deliberately omitted as unverified). JSON-LD Article + BreadcrumbList + FAQPage (3 Qs, match visible text).
+
+**Wiring:** index card + footer, footer link on all 52 existing English guides, sitemap (lastmod 2026-11-26), llms.txt line. Localized versions not made (English-first precedent).
+
+**Deploy/index:** `vercel deploy --prod --yes` worked (aliased to www). 200 for normal UA and GPTBot. IndexNow 200. **GSC sitemap PUT 403 ACCESS_TOKEN_SCOPE_INSUFFICIENT** (third round running; needs `gcloud auth application-default login` with webmasters scope). Skipped.
+
+**Process:** local checkout 159 commits behind origin/main with a dirty tree; worked in a clean worktree of origin/main (/tmp/autopilot-wt) and left the dirty tree untouched.
