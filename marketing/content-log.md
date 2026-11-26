@@ -4,6 +4,26 @@ Recurring SEO/GEO content agent run log. One entry per publish cycle.
 
 ---
 
+## 2026-11-26 — Localize: how-to-manifest-a-job (it + nl) — IT/NL BACKFILL COMPLETE
+
+**Run type:** it/nl localization backfill (daily agent). Backlog check found exactly ONE English guide without it/nl versions: `how-to-manifest-a-job.html`, published earlier today by the autopilot run (en only). Both languages shipped this run, so **the it/nl backfill backlog is now 0 — every one of the 53 English guides has an Italian and a Dutch version.** Future runs will report complete and stop unless new English guides land.
+
+**URLs published:**
+- https://www.ai-manifest.com/it/guides/how-to-manifest-a-job.html ("manifestare un lavoro", candidature/colloqui/curriculum vocabulary, feminine first person consistent with the it set, /it/ storefront)
+- https://www.ai-manifest.com/nl/guides/how-to-manifest-a-job.html ("een baan manifesteren", sollicitaties/cv/loonsverhoging vocabulary, je-form, /nl/ storefront)
+
+**Localization notes:** structure, Oettingen & Mayer 2002 citation (JPSP), WOOP/mental-contrasting framing, the daily-writing table and all internal links kept from the EN source; phrasing rewritten per language rather than transliterated (e.g. it "candidarti a ruoli un gradino sopra di te", nl "wachten tot de functie vanzelf komt niet"). Search phrasing follows the pattern already proven by the sibling money/love guides (it "come manifestare denaro" → "come manifestare un lavoro"; nl "geld manifesteren" → "een baan manifesteren"), so no extra SERP research was needed. Per-language MT-tell/calque scan: 0 hits on both pages; 0 body em-dashes (the 2 per page are template header/footer boilerplate); no banned paragraph openers.
+
+**Checklist:** cta-inline before the first H2 and end-of-article cta-box on both pages, sentences and link text in-language; position ct tokens (web-nav/web-intro/web-ctabox/web-footer) on the local storefronts (/it/, /nl/); JSON-LD URLs canonical and untagged; Article (inLanguage) + BreadcrumbList + FAQPage schema translated, FAQ JSON-LD == visible FAQ; self-referencing canonicals; og:locale it_IT / nl_NL. Internal linking: guide card (💼) + footer link added on the it and nl homepages; new pages link to money/scripting/examples/affirmations/369/33-day/vision-board/why-not-working siblings, all of which exist in both languages.
+
+**Sitemap:** the en entry for the guide upgraded to a bidirectional hreflang cluster and the two new URLs added with matching blocks — en + it + nl + x-default ONLY, because the autopilot shipped this guide in English alone (no pt/es/de/fr pages exist; listing them would point hreflang at 404s). When the pt/es/de/fr backfill ships this guide, all three existing entries must be widened to the full 8-way cluster. lastmod 2026-11-26 on the 3 cluster entries + the it/ and nl/ homepage entries (touched for the cards); 334 entries total, XML validated with ElementTree, privacy/terms still excluded.
+
+**Deploy:** no VERCEL_TOKEN in env → Vercel Git integration on push to main. IndexNow: 2 new URLs + the 2 updated homepages submitted with key 0e14305ee36247bab36482037254b3ff (result in run output).
+
+**Failed/skipped:** nothing failed. Flagging for the next content run: the pt/es/de/fr backfill debt now stands at 11 guides per language (the 10 listed on 2026-11-25 plus today's `how-to-manifest-a-job`) = 44 pages; the localization-first rule says that debt pays better than new English pages.
+
+---
+
 ## 2026-11-25 — Angel Number 0000 Meaning (en + pt/es/de/fr/it/nl) — QUAD SET CLOSED AT BOTH ENDS
 
 **Topic:** angel number 0000 (the 2026-11-22 round named 909/1221/"0000-style doubles" as follow-ons; 0000 completes the quad family symmetrically now that 000 and 1111–9999 are all live, and the 9999 page already set up the 9999→0000 rollover link). SERP validated this run: uniform "new beginnings / infinite potential / amplified zero" filler (astrology.com, unanswered.io, sunsigns.org), zero sources.
