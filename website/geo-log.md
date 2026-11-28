@@ -457,3 +457,13 @@ Watch next round: (1) whether the angel cluster keeps earning — if yes, 888 is
 **Deploy/index:** `vercel deploy --prod --yes` worked (aliased to www). 200 for normal UA and GPTBot. IndexNow 200. **GSC sitemap PUT 403 ACCESS_TOKEN_SCOPE_INSUFFICIENT** (third round running; needs `gcloud auth application-default login` with webmasters scope). Skipped.
 
 **Process:** local checkout 159 commits behind origin/main with a dirty tree; worked in a clean worktree of origin/main (/tmp/autopilot-wt) and left the dirty tree untouched.
+
+---
+
+## 2026-11-28 — Content round: angel number 1221 (en + pt/es/de/fr/it/nl)
+
+**Probe (WebSearch this run):** "1221 angel number meaning" SERP is uniform "fresh starts / balance / trust your intuition" filler (bustle.com, howstuffworks, sunsigns.org, astrology.com, several visibly scaled "Unlock the Secrets of the 1221 Angel Number" tag-page domains), zero sources. Same citation gap as every sibling quad/mirror page.
+
+**Shipped:** `/guides/angel-number-1221-meaning.html` + 6 localizations. Citation-bait units: the Kunz & Woolcott 1976 Christmas-card experiment (578 cards → 20%, quality 30/15, status 26/15, Social Science Research; verified via Scientific American) against Meier's 2015 rerun (755 cards → 2%, J Soc Psychol, PMID 26666577, verified via PubMed E-utilities) as the literal test of "what you send out comes back"; the 12:21 twice-daily-on-12-hour-clocks supply seam (reverse geography of 22:22); the 12/21 vs 21/12 date-format seam (localized per country — the EU/BR/MX December calendar route delivers 2112, not 1221); Romans 12:21 as the filing accident that fits the mirror theme. FAQ magnets: 1212 vs 1221, warning, Bible, inverted mirror hour (fr: heure inversée 12h21). llms.txt line added; robots.txt re-verified open (GPTBot/OAI-SearchBot/ClaudeBot/PerplexityBot/Google-Extended + rest all Allow).
+
+**Deploy/index:** no VERCEL_TOKEN in env → Vercel Git integration on push to main. IndexNow submission after push (result in content-log entry). GSC sitemap submission still blocked (403 scope issue, documented 2026-11-12/11-19).

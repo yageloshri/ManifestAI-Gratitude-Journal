@@ -418,3 +418,25 @@ has dedicated intent and viral TikTok demand).
   00h00 / numero angelico 0000 + ora doppia / engelengetal 0000. Natural follow-ons: 909, 1221.
   Open backfill unchanged: why-manifestation + 55x5 + lucky-girl + on-paper + money + love + 999 +
   8888 + new-moon + law-of-assumption (pt/es/de/fr) = 40 pages.
+- "Angel number 1221 meaning" (2026-11-28 round): the first of the two mirror-hour follow-ons the
+  quad rounds kept naming (909, 1221) — 1221 chosen as the bigger head term (palindrome family,
+  12:21 a real clock time twice daily on 12-hour displays, fr "heure inversée 12h21" its own query)
+  — `/guides/angel-number-1221-meaning.html` in all 7 languages. SERP shape (WebSearch this run):
+  uniform "fresh starts / balance / trust" filler, partly scaled ("Unlock the Secrets..." on
+  multiple tag-page hosts), zero sources. Differentiators, all verified this run: the founding
+  dictionary cannot tell 1212 and 1221 apart (one 1s-and-2s heading; consistent with the 1212
+  page's existing FAQ); the thesis pair — Kunz & Woolcott 1976 (Social Science Research 5:269-278,
+  via Scientific American: 578 Christmas cards to Chicago strangers, 117 back = 20%; fancy cards
+  30% vs 15%; "Dr." signature 26% vs 15%) vs Meier 2015 (J Soc Psychol 156(4):449-54, PMID
+  26666577, via PubMed: 755 cards, 2% return; follow-up N=494 tied refusal to suspicion + email
+  use) — the mirror is real, falling, and pays only at short range; the supply seams — 12:21
+  arrives twice daily on 12-hour clocks vs once on 24-hour (reverse of 2222's geography), and the
+  December date route (US 12/21 vs rest-of-world 21/12 = 2112) flips per localization, with the
+  pt page flipping the solstice to summer (southern hemisphere); Romans 12:21 ("overcome evil
+  with good") as the on-theme filing accident. Practical unit: 3-step first-card audit (name the
+  ledger; send one no-ask message; price it at 20%). FAQ magnets: 1212 vs 1221, 1221 warning,
+  1221 Bible, 12:21 inverted mirror hour. Localized heads: número 1221 / número de ángel 1221 /
+  Engelszahl 1221 / nombre angélique 1221 + heure inversée 12h21 / numero angelico 1221 /
+  engelengetal 1221. Natural follow-on if the cluster keeps earning: 909 (the last named angel
+  extension). Open backfill unchanged: why-manifestation + 55x5 + lucky-girl + on-paper + money +
+  love + 999 + 8888 + new-moon + law-of-assumption + how-to-manifest-a-job (pt/es/de/fr) = 44 pages.
